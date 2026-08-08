@@ -1,0 +1,40 @@
+{
+  "id": "spacex-api",
+  "status": "operational",
+  "name": "SpaceX API",
+  "category": "science-space",
+  "tagline": "Community-maintained SpaceX launch, rocket, and vehicle data",
+  "description": "Open REST API providing historical and upcoming SpaceX launch, rocket, capsule, crew, landpad, and starlink data. No authentication required for public read endpoints.",
+  "base_url": "https://api.spacexdata.com/v4",
+  "docs_url": "https://github.com/r-spacex/SpaceX-API/blob/master/docs/README.md",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public read endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://api.spacexdata.com/v4/launches/latest",
+    "response_snippet": "{\"id\":\"...\",\"name\":\"...\",\"date_utc\":\"...\",\"success\":true,\"rocket\":\"...\"}"
+  },
+  "use_cases": [
+    "get latest SpaceX launch details",
+    "list upcoming launches",
+    "get rocket specifications by ID",
+    "query historical launch outcomes"
+  ],
+  "sources": [
+    "https://github.com/r-spacex/SpaceX-API"
+  ],
+  "researcher_confidence": "low"
+}

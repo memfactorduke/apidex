@@ -6,8 +6,8 @@
   "properties": {
     "id": { "type": "string" },
     "resolution_notes": { "type": "string", "maxLength": 600 },
-    "base_url": { "type": ["string", "null"], "pattern": "^https?://" },
-    "docs_url": { "type": ["string", "null"], "pattern": "^https?://" },
+    "base_url": { "type": ["string", "null"] },
+    "docs_url": { "type": ["string", "null"] },
     "auth_type": { "type": ["string", "null"], "enum": ["none", "apiKey", "oauth2", "basic", "jwt", "other", null] },
     "free_tier": { "type": ["boolean", "null"] },
     "free_tier_limits": { "type": ["string", "null"], "maxLength": 300 },

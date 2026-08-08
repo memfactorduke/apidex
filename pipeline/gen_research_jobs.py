@@ -43,10 +43,11 @@ def main():
                 ordered.append(by_cat[cat].pop(0))
     jobs = []
     for s in ordered:
+        docs = s["docs_url"] if len(s["docs_url"]) > 11 else "(unknown — locate the official docs)"
         jobs.append({
             "id": f"research-{s['slug']}",
             "prompt": PROMPT.format(name=s["name"], base_domain=s["base_domain"],
-                                    docs_url=s["docs_url"], cat=s["category"],
+                                    docs_url=docs, cat=s["category"],
                                     why=s["why_notable"], slug=s["slug"]),
             "schema": str(ROOT / "schema" / "entry.schema.json"),
             "out": str(ROOT / "data" / "research" / f"{s['slug']}.json"),

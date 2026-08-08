@@ -18,7 +18,7 @@
           "name": { "type": "string" },
           "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,48}$" },
           "base_domain": { "type": "string" },
-          "docs_url": { "type": "string", "pattern": "^https?://" },
+          "docs_url": { "type": "string" },
           "why_notable": { "type": "string", "maxLength": 200 },
           "free_tier": { "type": "boolean" }
         }

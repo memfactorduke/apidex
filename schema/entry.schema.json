@@ -24,9 +24,9 @@
     },
     "tagline": { "type": "string", "minLength": 10, "maxLength": 110 },
     "description": { "type": "string", "minLength": 50, "maxLength": 600 },
-    "base_url": { "type": "string", "pattern": "^https?://" },
-    "docs_url": { "type": "string", "pattern": "^https?://" },
-    "signup_url": { "type": ["string", "null"], "pattern": "^https?://" },
+    "base_url": { "type": "string" },
+    "docs_url": { "type": "string" },
+    "signup_url": { "type": ["string", "null"] },
     "auth": {
       "type": "object",
       "additionalProperties": false,
@@ -68,7 +68,7 @@
     },
     "sources": {
       "type": "array", "minItems": 1, "maxItems": 8,
-      "items": { "type": "string", "pattern": "^https?://" }
+      "items": { "type": "string" }
     },
     "researcher_confidence": { "type": "string", "enum": ["high", "medium", "low"] }
   }
