@@ -1,0 +1,98 @@
+{
+  "id": "coinbase-commerce",
+  "status": "operational",
+  "name": "Coinbase Commerce API",
+  "category": "ecommerce-payments",
+  "tagline": "Accept crypto payments with hosted checkouts and webhooks",
+  "description": "Coinbase Commerce is Coinbase's merchant crypto payment API for creating charges, checkout sessions, and invoices so businesses can accept cryptocurrency payments. Developers integrate via REST to create payment intents, track status, and receive webhook notifications for completed or failed payments. It is aimed at e-commerce and app checkouts rather than trading or exchange account APIs.",
+  "base_url": "https://api.commerce.coinbase.com",
+  "docs_url": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/introduction",
+  "signup_url": "https://commerce.coinbase.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-CC-Api-Key header; create keys in the Coinbase Commerce dashboard after merchant signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.commerce.coinbase.com/charges -H \"X-CC-Api-Key: YOUR_API_KEY\" -H \"X-CC-Version: 2018-03-22\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"data\":[{\"id\":\"...\",\"code\":\"...\",\"name\":\"...\",\"pricing_type\":\"fixed_price\",\"timeline\":[...]}]}"
+  },
+  "use_cases": [
+    "create a crypto payment charge for an order",
+    "list recent Coinbase Commerce charges",
+    "verify a charge payment status by id",
+    "receive and validate payment webhooks",
+    "create a hosted checkout for crypto payment"
+  ],
+  "sources": [
+    "https://docs.cdp.coinbase.com/",
+    "https://commerce.coinbase.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

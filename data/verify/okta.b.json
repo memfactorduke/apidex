@@ -1,0 +1,52 @@
+{
+  "id": "okta",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/reference/core-okta-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/guides/create-an-api-token/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/signup/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Okta publishes org-wide and per-endpoint rate limits (e.g. concurrent request limits, authentication, users APIs); see Rate Limits documentation. Entry's 'not published' is wrong.",
+      "source": "https://developer.okta.com/docs/reference/rate-limits/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/reference/api/users/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/"
+    }
+  },
+  "notes": "Rate limits are published in official Okta docs (not 'not published'). base_url is a template (https://{yourOktaDomain}/api/v1) so automated HTTP 0 is expected, not a dead API. Free developer org exists; free_tier_limits remain unknown. Auth SSWS + OAuth supported. CORS unknown is appropriate without browser CORS docs confirmation."
+}

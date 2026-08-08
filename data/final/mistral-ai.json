@@ -1,0 +1,98 @@
+{
+  "id": "mistral-ai",
+  "status": "operational",
+  "name": "Mistral AI",
+  "category": "ai-ml",
+  "tagline": "Open-weight and commercial LLMs via a chat-completions style REST API",
+  "description": "Mistral AI provides a hosted REST API for large language models (chat, embeddings, OCR, and more). Developers call https://api.mistral.ai with an API key for inference against models such as Mistral Large, Ministral, and Codestral. Docs and pricing are published on docs.mistral.ai and mistral.ai.",
+  "base_url": "https://api.mistral.ai",
+  "docs_url": "https://docs.mistral.ai/",
+  "signup_url": "https://console.mistral.ai/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer YOUR_API_KEY header; create keys in the Mistral AI console (self-serve)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Pay-as-you-go per million tokens by model; exact rates on mistral.ai/pricing"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://api.mistral.ai/v1/chat/completions -H \"Content-Type: application/json\" -H \"Authorization: Bearer YOUR_API_KEY\" -d '{\"model\":\"mistral-small-latest\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"...\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":9,\"total_tokens\":17}}"
+  },
+  "use_cases": [
+    "run chat completion with a Mistral model",
+    "generate embeddings for semantic search",
+    "use Codestral for code generation",
+    "extract text from documents with OCR API"
+  ],
+  "sources": [
+    "https://docs.mistral.ai/",
+    "https://docs.mistral.ai/api/",
+    "https://mistral.ai/pricing",
+    "https://console.mistral.ai/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

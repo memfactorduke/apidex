@@ -1,0 +1,96 @@
+{
+  "id": "event-registry",
+  "status": "operational",
+  "name": "Event Registry",
+  "category": "news-media",
+  "tagline": "Global news event detection and article search API for media monitoring",
+  "description": "Event Registry provides a news intelligence API that clusters articles into real-world events, with search, analytics, and media monitoring endpoints. Developers query news content, event timelines, and related articles via a REST API with JSON responses, primarily authenticated by API key. Suitable for news aggregation, trend detection, and automated media research workflows.",
+  "base_url": "https://eventregistry.org/api/v1",
+  "docs_url": "https://eventregistry.org/documentation",
+  "signup_url": "https://eventregistry.org/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apiKey query parameter or header; self-serve signup on eventregistry.org"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "2000 tokens/month (free plan); tokens spent per request depend on endpoint and result size",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://eventregistry.org/api/v1/article/getArticles?apiKey=YOUR_API_KEY&keyword=climate&articlesCount=1\"",
+    "response_snippet": "{\"articles\":{\"results\":[{\"uri\":\"...\",\"title\":\"...\",\"body\":\"...\",\"source\":{\"title\":\"...\"}}],\"totalResults\":1}}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword or topic",
+    "find events clustered from global news coverage",
+    "monitor media mentions of a company or brand",
+    "get event timelines and related articles",
+    "analyze news trends across languages and sources"
+  ],
+  "sources": [
+    "https://eventregistry.org"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

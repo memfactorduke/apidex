@@ -1,0 +1,104 @@
+{
+  "id": "discord",
+  "status": "operational",
+  "name": "Discord",
+  "category": "social-communication",
+  "tagline": "API for bots, OAuth2 apps, and Discord platform integrations",
+  "description": "Discord provides a REST and Gateway API for building bots and applications that interact with servers, channels, messages, users, and voice. Developers create applications in the Discord Developer Portal, authenticate with bot tokens or OAuth2, and call versioned HTTP endpoints under discord.com/api. Official docs cover rate limits, intents, and gateway websockets.",
+  "base_url": "https://discord.com/api/v10",
+  "docs_url": "https://discord.com/developers/docs/intro",
+  "signup_url": "https://discord.com/developers/applications",
+  "auth": {
+    "type": "other",
+    "details": "Bot token via Authorization: Bot YOUR_BOT_TOKEN header, or OAuth2 bearer tokens for user/app flows; create apps in Developer Portal"
+  },
+  "https": true,
+  "cors": "no",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for standard bot/app API usage; no published per-request fee. Monetization via Discord Premium Apps / SKUs separate from API access.",
+    "paid_plans": "Premium Apps / monetization SKUs for paid app features; API access itself is free"
+  },
+  "rate_limits": "Global 50 req/s per bot; per-route buckets via X-RateLimit-* headers; invalid request limits apply (see docs)",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bot YOUR_BOT_TOKEN\" -H \"User-Agent: DiscordBot (https://example.com, 1.0)\" \"https://discord.com/api/v10/users/@me\"",
+    "response_snippet": "{\"id\":\"80351110224678912\",\"username\":\"Nelly\",\"discriminator\":\"1337\",\"avatar\":\"8342729096ea3675442027381ff50dfe\",\"bot\":true,\"verified\":true}"
+  },
+  "use_cases": [
+    "send a message to a Discord channel",
+    "list guild members for a server",
+    "create a slash command for a bot",
+    "get current bot user profile",
+    "manage roles and channel permissions",
+    "receive gateway events for new messages"
+  ],
+  "sources": [
+    "https://discord.com/developers/docs/intro",
+    "https://discord.com/developers/docs/reference",
+    "https://discord.com/developers/docs/topics/rate-limits",
+    "https://discord.com/developers/docs/topics/oauth2",
+    "https://discord.com/developers/docs/resources/user",
+    "https://discord.com/developers/applications"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "placekitten",
+  "base_url": "https://placekitten.com",
+  "docs_url": "https://placekitten.com",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "No published free-tier quotas or limits; historically free public use with no official unlimited guarantee. Service currently offline (HTTP 521).",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sI \"https://placekitten.com/200/300\"",
+  "example_response_snippet": "HTTP/2 521\n... (Cloudflare: Web server is down; origin not serving images as of 2026)",
+  "description": "PlaceKitten was a classic placeholder-image utility that returned kitten photos sized by URL path segments (/{width}/{height}, optional /g/ grayscale) with no auth. As of 2026 the origin returns Cloudflare HTTP 521 and does not serve images\u2014historically useful for mockups, currently offline/defunct.",
+  "status": "defunct",
+  "resolution_notes": "base_url: KEEP https://placekitten.com as the historical/official host (Verifier B + Wayback); live checks return Cloudflare HTTP 521 so service is defunct, not a wrong URL. docs_url: same host was the only official docs/landing page (Wayback 2023); 521 means offline docs, not an alternate URL. free_tier_limits: Verifier B correct\u2014no published \"unlimited\" quota; reword to no published limits + offline note. example: path pattern historically correct but current response is 521 not image/jpeg\u2014snippet corrected to reflect 521. description: Verifier B correct that present-tense \"serves\" is wrong; rewritten as historical + currently offline. status: defunct (HTTP 521 origin down). Evidence: placekitten.com 521; https://web.archive.org/web/20230101014002/https://placekitten.com/; https://github.com/api-evangelist/placekitten"
+}

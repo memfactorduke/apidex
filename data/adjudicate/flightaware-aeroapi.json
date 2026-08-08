@@ -1,0 +1,15 @@
+{
+  "id": "flightaware-aeroapi",
+  "base_url": null,
+  "docs_url": "https://www.flightaware.com/aeroapi/portal/documentation",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Plan-based request quotas (see pricing/account); not a single public global limit",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: ORIGINAL confirmed. Both https://www.flightaware.com/aeroapi/portal/documentation and commercial/aeroapi/documentation resolve (200); portal is the live developer docs hub (OpenAPI, Getting Started, auth). Verifier B's commercial URL is a parallel/marketing path, not a replacement. free_tier_limits: ORIGINAL \"unknown\" kept with free_tier false. Pricing (https://www.flightaware.com/aeroapi/portal/pricing) shows paid plans only\u2014no free allowance\u2014so there are no free-tier limits to report; \"unknown\" is acceptable cataloging when free_tier is false. rate_limits: CORRECTED from \"not published\". Pricing and portal docs establish plan-based request quotas/usage limits rather than one public global rate; exact numbers require account/plan selection. Evidence: portal docs, portal pricing, commercial aeroapi pages (2026)."
+}

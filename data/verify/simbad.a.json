@@ -1,0 +1,52 @@
+{
+  "id": "simbad",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/sim-help?Page=sim-url"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/sim-help?Page=sim-url"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/sim-help?Page=sim-url"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/sim-help?Page=sim-url"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/"
+    }
+  },
+  "notes": "Verified against official CDS SIMBAD docs; base_url points to sim-script which is a valid script interface; example uses sim-id which is also documented."
+}

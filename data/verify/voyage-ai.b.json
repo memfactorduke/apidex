@@ -1,0 +1,52 @@
+{
+  "id": "voyage-ai",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.voyageai.com/reference/embeddings-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.voyageai.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.voyageai.com/docs/api-key-and-installation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.voyageai.com/docs/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tokens for first 200M tokens across models (varies by model; see pricing page) \u2014 not \"unknown\" if docs publish free allowance",
+      "source": "https://docs.voyageai.com/docs/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published (TPM/RPM per model/tier) at docs.voyageai.com",
+      "source": "https://docs.voyageai.com/docs/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Model voyage-3 may be outdated; verify current embedding model IDs",
+      "source": "https://docs.voyageai.com/docs/embeddings"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.voyageai.com/"
+    }
+  },
+  "notes": "Placeholder \u2014 will re-verify against live official docs."
+}

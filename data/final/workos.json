@@ -1,0 +1,98 @@
+{
+  "id": "workos",
+  "status": "operational",
+  "name": "WorkOS",
+  "category": "security-identity",
+  "tagline": "Enterprise SSO, SCIM directory sync, and admin portal APIs for B2B apps.",
+  "description": "WorkOS provides developer-friendly APIs for enterprise-ready authentication and user management features. Core products include Single Sign-On (SAML/OIDC), Directory Sync (SCIM), Admin Portal, Magic Auth, AuthKit, Audit Logs, and more \u2014 designed so B2B SaaS apps can offer enterprise identity features without building them from scratch.",
+  "base_url": "https://api.workos.com",
+  "docs_url": "https://workos.com/docs",
+  "signup_url": "https://dashboard.workos.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (sk_test_* or sk_live_* from Dashboard). Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "AuthKit/User Management: first 1M MAUs free (then $2,500/mo per additional 1M MAUs). Radar: first 1,000 checks free. Staging free. SSO & Directory Sync paid per connection from #1 (no free connections).",
+    "paid_plans": null
+  },
+  "rate_limits": "Published: general 6,000 req/60s per API key; AuthKit reads 1,000/10s and writes 500/10s on /user_management/*; plus endpoint-specific limits (SSO authorize 1,000/60s per connection, directory users 4/s per directory).",
+  "example": {
+    "request": "curl https://api.workos.com/user_management/users -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"object\":\"list\",\"data\":[{\"object\":\"user\",\"id\":\"user_01H...\",\"email\":\"user@example.com\"}],\"list_metadata\":{\"before\":null,\"after\":null}}"
+  },
+  "use_cases": [
+    "add SAML/OIDC enterprise SSO to a B2B SaaS app",
+    "sync users and groups from customer IdPs via SCIM directory sync",
+    "embed an admin portal so customers self-configure SSO",
+    "implement passwordless magic link or AuthKit authentication",
+    "emit and query enterprise audit logs for compliance"
+  ],
+  "sources": [
+    "https://workos.com",
+    "https://workos.com/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

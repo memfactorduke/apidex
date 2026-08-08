@@ -1,0 +1,15 @@
+{
+  "id": "mediawiki",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": "unknown",
+  "example_request": "curl \"https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&explaintext=1&titles=MediaWiki\"",
+  "example_response_snippet": "{\"batchcomplete\":\"\",\"query\":{\"pages\":{\"26145823\":{\"pageid\":26145823,\"ns\":0,\"title\":\"MediaWiki\",\"extract\":\"MediaWiki is a free and open-source wiki software...\"}}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "cors: ruled unknown (Verifier B). MediaWiki Cross-site_requests docs show CORS is configurable and origin-dependent, not universal yes for all installs; Wikimedia allows specific origins. Evidence: https://www.mediawiki.org/wiki/API:Cross-site_requests. example: ruled incorrect (Verifier B). Original titles=API returns missing page (no extract); corrected to titles=MediaWiki with realistic extracts success shape. Evidence: live query pattern on en.wikipedia.org/w/api.php and API docs."
+}

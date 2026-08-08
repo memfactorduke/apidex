@@ -1,0 +1,52 @@
+{
+  "id": "untappd",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://untappd.com/api/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://untappd.com/api/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://untappd.com/api/docs"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false",
+      "source": "https://www.reddit.com/r/Untappd/comments/1o71jl9/how_to_get_access_to_untappd_api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "n/a (no free tier; commercial agreement required)",
+      "source": "https://www.reddit.com/r/Untappd/comments/1o71jl9/how_to_get_access_to_untappd_api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "100 calls per hour per key (authenticated: per user); X-Ratelimit-Limit / X-Ratelimit-Remaining headers",
+      "source": "https://untappd.com/api/docs"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://untappd.com/api/docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://untappd.com/api/docs"
+    }
+  },
+  "notes": "Official docs confirm base URL, OAuth/client_id auth, search pattern. Rate limits ARE published (100/hr). Free signup appears closed\u2014commercial agreement required. CORS not documented."
+}

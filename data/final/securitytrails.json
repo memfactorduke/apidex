@@ -1,0 +1,98 @@
+{
+  "id": "securitytrails",
+  "status": "operational",
+  "name": "SecurityTrails",
+  "category": "security-identity",
+  "tagline": "Historical DNS, WHOIS, and domain intelligence for recon and threat hunting.",
+  "description": "SecurityTrails API provides historical DNS records, WHOIS data, subdomain discovery, IP intelligence, and domain surface mapping for security research, threat hunting, and attack-surface analysis.",
+  "base_url": "https://api.securitytrails.com/v1",
+  "docs_url": "https://docs.securitytrails.com",
+  "signup_url": "https://securitytrails.com/app/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via APIKEY header (or api_key query param on some endpoints); self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.securitytrails.com/v1/domain/example.com\" -H \"APIKEY: YOUR_API_KEY\"",
+    "response_snippet": "{\"hostname\":\"example.com\",\"endpoints\":[],\"current_dns\":{}}"
+  },
+  "use_cases": [
+    "look up current DNS for a domain",
+    "enumerate historical DNS changes for a domain",
+    "discover subdomains for a domain",
+    "get WHOIS history for a domain",
+    "find domains associated with an IP",
+    "enrich a hostname for threat hunting"
+  ],
+  "sources": [
+    "https://securitytrails.com",
+    "https://docs.securitytrails.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

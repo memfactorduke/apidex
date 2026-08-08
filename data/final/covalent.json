@@ -1,0 +1,101 @@
+{
+  "id": "covalent",
+  "status": "operational",
+  "name": "Covalent",
+  "category": "crypto",
+  "tagline": "Unified multichain blockchain data API for wallets, tokens, NFTs, and on-chain analytics",
+  "description": "Covalent (now also branded GoldRush) provides a unified REST API that indexes blockchain data across many networks so developers can query balances, transactions, token transfers, NFTs, and historical prices without running their own nodes. Typical usage is authenticated API-key requests against a versioned HTTPS base URL for wallet portfolio, activity, and token metadata endpoints.",
+  "base_url": "https://api.covalenthq.com/v1",
+  "docs_url": "https://goldrush.dev/docs/api/",
+  "signup_url": "https://www.covalenthq.com/platform/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization Bearer header or query parameter (self-serve signup on Covalent platform)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Premium free tier includes limited credits; exact credit caps vary by plan and are set at signup (see GoldRush platform pricing).",
+    "paid_plans": null
+  },
+  "rate_limits": "Credit-based usage; specific RPS/rate limits not always published publicly\u2014managed via platform credits and plan.",
+  "example": {
+    "request": "curl -X GET \"https://api.covalenthq.com/v1/eth-mainnet/address/0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb/balances_v2/\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":{\"address\":\"0x742d35cc6634c0532925a3b844bc9e7595f0beb\",\"updated_at\":\"2024-01-01T00:00:00Z\",\"quote_currency\":\"USD\",\"items\":[{\"contract_decimals\":18,\"contract_name\":\"Ether\",\"contract_ticker_symbol\":\"ETH\",\"balance\":\"1000000000000000000\"}]},\"error\":false}"
+  },
+  "use_cases": [
+    "get token balances for a wallet address on a chain",
+    "list recent transactions for an address",
+    "fetch NFT holdings for a wallet",
+    "get historical token prices",
+    "query token transfer activity across chains"
+  ],
+  "sources": [
+    "https://www.covalenthq.com/",
+    "https://www.covalenthq.com/docs/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "cors"
+    ]
+  }
+}

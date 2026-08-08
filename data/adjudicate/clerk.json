@@ -1,0 +1,15 @@
+{
+  "id": "clerk",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free plan: 50,000 MAU (Hobby); Pro from $25/mo with 10k MAU included then usage-based; see clerk.com/pricing for current limits",
+  "rate_limits": "Backend API rate limited: production typically 100 req/10s (some endpoints higher); development instances lower. See clerk.com/docs/backend-requests/resources/rate-limits",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B correct in spirit \u2014 original \"unknown\" was wrong; pricing page documents free/Hobby MAU and plan limits (verify live numbers at https://clerk.com/pricing as they change). rate_limits: Verifier B correct \u2014 original \"not published\" is false; documented at https://clerk.com/docs/backend-requests/resources/rate-limits (prod ~100/10s, dev lower, endpoint-specific higher limits). Verifier A wrongly confirmed both originals. Other fields undisputed/confirmed \u2014 keep original."
+}

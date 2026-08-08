@@ -1,0 +1,52 @@
+{
+  "id": "rcsb-pdb",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.rcsb.org/rest/v1/core/entry/4HHB"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    }
+  },
+  "notes": "Docs overview confirms multi-API stack (Data REST, Search, GraphQL) at data.rcsb.org; open access with no key; rate limits not published. Live GET example returns 4HHB entry JSON. CORS unknown (not documented)."
+}

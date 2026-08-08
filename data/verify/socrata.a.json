@@ -1,0 +1,52 @@
+{
+  "id": "socrata",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/"
+    }
+  },
+  "notes": "Verified against official Socrata/Tyler docs. base_url is domain-specific (Chicago example is valid SODA pattern); app tokens optional for low volume; rate limits not fixed published numbers; free consumer access yes; free_tier_limits/cors unknown remains accurate."
+}

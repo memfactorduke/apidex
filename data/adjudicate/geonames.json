@@ -1,0 +1,15 @@
+{
+  "id": "geonames",
+  "base_url": "https://secure.geonames.org",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1000 credits/hour, 20000 credits/day (most requests = 1 credit)",
+  "rate_limits": "Free: 1000 credits/hour and 20000 credits/day; commercial accounts have higher published limits",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: KEEP original https://secure.geonames.org \u2014 valid official HTTPS endpoint; api.geonames.org also documented but single base_url field should be one primary URL (docs: geonames.org/export/web-services.html). free_tier_limits: CORRECT from unknown \u2192 Free 1000 credits/hour, 20000 credits/day (credit-based; most requests = 1 credit) per geonames.org/export/. rate_limits: CORRECT from 'not published' \u2192 same free credit caps; commercial higher limits on export/pricing pages (geonames.org/export/)."
+}

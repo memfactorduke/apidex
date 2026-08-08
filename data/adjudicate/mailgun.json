@@ -1,0 +1,15 @@
+{
+  "id": "mailgun",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No forever-free production plan. Free trial available on paid plans (Foundation/Scale include ~1-month trial); sandbox for testing. Paid plans start at Basic (~$15/mo for 10k emails/mo). Confirm current allotments on mailgun.com/pricing.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Mailgun (Sinch) is a developer-focused email delivery platform with a REST API for sending transactional and bulk email, inbound parsing/routing, templates, webhooks, suppressions, and analytics. US and EU regions are available; API access uses HTTP Basic Auth with private API keys. No forever-free production tier; paid plans start at Basic (~$15/mo for 10,000 emails/mo) with free trials on higher tiers.",
+  "status": null,
+  "resolution_notes": "free_tier: INCORRECT original (Verifier B). Official pricing (mailgun.com/pricing) no longer offers a forever free 100 emails/day plan for production\u2014only trials/sandbox; free_tier=false. free_tier_limits: INCORRECT original; 100/day forever and listed free limits are outdated\u2014use trial/sandbox language and point to pricing page. description: INCORRECT original free-tier claim; kept product capabilities and auth, removed 100 emails/day forever claim. Evidence: https://www.mailgun.com/pricing/ and Mailgun docs."
+}

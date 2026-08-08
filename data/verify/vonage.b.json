@@ -1,0 +1,52 @@
+{
+  "id": "vonage",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.vonage.com/en/messaging/sms/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.vonage.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.vonage.com/en/getting-started/concepts/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 Vonage offers a free trial / free credit (commonly ~\u20ac2) on signup, not an ongoing free tier; usage is credit- or pay-as-you-go based after trial credit is spent",
+      "source": "https://www.vonage.com/communications-apis/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.vonage.com/communications-apis/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published for some products (e.g. SMS outbound throughput and account-level limits vary by account/country; Messages API and other products document specific rate/throughput limits) \u2014 not simply \"not published\"",
+      "source": "https://developer.vonage.com/en/messaging/sms/code-and-more/guides/throughput"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.vonage.com/en/messaging/sms/code-and-more/guides/send-an-sms-with-vonage"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.vonage.com/"
+    }
+  },
+  "notes": "Entry mostly solid (rest.nexmo.com SMS still valid; apiKey+secret/JWT auth correct). Failures: free_tier should not be true for a finite trial credit; rate limits are published for SMS throughput and other APIs. Signup still on dashboard.nexmo.com; docs at developer.vonage.com."
+}

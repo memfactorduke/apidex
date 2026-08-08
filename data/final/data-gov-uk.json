@@ -1,0 +1,99 @@
+{
+  "id": "data-gov-uk",
+  "status": "operational",
+  "name": "data.gov.uk CKAN API",
+  "category": "government-open-data",
+  "tagline": "Search and access UK government open datasets via the official CKAN catalog API.",
+  "description": "data.gov.uk is the UK government's open data portal (CKAN). The public Action API base is https://data.gov.uk/api/action/ (redirects to ckan.publishing.service.gov.uk). Search and read catalog metadata without an API key; write/admin actions need a CKAN API key. Official docs state no rate limits. JSON via standard CKAN action endpoints.",
+  "base_url": "https://data.gov.uk/api/action",
+  "docs_url": "https://guidance.data.gov.uk/get_data/api_documentation/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public catalog reads (package_search, package_show, etc.) require no authentication. Write/admin actions need a CKAN API key via Authorization header; keys are issued to registered data.gov.uk users with appropriate permissions."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access for catalog search and metadata; no published paid plans for API access",
+    "paid_plans": null
+  },
+  "rate_limits": "none (officially: no rate limits)",
+  "example": {
+    "request": "curl -s \"https://ckan.publishing.service.gov.uk/api/3/action/package_search?q=transport&rows=2\"",
+    "response_snippet": "{\"help\": \"https://ckan.publishing.service.gov.uk/api/3/action/help_show?name=package_search\", \"success\": true, \"result\": {\"count\": 1234, \"results\": [{\"id\": \"...\", \"name\": \"example-dataset\", \"title\": \"Example transport dataset\", \"notes\": \"...\", \"resources\": [...], \"organization\": {...}}]}}"
+  },
+  "use_cases": [
+    "search UK government open datasets by keyword",
+    "get metadata and resource download URLs for a known dataset",
+    "list datasets published by a government organization",
+    "discover available tags and groups in the UK open data catalog",
+    "find transport, health, or environment datasets for secondary analysis"
+  ],
+  "sources": [
+    "https://ckan.publishing.service.gov.uk/api/3/action/status_show",
+    "https://docs.ckan.org/en/2.9/api/",
+    "https://www.data.gov.uk/",
+    "https://ckan.publishing.service.gov.uk/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

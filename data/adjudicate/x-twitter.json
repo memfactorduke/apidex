@@ -1,0 +1,15 @@
+{
+  "id": "x-twitter",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl \"https://api.x.com/2/users/by/username/X\" -H \"Authorization: Bearer $BEARER_TOKEN\"",
+  "example_response_snippet": "{\"data\":{\"id\":\"2244994945\",\"name\":\"X\",\"username\":\"X\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: Verifier B correct. Official user-by-username docs use Authorization: Bearer with app-only bearer token, not YOUR_API_KEY (API key is OAuth consumer key). Response shape matches v2 user object. Evidence: https://docs.x.com/x-api/users/lookup/api-reference/get-users-by-username-username and https://docs.x.com/x-api/fundamentals/authentication."
+}

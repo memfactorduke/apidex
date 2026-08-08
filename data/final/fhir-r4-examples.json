@@ -1,0 +1,98 @@
+{
+  "id": "fhir-r4-examples",
+  "status": "operational",
+  "name": "OpenEMR API",
+  "category": "health-fitness",
+  "tagline": "Open-source electronic health records FHIR R4 and REST APIs",
+  "description": "OpenEMR exposes FHIR R4 and standard REST APIs for electronic health records, patient data, appointments, and clinical workflows. Self-hosted; endpoints and credentials come from your own OpenEMR instance rather than a public multi-tenant SaaS. Suitable for EHR integrations, patient portals, and health-app backends.",
+  "base_url": "https://YOUR_OPENEMR_HOST/apis/default/fhir",
+  "docs_url": "https://www.open-emr.org/wiki/index.php/OpenEMR_API",
+  "signup_url": "https://www.open-emr.org/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 (SMART on FHIR / password grant variants per version); client registration in OpenEMR admin; Bearer access token on API requests. Self-hosted\u2014no central API key service."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Open-source software; no vendor API metering\u2014limits are your server capacity",
+    "paid_plans": "Optional commercial support and hosting from third parties; core software free (GPL)"
+  },
+  "rate_limits": "not published (self-hosted; operator-defined)",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/fhir+json\" \"https://YOUR_OPENEMR_HOST/apis/default/fhir/Patient\"",
+    "response_snippet": "{\"resourceType\":\"Bundle\",\"type\":\"searchset\",\"total\":1,\"entry\":[{\"resource\":{\"resourceType\":\"Patient\",\"id\":\"1\",\"name\":[{\"family\":\"Smith\",\"given\":[\"John\"]}],\"gender\":\"male\",\"birthDate\":\"1980-01-15\"}}]}"
+  },
+  "use_cases": [
+    "search patients by name or identifier on an OpenEMR instance",
+    "read FHIR R4 Patient and Encounter resources",
+    "create or update appointments via OpenEMR REST APIs",
+    "integrate a patient portal with OpenEMR clinical data",
+    "export or sync EHR data for analytics workflows"
+  ],
+  "sources": [
+    "https://www.open-emr.org/wiki/index.php/OpenEMR_API",
+    "https://www.open-emr.org/",
+    "https://github.com/openemr/openemr"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

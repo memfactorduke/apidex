@@ -1,0 +1,98 @@
+{
+  "id": "usda-fooddata-central",
+  "status": "operational",
+  "name": "USDA FoodData Central",
+  "category": "food-drink",
+  "tagline": "Official US government food composition and nutrient data API",
+  "description": "USDA FoodData Central provides comprehensive food composition data including nutrients, portions, and branded products. Free API with key-based access for developers building nutrition apps, food databases, and dietary analysis tools.",
+  "base_url": "https://api.nal.usda.gov/fdc/v1",
+  "docs_url": "https://fdc.nal.usda.gov/api-guide",
+  "signup_url": "https://fdc.nal.usda.gov/api-key-signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter or X-Api-Key header; free self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "DEMO_KEY: 1,000 requests/hour per IP; personal free API keys: rate limits not clearly stated in official docs",
+    "paid_plans": null
+  },
+  "rate_limits": "DEMO_KEY: 1,000 requests/hour per IP; personal free API keys: not clearly documented as 1,000/hour",
+  "example": {
+    "request": "curl \"https://api.nal.usda.gov/fdc/v1/foods/search?query=cheddar%20cheese&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"totalHits\": 50, \"currentPage\": 1, \"totalPages\": 1, \"foods\": [{\"fdcId\": 173410, \"description\": \"Cheese, cheddar\", \"dataType\": \"SR Legacy\", \"foodNutrients\": [...]}]}"
+  },
+  "use_cases": [
+    "search foods by name and get nutrient profiles",
+    "look up detailed nutrition facts by FDC ID",
+    "compare nutrients across branded products",
+    "build meal planners with official USDA nutrient data",
+    "validate food composition for dietary apps"
+  ],
+  "sources": [
+    "https://fdc.nal.usda.gov/api-guide",
+    "https://fdc.nal.usda.gov/api-key-signup",
+    "https://fdc.nal.usda.gov/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

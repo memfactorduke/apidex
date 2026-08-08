@@ -1,0 +1,96 @@
+{
+  "id": "tavily",
+  "status": "operational",
+  "name": "Tavily",
+  "category": "data-analytics",
+  "tagline": "AI-optimized web search API for research agents",
+  "description": "Tavily is a search API built for AI agents and RAG pipelines. It returns concise, source-backed web results optimized for LLM consumption, with search, extract, crawl, and map endpoints for research workflows.",
+  "base_url": "https://api.tavily.com",
+  "docs_url": "https://docs.tavily.com",
+  "signup_url": "https://app.tavily.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization Bearer header or api_key body field; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 API credits/month on Researcher (free) plan",
+    "paid_plans": null
+  },
+  "rate_limits": "Published by plan on pricing page (e.g. free-tier monthly credit cap and per-minute limits); not \"not published\"",
+  "example": {
+    "request": "curl -X POST https://api.tavily.com/search -H 'Content-Type: application/json' -H 'Authorization: Bearer YOUR_API_KEY' -d '{\"query\":\"latest AI news\"}'",
+    "response_snippet": "{\"query\":\"latest AI news\",\"results\":[{\"title\":\"...\",\"url\":\"...\",\"content\":\"...\"}]}"
+  },
+  "use_cases": [
+    "search the web for current facts for an agent",
+    "extract clean page content for RAG",
+    "research a topic with source-backed snippets",
+    "crawl a site for documentation ingestion"
+  ],
+  "sources": [
+    "https://tavily.com",
+    "https://docs.tavily.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

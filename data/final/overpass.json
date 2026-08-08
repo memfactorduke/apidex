@@ -1,0 +1,100 @@
+{
+  "id": "overpass",
+  "status": "operational",
+  "name": "OpenStreetMap Overpass API",
+  "category": "government-open-data",
+  "tagline": "Query OpenStreetMap map data with a flexible Overpass QL language",
+  "description": "The Overpass API is a read-only API that serves up custom selected parts of the OpenStreetMap map data. It is optimized for data consumers that need a few elements within a bounding box or matching certain tags, rather than bulk downloads of the whole planet.",
+  "base_url": "https://overpass-api.de/api",
+  "docs_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public read-only endpoint; heavy use may be throttled or blocked by the public instance."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public instance; fair-use policy applies (no formal free-tier quota published as a fixed req/day number)",
+    "paid_plans": "Self-host or use commercial Overpass providers; public instance has no paid plans"
+  },
+  "rate_limits": "Public instance: ~2 concurrent connections, ~10,000 slots max (roughly ~1\u20132 requests/sec sustained recommended); queries with long runtimes limited; not published as simple req/day",
+  "example": {
+    "request": "curl -g 'https://overpass-api.de/api/interpreter?data=[out:json];node[\"amenity\"=\"cafe\"](48.85,2.29,48.86,2.30);out;'",
+    "response_snippet": "{\"version\":0.6,\"generator\":\"Overpass API\",\"osm3s\":{\"timestamp_osm_base\":\"2026-...\",\"copyright\":\"The data included in this document is from www.openstreetmap.org...\"},\"elements\":[{\"type\":\"node\",\"id\":123,\"lat\":48.85,\"lon\":2.29,\"tags\":{\"amenity\":\"cafe\",\"name\":\"Example\"}}]}"
+  },
+  "use_cases": [
+    "find amenities (cafes, hospitals) within a bounding box",
+    "get OSM ways/nodes matching tags near a point",
+    "export a small area of map features as GeoJSON-friendly JSON",
+    "query building footprints or roads in a region",
+    "check if a POI exists in OpenStreetMap by name/tag"
+  ],
+  "sources": [
+    "https://wiki.openstreetmap.org/wiki/Overpass_API",
+    "https://overpass-api.de/",
+    "https://dev.overpass-api.de/overpass-doc/en/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

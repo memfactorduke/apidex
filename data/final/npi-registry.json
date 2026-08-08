@@ -1,0 +1,99 @@
+{
+  "id": "npi-registry",
+  "status": "operational",
+  "name": "NPI Registry",
+  "category": "health-fitness",
+  "tagline": "CMS National Provider Identifier lookup for US healthcare providers and organizations.",
+  "description": "Public REST API from CMS for searching the National Plan and Provider Enumeration System (NPPES) NPI Registry. Look up individual and organizational healthcare providers by NPI, name, taxonomy, address, and other attributes. No API key required for the public search endpoints.",
+  "base_url": "https://npiregistry.cms.hhs.gov/api",
+  "docs_url": "https://npiregistry.cms.hhs.gov/api-page",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public NPI Registry API."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public free access; no paid plans. Rate limits may apply but are not published.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1679576722\"",
+    "response_snippet": "{\"result_count\":1,\"results\":[{\"number\":\"1679576722\",\"enumeration_type\":\"NPI-1\",\"basic\":{\"first_name\":\"JOHN\",\"last_name\":\"DOE\",\"credential\":\"MD\",\"sole_proprietor\":\"NO\",\"status\":\"A\"},\"addresses\":[...],\"taxonomies\":[...]}]}"
+  },
+  "use_cases": [
+    "look up a US healthcare provider by NPI number",
+    "search providers by name and state",
+    "find organizations (hospitals, clinics) by NPI or name",
+    "validate provider taxonomy/specialty codes",
+    "enrich healthcare app records with CMS NPPES data"
+  ],
+  "sources": [
+    "https://npiregistry.cms.hhs.gov/",
+    "https://npiregistry.cms.hhs.gov/api-page",
+    "https://npiregistry.cms.hhs.gov/registry/help-api"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

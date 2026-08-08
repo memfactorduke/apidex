@@ -1,0 +1,52 @@
+{
+  "id": "diffbot",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.diffbot.com/reference/introduction-to-diffbot-apis"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.diffbot.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.diffbot.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.diffbot.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 10,000 credits/month, all four product APIs, no credit card; rate limit 5 req/min. Per-API free caps differ from the entry's figures \u2014 verify current dashboard/pricing for Extract/NLP/DQL/Enhance monthly call and entity caps rather than treating 10k Extract / 500 NLP / 400 DQL / 400 Enhance as authoritative.",
+      "source": "https://www.diffbot.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plan rate limits (Free 5/min; Startup 5/s; Plus 25/s) are documented on pricing, but product-level free monthly caps and Plus Crawl job limits in the entry are not fully corroborated by a single current official page \u2014 treat product free caps as unverified unless shown in account dashboard.",
+      "source": "https://www.diffbot.com/pricing/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.diffbot.com/reference/analyze"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.diffbot.com/reference/introduction-to-diffbot-apis"
+    }
+  },
+  "notes": "Placeholder \u2014 full verification in progress against official docs."
+}

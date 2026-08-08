@@ -1,0 +1,95 @@
+{
+  "id": "crawlbase",
+  "status": "operational",
+  "name": "Crawlbase",
+  "category": "data-analytics",
+  "tagline": "Proxy crawl API for scraping and crawling websites at scale",
+  "description": "Crawlbase is a proxy-based web scraping and crawling API that handles rotating proxies, CAPTCHAs, and headless browsers so developers can fetch rendered or raw HTML from target URLs via simple HTTP requests. It offers scraping, crawler, and related endpoints for data extraction workflows without managing infrastructure.",
+  "base_url": "https://api.crawlbase.com",
+  "docs_url": "https://crawlbase.com/docs",
+  "signup_url": "https://crawlbase.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Token query parameter (token=YOUR_API_TOKEN) from dashboard; separate tokens for normal and JavaScript requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "html"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Up to 20,000 free requests (no credit card); usable for normal or JS requests. Crawling API free starter; Smart AI Proxy free plan separately lists 5,000 credits.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.crawlbase.com/?token=YOUR_API_KEY&url=https%3A%2F%2Fhttpbin.org%2Fip\"",
+    "response_snippet": "{\"original_status\":200,\"pc_status\":200,\"body\":\"...\"}"
+  },
+  "use_cases": [
+    "scrape HTML of a URL through residential proxies",
+    "fetch JavaScript-rendered page content",
+    "crawl multi-page sites with automatic retries",
+    "bypass basic anti-bot blocks for data extraction"
+  ],
+  "sources": [
+    "https://crawlbase.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

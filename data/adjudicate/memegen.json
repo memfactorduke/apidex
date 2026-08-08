@@ -1,0 +1,15 @@
+{
+  "id": "memegen",
+  "base_url": "https://api.memegen.link",
+  "docs_url": "https://api.memegen.link",
+  "auth_type": "none",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl \"https://api.memegen.link/images/buzz/memes/memes_everywhere.webp\"",
+  "example_response_snippet": "HTTP/1.1 200 OK\nContent-Type: image/webp\n(binary WebP image of Buzz Lightyear meme with top text \"memes\" and bottom text \"memes everywhere\")",
+  "description": "Free open-source API that generates meme images from templates and custom text overlay.",
+  "status": null,
+  "resolution_notes": "example: incorrect original (root curl + \"pending research\"); Verifier A correction confirmed live \u2014 GET /images/buzz/memes/memes_everywhere.webp returns 200 image/webp (https://api.memegen.link). Verifier B .png also works; .webp matches common docs examples. description: incorrect original was research placeholder; corrected from official docs/GitHub (https://api.memegen.link, https://github.com/jacebrowning/memegen)."
+}

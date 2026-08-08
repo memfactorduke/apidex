@@ -1,0 +1,97 @@
+{
+  "id": "abuseipdb",
+  "status": "operational",
+  "name": "AbuseIPDB",
+  "category": "security-identity",
+  "tagline": "Crowdsourced IP abuse reputation and blacklist checks for security tooling",
+  "description": "AbuseIPDB provides a REST API for checking IP addresses against a community-reported abuse database, reporting abusive IPs, and retrieving blacklist data. Developers use it to score inbound traffic, enrich security logs, and feed WAF or firewall rules with reputation signals.",
+  "base_url": "https://api.abuseipdb.com/api/v2",
+  "docs_url": "https://docs.abuseipdb.com/",
+  "signup_url": "https://www.abuseipdb.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Key header (also Accept: application/json). Obtain key from account dashboard after free signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 check requests/day on free Standard plan; higher on paid tiers (see pricing)",
+    "paid_plans": null
+  },
+  "rate_limits": "Daily check quotas by plan (free: 1,000/day); additional rate limiting may apply \u2014 see pricing and API docs",
+  "example": {
+    "request": "curl -G https://api.abuseipdb.com/api/v2/check --data-urlencode \"ipAddress=118.25.6.39\" -H \"Key: YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"data\":{\"ipAddress\":\"118.25.6.39\",\"isPublic\":true,\"ipVersion\":4,\"isWhitelisted\":false,\"abuseConfidenceScore\":100,\"countryCode\":\"CN\",\"usageType\":\"Data Center/Web Hosting/Transit\",\"isp\":\"Tencent Cloud Computing\",\"domain\":\"tencent.com\",\"totalReports\":1,\"numDistinctUsers\":1,\"lastReportedAt\":\"2018-12-20T20:56:50+00:00\"}}"
+  },
+  "use_cases": [
+    "check abuse reputation score for a client IP",
+    "report an abusive IP with category and comment",
+    "download a blacklist of high-confidence abusive IPs",
+    "enrich security logs with ISP and country for an IP",
+    "gate login or API access by abuse confidence score"
+  ],
+  "sources": [
+    "https://docs.abuseipdb.com/",
+    "https://www.abuseipdb.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

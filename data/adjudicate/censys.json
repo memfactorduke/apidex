@@ -1,0 +1,15 @@
+{
+  "id": "censys",
+  "base_url": "https://api.platform.censys.io",
+  "docs_url": "https://docs.censys.com/reference/get-started",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free: 100 credits/mo (expire monthly); Free API limited to host/web-property/certificate lookups (1 credit each); standard search 5 credits; concurrent limit 1",
+  "rate_limits": "By tier concurrent actions: Free/Starter 1; Search/Core 25. Full limits shown on Platform Personal Access Tokens page; API calls consume credits",
+  "cors": null,
+  "example_request": "curl --request GET --url 'https://api.platform.censys.io/v3/global/asset/host/8.8.8.8' --header 'Accept: application/vnd.censys.api.v3.host.v1+json' --header 'Authorization: Bearer YOUR_PAT'",
+  "example_response_snippet": "{\"result\":{\"resource\":{\"ip\":\"8.8.8.8\",\"location\":{\"country\":\"United States\",\"country_code\":\"US\"},\"services\":[{\"port\":53,\"protocol\":\"DNS\",\"transport_protocol\":\"udp\"}],\"service_count\":1}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect; Platform host https://api.platform.censys.io (Global: .../v3/global/) per docs.censys.com/reference/get-started; search.censys.io/api is Legacy (disabled for Free). docs_url: incorrect; official API docs https://docs.censys.com/reference/get-started. auth_type: keep apiKey\u2014Platform uses PAT Bearer (still apiKey); Basic Auth was Legacy. free_tier_limits: Free=100 credits/mo (docs.censys.com/docs/platform-credits-free-starter); B\u2019s 250 queries is Legacy. rate_limits: published concurrent Free/Starter=1, Search/Core=25 (get-started). example: updated to Platform host lookup + Bearer."
+}

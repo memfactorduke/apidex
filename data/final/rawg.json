@@ -1,0 +1,99 @@
+{
+  "id": "rawg",
+  "status": "operational",
+  "name": "RAWG",
+  "category": "entertainment",
+  "tagline": "Video game database API for games, platforms, genres, and reviews",
+  "description": "RAWG provides a large video game database API with endpoints for games, platforms, genres, tags, stores, developers, publishers, and user content. Developers can search and filter games, retrieve screenshots and trailers, and access metadata such as release dates, ratings, and platforms. Authentication is via a free API key obtained through self-serve signup.",
+  "base_url": "https://api.rawg.io/api",
+  "docs_url": "https://api.rawg.io/docs/",
+  "signup_url": "https://rawg.io/apidocs",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter key=YOUR_API_KEY; free self-serve signup at rawg.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "20,000 requests/month free",
+    "paid_plans": null
+  },
+  "rate_limits": "not published beyond free tier monthly quota",
+  "example": {
+    "request": "curl \"https://api.rawg.io/api/games?key=YOUR_API_KEY&search=witcher&page_size=5\"",
+    "response_snippet": "{\"count\": 40, \"next\": \"https://api.rawg.io/api/games?key=...&page=2\", \"previous\": null, \"results\": [{\"id\": 3328, \"slug\": \"the-witcher-3-wild-hunt\", \"name\": \"The Witcher 3: Wild Hunt\", \"released\": \"2015-05-18\", \"rating\": 4.66, \"metacritic\": 92}]}"
+  },
+  "use_cases": [
+    "search games by name or keyword",
+    "get game details including platforms and ratings",
+    "list games by platform or genre",
+    "fetch game screenshots and trailers",
+    "look up developers or publishers"
+  ],
+  "sources": [
+    "https://api.rawg.io/docs/",
+    "https://rawg.io/apidocs",
+    "https://rawg.io/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

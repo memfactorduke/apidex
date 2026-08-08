@@ -1,0 +1,52 @@
+{
+  "id": "nutritionix",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nutritionix.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.nutritionix.com/",
+      "source": "https://docs.nutritionix.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nutritionix.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nutritionix.com/business/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nutritionix.com/business/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nutritionix.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nutritionix.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nutritionix.com/"
+    }
+  },
+  "notes": "docs_url path /docs/v2 returns errors; current docs are at https://docs.nutritionix.com/. Base URL host is correct; root path 404 is expected (API uses specific endpoints). Free tier and limits not published precisely \u2014 entry correctly says unknown/not published."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "opentdb",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentdb.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentdb.com/api_config.php"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentdb.com/api_config.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentdb.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentdb.com/api_config.php"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentdb.com/api_config.php"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentdb.com/api.php?amount=1"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentdb.com/api_config.php"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentdb.com/api_config.php"
+    }
+  },
+  "notes": "All claims verified against official OpenTDB docs (api_config.php) and live endpoints. No key required; optional session tokens (6h inactivity); max 50 questions/call; 1 category/call; 1 req/5s/IP with code 5; CC BY-SA 4.0; CORS yes via live API."
+}

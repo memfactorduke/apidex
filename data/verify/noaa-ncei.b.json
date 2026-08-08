@@ -1,0 +1,52 @@
+{
+  "id": "noaa-ncei",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free with required token; published fair-use limits are 5 requests/second and 10,000 requests/day per token (same as rate_limits). No paid CDO v2 plans documented.",
+      "source": "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+    }
+  },
+  "notes": "Adversarial re-check: base_url still ncdc.noaa.gov host; docs on ncei.noaa.gov. free_tier_limits was redundant/correctable for precision only \u2014 actually rate limits match docs. Rechecking free_tier_limits: entry is accurate. Need live docs verification."
+}

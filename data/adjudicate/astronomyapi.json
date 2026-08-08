@@ -1,0 +1,15 @@
+{
+  "id": "astronomyapi",
+  "base_url": "https://api.astronomyapi.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free: 100 requests/day, 10 requests/minute",
+  "rate_limits": "Free: 100/day, 10/min; paid plans have higher limits",
+  "cors": null,
+  "example_request": "curl -X GET -u \"APPLICATION_ID:APPLICATION_SECRET\" \"https://api.astronomyapi.com/api/v2/bodies\"",
+  "example_response_snippet": "{\"data\":{\"bodies\":[{\"id\":\"sun\",\"name\":\"Sun\",\"type\":\"Star\"}]}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: original confirmed (host root). free_tier_limits/rate_limits/example corrected from official pricing and auth docs."
+}

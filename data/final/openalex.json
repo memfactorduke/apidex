@@ -1,0 +1,98 @@
+{
+  "id": "openalex",
+  "status": "operational",
+  "name": "OpenAlex",
+  "category": "data-analytics",
+  "tagline": "Open scholarly graph of works, authors, institutions, and citations",
+  "description": "OpenAlex is a free, open scholarly metadata graph covering works, authors, institutions, sources, concepts, and citations. It provides a REST API for searching and retrieving bibliographic and research-output data at scale, suitable for discovery, bibliometrics, and research analytics.",
+  "base_url": "https://api.openalex.org",
+  "docs_url": "https://docs.openalex.org",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No key required for basic use; optional polite-pool email via mailto query param or From header improves rate limits"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Polite pool (email via mailto/From): 10 req/s; default without email: 1 req/s; free tier soft daily limit ~100k without API key (paid Premium/Enterprise higher)",
+    "paid_plans": null
+  },
+  "rate_limits": "Default 1 req/s; polite pool (email) 10 req/s; free ~100k calls/day soft limit without key; Premium 1M/day & 100 req/s; Enterprise custom",
+  "example": {
+    "request": "curl \"https://api.openalex.org/works/W2741809807\"",
+    "response_snippet": "{\"id\":\"https://openalex.org/W2741809807\",\"doi\":\"https://doi.org/10.7717/peerj.4375\",\"title\":\"The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles\",\"publication_year\":2018}"
+  },
+  "use_cases": [
+    "search scholarly works by title or DOI",
+    "look up an author's publications and citation counts",
+    "resolve institution metadata from OpenAlex IDs",
+    "fetch citation and reference graphs for a paper"
+  ],
+  "sources": [
+    "https://openalex.org",
+    "https://docs.openalex.org"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

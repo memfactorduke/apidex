@@ -1,0 +1,102 @@
+{
+  "id": "eurostat",
+  "status": "operational",
+  "name": "Eurostat",
+  "category": "data-analytics",
+  "tagline": "Official EU statistical data API for European economy, society, and environment indicators.",
+  "description": "Eurostat's public Statistics API provides machine-readable access to official European Union statistics \u2014 GDP, inflation, population, labour market, trade, and thousands of other datasets \u2014 via JSON-stat and related formats without requiring an API key.",
+  "base_url": "https://ec.europa.eu/eurostat/api/dissemination",
+  "docs_url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public Statistics API; open access to disseminated data."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; rate limits apply (see rate_limits)",
+    "paid_plans": null
+  },
+  "rate_limits": "60 requests/minute; max ~30 MB compressed (or ~1 GB uncompressed) response; sync wait up to 60s; max 2 concurrent; up to 50 async queries/day",
+  "example": {
+    "request": "curl -s \"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=en&geo=EU27_2020&unit=CP_MEUR&na_item=B1GQ&time=2022\"",
+    "response_snippet": "{\"version\":\"2.0\",\"class\":\"dataset\",\"label\":\"GDP and main components...\",\"id\":[\"freq\",\"unit\",\"na_item\",\"geo\",\"time\"],\"size\":[1,1,1,1,1],\"dimension\":{...},\"value\":{\"0\":14823456.7}}"
+  },
+  "use_cases": [
+    "fetch EU GDP or inflation time series for a country",
+    "compare unemployment rates across EU member states",
+    "pull population or demographic indicators by region",
+    "export trade or industrial production statistics as JSON-stat",
+    "power dashboards with official Eurostat datasets"
+  ],
+  "sources": [
+    "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access",
+    "https://ec.europa.eu/eurostat"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

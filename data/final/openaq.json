@@ -1,0 +1,99 @@
+{
+  "id": "openaq",
+  "status": "operational",
+  "name": "OpenAQ",
+  "category": "science-space",
+  "tagline": "Global air quality measurements from public sensors",
+  "description": "OpenAQ is a public API that aggregates real-time and historical air quality measurements from government and research-grade sensors worldwide. Developers can query locations, parameters (PM2.5, PM10, O3, NO2, etc.), latest measurements, and sensor metadata for environmental apps, research, and monitoring.",
+  "base_url": "https://api.openaq.org/v3",
+  "docs_url": "https://docs.openaq.org",
+  "signup_url": "https://explore.openaq.org",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-API-Key header; free self-serve key from OpenAQ Explore after account signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "60 requests/minute, 2,000 requests/hour (free/general tier); higher limits available via custom paid contact",
+    "paid_plans": null
+  },
+  "rate_limits": "60 requests/minute and 2,000 requests/hour per API key (free/general use); 429 when exceeded; custom higher limits available",
+  "example": {
+    "request": "curl -H \"X-API-Key: YOUR_API_KEY\" \"https://api.openaq.org/v3/locations?limit=1\"",
+    "response_snippet": "{\"meta\":{\"name\":\"openaq-api\",\"website\":\"https://docs.openaq.org\",\"page\":1,\"limit\":1,\"found\":...},\"results\":[{\"id\":...,\"name\":\"...\",\"locality\":\"...\",\"timezone\":\"...\",\"countries\":[...],\"sensors\":[...]}]}"
+  },
+  "use_cases": [
+    "get latest PM2.5 readings near a city",
+    "list air quality monitoring locations in a country",
+    "fetch historical measurements for a sensor",
+    "query global air quality by parameter",
+    "find sensors within a bounding box"
+  ],
+  "sources": [
+    "https://docs.openaq.org",
+    "https://api.openaq.org"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

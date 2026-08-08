@@ -1,0 +1,52 @@
+{
+  "id": "webzio",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webz.io/products/news-api#lite"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "News API Lite: 1,000 free requests/month (see product page); paid Free Trial also exists for full News API",
+      "source": "https://webz.io/products/news-api#lite"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/docs/get-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webz.io/"
+    }
+  },
+  "notes": "Docs and marketing confirm base URL, token auth, Lite free tier (1k/mo), and newsApiLite example. free_tier_limits was listed as unknown but is published. CORS and exact rate limits remain unpublished in docs reviewed."
+}

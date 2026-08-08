@@ -1,0 +1,106 @@
+{
+  "id": "phishtank",
+  "status": "operational",
+  "name": "PhishTank",
+  "category": "security-identity",
+  "tagline": "Community phishing URL verification feed for mail and browser protection",
+  "description": "PhishTank is a collaborative clearing house for phishing URL verification. Developers can check URLs against a community-maintained phishing database and consume data feeds for mail and browser protection.",
+  "base_url": "https://checkurl.phishtank.com",
+  "docs_url": "https://www.phishtank.com/api_info.php",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via application parameter; higher rate limits with registered key from free signup at phishtank.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://checkurl.phishtank.com/checkurl/\" -d \"url=https://example.com&format=json&app_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"results\":{\"url\":\"https://example.com\",\"in_database\":false,\"phish_id\":null,\"valid\":null,\"verified\":null}}"
+  },
+  "use_cases": [
+    "check if a URL is a known phishing site",
+    "download phishing URL data feeds for bulk screening",
+    "verify reported phishing URLs before blocking",
+    "integrate phishing checks into email/browser security"
+  ],
+  "sources": [
+    "https://www.phishtank.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

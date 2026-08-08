@@ -1,0 +1,95 @@
+{
+  "id": "codecov",
+  "status": "operational",
+  "name": "Codecov API",
+  "category": "dev-tools",
+  "tagline": "Code coverage reporting and analytics API for CI/CD pipelines",
+  "description": "Codecov API provides programmatic access to code coverage data, reports, and repository analytics for teams integrating coverage into CI/CD workflows. It supports retrieving coverage metrics, commit reports, and pull request comparisons across major version control platforms.",
+  "base_url": "https://api.codecov.io",
+  "docs_url": "https://docs.codecov.com/reference",
+  "signup_url": "https://app.codecov.io/login",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via Authorization: token YOUR_API_KEY header; self-serve signup on Codecov"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: bearer YOUR_API_KEY\" \"https://api.codecov.io/api/v2/github/OWNER/repos/REPO/\"",
+    "response_snippet": "{\"name\":\"REPO\",\"private\":false,\"updatestamp\":\"2024-01-15T12:00:00Z\",\"author\":{\"service\":\"github\",\"username\":\"OWNER\",\"name\":\"Owner\"},\"language\":\"python\",\"branch\":\"main\",\"active\":true,\"activated\":true,\"totals\":{\"files\":42,\"lines\":1200,\"hits\":1020,\"misses\":180,\"partials\":0,\"coverage\":85.0,\"branches\":50,\"methods\":30,\"sessions\":1,\"complexity\":0.0,\"complexity_total\":0.0,\"complexity_ratio\":0.0,\"diff\":0}}"
+  },
+  "use_cases": [
+    "get coverage percentage for a repository",
+    "fetch coverage report for a commit",
+    "compare coverage between pull request and base",
+    "list repositories with coverage data"
+  ],
+  "sources": [
+    "https://docs.codecov.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

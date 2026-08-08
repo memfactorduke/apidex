@@ -1,0 +1,52 @@
+{
+  "id": "ssllabs",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md"
+    }
+  },
+  "notes": "Verified against current SSL Labs API v3 docs and live /info endpoint. Base URL, no-auth model, rate limits (25 in progress, 1/sec, ~400/hour), free public API, and example request all match. CORS remains unknown (not documented)."
+}

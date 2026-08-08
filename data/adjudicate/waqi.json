@@ -1,0 +1,15 @@
+{
+  "id": "waqi",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "All APIs free with a valid token; default published quota is 1,000 requests/second",
+  "rate_limits": "Default quota: 1,000 requests/second; contact for higher limits",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "Disputed free_tier_limits: both verifiers flagged incorrect but offered near-paraphrases of the original. Official JSON API docs (aqicn.org/json-api/doc/) state free token access and the published default quota of 1,000 requests per second; commercial/for-profit use needs agreement (token page). Kept substantive original; minor wording cleanup only if needed for fidelity to docs. Disputed rate_limits: Verifier A confirmed original; Verifier B marked incorrect with almost identical text. Docs support \"1,000 requests per second\" default quota and contact for higher limits \u2014 original stands. Automated base_url HTTP 0 is treated as bot/network false positive: docs_url HTTP 200, same project, and feed endpoints are documented on api.waqi.info; status remains operational. Evidence: https://aqicn.org/json-api/doc/ , https://aqicn.org/data-platform/token/"
+}

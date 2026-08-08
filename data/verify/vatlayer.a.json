@@ -1,0 +1,52 @@
+{
+  "id": "vatlayer",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "http://apilayer.net/api",
+      "source": "https://vatlayer.com/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/product"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests/month free (Free plan); higher tiers available",
+      "source": "https://vatlayer.com/product"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/documentation"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/documentation"
+    }
+  },
+  "notes": "Automated checks noted https flag inconsistent with base_url (http://). Verifying all claims against official docs and pricing."
+}

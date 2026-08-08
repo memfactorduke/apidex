@@ -1,0 +1,52 @@
+{
+  "id": "marketaux",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.marketaux.com/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.marketaux.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.marketaux.com/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.marketaux.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests/day free (Basic plan); free tier is 100 API credits/day with entity filtering available on higher plans per current pricing page",
+      "source": "https://www.marketaux.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 100 requests/day; paid plans have higher daily limits \u2014 verify exact numbers on pricing page",
+      "source": "https://www.marketaux.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use api_token query param (not token=); path /v1/news/all is correct per docs",
+      "source": "https://www.marketaux.com/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.marketaux.com/"
+    }
+  },
+  "notes": "Auth details field said token= but example correctly used api_token; free tier wording needs pricing-page verification for 2026."
+}

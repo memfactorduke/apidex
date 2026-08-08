@@ -1,0 +1,97 @@
+{
+  "id": "twelve-data",
+  "status": "operational",
+  "name": "Twelve Data",
+  "category": "finance",
+  "tagline": "Real-time and historical stock, forex, crypto, and market data API",
+  "description": "Twelve Data provides market data APIs for stocks, forex, cryptocurrencies, ETFs, and more, including real-time quotes, time series, technical indicators, and fundamentals. Developers authenticate with an API key and call REST endpoints for prices, candles, and reference data across global markets.",
+  "base_url": "https://api.twelvedata.com",
+  "docs_url": "https://twelvedata.com/docs",
+  "signup_url": "https://twelvedata.com/pricing",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter or Authorization header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Basic free plan: 8 API credits/min, 800 credits/day; delayed data; endpoints cost 1+ credits by complexity",
+    "paid_plans": null
+  },
+  "rate_limits": "Per plan in API credits: free Basic 8/min & 800/day; paid tiers scale (e.g. Grow ~55/min, Pro ~610/min, Ultra ~1440/min) \u2014 see pricing",
+  "example": {
+    "request": "curl \"https://api.twelvedata.com/price?symbol=AAPL&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{\"price\": \"178.72\"}"
+  },
+  "use_cases": [
+    "get real-time stock quote for a ticker",
+    "fetch historical OHLCV time series for a symbol",
+    "compute technical indicators for a security",
+    "list forex or crypto exchange rates"
+  ],
+  "sources": [
+    "https://twelvedata.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

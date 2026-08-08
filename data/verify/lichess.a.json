@@ -1,0 +1,52 @@
+{
+  "id": "lichess",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lichess.org/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lichess.org/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lichess.org/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lichess.org/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lichess.org/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lichess.org/api"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lichess.org/api"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lichess.org/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lichess.org/api"
+    }
+  },
+  "notes": "Verified against official Lichess API docs (lichess.org/api) and related pages. Base URL, OAuth2 personal tokens, free/no paid plans, account endpoint, and public+auth capabilities all match. Rate-limit numbers (~20\u201330 req/s) are typical community guidance, not fixed published quotas; entry already notes they are not fixed. CORS remains unknown/not documented."
+}

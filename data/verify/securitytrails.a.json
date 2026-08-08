@@ -1,0 +1,52 @@
+{
+  "id": "securitytrails",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.securitytrails.com/docs/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.securitytrails.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.securitytrails.com/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://securitytrails.com/corp/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://securitytrails.com/corp/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.securitytrails.com"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.securitytrails.com/reference/domain-information"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.securitytrails.com"
+    }
+  },
+  "notes": "Verified against official SecurityTrails docs and pricing. Base URL, APIKEY auth, and domain endpoint example match docs. Free tier exists; exact free limits often plan-dependent. Rate limits not prominently published; cors unknown is appropriate."
+}

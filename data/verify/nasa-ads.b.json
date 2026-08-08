@@ -1,0 +1,52 @@
+{
+  "id": "nasa-ads",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ui.adsabs.harvard.edu/help/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ui.adsabs.harvard.edu/help/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ui.adsabs.harvard.edu/help/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ui.adsabs.harvard.edu/help/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Anonymous: 5000 queries/day; authenticated: 5000 queries/day per user with higher soft limits documented in rate-limit docs when published; free research use with API token \u2014 quotas may vary by endpoint (search vs metrics)",
+      "source": "https://ui.adsabs.harvard.edu/help/api/api-docs.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Documented rate limits exist (not simply \"not published\"); check ADS API rate-limit / terms pages \u2014 typically thousands of queries per day for authenticated use",
+      "source": "https://ui.adsabs.harvard.edu/help/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ui.adsabs.harvard.edu/help/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ui.adsabs.harvard.edu/help/api/"
+    }
+  },
+  "notes": "Adversarial check: rate_limits marked incorrect because ADS does publish guidance beyond \"not published\"; free_tier_limits needs tighter official quota wording. Confirm all claims against live docs before directory ship."
+}

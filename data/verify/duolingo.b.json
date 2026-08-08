@@ -1,0 +1,52 @@
+{
+  "id": "duolingo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No official public API base URL. Common unofficial reverse-engineered API host is https://www.duolingo.com (versioned paths like /2017-06-30/), not a documented developer API surface.",
+      "source": "https://www.duolingo.com"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "No official public developer API docs; https://www.duolingo.com is the product site, not API documentation. Community/unofficial docs exist elsewhere (e.g. GitHub reverse-engineering).",
+      "source": "https://www.duolingo.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.duolingo.com"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true (for the unofficial public user endpoints, no paid developer plan exists; free_tier:false / \"no free tier\" misframes absence of an official API as paid-only).",
+      "source": "https://www.duolingo.com"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable / no official free tier policy; \"no free tier\" is wrong framing \u2014 there is no official API product with tiers.",
+      "source": "https://www.duolingo.com"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.duolingo.com/2017-06-30/users?username="
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.duolingo.com"
+    }
+  },
+  "notes": "Adversarial check: no official Duolingo public developer API or docs in 2026; product site is mislabeled as docs/base API. Pricing free_tier:false is wrong framing for non-product. Example unofficial path still commonly used."
+}

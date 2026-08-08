@@ -1,0 +1,15 @@
+{
+  "id": "sonarcloud",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: KEEP original https://sonarcloud.io/api. Official SonarQube Cloud Web API docs (https://docs.sonarsource.com/sonarqube-cloud/appendices/web-api) sample V1 calls as https://sonarcloud.io/api/... (e.g. /api/measures/component); live probe of /api/system/status returned {\"status\":\"UP\"}. V2 host https://api.sonarcloud.io exists but does not replace V1 base for the endpoints this entry describes. Verifier B\u2019s \u201cincorrect\u201d note still concedes the live host is sonarcloud.io/api. docs_url: KEEP original https://sonarcloud.io/web_api. Same official page states V1 services are documented at https://sonarcloud.io/web_api (HTTP 200). Narrative guide is https://docs.sonarsource.com/sonarqube-cloud/appendices/web-api; Verifier B\u2019s advanced-setup/web-api path only 307-redirects there and is not the canonical URL."
+}

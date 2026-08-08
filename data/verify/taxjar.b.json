@@ -1,0 +1,52 @@
+{
+  "id": "taxjar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/#authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 TaxJar no longer offers a free/sandbox-only developer tier for production use; access requires a paid TaxJar plan (or Stripe Tax migration path). Sandbox exists for testing with fake credentials but is not a free production tier.",
+      "source": "https://www.taxjar.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "N/A (no free tier). If referring to sandbox: unlimited fake data only; no production API calls without a paid plan.",
+      "source": "https://developers.taxjar.com/api/reference/#sandbox-environment"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/#get-show-tax-rates-for-a-location"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/"
+    }
+  },
+  "notes": "Need live verification of pricing/free tier and whether TaxJar was acquired or migrated to Stripe Tax. Verifying all fields from official docs now."
+}

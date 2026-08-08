@@ -1,0 +1,15 @@
+{
+  "id": "the-trivia-api",
+  "base_url": "https://the-trivia-api.com/v2",
+  "docs_url": "https://the-trivia-api.com/docs/v2/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free public access without an API key; higher rate limits with a free API key (exact free-key quotas not clearly published on docs)",
+  "rate_limits": "Rate limits exist and are higher with an API key; exact numeric limits not clearly published on public docs",
+  "cors": null,
+  "example_request": "curl 'https://the-trivia-api.com/v2/questions?limit=1'",
+  "example_response_snippet": "[{\"category\":\"Science\",\"id\":\"...\",\"correctAnswer\":\"...\",\"incorrectAnswers\":[\"...\",\"...\",\"...\"],\"question\":{\"text\":\"...\"},\"tags\":[\"science\"],\"type\":\"text_choice\",\"difficulty\":\"medium\",\"regions\":[],\"isNiche\":false}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: both verifiers correct \u2014 official docs use https://the-trivia-api.com/v2 (not /api). docs_url: Verifier A correct \u2014 canonical docs at https://the-trivia-api.com/docs/v2/; /docs may redirect. free_tier_limits: free unauthenticated use + higher limits with free API key; exact quotas not clearly published. rate_limits: limits exist and improve with API key; exact numbers not published on public docs (prefer that over original 'not published' as if no limits). example: v2 path is current; use /v2/questions. Evidence: https://the-trivia-api.com/docs/v2/ and https://the-trivia-api.com"
+}

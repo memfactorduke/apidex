@@ -1,0 +1,52 @@
+{
+  "id": "mastodon",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.joinmastodon.org/client/intro/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.joinmastodon.org/client/intro/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.joinmastodon.org/client/token/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.joinmastodon.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.joinmastodon.org/api/rate-limits/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.joinmastodon.org/api/rate-limits/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.joinmastodon.org/methods/timelines/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.joinmastodon.org/client/intro/"
+    }
+  },
+  "notes": "Verified against docs.joinmastodon.org. Base URL is instance-templated (not a single host); HTTP 0 on template is expected. Rate limits and free access are instance-dependent as documented."
+}

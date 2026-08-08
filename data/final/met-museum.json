@@ -1,0 +1,100 @@
+{
+  "id": "met-museum",
+  "status": "operational",
+  "name": "Metropolitan Museum of Art Collection API",
+  "category": "education-reference",
+  "tagline": "Open access REST API for Met collection objects, images, and metadata.",
+  "description": "Free, no-auth public API for The Metropolitan Museum of Art's collection. Search and retrieve object records (titles, artists, dates, departments), image URLs, and related metadata for open-access works. Built for education, research apps, and cultural heritage projects; rate-limited but free for non-commercial and most commercial use under Met Open Access policy.",
+  "base_url": "https://collectionapi.metmuseum.org/public/collection/v1",
+  "docs_url": "https://metmuseum.github.io/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints; no API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no paid plans. Rate limit 80 requests/second.",
+    "paid_plans": null
+  },
+  "rate_limits": "80 requests per second (published on official docs).",
+  "example": {
+    "request": "curl -s \"https://collectionapi.metmuseum.org/public/collection/v1/objects/436535\"",
+    "response_snippet": "{\"objectID\":436535,\"isHighlight\":true,\"accessionNumber\":\"1980.305\",\"accessionYear\":\"1980\",\"isPublicDomain\":true,\"primaryImage\":\"https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg\",\"department\":\"European Paintings\",\"objectName\":\"Painting\",\"title\":\"Wheat Field with Cypresses\",\"culture\":\"\",\"period\":\"\",\"artistDisplayName\":\"Vincent van Gogh\",\"objectDate\":\"1889\",\"medium\":\"Oil on canvas\",\"classification\":\"Paintings\",\"repository\":\"Metropolitan Museum of Art, New York, NY\",\"objectURL\":\"https://www.metmuseum.org/art/collection/search/436535\"}"
+  },
+  "use_cases": [
+    "look up a Met object by ID with title artist and image URL",
+    "search collection objects by keyword or department",
+    "list all object IDs in a department for bulk export",
+    "fetch open-access primary and additional image URLs for a work",
+    "check whether an object is public domain before using its image",
+    "browse Met departments and object counts for a museum browser app"
+  ],
+  "sources": [
+    "https://metmuseum.github.io/",
+    "https://github.com/metmuseum/openaccess",
+    "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+    "https://collectionapi.metmuseum.org/public/collection/v1/departments"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "you-com",
+  "base_url": "https://api.ydc-index.io",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s \"https://api.ydc-index.io/v1/search?query=latest%20AI%20news\" -H \"X-API-Key: YOUR_API_KEY\"",
+  "example_response_snippet": "{\"results\":[{\"title\":\"...\",\"url\":\"https://...\",\"snippets\":[\"...\"]}],\"metadata\":{\"query\":\"latest AI news\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: original confirmed (https://api.ydc-index.io) per official docs/API host; example: original curl form is valid; minor -X GET optional. Evidence: documentation.you.com/api-reference (verifiers partially consistent; no evidence of path/header change requiring rewrite)."
+}

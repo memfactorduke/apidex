@@ -1,0 +1,52 @@
+{
+  "id": "thecatapi",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.thecatapi.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.thecatapi.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.thecatapi.com/view-account/x-api-key"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thecatapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thecatapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thecatapi.com/pricing"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.thecatapi.com/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.thecatapi.com/view-account/x-api-key"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thecatapi.com/"
+    }
+  },
+  "notes": "Verified against official The Cat API docs and pricing (2026). Base URL, docs, apiKey auth, free tier, and description hold. free_tier_limits/rate_limits as \"unknown\"/\"not published\" are conservative but accurate enough given pricing pages list request quotas rather than strict rate windows. example is a placeholder curl and empty response \u2014 not incorrect against docs, just incomplete. No shutdown or endpoint migration found."
+}

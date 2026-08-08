@@ -1,0 +1,99 @@
+{
+  "id": "klarna",
+  "status": "operational",
+  "name": "Klarna API",
+  "category": "ecommerce-payments",
+  "tagline": "Buy now, pay later payments and checkout for e-commerce",
+  "description": "Klarna provides payment and checkout APIs for online merchants: Hosted Checkout, Payments (KP), Order Management, Settlements, and related services so shoppers can pay later or in installments at checkout.",
+  "base_url": "https://api.klarna.com",
+  "docs_url": "https://docs.klarna.com/",
+  "signup_url": "https://portal.klarna.com/",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with API username and password (merchant credentials) from the Klarna Merchant Portal; playground and production have separate credentials."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Merchant fees and pricing negotiated via Klarna merchant agreement; API access is not a separate public SaaS subscription."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST -u YOUR_API_USERNAME:YOUR_API_PASSWORD -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{\"purchase_country\":\"SE\",\"purchase_currency\":\"SEK\",\"locale\":\"en-SE\",\"order_amount\":10000,\"order_lines\":[{\"type\":\"physical\",\"name\":\"Product\",\"quantity\":1,\"unit_price\":10000,\"total_amount\":10000}]}' 'https://api.klarna.com/payments/v1/sessions'",
+    "response_snippet": "{\n  \"session_id\": \"...\",\n  \"client_token\": \"...\",\n  \"payment_method_categories\": [ ... ]\n}"
+  },
+  "use_cases": [
+    "create a Klarna payment session for checkout",
+    "render Klarna widget with client token",
+    "place and capture a Klarna order",
+    "manage refunds and order updates",
+    "retrieve settlement reports for reconciliation"
+  ],
+  "sources": [
+    "https://docs.klarna.com/",
+    "https://docs.klarna.com/api/",
+    "https://www.klarna.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

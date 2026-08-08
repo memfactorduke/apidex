@@ -1,0 +1,52 @@
+{
+  "id": "telegram-bot",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free unlimited API use (no call quotas or monthly fees). Free messaging subject to rate limits: \u22641 msg/sec per private chat (some sources say ~1 msg/sec), \u226420 msg/min per group, free bulk broadcast about 30 msg/sec; paid broadcast option exists for higher throughput via Telegram Stars.",
+      "source": "https://core.telegram.org/bots/faq"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Verified against official Telegram Bot API docs and FAQ. Base URL, docs, auth, free tier, and getMe example match current docs. Rate-limit numbers and paid-broadcast Stars pricing need careful check against FAQ; CORS is not documented by Telegram. One or more pricing/limit claims may be imprecise."
+}

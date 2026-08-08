@@ -1,0 +1,52 @@
+{
+  "id": "world-bank",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.worldbank.org/v2",
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.worldbank.org/v2/country/br?format=json\"",
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Entry is research-placeholder quality. base_url should include /v2; example is placeholder not a real curl. Auth none + free open data confirmed. Rate limits not published. CORS not documented."
+}

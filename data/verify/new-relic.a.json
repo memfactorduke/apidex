@@ -1,0 +1,52 @@
+{
+  "id": "new-relic",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.newrelic.com/docs/apis/nerdgraph/get-started/introduction-new-relic-nerdgraph/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.newrelic.com/docs/apis/intro-apis/introduction-apis-new-relic/",
+      "source": "https://docs.newrelic.com/docs/apis/intro-apis/introduction-apis-new-relic/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newrelic.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier includes 100 GB/month of data ingest, one full platform user, and unlimited basic users (details on pricing page; API-specific quotas not separately itemized)",
+      "source": "https://newrelic.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per API: e.g. NerdGraph 25 concurrent requests / 100 rpm complexity-related limits; REST API v2 3,000 requests/min per account (see docs)",
+      "source": "https://docs.newrelic.com/docs/apis/nerdgraph/nerdgraph-usage-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.newrelic.com/docs/apis/nerdgraph/get-started/introduction-new-relic-nerdgraph/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.newrelic.com/docs/apis/intro-apis/introduction-apis-new-relic/"
+    }
+  },
+  "notes": "docs_url path is outdated (404). Free tier and rate limits are documented, not unknown/unpublished. base_url, NerdGraph example, and apiKey auth match current official docs."
+}

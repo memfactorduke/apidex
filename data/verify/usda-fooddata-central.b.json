@@ -1,0 +1,52 @@
+{
+  "id": "usda-fooddata-central",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fdc.nal.usda.gov/api-guide"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fdc.nal.usda.gov/api-guide"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fdc.nal.usda.gov/api-guide"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fdc.nal.usda.gov/api-key-signup"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 requests/hour per IP address for DEMO_KEY; standard free API keys have higher/unspecified rate limits (docs emphasize DEMO_KEY limit of 1,000 req/hour)",
+      "source": "https://fdc.nal.usda.gov/api-guide"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "DEMO_KEY: 1,000 requests/hour per IP. Personal API keys: rate limits not clearly stated as 1,000/hour in current docs \u2014 entry overstates certainty",
+      "source": "https://fdc.nal.usda.gov/api-guide"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fdc.nal.usda.gov/api-guide"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fdc.nal.usda.gov/"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live sources before finalizing."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "paddle",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paddle.com/api-reference/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paddle.com/api-reference/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paddle.com/api-reference/about/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.paddle.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paddle.com/api-reference/about/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paddle.com/api-reference/products/list-products"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paddle.com/"
+    }
+  },
+  "notes": "Verified against official Paddle docs (2026). Base URL, Bearer auth, product list example, and MoR description match current Billing API docs. Free tier is true (pay-as-you-go fees only); free_tier_limits unknown is acceptable. Rate limits: docs may document limits\u2014recheck. CORS unknown is fair without browser docs."
+}

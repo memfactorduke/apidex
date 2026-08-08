@@ -1,0 +1,15 @@
+{
+  "id": "semantic-scholar",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Shared free tier: unauthenticated ~100 requests/5 min (~1 RPS); free API key increases shared-pool limits; partner/higher tiers via application",
+  "rate_limits": "Unauthenticated: ~100 requests per 5 minutes. With free API key: higher shared rate limits (product page historically ~1 RPS unauth emphasis; partners get higher limits). Exact shared-pool caps may vary.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "Settling free_tier_limits and rate_limits from official product/docs (2026). Verifier A and B disagree on which tier gets ~1 RPS vs ~100/5min. Official product page (semanticscholar.org/product/api) and API key form: unauthenticated ~1 RPS / low shared limits; free API key grants higher shared limits; partners higher still. B swapped key vs unauth numbers vs A. Final free_tier_limits: free unauth lower (~100 req/5 min or ~1 RPS shared); free key higher shared pool; partner via app. rate_limits: same substance \u2014 unauth lower, key higher, partners higher. Evidence: https://www.semanticscholar.org/product/api and https://api.semanticscholar.org/api-docs/. Original 'unknown'/'not published' incorrect given published guidance."
+}

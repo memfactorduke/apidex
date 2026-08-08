@@ -1,0 +1,95 @@
+{
+  "id": "jina-ai",
+  "status": "operational",
+  "name": "Jina AI",
+  "category": "ai-ml",
+  "tagline": "Multimodal embeddings, reranking, and neural search APIs for AI applications",
+  "description": "Jina AI provides developer APIs for embeddings, reranking, reader/search, and related neural search workloads. The platform centers on api.jina.ai with API-key authentication, self-serve access, and usage-based pricing. Primary products include text/image embeddings, rerankers, and web reading/search helpers used to build retrieval and RAG systems.",
+  "base_url": "https://api.jina.ai",
+  "docs_url": "https://jina.ai/docs",
+  "signup_url": "https://jina.ai",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (or equivalent API key header per product docs); self-serve signup on jina.ai"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": "usage-based paid plans available"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.jina.ai/v1/embeddings -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"jina-embeddings-v3\",\"input\":[\"Hello world\"]}'",
+    "response_snippet": "{\"model\":\"jina-embeddings-v3\",\"data\":[{\"object\":\"embedding\",\"index\":0,\"embedding\":[0.01,-0.02]}],\"usage\":{\"total_tokens\":4}}"
+  },
+  "use_cases": [
+    "embed text documents for semantic search or RAG",
+    "rerank search results by relevance to a query",
+    "read and extract clean content from web pages",
+    "generate multimodal embeddings for images and text"
+  ],
+  "sources": [
+    "https://jina.ai",
+    "https://api.jina.ai"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url"
+    ],
+    "unverifiable": []
+  }
+}

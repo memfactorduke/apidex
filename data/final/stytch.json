@@ -1,0 +1,97 @@
+{
+  "id": "stytch",
+  "status": "operational",
+  "name": "Stytch",
+  "category": "security-identity",
+  "tagline": "Passwordless and multi-factor authentication APIs for modern SaaS apps",
+  "description": "Stytch provides passwordless authentication, multi-factor authentication (MFA), and identity management APIs designed for modern SaaS applications. Developers can integrate email magic links, SMS/OTP, OAuth, biometric authentication, and session management without building auth infrastructure from scratch. The platform targets product teams that need secure, customizable login flows with developer-friendly APIs and SDKs.",
+  "base_url": "https://api.stytch.com/v1",
+  "docs_url": "https://stytch.com/docs",
+  "signup_url": "https://stytch.com/signup",
+  "auth": {
+    "type": "basic",
+    "details": "Project ID and secret via HTTP Basic Auth (project_id:secret) or API key headers; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.stytch.com/v1/magic_links/email/login_or_create -u 'PROJECT_ID:SECRET' -H 'Content-Type: application/json' -d '{\"email\":\"user@example.com\"}'",
+    "response_snippet": "{\"status_code\":200,\"request_id\":\"request-id-test-...\",\"user_id\":\"user-test-...\",\"email_id\":\"email-test-...\"}"
+  },
+  "use_cases": [
+    "send passwordless magic link login email",
+    "verify OTP or magic link token",
+    "create and manage user sessions",
+    "enroll multi-factor authentication methods",
+    "implement OAuth social login"
+  ],
+  "sources": [
+    "https://stytch.com",
+    "https://stytch.com/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "gutendex",
+  "status": "operational",
+  "name": "Gutendex",
+  "category": "education-reference",
+  "tagline": "Project Gutenberg book catalog JSON API",
+  "description": "Gutendex is a free REST API that serves Project Gutenberg ebook metadata as JSON, including titles, authors, languages, subjects, download links, and popularity rankings. No API key is required; developers query the public HTTPS endpoint with filters and pagination to search or browse the catalog.",
+  "base_url": "https://gutendex.com",
+  "docs_url": "https://gutendex.com",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public HTTPS endpoints accept unauthenticated GET requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public API; no published request quotas on official docs",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://gutendex.com/books/?search=dickens\"",
+    "response_snippet": "{\"count\":200,\"next\":\"https://gutendex.com/books/?page=2&search=dickens\",\"previous\":null,\"results\":[{\"id\":98,\"title\":\"A Tale of Two Cities\",\"authors\":[{\"name\":\"Dickens, Charles\",\"birth_year\":1812,\"death_year\":1870}],\"languages\":[\"en\"],\"download_count\":25000}]}"
+  },
+  "use_cases": [
+    "search Project Gutenberg books by title or author",
+    "list free ebooks filtered by language or topic",
+    "get metadata and download links for a Gutenberg book ID",
+    "find popular public-domain books by download count",
+    "browse books available in a given format (e.g. EPUB, plain text)"
+  ],
+  "sources": [
+    "https://gutendex.com",
+    "https://github.com/garethbjohnson/gutendex"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

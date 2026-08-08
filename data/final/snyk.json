@@ -1,0 +1,99 @@
+{
+  "id": "snyk",
+  "status": "operational",
+  "name": "Snyk",
+  "category": "security-identity",
+  "tagline": "Developer-first vulnerability scanning for dependencies, containers, and infrastructure as code",
+  "description": "Snyk provides REST and legacy APIs for vulnerability scanning of open-source dependencies, containers, and IaC. Developers authenticate with personal or service-account tokens to list organizations/projects, pull vulnerability findings, and integrate security checks into CI/CD and agent workflows.",
+  "base_url": "https://api.snyk.io",
+  "docs_url": "https://docs.snyk.io/snyk-api",
+  "signup_url": "https://app.snyk.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token (personal API token or service account) via Authorization: token YOUR_API_KEY or Authorization: Bearer YOUR_API_KEY; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan for individuals (limited tests/projects; exact API quotas not published on public pricing)",
+    "paid_plans": "Team and Enterprise plans with higher limits and org features; see snyk.io/plans"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS -H \"Authorization: token YOUR_API_KEY\" -H \"Content-Type: application/vnd.api+json\" \"https://api.snyk.io/rest/self?version=2024-10-15\"",
+    "response_snippet": "{\"jsonapi\":{\"version\":\"1.0\"},\"data\":{\"type\":\"user\",\"id\":\"...\",\"attributes\":{\"username\":\"...\",\"email\":\"...\",\"name\":\"...\"}}}"
+  },
+  "use_cases": [
+    "list organizations and projects for a Snyk account",
+    "fetch open-source dependency vulnerability findings for a project",
+    "check container image issues via Snyk API",
+    "retrieve IaC security findings for scanned infrastructure",
+    "integrate vulnerability data into CI/CD or coding-agent workflows"
+  ],
+  "sources": [
+    "https://docs.snyk.io/snyk-api",
+    "https://docs.snyk.io/snyk-api/rest-api",
+    "https://snyk.io/plans",
+    "https://docs.snyk.io"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "untappd",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No public free self-serve tier; API access requires app registration and approval/commercial terms (new keys restricted)",
+  "rate_limits": "100 calls per hour per key; with user auth, limit applies per user. Headers: X-Ratelimit-Limit, X-Ratelimit-Remaining",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier: FALSE \u2014 official docs still document public API endpoints and client_id/secret auth, but community evidence (Reddit r/Untappd 2024\u20132025) and lack of any free pricing page show new self-serve free keys are not granted; access requires commercial/approval path. free_tier_limits: n/a / no free self-serve tier \u2014 same sources; docs do not publish free-tier quotas beyond rate limit. rate_limits: CORRECTED from 'not published' \u2014 official docs (https://untappd.com/api/docs) state default 100 calls/hour per key, per-user when authenticated, with X-Ratelimit-Limit and X-Ratelimit-Remaining headers. Verifier B rate_limits correction adopted; free_tier follows Verifier B over Verifier A."
+}

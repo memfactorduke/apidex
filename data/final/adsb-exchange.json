@@ -1,0 +1,99 @@
+{
+  "id": "adsb-exchange",
+  "status": "operational",
+  "name": "ADS-B Exchange",
+  "category": "transportation",
+  "tagline": "Crowdsourced ADS-B aircraft tracking and flight data API",
+  "description": "ADS-B Exchange provides real-time and historical aircraft tracking data from a global network of ADS-B receivers. Developers can query live positions, aircraft details, and related flight information via a REST API for aviation apps, logistics, and research.",
+  "base_url": "...",
+  "docs_url": "https://www.adsbexchange.com/data/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required; obtain via paid subscription or data access program (verify current signup path on official site)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "...",
+    "paid_plans": null
+  },
+  "rate_limits": "...",
+  "example": {
+    "request": "...",
+    "response_snippet": "..."
+  },
+  "use_cases": [
+    "get aircraft currently near a lat/lon",
+    "look up a flight by callsign or ICAO hex",
+    "track live aircraft positions for a map",
+    "filter aircraft by altitude or distance"
+  ],
+  "sources": [
+    "https://www.adsbexchange.com/",
+    "https://www.adsbexchange.com/data/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

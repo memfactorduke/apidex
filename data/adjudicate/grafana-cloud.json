@@ -1,0 +1,15 @@
+{
+  "id": "grafana-cloud",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free Forever plan includes product quotas (e.g. 10k series Prometheus metrics, 50 GB logs, 50 GB traces, 3 users; limits change \u2014 see pricing). Cloud API itself has no separate free-call quota published.",
+  "rate_limits": "Cloud API enforces rate limits and may return HTTP 429; specific numeric limits are not published as a single public quota table \u2014 check Cloud API docs and response headers.",
+  "cors": null,
+  "example_request": "curl -H \"Authorization: Bearer YOUR_ACCESS_POLICY_TOKEN\" https://grafana.com/api/orgs",
+  "example_response_snippet": "[{\"id\":1,\"name\":\"Example Org\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: B correct \u2014 original 'unknown' is wrong; Grafana pricing Free Forever publishes product quotas (https://grafana.com/pricing/). rate_limits: B partly correct \u2014 original 'not published' understates that Cloud API docs describe rate limiting/429 behavior (https://grafana.com/docs/grafana-cloud/developer-resources/api-reference/cloud-api/); numeric caps still not a clear public table. example: B correct \u2014 list orgs is GET /api/orgs with Bearer token; response is a JSON array of orgs, not {\"orgs\":[]} (same Cloud API docs)."
+}

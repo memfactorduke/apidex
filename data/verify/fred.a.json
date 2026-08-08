@@ -1,0 +1,52 @@
+{
+  "id": "fred",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fred.stlouisfed.org/docs/api/fred/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fred.stlouisfed.org/docs/api/fred/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fred.stlouisfed.org/docs/api/api_key.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fred.stlouisfed.org/docs/api/api_key.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fred.stlouisfed.org/docs/api/fred/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fred.stlouisfed.org/docs/api/fred/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fred.stlouisfed.org/docs/api/fred/series_observations.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fred.stlouisfed.org/docs/api/fred/"
+    }
+  },
+  "notes": "Verified against official St. Louis Fed FRED API docs. base_url path is correct; bare root may 404 without an endpoint. 120 req/min is documented. CORS left unknown as not officially stated."
+}

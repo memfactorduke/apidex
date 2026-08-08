@@ -1,0 +1,52 @@
+{
+  "id": "fueleconomy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fueleconomy.gov/feg/ws/index.shtml"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fueleconomy.gov/feg/ws/index.shtml"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fueleconomy.gov/feg/ws/index.shtml"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fueleconomy.gov/feg/ws/index.shtml"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fueleconomy.gov/feg/ws/index.shtml"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fueleconomy.gov/feg/ws/index.shtml"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Response is XML by default unless Accept: application/json is respected; live endpoint returns menuItem array of years but structure may wrap as {\"menuItem\":[...]} \u2014 verify Accept header behavior. Actual live path works; snippet years may be outdated vs current catalog.",
+      "source": "https://www.fueleconomy.gov/ws/rest/vehicle/menu/year"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fueleconomy.gov/feg/ws/index.shtml"
+    }
+  },
+  "notes": "Placeholder \u2014 need live verification against official docs before finalizing."
+}

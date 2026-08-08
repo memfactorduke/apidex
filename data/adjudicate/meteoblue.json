@@ -1,0 +1,15 @@
+{
+  "id": "meteoblue",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Free Weather API: 10M credits valid 1 year (~1,000\u20135,000 calls package-dependent); subset of forecast packages; max 1h resolution; commercial use allowed; more credits purchasable anytime",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: KEEP original https://my.meteoblue.com/packages \u2014 docs use host my.meteoblue.com with package paths /packages/{name} (e.g. basic-1h); trailing-slash-only change is not material (docs.meteoblue.com introduction + forecast examples). free_tier: CORRECT to true \u2014 Free Weather API is \u20ac0 with no purchase obligation (docs.meteoblue.com/en/weather-apis/free-weather-api/overview; business.meteoblue.com free-weather-api). free_tier_limits: CORRECT \u2014 10M credits / 1 year, ~1k\u20135k calls, limited packages (same official sources)."
+}

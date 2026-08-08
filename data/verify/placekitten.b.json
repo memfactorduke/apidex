@@ -1,0 +1,52 @@
+{
+  "id": "placekitten",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20230101014002/https://placekitten.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20230101014002/https://placekitten.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20230101014002/https://placekitten.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/api-evangelist/placekitten"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No published free-tier quotas or limits (historically free public use; no official 'unlimited' guarantee). Service currently offline.",
+      "source": "https://web.archive.org/web/20230101014002/https://placekitten.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20230101014002/https://placekitten.com/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20230101014002/https://placekitten.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Service is deprecated/offline as of 2026: origin returns Cloudflare HTTP 521 and does not serve images. Historical behavior was width/height path placeholders plus optional /g/ grayscale (not an actively serving public API today).",
+      "source": "https://github.com/api-evangelist/placekitten"
+    }
+  },
+  "notes": "Live curl of placekitten.com and /200/300 returns HTTP 521 (origin down) on 2026-08-08. API Evangelist tags it Deprecated (origin 521). Community replacement: placecats.com. Entry status 'operational' is false; URL/auth/path pattern were historically correct."
+}

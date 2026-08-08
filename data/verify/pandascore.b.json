@@ -1,0 +1,52 @@
+{
+  "id": "pandascore",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pandascore.co/docs"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.pandascore.co/docs/overview",
+      "source": "https://developers.pandascore.co"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pandascore.co/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pandascore.co/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 1,000 requests/hour (not merely \"limited request quota; exact limits vary\")",
+      "source": "https://pandascore.co/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 1,000 req/hour; paid plans publish higher per-plan limits on pricing/docs",
+      "source": "https://pandascore.co/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pandascore.co/reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pandascore.co"
+    }
+  },
+  "notes": "Placeholder response - will verify with live sources."
+}

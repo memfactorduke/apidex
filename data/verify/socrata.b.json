@@ -1,0 +1,52 @@
+{
+  "id": "socrata",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.cityofchicago.org/resource is one city portal host, not the SODA platform base URL; SODA has no single global base \u2014 each domain is `{domain}/resource/{dataset-id}.{format}` (e.g. https://data.seattle.gov/resource/...). Prefer documenting the pattern or omitting a single base_url.",
+      "source": "https://dev.socrata.com/docs/endpoints.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "With an app token: ~1,000 requests/hour per IP (soft throttle). Without a token: much lower (docs cite ~100 requests/hour or throttling without a token). Higher limits available via agreement with the portal. Not \"not published\".",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=1"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.tylertech.com/products/socrata"
+    }
+  },
+  "notes": "base_url wrongly uses one city host as the platform base. rate_limits are published (app-token throttling). Auth, docs, free access, example curl, and Tyler ownership check out."
+}

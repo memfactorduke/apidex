@@ -1,0 +1,97 @@
+{
+  "id": "coursera",
+  "status": "operational",
+  "name": "Coursera API",
+  "category": "education-reference",
+  "tagline": "Enterprise APIs for Coursera Business, Campus, and Government catalog and learner data",
+  "description": "Coursera provides OAuth 2.0\u2013authenticated REST APIs for Coursera Business, Campus, and Government customers to programmatically access organization data: course catalogs, enrollments, learner progress, and related learning-platform resources. Access is not self-serve public; it is available to enterprise/organization customers via Coursera\u2019s developer portal (dev.coursera.com). Public course-catalog browsing without a contract is not the primary supported path.",
+  "base_url": "https://api.coursera.org",
+  "docs_url": "https://dev.coursera.com/get-started",
+  "signup_url": "https://dev.coursera.com/get-started",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 bearer access tokens (Authorization: Bearer). Enterprise customer access via Coursera developer portal; not open self-serve for arbitrary developers."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier (enterprise customer APIs; access requires Coursera Business/Campus/Government relationship)",
+    "paid_plans": "Included with Coursera Business, Campus, or Government enterprise contracts; pricing not published as a public API product"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.coursera.org/api/businesses.v1/YOUR_ORG_ID/programs\"",
+    "response_snippet": "{\"elements\":[{\"id\":\"programId\",\"name\":\"Data Science Track\",\"slug\":\"data-science\"}],\"paging\":{},\"linked\":{}}"
+  },
+  "use_cases": [
+    "list courses available to a Coursera Business organization",
+    "fetch learner enrollment and progress for an enterprise cohort",
+    "sync Coursera catalog offerings into an LMS or internal learning portal",
+    "retrieve program and specialization metadata for partner integrations"
+  ],
+  "sources": [
+    "https://dev.coursera.com/get-started",
+    "https://building.coursera.org/developer-program/agreement",
+    "https://www.coursera.support/s/question/0D51U00003BlVvhSAF/api-and-sdk-usage-and-documentation"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

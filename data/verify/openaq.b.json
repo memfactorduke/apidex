@@ -1,0 +1,52 @@
+{
+  "id": "openaq",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openaq.org/using-the-api/api-key"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openaq.org"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openaq.org/using-the-api/api-key"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openaq.org/using-the-api/rate-limits"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests/minute, 2,000 requests/hour (free/general tier); higher limits available via custom paid contact",
+      "source": "https://docs.openaq.org/using-the-api/rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests/minute and 2,000 requests/hour per API key (free/general use); 429 when exceeded; custom higher limits available",
+      "source": "https://docs.openaq.org/using-the-api/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openaq.org/examples/examples"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openaq.org/using-the-api/quick-start"
+    }
+  },
+  "notes": "Main error: rate limits are published (60/min, 2k/hr), not \"not published\"/unknown. Free self-serve key via X-API-Key and v3 base URL match current docs. CORS not documented officially. API live (401 without key)."
+}

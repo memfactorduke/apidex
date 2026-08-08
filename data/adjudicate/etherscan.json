@@ -1,0 +1,15 @@
+{
+  "id": "etherscan",
+  "base_url": "https://api.etherscan.io/v2/api",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free API plan: 3 calls/second, 100,000 calls/day",
+  "rate_limits": "Free: 3 calls/sec, 100k/day; paid tiers (Standard/Advanced/Professional) increase RPS and daily caps (etherscan.io/apis)",
+  "cors": null,
+  "example_request": "curl \"https://api.etherscan.io/v2/api?chainid=1&module=account&action=balance&address=0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae&tag=latest&apikey=YOUR_API_KEY\"",
+  "example_response_snippet": "{\"status\":\"1\",\"message\":\"OK\",\"result\":\"39188856792214612666746\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: CORRECT to v2 \u2014 docs.etherscan.io/etherscan-v2/getting-started/v2-quickstart and endpoint overview present https://api.etherscan.io/v2/api as current unified endpoint (chainid required); V1 path deprecated/migrated. free_tier_limits: CORRECT both verifiers \u2014 etherscan.io/apis Free API plan lists 3 calls/sec and 100,000 calls/day. rate_limits: CORRECT both \u2014 same plans page documents free + higher-tier RPS/daily caps; original 'not published' wrong. example: CORRECT B \u2014 V2 needs chainid=1; request shape from docs.etherscan.io/etherscan-v2/api-endpoints/accounts; response shape unchanged. Non-disputed fields kept (null)."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "bing-news-search",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "F0 free tier: 1,000 transactions/month for Bing Search v7; paid SKUs (e.g. S1) have separate quotas and are not free.",
+  "rate_limits": "Per SKU: F0 3 TPS; S1 250 TPS (and other paid SKUs as published). Transaction quotas also apply monthly.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Microsoft Bing News Search API (Azure) returns news articles and headlines by query or category via REST with a subscription key\u2014ranked results, trending topics, and category feeds with provider, date, and thumbnail metadata. Classic Bing Search APIs are retired/being retired on Azure; check Microsoft docs for current availability and migration paths before new integrations.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B correct\u2014F0 is 1,000 tx/month (not vague F0/S1 interchange); evidence https://azure.microsoft.com/en-us/pricing/details/cognitive-services/search-api/ . rate_limits: Verifier B correct\u2014limits are published (F0 3 TPS, S1 250 TPS), not 'not published'; evidence https://learn.microsoft.com/en-us/azure/cognitive-services/bing-web-search/bing-web-search-quota-limits . description: Verifier B partially correct\u2014product path is deprecating/retired; description must note that; evidence https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview . status left null (operational pending full cutover; confirm live resource)."
+}

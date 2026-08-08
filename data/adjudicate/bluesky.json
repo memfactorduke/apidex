@@ -1,0 +1,15 @@
+{
+  "id": "bluesky",
+  "base_url": "https://public.api.bsky.app/xrpc",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: INCORRECT \u2192 use https://public.api.bsky.app/xrpc. Official API Hosts and Auth guide (https://docs.bsky.app/docs/advanced-guides/api-directory) states public app.bsky.* reads should hit the AppView preferably at https://public.api.bsky.app (cached); service table lists AppView as api.bsky.app and Entryway as bsky.social (PDS auth/session/writes, not the public read base). Live probe 2026-08-08: public.api.bsky.app/xrpc/app.bsky.actor.getProfile works; entry\u2019s own example already uses public.api.bsky.app. Verifier A wins over B."
+}

@@ -1,0 +1,98 @@
+{
+  "id": "easypost",
+  "status": "operational",
+  "name": "EasyPost",
+  "category": "transportation",
+  "tagline": "Multi-carrier shipping labels, rates, and tracking API",
+  "description": "EasyPost provides a unified REST API for creating shipping labels, comparing rates, tracking packages, and managing addresses across major carriers. Developers use test and production API keys; test mode does not generate real labels or charges. Common integration path: verify address, get rates, buy a shipment, then track delivery.",
+  "base_url": "https://api.easypost.com/v2",
+  "docs_url": "https://docs.easypost.com/",
+  "signup_url": "https://www.easypost.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "HTTP Basic Auth: API key as username, empty password (e.g. curl -u YOUR_API_KEY:). Separate test and production keys from the dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free test mode (no real labels); production free tier and usage fees not fully confirmed as of research \u2014 see pricing page for current plan details",
+    "paid_plans": "Pay-as-you-go and higher tiers; label and carrier fees vary by carrier and volume"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X GET https://api.easypost.com/v2/addresses -u YOUR_API_KEY:",
+    "response_snippet": "{\"addresses\":[{\"id\":\"adr_...\",\"object\":\"Address\",\"created_at\":\"2024-01-01T00:00:00Z\",\"name\":\"...\",\"street1\":\"...\",\"city\":\"...\",\"state\":\"...\",\"zip\":\"...\",\"country\":\"US\",\"verifications\":{}}],\"has_more\":false}"
+  },
+  "use_cases": [
+    "create a shipping label for a package",
+    "compare multi-carrier shipping rates for a shipment",
+    "track a package by tracking number or shipment id",
+    "verify and standardize a shipping address",
+    "buy the cheapest or fastest rate for a shipment",
+    "list or retrieve recent shipments and tracking events"
+  ],
+  "sources": [
+    "https://docs.easypost.com/",
+    "https://www.easypost.com/",
+    "https://www.easypost.com/pricing"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

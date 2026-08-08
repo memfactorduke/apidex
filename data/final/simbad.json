@@ -1,0 +1,100 @@
+{
+  "id": "simbad",
+  "status": "operational",
+  "name": "SIMBAD",
+  "category": "science-space",
+  "tagline": "Query the CDS astronomical object database for stars, galaxies, and identifiers.",
+  "description": "SIMBAD is the CDS astronomical object database API for looking up celestial objects by name or coordinates, resolving identifiers, and retrieving basic astrophysical data such as positions, magnitudes, spectral types, and bibliographic links. It is widely used for name resolution, cross-matching, and enriching catalogs in astronomy software and research pipelines.",
+  "base_url": "https://simbad.cds.unistra.fr/simbad/sim-script",
+  "docs_url": "https://simbad.cds.unistra.fr/simbad/sim-help?Page=sim-url",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public script and URL query interfaces; heavy or automated use should follow CDS usage guidelines."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "text",
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public free access; no published paid tiers. Heavy automated use should respect CDS fair-use guidance.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as hard numeric quotas; CDS requests responsible automated access and may throttle abusive traffic",
+  "example": {
+    "request": "curl -s \"https://simbad.cds.unistra.fr/simbad/sim-id?Ident=M31&output.format=ASCII\"",
+    "response_snippet": "Object M31 ---\nType: Galaxy\nICRS coord. (ep=J2000): 00 42 44.330 +41 16 07.50\n..."
+  },
+  "use_cases": [
+    "resolve an astronomical object name to coordinates",
+    "look up basic properties of a star or galaxy by identifier",
+    "batch-query identifiers from a catalog via SIMBAD script interface",
+    "cross-check alternate names and bibliographic references for an object"
+  ],
+  "sources": [
+    "https://simbad.cds.unistra.fr/simbad/",
+    "https://simbad.cds.unistra.fr/guide/simbad.htx"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

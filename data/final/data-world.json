@@ -1,0 +1,98 @@
+{
+  "id": "data-world",
+  "status": "operational",
+  "name": "data.world",
+  "category": "data-analytics",
+  "tagline": "Collaborative open data platform with REST API for datasets, queries, and files",
+  "description": "data.world is a collaborative data catalog and analytics platform where organizations and communities publish, discover, and query datasets. Its REST API lets developers manage datasets and projects, download files, run SQL/SPARQL queries, and integrate open and private data into applications and pipelines.",
+  "base_url": "https://api.data.world/v0",
+  "docs_url": "https://docs.data.world/api/",
+  "signup_url": "https://data.world/login",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token (API token) via Authorization header; create tokens in account settings after free signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.data.world/v0/search?q=climate\"",
+    "response_snippet": "{\"count\":1,\"records\":[{\"type\":\"dataset\",\"id\":\"climate-change\",\"owner\":\"example\",\"title\":\"Climate Data\"}]}"
+  },
+  "use_cases": [
+    "search public datasets by keyword",
+    "download a file from a dataset",
+    "run SQL against a dataset",
+    "list files in a dataset",
+    "fetch dataset metadata"
+  ],
+  "sources": [
+    "https://docs.data.world/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

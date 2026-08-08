@@ -1,0 +1,52 @@
+{
+  "id": "grid-esports",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.grid.gg/central-data/graphql (GraphQL Central Data API; also Series State, File Download, and File Upload APIs at different paths)",
+      "source": "https://docs.grid.gg/docs/central-data-api-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.grid.gg"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.grid.gg/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://grid.gg"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.grid.gg"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST https://api.grid.gg/central-data/graphql -H \"x-api-key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"{ titleTournaments(filter: {titleId: \\\"...\\\"}) { edges { node { id name } } } }\"}'",
+      "source": "https://docs.grid.gg/docs/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://grid.gg"
+    }
+  },
+  "notes": "Docs-first verification: base host api.grid.gg is real but entry omits real GraphQL paths; auth is API key via x-api-key (not Bearer); no public free tier/pricing; example is a non-working root GET."
+}

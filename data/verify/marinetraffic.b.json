@@ -1,0 +1,52 @@
+{
+  "id": "marinetraffic",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://services.marinetraffic.com/api (still appears valid for legacy/export endpoints, but primary commercial product is now \"Maritime APIs\" via developer portal \u2014 verify current base host against your contract; many docs still show services.marinetraffic.com)",
+      "source": "https://www.marinetraffic.com/en/ais-api-services"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.marinetraffic.com/en/ais-api-services"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "exportvessel/v:5 path style may be deprecated; current MarineTraffic commercial APIs use different product names (Vessel Positions, etc.) and often require account-specific keys \u2014 treat the sample as legacy-style only",
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Placeholder \u2014 researching before finalizing."
+}

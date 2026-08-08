@@ -1,0 +1,52 @@
+{
+  "id": "hex-pm",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://hex.pm/docs/usage"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://hex.pm/docs/usage (or GitHub hexpm/hexpm OpenAPI; /docs/api returns 404)",
+      "source": "https://hex.pm/docs/usage"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://hex.pm/docs/usage"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://hex.pm/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://hex.pm/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://hex.pm/api/packages/phoenix"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://hex.pm/docs/usage"
+    }
+  },
+  "notes": "docs_url https://hex.pm/docs/api is 404; live API base and package example work. Auth via API key on Authorization/X-Hex-Api-Key still documented. No paid API plans found."
+}

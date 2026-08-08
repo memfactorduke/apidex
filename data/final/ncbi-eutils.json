@@ -1,0 +1,95 @@
+{
+  "id": "ncbi-eutils",
+  "status": "operational",
+  "name": "NCBI E-utilities",
+  "category": "education-reference",
+  "tagline": "",
+  "description": "NCBI E-utilities (Entrez Programming Utilities) is a free set of server-side programs for programmatic HTTP access to Entrez/NCBI databases (PubMed, GenBank, Protein, etc.), returning XML, JSON, or other formats depending on utility and parameters. Optional free API key raises rate limits.",
+  "base_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+  "docs_url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+  "auth": {
+    "type": "apiKey",
+    "details": ""
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No paid tier. Free public access: 3 req/s without API key; 10 req/s with free API key (NCBI account). No formal volume cap beyond rate limits and usage policies; contact eutilities@ncbi.nlm.nih.gov for higher throughput.",
+    "paid_plans": null
+  },
+  "rate_limits": "Without API key: \u22643 requests/second. With API key: \u226410 requests/second. Recommended \u226410 concurrent requests; \u2264100 UIDs per multi-UID request (use history for larger sets). NCBI may block abusive IPs.",
+  "example": {
+    "request": "curl \"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=asthma&retmode=json\"",
+    "response_snippet": "{\"header\":{\"type\":\"esearch\",\"version\":\"0.3\"},\"esearchresult\":{\"count\":\"...\",\"retmax\":\"20\",\"retstart\":\"0\",\"idlist\":[\"...\"],\"translationset\":[...],\"querytranslation\":\"asthma[All Fields]\"}}"
+  },
+  "use_cases": [
+    "",
+    ""
+  ],
+  "sources": [
+    ""
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "free_tier"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

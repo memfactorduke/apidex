@@ -1,0 +1,98 @@
+{
+  "id": "they-said-so",
+  "status": "operational",
+  "name": "They Said So Quotes",
+  "category": "education-reference",
+  "tagline": "Famous quotes API with categories, authors, and a daily quote endpoint.",
+  "description": "They Said So provides a REST API for retrieving famous quotes by category, author, keyword, or as a quote of the day. Responses include quote text, author, tags, and metadata. Free and paid plans are offered; free access has strict daily request caps suitable for light demos and learning projects.",
+  "base_url": "https://quotes.rest",
+  "docs_url": "https://theysaidso.com/api/",
+  "signup_url": "https://theysaidso.com/api/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer YOUR_API_KEY header (or X-TheySaidSo-Api-Secret for some clients); free tier may work without a key with tighter limits. Self-serve signup on theysaidso.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "10 requests/hour unauthenticated; free API key raises limits \u2014 verify pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "Free unauthenticated ~10 req/hour; higher on free key and paid plans (see pricing)",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://quotes.rest/qod?language=en\"",
+    "response_snippet": "{\"success\":{\"total\":1},\"contents\":{\"quotes\":[{\"quote\":\"...\",\"author\":\"...\",\"tags\":[\"inspire\"],\"date\":\"2026-01-01\",\"id\":\"...\"}],\"copyright\":\"...\"}}"
+  },
+  "use_cases": [
+    "get the quote of the day",
+    "fetch quotes by category or keyword",
+    "look up quotes by a specific author",
+    "populate an inspiration or education feature with curated quotes"
+  ],
+  "sources": [
+    "https://theysaidso.com/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

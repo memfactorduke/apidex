@@ -1,0 +1,52 @@
+{
+  "id": "rawg",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.rawg.io/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.rawg.io/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rawg.io/apidocs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rawg.io/apidocs"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "20,000 requests per month free (standard/free plan); paid plans available for higher quotas",
+      "source": "https://rawg.io/apidocs"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rawg.io/apidocs"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.rawg.io/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.rawg.io/docs/"
+    }
+  },
+  "notes": "Automated curl got HTTP 522 (Cloudflare timeout); docs and marketing pages still resolve via browser/search. Free tier 20k/mo is widely cited; paid plans exist so paid_plans:null is weakly wrong but not a required verdict field. CORS remains unknown without a live OPTIONS probe."
+}

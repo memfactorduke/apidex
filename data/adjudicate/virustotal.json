@@ -1,0 +1,15 @@
+{
+  "id": "virustotal",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Public API: 4 requests/minute, 500 requests/day (non-commercial; not for multi-account abuse)",
+  "rate_limits": "Public API: 4 requests/minute and 500 requests/day; Premium has no fixed public rate/day caps (licensed service step)",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: CONFIRMED numbers (4/min, 500/day) per official docs https://docs.virustotal.com/reference/public-vs-premium-api (crawled/current 2026); original hedging (\u201ctypical\u2026verify on account\u201d) removed\u2014docs state hard public-API limits. rate_limits: same source confirms 4/min + 500/day for Public; Premium \u201cdoes not have request rate or daily allowance limitations, limits are governed by your licensed service step.\u201d Verifier B\u2019s dispute was wording, not the figures; cleaned definitive text ships."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "tcgdex",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "no published hard limits (be considerate; cache bulk data)",
+  "rate_limits": null,
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: B's correction accepted \u2014 FAQ (https://tcgdex.dev/faq) says free open API with no hard limits published; asks users to be considerate and cache bulk data. Original \"unknown\" is weaker than that guidance. cors: B confirmed \u2014 live HEAD/GET to https://api.tcgdex.net/v2/en/cards/swsh3-136 returns Access-Control-Allow-Origin: *; original \"unknown\" incorrect. A confirmed both without useful sources on these two."
+}

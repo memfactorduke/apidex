@@ -1,0 +1,15 @@
+{
+  "id": "foursquare-places",
+  "base_url": "https://places-api.foursquare.com",
+  "docs_url": "https://docs.foursquare.com/fsq-developers-places/reference/places-api-overview",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free/Sandbox: ~10,000 Place Search calls (tier/quota; confirm in console). Pro ~$20/mo with monthly Place Search + Place Details allowances; Enterprise custom. Verify current numbers on pricing.",
+  "rate_limits": "Per-endpoint and plan quotas (not a single global RPM). Free/Sandbox call-budget limited; see rate-limits docs and developer console.",
+  "cors": null,
+  "example_request": "curl -X GET \"https://places-api.foursquare.com/places/search?query=coffee&ll=40.7,-74.0\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\" -H \"X-Places-Api-Version: 2025-06-17\"",
+  "example_response_snippet": "{ \"results\": [ { \"fsq_place_id\": \"...\", \"name\": \"...\", \"location\": { \"address\": \"...\" } } ] }",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: both verifiers correct \u2014 current host is places-api.foursquare.com (not api.foursquare.com/v3). docs_url: Verifier A path preferred (places-api-overview under fsq-developers-places). free_tier_limits: published quotas ~10k free Place Search; Pro allowances on pricing. rate_limits: published per-endpoint/plan, not \"not published\". example: new host, Bearer auth, X-Places-Api-Version required. Evidence: docs.foursquare.com/fsq-developers-places (quick-start, search-places, rate-limits, pricing)."
+}

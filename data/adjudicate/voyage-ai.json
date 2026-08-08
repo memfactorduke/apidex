@@ -1,0 +1,15 @@
+{
+  "id": "voyage-ai",
+  "base_url": "https://api.voyageai.com/v1",
+  "docs_url": "https://docs.voyageai.com/",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "200M free tokens across models for new users (see pricing)",
+  "rate_limits": "Published per model/tier (RPM and TPM)",
+  "cors": "unknown",
+  "example_request": "curl https://api.voyageai.com/v1/embeddings -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"input\": [\"Sample text\"], \"model\": \"voyage-4\"}'",
+  "example_response_snippet": "{\"object\":\"list\",\"data\":[{\"object\":\"embedding\",\"embedding\":[0.01,-0.02],\"index\":0}],\"model\":\"voyage-4\",\"usage\":{\"total_tokens\":2}}",
+  "description": "Voyage AI provides embedding and reranking APIs optimized for retrieval-augmented generation (RAG), semantic search, and document ranking.",
+  "status": "operational",
+  "resolution_notes": "base_url confirmed as https://api.voyageai.com/v1 per docs. free_tier_limits corrected from unknown to 200M free tokens. rate_limits corrected to published per model/tier. example model updated from voyage-3 to voyage-4. All other fields kept as original."
+}

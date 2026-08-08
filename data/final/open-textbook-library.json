@@ -1,0 +1,95 @@
+{
+  "id": "open-textbook-library",
+  "status": "operational",
+  "name": "Open Textbook Library",
+  "category": "education-reference",
+  "tagline": "Search peer-reviewed open textbooks for higher education.",
+  "description": "The Open Textbook Library (University of Minnesota / Open Education Network) is a catalog of peer-reviewed open educational resource textbooks for higher education. It documents a public read-only JSON API: append .json to textbook and subject resource URLs (and related paths) for programmatic metadata access; OpenAPI docs are published at /opentextbooks/api-docs. CSV and MARC downloads are also provided.",
+  "base_url": "https://open.umn.edu/opentextbooks",
+  "docs_url": "https://open.umn.edu/opentextbooks/discovery",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public API access. All endpoints are publicly accessible without API keys or tokens."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://open.umn.edu/opentextbooks/textbooks.json?q=calculus\"",
+    "response_snippet": "{\n  \"data\": [\n    {\n      \"id\": 10,\n      \"title\": \"Calculus\",\n      \"edition_statement\": \"Third Edition\",\n      \"copyright_year\": 1991,\n      \"license\": \"Attribution-NonCommercial-ShareAlike\",\n      \"language\": \"eng\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "search open textbooks by subject or keyword",
+    "get textbook metadata including license and authors",
+    "list peer-reviewed OER textbooks for a course",
+    "find openly licensed alternatives to commercial textbooks"
+  ],
+  "sources": [
+    "https://open.umn.edu/opentextbooks"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "free_tier"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

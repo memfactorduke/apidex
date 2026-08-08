@@ -1,0 +1,52 @@
+{
+  "id": "waqi",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/data-platform/token/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/data-platform/token/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "All APIs free with a valid token; published free quota is 1,000 requests per second",
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    }
+  },
+  "notes": "Verified against official docs. Base URL works with token=demo. Rate limit claim of 1000 req/s is documented. CORS documented as enabled for browser use. Terms restrict commercial/for-profit without agreement."
+}

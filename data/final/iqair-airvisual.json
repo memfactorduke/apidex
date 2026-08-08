@@ -1,0 +1,95 @@
+{
+  "id": "iqair-airvisual",
+  "status": "operational",
+  "name": "IQAir AirVisual",
+  "category": "weather-environment",
+  "tagline": "Global air quality (AQI) and pollution data from monitoring stations and satellites.",
+  "description": "IQAir AirVisual API provides real-time and historical air quality index (AQI), pollutant concentrations, and weather data from a global network of monitoring stations and satellite sources. Developers can query by city, nearest station, or geographic coordinates for applications that need pollution alerts, environmental dashboards, or health-related location insights.",
+  "base_url": "https://api.airvisual.com/v2",
+  "docs_url": "https://api-docs.iqair.com/",
+  "signup_url": "https://www.iqair.com/air-pollution-data-api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter key=YOUR_API_KEY (self-serve signup on IQAir platform)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Community Plan: 5,000 API calls/month",
+    "paid_plans": null
+  },
+  "rate_limits": "Community Plan: 5,000 calls/month; higher-rate paid plans available (exact per-minute limits not publicly detailed)",
+  "example": {
+    "request": "curl \"https://api.airvisual.com/v2/nearest_city?key=YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":\"success\",\"data\":{\"city\":\"...\",\"state\":\"...\",\"country\":\"...\",\"current\":{\"pollution\":{\"aqius\":...},\"weather\":{\"tp\":...}}}}"
+  },
+  "use_cases": [
+    "get current AQI for a city",
+    "find nearest air quality station by coordinates",
+    "list countries/states/cities with air quality data",
+    "get pollution and weather for a lat/lon location"
+  ],
+  "sources": [
+    "https://www.iqair.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

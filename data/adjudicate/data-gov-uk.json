@@ -1,0 +1,15 @@
+{
+  "id": "data-gov-uk",
+  "base_url": "https://data.gov.uk/api/action",
+  "docs_url": "https://guidance.data.gov.uk/get_data/api_documentation/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "none (officially: no rate limits)",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "data.gov.uk is the UK government's open data portal (CKAN). The public Action API base is https://data.gov.uk/api/action/ (redirects to ckan.publishing.service.gov.uk). Search and read catalog metadata without an API key; write/admin actions need a CKAN API key. Official docs state no rate limits. JSON via standard CKAN action endpoints.",
+  "status": null,
+  "resolution_notes": "base_url: Verifier B correct \u2014 official guidance uses https://data.gov.uk/api/action (https://guidance.data.gov.uk/get_data/api_documentation/). docs_url: Verifier B correct \u2014 UK-specific docs at guidance.data.gov.uk, not generic CKAN 2.9 docs. rate_limits: Verifier B correct \u2014 official docs state no rate limits. cors: Verifier B correct \u2014 Access-Control-Allow-Origin: * on live API. description: Updated to match official base URL, no-key/no-rate-limit claims, and redirect host."
+}

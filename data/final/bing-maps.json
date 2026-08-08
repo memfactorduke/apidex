@@ -1,0 +1,100 @@
+{
+  "id": "bing-maps",
+  "status": "operational",
+  "name": "Bing Maps",
+  "category": "geo-maps",
+  "tagline": "Microsoft geospatial REST APIs for maps, geocoding, routing, and imagery",
+  "description": "Bing Maps REST Services provide geospatial capabilities including location search, geocoding, reverse geocoding, routes, traffic, elevation, and static map imagery via the Virtual Earth (dev.virtualearth.net) endpoints. Developers authenticate with a Bing Maps key and call HTTPS REST APIs that return JSON or XML.",
+  "base_url": "https://dev.virtualearth.net/REST/v1",
+  "docs_url": "https://learn.microsoft.com/en-us/bingmaps/rest-services/",
+  "signup_url": "https://www.bingmapsportal.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bing Maps key via query parameter key=YOUR_API_KEY (or header options in some SDKs); create keys at Bing Maps Dev Center"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Basic keys: 125,000 billable transactions/year for public websites; 125,000/year or 50,000 in any 24 hours for Windows/mobile apps (verify current portal/terms)",
+    "paid_plans": "Enterprise/licensed plans via Microsoft for higher volume"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://dev.virtualearth.net/REST/v1/Locations?query=Seattle&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"authenticationResultCode\":\"ValidCredentials\",\"statusCode\":200,\"resourceSets\":[{\"estimatedTotal\":1,\"resources\":[{\"name\":\"Seattle, WA\",\"point\":{\"type\":\"Point\",\"coordinates\":[47.60357,-122.32945]},\"entityType\":\"PopulatedPlace\"}]}]}"
+  },
+  "use_cases": [
+    "geocode an address to lat/lng",
+    "reverse geocode coordinates to an address",
+    "get driving directions between two points",
+    "fetch static map imagery for a location",
+    "look up time zone for coordinates"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/bingmaps/rest-services/",
+    "https://www.bingmapsportal.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

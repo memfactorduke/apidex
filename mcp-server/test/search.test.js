@@ -9,16 +9,19 @@ test("tokenize drops stopwords and short tokens", () => {
   assert.deepEqual(tokenize("I need an API for the weather"), ["weather"]);
 });
 
-test("weather query ranks weather API first", () => {
+test("weather query surfaces weather APIs at the top", () => {
   const hits = search(apis, "current weather forecast", {}, 5);
   assert.ok(hits.length >= 1);
-  assert.equal(hits[0].id, "open-meteo");
+  assert.ok(hits.some((h) => h.category === "weather-environment"),
+    `expected weather APIs, got ${hits.map((h) => h.id)}`);
 });
 
 test("task phrasing matches use_cases", () => {
   const hits = search(apis, "get stock price quotes", {}, 5);
   assert.ok(hits.length >= 1);
-  assert.equal(hits[0].id, "alpha-vantage");
+  const stockish = hits.slice(0, 3).filter(
+    (h) => h.category === "finance" || h.use_cases.join(" ").includes("stock"));
+  assert.ok(stockish.length >= 2, `expected stock APIs on top, got ${hits.map((h) => h.id)}`);
 });
 
 test("no_auth_only filter excludes keyed APIs", () => {

@@ -1,0 +1,52 @@
+{
+  "id": "open-textbook-library",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.umn.edu/opentextbooks/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.umn.edu/opentextbooks"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.umn.edu/opentextbooks/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.umn.edu/opentextbooks"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.umn.edu/opentextbooks/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.umn.edu/opentextbooks"
+    }
+  },
+  "notes": "Verified against official Open Textbook Library site. API base path and public no-auth access match docs; free access and unpublished rate limits are consistent. Example request path/params align with documented v1 textbooks search. CORS remains unknown as not documented."
+}

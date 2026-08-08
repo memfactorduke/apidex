@@ -1,0 +1,101 @@
+{
+  "id": "fixer",
+  "status": "operational",
+  "name": "Fixer",
+  "category": "finance",
+  "tagline": "Foreign exchange rates and currency conversion API",
+  "description": "Fixer is a foreign exchange rates and currency conversion API providing real-time and historical FX data for major and minor world currencies. It offers latest rates, historical rates by date, time-series data, currency conversion, and fluctuation endpoints for building multi-currency apps, finance dashboards, and e-commerce pricing.",
+  "base_url": "https://data.fixer.io/api",
+  "docs_url": "https://fixer.io/documentation",
+  "signup_url": "https://fixer.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API access key as query parameter access_key=YOUR_API_KEY (or via Authorization header on some plans); self-serve signup at fixer.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "100 requests/month free; EUR base currency only; conversion, time-series, and fluctuation endpoints require paid plans",
+    "paid_plans": "Paid plans from ~$10\u201380+/month with higher monthly quotas, USD base, HTTPS, time-series, conversion, and more currencies"
+  },
+  "rate_limits": "Monthly request quotas by plan; free ~100/month. Per-second/minute limits not prominently published",
+  "example": {
+    "request": "curl \"https://data.fixer.io/api/latest?access_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"success\":true,\"timestamp\":1519296206,\"base\":\"EUR\",\"date\":\"2024-01-15\",\"rates\":{\"USD\":1.085,\"GBP\":0.854,\"JPY\":157.2}}"
+  },
+  "use_cases": [
+    "get latest FX rates for major currencies",
+    "convert an amount between two currencies",
+    "fetch historical exchange rate for a past date",
+    "build multi-currency product pricing",
+    "track currency fluctuation over a date range"
+  ],
+  "sources": [
+    "https://fixer.io/",
+    "https://fixer.io/documentation",
+    "https://fixer.io/pricing",
+    "https://fixer.io/signup"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

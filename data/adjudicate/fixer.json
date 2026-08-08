@@ -1,0 +1,15 @@
+{
+  "id": "fixer",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "100 requests/month free; EUR base currency only; conversion, time-series, and fluctuation endpoints require paid plans",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B partly correct. Official pricing (fixer.io/pricing, Aug 2026) confirms Free = 100 API calls/mo; no All Base Currencies (EUR-only); Conversion from Basic+; Time-Series from Professional+; Fluctuation from Professional Plus+. SSL Encryption is listed on Free in current pricing (Verifier B\u2019s \u201cHTTPS not available\u201d is outdated). Original omitted paid-endpoint gates; B overstated HTTPS restriction. Corrected to match current official matrix without the HTTPS claim."
+}

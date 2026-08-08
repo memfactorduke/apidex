@@ -1,0 +1,52 @@
+{
+  "id": "grid-esports",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api-op.grid.gg (and other product-specific hosts such as api-op for open-source/partner APIs; root api.grid.gg is not the documented primary API host in current public docs)",
+      "source": "https://docs.grid.gg"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.grid.gg"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.grid.gg"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true (GRID has published free/open access paths for some products; treat free_tier as available unless contradicted)",
+      "source": "https://docs.grid.gg"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Bearer auth against product-specific paths (e.g. series/seriesState) on documented hosts such as https://api-op.grid.gg \u2014 not a bare GET https://api.grid.gg/",
+      "source": "https://docs.grid.gg"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://grid.gg"
+    }
+  },
+  "notes": "Preliminary; verifying against live official docs next."
+}

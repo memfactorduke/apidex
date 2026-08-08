@@ -1,0 +1,52 @@
+{
+  "id": "docker-hub",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.docker.com/reference/api/hub/latest.yaml"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.docker.com/docker-hub/api/latest/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "bearer (short-lived JWT). Exchange username+PAT (or password) via POST /v2/auth/token; legacy POST /v2/users/login is deprecated. OpenAPI security scheme is HTTP bearer JWT\u2014not a static apiKey.",
+      "source": "https://docs.docker.com/reference/api/hub/latest.yaml"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.docker.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.docker.com/docker-hub/usage/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Image pulls (registry): unauthenticated 100/6h per IPv4 or IPv6 /64; Personal (auth) 200/6h; Pro/Team/Business unlimited (fair use). Hub HTTP API: separate global per-minute limits via X-RateLimit-Limit/Remaining/Reset (not per-endpoint quotas); plus a separate abuse limit (~thousands req/min, all plans).",
+      "source": "https://docs.docker.com/docker-hub/usage/pulls/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Documented tags path is GET /v2/namespaces/{namespace}/repositories/{repository}/tags (e.g. https://hub.docker.com/v2/namespaces/library/repositories/nginx/tags?page_size=5). Old /v2/repositories/{ns}/{repo}/tags still works but is not in current OpenAPI. Bearer value must be a JWT from POST /v2/auth/token (PAT is the login secret, not the Bearer token). Public tags also work unauthenticated.",
+      "source": "https://docs.docker.com/reference/api/hub/latest.yaml"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.docker.com/reference/api/hub/latest/"
+    }
+  },
+  "notes": "API is live. Canonical docs: docs.docker.com/reference/api/hub/latest/ (old docker-hub/api/latest URL 301s). OpenAPI server is https://hub.docker.com with /v2 paths. Main failures: auth classified as apiKey; rate_limits invents per-endpoint Hub API quotas; example uses undocumented path and implies PAT-as-Bearer."
+}

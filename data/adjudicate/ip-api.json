@@ -1,0 +1,15 @@
+{
+  "id": "ip-api",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Free: 45 requests per minute per IP. Pro/Enterprise: unlimited (subject to Acceptable Use Policy).",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Verifier B correct \u2014 free tier is 45 req/min/IP (https://ip-api.com/docs/api:json); Pro/Enterprise advertised as unlimited under AUP (https://members.ip-api.com/), not plan-dependent caps. cors: Verifier B correct \u2014 free endpoint docs/behavior show Access-Control-Allow-Origin: * (https://ip-api.com/docs/api:json); original 'unknown' was incomplete."
+}

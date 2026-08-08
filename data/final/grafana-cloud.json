@@ -1,0 +1,96 @@
+{
+  "id": "grafana-cloud",
+  "status": "operational",
+  "name": "Grafana Cloud API",
+  "category": "dev-tools",
+  "tagline": "Programmatic access to Grafana Cloud stacks, org settings, and observability resources.",
+  "description": "Grafana Cloud provides HTTP APIs for managing Cloud organizations, stacks, access policies, and related resources, plus product APIs for metrics, logs, and dashboards. Developers use service accounts, access policies, and tokens to automate provisioning and operations against their Grafana Cloud instance.",
+  "base_url": "https://grafana.com/api",
+  "docs_url": "https://grafana.com/docs/grafana-cloud/",
+  "signup_url": "https://grafana.com/auth/sign-up/create-user",
+  "auth": {
+    "type": "apiKey",
+    "details": "Cloud API uses bearer tokens from access policies or service account tokens; product APIs use instance-specific credentials. Exact header and token type vary by endpoint family."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free Forever plan includes product quotas (e.g. 10k series Prometheus metrics, 50 GB logs, 50 GB traces, 3 users; limits change \u2014 see pricing). Cloud API itself has no separate free-call quota published.",
+    "paid_plans": null
+  },
+  "rate_limits": "Cloud API enforces rate limits and may return HTTP 429; specific numeric limits are not published as a single public quota table \u2014 check Cloud API docs and response headers.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_ACCESS_POLICY_TOKEN\" https://grafana.com/api/orgs",
+    "response_snippet": "[{\"id\":1,\"name\":\"Example Org\"}]"
+  },
+  "use_cases": [
+    "list Grafana Cloud stacks for an organization",
+    "create or rotate Cloud access policy tokens",
+    "provision service accounts for automated agents",
+    "query Cloud org membership and billing-related metadata"
+  ],
+  "sources": [
+    "https://grafana.com/docs/grafana-cloud/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

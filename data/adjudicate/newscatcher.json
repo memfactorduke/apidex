@@ -1,0 +1,15 @@
+{
+  "id": "newscatcher",
+  "base_url": "https://v3-api.newscatcherapi.com",
+  "docs_url": "https://docs.newscatcherapi.com",
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "14-day trial: 50 requests/day, 1 request/second; no permanent free tier (confirm on pricing page)",
+  "rate_limits": "Plan-dependent (e.g. Trial 1 rps / 50 req/day; higher tiers publish RPS and monthly call quotas on pricing)",
+  "cors": null,
+  "example_request": "curl -X GET \"https://v3-api.newscatcherapi.com/api/search?q=Microsoft&lang=en\" -H \"x-api-token: YOUR_API_KEY\"",
+  "example_response_snippet": "{\"status\":\"ok\",\"total_hits\":0,\"page\":1,\"page_size\":100,\"articles\":[]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: INCORRECT original; both verifiers + official v3 docs use https://v3-api.newscatcherapi.com (v2 host api.newscatcherapi.com is legacy). docs_url: KEEP https://docs.newscatcherapi.com (Verifier A; resolves HTTP 200) \u2014 Verifier B pointed at a deep auth path which is valid but not the canonical docs root. free_tier: true \u2014 pricing lists a free 14-day Trial (not a permanent free plan). free_tier_limits: Trial 14 days, 50 req/day, 1 rps per Verifier B + pricing page. rate_limits: published per plan on pricing (trial and paid tiers). example: v2 path/host and x-api-key header are outdated; v3 uses v3-api host, /api/search, and x-api-token. Evidence: https://docs.newscatcherapi.com , https://www.newscatcherapi.com/docs/v3/api-reference/introduction , https://www.newscatcherapi.com/pricing , https://www.newscatcherapi.com/docs/v3/api-reference/endpoints/search/search-get , https://www.newscatcherapi.com/docs/v3/api-reference/overview/authentication"
+}

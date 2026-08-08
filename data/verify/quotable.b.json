@@ -1,0 +1,52 @@
+{
+  "id": "quotable",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Service appears offline at api.quotable.io (HTTP 0 / connection failure); no reliable alternate base URL confirmed in current official sources \u2014 check project README for status",
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    }
+  },
+  "notes": "Automated curl: base_url HTTP 0 (dead/unreachable); docs_url HTTP 200. Entry otherwise matches open-source no-auth design; live API host appears down as of check."
+}

@@ -1,0 +1,100 @@
+{
+  "id": "igdb",
+  "status": "operational",
+  "name": "IGDB",
+  "category": "entertainment",
+  "tagline": "Twitch-backed video game database API (games, platforms, covers, search)",
+  "description": "IGDB (Internet Game Database) is a free REST API for comprehensive video game metadata: titles, platforms, genres, companies, covers, screenshots, release dates, characters, and more. Queries use the Apicalypse body language (fields, where, search, sort, limit). Auth is Twitch OAuth2 client-credentials: register a Confidential app, exchange Client ID/Secret for an app access token, then send Client-ID and Authorization: Bearer on every POST to https://api.igdb.com/v4.",
+  "base_url": "https://api.igdb.com/v4",
+  "docs_url": "https://api-docs.igdb.com/",
+  "signup_url": "https://dev.twitch.tv/console/apps/create",
+  "auth": {
+    "type": "oauth2",
+    "details": "Twitch Developer Console Confidential app \u2192 Client ID + Client Secret. POST https://id.twitch.tv/oauth2/token?client_id=...&client_secret=...&grant_type=client_credentials for app access token. Every IGDB request needs headers Client-ID and Authorization: Bearer <token> (token ~60 days)."
+  },
+  "https": true,
+  "cors": "no",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial and commercial use (FAQ); no published request quota. Rate limit only: 4 req/s, up to 8 concurrent open requests. Commercial use expects partnership/attribution (partner@igdb.com).",
+    "paid_plans": "No paid tiers; commercial free under partnership (attribution to IGDB.com)."
+  },
+  "rate_limits": "4 requests per second; up to 8 open concurrent requests; 429 Too Many Requests when exceeded.",
+  "example": {
+    "request": "curl -X POST 'https://api.igdb.com/v4/games' -H 'Client-ID: YOUR_CLIENT_ID' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' -H 'Accept: application/json' -d 'fields name; limit 10;'",
+    "response_snippet": "[{\"id\":1,\"name\":\"Thief II: The Metal Age\"},{\"id\":2,\"name\":\"Thief: The Dark Project\"},{\"id\":3,\"name\":\"Thief: Deadly Shadows\"}]"
+  },
+  "use_cases": [
+    "search games by name and return IDs, titles, and release dates",
+    "look up a game by ID for summary, genres, platforms, and rating",
+    "list upcoming or recent releases for a platform (e.g. PlayStation)",
+    "fetch cover or screenshot image IDs for a game library UI",
+    "resolve involved companies (developers/publishers) for a title",
+    "search characters, collections, platforms, or themes across IGDB"
+  ],
+  "sources": [
+    "https://api-docs.igdb.com/",
+    "https://www.igdb.com/api",
+    "https://dev.twitch.tv/docs/authentication",
+    "https://dev.twitch.tv/console/apps/create"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

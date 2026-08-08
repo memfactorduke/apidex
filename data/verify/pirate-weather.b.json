@@ -1,0 +1,52 @@
+{
+  "id": "pirate-weather",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pirateweather.net/en/latest/API/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.pirateweather.net/en/latest/",
+      "source": "https://docs.pirateweather.net/en/latest/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pirateweather.net/en/latest/API/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pirateweather.net/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "10,000 API calls per month (free plan for personal use)",
+      "source": "https://pirateweather.net/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier: 10,000 calls/month; per-key burst limit of 1\u20134 requests/second depending on plan; monthly quota exposed via Ratelimit-Limit / Ratelimit-Remaining / Ratelimit-Reset response headers",
+      "source": "https://docs.pirateweather.net/en/latest/changelog/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://docs.pirateweather.net/en/latest/changelog/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pirateweather.net/en/latest/API/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pirateweather.net/"
+    }
+  },
+  "notes": "docs_url path on pirateweather.net 404s; live docs are on docs.pirateweather.net. base_url bare /forecast 404 is expected (needs key+coords); invalid key returns 401 so API is live. Free tier and rate limits are published (10k/mo, 1\u20134 rps). CORS enabled since API v2.0.4."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "newscatcher",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://v3-api.newscatcherapi.com (v3 current; v2 host was https://api.newscatcherapi.com)",
+      "source": "https://www.newscatcherapi.com/docs/v3/api-reference/introduction"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.newscatcherapi.com/docs/v3/api-reference/overview/authentication",
+      "source": "https://www.newscatcherapi.com/docs/v3/api-reference/overview/authentication"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.newscatcherapi.com/docs/v3/api-reference/overview/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true (Trial plan: free for 14 days with limited usage)",
+      "source": "https://www.newscatcherapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Trial: 14 days, 50 requests/day, 1 request/second; no permanent free tier",
+      "source": "https://www.newscatcherapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per plan (e.g. Trial 1 rps / 50 req/day; Startup 3\u20135 rps / 15K\u201325K calls/month; higher tiers up to 100+ rps)",
+      "source": "https://www.newscatcherapi.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET https://v3-api.newscatcherapi.com/api/search?q=Microsoft&lang=en -H \"x-api-token: YOUR_API_KEY\"",
+      "source": "https://www.newscatcherapi.com/docs/v3/api-reference/endpoints/search/search-get"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.newscatcherapi.com"
+    }
+  },
+  "notes": "Entry reflects deprecated v2. Official product is now NewsCatcher v3: base host v3-api.newscatcherapi.com, auth header x-api-token, docs under www.newscatcherapi.com/docs/v3/. Pricing shows a 14-day Trial, not no free tier; rate limits are published. v2 docs.newscatcherapi.com still loads but is legacy."
+}

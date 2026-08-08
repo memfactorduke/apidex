@@ -1,0 +1,52 @@
+{
+  "id": "randomuser",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://randomuser.me/api/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    }
+  },
+  "notes": "CORS is open (*), not unknown\u2014verified via live OPTIONS/GET headers. Docs confirm free, no-auth API at /api; max 5k results/request is a batch cap, not a published RPM quota. Formats include XML/CSV/YAML beyond entry's json-only list (out of schema scope)."
+}

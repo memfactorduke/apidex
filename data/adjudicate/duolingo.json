@@ -1,0 +1,15 @@
+{
+  "id": "duolingo",
+  "base_url": "https://www.duolingo.com",
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": true,
+  "free_tier_limits": "No official free tier policy; unofficial public user endpoints have no published developer tier or paid plan",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -s 'https://www.duolingo.com/2017-06-30/users?username=YOUR_USERNAME'",
+  "example_response_snippet": "{\"users\":[{\"username\":\"...\",\"streak\":0,\"totalXp\":0}]}",
+  "description": "Duolingo is a popular language-learning platform. There is no known official public developer API for third-party apps; community reverse-engineered endpoints and unofficial wrappers exist for user progress, streak, and vocabulary data.",
+  "status": "operational",
+  "resolution_notes": "base_url: Verifier B partly right \u2014 no official developer API, but the live reverse-engineered host used by community clients is https://www.duolingo.com (versioned paths like /2017-06-30/); keep that as the practical base_url. docs_url: Verifier B correct \u2014 product homepage is not API docs; set docs_url null (no official public developer documentation found as of 2026). free_tier: Verifier B correct \u2014 free_tier:false misframes absence of an official API product as paid-only; unofficial public user endpoints require no developer payment; free_tier true. free_tier_limits: Verifier B correct \u2014 \"no free tier\" is wrong framing; use not-applicable wording. Evidence: https://www.duolingo.com (product site, no developer portal), community usage of /2017-06-30/users endpoints."
+}

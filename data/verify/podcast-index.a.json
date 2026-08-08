@@ -1,0 +1,52 @@
+{
+  "id": "podcast-index",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.podcastindex.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex.org/"
+    }
+  },
+  "notes": "Verified against official Podcast Index API docs and site (2026). Base URL, docs URL, API-key auth with X-Auth-Key/X-Auth-Date/Authorization (SHA-1), free self-serve access, and search/byterm example match current docs. Free-tier limits and rate limits are not published; CORS remains unknown."
+}

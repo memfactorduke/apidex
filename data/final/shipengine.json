@@ -1,0 +1,97 @@
+{
+  "id": "shipengine",
+  "status": "operational",
+  "name": "ShipEngine",
+  "category": "transportation",
+  "tagline": "Multi-carrier shipping rates, labels, and tracking API for developers.",
+  "description": "ShipEngine is a multi-carrier shipping API that provides rates, label generation, tracking, address validation, and carrier connections for e-commerce and logistics applications. It abstracts many carriers behind a unified REST API with JSON responses.",
+  "base_url": "https://api.shipengine.com/v1",
+  "docs_url": "https://www.shipengine.com/docs/",
+  "signup_url": "https://www.shipengine.com/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via API-Key header (or X-ShipEngine-API-Key); obtain from dashboard after self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free trial/developer credits available; exact request quotas vary by plan \u2014 verify on pricing page",
+    "paid_plans": "Usage-based and volume plans; see shipengine.com/pricing"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.shipengine.com/v1/carriers\" -H \"API-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"carriers\":[{\"carrier_id\":\"se-123456\",\"carrier_code\":\"stamps_com\",\"account_number\":\"123456\",\"name\":\"Stamps.com\",\"nickname\":null,\"friendly_name\":\"Stamps.com\",\"primary\":true}]}"
+  },
+  "use_cases": [
+    "get multi-carrier shipping rates for a package",
+    "create a shipping label for a shipment",
+    "track a package by tracking number",
+    "validate a shipping address",
+    "list connected carrier accounts"
+  ],
+  "sources": [
+    "https://www.shipengine.com/docs/",
+    "https://www.shipengine.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

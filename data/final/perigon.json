@@ -1,0 +1,98 @@
+{
+  "id": "perigon",
+  "status": "operational",
+  "name": "Perigon",
+  "category": "news-media",
+  "tagline": "Real-time news and web content API for developers",
+  "description": "Perigon provides a news and web content API that delivers real-time articles, headlines, and structured media data for applications that need current events coverage, media monitoring, or content intelligence.",
+  "base_url": "https://api.goperigon.com/v1",
+  "docs_url": "https://perigon.io/docs/",
+  "signup_url": "https://www.goperigon.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header/query method needs verification from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 150 API requests/mo, personal (non-commercial) license, all endpoints, 3 months historical data, real-time, 1 req/sec, max 25 results/request; no credit card",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: 1 req/sec; Basic: 2; Plus: 4; Commercial: custom (https://perigon.io/products/pricing/apis)",
+  "example": {
+    "request": "curl \"https://api.goperigon.com/v1/articles/all?apiKey=YOUR_API_KEY&q=technology\"",
+    "response_snippet": "{\n  \"status\": 200,\n  \"numResults\": 1,\n  \"articles\": [\n    {\n      \"url\": \"https://example.com/story\",\n      \"title\": \"Sample technology headline\",\n      \"source\": { \"domain\": \"example.com\" },\n      \"pubDate\": \"2026-08-01T12:00:00Z\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword",
+    "monitor headlines for a topic or company",
+    "fetch structured article metadata for media apps"
+  ],
+  "sources": [
+    "https://www.goperigon.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "rate_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

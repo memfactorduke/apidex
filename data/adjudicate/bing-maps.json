@@ -1,0 +1,15 @@
+{
+  "id": "bing-maps",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Basic keys: 125,000 billable transactions/year for public websites; 125,000/year or 50,000 in any 24 hours for Windows/mobile apps (verify current portal/terms)",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier A correct; original too vague. Official MS docs (Understanding Bing Maps Transactions) state Basic keys: 125k billable tx/year for public websites; Windows/mobile apps 125k/year or 50k in any 24h. Source: https://learn.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/understanding-bing-maps-transactions. Verifier B confirmed vague original without the platform-specific caps. Ruling ships Verifier A's more precise wording (\u2264300 chars)."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "iex-cloud",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "N/A \u2014 service discontinued August 31, 2024; no free tier available",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl \"https://cloud.iexapis.com/stable/stock/AAPL/quote?token=YOUR_API_KEY\"  # non-functional: IEX Cloud retired 2024-08-31",
+  "example_response_snippet": "{\"symbol\":\"AAPL\",\"companyName\":\"Apple Inc\",\"latestPrice\":190.5,\"change\":1.2,\"changePercent\":0.0063,\"marketCap\":3000000000000}",
+  "description": "IEX Cloud provided RESTful market data APIs (equities, fundamentals, news) with token auth and usage-based pricing, but IEX Group retired all IEX Cloud products on August 31, 2024. The API, accounts, and public site are no longer operational.",
+  "status": "defunct",
+  "resolution_notes": "base_url: null=keep original last-known https://cloud.iexapis.com/stable; Verifier A\u2019s api.iex.cloud/v1 also dead (curl timeout/HTTP 0 2026). docs_url: null=keep last-known; iexcloud.io offline (HTTP 0); no maintained docs. free_tier: false; free_tier_limits: N/A \u2014 retired 2024-08-31 (https://iexcloud.org/, Tiingo/Alpha Vantage migration posts). example: former /stable/stock/.../quote pattern only; non-working post-shutdown. description: must state shutdown. status: defunct \u2014 domains non-responsive."
+}

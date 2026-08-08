@@ -1,0 +1,52 @@
+{
+  "id": "sentry",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sentry.io/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sentry.io/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sentry.io/api/auth/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://sentry.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sentry.io/api/ratelimits/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sentry.io/api/projects/list-your-projects/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sentry.io/api/"
+    }
+  },
+  "notes": "Verified against official Sentry docs. base_url, docs, Bearer auth tokens, free tier, and list-projects example match. Rate limits and free-tier quotas are not published in a simple public form matching the entry's \"not published\"/\"unknown\" claims."
+}

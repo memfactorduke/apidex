@@ -1,0 +1,52 @@
+{
+  "id": "nyc-open-data",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/foundry/data.cityofnewyork.us/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/foundry/data.cityofnewyork.us/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/foundry/data.cityofnewyork.us/erm2-nwe9"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.cityofnewyork.us/"
+    }
+  },
+  "notes": "Verified against official Socrata and NYC Open Data docs. Base URL, SODA interface, optional app token auth, free public access, and 311 dataset (erm2-nwe9) all check out. Rate limit wording is appropriately hedged."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "discord",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Global 50 req/s per bot; per-route buckets via X-RateLimit-* headers; invalid request limits apply (see docs)",
+  "cors": null,
+  "example_request": "curl -s -H \"Authorization: Bot YOUR_BOT_TOKEN\" -H \"User-Agent: DiscordBot (https://example.com, 1.0)\" \"https://discord.com/api/v10/users/@me\"",
+  "example_response_snippet": "{\"id\":\"80351110224678912\",\"username\":\"Nelly\",\"discriminator\":\"1337\",\"avatar\":\"8342729096ea3675442027381ff50dfe\",\"bot\":true,\"verified\":true}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: CONFIRMED with minor wording fix \u2014 official docs (https://discord.com/developers/docs/topics/rate-limits) state global limit of 50 requests per second per bot; tilde (~) unnecessary. example: INCORRECT original \u2014 placeholder said YOUR_API_KEY; Discord requires Authorization: Bot <token> (https://discord.com/developers/docs/reference). Corrected to YOUR_BOT_TOKEN; User-Agent format and /users/@me response match docs."
+}

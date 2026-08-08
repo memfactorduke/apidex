@@ -1,0 +1,52 @@
+{
+  "id": "marvel-comics",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.marvel.com/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.marvel.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.marvel.com/documentation/authorization"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.marvel.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "3,000 calls/day (standard free tier; exact current limit not clearly published as of 2026 verification \u2014 historical docs cite 3000/day)",
+      "source": "https://developer.marvel.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Historically 3,000 calls/day free; confirm current limits in developer account / terms",
+      "source": "https://developer.marvel.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.marvel.com/docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.marvel.com/"
+    }
+  },
+  "notes": "Need full web verification of all claims before finalizing."
+}

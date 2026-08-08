@@ -1,0 +1,98 @@
+{
+  "id": "opencage",
+  "status": "operational",
+  "name": "OpenCage Geocoding",
+  "category": "geo-maps",
+  "tagline": "Forward and reverse geocoding with global coverage",
+  "description": "OpenCage Geocoding API converts addresses to coordinates and coordinates to addresses using aggregated open data. It provides structured place data, timezone, annotations, and confidence scores for apps that need reliable place lookup worldwide.",
+  "base_url": "https://api.opencagedata.com/geocode/v1",
+  "docs_url": "https://opencagedata.com/api",
+  "signup_url": "https://opencagedata.com/users/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter (self-serve signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "Free trial: 1 req/s. Paid plans: higher by tier (e.g. 15\u201350 req/s) plus daily/monthly caps by plan.",
+  "example": {
+    "request": "curl \"https://api.opencagedata.com/geocode/v1/json?q=Berlin&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"results\":[{\"formatted\":\"Berlin, Germany\",\"geometry\":{\"lat\":52.52,\"lng\":13.405}}]}"
+  },
+  "use_cases": [
+    "convert a street address to latitude/longitude",
+    "reverse-geocode coordinates to a place name",
+    "look up timezone for a location",
+    "normalize user-entered place strings"
+  ],
+  "sources": [
+    "https://opencagedata.com/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

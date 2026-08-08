@@ -1,0 +1,100 @@
+{
+  "id": "moralis",
+  "status": "operational",
+  "name": "Moralis",
+  "category": "crypto",
+  "tagline": "Enterprise Web3 data APIs for wallets, tokens, NFTs, and blockchain activity across major chains",
+  "description": "Moralis provides REST APIs that return indexed blockchain data for EVM chains and others, covering wallet balances and transfers, token and NFT metadata, prices, DeFi positions, and transaction history. Developers authenticate with an API key, call versioned endpoints, and use the data for portfolio apps, analytics, compliance tooling, and Web3 backends without running their own indexers.",
+  "base_url": "https://deep-index.moralis.io/api/v2.2",
+  "docs_url": "https://docs.moralis.com/",
+  "signup_url": "https://admin.moralis.io/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-API-Key header (also accepted as query param apiKey on some endpoints); self-serve signup at Moralis admin"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 40,000 Compute Units (CU)/month; rate limits apply by plan",
+    "paid_plans": "Paid plans by compute units (CU) and throughput; see moralis.io/pricing"
+  },
+  "rate_limits": "Plan-based throughput and monthly CU; exact numbers depend on plan (not fully verified here)",
+  "example": {
+    "request": "curl -s \"https://deep-index.moralis.io/api/v2.2/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045/balance?chain=eth\" -H \"X-API-Key: YOUR_API_KEY\" -H \"accept: application/json\"",
+    "response_snippet": "{\"balance\":\"123456789012345678\"}"
+  },
+  "use_cases": [
+    "get native balance for a wallet address",
+    "list ERC-20 token balances for a wallet",
+    "fetch NFT ownership and metadata for an address",
+    "get token price by contract address",
+    "query wallet transaction history across chains",
+    "resolve token or NFT metadata by contract and token id"
+  ],
+  "sources": [
+    "https://docs.moralis.com/",
+    "https://moralis.io/",
+    "https://moralis.io/pricing"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

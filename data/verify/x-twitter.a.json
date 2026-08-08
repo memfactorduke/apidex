@@ -1,0 +1,52 @@
+{
+  "id": "x-twitter",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/fundamentals/api-base-url"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/fundamentals/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/getting-started/about-x-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/getting-started/about-x-api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/fundamentals/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/users/lookup/api-reference/get-users-by-username-username"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/introduction"
+    }
+  },
+  "notes": "Verified against official X docs (docs.x.com) as of 2026: base URL api.x.com/2, OAuth 2.0/1.0a, Free/Basic/Pro/Enterprise, free tier low caps, per-endpoint rate limits. Example path is correct; header name 'YOUR_API_KEY' is slightly imprecise (Bearer token) but functional. CORS left unknown is appropriate."
+}

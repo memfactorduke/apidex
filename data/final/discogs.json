@@ -1,0 +1,97 @@
+{
+  "id": "discogs",
+  "status": "operational",
+  "name": "Discogs",
+  "category": "entertainment",
+  "tagline": "Music database and marketplace API for releases, artists, labels, and marketplace data",
+  "description": "Discogs provides a REST API for the world's largest music database and marketplace. Developers can search and retrieve releases, artists, labels, masters, and user collections; manage wantlists; and access marketplace listings and seller inventory with authenticated requests.",
+  "base_url": "https://api.discogs.com",
+  "docs_url": "https://www.discogs.com/developers",
+  "signup_url": "https://www.discogs.com/settings/developers",
+  "auth": {
+    "type": "other",
+    "details": "Consumer key/secret for OAuth 1.0a, or personal access token via Authorization: Discogs token=YOUR_TOKEN header; also requires User-Agent identifying the app"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use; commercial use requires approval. Rate limited (see rate_limits).",
+    "paid_plans": null
+  },
+  "rate_limits": "Authenticated: 60 requests/minute; unauthenticated: 25 requests/minute (as published in docs)",
+  "example": {
+    "request": "curl -H \"User-Agent: MyApp/1.0 +https://example.com\" -H \"Authorization: Discogs token=YOUR_API_KEY\" \"https://api.discogs.com/releases/249504\"",
+    "response_snippet": "{\"id\":249504,\"title\":\"Never Gonna Give You Up\",\"artists\":[{\"name\":\"Rick Astley\"}],\"labels\":[{\"name\":\"RCA\"}],\"year\":1987,\"formats\":[{\"name\":\"Vinyl\"}],\"uri\":\"https://www.discogs.com/release/249504\"}"
+  },
+  "use_cases": [
+    "look up a vinyl release by Discogs ID",
+    "search the catalog for an artist or album title",
+    "get marketplace listings and lowest prices for a release",
+    "fetch a user's collection or wantlist",
+    "retrieve artist discography and related masters"
+  ],
+  "sources": [
+    "https://www.discogs.com/developers",
+    "https://www.discogs.com/developers/#page:authentication",
+    "https://www.discogs.com/developers/#page:home,header:home-rate-limiting"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

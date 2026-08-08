@@ -1,0 +1,15 @@
+{
+  "id": "perigon",
+  "base_url": null,
+  "docs_url": "https://perigon.io/docs/",
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Free plan: 150 API requests/mo, personal (non-commercial) license, all endpoints, 3 months historical data, real-time, 1 req/sec, max 25 results/request; no credit card",
+  "rate_limits": "Free: 1 req/sec; Basic: 2; Plus: 4; Commercial: custom (https://perigon.io/products/pricing/apis)",
+  "cors": null,
+  "example_request": "curl \"https://api.goperigon.com/v1/articles/all?apiKey=YOUR_API_KEY&q=technology\"",
+  "example_response_snippet": "{\n  \"status\": 200,\n  \"numResults\": 1,\n  \"articles\": [\n    {\n      \"url\": \"https://example.com/story\",\n      \"title\": \"Sample technology headline\",\n      \"source\": { \"domain\": \"example.com\" },\n      \"pubDate\": \"2026-08-01T12:00:00Z\"\n    }\n  ]\n}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier: true (keep/confirm) \u2014 official pricing at https://perigon.io/products/pricing/apis lists Free $0 forever (150 req/mo, no card); Verifier B incorrect (likely stale goperigon.com/pricing). free_tier_limits: replace \"unknown\" with Free plan limits from same page (150 req/mo, personal license, 3 mo history, 1 rps, max 25 results). example: original curl matches documented /v1/articles/all + apiKey query; Verifier B uncertainty not a hard fail \u2014 confirmed via docs auth + articles paths; response_snippet made realistic non-empty. docs_url: goperigon.com redirects to perigon.io/docs/ (optional update). rate_limits published on pricing page (bonus). status operational."
+}

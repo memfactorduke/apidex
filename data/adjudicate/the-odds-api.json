@@ -1,0 +1,15 @@
+{
+  "id": "the-odds-api",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "500 credits/month free (odds endpoints may cost multiple credits per region; GET /sports is free)",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: original and Verifier B wrong on units/amount. Official pricing (https://the-odds-api.com/#get-access) and usage guide (https://the-odds-api.com/liveapi/guides/v4/#usage-quota-costs) document a free quota of 500 credits/month, not raw requests; odds calls cost credits by region. Adopted Verifier A's credit framing with minor clarification from docs."
+}

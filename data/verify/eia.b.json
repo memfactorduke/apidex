@@ -1,0 +1,52 @@
+{
+  "id": "eia",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.eia.gov/opendata/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.eia.gov/opendata/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.eia.gov/opendata/register.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.eia.gov/opendata/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.eia.gov/opendata/documentation/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.eia.gov/opendata/documentation/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.eia.gov/opendata/"
+    }
+  },
+  "notes": "Verified against EIA Open Data docs. API key auth via api_key query param; free registration. Base URL api.eia.gov and v2 paths match docs. Rate limits and free-tier limits not clearly published as fixed numbers. CORS not documented."
+}

@@ -1,0 +1,98 @@
+{
+  "id": "ipinfo",
+  "status": "operational",
+  "name": "IPinfo",
+  "category": "geo-maps",
+  "tagline": "IP address geolocation, ASN, company, and privacy data API",
+  "description": "IPinfo provides IP intelligence APIs for geolocation (city, region, country, coordinates), ASN/network ownership, company data, privacy/VPN/proxy detection, and related IP metadata. Developers query by IP address (or use a tokenized client IP lookup) and receive structured JSON. Plans range from a free tier with limited fields and request volume to paid tiers with higher limits and richer datasets.",
+  "base_url": "https://ipinfo.io",
+  "docs_url": "https://ipinfo.io/developers",
+  "signup_url": "https://ipinfo.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via ?token= query parameter or Authorization: Bearer header; free self-serve signup at ipinfo.io/signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "50,000 requests/month free; limited data fields vs paid plans",
+    "paid_plans": "Paid plans for higher volume and full datasets (Core, Plus, Business, Enterprise) \u2014 see pricing page"
+  },
+  "rate_limits": "Free: 50,000 requests/month; paid plans higher monthly quotas \u2014 see https://ipinfo.io/pricing",
+  "example": {
+    "request": "curl \"https://ipinfo.io/8.8.8.8?token=YOUR_API_KEY\"",
+    "response_snippet": "{\"ip\": \"8.8.8.8\", \"hostname\": \"dns.google\", \"city\": \"Mountain View\", \"region\": \"California\", \"country\": \"US\", \"loc\": \"37.4056,-122.0775\", \"org\": \"AS15169 Google LLC\", \"postal\": \"94043\", \"timezone\": \"America/Los_Angeles\"}"
+  },
+  "use_cases": [
+    "geolocate a user IP to country/city for localization",
+    "look up ASN and network owner for an IP",
+    "detect VPN/proxy/hosting for fraud or abuse checks",
+    "enrich server logs with IP location metadata",
+    "resolve client IP geolocation for content routing"
+  ],
+  "sources": [
+    "https://ipinfo.io/developers",
+    "https://ipinfo.io/pricing",
+    "https://ipinfo.io"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

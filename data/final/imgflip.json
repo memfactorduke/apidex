@@ -1,0 +1,98 @@
+{
+  "id": "imgflip",
+  "status": "operational",
+  "name": "Imgflip",
+  "category": "fun-novelty",
+  "tagline": "Free meme caption API for popular templates with optional Premium GIF/AI features.",
+  "description": "Imgflip's RESTful JSON API lists popular meme templates and captions them into shareable images. Free tier supports get_memes and caption_image (with watermark); Premium ($9.99/mo) unlocks GIF captioning, full meme search, AI generation, and watermark removal. Auth uses Imgflip username/password form fields\u2014no API key header.",
+  "base_url": "https://api.imgflip.com",
+  "docs_url": "https://imgflip.com/api",
+  "signup_url": "https://imgflip.com/signup",
+  "auth": {
+    "type": "other",
+    "details": "Imgflip account username and password sent as form fields (username, password) on caption endpoints; get_memes needs no auth. Self-serve signup at imgflip.com/signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free: get_memes + caption_image (watermarked); no published hard quota\u2014high limits with abuse throttling. Premium $9.99/mo includes monthly Premium allotments then per-request fees for GIF/search/AI/no-watermark.",
+    "paid_plans": "Premium API base $9.99/month plus included Premium requests; overage per-request pricing for advanced endpoints (details on docs)."
+  },
+  "rate_limits": "No hard published numeric limit; docs state requests may be rate-limited if you make a lot; abusive use may be throttled/blocked.",
+  "example": {
+    "request": "curl -s 'https://api.imgflip.com/get_memes'",
+    "response_snippet": "{\"success\":true,\"data\":{\"memes\":[{\"id\":\"181913649\",\"name\":\"Drake Hotline Bling\",\"url\":\"https://i.imgflip.com/30b1gx.jpg\",\"width\":1200,\"height\":1200,\"box_count\":2},{\"id\":\"87743020\",\"name\":\"Two Buttons\",\"url\":\"https://i.imgflip.com/1g8my4.jpg\",\"width\":600,\"height\":908,\"box_count\":3}]}}"
+  },
+  "use_cases": [
+    "list popular meme templates with IDs and image URLs",
+    "caption a meme template with top and bottom text",
+    "generate a shareable meme image URL for a chat bot reply",
+    "build a meme picker UI from the top 100 templates",
+    "caption a custom uploaded image as a meme (with credentials)"
+  ],
+  "sources": [
+    "https://imgflip.com/api",
+    "https://imgflip.com/popular-meme-ids",
+    "https://api.imgflip.com/get_memes"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "cors",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

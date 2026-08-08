@@ -1,0 +1,52 @@
+{
+  "id": "randomuser",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes",
+      "source": "https://randomuser.me/api/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://randomuser.me/documentation"
+    }
+  },
+  "notes": "API live (HTTP 200). CORS: Access-Control-Allow-Origin: * on responses. Docs list formats JSON/CSV/YAML/XML (entry only lists json; not in schema). Max 5000 results/request documented; no published rate/quota policy."
+}

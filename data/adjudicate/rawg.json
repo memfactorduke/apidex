@@ -1,0 +1,15 @@
+{
+  "id": "rawg",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "20,000 requests/month free",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: original CONFIRMED. Official RAWG API docs (https://rawg.io/apidocs) state free plan is 20,000 requests per month; paid Business plans for higher quotas. Verifier A\u2019s rewrite was cosmetic (same figure). Verifier B\u2019s \u201cunofficial\u201d caution is overstated\u2014the quota is documented on the official apidocs page. Automated HTTP 522 on api.rawg.io is treated as transient CDN/origin failure, not evidence the free-tier figure is wrong; status left operational pending clearer outage signal."
+}

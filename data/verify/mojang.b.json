@@ -1,0 +1,52 @@
+{
+  "id": "mojang",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.minecraftservices.com (session/profile services) and https://sessionserver.mojang.com (session joins); api.mojang.com is largely deprecated/404 for many paths \u2014 verify current hosts via wiki.vg/Mojang_API",
+      "source": "https://wiki.vg/Mojang_API"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://minecraft.wiki/w/Mojang_API",
+      "source": "https://minecraft.wiki/w/Mojang_API"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wiki.vg/Mojang_API"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wiki.vg/Mojang_API"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wiki.vg/Mojang_API"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wiki.vg/Mojang_API"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://api.mojang.com/users/profiles/minecraft/Notch\" may 404; current UUID lookup is often via https://api.minecraftservices.com/minecraft/profile/lookup/name/{name} or sessionserver paths \u2014 see current wiki",
+      "source": "https://wiki.vg/Mojang_API"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wiki.vg/Mojang_API"
+    }
+  },
+  "notes": "Automated curl found base_url 404 and docs_url unreachable. Need live verification of current endpoints before finalizing."
+}

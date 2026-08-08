@@ -1,0 +1,15 @@
+{
+  "id": "blockchair",
+  "base_url": null,
+  "docs_url": "https://blockchair.com/api/docs",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free plan: 1,000 requests/day (soft limit); limited endpoints. Without a key: ~30 req/min. Paid plans raise daily and RPM caps.",
+  "rate_limits": "Without key: ~30 RPM. Free plan key: ~1,000 req/day (soft). Paid plans: higher daily limits and RPM; see pricing.",
+  "cors": null,
+  "example_request": "curl 'https://api.blockchair.com/bitcoin/stats'",
+  "example_response_snippet": "{\"data\":{\"blocks\":900000,\"transactions\":...},\"context\":{\"code\":200,\"source\":\"I\",\"market_price_usd\":...}}",
+  "description": "Multi-chain blockchain data API: stats, blocks, transactions, addresses, and more across Bitcoin, Ethereum, and other chains.",
+  "status": null,
+  "resolution_notes": "docs_url: Verifier A confirmed https://blockchair.com/api/docs (official docs); Verifier B preferred /api (marketing/pricing). Docs live at /api/docs (HTTP may show auth gates for some clients). free_tier_limits: Both verifiers incorrect on placeholder; pricing page states free ~1k/day soft + limited endpoints; unauthenticated ~30 RPM is a separate rate limit. rate_limits: Combine both\u201430 RPM no key; free key ~1k/day; paid higher. example: Original root curl useless; use /bitcoin/stats as both verifiers agreed. description: Original was research placeholder; Verifier B substance correct\u2014multi-chain blockchain data API. Sources: blockchair.com/api, blockchair.com/api/docs, live API 200."
+}

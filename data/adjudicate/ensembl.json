@@ -1,0 +1,15 @@
+{
+  "id": "ensembl",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "15 requests/second per IP (global rate limit); 5500 requests/hour recommended maximum; bulk/download use discouraged via REST\u2014use FTP or Perl/Python APIs for large jobs.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: ORIGINAL CONFIRMED. Official Rate Limits wiki (github.com/Ensembl/ensembl-rest/wiki/Rate-Limits) documents 15 req/s per IP global limit and ~5500 req/hour as the recommended max; bulk work should use FTP or client APIs, not REST. Verifier B marked incorrect but proposed an identical string\u2014no material change. Automated curl HTTP 0 is a bot/network false positive; Ensembl REST remains operational at rest.ensembl.org."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "stream-chat",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST \"https://chat.stream-io-api.com/channels?api_key=YOUR_API_KEY\" -H \"Authorization: YOUR_USER_TOKEN\" -H \"stream-auth-type: jwt\" -H \"Content-Type: application/json\" -d '{\"filter_conditions\":{\"type\":\"messaging\"},\"sort\":[{\"field\":\"last_message_at\",\"direction\":-1}],\"state\":true,\"watch\":false,\"presence\":false,\"limit\":10}'",
+  "example_response_snippet": "{\"channels\":[{\"channel\":{\"id\":\"general\",\"type\":\"messaging\",\"cid\":\"messaging:general\",\"created_at\":\"2024-01-01T00:00:00.000000Z\",\"updated_at\":\"2024-01-01T00:00:00.000000Z\"},\"messages\":[],\"members\":[],\"watcher_count\":0}],\"duration\":\"12.34ms\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: Verifier B correct \u2014 Query Channels is POST /channels (not GET). Official REST docs (https://getstream.io/chat/docs/rest/) and API reference list query channels as POST with JSON body (filter_conditions, sort, state, etc.); auth via api_key query param + Authorization JWT + stream-auth-type: jwt. Corrected request/response to match that shape. All other fields undisputed and confirmed by both verifiers; left null."
+}

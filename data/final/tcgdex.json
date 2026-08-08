@@ -1,0 +1,96 @@
+{
+  "id": "tcgdex",
+  "status": "operational",
+  "name": "TCGDEX",
+  "category": "games-comics",
+  "tagline": "Multilingual Pok\u00e9mon TCG API for sets, cards, and series.",
+  "description": "TCGDEX is a free and open multilingual Pok\u00e9mon Trading Card Game API providing structured data on cards, sets, series, and related metadata for developers building tools, collectors apps, and game-related experiences.",
+  "base_url": "https://api.tcgdex.net/v2",
+  "docs_url": "https://tcgdex.dev",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public open API endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "no published hard limits (be considerate; cache bulk data)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://api.tcgdex.net/v2/en/cards/swsh3-136'",
+    "response_snippet": "{\"id\":\"swsh3-136\",\"localId\":\"136\",\"name\":\"Furret\",\"image\":\"https://assets.tcgdex.net/en/swsh/swsh3/136\"}"
+  },
+  "use_cases": [
+    "look up a Pok\u00e9mon TCG card by ID or name",
+    "list cards in a set",
+    "fetch series and set metadata",
+    "build a multilingual card search tool"
+  ],
+  "sources": [
+    "https://tcgdex.net",
+    "https://tcgdex.dev"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

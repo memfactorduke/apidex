@@ -1,0 +1,52 @@
+{
+  "id": "football-data-org",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.football-data.org/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.football-data.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.football-data.org/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.football-data.org/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free (Tier 1 / FREE) plan: 10 requests/minute; limited competition set (not all leagues); exact caps are published on the official pricing page rather than left as \u201cconfirm on pricing\u201d",
+      "source": "https://www.football-data.org/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 10 req/min; paid tiers have higher limits (e.g. Tier 2 and above increase RPM and competition access) \u2014 numbers are published on official pricing, not merely \u201cconfirm from pricing\u201d",
+      "source": "https://www.football-data.org/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.football-data.org/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.football-data.org/"
+    }
+  },
+  "notes": "Placeholder free-tier/rate-limit text is wrong style for a directory: official pricing publishes concrete free RPM and competition limits. Verify live pricing page for 2026 numbers before shipping."
+}

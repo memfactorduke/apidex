@@ -1,0 +1,95 @@
+{
+  "id": "vesselfinder",
+  "status": "operational",
+  "name": "VesselFinder",
+  "category": "transportation",
+  "tagline": "AIS ship positions and maritime vessel tracking API",
+  "description": "VesselFinder provides AIS-based ship tracking data via a commercial REST API, including live vessel positions, voyage details, and fleet monitoring for maritime applications.",
+  "base_url": "https://api.vesselfinder.com",
+  "docs_url": "https://api.vesselfinder.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header or query parameter not fully verified without account access"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.vesselfinder.com/vesselslist?userkey=YOUR_API_KEY&format=json\"",
+    "response_snippet": "[{\"AIS\":{\"MMSI\":123456789,\"NAME\":\"EXAMPLE SHIP\",\"IMO\":0,\"CALLSIGN\":\"\",\"TIMESTAMP\":\"2026-01-01T12:00:00Z\",\"LATITUDE\":0.0,\"LONGITUDE\":0.0,\"COURSE\":0.0,\"SPEED\":0.0,\"HEADING\":0,\"NAVSTAT\":0,\"TYPE\":70,\"A\":0,\"B\":0,\"C\":0,\"D\":0,\"DRAUGHT\":0.0,\"DESTINATION\":\"\",\"ETA_AIS\":\"00-00 00:00\"}}]"
+  },
+  "use_cases": [
+    "get live AIS position for a vessel by MMSI",
+    "list vessels in a geographic area"
+  ],
+  "sources": [
+    "https://www.vesselfinder.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "financial-modeling-prep",
+  "base_url": "https://financialmodelingprep.com/stable",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "250 API calls/day on Free plan; limited free endpoints (not full API)",
+  "rate_limits": "Published by plan: Free 250/day; Starter 300/min; Premium 750/min; Ultimate 3000/min",
+  "cors": null,
+  "example_request": "curl \"https://financialmodelingprep.com/stable/quote?symbol=AAPL&apikey=YOUR_API_KEY\"",
+  "example_response_snippet": "[{\"symbol\":\"AAPL\",\"name\":\"Apple Inc.\",\"price\":178.72,\"changesPercentage\":0.5,\"change\":0.89,\"dayLow\":177.5,\"dayHigh\":179.2,\"yearHigh\":199.62,\"yearLow\":164.08,\"marketCap\":2800000000000,\"volume\":52000000,\"avgVolume\":55000000,\"exchange\":\"NASDAQ\",\"open\":178.0,\"previousClose\":177.83,\"eps\":6.13,\"pe\":29.15,\"earningsAnnouncement\":null,\"sharesOutstanding\":15550000000,\"timestamp\":1710000000}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: both verifiers correct \u2014 docs use /stable as current base (legacy /api/v3 still exists). free_tier_limits: 250/day Free confirmed on pricing. rate_limits: published per plan on pricing page. example: docs prefer /stable/quote?symbol=... over legacy /api/v3/quote/AAPL. Evidence: site.financialmodelingprep.com/developer/docs and /docs/pricing."
+}

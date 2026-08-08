@@ -1,0 +1,52 @@
+{
+  "id": "khan-academy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.khanacademy.org/hc/en-us/community/posts/10760720860813-API-Key"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false (no public API product; legacy API removed 2020)",
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.khanacademy.org/hc/en-us/community/posts/10760720860813-API-Key"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Endpoint returns HTTP 410 with body 'API removed. Please see https://github.com/Khan/khan-api for details' \u2014 /api/v1/topictree was scheduled for removal July 29, 2020 and is gone",
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Khan Academy provided an official public REST API (documented in Khan/khan-api), not merely unofficial/community APIs; that public API was officially removed (user endpoints Jan 6 2020; topictree/topic/videos/exercises by July 2020). Staff confirmed in 2022 there is no public API.",
+      "source": "https://github.com/Khan/khan-api"
+    }
+  },
+  "notes": "Legacy v1 is dead: live GET /api/v1/topictree returns 410. Official repo archived 2022 documents full removal. Entry status operational is false (not in schema). overall=fail."
+}

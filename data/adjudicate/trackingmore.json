@@ -1,0 +1,15 @@
+{
+  "id": "trackingmore",
+  "base_url": "https://api.trackingmore.com/v4",
+  "docs_url": "https://www.trackingmore.com/api-docs",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "Free plan: 100 trackings/month (confirm on current pricing page)",
+  "rate_limits": "Per-endpoint (docs): Create a tracking 3 req/s; Get tracking results 10/s; Batch create 1/s; Detect courier 3/s (varies by endpoint)",
+  "cors": "unknown",
+  "example_request": "curl -X GET 'https://api.trackingmore.com/v4/trackings/get?tracking_numbers=1Z999AA10123456784&courier_code=ups' -H 'Tracking-Api-Key: YOUR_API_KEY' -H 'Content-Type: application/json'",
+  "example_response_snippet": "{\"meta\":{\"code\":200,\"message\":\"Success\"},\"data\":[{\"id\":\"...\",\"tracking_number\":\"1Z999AA10123456784\",\"courier_code\":\"ups\",\"delivery_status\":\"delivered\",\"origin_info\":{\"trackinfo\":[{\"checkpoint_date\":\"2024-01-15 10:00:00\",\"tracking_detail\":\"Delivered\"}]}}]}",
+  "description": "TrackingMore is a multi-carrier shipment tracking API that aggregates package status from hundreds of couriers worldwide. Developers use it to create trackings, poll delivery status, receive webhooks, and surface last-mile updates in ecommerce, logistics, and support tools without integrating each carrier separately.",
+  "status": "operational",
+  "resolution_notes": "base_url: KEEP original https://api.trackingmore.com/v4 (Verifier A self-contradicted: verdict incorrect but correction identical; Verifier B confirmed; official Quick Start / Get tracking results docs). docs_url: CORRECT to https://www.trackingmore.com/api-docs (bare /docs 404s; api-docs is the hub; alternate docs at /docs/trackingmore/... also valid). free_tier_limits: CORRECT to Free plan 100 trackings/month per pricing page (both verifiers). rate_limits: CORRECT from 'not published' to per-endpoint limits published in API docs (Create 3/s, Get results 10/s, Batch 1/s, Detect 3/s) per Verifier B sources. example: CORRECT request to include courier_code with tracking_numbers for Get tracking results endpoint GET /v4/trackings/get; response shape with meta/data retained as documented pattern. auth_type/free_tier/description/cors/status: not disputed as needing change (confirm or unknown)."
+}

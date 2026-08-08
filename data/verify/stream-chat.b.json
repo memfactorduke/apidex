@@ -1,0 +1,52 @@
+{
+  "id": "stream-chat",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://getstream.io/chat/docs/rest/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://getstream.io/chat/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://getstream.io/chat/docs/react/tokens_and_authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://getstream.io/chat/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://getstream.io/chat/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://getstream.io/chat/docs/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Query channels is POST /channels (not GET); path is typically /channels?api_key=... with JSON body; Authorization is user JWT and stream-auth-type: jwt for client, or server uses api_key + api_secret. Verify exact endpoint shape in current REST docs.",
+      "source": "https://getstream.io/chat/docs/rest/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://getstream.io/chat/"
+    }
+  },
+  "notes": "Adversarial check found the curl example wrong: Stream query-channels is POST not GET. Base URL chat.stream-io-api.com and Maker free tier still match official sources; plan names and exact free quotas should be re-checked on pricing."
+}

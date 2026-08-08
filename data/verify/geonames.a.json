@@ -1,0 +1,52 @@
+{
+  "id": "geonames",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://secure.geonames.org (and https://api.geonames.org) \u2014 both documented; entry URL is valid but not the only official base",
+      "source": "https://www.geonames.org/export/web-services.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.geonames.org/export/web-services.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.geonames.org/export/web-services.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.geonames.org/export/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 1000 credits/hour, 20000 credits/day (credit-based; most requests = 1 credit). Commercial: higher limits.",
+      "source": "https://www.geonames.org/export/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free webservices: max 1000 credits/hour and 20000 credits/day; commercial accounts have higher limits (published on export/pricing pages).",
+      "source": "https://www.geonames.org/export/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.geonames.org/export/web-services.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.geonames.org/export/web-services.html"
+    }
+  },
+  "notes": "Rate limits and free-tier limits are published (not unknown/not published). Auth is username query param, not a separate API key. paid_plans exist commercially."
+}

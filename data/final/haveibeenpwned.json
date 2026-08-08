@@ -1,0 +1,98 @@
+{
+  "id": "haveibeenpwned",
+  "status": "operational",
+  "name": "Have I Been Pwned",
+  "category": "security-identity",
+  "tagline": "Industry-standard breach and paste search for compromised emails and passwords.",
+  "description": "Have I Been Pwned provides APIs to check whether email addresses, domains, or passwords appear in known data breaches and paste dumps. Developers use the authenticated breach/paste endpoints and the k-anonymity Pwned Passwords range API for secure password checks without sending full passwords.",
+  "base_url": "https://haveibeenpwned.com/api/v3",
+  "docs_url": "https://haveibeenpwned.com/API/v3",
+  "signup_url": "https://haveibeenpwned.com/API/Key",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via hibp-api-key header for breach/paste endpoints; Pwned Passwords range API typically needs no key."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No free tier for breach/paste APIs (paid subscription only). Pwned Passwords range API is free and unauthenticated.",
+    "paid_plans": null
+  },
+  "rate_limits": "Paid HIBP API keys rate-limited (~10 req/min standard); 429 with Retry-After. Pwned Passwords range has separate/high-volume guidance.",
+  "example": {
+    "request": "curl -s -H \"hibp-api-key: YOUR_API_KEY\" -H \"user-agent: MyApp\" \"https://haveibeenpwned.com/api/v3/breachedaccount/test@example.com\"",
+    "response_snippet": "[{\"Name\":\"Adobe\",\"Title\":\"Adobe\",\"Domain\":\"adobe.com\",\"BreachDate\":\"2013-10-04\",\"AddedDate\":\"2013-12-04T00:00:00Z\",\"PwnCount\":152445165,\"DataClasses\":[\"Email addresses\",\"Password hints\",\"Passwords\",\"Usernames\"]}]"
+  },
+  "use_cases": [
+    "check if an email appears in known data breaches",
+    "list all breaches for a domain",
+    "check if a password hash prefix appears in Pwned Passwords",
+    "get details for a named breach",
+    "monitor whether a user's email was in recent pastes"
+  ],
+  "sources": [
+    "https://haveibeenpwned.com/API/v3"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

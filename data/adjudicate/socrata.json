@@ -1,0 +1,15 @@
+{
+  "id": "socrata",
+  "base_url": "https://data.cityofchicago.org/resource",
+  "docs_url": "https://dev.socrata.com/",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl \"https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=1\"",
+  "example_response_snippet": "[{...}]",
+  "description": "Socrata (now part of Tyler Technologies) provides SODA (Socrata Open Data API) for querying city, state, and government open datasets. Developers access tabular data via REST endpoints with SoQL filtering, used widely for municipal open data portals.",
+  "status": "operational",
+  "resolution_notes": "Verifier B correctly notes that base_url is a portal-specific host pattern, not a global SODA base, and that rate limits are documented (app token ~1000/hr, lower without). Confirming both against current official docs before final ruling."
+}

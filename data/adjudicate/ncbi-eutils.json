@@ -1,0 +1,15 @@
+{
+  "id": "ncbi-eutils",
+  "base_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+  "docs_url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": "No paid tier. Free public access: 3 req/s without API key; 10 req/s with free API key (NCBI account). No formal volume cap beyond rate limits and usage policies; contact eutilities@ncbi.nlm.nih.gov for higher throughput.",
+  "rate_limits": "Without API key: \u22643 requests/second. With API key: \u226410 requests/second. Recommended \u226410 concurrent requests; \u2264100 UIDs per multi-UID request (use history for larger sets). NCBI may block abusive IPs.",
+  "cors": null,
+  "example_request": "curl \"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=asthma&retmode=json\"",
+  "example_response_snippet": "{\"header\":{\"type\":\"esearch\",\"version\":\"0.3\"},\"esearchresult\":{\"count\":\"...\",\"retmax\":\"20\",\"retstart\":\"0\",\"idlist\":[\"...\"],\"translationset\":[...],\"querytranslation\":\"asthma[All Fields]\"}}",
+  "description": "NCBI E-utilities (Entrez Programming Utilities) is a free set of server-side programs for programmatic HTTP access to Entrez/NCBI databases (PubMed, GenBank, Protein, etc.), returning XML, JSON, or other formats depending on utility and parameters. Optional free API key raises rate limits.",
+  "status": null,
+  "resolution_notes": "base_url: CONFIRMED https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ (NBK25500/NBK25501). docs_url: CONFIRMED https://www.ncbi.nlm.nih.gov/books/NBK25501/ (A General Introduction). auth_type: apiKey (optional/recommended; unauth allowed) per NBK25497 + account settings. free_tier: keep true (confirmed both verifiers). free_tier_limits: rate-based free public service, 3/10 rps (NBK25497). rate_limits: same + concurrent/UID guidance (NBK25497). example: esearch pubmed asthma retmode=json (NBK25500/NBK25499). description: merged from both verifiers + intro docs. cors: null (unverifiable). status: null\u2014HTTP 0 likely bot/network false positive; domain is official NCBI and both verifiers treat as operational."
+}

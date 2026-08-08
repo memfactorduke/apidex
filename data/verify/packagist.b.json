@@ -1,0 +1,52 @@
+{
+  "id": "packagist",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://packagist.org/apidoc"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://packagist.org/apidoc"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://packagist.org/apidoc"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://packagist.org/apidoc"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://packagist.org/apidoc"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published soft limits: avoid aggressive crawling; metadata API should be used carefully. Packagist documents usage guidance rather than hard numeric quotas for public read APIs.",
+      "source": "https://packagist.org/apidoc"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://packagist.org/apidoc"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://packagist.org/apidoc"
+    }
+  },
+  "notes": "Checked official Packagist API docs. Public read API remains at packagist.org with no-auth list/search/metadata endpoints; free public access holds. Entry understates rate guidance: docs discourage heavy automated use and point to CDN/metadata best practices rather than 'not published' only. CORS not documented."
+}

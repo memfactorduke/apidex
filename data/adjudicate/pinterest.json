@@ -1,0 +1,15 @@
+{
+  "id": "pinterest",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Trial: 1,000 requests/day per app (universal) plus per-category daily caps (e.g. org_write/ads_write 300/day). Standard: 100 requests/second per user per app (universal) plus published per-category per-minute limits. No paid API usage tiers.",
+  "rate_limits": "Published. Universal: Trial 1,000 req/day all requests; Standard 100 req/sec per user per app. Plus per-category limits (e.g. org_read Standard 1,000/min, org_write 100/min, ads_analytics 300/min, ads_write 400/min, org_analytics 60/min). See official rate-limits table and response headers.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B correct; original \"unknown\" wrong. Official rate-limits + access-tiers docs publish Trial/Standard free quotas (https://developers.pinterest.com/docs/reference/rate-limits/, https://developers.pinterest.com/docs/key-concepts/access-tiers/). rate_limits: Both verifiers correct that original \"not published\" is wrong; limits are published per-endpoint/app (same rate-limits URL)."
+}

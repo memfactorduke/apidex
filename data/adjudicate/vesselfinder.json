@@ -1,0 +1,15 @@
+{
+  "id": "vesselfinder",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl \"https://api.vesselfinder.com/vesselslist?userkey=YOUR_API_KEY&format=json\"",
+  "example_response_snippet": "[{\"AIS\":{\"MMSI\":123456789,\"NAME\":\"EXAMPLE SHIP\",\"IMO\":0,\"CALLSIGN\":\"\",\"TIMESTAMP\":\"2026-01-01T12:00:00Z\",\"LATITUDE\":0.0,\"LONGITUDE\":0.0,\"COURSE\":0.0,\"SPEED\":0.0,\"HEADING\":0,\"NAVSTAT\":0,\"TYPE\":70,\"A\":0,\"B\":0,\"C\":0,\"D\":0,\"DRAUGHT\":0.0,\"DESTINATION\":\"\",\"ETA_AIS\":\"00-00 00:00\"}}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: incorrect (both verifiers). Original curl used incomplete /vessels?userkey= only; official docs list endpoints like /vesselslist, /vessels, /vesseltrack with required params (userkey + identifiers/filters). Corrected to documented vesselslist pattern per https://api.vesselfinder.com/. Other fields not disputed or confirmed by both verifiers; left null."
+}

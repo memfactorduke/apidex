@@ -1,0 +1,52 @@
+{
+  "id": "solar-system-opendata",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.le-systeme-solaire.net/en/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.le-systeme-solaire.net/en/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.le-systeme-solaire.net/en/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.le-systeme-solaire.net/en/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.le-systeme-solaire.net/rest/bodies/earth"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.le-systeme-solaire.net/en/"
+    }
+  },
+  "notes": "Verified against official docs and live API (2026). base_url, docs, auth=none, free public access, example path, and description all match. free_tier_limits/rate_limits/cors remain unpublished/unknown as stated."
+}

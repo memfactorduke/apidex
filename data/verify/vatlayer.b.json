@@ -1,0 +1,52 @@
+{
+  "id": "vatlayer",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://apilayer.net/api",
+      "source": "https://vatlayer.com/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/product"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/product"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/product"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vatlayer.com/documentation"
+    }
+  },
+  "notes": "Entry used http://apilayer.net/api while docs and the example use https://apilayer.net/api; https flag true. Free plan ~100 req/mo and Basic ~$9.99 confirmed on product page. CORS not documented."
+}

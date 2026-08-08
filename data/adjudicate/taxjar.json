@@ -1,0 +1,15 @@
+{
+  "id": "taxjar",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No free production tier. Paid plans only (Starter from $39/mo without API; Professional from $99/mo with API). 30-day free trial available; developer sandbox is for testing only (not free production access).",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier: false \u2014 both verifiers correct. Official pricing (https://www.taxjar.com/pricing) lists only paid Starter ($39/mo) and Professional ($99/mo); API access is Professional-only (Starter shows N/A for API). A 30-day free trial exists but is not an ongoing free tier. free_tier_limits: Original \"unknown\" and Verifier A's confirm are wrong given free_tier=false; use N/A-style limits. Evidence: pricing compare table shows API access only on Professional; support (https://support.taxjar.com/article/139-how-much-does-taxjar-cost) states Professional is required for real-time API calculations. Sandbox (https://developers.taxjar.com/api/reference/) is testing-only, not free production."
+}

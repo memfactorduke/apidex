@@ -1,0 +1,52 @@
+{
+  "id": "mailchimp",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/api/root/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/guides/quick-start/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/pricing/marketing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "10 concurrent connections per API key; soft daily limit of 10 requests/second (higher on paid plans). Mailchimp documents concurrent connection limits and recommends staying under ~10 req/s; exact published numbers should be taken from current docs.",
+      "source": "https://mailchimp.com/developer/marketing/guides/how-to-use-oauth2/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/api/root/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/api/"
+    }
+  },
+  "notes": "Automated curl got HTTP 0 on base_url template (expected \u2014 <dc> is a placeholder). Docs live. Need to re-verify rate limits and free tier from official pages carefully before finalizing."
+}

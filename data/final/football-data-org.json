@@ -1,0 +1,98 @@
+{
+  "id": "football-data-org",
+  "status": "operational",
+  "name": "Football-Data.org",
+  "category": "sports",
+  "tagline": "European football fixtures, results, and standings via a free-tier REST API",
+  "description": "Football-Data.org provides REST access to European football competitions, match fixtures and results, team data, and league tables. Developers use a free API key with published request caps; higher tiers unlock more competitions and higher limits. Coverage focuses on major European leagues and UEFA competitions rather than global sports data.",
+  "base_url": "https://api.football-data.org/v4",
+  "docs_url": "https://docs.football-data.org/",
+  "signup_url": "https://www.football-data.org/client/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Auth-Token header after self-serve registration on football-data.org"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free (\u20ac0): 12 competitions; 10 calls/minute; scores/schedules delayed; fixtures + league tables. Paid free-tier add-ons (e.g. Free w/ Livescores \u20ac12, Free + Deep Data \u20ac29) raise RPM and features while keeping 12 competitions.",
+    "paid_plans": "Paid plans expand competitions and rate limits"
+  },
+  "rate_limits": "Free 10/min; Free w/ Livescores & ML Pack Light 20/min; Free + Deep Data 30/min; Standard & ML Pack PRO 60/min; Advanced 100/min; Pro 120/min. Unauthenticated: 100 req/24h (area/competition list only).",
+  "example": {
+    "request": "curl -H \"X-Auth-Token: YOUR_API_KEY\" https://api.football-data.org/v4/competitions/PL/standings",
+    "response_snippet": "{ \"filters\": {}, \"area\": { \"id\": 2072, \"name\": \"England\" }, \"competition\": { \"id\": 2021, \"name\": \"Premier League\", \"code\": \"PL\" }, \"standings\": [ { \"stage\": \"REGULAR_SEASON\", \"type\": \"TOTAL\", \"table\": [ { \"position\": 1, \"team\": { \"id\": 57, \"name\": \"Arsenal FC\" }, \"playedGames\": 10, \"points\": 24 } ] } ] }"
+  },
+  "use_cases": [
+    "get Premier League standings table",
+    "list today's fixtures for a competition",
+    "fetch match results for a team",
+    "look up competition schedule by season",
+    "get squad/roster for a club"
+  ],
+  "sources": [
+    "https://www.football-data.org/",
+    "https://docs.football-data.org/",
+    "https://www.football-data.org/coverage"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "deepl",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "DeepL API Free (500k chars/month) and API Pro can no longer be purchased. Current free plan is DeepL API Developer: 1,000,000 characters total (not monthly; does not reset). Free keys still use https://api-free.deepl.com; paid use api.deepl.com. Paid plans are Growth (included chars + overage) and Enterprise.",
+  "rate_limits": null,
+  "cors": "no",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "DeepL API provides high-quality neural machine translation for text and documents across many language pairs. Developers authenticate with an API key, call REST endpoints for translate/usage/languages, and choose Developer (free, 1M chars total), Growth, or Enterprise plans. Free keys use api-free.deepl.com; paid keys use api.deepl.com.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: incorrect per Verifier B \u2014 confirmed against https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans (Developer plan: 1M chars total non-resetting; Free/Pro no longer for sale). cors: incorrect per Verifier B \u2014 confirmed against https://developers.deepl.com/docs/best-practices/cors-requests (browser CORS blocked; backend/proxy required). description: incorrect per Verifier B \u2014 Free/Pro language outdated; plans are Developer/Growth/Enterprise with free vs paid hosts. All other fields null (keep original)."
+}

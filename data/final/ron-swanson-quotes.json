@@ -1,0 +1,98 @@
+{
+  "id": "ron-swanson-quotes",
+  "status": "operational",
+  "name": "Ron Swanson Quotes",
+  "category": "fun-novelty",
+  "tagline": "Free Parks and Rec one-liners \u2014 no auth, one endpoint, meme-ready JSON.",
+  "description": "Tiny public HTTP API that returns random Ron Swanson quotes from Parks and Recreation as JSON arrays of strings. No signup or authentication is required. The service is hosted on Heroku at ron-swanson-quotes.herokuapp.com and is widely used for demos, placeholder text, and lightweight fun integrations. Documentation lives in the jamesseanwright/ron-swanson-quotes GitHub repository; rate limits and paid plans are not published.",
+  "base_url": "https://ron-swanson-quotes.herokuapp.com/v2/quotes",
+  "docs_url": "https://github.com/jamesseanwright/ron-swanson-quotes",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public GET endpoints; no API key or signup."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no published request quotas or paid plans",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://ron-swanson-quotes.herokuapp.com/v2/quotes\"",
+    "response_snippet": "[\n  \"There's only one thing I hate more than lying: skim milk. Which is water that's lying about being milk.\"\n]"
+  },
+  "use_cases": [
+    "get a random Ron Swanson quote for a demo or placeholder",
+    "fetch multiple Ron Swanson quotes in one request",
+    "add Parks and Rec one-liners to a chatbot or Slack bot",
+    "power a meme/quote widget on a personal site"
+  ],
+  "sources": [
+    "https://github.com/jamesseanwright/ron-swanson-quotes",
+    "https://ron-swanson-quotes.herokuapp.com/v2/quotes",
+    "https://ron-swanson-quotes.herokuapp.com/v2/quotes/2",
+    "https://www.npmjs.com/package/ron-swanson-quotes"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

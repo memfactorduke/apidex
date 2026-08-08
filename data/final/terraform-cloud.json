@@ -1,0 +1,100 @@
+{
+  "id": "terraform-cloud",
+  "status": "operational",
+  "name": "Terraform Cloud API",
+  "category": "dev-tools",
+  "tagline": "REST API for HCP Terraform workspaces, runs, state, and orgs.",
+  "description": "JSON:API for HCP Terraform (formerly Terraform Cloud) at app.terraform.io. Manage organizations, workspaces, runs, variables, state versions, and teams via Bearer tokens. Versioned under /api/v2 with Content-Type application/vnd.api+json. Free tier covers up to 500 managed resources; paid plans scale by resource under management.",
+  "base_url": "https://app.terraform.io/api/v2",
+  "docs_url": "https://developer.hashicorp.com/terraform/cloud-docs/api-docs",
+  "signup_url": "https://app.terraform.io/public/signup/account",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token (user, team, or organization) via Authorization: Bearer header. Create tokens in UI at app.terraform.io Settings \u2192 Tokens, or via Team/Organization Token APIs. Content-Type: application/vnd.api+json required."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Enhanced Free: up to 500 managed resources, 1 concurrent run, unlimited users (legacy Free EOL Mar 31 2026). API access included; not request-quota free.",
+    "paid_plans": "Essentials ~$0.10, Standard ~$0.47, Premium ~$0.99 per managed resource/month (pay-as-you-go). Trial credits may apply for new orgs."
+  },
+  "rate_limits": "Published: ~30 req/s per IP for most endpoints; some endpoints lower (e.g. run polling, auth). 429 Too Many Requests when exceeded. Check official API docs rate-limiting section.",
+  "example": {
+    "request": "curl --header \"Authorization: Bearer YOUR_API_KEY\" --header \"Content-Type: application/vnd.api+json\" \"https://app.terraform.io/api/v2/account/details\"",
+    "response_snippet": "{\"data\":{\"id\":\"user-XXXX\",\"type\":\"users\",\"attributes\":{\"username\":\"example\",\"email\":\"user@example.com\",\"is-service-account\":false,\"avatar-url\":\"https://...\",\"v2-only\":true,\"is-site-admin\":false,\"is-sso-login\":false,\"two-factor\":{\"enabled\":false,\"verified\":false},\"permissions\":{\"can-create-organizations\":true}}}}"
+  },
+  "use_cases": [
+    "list organizations and workspaces for an account",
+    "trigger or poll a Terraform run on a workspace",
+    "read or upload Terraform state versions",
+    "manage workspace variables and variable sets",
+    "create team or organization API tokens programmatically"
+  ],
+  "sources": [
+    "https://developer.hashicorp.com/terraform/cloud-docs/api-docs",
+    "https://developer.hashicorp.com/terraform/cloud-docs/users-teams-organizations/api-tokens",
+    "https://developer.hashicorp.com/terraform/cloud-docs/api-docs/account",
+    "https://www.hashicorp.com/en/blog/continuing-hcp-terraform-s-enhanced-free-tier-experience",
+    "https://app.terraform.io/public/signup/account"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

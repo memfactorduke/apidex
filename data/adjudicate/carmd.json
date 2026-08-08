@@ -1,0 +1,15 @@
+{
+  "id": "carmd",
+  "base_url": "https://api.carmd.com/v3.0",
+  "docs_url": "https://api.carmd.com/",
+  "auth_type": "apiKey",
+  "free_tier": false,
+  "free_tier_limits": "unknown",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -H \"Authorization: YOUR_API_KEY\" \"https://api.carmd.com/v3.0/diag?code=P0420\"",
+  "example_response_snippet": "{}",
+  "description": "CarMD API provides vehicle diagnostics and repair estimates based on OBD-II trouble codes. Developers can look up diagnostic trouble codes (DTCs), get repair cost estimates, vehicle information, and maintenance data for cars.",
+  "status": "operational",
+  "resolution_notes": "Adjudicating disputed base_url, auth_type, and example against current official CarMD docs."
+}

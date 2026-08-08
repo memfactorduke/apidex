@@ -1,0 +1,15 @@
+{
+  "id": "alpaca",
+  "base_url": "https://api.alpaca.markets",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free Basic market data: IEX equities (limited history); SIP/full feeds require Unlimited. Trading free-tier numeric caps not published as a single free-tier string.",
+  "rate_limits": "Trading API: 200 requests/minute per API key (HTTP 429 when exceeded). Market Data has separate subscription-based limits.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Verifier B correct \u2014 official docs use hosts https://api.alpaca.markets (live) and https://paper-api.alpaca.markets (paper); /v2 is a path prefix, not the canonical base. Evidence: https://docs.alpaca.markets/docs/getting-started and https://docs.alpaca.markets/docs/about-trading-api. free_tier_limits: Original \"unknown\" is incomplete; free Basic market data limits are documented (IEX equities, limited historical; SIP with Unlimited). Trading brokerage free-tier numeric caps remain less clearly published. Evidence: https://docs.alpaca.markets/docs/about-market-data-api. rate_limits: Original \"not published\" is incorrect; Trading API documents 200 req/min per API key. Evidence: https://docs.alpaca.markets/docs/rate-limits and https://docs.alpaca.markets/docs/about-trading-api."
+}

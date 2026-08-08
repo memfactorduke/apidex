@@ -1,0 +1,100 @@
+{
+  "id": "dbpedia",
+  "status": "operational",
+  "name": "DBpedia",
+  "category": "data-analytics",
+  "tagline": "Wikipedia knowledge graph as structured Linked Data",
+  "description": "DBpedia extracts structured data from Wikipedia and exposes it as a large public knowledge graph via SPARQL and Linked Data endpoints. Developers query entities, relationships, and multilingual facts (people, places, works, concepts) without scraping Wikipedia, using standard RDF/SPARQL tooling for research, entity linking, and semantic applications.",
+  "base_url": "https://dbpedia.org/sparql",
+  "docs_url": "https://www.dbpedia.org/resources/sparql/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public SPARQL and Linked Data endpoints; no API key or OAuth required for standard use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -G 'https://dbpedia.org/sparql' --data-urlencode 'query=SELECT ?label WHERE { dbr:Berlin rdfs:label ?label . FILTER (lang(?label) = \"en\") } LIMIT 1' -H 'Accept: application/sparql-results+json'",
+    "response_snippet": "{\"head\":{\"vars\":[\"label\"]},\"results\":{\"bindings\":[{\"label\":{\"type\":\"literal\",\"xml:lang\":\"en\",\"value\":\"Berlin\"}}]}}"
+  },
+  "use_cases": [
+    "run SPARQL queries over Wikipedia-derived entities and relations",
+    "resolve a Wikipedia concept to a DBpedia URI and fetch RDF facts",
+    "look up multilingual labels and abstracts for a person, place, or work",
+    "entity-link free text mentions against the DBpedia knowledge graph",
+    "explore ontology types and properties for semantic data modeling"
+  ],
+  "sources": [
+    "https://www.dbpedia.org/",
+    "https://www.dbpedia.org/resources/sparql/",
+    "https://dbpedia.org/sparql",
+    "https://www.dbpedia.org/resources/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

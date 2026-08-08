@@ -1,0 +1,104 @@
+{
+  "id": "birdeye",
+  "status": "operational",
+  "name": "Birdeye",
+  "category": "crypto",
+  "tagline": "Multi-chain on-chain market data for tokens, trades, wallets, and DeFi.",
+  "description": "Birdeye Data Services (BDS) is a production crypto market-intelligence API covering real-time and historical token prices, OHLCV, liquidity, trades, pairs, holders, wallets/PnL, trending discovery, and security across Solana, Sui, and major EVM chains. Developers authenticate with an API key and call REST endpoints on public-api.birdeye.so (plus optional WebSockets on higher plans). Usage is metered in compute units (CUs) with tiered packages from free Standard through Enterprise.",
+  "base_url": "https://public-api.birdeye.so",
+  "docs_url": "https://docs.birdeye.so/",
+  "signup_url": "https://bds.birdeye.so/auth/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-API-KEY header (required). Self-serve signup at bds.birdeye.so; generate keys in Dashboard \u2192 Security. Most requests also send optional x-chain header (default solana)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Standard (free): 30,000 CUs/month, 1 rps; limited but substantial endpoint access (e.g. /defi/price, OHLCV, token list, token overview); no CU overage",
+    "paid_plans": "Lite $39 (1.5M CUs, 15 rps); Starter $99 (5M CUs, 15 rps); Premium $199 (15M CUs, 50 rps + WebSockets); Business $499+ (60M\u2013500M CUs, 100\u2013150 rps); Growth/Enterprise custom. Overage billed per 1M CUs by tier."
+  },
+  "rate_limits": "Account-level: Standard 1 rps; Lite/Starter 15 rps; Premium 50 rps (~1000 rpm); Business 100 rps (~1500 rpm); Enterprise custom. Wallet APIs ~30 rpm; some heavy endpoints have lower per-API caps.",
+  "example": {
+    "request": "curl --request GET \\\n  --url 'https://public-api.birdeye.so/defi/price?address=So11111111111111111111111111111111111111112' \\\n  --header 'X-API-KEY: YOUR_API_KEY' \\\n  --header 'x-chain: solana'",
+    "response_snippet": "{\"data\":{\"value\":0.38622452197470425,\"updateUnixTime\":1745058945,\"updateHumanTime\":\"2025-04-19T10:35:45\",\"priceChange24h\":1.933391934259418,\"priceInNative\":0.0027761598581298626,\"liquidity\":10854103.37938592},\"success\":true}"
+  },
+  "use_cases": [
+    "get latest USD price for a Solana or EVM token by address",
+    "fetch OHLCV candles for a token or trading pair",
+    "list or search tokens by liquidity, volume, or new listings",
+    "get wallet portfolio holdings and PnL on Solana",
+    "stream real-time price or trade updates via WebSocket (paid tiers)",
+    "pull top traders, holders, or gainer/loser leaderboards for a token"
+  ],
+  "sources": [
+    "https://docs.birdeye.so/",
+    "https://docs.birdeye.so/reference/birdeye-api-getting-started",
+    "https://docs.birdeye.so/docs/authentication-api-keys",
+    "https://docs.birdeye.so/docs/pricing",
+    "https://docs.birdeye.so/docs/rate-limiting",
+    "https://docs.birdeye.so/docs/data-accessibility-by-packages",
+    "https://docs.birdeye.so/reference/get-defi-price",
+    "https://birdeye.so/data-api/pricing"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

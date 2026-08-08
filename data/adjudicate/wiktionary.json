@@ -1,0 +1,15 @@
+{
+  "id": "wiktionary",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Wikimedia etiquette: use descriptive User-Agent; maxlag; limit concurrency; no hard public RPS published \u2014 see API:Etiquette / bot policy",
+  "cors": "yes",
+  "example_request": "curl \"https://en.wiktionary.org/w/api.php?action=query&prop=extracts&titles=hello&format=json&explaintext=1\"",
+  "example_response_snippet": "{\"batchcomplete\":\"\",\"query\":{\"pages\":{\"12345\":{\"pageid\":12345,\"ns\":0,\"title\":\"hello\",\"extract\":\"hello\\n\\nInterjection\\n\\n1. A greeting...\"}}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Verifier B correct \u2014 \"not published\" understates Wikimedia API:Etiquette (User-Agent, maxlag, concurrency/bot policy); no single numeric RPS but guidelines exist. https://www.mediawiki.org/wiki/API:Etiquette | cors: Verifier B correct \u2014 MediaWiki documents CORS for anonymous GET with origin=* and Origin for auth. https://www.mediawiki.org/wiki/API:Cross-site_requests | example: Both verifiers correct \u2014 titles=dictionary returns missing on en.wiktionary; use an existing lemma (e.g. hello). Request shape valid."
+}

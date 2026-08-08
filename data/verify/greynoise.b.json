@@ -1,0 +1,52 @@
+{
+  "id": "greynoise",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.greynoise.io/docs/using-the-greynoise-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.greynoise.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.greynoise.io/reference/getcommunityip.md"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.greynoise.io/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Community free tier: up to 50 searches/week (Community API + Visualizer combined; business email required for API key). Unauthenticated: limited daily lookups (docs show ~10/day). Not a generic 'daily quota'.",
+      "source": "https://docs.greynoise.io/docs/using-the-greynoise-community-api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free Community accounts: 50 searches/week (not daily). Unauthenticated: daily IP lookup caps. Paid platform tiers: unlimited searches + Enterprise/GNQL API (plan-dependent).",
+      "source": "https://docs.greynoise.io/docs/using-the-greynoise-community-api"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.greynoise.io/docs/using-the-greynoise-community-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.greynoise.io/docs/using-the-greynoise-api"
+    }
+  },
+  "notes": "API live (GET /v3/community/8.8.8.8 works). Fail: free/rate limits misstate period\u2014free Community is 50 searches/week, not daily; only unauthenticated is daily. Auth is key header (apiKey); Bearer not in OpenAPI. OpenAPI server root is https://api.greynoise.io with /v3 paths. Pricing page is /plans."
+}

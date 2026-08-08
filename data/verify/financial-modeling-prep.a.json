@@ -1,0 +1,52 @@
+{
+  "id": "financial-modeling-prep",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://financialmodelingprep.com/stable",
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://site.financialmodelingprep.com/developer/docs/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "250 API calls/day on Free plan; legacy Stable Free still listed at 250/day",
+      "source": "https://site.financialmodelingprep.com/developer/docs/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published by plan (e.g. Free 250/day; Starter 300/min; Premium 750/min; Ultimate 3000/min) \u2014 see pricing page",
+      "source": "https://site.financialmodelingprep.com/developer/docs/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Prefer current stable path: curl \"https://financialmodelingprep.com/stable/quote?symbol=AAPL&apikey=YOUR_API_KEY\" (legacy /api/v3/quote/AAPL still documented as legacy)",
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    }
+  },
+  "notes": "FMP migrated primary docs to /stable; /api/v3 is legacy. Free tier and rate limits are published on pricing. CORS not documented."
+}

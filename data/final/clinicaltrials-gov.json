@@ -1,0 +1,97 @@
+{
+  "id": "clinicaltrials-gov",
+  "status": "operational",
+  "name": "ClinicalTrials.gov API",
+  "category": "government-open-data",
+  "tagline": "US government registry API for clinical study listings and results",
+  "description": "Official ClinicalTrials.gov REST API for searching and retrieving US clinical trial registry records, study protocols, eligibility criteria, locations, and posted results. Supports structured queries, field selection, and paging without requiring authentication.",
+  "base_url": "https://clinicaltrials.gov/api/v2",
+  "docs_url": "https://clinicaltrials.gov/data-api/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or OAuth required. Public HTTP GET endpoints; no signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no paid plans. Rate limit 50 requests/minute per IP (temporary; may change).",
+    "paid_plans": null
+  },
+  "rate_limits": "50 requests per minute per IP (temporary; may change).",
+  "example": {
+    "request": "curl -s 'https://clinicaltrials.gov/api/v2/studies?query.cond=diabetes&pageSize=1&format=json'",
+    "response_snippet": "{\"studies\":[{\"protocolSection\":{\"identificationModule\":{\"nctId\":\"NCT...\",\"briefTitle\":\"...\"}}}],\"nextPageToken\":\"...\"}"
+  },
+  "use_cases": [
+    "search clinical trials by condition or intervention",
+    "fetch a study record by NCT ID",
+    "list trial locations and contacts for a study",
+    "retrieve posted study results and outcome measures",
+    "filter open recruiting trials by location or phase"
+  ],
+  "sources": [
+    "https://clinicaltrials.gov/data-api/api",
+    "https://clinicaltrials.gov/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

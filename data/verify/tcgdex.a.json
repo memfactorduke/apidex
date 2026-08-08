@@ -1,0 +1,52 @@
+{
+  "id": "tcgdex",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.net/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/"
+    }
+  },
+  "notes": "Verified against official docs (tcgdex.dev) and site (tcgdex.net). Base URL, no-auth, free open API, and card example path all match. CORS and published free-tier/rate limits remain undocumented (entry correctly marks unknown/not published)."
+}

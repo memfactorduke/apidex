@@ -1,0 +1,92 @@
+{
+  "id": "meteoblue",
+  "status": "operational",
+  "name": "Meteoblue",
+  "category": "weather-environment",
+  "tagline": "High-resolution weather and climate APIs for science and industry",
+  "description": "Meteoblue provides high-resolution weather forecast, historical climate, and specialized meteorology APIs used by developers, researchers, and industry for location-based weather data, agriculture, energy, and environmental applications.",
+  "base_url": "https://my.meteoblue.com/packages",
+  "docs_url": "https://docs.meteoblue.com",
+  "signup_url": "https://www.meteoblue.com/en/weather/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free Weather API: 10M credits valid 1 year (~1,000\u20135,000 calls package-dependent); subset of forecast packages; max 1h resolution; commercial use allowed; more credits purchasable anytime",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://my.meteoblue.com/packages/basic-day?lat=47.5&lon=7.5&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "get current weather for a location",
+    "fetch multi-day forecast"
+  ],
+  "sources": [
+    "https://www.meteoblue.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

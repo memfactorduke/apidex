@@ -1,0 +1,52 @@
+{
+  "id": "trackingmore",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.trackingmore.com/v4",
+      "source": "https://www.trackingmore.com/api-docs"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.trackingmore.com/api-docs",
+      "source": "https://www.trackingmore.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.trackingmore.com/api-docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.trackingmore.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 100 trackings/month (verify current pricing page)",
+      "source": "https://www.trackingmore.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "GET /trackings/get path may be wrong; check current docs for correct endpoint",
+      "source": "https://www.trackingmore.com/api-docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.trackingmore.com"
+    }
+  },
+  "notes": "Automated checks returned 404 for base_url and docs_url; docs URL path appears wrong. Need live verification of all claims against official docs."
+}

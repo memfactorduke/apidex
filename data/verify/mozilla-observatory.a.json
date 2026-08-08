@@ -1,0 +1,52 @@
+{
+  "id": "mozilla-observatory",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Service appears discontinued/migrated; historical base was https://http-observatory.security.mozilla.org/api/v1 but live API returns 502 \u2014 verify current endpoint on observatory.mozilla.org / MDN docs",
+      "source": "https://http-observatory.security.mozilla.org/api/v1"
+    },
+    "docs_url": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/mozilla/http-observatory/blob/master/httpobs/docs/api.md"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://observatory.mozilla.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Endpoint may be dead (502); historical form was GET /api/v1/analyze?host=example.com",
+      "source": "https://http-observatory.security.mozilla.org/api/v1/analyze?host=example.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://observatory.mozilla.org/"
+    }
+  },
+  "notes": "Partial draft \u2014 verifying against official sources now."
+}

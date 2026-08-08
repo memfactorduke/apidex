@@ -1,0 +1,15 @@
+{
+  "id": "trakt",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "1000 GET requests / 5 minutes (app-level); authenticated users: 1 POST/PUT/DELETE per second; VIP higher; X-Ratelimit headers; 429 + Retry-After",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: ORIGINAL \"not published\" is incorrect. Official docs (https://trakt.docs.apiary.io/#introduction/rate-limiting) publish limits: 1000 GET/5min per app (VIP higher), authenticated write methods 1/sec, X-Ratelimit headers, 429 with Retry-After. Verifier A is closer; Verifier B inverted VIP vs non-VIP. Settled from current Apiary rate-limiting section."
+}

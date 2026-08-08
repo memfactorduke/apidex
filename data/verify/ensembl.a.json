@@ -1,0 +1,52 @@
+{
+  "id": "ensembl",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Ensembl/ensembl-rest/wiki"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ensembl.org/info/data/rest.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Ensembl/ensembl-rest/wiki/Rate-Limits"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Ensembl/ensembl-rest/wiki/Rate-Limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org/documentation/info/lookup"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ensembl.org/info/data/rest.html"
+    }
+  },
+  "notes": "Verified against official Ensembl REST docs and rate-limit wiki. Automated HTTP 0 is likely network/bot false positive; URLs and claims match current EMBL-EBI sources."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "mapquest",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mapquest.com/documentation/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mapquest.com/documentation/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mapquest.com/documentation/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mapquest.com/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mapquest.com/plans"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mapquest.com/documentation/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mapquest.com/documentation/geocoding-api/address/get/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mapquest.com/documentation/"
+    }
+  },
+  "notes": "Verified against developer.mapquest.com docs and plans. base_url, auth key query param, and geocoding example match official docs. free_tier true with unknown limits is conservative; rate_limits and cors correctly marked as unpublished/unknown."
+}

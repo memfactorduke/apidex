@@ -1,0 +1,52 @@
+{
+  "id": "taxjar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/#authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false",
+      "source": "https://www.taxjar.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/#get-show-tax-rates-for-a-location"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.taxjar.com/api/reference/"
+    }
+  },
+  "notes": "Docs confirm base_url, Bearer auth, rates endpoint. Free tier claim is wrong \u2014 TaxJar pricing is paid-only (Starter/Professional). Rate limits not published in docs. CORS unknown."
+}

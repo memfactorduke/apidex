@@ -1,0 +1,52 @@
+{
+  "id": "discourse",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discourse.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discourse.org/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://meta.discourse.org/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    }
+  },
+  "notes": "Verified against official Discourse docs 2026. base_url is a template (per-site), not a single host\u2014HTTP 0 is expected. Auth headers Api-Key/Api-Username confirmed. Self-hosted free; hosted plans include API. Rate limits per-instance. CORS unknown is correct for multi-tenant pattern."
+}

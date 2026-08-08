@@ -1,0 +1,99 @@
+{
+  "id": "carmd",
+  "status": "operational",
+  "name": "CarMD",
+  "category": "transportation",
+  "tagline": "Vehicle diagnostics and repair estimates from OBD codes",
+  "description": "CarMD API provides vehicle diagnostics and repair estimates based on OBD-II trouble codes. Developers can look up diagnostic trouble codes (DTCs), get repair cost estimates, vehicle information, and maintenance data for cars.",
+  "base_url": "https://api.carmd.com/v3.0",
+  "docs_url": "https://api.carmd.com/",
+  "signup_url": "https://www.carmd.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: YOUR_API_KEY\" \"https://api.carmd.com/v3.0/diag?code=P0420\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "decode OBD-II trouble codes for a vehicle",
+    "get repair cost estimates from diagnostic codes"
+  ],
+  "sources": [
+    "https://www.carmd.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": []
+  }
+}

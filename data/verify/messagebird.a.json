@@ -1,0 +1,52 @@
+{
+  "id": "messagebird",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.messagebird.com/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.messagebird.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.messagebird.com/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bird.com/en-us/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bird.com/en-us/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.bird.com/api/channels-api/rate-limit"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.messagebird.com/api/balance/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.messagebird.com/api"
+    }
+  },
+  "notes": "Docs and base URL respond HTTP 200. Auth AccessKey, balance example, and rate limits match official MessageBird/Bird docs. Free-tier wording is cautious (trial credits + Bird email 1k/mo); SMS allotment not clearly published. CORS remains unknown. Entry is operational for directory purposes."
+}

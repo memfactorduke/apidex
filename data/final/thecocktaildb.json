@@ -1,0 +1,98 @@
+{
+  "id": "thecocktaildb",
+  "status": "operational",
+  "name": "TheCocktailDB",
+  "category": "food-drink",
+  "tagline": "Free cocktail recipe API with drinks, ingredients, and images.",
+  "description": "TheCocktailDB is a public REST API for cocktail and drink recipes. It provides searchable data for drinks by name, ingredient, category, and glass type, plus full recipe details (ingredients, measures, instructions) and drink images. Developers use it for cocktail apps, recipe search, and menu builders. A free tier is available with an optional paid upgrade for higher limits and premium features.",
+  "base_url": "https://www.thecocktaildb.com/api/json/v1/1",
+  "docs_url": "https://www.thecocktaildb.com/api.php",
+  "signup_url": "https://www.thecocktaildb.com/api.php",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key in URL path (e.g. /api/json/v1/{API_KEY}/). Free test key \"1\" works for development; paid keys via Patreon."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free test key \"1\" for development/educational use; production/public app-store use requires Premium (~$10/\u00a310 one-off via PayPal). Free list capped at 100 items; Premium unlocks multi-ingredient filter, popular/latest, full DB listing, image APIs. (Current docs use PayPal Premium, not Patreon.)",
+    "paid_plans": "Patreon-supported premium API key for higher access and premium features."
+  },
+  "rate_limits": "Official FAQ: no limits / unlimited usage (no numeric req/min published).",
+  "example": {
+    "request": "curl \"https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita\"",
+    "response_snippet": "{\"drinks\":[{\"idDrink\":\"11007\",\"strDrink\":\"Margarita\",\"strCategory\":\"Ordinary Drink\",\"strAlcoholic\":\"Alcoholic\",\"strGlass\":\"Cocktail glass\",\"strInstructions\":\"Rub the rim of the glass with the lime slice...\",\"strIngredient1\":\"Tequila\",\"strMeasure1\":\"1 1/2 oz \"}]}"
+  },
+  "use_cases": [
+    "search cocktails by name",
+    "look up recipe by drink ID",
+    "list drinks by ingredient",
+    "filter cocktails by category or glass",
+    "get random cocktail suggestion",
+    "fetch drink images for a recipe UI"
+  ],
+  "sources": [
+    "https://www.thecocktaildb.com/api.php",
+    "https://www.thecocktaildb.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

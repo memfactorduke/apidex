@@ -1,0 +1,97 @@
+{
+  "id": "collegefootballdata",
+  "status": "operational",
+  "name": "CollegeFootballData",
+  "category": "sports",
+  "tagline": "Comprehensive NCAA football stats, recruiting, and play-by-play data",
+  "description": "CollegeFootballData provides free access to comprehensive NCAA college football statistics including games, teams, recruiting, play-by-play, ratings, and more. Self-serve API key authentication with extensive historical and current season coverage for developers building college football applications.",
+  "base_url": "https://api.collegefootballdata.com",
+  "docs_url": "https://api.collegefootballdata.com/api/docs/",
+  "signup_url": "https://collegefootballdata.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Bearer token or Authorization header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.collegefootballdata.com/teams\"",
+    "response_snippet": "[{\"id\": 333, \"school\": \"Alabama\", \"mascot\": \"Crimson Tide\", \"abbreviation\": \"ALA\", \"conference\": \"SEC\"}]"
+  },
+  "use_cases": [
+    "get NCAA football team roster and stats for a season",
+    "fetch game scores and schedules by week or team",
+    "pull recruiting rankings and player commitments",
+    "retrieve play-by-play data for a specific game",
+    "get advanced team metrics and SP+ ratings"
+  ],
+  "sources": [
+    "https://collegefootballdata.com/",
+    "https://api.collegefootballdata.com/api/docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

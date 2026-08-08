@@ -1,0 +1,52 @@
+{
+  "id": "grafana-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://grafana.com/docs/grafana-cloud/developer-resources/api-reference/cloud-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://grafana.com/docs/grafana-cloud/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://grafana.com/docs/grafana-cloud/developer-resources/api-reference/cloud-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://grafana.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free Forever plan: e.g. 10k series Prometheus metrics, 50 GB logs, 50 GB traces, 3 users (limits change; see pricing)",
+      "source": "https://grafana.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Cloud API documents rate limiting (e.g. 429 responses); not simply 'not published' \u2014 check Cloud API docs for current limits",
+      "source": "https://grafana.com/docs/grafana-cloud/developer-resources/api-reference/cloud-api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Correct list-orgs style call uses GET https://grafana.com/api/orgs with Authorization: Bearer <access policy token>; response shape is typically a JSON array of orgs, not {\"orgs\":[]}",
+      "source": "https://grafana.com/docs/grafana-cloud/developer-resources/api-reference/cloud-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://grafana.com/docs/grafana-cloud/developer-resources/api-reference/cloud-api/"
+    }
+  },
+  "notes": "Main issues: free_tier_limits is knowable from grafana.com/pricing (not unknown); rate limits are documented at least as 429 behavior; example response_snippet is likely wrong shape. base_url https://grafana.com/api and Bearer access-policy auth match Cloud API docs."
+}

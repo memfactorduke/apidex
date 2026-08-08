@@ -1,0 +1,102 @@
+{
+  "id": "usgs-water",
+  "status": "operational",
+  "name": "USGS Water Services",
+  "category": "weather-environment",
+  "tagline": "Real-time and historical streamflow, groundwater, and water quality data from the U.S. Geological Survey.",
+  "description": "USGS Water Services provides free public REST APIs for real-time and historical hydrologic data, including streamflow, groundwater levels, water quality, and site metadata. Core services include Instantaneous Values (IV), Daily Values (DV), Site Service, and Groundwater Levels, with JSON, WaterML, and RDB formats. No API key is required for standard public access; rate limits apply for fair use. Data covers thousands of monitoring stations across the United States.",
+  "base_url": "https://waterservices.usgs.gov/nwis",
+  "docs_url": "https://waterservices.usgs.gov/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public access. Requests are unauthenticated HTTPS GETs; no API key, OAuth, or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "text",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public service; no paid plans. Fair-use rate limits apply (see rate_limits).",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as fixed numeric quotas; USGS requests responsible use and may throttle heavy automated traffic. Check current service notices.",
+  "example": {
+    "request": "curl -s \"https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01646500&parameterCd=00060,00065\"",
+    "response_snippet": "{\"name\":\"ns1:timeSeriesResponseType\",\"declaredType\":\"org.cuahsi.waterml.TimeSeriesResponseType\",\"value\":{\"queryInfo\":{\"queryURL\":\"...\",\"criteria\":{\"locationParam\":\"[ALL:01646500]\",\"variableParam\":\"[00060,00065]\"},\"note\":[{\"value\":\"all\",\"title\":\"filter:sites\"}]},\"timeSeries\":[{\"sourceInfo\":{\"siteName\":\"POTOMAC RIVER NEAR WASH, DC LITTLE FALLS PUMP STA\",\"siteCode\":[{\"value\":\"01646500\",\"network\":\"NWIS\",\"agencyCode\":\"USGS\"}]},\"variable\":{\"variableCode\":[{\"value\":\"00060\",\"network\":\"NWIS\",\"vocabulary\":\"NWIS:UnitValues\",\"variableID\":45807197,\"default\":true}],\"variableName\":\"Streamflow, ft\u00b3/s\"},\"values\":[{\"value\":[{\"value\":\"12500\",\"qualifiers\":[\"P\"],\"dateTime\":\"2026-08-08T12:00:00.000-04:00\"}]}]}}"
+  },
+  "use_cases": [
+    "get real-time streamflow and gage height for a USGS site",
+    "fetch daily mean discharge for a date range",
+    "look up monitoring site metadata by state or bounding box",
+    "retrieve groundwater level time series for a well",
+    "pull multi-parameter instantaneous values as JSON for dashboards"
+  ],
+  "sources": [
+    "https://waterservices.usgs.gov/",
+    "https://waterservices.usgs.gov/rest/IV-Service.html",
+    "https://waterservices.usgs.gov/rest/DV-Service.html",
+    "https://waterservices.usgs.gov/rest/Site-Service.html",
+    "https://www.usgs.gov/products/data-and-tools/real-time-data/water"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

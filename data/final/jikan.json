@@ -1,0 +1,99 @@
+{
+  "id": "jikan",
+  "status": "operational",
+  "name": "Jikan",
+  "category": "entertainment",
+  "tagline": "Unofficial MyAnimeList API for anime and manga data",
+  "description": "Jikan is a free, unofficial REST API that provides access to MyAnimeList data including anime, manga, characters, people, clubs, and user profiles. It scrapes and caches MAL content so developers can build anime apps without official MAL API access. Public endpoints require no authentication.",
+  "base_url": "https://api.jikan.moe/v4",
+  "docs_url": "https://docs.api.jikan.moe/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public REST API. Rate limits apply per IP. Optional paid/higher-tier hosting may exist via third parties; core service is free and keyless."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "60 requests/minute, 3 requests/second (per IP)",
+    "paid_plans": null
+  },
+  "rate_limits": "60 requests/minute, 3 requests/second (per IP)",
+  "example": {
+    "request": "curl -s \"https://api.jikan.moe/v4/anime/1\"",
+    "response_snippet": "{\"data\":{\"mal_id\":1,\"url\":\"https://myanimelist.net/anime/1/Cowboy_Bebop\",\"images\":{\"jpg\":{\"image_url\":\"...\"}},\"title\":\"Cowboy Bebop\",\"type\":\"TV\",\"episodes\":26,\"status\":\"Finished Airing\",\"score\":8.75}}"
+  },
+  "use_cases": [
+    "get anime details by MyAnimeList ID",
+    "search anime by title or genre",
+    "fetch manga information and rankings",
+    "get character and voice actor data",
+    "look up seasonal anime schedules"
+  ],
+  "sources": [
+    "https://jikan.moe",
+    "https://docs.api.jikan.moe/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

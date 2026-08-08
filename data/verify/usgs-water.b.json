@@ -1,0 +1,44 @@
+{
+  "id": "usgs-water",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://waterservices.usgs.gov/nwis",
+      "source": "https://waterservices.usgs.gov/rest/IV-Service.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://waterservices.usgs.gov/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://waterservices.usgs.gov/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://waterservices.usgs.gov/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "source": "https://waterservices.usgs.gov/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "source": "https://waterservices.usgs.gov/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "source": "https://waterservices.usgs.gov/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://waterservices.usgs.gov/rest/IV-Service.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://waterservices.usgs.gov/"
+    }
+  },
+  "notes": "Verified against official USGS Water Services docs (2026). All core claims hold: base URL, no-auth public access, free service with fair-use throttling, IV example path/params match current IV service docs. CORS remains undocumented \u2192 \u201cunknown\u201d is correct. No shutdown or paid-plan notices found."
+}

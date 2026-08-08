@@ -1,0 +1,15 @@
+{
+  "id": "fingerprint",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "20,000 free API calls per month (Free plan; verify current pricing/dashboard)",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s 'https://api.fpjs.io/events/REQUEST_ID' -H 'Auth-API-Key: YOUR_SECRET_API_KEY'",
+  "example_response_snippet": "{\"products\":{\"identification\":{\"data\":{\"visitorId\":\"...\",\"requestId\":\"...\",\"browserDetails\":{...},\"incognito\":false,\"ip\":\"...\",\"timestamp\":...}}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B correct \u2014 pricing page documents Free plan with 20k free API calls/month (https://fingerprint.com/pricing/). example: Verifier B correct \u2014 bare root URL is invalid; Server API uses paths such as GET /events/{request_id} with Auth-API-Key (https://dev.fingerprint.com/docs/server-api)."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "mozilla-observatory",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://observatory-api.mdn.mozilla.net/api/v2 (legacy http-observatory host returns 502; MDN Observatory /v2 is the current public API)",
+      "source": "https://developer.mozilla.org/en-US/observatory"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://github.com/mdn/mdn-http-observatory/blob/main/src/api/v2/README.md (and/or MDN Observatory docs); legacy mozilla/http-observatory API docs are outdated",
+      "source": "https://github.com/mdn/mdn-http-observatory"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/mdn/mdn-http-observatory/blob/main/src/api/v2/README.md"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mozilla.org/en-US/observatory"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s -X POST \"https://observatory-api.mdn.mozilla.net/api/v2/scan?host=example.com\" (legacy GET /api/v1/analyze on http-observatory.security.mozilla.org is dead/deprecated)",
+      "source": "https://github.com/mdn/mdn-http-observatory/blob/main/src/api/v2/README.md"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.mozilla.org/en-US/observatory"
+    }
+  },
+  "notes": "Legacy base URL returns 502; API moved to MDN Observatory v2. Auth still none; free/public. Rate limits still not clearly published. CORS not verified."
+}

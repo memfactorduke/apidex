@@ -1,0 +1,52 @@
+{
+  "id": "massive",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.polygon.io",
+      "source": "https://polygon.io/docs/rest/quickstart"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://polygon.io/docs",
+      "source": "https://polygon.io/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://polygon.io/docs/rest/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://polygon.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "5 API calls per minute on free tier",
+      "source": "https://polygon.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 5 calls/min; paid plans have higher limits (varies by plan)",
+      "source": "https://polygon.io/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.polygon.io/v2/aggs/ticker/AAPL/prev?apiKey=YOUR_API_KEY\"",
+      "source": "https://polygon.io/docs/rest/stocks/aggregates/previous-day"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://polygon.io"
+    }
+  },
+  "notes": "Polygon rebranded/linked to Massive branding needs verification. Entry base_url api.massive.com and docs massive.com appear wrong vs live polygon.io endpoints; free-tier rate limits are published."
+}

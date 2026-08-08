@@ -1,0 +1,99 @@
+{
+  "id": "deck-of-cards",
+  "status": "operational",
+  "name": "Deck of Cards API",
+  "category": "games-comics",
+  "tagline": "Free HTTP API to shuffle, draw, and pile standard playing cards",
+  "description": "A simple, free public API for creating, shuffling, drawing, and organizing standard 52-card decks (with optional jokers). Supports multi-deck shoes, named piles, and remaining-card tracking\u2014ideal for browser or server game prototypes without auth or billing.",
+  "base_url": "https://deckofcardsapi.com/api",
+  "docs_url": "https://deckofcardsapi.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Endpoints are publicly accessible over HTTPS with no API key or signup."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Entirely free; no published request quota or paid plans",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1\"",
+    "response_snippet": "{\"success\":true,\"deck_id\":\"3p40paa87x90\",\"shuffled\":true,\"remaining\":52}"
+  },
+  "use_cases": [
+    "shuffle a new multi-deck shoe for a card game prototype",
+    "draw N cards from a deck and track remaining count",
+    "move drawn cards into named piles for hands or discard",
+    "reshuffle remaining cards mid-game without losing pile state",
+    "add jokers to a deck for games that need them",
+    "return cards from a pile back into the deck"
+  ],
+  "sources": [
+    "https://deckofcardsapi.com/",
+    "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1",
+    "https://github.com/deckofcardsapi/deckofcards"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

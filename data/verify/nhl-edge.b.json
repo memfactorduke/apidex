@@ -1,0 +1,52 @@
+{
+  "id": "nhl-edge",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-web.nhle.com/v1/scoreboard/now"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-web.nhle.com/v1/scoreboard/now"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    }
+  },
+  "notes": "Live scoreboard endpoint works unauthenticated. Community docs (Zmalski, dword4) remain primary; no official NHL developer portal or published quotas. CORS not verified from browser. Response shape matches entry pattern; exact game IDs in snippet are illustrative."
+}

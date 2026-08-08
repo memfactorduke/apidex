@@ -1,0 +1,52 @@
+{
+  "id": "ipgeolocation-io",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipgeolocation.io/documentation/ip-geolocation-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipgeolocation.io/documentation.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipgeolocation.io/documentation/ip-geolocation-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipgeolocation.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 requests/month (Free plan); daily/monthly limits vary by plan",
+      "source": "https://ipgeolocation.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published per plan on pricing; Free includes monthly request caps",
+      "source": "https://ipgeolocation.io/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipgeolocation.io/documentation/ip-geolocation-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipgeolocation.io"
+    }
+  },
+  "notes": "Verified against official docs and pricing. Free tier and request caps are published; CORS not clearly documented."
+}

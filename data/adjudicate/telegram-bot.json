@@ -1,0 +1,15 @@
+{
+  "id": "telegram-bot",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free unlimited API use (no call quotas or monthly fees). Free messaging subject to rate limits: ~1 msg/sec per private chat, 20 msg/min per group. Bulk free broadcast throughput and paid Stars broadcast rates are separate (see rate_limits).",
+  "rate_limits": "FAQ: ~1 message/sec per private chat; \u226420 messages/min per group; 429 on excess. Free bulk broadcast about 30 msg/sec; paid broadcasts (BotFather/Stars) can go higher when eligible. Other method limits not fully published.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Official HTTP interface for Telegram bots: send and receive messages, media, keyboards, payments, Mini Apps, and updates via long polling or webhooks. Auth is a bot token from @BotFather placed in the request URL. The cloud API is free of charge; messaging is rate-limited, with optional paid higher-throughput broadcasts via Telegram Stars where offered.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: partial correct\u2014keep free API + private/group FAQ limits; drop treating ~30/sec and paid Stars as free-tier (FAQ https://core.telegram.org/bots/faq). rate_limits: keep FAQ private/group + 429; bulk ~30/sec and paid broadcast are real but document as broadcast tiers not pure free-tier (FAQ + BotFather). description: softens paid Stars throughput claim while keeping free API + token-in-URL + long poll/webhook (https://core.telegram.org/bots/api, https://core.telegram.org/bots/faq)."
+}

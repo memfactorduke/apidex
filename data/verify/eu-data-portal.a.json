@@ -1,0 +1,52 @@
+{
+  "id": "eu-data-portal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.europa.eu/api/hub/search",
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.europa.eu/en/data/api",
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.europa.eu/en/data/api"
+    }
+  },
+  "notes": "Entry fails: base_url and docs_url 404. Correct docs at data.europa.eu/en/data/api; Search API root is /api/hub/search. Auth none/free open data confirmed. Rate limits not published."
+}

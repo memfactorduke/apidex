@@ -1,0 +1,15 @@
+{
+  "id": "workos",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "AuthKit/User Management: first 1M MAUs free (then $2,500/mo per additional 1M MAUs). Radar: first 1,000 checks free. Staging free. SSO & Directory Sync paid per connection from #1 (no free connections).",
+  "rate_limits": "Published: general 6,000 req/60s per API key; AuthKit reads 1,000/10s and writes 500/10s on /user_management/*; plus endpoint-specific limits (SSO authorize 1,000/60s per connection, directory users 4/s per directory).",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: ORIGINAL 'unknown' incorrect; Verifier B correct. Official pricing (workos.com/pricing, 2026): AuthKit first 1M MAUs free then $2,500/mo per extra 1M; Radar first 1k checks free; staging free; SSO/Directory Sync from connection #1. rate_limits: ORIGINAL 'not published' incorrect; Verifier B correct. Official docs (workos.com/docs/reference/rate-limits) publish general 6k/60s, AuthKit 1k/10s reads & 500/10s writes, and endpoint-specific limits."
+}

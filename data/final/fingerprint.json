@@ -1,0 +1,94 @@
+{
+  "id": "fingerprint",
+  "status": "operational",
+  "name": "Fingerprint",
+  "category": "security-identity",
+  "tagline": "Device fingerprinting and bot detection for fraud prevention",
+  "description": "Server-side and client identification APIs that recognize returning browsers and devices, detect bots, and score suspicious activity for fraud prevention and account security.",
+  "base_url": "https://api.fpjs.io",
+  "docs_url": "https://dev.fingerprint.com/docs",
+  "signup_url": "https://dashboard.fingerprint.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header or query param; public key for client, secret for server"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "20,000 free API calls per month (Free plan; verify current pricing/dashboard)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://api.fpjs.io/events/REQUEST_ID' -H 'Auth-API-Key: YOUR_SECRET_API_KEY'",
+    "response_snippet": "{\"products\":{\"identification\":{\"data\":{\"visitorId\":\"...\",\"requestId\":\"...\",\"browserDetails\":{...},\"incognito\":false,\"ip\":\"...\",\"timestamp\":...}}}}"
+  },
+  "use_cases": [
+    "identify returning browsers for fraud prevention",
+    "detect automated bot traffic on signup"
+  ],
+  "sources": [
+    "https://fingerprint.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

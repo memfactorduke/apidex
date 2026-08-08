@@ -1,0 +1,52 @@
+{
+  "id": "openalex",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openalex.org/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 100k calls/day, 10 req/s; Premium: 1M/day, 100 req/s; Enterprise: custom. Soft-limit polite-pool without key still exists but paid tiers have published quotas.",
+      "source": "https://openalex.org/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 100,000 calls/day and 10 requests/second. Premium: 1,000,000/day and 100 req/s. Without API key / polite pool: lower limits apply.",
+      "source": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org/api-entities/works/get-a-single-work"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org/"
+    }
+  },
+  "notes": "Free tier and rate limits are published (not unknown/not published). Auth none + optional email still correct; API key now also used for higher paid tiers."
+}

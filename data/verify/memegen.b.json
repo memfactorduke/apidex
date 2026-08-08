@@ -1,0 +1,52 @@
+{
+  "id": "memegen",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/jacebrowning/memegen"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link/"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.memegen.link/images/buzz/memes/memes_everywhere.png\"",
+      "source": "https://api.memegen.link/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The description is research placeholder text, not a product description of the API. Accurate description: free open-source API to generate meme images from templates and custom text.",
+      "source": "https://github.com/jacebrowning/memegen"
+    }
+  },
+  "notes": "Entry is a research stub: description is meta placeholder; example curl hits root with pending response; formats omit image outputs. Core facts (base URL, no auth, free) hold. CORS not verified via live OPTIONS."
+}

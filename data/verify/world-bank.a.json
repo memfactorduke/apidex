@@ -1,0 +1,52 @@
+{
+  "id": "world-bank",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.worldbank.org/v2",
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/898614-developer-information-overview"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json\"",
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/898599-api-basic-call-structure"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Free, no-auth World Bank Indicators API for development indicators (JSON/XML). Base: https://api.worldbank.org/v2",
+      "source": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation"
+    }
+  },
+  "notes": "Entry is a research stub: base_url missing /v2; example/description are placeholders. Auth none and free tier confirmed via official docs. Rate limits and CORS not published (unknown/not published OK)."
+}

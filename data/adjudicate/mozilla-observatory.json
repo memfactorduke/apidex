@@ -1,0 +1,15 @@
+{
+  "id": "mozilla-observatory",
+  "base_url": "https://observatory-api.mdn.mozilla.net/api/v2",
+  "docs_url": "https://github.com/mdn/mdn-http-observatory/blob/main/src/api/v2/README.md",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s -X POST \"https://observatory-api.mdn.mozilla.net/api/v2/scan?host=example.com\"",
+  "example_response_snippet": "{\"id\":...,\"details_url\":\"https://developer.mozilla.org/en-US/observatory/analyze?host=example.com\",\"algorithm_version\":4,\"scanned_at\":\"...\",\"error\":null,\"grade\":\"B\",\"score\":70,\"status_code\":200,\"tests_failed\":2,\"tests_passed\":8,\"tests_quantity\":10}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: INCORRECT original. Legacy https://http-observatory.security.mozilla.org/api/v1 returns HTTP 502 (confirmed by automated check + Verifier A/B). Current public API is MDN Observatory at https://observatory-api.mdn.mozilla.net/api/v2 (MDN Observatory page developer.mozilla.org/en-US/observatory; Verifier B). docs_url: INCORRECT original. Legacy mozilla/http-observatory api.md is outdated for the live service; current API docs are https://github.com/mdn/mdn-http-observatory/blob/main/src/api/v2/README.md (mdn/mdn-http-observatory). example: INCORRECT original. Legacy GET /api/v1/analyze on the dead host fails; current form is POST /api/v2/scan?host=... on observatory-api.mdn.mozilla.net (same README). status: keep operational \u2014 MDN Observatory API is the active successor, not defunct. Undisputed fields (auth none, free tier, limits, cors, description) confirmed by both verifiers; left null."
+}

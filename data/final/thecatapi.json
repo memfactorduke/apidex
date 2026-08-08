@@ -1,0 +1,94 @@
+{
+  "id": "thecatapi",
+  "status": "operational",
+  "name": "The Cat API",
+  "category": "fun-novelty",
+  "tagline": "Cat images, breeds, and favourites for demos and apps.",
+  "description": "Public API for cat images and breed data with favourites and a free tier.",
+  "base_url": "https://api.thecatapi.com/v1",
+  "docs_url": "https://developers.thecatapi.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Researching..."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "10,000 requests/month on free tier (see pricing)",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: ~10,000 req/month; higher tiers on paid plans (see pricing)",
+  "example": {
+    "request": "curl -H \"x-api-key: YOUR_API_KEY\" \"https://api.thecatapi.com/v1/images/search\"",
+    "response_snippet": "[{\"id\":\"abc\",\"url\":\"https://cdn2.thecatapi.com/images/abc.jpg\",\"width\":1200,\"height\":800}]"
+  },
+  "use_cases": [
+    "get random cat image",
+    "list cat breeds"
+  ],
+  "sources": [
+    "https://thecatapi.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

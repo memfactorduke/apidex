@@ -1,0 +1,15 @@
+{
+  "id": "data-world",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.data.world/v0/search?q=climate\"",
+  "example_response_snippet": "{\"count\":1,\"records\":[{\"type\":\"dataset\",\"id\":\"climate-change\",\"owner\":\"example\",\"title\":\"Climate Data\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: INCORRECT as original. Verifier B correct \u2014 search is GET https://api.data.world/v0/search?q=... not /v0/datasets/search (docs.data.world/api/ OpenAPI). Verifier A wrongly confirmed the path. All other fields undisputed/confirmed; null = keep original."
+}

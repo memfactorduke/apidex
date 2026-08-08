@@ -1,0 +1,52 @@
+{
+  "id": "openrouter",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouter.ai/docs/api-reference/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouter.ai/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouter.ai/docs/api/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouter.ai/docs/guides/overview/models"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouter.ai/docs/guides/overview/models"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouter.ai/docs/api-reference/limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouter.ai/docs/quickstart"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouter.ai/docs"
+    }
+  },
+  "notes": "Verified against official OpenRouter docs (2026). Base URL, auth (Bearer API key), free models, and chat/completions example match docs. Rate limits page exists but limits are account/model-dependent ('not published' as a single fixed number is fair). CORS not stated in docs."
+}

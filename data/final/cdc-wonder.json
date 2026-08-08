@@ -1,0 +1,100 @@
+{
+  "id": "cdc-wonder",
+  "status": "operational",
+  "name": "CDC WONDER",
+  "category": "health-fitness",
+  "tagline": "CDC epidemiology query API for mortality, natality, and other public health datasets",
+  "description": "CDC WONDER (Wide-ranging Online Data for Epidemiologic Research) provides access to CDC public health datasets\u2014including mortality, natality, cancer, and environmental data\u2014via a web-based query system and SOAP/XML API. Developers can submit structured requests to retrieve aggregated statistical tables for research, surveillance, and health analytics.",
+  "base_url": "https://wonder.cdc.gov/controller/datarequest/",
+  "docs_url": "https://wonder.cdc.gov/wonder/help/WONDER-API.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required for public WONDER datasets; requests are unauthenticated SOAP/XML POSTs to dataset-specific endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no paid plans. Usage subject to fair-use / automated query limits (not a published free-tier quota).",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as fixed req/day; CDC restricts automated bulk querying and may block excessive use",
+  "example": {
+    "request": "curl -X POST 'https://wonder.cdc.gov/controller/datarequest/D76' -H 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'request_xml=<request-parameters>...</request-parameters>' --data-urlencode 'accept_datause_restrictions=true'",
+    "response_snippet": "<?xml version=\"1.0\"?><response><data-table>...</data-table><response-code>200</response-code></response>"
+  },
+  "use_cases": [
+    "query US mortality rates by cause of death and geography",
+    "retrieve natality statistics by state and year",
+    "export CDC cancer incidence aggregates for a county",
+    "pull environmental or vaccine-related public health tables",
+    "build epidemiology dashboards from official CDC aggregates"
+  ],
+  "sources": [
+    "https://wonder.cdc.gov/wonder/help/WONDER-API.html",
+    "https://wonder.cdc.gov/",
+    "https://wonder.cdc.gov/wonder/help/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

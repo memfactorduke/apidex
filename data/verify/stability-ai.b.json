@@ -1,0 +1,52 @@
+{
+  "id": "stability-ai",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://platform.stability.ai/docs/api-reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://platform.stability.ai/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://platform.stability.ai/docs/getting-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://platform.stability.ai/docs/getting-started/credits-and-billing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://platform.stability.ai/docs/getting-started/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://platform.stability.ai/docs/api-reference#tag/Generate/paths/~1v2beta~1stable-image~1generate~1core/post"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://platform.stability.ai/docs"
+    }
+  },
+  "notes": "Verified against official Stability platform docs. All key claims held: api.stability.ai base URL, Bearer API key auth, v2beta generate/core example, no free tier (credits-based), rate limits not prominently published. CORS left unknown."
+}

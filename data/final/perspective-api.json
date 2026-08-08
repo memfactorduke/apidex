@@ -1,0 +1,99 @@
+{
+  "id": "perspective-api",
+  "status": "operational",
+  "name": "Perspective API",
+  "category": "ai-ml",
+  "tagline": "Toxicity and abuse scoring for online comments via ML models",
+  "description": "Google's Perspective API scores text for toxicity, severe toxicity, insult, threat, identity attack, and related attributes using machine learning models trained for content moderation. Developers send comment text and receive attribute probability scores for filtering, ranking, or flagging user-generated content.",
+  "base_url": "https://commentanalyzer.googleapis.com/v1alpha1",
+  "docs_url": "https://developers.perspectiveapi.com/s/docs",
+  "signup_url": "https://developers.perspectiveapi.com/s/docs-get-started",
+  "auth": {
+    "type": "apiKey",
+    "details": "Google Cloud API key as query parameter key=YOUR_API_KEY; enable the Perspective Comment Analyzer API in Google Cloud Console"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1 QPS free by default; higher free quotas available on request (see docs)",
+    "paid_plans": "Contact for higher quotas; primarily free with request-based quota increases"
+  },
+  "rate_limits": "Default 1 query per second (QPS); higher limits available via quota request",
+  "example": {
+    "request": "curl -X POST 'https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"comment\":{\"text\":\"This is a test comment\"},\"languages\":[\"en\"],\"requestedAttributes\":{\"TOXICITY\":{}}}'",
+    "response_snippet": "{\"attributeScores\":{\"TOXICITY\":{\"summaryScore\":{\"value\":0.05,\"type\":\"PROBABILITY\"},\"spanScores\":[{\"begin\":0,\"end\":22,\"score\":{\"value\":0.05,\"type\":\"PROBABILITY\"}}]}},\"languages\":[\"en\"],\"detectedLanguages\":[\"en\"]}"
+  },
+  "use_cases": [
+    "score comment toxicity for moderation queues",
+    "flag identity attacks or threats in user posts",
+    "filter toxic chat messages before display",
+    "rank forum comments by toxicity score",
+    "batch-analyze UGC for community health dashboards"
+  ],
+  "sources": [
+    "https://developers.perspectiveapi.com/s/docs",
+    "https://developers.perspectiveapi.com/s/docs-get-started",
+    "https://developers.perspectiveapi.com/s/docs-sample-requests",
+    "https://support.perspectiveapi.com/s/docs-enable-the-api"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

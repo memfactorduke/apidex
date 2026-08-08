@@ -1,0 +1,52 @@
+{
+  "id": "google-news-rss",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://news.google.com/rss"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.newscatcherapi.com/blog-posts/google-news-rss-search-parameters-the-missing-documentaiton"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://news.google.com/rss"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://news.google.com/rss"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.google.com/webmasters/thread/9479430/how-many-request-per-day-allow-to-call-https-news-google-com-rss-search-q-search-keyword?hl=en"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.google.com/webmasters/thread/9479430/how-many-request-per-day-allow-to-call-https-news-google-com-rss-search-q-search-keyword?hl=en"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://news.google.com/rss"
+    }
+  },
+  "notes": "Adversarial check: endpoint live; no official API; docs are community; rate limits unpublished. CORS not measured from server headers in this pass \u2014 left as claimed unknown."
+}

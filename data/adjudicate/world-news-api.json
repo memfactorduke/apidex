@@ -1,0 +1,15 @@
+{
+  "id": "world-news-api",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free: 50 points/day (then no more calls until midnight UTC reset); 1-month history; backlink required. Points \u2260 1:1 requests (typical call costs ~1 point + 0.01/result).",
+  "rate_limits": "Published by plan. Free: 60 req/min, 1 concurrent; Reporter: 2 req/s, 5 concurrent; Journalist: 10 req/s, 10 concurrent; Editor: 20 req/s, 10 concurrent. Daily point quotas on pricing.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: ORIGINAL 'unknown' incorrect. Official pricing (https://worldnewsapi.com/pricing/) lists Free at 50 points/day, then no more calls; Verifier B mostly right but unit is points not requests. rate_limits: ORIGINAL 'not published' incorrect. Docs (https://worldnewsapi.com/docs/quotas-and-rate-limiting/) publish per-plan req/min-or-s and concurrency; pricing also shows req/s and concurrent caps."
+}

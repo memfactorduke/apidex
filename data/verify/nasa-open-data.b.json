@@ -1,0 +1,52 @@
+{
+  "id": "nasa-open-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.nasa.gov/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.nasa.gov/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.nasa.gov/assets/html/authentication.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.nasa.gov/assets/html/authentication.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.nasa.gov/assets/html/authentication.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.nasa.gov/assets/html/authentication.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: * on api.nasa.gov responses)",
+      "source": "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.nasa.gov/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Gateway still offers free api_key access to many NASA APIs (APOD, NeoWs, EPIC, GIBS, Image Library, etc.), but official banner states the Earth API is archived (replaced by Earthdata GIBS) and the Mars Rover Photos API is archived (repo archived Oct 2025). Do not claim Mars rover photos or the old Landsat Earth imagery API as current endpoints.",
+      "source": "https://api.nasa.gov/"
+    }
+  },
+  "notes": "Main failure: outdated capability claims. api.nasa.gov header warns Earth API + Mars Rover API archived; catalog lists 16 APIs with no Mars Rover Photos. Live CORS is open (*), not unknown. Rate limits match auth docs."
+}

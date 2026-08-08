@@ -1,0 +1,97 @@
+{
+  "id": "semantic-scholar",
+  "status": "operational",
+  "name": "Semantic Scholar",
+  "category": "data-analytics",
+  "tagline": "Academic paper search and citation graph API",
+  "description": "Semantic Scholar provides a free academic knowledge graph API for searching papers, authors, citations, and related research. It powers paper discovery, citation analysis, and scholarly metadata access across science and technology domains.",
+  "base_url": "https://api.semanticscholar.org",
+  "docs_url": "https://api.semanticscholar.org/api-docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via x-api-key header; unauthenticated access allowed with lower rate limits"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Shared free tier: unauthenticated ~100 requests/5 min (~1 RPS); free API key increases shared-pool limits; partner/higher tiers via application",
+    "paid_plans": null
+  },
+  "rate_limits": "Unauthenticated: ~100 requests per 5 minutes. With free API key: higher shared rate limits (product page historically ~1 RPS unauth emphasis; partners get higher limits). Exact shared-pool caps may vary.",
+  "example": {
+    "request": "curl -H \"x-api-key: YOUR_API_KEY\" \"https://api.semanticscholar.org/graph/v1/paper/search?query=attention+is+all+you+need&limit=1\"",
+    "response_snippet": "{\"total\":1,\"offset\":0,\"data\":[{\"paperId\":\"...\",\"title\":\"Attention Is All You Need\"}]}"
+  },
+  "use_cases": [
+    "search academic papers by keyword",
+    "fetch citation graph for a paper",
+    "look up author publication history",
+    "get paper abstracts and metadata"
+  ],
+  "sources": [
+    "https://api.semanticscholar.org/api-docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

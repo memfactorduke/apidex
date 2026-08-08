@@ -1,0 +1,99 @@
+{
+  "id": "pagerduty",
+  "status": "operational",
+  "name": "PagerDuty API",
+  "category": "dev-tools",
+  "tagline": "REST API for incidents, services, schedules, and on-call automation",
+  "description": "PagerDuty provides a REST API for managing incidents, services, escalation policies, schedules, and users. Developers use it to open and resolve incidents, query on-call rotations, automate response workflows, and integrate alerting into custom tooling and CI/CD systems.",
+  "base_url": "https://api.pagerduty.com",
+  "docs_url": "https://developer.pagerduty.com/docs",
+  "signup_url": "https://www.pagerduty.com/sign-up/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key or OAuth 2.0 access token via Authorization: Token token=YOUR_API_KEY (or Bearer for OAuth). From-Token header often required for user context."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan available for small teams; API rate limits apply separately (see rate_limits). Exact free API request quotas not clearly published as a simple daily cap.",
+    "paid_plans": "Professional, Business, and Enterprise plans with per-user pricing; details on pagerduty.com/pricing"
+  },
+  "rate_limits": "Typically 900 requests per minute for most REST endpoints; some write endpoints lower. Exact limits may vary by account/plan.",
+  "example": {
+    "request": "curl -sS -H \"Authorization: Token token=YOUR_API_KEY\" -H \"Accept: application/vnd.pagerduty+json;version=2\" \"https://api.pagerduty.com/incidents?limit=1\"",
+    "response_snippet": "{\n  \"incidents\": [\n    {\n      \"id\": \"PT4KHLK\",\n      \"type\": \"incident\",\n      \"summary\": \"The server is on fire.\",\n      \"status\": \"triggered\",\n      \"urgency\": \"high\",\n      \"service\": { \"id\": \"PIJ90N7\", \"type\": \"service_reference\" }\n    }\n  ],\n  \"limit\": 1,\n  \"offset\": 0,\n  \"more\": true,\n  \"total\": null\n}"
+  },
+  "use_cases": [
+    "list open incidents for a service",
+    "create an incident from a monitoring alert",
+    "get who is currently on-call for a schedule",
+    "acknowledge or resolve an incident by ID",
+    "list escalation policies and services",
+    "add a note to an incident during triage"
+  ],
+  "sources": [
+    "https://developer.pagerduty.com/docs",
+    "https://developer.pagerduty.com/api-reference",
+    "https://www.pagerduty.com/pricing/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

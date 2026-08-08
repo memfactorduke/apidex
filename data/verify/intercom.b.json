@@ -1,0 +1,52 @@
+{
+  "id": "intercom",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.intercom.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: 10,000 API calls per minute per app; burst and endpoint-specific limits may apply. See X-RateLimit-* response headers.",
+      "source": "https://developers.intercom.com/docs/references/rest-api/errors/rate-limiting/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/admins/identifyadmin"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs"
+    }
+  },
+  "notes": "Rate limits ARE published (10k/min/app) \u2014 entry said \"not published\". Other core claims hold: api.intercom.io, Bearer token, no free API tier, /me works with Intercom-Version header. CORS left unknown is fine for server-side APIs."
+}

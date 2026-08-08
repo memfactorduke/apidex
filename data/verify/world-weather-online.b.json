@@ -1,0 +1,52 @@
+{
+  "id": "world-weather-online",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.worldweatheronline.com/developer/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.worldweatheronline.com/developer/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.worldweatheronline.com/developer/api/docs/local-city-town-weather-api.aspx"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 free trial only (14-day trial with 500 requests/day), not an ongoing free tier",
+      "source": "https://www.worldweatheronline.com/developer/api/pricing.aspx"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "14-day free trial: 500 requests/day; no permanent free tier documented",
+      "source": "https://www.worldweatheronline.com/developer/api/pricing.aspx"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Trial: 500 requests/day; paid plans have published daily request limits (varies by plan)",
+      "source": "https://www.worldweatheronline.com/developer/api/pricing.aspx"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.worldweatheronline.com/developer/api/docs/local-city-town-weather-api.aspx"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.worldweatheronline.com/developer/"
+    }
+  },
+  "notes": "Free trial is time-limited (14 days, 500 req/day), not an ongoing free tier. Rate limits are published on pricing page. Entry understated known trial limits and overstated free_tier."
+}

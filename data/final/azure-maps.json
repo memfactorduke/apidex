@@ -1,0 +1,97 @@
+{
+  "id": "azure-maps",
+  "status": "operational",
+  "name": "Azure Maps",
+  "category": "geo-maps",
+  "tagline": "Microsoft cloud geospatial platform for maps, search, routing, and location services",
+  "description": "Azure Maps provides REST APIs for interactive maps, geocoding, reverse geocoding, routing, traffic, weather, and spatial analytics. Developers authenticate with a subscription key or Microsoft Entra ID and call atlas.microsoft.com endpoints for location-aware applications.",
+  "base_url": "https://atlas.microsoft.com",
+  "docs_url": "https://learn.microsoft.com/en-us/azure/azure-maps/",
+  "signup_url": "https://portal.azure.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Subscription key via subscription-key query param or subscription-key header; also Microsoft Entra ID (Azure AD) OAuth2 bearer tokens for managed identity/app registration"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Gen2 free monthly allotments by service (e.g. 5,000 Render Tile transactions; other services have separate free quantities \u2014 see Azure Maps pricing).",
+    "paid_plans": null
+  },
+  "rate_limits": "Per-service QPS limits published (e.g. Search ~500 QPS, Routing ~50 QPS, Render ~500 QPS; see Azure Maps QPS rate limits).",
+  "example": {
+    "request": "curl \"https://atlas.microsoft.com/search/address/json?api-version=1.0&query=Seattle&subscription-key=YOUR_API_KEY\"",
+    "response_snippet": "{\"summary\":{\"query\":\"Seattle\",\"numResults\":1},\"results\":[{\"type\":\"Geography\",\"position\":{\"lat\":47.60357,\"lon\":-122.32945}}]}"
+  },
+  "use_cases": [
+    "geocode an address to coordinates",
+    "reverse geocode lat/lon to an address",
+    "get driving directions between two points",
+    "search nearby points of interest",
+    "display map tiles in a web or mobile app"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/azure-maps/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

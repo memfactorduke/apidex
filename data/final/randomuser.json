@@ -1,0 +1,94 @@
+{
+  "id": "randomuser",
+  "status": "operational",
+  "name": "Random User Generator",
+  "category": "fun-novelty",
+  "tagline": "Free fake user profiles for demos, mocks, and testing",
+  "description": "Public API that returns randomly generated user profiles with names, photos, addresses, and contact details. Widely used as placeholder people data for demos, UI mockups, and test fixtures. No authentication required for basic use.",
+  "base_url": "https://randomuser.me/api",
+  "docs_url": "https://randomuser.me/documentation",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://randomuser.me/api/?results=1\"",
+    "response_snippet": "{\"results\":[{\"gender\":\"female\",\"name\":{\"title\":\"Ms\",\"first\":\"...\",\"last\":\"...\"},\"email\":\"...\",\"login\":{\"uuid\":\"...\"},\"picture\":{\"large\":\"...\"}}]}"
+  },
+  "use_cases": [
+    "generate fake user profiles for UI demos",
+    "seed mock people data for tests",
+    "prototype contact or directory screens"
+  ],
+  "sources": [
+    "https://randomuser.me/",
+    "https://randomuser.me/documentation"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

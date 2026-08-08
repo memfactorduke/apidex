@@ -1,0 +1,102 @@
+{
+  "id": "balldontlie",
+  "status": "operational",
+  "name": "balldontlie",
+  "category": "sports",
+  "tagline": "Clean NBA stats API with games, players, teams, and season averages; developer-friendly JSON.",
+  "description": "A public sports data API focused on NBA statistics. Provides endpoints for games, players, teams, and season averages with simple JSON responses aimed at developers building sports apps and analytics tools.",
+  "base_url": "https://api.balldontlie.io/v1",
+  "docs_url": "https://docs.balldontlie.io",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required; method and header name need verification from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "ALL STAR free tier: 5 requests/minute; NBA/NFL/MLB only; limited historical data and per_page",
+    "paid_plans": null
+  },
+  "rate_limits": "Free (ALL STAR): 5 req/min; GOAT: 60/min; GOAT+: 600/min (per pricing page)",
+  "example": {
+    "request": "curl \"https://api.balldontlie.io/v1/players\" -H \"Authorization: YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[{\"id\":1,\"first_name\":\"Alex\",\"last_name\":\"Abrines\",\"position\":\"G\",\"height_feet\":null,\"height_inches\":null,\"weight_pounds\":null,\"team\":{\"id\":21,\"abbreviation\":\"OKC\",\"city\":\"Oklahoma City\",\"conference\":\"West\",\"division\":\"Northwest\",\"full_name\":\"Oklahoma City Thunder\",\"name\":\"Thunder\"}}],\"meta\":{\"total_pages\":206,\"current_page\":1,\"next_page\":2,\"per_page\":25,\"total_count\":5130}}"
+  },
+  "use_cases": [
+    "look up NBA player stats by name",
+    "fetch game results for a date or season",
+    "list teams and rosters",
+    "get season averages for a player"
+  ],
+  "sources": [
+    "https://www.balldontlie.io"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

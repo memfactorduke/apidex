@@ -1,0 +1,52 @@
+{
+  "id": "nansen",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.nansen.ai/api/v1",
+      "source": "https://docs.nansen.ai/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nansen.ai"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nansen.ai/get-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://www.nansen.ai/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan includes limited API credits (exact quotas vary; check pricing page)",
+      "source": "https://www.nansen.ai/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nansen.ai"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl with api/v1 path and apiKey header per docs",
+      "source": "https://docs.nansen.ai"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nansen.ai"
+    }
+  },
+  "notes": "placeholder"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ipqualityscore",
+  "base_url": "https://www.ipqualityscore.com/api/json",
+  "docs_url": "https://www.ipqualityscore.com/documentation/overview",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "Free plan with limited monthly lookups (tier varies; confirm on pricing page)",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl \"https://www.ipqualityscore.com/api/json/ip/YOUR_API_KEY/8.8.8.8\"",
+  "example_response_snippet": "{\"success\":true,\"message\":\"Success\",\"fraud_score\":0,\"country_code\":\"US\",\"proxy\":false,\"vpn\":false,\"tor\":false,\"isp\":\"GOOGLE\",\"organization\":\"GOOGLE\",\"is_crawler\":false,\"mobile\":false,\"host\":\"dns.google\",\"recent_abuse\":false,\"bot_status\":false}",
+  "description": "IPQualityScore (IPQS) provides real-time fraud prevention APIs for IP reputation, proxy/VPN/tor detection, email validation, phone verification, device fingerprinting, and transaction risk scoring. Developers use scored risk signals to block abuse, reduce chargebacks, and validate user identity at signup or checkout.",
+  "status": "operational",
+  "resolution_notes": "base_url: Verifier A confirmed original; Verifier B said incorrect with empty correction. Official docs use https://www.ipqualityscore.com/api/json/{service}/YOUR_API_KEY/... so original base_url is correct as the shared JSON API root. Other fields not disputed; kept original."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "locationiq",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://locationiq.com/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://locationiq.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://locationiq.com/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://locationiq.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "5,000 requests/day, 2 requests/second (Developer plan free tier)",
+      "source": "https://locationiq.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 2 req/s; paid plans higher (e.g. 10\u201350+ req/s depending on plan). Published on pricing page.",
+      "source": "https://locationiq.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://locationiq.com/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://locationiq.com/docs/"
+    }
+  },
+  "notes": "Pricing and rate limits are published, so free_tier_limits \"unknown\" and rate_limits \"not published\" are wrong. base_url, docs, auth, and search example match current docs."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "meta-graph",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.facebook.com/docs/graph-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.facebook.com/docs/graph-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.facebook.com/docs/facebook-login/guides/access-tokens"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.facebook.com/docs/graph-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.facebook.com/docs/whatsapp/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.facebook.com/docs/graph-api/overview/rate-limiting"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use a current Graph API version (e.g. v22.0/v23.0 as of 2026) instead of v21.0; also prefer Authorization: Bearer over access_token query param for production, though query param still works",
+      "source": "https://developers.facebook.com/docs/graph-api/guides/using-graph-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.facebook.com/docs/graph-api/overview"
+    }
+  },
+  "notes": "Adversarial check: base_url, docs, OAuth2, free Graph access, and platform rate-limit headers are accurate. Main issue is example pinning deprecated/outdated Graph version v21.0; current platform versions have moved forward. CORS remains unknown without browser probe."
+}

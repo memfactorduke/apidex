@@ -1,0 +1,99 @@
+{
+  "id": "chess-com",
+  "status": "operational",
+  "name": "Chess.com Published Data API",
+  "category": "games-comics",
+  "tagline": "Public player profiles, game archives, clubs, and daily puzzles from Chess.com.",
+  "description": "Chess.com's free, unauthenticated Published Data API exposes public player profiles, monthly game archives (PGN/JSON), club data, tournaments, titled players, streamers, and the daily puzzle. No API key is required; clients should send a descriptive User-Agent. Rate limits are not formally published beyond fair-use guidance.",
+  "base_url": "https://api.chess.com/pub",
+  "docs_url": "https://www.chess.com/news/view/published-data-api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or OAuth. Public read-only endpoints; send a descriptive User-Agent identifying your app."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public data API; no paid tier for this surface",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (fair use; avoid excessive concurrent requests)",
+  "example": {
+    "request": "curl -s -H 'User-Agent: MyApp/1.0 (contact@example.com)' 'https://api.chess.com/pub/player/hikaru'",
+    "response_snippet": "{\"@id\":\"https://api.chess.com/pub/player/hikaru\",\"url\":\"https://www.chess.com/member/hikaru\",\"username\":\"hikaru\",\"player_id\":15448422,\"title\":\"GM\",\"status\":\"premium\",\"name\":\"Hikaru Nakamura\",\"avatar\":\"https://images.chesscomfiles.com/...\",\"country\":\"https://api.chess.com/pub/country/US\",\"joined\":1178554800,\"last_online\":1710000000,\"followers\":1200000,\"is_streamer\":true,\"verified\":true,\"league\":\"Legend\"}"
+  },
+  "use_cases": [
+    "fetch a Chess.com player's public profile and ratings",
+    "list monthly game archives for a player",
+    "download a player's games for a given month as PGN or JSON",
+    "get today's daily chess puzzle",
+    "list titled players or club members",
+    "look up live streamers currently on Chess.com"
+  ],
+  "sources": [
+    "https://www.chess.com/news/view/published-data-api",
+    "https://api.chess.com/pub/player/hikaru",
+    "https://api.chess.com/pub/puzzle"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

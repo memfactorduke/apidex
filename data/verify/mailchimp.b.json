@@ -1,0 +1,52 @@
+{
+  "id": "mailchimp",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/guides/quick-start/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan exists with contact and send limits that change over time; check current Mailchimp pricing (not \"unknown\" as a final answer if limits are published)",
+      "source": "https://mailchimp.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Mailchimp publishes concurrent connection and throughput guidance; not simply \"not published\"",
+      "source": "https://mailchimp.com/developer/marketing/guides/how-to-use-marketing-api/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/guides/quick-start/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mailchimp.com/developer/marketing/"
+    }
+  },
+  "notes": "Placeholder \u2014 researching official sources now"
+}

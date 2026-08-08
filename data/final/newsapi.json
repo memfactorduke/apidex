@@ -1,0 +1,100 @@
+{
+  "id": "newsapi",
+  "status": "operational",
+  "name": "NewsAPI",
+  "category": "news-media",
+  "tagline": "JSON API for headlines and articles from news sources and blogs worldwide",
+  "description": "NewsAPI is a REST API that returns live headlines and searchable news articles as JSON from thousands of sources and blogs. Developers authenticate with an API key and call endpoints such as top-headlines and everything to build news feeds, alerts, and media monitoring tools. Free Developer plans are for development only; production use requires a paid Business plan.",
+  "base_url": "https://newsapi.org/v2",
+  "docs_url": "https://newsapi.org/docs",
+  "signup_url": "https://newsapi.org/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header (preferred) or apiKey query parameter; self-serve signup at newsapi.org/register"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Developer: 100 req/day, development/testing only (not for production); 24h article delay; search up to 1 month old; CORS localhost only",
+    "paid_plans": "Business plans for production: higher volume and live articles; contact/pricing on site for commercial use"
+  },
+  "rate_limits": "Developer: 100 requests per day; rate limits also apply per account/plan (see pricing)",
+  "example": {
+    "request": "curl -H \"X-Api-Key: YOUR_API_KEY\" \"https://newsapi.org/v2/top-headlines?country=us\"",
+    "response_snippet": "{\"status\":\"ok\",\"totalResults\":38,\"articles\":[{\"source\":{\"id\":\"cnn\",\"name\":\"CNN\"},\"author\":null,\"title\":\"Example headline\",\"description\":\"...\",\"url\":\"https://...\",\"urlToImage\":\"https://...\",\"publishedAt\":\"2026-03-20T12:00:00Z\",\"content\":\"...\"}]}"
+  },
+  "use_cases": [
+    "fetch top headlines by country or category",
+    "search recent articles by keyword or phrase",
+    "monitor news mentions of a company or product",
+    "build a personalized news feed from selected sources",
+    "power news alerts or digests in an app"
+  ],
+  "sources": [
+    "https://newsapi.org/docs",
+    "https://newsapi.org/pricing",
+    "https://newsapi.org/docs/endpoints/top-headlines",
+    "https://newsapi.org/docs/authentication",
+    "https://newsapi.org/docs/endpoints/everything"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

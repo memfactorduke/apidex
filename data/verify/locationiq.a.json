@@ -1,0 +1,52 @@
+{
+  "id": "locationiq",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.locationiq.com/docs/search-forward-geocoding"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://locationiq.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.locationiq.com/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://locationiq.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "5,000 requests/day (and lower free-tier rate limits than paid plans)",
+      "source": "https://locationiq.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 2 requests/second; paid plans have higher published limits (e.g. 5\u201350 rps depending on tier)",
+      "source": "https://locationiq.com/pricing"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.locationiq.com/docs/search-forward-geocoding"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://locationiq.com/docs"
+    }
+  },
+  "notes": "Rate limits and free tier are published on pricing; entry said unknown/not published. CORS left as entry value \"unknown\" \u2014 not re-verified as a positive claim beyond \"unknown\"."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "gdelt",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gdeltproject.org/data.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/cyanheads/gdelt-mcp-server"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/cyanheads/gdelt-mcp-server"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gdeltproject.org/data.html"
+    }
+  },
+  "notes": "Verified against official GDELT blog posts (DOC/GEO/TV/Context 2.0 APIs), data.html, and gdeltproject.org. Base URL path /api/v2 is correct for DOC/GEO/TV/Context endpoints; no signup/API key documented. Free public access confirmed. Rate limits not formally published on official docs; ~1 req/5s is community/MCP guidance only. CORS unknown is appropriate. Example curl matches DOC 2.0 ArtList JSON mode. Description claims check out."
+}

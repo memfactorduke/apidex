@@ -1,0 +1,52 @@
+{
+  "id": "meteostat",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.meteostat.net/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.meteostat.net/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.meteostat.net/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/meteostat/api/meteostat/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1000 requests per month (Basic plan hard limit)",
+      "source": "https://rapidapi.com/meteostat/api/meteostat/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 1000 req/month hard limit. Paid plans raise monthly quota only. HTTP 429 when quota exceeded. Per-request caps: hourly max 30 days; daily max 10 years. No separate per-second limit published.",
+      "source": "https://rapidapi.com/meteostat/api/meteostat/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.meteostat.net/api/stations/meta"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Free for light use (1000 calls/month); paid tiers raise monthly quotas. Separate free bulk dumps and a Python library exist outside this API.",
+      "source": "https://rapidapi.com/meteostat/api/meteostat/pricing"
+    }
+  },
+  "notes": "Pricing quotas appear to have changed: free/Basic is 1000 req/mo not 500; paid tiers may also differ. Verified base URL, docs, auth, and example against official Meteostat/RapidAPI docs."
+}

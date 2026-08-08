@@ -1,0 +1,52 @@
+{
+  "id": "marketaux",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 API credits/day free (Basic plan) \u2014 not 100 requests/day; credits != requests",
+      "source": "https://www.marketaux.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "100 API credits/day on free tier; higher limits on paid plans (docs use credits, not requests)",
+      "source": "https://www.marketaux.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Auth param is `api_token`, not `token` as claimed in auth.details; curl uses api_token which matches docs \u2014 auth.details is wrong",
+      "source": "https://www.marketaux.com/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Auth.details incorrectly says token=; docs use api_token=. Free tier is credits not requests. Example curl path/params match docs."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "rubygems",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guides.rubygems.org/rubygems-org-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guides.rubygems.org/rubygems-org-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guides.rubygems.org/rubygems-org-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guides.rubygems.org/rubygems-org-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guides.rubygems.org/rubygems-org-api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guides.rubygems.org/rubygems-org-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guides.rubygems.org/rubygems-org-api/"
+    }
+  },
+  "notes": "Verified against official guides.rubygems.org API docs and live endpoint. base_url, docs, example gem path, and public-read + API-key write auth match. free_tier true with unknown limits and not-published rate limits are appropriately cautious. cors remains unknown."
+}

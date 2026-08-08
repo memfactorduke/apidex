@@ -1,0 +1,15 @@
+{
+  "id": "phishtank",
+  "base_url": "https://checkurl.phishtank.com",
+  "docs_url": "https://www.phishtank.com/api_info.php",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -X POST \"https://checkurl.phishtank.com/checkurl/\" -d \"url=https://example.com&format=json&app_key=YOUR_API_KEY\"",
+  "example_response_snippet": "{\"results\":{\"url\":\"https://example.com\",\"in_database\":false,\"phish_id\":null,\"valid\":null,\"verified\":null}}",
+  "description": "PhishTank is a collaborative clearing house for phishing URL verification. Developers can check URLs against a community-maintained phishing database and consume data feeds for mail and browser protection.",
+  "status": "operational",
+  "resolution_notes": "base_url: ORIGINAL kept \u2014 official docs (phishtank.com/api_info.php) document POST endpoint path /checkurl/ under host https://checkurl.phishtank.com; base host without path is correct directory convention (Verifier A incorrectly folded path into base_url). rate_limits: ORIGINAL \"not published\" confirmed \u2014 API docs state registered keys get higher limits but publish no numeric quotas; Verifier B's historical ~10/min is unconfirmed anecdote, not current published limit."
+}

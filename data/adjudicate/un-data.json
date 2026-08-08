@@ -1,0 +1,15 @@
+{
+  "id": "un-data",
+  "base_url": "https://data.un.org/ws/rest/",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ruled incorrect (trailing slash). Both verifiers correct to https://data.un.org/ws/rest/ per https://data.un.org/Host.aspx?Content=API; original without slash. Automated check: base_url HTTP 500 vs docs 200 \u2014 trailing-slash form is the documented REST base; keep status operational (docs live, API still published)."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "data-gov",
+  "base_url": "https://catalog.data.gov/api/3/action",
+  "docs_url": "https://docs.ckan.org/en/latest/api/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect original (https://catalog.data.gov/api/3 returns 404); correct is https://catalog.data.gov/api/3/action \u2014 CKAN action endpoints live under /action (confirmed by package_search and status_show working under that path; both verifiers agree). docs_url: incorrect original (same 404 path is not documentation); data.gov developer pages point to CKAN API docs \u2014 use https://docs.ckan.org/en/latest/api/ (Verifier B; Verifier A\u2019s 2.9 pin is stale). Sources: https://catalog.data.gov/api/3/action/status_show, https://www.data.gov/developers/apis, https://docs.ckan.org/en/latest/api/."
+}

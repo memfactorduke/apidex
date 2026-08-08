@@ -1,0 +1,52 @@
+{
+  "id": "shippo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.goshippo.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.goshippo.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.goshippo.com/docs/guides_general/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goshippo.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan is free to start (no monthly platform fee) with pay-as-you-go labels; there is no fixed monthly free-label allotment published as a pure free API quota \u2014 platform fees apply per label after any promotions. Confirm current free-label promotions and platform fees on the pricing page.",
+      "source": "https://goshippo.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.goshippo.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Tracking create is POST /tracks/ with JSON body {\"carrier\",\"tracking_number\"} and Authorization: ShippoToken; the entry's curl omits -X POST (GET is the default for curl without -d behavior varies). Prefer: curl -X POST https://api.goshippo.com/tracks/ -H \"Authorization: ShippoToken YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"carrier\":\"usps\",\"tracking_number\":\"...\"}'. Also ShippoToken scheme is correct per auth docs.",
+      "source": "https://docs.goshippo.com/docs/tracking/tracking/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.goshippo.com/"
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after verification."
+}

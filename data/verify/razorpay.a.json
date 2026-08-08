@@ -1,0 +1,52 @@
+{
+  "id": "razorpay",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://razorpay.com/docs/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://razorpay.com/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://razorpay.com/docs/api/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://razorpay.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://razorpay.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://razorpay.com/docs/api/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://razorpay.com/docs/api/orders/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://razorpay.com/docs/api/"
+    }
+  },
+  "notes": "Verified against official Razorpay docs and pricing. Base URL, Basic Auth (Key ID/Secret), order create example, and transaction-based pricing all match current docs. Rate limits and CORS remain unpublished/unknown as claimed."
+}

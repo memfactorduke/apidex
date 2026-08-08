@@ -1,0 +1,100 @@
+{
+  "id": "ip-api",
+  "status": "operational",
+  "name": "ip-api",
+  "category": "geo-maps",
+  "tagline": "IP geolocation API for location, ISP, and timezone data",
+  "description": "ip-api provides free and paid IP geolocation lookups returning country, region, city, coordinates, ISP, timezone, and related network data. Non-commercial use has a free HTTP endpoint with rate limits; commercial use requires a paid Pro plan with HTTPS and higher limits.",
+  "base_url": "http://ip-api.com/json",
+  "docs_url": "https://ip-api.com/docs",
+  "signup_url": "https://members.ip-api.com/",
+  "auth": {
+    "type": "none",
+    "details": "Free tier requires no API key (non-commercial only). Pro tier uses API key via path or query parameter after paid signup."
+  },
+  "https": false,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "45 requests per minute from an IP (non-commercial use only); HTTPS not available on free tier",
+    "paid_plans": "Pro plans available for commercial use with HTTPS, higher rate limits, and bulk endpoints"
+  },
+  "rate_limits": "Free: 45 requests per minute per IP. Pro/Enterprise: unlimited (subject to Acceptable Use Policy).",
+  "example": {
+    "request": "curl \"http://ip-api.com/json/8.8.8.8\"",
+    "response_snippet": "{\"status\":\"success\",\"country\":\"United States\",\"countryCode\":\"US\",\"region\":\"VA\",\"regionName\":\"Virginia\",\"city\":\"Ashburn\",\"zip\":\"20149\",\"lat\":39.03,\"lon\":-77.5,\"timezone\":\"America/New_York\",\"isp\":\"Google LLC\",\"org\":\"Google Public DNS\",\"as\":\"AS15169 Google LLC\",\"query\":\"8.8.8.8\"}"
+  },
+  "use_cases": [
+    "geolocate a client IP address",
+    "get country and city from an IP",
+    "detect ISP and organization for an IP",
+    "resolve timezone for an IP address",
+    "batch-lookup multiple IPs on Pro plan"
+  ],
+  "sources": [
+    "https://ip-api.com/",
+    "https://ip-api.com/docs",
+    "https://ip-api.com/docs/api:json"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

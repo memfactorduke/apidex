@@ -1,0 +1,101 @@
+{
+  "id": "giantbomb",
+  "status": "operational",
+  "name": "Giant Bomb",
+  "category": "games-comics",
+  "tagline": "Game wiki API for games, reviews, videos, characters, and franchises",
+  "description": "Giant Bomb provides a long-running game wiki REST API covering games, platforms, characters, franchises, companies, reviews, videos, and related metadata. Developers can search and fetch structured encyclopedia data for game catalogs, wiki-style apps, and media integrations using API-key authentication and JSON (or XML/JSONP) responses.",
+  "base_url": "https://www.giantbomb.com/api",
+  "docs_url": "https://www.giantbomb.com/api/documentation",
+  "signup_url": "https://www.giantbomb.com/api/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (or X-GiantBomb-Api-Key / Authorization: Bearer). Free self-serve key from giantbomb.com/api after login. Required User-Agent header."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "...",
+    "paid_plans": null
+  },
+  "rate_limits": "...",
+  "example": {
+    "request": "curl -s -H 'User-Agent: YourApp/1.0' 'https://www.giantbomb.com/api/game/3030-12672/?api_key=YOUR_API_KEY&format=json&field_list=name,deck,platforms'",
+    "response_snippet": "{\"error\":\"OK\",\"limit\":1,\"offset\":0,\"number_of_page_results\":1,\"number_of_total_results\":1,\"status_code\":1,\"results\":{\"name\":\"BioShock\",\"deck\":\"...\",\"platforms\":[{\"name\":\"PC\",\"...\":true}]},\"version\":\"1.0\"}"
+  },
+  "use_cases": [
+    "look up a game by Giant Bomb ID with platforms and summary",
+    "search games by name for catalog or autocomplete",
+    "list characters or franchises related to a game",
+    "fetch Giant Bomb reviews or video metadata for a title",
+    "get company or platform encyclopedia data for a game database"
+  ],
+  "sources": [
+    "https://www.giantbomb.com/api/",
+    "https://www.giantbomb.com/api/documentation",
+    "https://www.giantbomb.com/forums/api-developers-3017/",
+    "https://github.com/Clovel/giantbomb-api-docs"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

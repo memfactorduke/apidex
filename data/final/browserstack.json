@@ -1,0 +1,105 @@
+{
+  "id": "browserstack",
+  "status": "operational",
+  "name": "BrowserStack Automate API",
+  "category": "dev-tools",
+  "tagline": "REST API for plan, browser inventory, builds, sessions, and logs on BrowserStack Automate.",
+  "description": "BrowserStack Automate exposes HTTPS REST APIs at api.browserstack.com for programmatic access to your cloud test infrastructure: plan/parallel capacity, full OS-browser-device inventory, projects, builds, sessions, access-key reset, media uploads, and session logs (text, network/HAR, console, Selenium, Appium). Responses are JSON by default. Authentication is HTTP Basic Auth with account username and access key. Related product APIs (App Automate, Test Management, etc.) use different hosts or paths.",
+  "base_url": "https://api.browserstack.com/",
+  "docs_url": "https://www.browserstack.com/docs/automate/api-reference/selenium/introduction",
+  "signup_url": "https://www.browserstack.com/users/sign_up",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth: curl -u \"YOUR_USERNAME:YOUR_ACCESS_KEY\". Username and access key from Automate dashboard or Account Settings; self-serve free trial or paid plan signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No permanent free Automate REST tier. Free trial (signup): ~60 mins Automate per official FAQ (signup page also lists 100 mins automated browser testing), plus Live/App Live minutes and Percy 5,000 screenshots/mo.",
+    "paid_plans": "Automate priced per parallel: Chrome Desktop from ~$59/mo, Desktop from ~$99/mo (billed annually); Desktop & Mobile and enterprise higher. Live manual from ~$29/user/mo."
+  },
+  "rate_limits": "Automate API: 1600 requests per 5 minutes per user; 160 requests per second per IP. (Other products differ, e.g. Test Management 300 req/min.)",
+  "example": {
+    "request": "curl -u \"YOUR_USERNAME:YOUR_ACCESS_KEY\" https://api.browserstack.com/automate/plan.json",
+    "response_snippet": "{\"automate_plan\":\"Automate Mobile\",\"parallel_sessions_running\":20,\"team_parallel_sessions_max_allowed\":250,\"parallel_sessions_max_allowed\":250,\"queued_sessions\":10,\"queued_sessions_max_allowed\":240}"
+  },
+  "use_cases": [
+    "list available OS, browser, and real-device combinations for test config",
+    "check Automate plan parallel limits, running sessions, and queue depth",
+    "list or delete builds and projects for a test account",
+    "fetch a session\u2019s status, video URL, and debug log links",
+    "download session text, network (HAR), console, or Selenium logs",
+    "reset the account access key via the Access Key API"
+  ],
+  "sources": [
+    "https://www.browserstack.com/docs/automate/api-reference/selenium/introduction",
+    "https://www.browserstack.com/docs/automate/api-reference/selenium/authentication",
+    "https://www.browserstack.com/docs/automate/api-reference/selenium/plan",
+    "https://www.browserstack.com/docs/automate/api-reference/selenium/browser",
+    "https://www.browserstack.com/docs/automate/api-reference/selenium/automate-api",
+    "https://www.browserstack.com/pricing",
+    "https://www.browserstack.com/support/faq/plans-pricing/plans/what-do-i-get-with-a-free-trial",
+    "https://status.browserstack.com/"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

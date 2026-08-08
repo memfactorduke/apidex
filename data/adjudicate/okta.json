@@ -1,0 +1,15 @@
+{
+  "id": "okta",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Published: org-wide, concurrent, and per-endpoint limits (e.g. Users API); rate-limit headers X-Rate-Limit-Limit/Remaining/Reset; see developer.okta.com rate-limits docs",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: INCORRECT as 'not published'. Both verifiers correct. Official docs at https://developer.okta.com/docs/reference/rate-limits/ and https://developer.okta.com/docs/reference/rl-best-practices/ document org-wide, concurrent, and endpoint-specific limits plus X-Rate-Limit-* headers. Exact numeric defaults vary by endpoint/org; summary above is accurate. base_url HTTP 0 is expected for placeholder {yourOktaDomain}, not defunct."
+}

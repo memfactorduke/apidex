@@ -1,0 +1,52 @@
+{
+  "id": "the-odds-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests/month free (not 500); paid plans start higher \u2014 verify current pricing page",
+      "source": "https://the-odds-api.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    }
+  },
+  "notes": "Free quota is the main error: official site advertises 100 free requests/month, not 500. Base URL, docs, apiKey auth, and /v4/sports example match current v4 docs."
+}

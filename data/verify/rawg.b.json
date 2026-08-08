@@ -1,0 +1,52 @@
+{
+  "id": "rawg",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.rawg.io/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.rawg.io/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rawg.io/apidocs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rawg.io/apidocs"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "20,000 requests per month for free tier (same figure often cited), but official public docs do not clearly document a fixed monthly quota on the landing pages checked; treat as commonly reported not solely official \u2014 correction if wrong: check dashboard. Entry's \"20,000 requests/month free\" is widely repeated but needs dashboard confirmation.",
+      "source": "https://rawg.io/apidocs"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.rawg.io/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rawg.io/apidocs"
+    }
+  },
+  "notes": "Automated curl got HTTP 522 (origin down / Cloudflare) on base and docs \u2014 likely transient infra, not wrong URL. Verifying official docs and pricing now."
+}

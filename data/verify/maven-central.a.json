@@ -1,0 +1,52 @@
+{
+  "id": "maven-central",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://central.sonatype.com/api/internal/browse/component/versions (legacy Solr endpoint at search.maven.org still may work but is not the documented current REST API)",
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Legacy Solr search URL form may still work but is not the currently documented REST API path; docs describe central.sonatype.com internal browse API and related endpoints",
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    }
+  },
+  "notes": "Placeholder - will replace after verification"
+}

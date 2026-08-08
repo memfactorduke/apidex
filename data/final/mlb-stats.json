@@ -1,0 +1,96 @@
+{
+  "id": "mlb-stats",
+  "status": "operational",
+  "name": "MLB Stats API",
+  "category": "sports",
+  "tagline": "Official MLB public stats endpoints for schedules, live games, and baseball statistics",
+  "description": "The MLB Stats API provides public endpoints for Major League Baseball schedules, live game feeds, standings, player and team statistics, and related baseball data via statsapi.mlb.com.",
+  "base_url": "https://statsapi.mlb.com/api",
+  "docs_url": "https://statsapi.mlb.com/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints; requests work without API keys or signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public free access; no published request quotas",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2024-10-01\"",
+    "response_snippet": "{\"copyright\":\"Copyright 2024 MLB Advanced Media, L.P.\",\"totalItems\":1,\"totalEvents\":0,\"totalGames\":15,\"totalGamesInProgress\":0,\"dates\":[{\"date\":\"2024-10-01\",\"totalItems\":15,\"games\":[{\"gamePk\":775294,\"gameType\":\"R\",\"season\":\"2024\",\"gameDate\":\"2024-10-01T00:10:00Z\",\"status\":{\"abstractGameState\":\"Final\"}}]}]}"
+  },
+  "use_cases": [
+    "get MLB schedule for a specific date",
+    "fetch live game score and status by gamePk",
+    "look up team standings for a season",
+    "get player stats and career history",
+    "retrieve box score and play-by-play for a game"
+  ],
+  "sources": [
+    "https://statsapi.mlb.com/docs/",
+    "https://statsapi.mlb.com/api/v1/schedule?sportId=1"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

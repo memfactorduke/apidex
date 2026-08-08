@@ -1,0 +1,52 @@
+{
+  "id": "messari",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.messari.io/api-reference/versioning"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.messari.io/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.messari.io/api-reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://docs.messari.io/api-reference/permissions"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Unpaid/Lite/Pro: 200 requests/min global (non-enterprise-gated endpoints); MessariAI Free: 10 requests/day. Marketing page also claims free tier 20 rpm.",
+      "source": "https://docs.messari.io/api-reference/permissions"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: Unpaid/Lite/Pro 200 req/min; Enterprise 600 req/min (global). Service-level limits documented per endpoint. MessariAI Free: 10/day; Enterprise AI: 600/min.",
+      "source": "https://docs.messari.io/api-reference/permissions"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://api.messari.io/metrics/v2/assets\" -H \"x-messari-api-key: YOUR_API_KEY\" (or /metrics/v1/assets). Path /api/v1/assets returns 404; current structure is https://api.messari.io/<slug>/v1|v2/<endpoint>.",
+      "source": "https://docs.messari.io/api-reference/endpoints/metrics/v2/assets/get-v2-assets"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.messari.io/introduction"
+    }
+  },
+  "notes": "Hard fails: example path /api/v1/assets is dead (404 live); rate_limits are published, not \"not published\"; free_tier is false but docs list Unpaid access (200/min) plus Free AI (10/day) and $0 list-assets via x402. Marketing free-tier 20 rpm conflicts with docs 200/min."
+}

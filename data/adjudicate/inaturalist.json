@@ -1,0 +1,15 @@
+{
+  "id": "inaturalist",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "jwt",
+  "free_tier": null,
+  "free_tier_limits": "Free public API; no paid plans. Exact numeric quotas not cleanly published as fixed ~100 unauth / higher auth figures; use response rate-limit headers and current docs/community guidance.",
+  "rate_limits": "Official docs emphasize checking rate-limit response headers; authenticated JWT access gets higher limits than unauthenticated. Community figures (~100/min unauth, ~1000/min auth) are not authoritative fixed published quotas.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: keep jwt \u2014 official self-serve token page and API use a JWT API token (Authorization: Bearer or JWT), not a classic opaque API key; directory enum has jwt which matches. free_tier_limits: Verifier B correct \u2014 no fixed published free-tier numeric quotas; rewrote conservatively. rate_limits: Verifier B correct \u2014 do not ship ~100/~1000 as established published limits; headers + auth higher. Evidence: https://api.inaturalist.org/v1/docs/ , https://www.inaturalist.org/users/api_token , https://www.inaturalist.org/pages/api+reference , https://forum.inaturalist.org/"
+}

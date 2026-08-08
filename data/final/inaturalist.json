@@ -1,0 +1,99 @@
+{
+  "id": "inaturalist",
+  "status": "operational",
+  "name": "iNaturalist",
+  "category": "science-space",
+  "tagline": "Citizen-science species observations and identifications",
+  "description": "iNaturalist API provides access to citizen-science species observations, identifications, taxa, places, and users. Developers can query public biodiversity data, submit observations with OAuth2, and integrate species occurrence records into research apps, educational tools, and conservation platforms.",
+  "base_url": "https://api.inaturalist.org/v1",
+  "docs_url": "https://api.inaturalist.org/v1/docs/",
+  "signup_url": "https://www.inaturalist.org/users/api_token",
+  "auth": {
+    "type": "jwt",
+    "details": "Optional JWT API token (Authorization: Bearer or Authorization: JWT) for higher rate limits and authenticated writes; self-serve from user account. Many read endpoints work unauthenticated."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public API; no paid plans. Exact numeric quotas not cleanly published as fixed ~100 unauth / higher auth figures; use response rate-limit headers and current docs/community guidance.",
+    "paid_plans": null
+  },
+  "rate_limits": "Official docs emphasize checking rate-limit response headers; authenticated JWT access gets higher limits than unauthenticated. Community figures (~100/min unauth, ~1000/min auth) are not authoritative fixed published quotas.",
+  "example": {
+    "request": "curl -s 'https://api.inaturalist.org/v1/observations?taxon_name=Danaus+plexippus&per_page=1'",
+    "response_snippet": "{\"total_results\":12345,\"page\":1,\"per_page\":1,\"results\":[{\"id\":123,\"species_guess\":\"Monarch\",\"taxon\":{\"id\":48662,\"name\":\"Danaus plexippus\",\"rank\":\"species\"},\"observed_on\":\"2024-06-15\",\"place_guess\":\"California, US\"}]}"
+  },
+  "use_cases": [
+    "search species observations by taxon name or location",
+    "look up taxon taxonomy and common names",
+    "get observation details with photos and identifications",
+    "list nearby wildlife observations for a map",
+    "fetch place boundaries used in iNaturalist",
+    "query user observations for citizen-science apps"
+  ],
+  "sources": [
+    "https://api.inaturalist.org/v1/docs/",
+    "https://www.inaturalist.org/pages/api+reference",
+    "https://forum.inaturalist.org/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

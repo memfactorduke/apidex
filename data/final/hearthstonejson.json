@@ -1,0 +1,96 @@
+{
+  "id": "hearthstonejson",
+  "status": "operational",
+  "name": "HearthstoneJSON",
+  "category": "games-comics",
+  "tagline": "Community Hearthstone card and metadata dumps as free bulk JSON.",
+  "description": "HearthstoneJSON provides free bulk JSON dumps of Hearthstone card data, sets, and game metadata maintained by the community. Developers can fetch full card collections, localized strings, and related game assets via simple HTTPS endpoints without authentication, making it a common source for deck builders, trackers, and Hearthstone tooling.",
+  "base_url": "https://api.hearthstonejson.com/v1",
+  "docs_url": "https://hearthstonejson.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public bulk JSON endpoints are openly accessible over HTTPS."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS 'https://api.hearthstonejson.com/v1/latest/enUS/cards.json'",
+    "response_snippet": "[{\"id\":\"EX1_001\",\"dbfId\":1650,\"name\":\"Lightwarden\",\"type\":\"MINION\",\"rarity\":\"RARE\",\"cost\":1,\"attack\":1,\"health\":2,\"text\":\"Whenever a character is healed, gain +2 Attack.\",\"collectible\":true,\"set\":\"EXPERT1\",\"artist\":\"Doug Alexander\"}]"
+  },
+  "use_cases": [
+    "fetch full Hearthstone card database as JSON",
+    "look up card stats by dbfId or card id",
+    "get localized card names and text for a locale",
+    "power a deck builder or card search UI",
+    "sync card metadata for a tracker or bot"
+  ],
+  "sources": [
+    "https://hearthstonejson.com/",
+    "https://api.hearthstonejson.com/v1/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

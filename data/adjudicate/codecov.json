@@ -1,0 +1,15 @@
+{
+  "id": "codecov",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -H \"Authorization: bearer YOUR_API_KEY\" \"https://api.codecov.io/api/v2/github/OWNER/repos/REPO/\"",
+  "example_response_snippet": "{\"name\":\"REPO\",\"private\":false,\"updatestamp\":\"2024-01-15T12:00:00Z\",\"author\":{\"service\":\"github\",\"username\":\"OWNER\",\"name\":\"Owner\"},\"language\":\"python\",\"branch\":\"main\",\"active\":true,\"activated\":true,\"totals\":{\"files\":42,\"lines\":1200,\"hits\":1020,\"misses\":180,\"partials\":0,\"coverage\":85.0,\"branches\":50,\"methods\":30,\"sessions\":1,\"complexity\":0.0,\"complexity_total\":0.0,\"complexity_ratio\":0.0,\"diff\":0}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: INCORRECT (both verifiers right on response; path mostly fine). Official OpenAPI at https://docs.codecov.com/reference/repos_retrieve.md confirms GET /api/v2/{service}/{owner_username}/repos/{repo_name}/ on server https://api.codecov.io/api/v2/ \u2014 so github/OWNER/repos/REPO/ is valid. Auth header must be Authorization: bearer TOKEN (tokenAuth http bearer scheme in OpenAPI; docs overview also shows bearer), not Authorization: token. Response schema is Repo with name/private/totals/etc.; coverage lives at totals.coverage (CommitTotals), not top-level coverage \u2014 original snippet was fabricated. Sources: https://docs.codecov.com/reference/repos_retrieve.md , https://docs.codecov.com/reference/overview.md . No other fields disputed; left null."
+}

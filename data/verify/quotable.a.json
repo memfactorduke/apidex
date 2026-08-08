@@ -1,0 +1,52 @@
+{
+  "id": "quotable",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.quotable.io is reported offline; project is unmaintained and the public API host is no longer reliable. Prefer self-hosting from https://github.com/lukePeavey/quotable (see README for status).",
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Endpoint path /random matches historical docs, but live base https://api.quotable.io is down; example is not currently usable without self-hosting.",
+      "source": "https://github.com/lukePeavey/quotable"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Description implies a working public service; the hosted API is offline/unmaintained. Still an open-source REST API for quotes with tags/authors/search if self-hosted.",
+      "source": "https://github.com/lukePeavey/quotable"
+    }
+  },
+  "notes": "Automated curl got HTTP 0 for base_url; GitHub docs still describe /random and no auth. Project README notes public API issues/unmaintained status \u2014 treat hosted api.quotable.io as dead; self-host from the repo."
+}

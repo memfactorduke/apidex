@@ -1,0 +1,15 @@
+{
+  "id": "moralis",
+  "base_url": "https://deep-index.moralis.io/api/v2.2",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free plan: 40,000 Compute Units (CU)/month; rate limits apply by plan",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s \"https://deep-index.moralis.io/api/v2.2/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045/balance?chain=eth\" -H \"X-API-Key: YOUR_API_KEY\" -H \"accept: application/json\"",
+  "example_response_snippet": "{\"balance\":\"123456789012345678\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: original CORRECT \u2014 current Moralis Web3 Data API base is https://deep-index.moralis.io/api/v2.2; root 404 is expected (base is a path prefix, not a landing page). free_tier_limits: Verifier B CORRECT \u2014 Free plan is 40,000 CU/month per moralis.io/pricing. example: original CORRECT for Get Native Balance path /{address}/balance?chain=eth under v2.2; Verifier B\u2019s \u201cincorrect\u201d flag was about base-alone 404, not a wrong endpoint."
+}

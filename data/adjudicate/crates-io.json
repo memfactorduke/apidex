@@ -1,0 +1,15 @@
+{
+  "id": "crates-io",
+  "base_url": null,
+  "docs_url": "https://crates.io/data-access",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ORIGINAL confirmed. Live curl of https://crates.io/api/v1/crates/serde returns HTTP 200; bare /api/v1 returns 404 as expected (no index resource). OpenAPI at https://crates.io/api/openapi.json and Cargo registry Web API docs reference this prefix. Verifier B flagged incorrect but proposed the same URL\u2014no change. Evidence: https://crates.io/data-access (API section), https://crates.io/api/openapi.json, https://doc.rust-lang.org/cargo/reference/registry-web-api.html. docs_url: ORIGINAL confirmed despite automated HEAD/GET 404 on bare fetch (likely bot/CDN quirk). Official crawl and historical official page still document API policy at https://crates.io/data-access (rate limits, User-Agent, OpenAPI link). Prefer that canonical policy page over alternatives; Verifier B again proposed the same URL. Both disputed fields keep original values (null = keep)."
+}

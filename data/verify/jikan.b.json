@@ -1,0 +1,52 @@
+{
+  "id": "jikan",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://jikan.moe"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "3 requests/second and ~60 requests/minute per IP (public API); documented on official docs / GitHub",
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://jikan.moe"
+    }
+  },
+  "notes": "Rate limits are published (not 'not published'): commonly 3 req/s and 60 req/min per IP. Automated curl hit 504 on api.jikan.moe; docs returned 200 \u2014 treat as transient outage unless sustained. Core public API remains free/keyless at https://api.jikan.moe/v4."
+}

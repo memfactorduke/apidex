@@ -1,0 +1,95 @@
+{
+  "id": "ipapi",
+  "status": "operational",
+  "name": "ipapi",
+  "category": "geo-maps",
+  "tagline": "IP geolocation API for location, ASN, currency, and security data",
+  "description": "ipapi.co is a geolocation API that maps IP addresses to location and network metadata including city, region, country, timezone, currency, ASN, and optional security fields. Developers call a simple HTTPS JSON endpoint with an optional API key for higher rate limits. Free tier available for light use; paid plans for production volume.",
+  "base_url": "https://ipapi.co",
+  "docs_url": "https://ipapi.co/api/",
+  "signup_url": "https://ipapi.co/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via path (?key=) or query; free unauthenticated tier available with lower limits. Paid plans require key from self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 requests/day without API key; higher free/paid tiers with key",
+    "paid_plans": null
+  },
+  "rate_limits": "Free tier: ~1,000 req/day (unauthenticated); rate limits documented on pricing/docs",
+  "example": {
+    "request": "curl \"https://ipapi.co/8.8.8.8/json/\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "geolocate a client IP for localization",
+    "enrich logs with country/city from IP"
+  ],
+  "sources": [
+    "https://ipapi.co"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

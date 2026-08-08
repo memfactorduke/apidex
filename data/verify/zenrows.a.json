@@ -1,0 +1,52 @@
+{
+  "id": "zenrows",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.zenrows.com/api-reference/api-core"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.zenrows.com/universal-scraper-api/api-reference",
+      "source": "https://docs.zenrows.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.zenrows.com/api-reference/api-core"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.zenrows.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 free API credits on signup (no ongoing free plan; trial-style allotment)",
+      "source": "https://www.zenrows.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.zenrows.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.zenrows.com/api-reference/api-core"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.zenrows.com/"
+    }
+  },
+  "notes": "docs_url 404s; free_tier_limits was unknown but pricing documents free credits. Automated 400 on base_url is expected without valid apikey/url params."
+}

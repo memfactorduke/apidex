@@ -1,0 +1,52 @@
+{
+  "id": "phishtank",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.phishtank.com/api_info.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.phishtank.com/api_info.php"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.phishtank.com/api_info.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.phishtank.com/api_info.php"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.phishtank.com/api_info.php"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Registered API keys get higher limits; exact numeric quotas are not publicly published on the API page (historically ~10/min unauthenticated, higher with key \u2014 treat as unpublished unless you have account-specific docs)",
+      "source": "https://www.phishtank.com/api_info.php"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.phishtank.com/api_info.php"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.phishtank.com/"
+    }
+  },
+  "notes": "Need live verification of endpoints and docs; re-checking official PhishTank sources next."
+}

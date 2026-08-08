@@ -1,0 +1,95 @@
+{
+  "id": "data-gouv-fr",
+  "status": "operational",
+  "name": "data.gouv.fr API",
+  "category": "government-open-data",
+  "tagline": "French government open data catalog and dataset API",
+  "description": "REST API for France's national open data portal (data.gouv.fr), providing programmatic access to datasets, reuses, organizations, and related catalog metadata published by public bodies.",
+  "base_url": "https://www.data.gouv.fr/api/1",
+  "docs_url": "https://www.data.gouv.fr/fr/apidoc/",
+  "signup_url": "https://www.data.gouv.fr/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via X-API-KEY header for authenticated writes and higher limits; many read endpoints work without auth"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://www.data.gouv.fr/api/1/datasets/?page_size=1\"",
+    "response_snippet": "{\"data\":[{\"id\":\"...\",\"title\":\"...\",\"slug\":\"...\"}],\"next_page\":null,\"page\":1,\"page_size\":1,\"total\":...}"
+  },
+  "use_cases": [
+    "search French open government datasets by keyword",
+    "fetch metadata and download URLs for a dataset",
+    "list organizations publishing open data on data.gouv.fr",
+    "discover reuses (applications) built on French open datasets"
+  ],
+  "sources": [
+    "https://www.data.gouv.fr/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

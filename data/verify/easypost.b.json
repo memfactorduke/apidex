@@ -1,0 +1,52 @@
+{
+  "id": "easypost",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Verified against official EasyPost docs (docs.easypost.com) and pricing page (easypost.com/pricing) as of 2026-08. Base URL https://api.easypost.com/v2, Basic Auth with API key as username, test/prod keys, free test mode, rate limits not published, CORS unknown. Example GET /v2/addresses with -u KEY: matches docs. Description claims hold."
+}

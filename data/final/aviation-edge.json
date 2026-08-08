@@ -1,0 +1,105 @@
+{
+  "id": "aviation-edge",
+  "status": "operational",
+  "name": "Aviation Edge",
+  "category": "transportation",
+  "tagline": "Global flight, airport, and airline data API for real-time tracking and schedules.",
+  "description": "Aviation Edge provides aviation data APIs covering real-time flights, airports, airlines, routes, schedules, and historical data. Developers use a free limited tier or paid plans via API key authentication. Endpoints return JSON for flight tracking, airport lookups, and route planning applications.",
+  "base_url": "https://aviation-edge.com/v2/public",
+  "docs_url": "https://aviation-edge.com/docs/",
+  "signup_url": "https://aviation-edge.com/account/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter (e.g. key=YOUR_API_KEY), self-serve signup on aviation-edge.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Limited free tier; concrete request caps not fully verified from pricing page \u2014 confirm on dashboard after signup.",
+    "paid_plans": "Paid plans available; see aviation-edge.com pricing for current tiers."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://aviation-edge.com/v2/public/flights?key=YOUR_API_KEY&flightIata=AA100\"",
+    "response_snippet": "[{\"aircraft\":{\"iataCode\":\"B738\",\"icao24\":\"a1b2c3\",\"icaoCode\":\"B738\",\"regNumber\":\"N12345\"},\"airline\":{\"iataCode\":\"AA\",\"icaoCode\":\"AAL\"},\"arrival\":{\"iataCode\":\"LAX\",\"icaoCode\":\"KLAX\"},\"departure\":{\"iataCode\":\"JFK\",\"icaoCode\":\"KJFK\"},\"flight\":{\"iataNumber\":\"AA100\",\"icaoNumber\":\"AAL100\"},\"status\":\"en-route\"}]"
+  },
+  "use_cases": [
+    "get real-time status for a flight by IATA number",
+    "look up airport details by IATA or ICAO code",
+    "list routes between two airports",
+    "fetch airline information by code",
+    "get flight schedules for an airport"
+  ],
+  "sources": [
+    "https://aviation-edge.com/",
+    "https://aviation-edge.com/docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

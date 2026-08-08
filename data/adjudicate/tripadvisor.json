@@ -1,0 +1,15 @@
+{
+  "id": "tripadvisor",
+  "base_url": "https://api.content.tripadvisor.com/api/v1",
+  "docs_url": "https://tripadvisor-content-api.readme.io/",
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "First 5,000 API calls free every month after signup (credit card required for overage billing)",
+  "rate_limits": "Search APIs: 10,000 calls/day; Location details/photos/reviews: set by daily budget; 50 QPS (24h rolling window)",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: CONFIRM original https://api.content.tripadvisor.com/api/v1 (Verifier A labeled incorrect but same URL; Verifier B confirmed; docs/examples use this host). docs_url: CORRECT to https://tripadvisor-content-api.readme.io/ \u2014 both verifiers agree developer-tripadvisor.com is wrong; live docs are on ReadMe. free_tier: CORRECT to true per FAQ (first 5k calls/month free). free_tier_limits: CORRECT to First 5,000 API calls free every month after signup (credit card required for overage billing) per FAQ. rate_limits: CORRECT to Search APIs 10k/day; details/photos/reviews by daily budget; 50 QPS (24h rolling) per rate-limits docs. Evidence: https://tripadvisor-content-api.readme.io/ https://tripadvisor-content-api.readme.io/reference/faq https://tripadvisor-content-api.readme.io/reference/rate-limits https://tripadvisor-content-api.readme.io/reference/searchforlocations. HTTP 403 on API/docs likely bot/WAF, not defunct."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "eu-data-portal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.europa.eu/api/hub/search",
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.europa.eu/en/data/api",
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.europa.eu/en/data/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.europa.eu/api/hub/search/datasets?query=climate&limit=1"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.europa.eu"
+    }
+  },
+  "notes": "Automated curl: base_url and docs_url both 404. Verified against official sources \u2014 base path is hub/search APIs, docs moved; search example still works."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "un-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.un.org/ws/rest/",
+      "source": "https://data.un.org/Host.aspx?Content=API"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.un.org/Host.aspx?Content=API"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.un.org/Host.aspx?Content=API"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.un.org/Host.aspx?Content=UNdataUse"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.un.org/Host.aspx?Content=UNdataUse"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.un.org/Host.aspx?Content=API"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.un.org/Host.aspx?Content=API"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.un.org/Host.aspx?Content=API"
+    }
+  },
+  "notes": "base_url 500 may be transient; docs confirm REST path. CORS not documented. Re-check live endpoints."
+}

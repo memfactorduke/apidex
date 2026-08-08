@@ -1,0 +1,52 @@
+{
+  "id": "voyage-ai",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.voyageai.com/v1",
+      "source": "https://docs.voyageai.com/docs/embeddings"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.voyageai.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.voyageai.com/docs/api-key-and-installation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.voyageai.com/docs/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "200 million free tokens for all models (shared) for new users; also free trial credits may apply",
+      "source": "https://docs.voyageai.com/docs/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per model/tier (e.g. RPM and TPM limits vary by model and account tier)",
+      "source": "https://docs.voyageai.com/docs/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use a current model name (e.g. voyage-3.5 or voyage-4 series) and correct embeddings endpoint schema per docs",
+      "source": "https://docs.voyageai.com/docs/embeddings"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.voyageai.com/"
+    }
+  },
+  "notes": "Entry has outdated model name, understated free tier/rate limits as unknown, and needs doc-traced corrections. CORS remains unknown."
+}

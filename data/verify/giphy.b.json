@@ -1,0 +1,52 @@
+{
+  "id": "giphy",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.giphy.com/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.giphy.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.giphy.com/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.giphy.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.giphy.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.giphy.com/pricing/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.giphy.com/docs/api/endpoint#search"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.giphy.com/docs/"
+    }
+  },
+  "notes": "Verified against official GIPHY developer docs and pricing pages (2026). Base URL, API key auth, free tier, and search example match current docs. free_tier_limits and rate_limits correctly marked unknown/not published. CORS unknown is appropriate without authoritative evidence."
+}

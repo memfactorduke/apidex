@@ -1,0 +1,52 @@
+{
+  "id": "workos",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://workos.com/docs/reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://workos.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://workos.com/docs/reference/api-authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://workos.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "AuthKit/User Management: first 1M monthly active users free (then $2,500/mo per additional 1M MAUs). Radar: first 1,000 checks free. Staging environments free. SSO and Directory Sync are paid per connection from connection #1 (no free connections).",
+      "source": "https://workos.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: general 6,000 requests per 60 seconds per API key; AuthKit reads 1,000/10s and writes 500/10s on /user_management/*; plus endpoint-specific limits (e.g. SSO authorize 1,000/60s per connection, directory users 4/s per directory). See docs.",
+      "source": "https://workos.com/docs/reference/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://workos.com/docs/reference/authkit"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://workos.com/docs/reference/authkit/user"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://workos.com/docs"
+    }
+  },
+  "notes": "Fail on rate_limits and free_tier_limits: both are published on official WorkOS docs/pricing, not unknown/unpublished. API is operational; base URL, auth (Bearer sk_*), list-users example, and product description all match current docs."
+}

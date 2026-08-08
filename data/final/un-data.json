@@ -1,0 +1,105 @@
+{
+  "id": "un-data",
+  "status": "operational",
+  "name": "UNdata",
+  "category": "data-analytics",
+  "tagline": "Official SDMX REST/SOAP API for United Nations statistical databases",
+  "description": "UNdata\u2019s public API (powered by Eurostat SDMX-RI) gives programmatic access to UN statistical datamarts via SDMX REST and SOAP. List dataflows, pull data structure definitions and codelists, and query multi-dimensional series (XML, JSON, or CSV). Free under UNdata Terms of Use; no signup or API key. Not all UNdata datamarts are exposed until DSDs are mapped.",
+  "base_url": "https://data.un.org/ws/rest/",
+  "docs_url": "https://data.un.org/Host.aspx?Content=API",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication, API key, or signup. Structure and data endpoints respond to unauthenticated HTTPS GET/POST (REST and SOAP)."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "xml",
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free of charge under UNdata Terms of Use; no published numeric free-tier request caps",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://data.un.org/ws/rest/dataflow/\"",
+    "response_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!--NSI Web Service v8.15.1.0-->\n<message:Structure ...>\n  <message:Header>\n    <message:ID>IDREF39</message:ID>\n    <message:Prepared>2026-08-08T21:15:38...</message:Prepared>\n  </message:Header>\n  <message:Structures>\n    <structure:Dataflows>\n      <structure:Dataflow id=\"DF_SEEA_AEA\" agencyID=\"ESTAT\" version=\"1.3\" isFinal=\"true\">\n        <common:Name xml:lang=\"en\">Air emission accounts</common:Name>\n        ...\n      </structure:Dataflow>\n      <!-- additional dataflows -->\n    </structure:Dataflows>\n  </message:Structures>\n</message:Structure>"
+  },
+  "use_cases": [
+    "list available UNdata SDMX dataflows/datamarts",
+    "query air-emission or other UN statistical series by period",
+    "fetch data structure definitions and codelists for a dataflow",
+    "download multi-dimensional UN indicators as XML, JSON, or CSV",
+    "filter series by dimension codes and start/end period"
+  ],
+  "sources": [
+    "https://data.un.org/Host.aspx?Content=API",
+    "https://data.un.org/WS/",
+    "https://data.un.org/Host.aspx?Content=UNdataUse",
+    "https://unstats.un.org/unsd/api/",
+    "https://data.un.org/",
+    "https://data.un.org/Host.aspx?Content=FAQ"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

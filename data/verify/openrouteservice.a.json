@@ -1,0 +1,52 @@
+{
+  "id": "openrouteservice",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/dev/#/api-docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/dev/#/api-docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/dev/#/api-docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/plans/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 2,000 requests/day, 40 requests/minute (varies by endpoint; matrix/isochrones have lower daily caps). See https://openrouteservice.org/plans/",
+      "source": "https://openrouteservice.org/plans/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published on plans page: free tier ~40 req/min and 2,000 req/day (endpoint-dependent); higher limits on paid plans",
+      "source": "https://openrouteservice.org/plans/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/dev/#/api-docs/v2/directions/{profile}/get"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/"
+    }
+  },
+  "notes": "Rates and free limits are published on openrouteservice.org/plans; entry left them unknown/not published. Auth, base URL, docs URL, and directions example match official docs."
+}

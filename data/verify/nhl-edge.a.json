@@ -1,0 +1,52 @@
+{
+  "id": "nhl-edge",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-web.nhle.com/v1/scoreboard/now"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-web.nhle.com/v1/scoreboard/now"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    }
+  },
+  "notes": "Verified against live api-web.nhle.com and community NHL API reference. Unauthenticated public JSON API; no official developer portal. CORS remains unknown without browser OPTIONS probe. Example path works."
+}

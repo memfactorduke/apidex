@@ -1,0 +1,52 @@
+{
+  "id": "flightaware-aeroapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.flightaware.com/aeroapi/portal/documentation"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.flightaware.com/commercial/aeroapi/documentation",
+      "source": "https://www.flightaware.com/commercial/aeroapi/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.flightaware.com/aeroapi/portal/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.flightaware.com/aeroapi/portal/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No free tier; free_tier_limits should be null or N/A (not \"unknown\" when free_tier is false)",
+      "source": "https://www.flightaware.com/aeroapi/portal/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits exist and vary by plan (not \"not published\"); see plan/docs for request quotas",
+      "source": "https://www.flightaware.com/aeroapi/portal/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.flightaware.com/aeroapi/portal/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.flightaware.com/commercial/aeroapi/"
+    }
+  },
+  "notes": "Docs URL path may have migrated; pricing is paid-only with plan-based limits. CORS unstated. Adversarial check found docs/pricing page shifts vs entry."
+}

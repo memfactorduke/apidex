@@ -1,0 +1,94 @@
+{
+  "id": "flightaware-aeroapi",
+  "status": "operational",
+  "name": "FlightAware AeroAPI",
+  "category": "transportation",
+  "tagline": "Industry-standard flight tracking and historical flight data API.",
+  "description": "FlightAware AeroAPI provides real-time and historical flight tracking, airport information, flight status, and related aviation data used by developers and aviation applications worldwide.",
+  "base_url": "https://aeroapi.flightaware.com/aeroapi",
+  "docs_url": "https://www.flightaware.com/aeroapi/portal/documentation",
+  "signup_url": "https://www.flightaware.com/aeroapi/portal/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-apikey header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "Plan-based request quotas (see pricing/account); not a single public global limit",
+  "example": {
+    "request": "curl -H \"x-apikey: YOUR_API_KEY\" \"https://aeroapi.flightaware.com/aeroapi/flights/AAL100\"",
+    "response_snippet": "{ \"flights\": [ { \"ident\": \"AAL100\", \"origin\": { \"code\": \"KJFK\" }, \"destination\": { \"code\": \"EGLL\" } } ] }"
+  },
+  "use_cases": [
+    "get live status of a flight by ident",
+    "look up arrivals and departures at an airport",
+    "retrieve historical flight tracks",
+    "get airport information and delays"
+  ],
+  "sources": [
+    "https://www.flightaware.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

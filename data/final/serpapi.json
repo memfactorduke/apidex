@@ -1,0 +1,103 @@
+{
+  "id": "serpapi",
+  "status": "operational",
+  "name": "SerpApi",
+  "category": "data-analytics",
+  "tagline": "Real-time Google and multi-engine SERP results as structured JSON.",
+  "description": "SerpApi scrapes and parses search engine results pages (Google and 80+ other engines) into structured JSON. It handles proxies, captchas, and rich SERP features so developers can query organic results, ads, knowledge panels, and local packs without building scrapers.",
+  "base_url": "https://serpapi.com/search",
+  "docs_url": "https://serpapi.com/search-api",
+  "signup_url": "https://serpapi.com/users/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (self-serve signup; key at serpapi.com/manage-api-key)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "250 searches/month on Free plan (per current pricing); check serpapi.com/pricing for throughput",
+    "paid_plans": "Developer ~$75/mo (5k searches); Production $150/mo (15k); higher tiers scale to 100k+; Enterprise available"
+  },
+  "rate_limits": "Free plan: documented as 50 searches/hour throughput on older sources; verify current plan table on serpapi.com/pricing for exact hourly limits",
+  "example": {
+    "request": "curl \"https://serpapi.com/search.json?engine=google&q=Coffee&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\n  \"search_metadata\": {\"id\": \"...\", \"status\": \"Success\", \"created_at\": \"...\"},\n  \"search_parameters\": {\"engine\": \"google\", \"q\": \"Coffee\"},\n  \"organic_results\": [{\"position\": 1, \"title\": \"Coffee - Wikipedia\", \"link\": \"https://en.wikipedia.org/wiki/Coffee\", \"snippet\": \"...\"}]\n}"
+  },
+  "use_cases": [
+    "get Google organic SERP results for a keyword as JSON",
+    "check local pack / maps results for a business query",
+    "monitor ranking positions for SEO keywords over time",
+    "fetch Google Scholar or other engine results via engine parameter",
+    "power an agent with live web search snippets"
+  ],
+  "sources": [
+    "https://serpapi.com/",
+    "https://serpapi.com/search-api",
+    "https://serpapi.com/pricing",
+    "https://serpapi.com/account-api",
+    "https://serpapi.com/api-status-and-error-codes",
+    "https://serpapi.com/faq"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

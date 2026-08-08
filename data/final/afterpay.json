@@ -1,0 +1,93 @@
+{
+  "id": "afterpay",
+  "status": "operational",
+  "name": "Afterpay/Clearpay API",
+  "category": "ecommerce-payments",
+  "tagline": "Buy now, pay later checkout and payment APIs for merchants",
+  "description": "Afterpay (Clearpay in the UK/EU) provides merchant APIs for buy-now-pay-later checkout, payment authorisation, order capture/refunds, and related e-commerce flows. Merchants integrate via server-side REST endpoints using merchant credentials; documentation covers Online API, Express Checkout, and platform-specific SDKs.",
+  "base_url": "https://global-api.afterpay.com",
+  "docs_url": "https://developers.afterpay.com",
+  "signup_url": null,
+  "auth": {
+    "type": "basic",
+    "details": "unknown \u2014 needs official docs verification"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u MERCHANT_ID:SECRET_KEY -H 'Accept: application/json' https://global-api.afterpay.com/v2/configuration",
+    "response_snippet": "{\"minimumAmount\":{\"amount\":\"1.00\",\"currency\":\"USD\"},\"maximumAmount\":{\"amount\":\"2000.00\",\"currency\":\"USD\"}}"
+  },
+  "use_cases": [
+    "create Afterpay checkout session for an order",
+    "capture or refund an Afterpay payment"
+  ],
+  "sources": [
+    "https://developers.afterpay.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "free_tier",
+      "free_tier_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "auth_type",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

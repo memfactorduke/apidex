@@ -1,0 +1,52 @@
+{
+  "id": "the-odds-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "500 credits/month free (not requests \u2014 odds endpoints cost multiple credits per region; see pricing)",
+      "source": "https://the-odds-api.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-odds-api.com/liveapi/guides/v4/"
+    }
+  },
+  "notes": "Credits vs requests is the main material error; free tier is credits-based."
+}

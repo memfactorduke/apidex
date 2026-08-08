@@ -1,0 +1,96 @@
+{
+  "id": "loc-gov",
+  "status": "operational",
+  "name": "Library of Congress API",
+  "category": "education-reference",
+  "tagline": "Search LOC collections, Chronicling America newspapers, and catalog records as JSON.",
+  "description": "Public JSON APIs from the Library of Congress for searching digital collections, bibliographic catalog records, and Chronicling America historic newspapers. Most endpoints are free and require no API key; they return structured JSON for items, search results, and newspaper pages from loc.gov holdings.",
+  "base_url": "https://www.loc.gov",
+  "docs_url": "https://www.loc.gov/apis/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public LOC JSON APIs; requests are unauthenticated HTTP GET."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://www.loc.gov/search/?q=civil+war&fo=json\"",
+    "response_snippet": "{\n  \"results\": [{\"title\": \"...\", \"id\": \"...\", \"url\": \"https://www.loc.gov/...\"}],\n  \"pagination\": {\"total\": 12345, \"perpage\": 25}\n}"
+  },
+  "use_cases": [
+    "search Library of Congress digital collections by keyword",
+    "fetch catalog metadata for a LOC item by ID",
+    "query Chronicling America historic newspaper pages",
+    "list LOC collection items with JSON facets and pagination"
+  ],
+  "sources": [
+    "https://www.loc.gov/apis/",
+    "https://www.loc.gov/apis/json-and-yaml/",
+    "https://chroniclingamerica.loc.gov/about/api/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

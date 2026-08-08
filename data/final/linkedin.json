@@ -1,0 +1,97 @@
+{
+  "id": "linkedin",
+  "status": "operational",
+  "name": "LinkedIn API",
+  "category": "social-communication",
+  "tagline": "Professional network API for profiles, org pages, posts, and ads",
+  "description": "LinkedIn provides REST APIs for developers to access professional network data: member profiles, company/organization pages, content sharing, messaging, and advertising. Most products require OAuth 2.0 and LinkedIn Developer application approval; consumer-facing open endpoints are limited. Marketing, Community Management, and Talent/Learning products have separate product access and rate limits.",
+  "base_url": "https://api.linkedin.com/v2",
+  "docs_url": "https://learn.microsoft.com/en-us/linkedin/",
+  "signup_url": "https://www.linkedin.com/developers/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 authorization code flow (3-legged) for member data; client credentials for some app-only products. Create an app at LinkedIn Developers, request product access (e.g. Sign In with LinkedIn, Marketing Developer Platform), use access tokens as Bearer tokens."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 product access and usage quotas are per LinkedIn product; no simple public free-tier request quota published for the core REST API",
+    "paid_plans": "LinkedIn Marketing Solutions / Advertising APIs and some enterprise products are paid; many developer products are free with application approval and daily application limits"
+  },
+  "rate_limits": "not published as a single global limit; application and member daily limits apply per product (e.g. throttle headers; see product-specific docs)",
+  "example": {
+    "request": "curl -X GET 'https://api.linkedin.com/v2/userinfo' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
+    "response_snippet": "{\"sub\":\"abc123\",\"name\":\"Jane Doe\",\"given_name\":\"Jane\",\"family_name\":\"Doe\",\"picture\":\"https://media.licdn.com/...\",\"email\":\"jane@example.com\",\"email_verified\":true,\"locale\":\"en_US\"}"
+  },
+  "use_cases": [
+    "sign users in with LinkedIn OpenID Connect and fetch basic profile",
+    "get authenticated member profile fields via Share on LinkedIn / Sign In products",
+    "publish posts or share content to a LinkedIn organization page",
+    "manage LinkedIn Ads campaigns and creative via Marketing Developer Platform",
+    "retrieve organization page statistics and follower counts"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/linkedin/",
+    "https://www.linkedin.com/developers/",
+    "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

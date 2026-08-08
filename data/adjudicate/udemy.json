@@ -1,0 +1,15 @@
+{
+  "id": "udemy",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "basic",
+  "free_tier": true,
+  "free_tier_limits": "Free for approved Udemy Affiliate Program members; no separate paid API plan published. Numeric quota/rate free-tier limits not publicly documented.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -u \"CLIENT_ID:CLIENT_SECRET\" \"https://www.udemy.com/api-2.0/courses/?page=1&page_size=1\"",
+  "example_response_snippet": "{\n  \"count\": 100000,\n  \"next\": \"https://www.udemy.com/api-2.0/courses/?page=2&page_size=1\",\n  \"previous\": null,\n  \"results\": [\n    {\n      \"_class\": \"course\",\n      \"id\": 567828,\n      \"title\": \"The Complete Python Bootcamp From Zero to Hero in Python\",\n      \"url\": \"/course/complete-python-bootcamp/\"\n    }\n  ]\n}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: basic \u2014 official Affiliate API docs require HTTP Basic Auth with client_id:client_secret (base64), not a single API key; both verifiers correct (https://www.udemy.com/developers/affiliate/). free_tier: true \u2014 API access is free for approved Udemy affiliates; no paid API tier published on docs (same source). free_tier_limits: free for approved affiliates; exact numeric quotas not documented publicly (same source). example: original used Authorization: Basic YOUR_API_KEY (wrong); corrected to curl -u CLIENT_ID:CLIENT_SECRET against /api-2.0/courses/; response shape is paginated count/next/previous/results per docs (same source). Automated curl 403 on base/docs is bot/WAF, not defunct \u2014 domains and official affiliate developer pages remain live."
+}

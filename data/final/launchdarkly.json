@@ -1,0 +1,98 @@
+{
+  "id": "launchdarkly",
+  "status": "operational",
+  "name": "LaunchDarkly API",
+  "category": "dev-tools",
+  "tagline": "Feature flags and progressive delivery control plane",
+  "description": "LaunchDarkly is a feature management platform with a REST API for managing flags, environments, segments, and experiments. Developers use it to automate flag lifecycle, sync configuration, and integrate progressive delivery into CI/CD and ops tooling.",
+  "base_url": "https://app.launchdarkly.com/api/v2",
+  "docs_url": "https://launchdarkly.com/docs/api",
+  "signup_url": "https://app.launchdarkly.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API access token via Authorization: YOUR_API_KEY header (or Authorization: Bearer YOUR_API_KEY). Create personal or service tokens in Account settings; project-scoped tokens available."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 free Developer plan exists but API call quotas not published on public pricing page",
+    "paid_plans": "Foundation, Enterprise, and Guardian plans; contact sales for API-specific entitlements"
+  },
+  "rate_limits": "not published on public docs as of research date",
+  "example": {
+    "request": "curl -s -H \"Authorization: YOUR_API_KEY\" -H \"Content-Type: application/json\" \"https://app.launchdarkly.com/api/v2/projects\"",
+    "response_snippet": "{\"_links\":{\"self\":{\"href\":\"/api/v2/projects\",\"type\":\"application/json\"}},\"items\":[{\"_links\":{\"self\":{\"href\":\"/api/v2/projects/default\",\"type\":\"application/json\"}},\"key\":\"default\",\"name\":\"Default Project\",\"_id\":\"...\"}],\"totalCount\":1}"
+  },
+  "use_cases": [
+    "list projects and environments in a LaunchDarkly account",
+    "create or update a feature flag for an environment",
+    "toggle a flag on or off for progressive rollout",
+    "list flag configurations and targeting rules",
+    "manage segments used for audience targeting"
+  ],
+  "sources": [
+    "https://docs.launchdarkly.com/",
+    "https://apidocs.launchdarkly.com/",
+    "https://launchdarkly.com/pricing/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url"
+    ],
+    "unverifiable": []
+  }
+}

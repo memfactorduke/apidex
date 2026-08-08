@@ -1,0 +1,52 @@
+{
+  "id": "reddit",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reddit.com/dev/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reddit.com/dev/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/reddit-archive/reddit/wiki/OAuth2"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier is limited; free access is for non-commercial use with rate limits and app registration requirements. Commercial use requires approval and paid terms. Exact free-tier quotas are not a simple \"unlimited free\" \u2014 free apps still face OAuth client rate limits (~100 QPM historically, subject to change).",
+      "source": "https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Official guidance centers on OAuth client rate limits (commonly cited ~100 requests per minute for OAuth clients, with endpoint-specific variation). Exact current numeric limits should be taken from response headers (X-Ratelimit-*) and Reddit's Data API terms; \"60\u2013100 req/min\" is approximate/legacy and not a fixed published guarantee.",
+      "source": "https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reddit.com/dev/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reddit.com/dev/api"
+    }
+  },
+  "notes": "Adversarial check: core OAuth base URL, docs, and auth type match official Reddit API docs. Main risk fields are pricing/rate-limit wording \u2014 free vs commercial and exact QPM are policy/docs-dependent and often overstated in third-party summaries. CORS not stated in official docs. No shutdown of oauth.reddit.com found."
+}

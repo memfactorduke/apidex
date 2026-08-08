@@ -1,0 +1,15 @@
+{
+  "id": "openaq",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "60 requests/minute, 2,000 requests/hour (free/general tier); higher limits available via custom paid contact",
+  "rate_limits": "60 requests/minute and 2,000 requests/hour per API key (free/general use); 429 when exceeded; custom higher limits available",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: VERDICT=correct Verifier B. Official docs at https://docs.openaq.org/using-the-api/rate-limits state free/general tier is 60 req/min and 2,000 req/hour; original 'unknown' was wrong. rate_limits: VERDICT=correct Verifier B. Same page documents 60/min and 2,000/hour per API key with 429 on exceed and custom higher limits; original 'not published' was wrong."
+}

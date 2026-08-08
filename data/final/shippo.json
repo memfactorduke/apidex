@@ -1,0 +1,101 @@
+{
+  "id": "shippo",
+  "status": "operational",
+  "name": "Shippo",
+  "category": "transportation",
+  "tagline": "Multi-carrier shipping labels, rates, tracking, and address validation via one API.",
+  "description": "Shippo is a multi-carrier shipping platform API that lets apps get live rates, buy and print labels, track packages, validate addresses, and manage returns across carriers such as USPS, UPS, FedEx, and DHL. Developers authenticate with API tokens (test and live), use a free starter tier for label volume, and integrate via a REST JSON API with official SDKs for common languages.",
+  "base_url": "https://api.goshippo.com",
+  "docs_url": "https://docs.goshippo.com/",
+  "signup_url": "https://apps.goshippo.com/join",
+  "auth": {
+    "type": "apiKey",
+    "details": "Shippo API token as Authorization: ShippoToken YOUR_API_KEY (test and live tokens from the dashboard after self-serve signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API Starter (Free): 30 labels/month free, then 7\u00a2/label; no monthly platform fee. Standalone fees: tracking 2\u00a2/track, rating 1\u00a2/rate, US address validation 2\u00a2, non-US 8\u00a2 (see pricing/api).",
+    "paid_plans": "Pay-as-you-go and higher volume plans with discounted platform fees per label; enterprise options available."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.goshippo.com/tracks/ -H \"Authorization: ShippoToken YOUR_API_KEY\" -d carrier=\"usps\" -d tracking_number=\"9205590164917312751089\"",
+    "response_snippet": "{\"carrier\":\"usps\",\"tracking_number\":\"9205590164917312751089\",\"tracking_status\":{\"status\":\"DELIVERED\",\"status_details\":\"Your shipment has been delivered at the destination mailbox.\",\"status_date\":\"2023-07-23T13:03:00Z\"},\"tracking_history\":[{\"status\":\"TRANSIT\",\"status_details\":\"Your shipment has been accepted.\"}]}"
+  },
+  "use_cases": [
+    "get live multi-carrier shipping rates for a package",
+    "buy and download a shipping label PDF",
+    "track a package by carrier and tracking number",
+    "validate and standardize a shipping address",
+    "create a multi-piece shipment and purchase labels"
+  ],
+  "sources": [
+    "https://docs.goshippo.com/",
+    "https://goshippo.com/pricing",
+    "https://docs.goshippo.com/docs/guides_general/authentication/",
+    "https://docs.goshippo.com/docs/tracking/tracking/",
+    "https://goshippo.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

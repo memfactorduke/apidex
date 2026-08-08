@@ -1,0 +1,52 @@
+{
+  "id": "klarna",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.klarna.com/ is not the documented primary merchant API base in current Klarna docs; playground and production hostnames are region-specific (e.g. https://api.playground.klarna.com for EU playground, https://api.klarna.com for EU production, with NA/OC variants such as api-na.klarna.com / api-oc.klarna.com).",
+      "source": "https://docs.klarna.com/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.klarna.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.klarna.com/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.klarna.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.klarna.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.klarna.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Payments session create is POST (not implicit GET). Documented production path remains under payments API, but base host and auth must match merchant region; example URL as written may hit wrong region or wrong method if used as-is.",
+      "source": "https://docs.klarna.com/api/payments-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.klarna.com/"
+    }
+  },
+  "notes": "Adversarial check: region-specific API hosts and POST method for sessions are the main issues; merchant pricing not public SaaS."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "defillama",
+  "base_url": "https://api.llama.fi",
+  "docs_url": "https://defillama.com/docs/api",
+  "auth_type": "none",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl https://api.llama.fi/protocols",
+  "example_response_snippet": "[]",
+  "description": "DefiLlama provides free public APIs for DeFi TVL, yields, fees, bridges, stablecoins, coins, and protocol analytics across chains.",
+  "status": "operational",
+  "resolution_notes": "base_url: CONFIRMED original value https://api.llama.fi is the primary documented base URL for TVL/core endpoints (docs: https://defillama.com/docs/api). Verifier A noted additional product-specific hosts (coins.llama.fi, stablecoins.llama.fi, yields.llama.fi, bridges.llama.fi) but correctly stated the primary base remains api.llama.fi. Bare root 404 is expected (no index route) and does not indicate a dead API. Verifier B confirmed. Automated 404 on root and docs 403 are not evidence of incorrect base_url."
+}

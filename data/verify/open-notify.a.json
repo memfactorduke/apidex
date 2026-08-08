@@ -1,0 +1,52 @@
+{
+  "id": "open-notify",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "http://open-notify.org/Open-Notify-API/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "http://open-notify.org/Open-Notify-API/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "http://open-notify.org/Open-Notify-API/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "http://open-notify.org/Open-Notify-API/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "http://open-notify.org/Open-Notify-API/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "http://open-notify.org/Open-Notify-API/ISS-Location-Now/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "http://open-notify.org/Open-Notify-API/"
+    }
+  },
+  "notes": "Live API returned 200 for iss-now.json and astros.json. Docs and endpoints use HTTP only; no auth or published free-tier quotas. Rate limit is documented as one request per second. CORS not stated in docs; live preflight not fully verified."
+}

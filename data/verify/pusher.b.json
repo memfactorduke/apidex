@@ -1,0 +1,52 @@
+{
+  "id": "pusher",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pusher.com/docs/channels/server_api/http-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pusher.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pusher.com/docs/channels/server_api/authenticating-users/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pusher.com/channels/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pusher.com/channels/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pusher.com/docs/channels/server_api/http-api/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pusher.com/docs/channels/server_api/http-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pusher.com/docs"
+    }
+  },
+  "notes": "Verified against official Pusher docs and pricing. base_url pattern is correct (cluster-specific). Auth is HMAC-SHA256. Free tier exists. Rate limits not clearly published for REST. CORS unknown is accurate for server API. Example curl is consistent with docs. Description accurate for Channels/Beams."
+}

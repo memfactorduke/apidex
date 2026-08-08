@@ -1,0 +1,103 @@
+{
+  "id": "docker-hub",
+  "status": "operational",
+  "name": "Docker Hub API",
+  "category": "dev-tools",
+  "tagline": "Registry and Hub metadata API for images, tags, repos, and orgs",
+  "description": "Docker Hub\u2019s HTTP API for registry content and Hub account data: list repositories, tags, and manifests; manage orgs and access; and integrate pulls/pushes with the Docker ecosystem. Public endpoints support anonymous reads with strict rate limits; authenticated requests use personal access tokens or JWT login.",
+  "base_url": "https://hub.docker.com/v2",
+  "docs_url": "https://docs.docker.com/docker-hub/api/latest/",
+  "signup_url": "https://hub.docker.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal Access Token (PAT) via Bearer Authorization header, or JWT from POST /v2/users/login; anonymous read allowed with lower limits"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free Docker Hub plan includes limited pull rate and API usage; exact free API quota varies by plan\u2014confirm on pricing",
+    "paid_plans": "Pro, Team, and Business plans with higher pull rates and features"
+  },
+  "rate_limits": "Anonymous pulls ~100/6h per IP; authenticated higher by plan; Hub API rate limits documented per endpoint",
+  "example": {
+    "request": "curl -sS -H \"Authorization: Bearer YOUR_API_KEY\" \"https://hub.docker.com/v2/repositories/library/nginx/tags?page_size=5\"",
+    "response_snippet": "{\"count\":...,\"next\":...,\"results\":[{\"name\":\"latest\",\"full_size\":...,\"images\":[...]}]}"
+  },
+  "use_cases": [
+    "list tags for a Docker Hub repository",
+    "check if an image tag exists before deploy",
+    "list repositories in a Docker Hub namespace",
+    "fetch repository metadata and star/pull counts",
+    "authenticate and inspect private Hub repos with a PAT"
+  ],
+  "sources": [
+    "https://docs.docker.com/docker-hub/api/latest/",
+    "https://hub.docker.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "free_tier",
+      "free_tier_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": []
+  }
+}

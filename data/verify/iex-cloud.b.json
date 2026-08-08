@@ -1,0 +1,52 @@
+{
+  "id": "iex-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Service discontinued; no active IEX Cloud API base URL. Former base was https://cloud.iexapis.com/stable. See IEX Group / IEX Cloud shutdown notices.",
+      "source": "https://iexcloud.io/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "IEX Cloud docs/site appear offline or redirected after shutdown. No maintained public docs URL at https://iexcloud.io/docs/.",
+      "source": "https://iexcloud.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://iexcloud.io/docs/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 IEX Cloud service shut down; free tier no longer available",
+      "source": "https://iexcloud.io/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "N/A \u2014 service discontinued",
+      "source": "https://iexcloud.io/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Endpoint no longer works; IEX Cloud API discontinued. Former pattern was GET https://cloud.iexapis.com/stable/stock/{symbol}/quote?token=YOUR_API_KEY",
+      "source": "https://iexcloud.io/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "IEX Cloud provided RESTful market data APIs but the service has been shut down and is no longer operational for new or existing developers.",
+      "source": "https://iexcloud.io/"
+    }
+  },
+  "notes": "IEX Cloud was discontinued (service shutdown). Automated checks got HTTP 0 on base and docs URLs. Entry incorrectly marks status operational and describes live pricing/auth. Confirm historical auth/path patterns only where docs still archived; do not present as live API."
+}

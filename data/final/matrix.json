@@ -1,0 +1,99 @@
+{
+  "id": "matrix",
+  "status": "operational",
+  "name": "Matrix",
+  "category": "social-communication",
+  "tagline": "Open protocol and Client-Server API for decentralized real-time messaging",
+  "description": "Matrix is an open standard for decentralized, real-time communication. Developers use the Client-Server API (typically against a homeserver such as matrix.org) to send and receive messages, manage rooms, and build chat clients, bots, and bridges without a single central provider.",
+  "base_url": "https://matrix.org/_matrix/client/v3",
+  "docs_url": "https://spec.matrix.org/latest/client-server-api/",
+  "signup_url": "https://matrix.org/docs/guides/getting-involved",
+  "auth": {
+    "type": "other",
+    "details": "Access token via Authorization: Bearer header after login or registration (POST /login, /register); optional device_id. No global API key \u2014 auth is per homeserver user account."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "matrix.org public homeserver is free for accounts; no published per-request free-tier quota for the open Client-Server API",
+    "paid_plans": "Homeserver hosting and commercial Matrix services (e.g. Element Matrix Services) are separately priced; the protocol/API itself is free/open"
+  },
+  "rate_limits": "not published globally; homeserver-dependent (matrix.org and other hosts apply their own limits)",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://matrix.org/_matrix/client/v3/account/whoami\"",
+    "response_snippet": "{\"user_id\":\"@alice:matrix.org\",\"device_id\":\"DEVICEID\",\"is_guest\":false}"
+  },
+  "use_cases": [
+    "send a message to a Matrix room",
+    "list joined rooms for a user",
+    "sync new messages and events for a client",
+    "create a room and invite users",
+    "look up a user profile or avatar",
+    "register a bot account on a homeserver"
+  ],
+  "sources": [
+    "https://spec.matrix.org/latest/client-server-api/",
+    "https://matrix.org/",
+    "https://matrix.org/docs/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

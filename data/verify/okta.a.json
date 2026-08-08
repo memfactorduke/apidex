@@ -1,0 +1,52 @@
+{
+  "id": "okta",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/reference/api/users/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/guides/create-an-api-token/main/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/signup/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: concurrent rate limits, org-wide rate limits, and endpoint-specific limits documented (e.g. Users API defaults; headers X-Rate-Limit-Limit/Remaining/Reset)",
+      "source": "https://developer.okta.com/docs/reference/rl-best-practices/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/reference/api/users/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.okta.com/docs/"
+    }
+  },
+  "notes": "base_url is a documented template (not a live host), so curl HTTP 0 is expected. Rate limits are published; free_tier_limits remain product/plan-dependent and not cleanly stated as a single free API quota."
+}

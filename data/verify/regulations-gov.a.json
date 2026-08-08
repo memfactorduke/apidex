@@ -1,0 +1,52 @@
+{
+  "id": "regulations-gov",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.gsa.gov/api/regulationsgov/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.gsa.gov/api/regulationsgov/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.gsa.gov/api/regulationsgov/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.data.gov/signup/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.data.gov/rate-limit/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.data.gov/rate-limit/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.gsa.gov/api/regulationsgov/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.gsa.gov/api/regulationsgov/"
+    }
+  },
+  "notes": "Verified against official GSA/open.gsa.gov docs and api.data.gov rate-limit pages. Base URL v4, X-Api-Key auth, free api.data.gov tier (~1,000 req/hour), and example path are consistent with current documentation."
+}

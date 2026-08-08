@@ -1,0 +1,52 @@
+{
+  "id": "eurostat",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests/minute; max ~30 MB compressed response (or ~1 GB uncompressed); synchronous wait up to 60s; max 2 concurrent requests; up to 50 queries/day for asynchronous processing (queued responses). See official API Getting Started.",
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access"
+    }
+  },
+  "notes": "Vague rate_limits claim is wrong: docs publish concrete limits (60 req/min, size caps, concurrency, async daily cap). base_url, docs, no-auth, free access, and example path are consistent with official Getting Started."
+}

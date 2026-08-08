@@ -1,0 +1,52 @@
+{
+  "id": "rcsb-pdb",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.rcsb.org/rest/v1/core/entry/4HHB"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rcsb.org/docs/programmatic-access/web-apis-overview"
+    }
+  },
+  "notes": "Verified against RCSB official docs and live Data API. Open access, no API key; base/docs URLs and example entry path match. Rate limits and free-tier quotas not published on overview. CORS not documented."
+}

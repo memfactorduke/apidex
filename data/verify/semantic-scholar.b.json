@@ -1,0 +1,52 @@
+{
+  "id": "semantic-scholar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.semanticscholar.org/api-docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.semanticscholar.org/api-docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.semanticscholar.org/product/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.semanticscholar.org/product/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Shared unauthenticated: ~100 req/5 min; with free API key: ~1 req/s (shared pool); partner higher limits available",
+      "source": "https://www.semanticscholar.org/product/api#api-key-form"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Unauthenticated ~100 requests per 5 minutes; API key ~1 request per second (shared); partners get higher limits",
+      "source": "https://www.semanticscholar.org/product/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.semanticscholar.org/api-docs/graph"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.semanticscholar.org/product/api"
+    }
+  },
+  "notes": "Rate limits are published (entry said unknown/not published). Auth optional via x-api-key is correct. Base URL and graph/v1 paper search path match current docs."
+}

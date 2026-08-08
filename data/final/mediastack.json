@@ -1,0 +1,97 @@
+{
+  "id": "mediastack",
+  "status": "operational",
+  "name": "Mediastack",
+  "category": "news-media",
+  "tagline": "Real-time and historical news headlines API for global media coverage",
+  "description": "Mediastack is a REST API for live and historical news headlines from thousands of sources worldwide. It supports filtering by keyword, country, language, category, source, and date, with JSON responses suited to news apps, aggregators, and research tools.",
+  "base_url": "https://api.mediastack.com/v1",
+  "docs_url": "https://mediastack.com/documentation",
+  "signup_url": "https://mediastack.com/signup/free",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via access_key query parameter; self-serve signup at mediastack.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "100 requests/month free (Free plan); HTTP only on free tier",
+    "paid_plans": "Standard from ~$24.99/mo (10k req), Professional ~$99.99/mo (50k), Business ~$249.99/mo (250k); higher tiers available"
+  },
+  "rate_limits": "Monthly request quotas by plan; per-minute limits not clearly published on pricing page",
+  "example": {
+    "request": "curl \"https://api.mediastack.com/v1/news?access_key=YOUR_API_KEY&keywords=technology&countries=us&limit=10\"",
+    "response_snippet": "{\"pagination\":{\"limit\":10,\"offset\":0,\"count\":10,\"total\":100},\"data\":[{\"author\":\"Example Author\",\"title\":\"Sample tech headline\",\"description\":\"Brief summary of the article.\",\"url\":\"https://example.com/article\",\"source\":\"example-news\",\"image\":null,\"category\":\"technology\",\"language\":\"en\",\"country\":\"us\",\"published_at\":\"2026-08-01T12:00:00+00:00\"}]}"
+  },
+  "use_cases": [
+    "fetch latest headlines by keyword or topic",
+    "filter news by country, language, or category",
+    "build a news aggregator or media monitoring feed",
+    "pull historical news for a date range",
+    "search articles from specific sources"
+  ],
+  "sources": [
+    "https://mediastack.com/",
+    "https://mediastack.com/documentation",
+    "https://mediastack.com/pricing",
+    "https://mediastack.com/signup/free"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

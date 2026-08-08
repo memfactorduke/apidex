@@ -1,0 +1,52 @@
+{
+  "id": "graphhopper",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.graphhopper.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.graphhopper.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.graphhopper.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.graphhopper.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier includes limited monthly credits (check current pricing page; historically ~500 free credits/requests depending on plan packaging \u2014 verify exact numbers on graphhopper.com/pricing as they change). Entry said \"unknown\" when limits are published.",
+      "source": "https://www.graphhopper.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are documented for the hosted API (e.g. concurrent request and/or QPS limits by plan); not \"not published\".",
+      "source": "https://docs.graphhopper.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.graphhopper.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.graphhopper.com/"
+    }
+  },
+  "notes": "Adversarial check pending full doc fetch \u2014 will refine free_tier_limits/rate_limits from official pages before finalizing."
+}

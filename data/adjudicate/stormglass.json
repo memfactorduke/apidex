@@ -1,0 +1,15 @@
+{
+  "id": "stormglass",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "10 requests/day; all weather parameters; non-commercial only (no support)",
+  "rate_limits": "Daily request quotas by plan: Free 10/day; Small 500/day; Medium 5,000/day; Large 25,000/day; exceed \u2192 Too Many Requests",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: original 'unknown' wrong; Verifier B's 50/day is outdated. Official pricing + FAQ (2026): Free = 10 requests/day, all params, non-commercial. Sources: https://stormglass.io/pricing/ , https://stormglass.io/faq/ . rate_limits: original 'not published' wrong; Verifier B plan names/quotas outdated (Hobby/Standard/Pro 50/500/5k/50k). Current published daily quotas: Free 10, Small 500, Medium 5000, Large 25000; over-limit returns Too Many Requests. Sources: https://stormglass.io/pricing/ , https://stormglass.io/faq/ ."
+}

@@ -1,0 +1,100 @@
+{
+  "id": "interactive-brokers",
+  "status": "operational",
+  "name": "Interactive Brokers",
+  "category": "finance",
+  "tagline": "Institutional-grade brokerage API for trading, market data, and account management",
+  "description": "Interactive Brokers (IBKR) provides multi-asset trading APIs used by algo traders, fintech apps, and institutions to place orders, stream market data, manage portfolios, and automate brokerage workflows across stocks, options, futures, forex, and more.",
+  "base_url": "https://localhost:5000/v1/api",
+  "docs_url": "https://www.interactivebrokers.com/campus/ibkr-api-page/ibkr-api-home/",
+  "signup_url": "https://www.interactivebrokers.com/en/trading/ib-api.php",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 / session-based auth via Client Portal Web API; also TWS/Gateway socket auth for native API. Account required."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access included with IBKR brokerage accounts; market data and commissions billed separately per IBKR schedule",
+    "paid_plans": "No separate API SaaS fee; brokerage commissions + optional market data subscriptions apply"
+  },
+  "rate_limits": "not published as a simple public free-tier quota; Gateway/CPAPI enforce session and pacing limits (varies by endpoint)",
+  "example": {
+    "request": "curl -s 'https://localhost:5000/v1/api/portfolio/accounts' -H 'Cookie: YOUR_SESSION'",
+    "response_snippet": "[{\"id\":\"U1234567\",\"accountId\":\"U1234567\",\"accountVan\":\"U1234567\",\"accountTitle\":\"...\",\"accountAlias\":null,\"currency\":\"USD\"}]"
+  },
+  "use_cases": [
+    "list brokerage accounts for a logged-in IBKR session",
+    "place and cancel stock or options orders programmatically",
+    "stream or poll real-time quotes and historical bars",
+    "fetch portfolio positions and account P&amp;L",
+    "automate multi-asset trading workflows across stocks, futures, and FX"
+  ],
+  "sources": [
+    "https://www.interactivebrokers.com/campus/ibkr-api-page/ibkr-api-home/",
+    "https://www.interactivebrokers.com/en/trading/ib-api.php",
+    "https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

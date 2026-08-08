@@ -1,0 +1,15 @@
+{
+  "id": "mojang",
+  "base_url": "https://api.mojang.com",
+  "docs_url": "https://wiki.vg/Mojang_API",
+  "auth_type": "none",
+  "free_tier": true,
+  "free_tier_limits": "Public profile and session endpoints are free; no published paid tier for these services",
+  "rate_limits": "not published (community reports soft limits; treat as unknown officially)",
+  "cors": "unknown",
+  "example_request": "curl -s \"https://api.mojang.com/users/profiles/minecraft/Notch\"",
+  "example_response_snippet": "{\"id\":\"069a79f444e94726a5befca90e38aaf5\",\"name\":\"Notch\"}",
+  "description": "Public Mojang/Minecraft services for account profiles, UUID/name lookup, textures, and session validation used by launchers and multiplayer tooling. Core identity and session endpoints remain free and unauthenticated for public profile data, with Microsoft account auth for full account flows.",
+  "status": "operational",
+  "resolution_notes": "Researching disputed fields (base_url, docs_url, example) against current Mojang/Minecraft API docs and live endpoints."
+}

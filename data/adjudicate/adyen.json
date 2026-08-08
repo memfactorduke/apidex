@@ -1,0 +1,15 @@
+{
+  "id": "adyen",
+  "base_url": "https://checkout-test.adyen.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: corrected. Verifier B was right that hardcoding /v71 is fragile. Official Checkout docs (docs.adyen.com) and API Explorer still document https://checkout-test.adyen.com as the test host and version the path (currently /v71 in examples); live hosts are company-prefix + region (e.g. https://{PREFIX}-checkout-live.adyenpayments.com). Directory base_url should be the stable test host root without a pinned major version so it does not go stale when Adyen ships v72+. Evidence: https://docs.adyen.com/api-explorer/Checkout/latest/overview , https://docs.adyen.com/development-resources/live-endpoints , https://docs.adyen.com/online-payments/ ."
+}

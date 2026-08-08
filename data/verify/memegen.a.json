@@ -1,0 +1,52 @@
+{
+  "id": "memegen",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/jacebrowning/memegen"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.memegen.link"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.memegen.link/images/buzz/memes/memes_everywhere.webp\"",
+      "source": "https://api.memegen.link"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Programmatic meme image generation from templates and custom text (via Memegen.link).",
+      "source": "https://api.memegen.link"
+    }
+  },
+  "notes": "Entry mostly accurate; description is placeholder research text, example is not a real API call."
+}

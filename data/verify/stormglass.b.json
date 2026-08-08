@@ -1,0 +1,52 @@
+{
+  "id": "stormglass",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stormglass.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stormglass.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stormglass.io/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stormglass.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "50 requests/day (and 50 requests/month for tide endpoint); free plan documented on pricing",
+      "source": "https://stormglass.io/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 50 requests/day; Hobby: 500/day; Standard: 5,000/day; Pro: 50,000/day (from official pricing)",
+      "source": "https://stormglass.io/pricing/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stormglass.io/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stormglass.io/"
+    }
+  },
+  "notes": "Pricing pages publish free-tier and daily request quotas; entry marked free_tier_limits and rate_limits as unknown/not published despite official docs. Auth is Authorization header with API key. Base URL and point weather example match current v2 docs."
+}

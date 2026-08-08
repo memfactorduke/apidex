@@ -1,0 +1,102 @@
+{
+  "id": "mastodon",
+  "status": "operational",
+  "name": "Mastodon",
+  "category": "social-communication",
+  "tagline": "Decentralized social networking API for federated Mastodon instances",
+  "description": "Mastodon is a free, open-source, decentralized social network based on ActivityPub. Each instance runs its own Mastodon server with a REST API for timelines, posts (statuses), accounts, media, notifications, and OAuth-based client apps. Developers target a specific instance base URL rather than a single global host; the API is largely the same across servers.",
+  "base_url": "https://{instance}/api/v1",
+  "docs_url": "https://docs.joinmastodon.org/client/intro/",
+  "signup_url": null,
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 (client credentials or authorization code). Register an app via POST /api/v1/apps, then obtain a bearer token; send Authorization: Bearer ACCESS_TOKEN on API requests. Some public read endpoints work without auth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access is free on self-hosted or public instances; no central paid API product. Instance operators set their own limits.",
+    "paid_plans": null
+  },
+  "rate_limits": "Default ~300 requests per 5 minutes per IP/user (varies by instance; check X-RateLimit-* headers). Not a global SLA.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://mastodon.social/api/v1/timelines/public?limit=1\"",
+    "response_snippet": "[{\"id\":\"109372942893136018\",\"created_at\":\"2022-11-16T08:00:00.000Z\",\"content\":\"<p>Hello world</p>\",\"account\":{\"id\":\"1\",\"username\":\"Gargron\",\"acct\":\"Gargron\",\"display_name\":\"Eugen\"},\"reblogs_count\":0,\"favourites_count\":0,\"replies_count\":0}]"
+  },
+  "use_cases": [
+    "post a status to a Mastodon account",
+    "fetch a user's public timeline or home feed",
+    "search accounts and hashtags on an instance",
+    "upload media and attach it to a toot",
+    "stream notifications or public timeline updates",
+    "look up account profiles by username"
+  ],
+  "sources": [
+    "https://docs.joinmastodon.org/",
+    "https://docs.joinmastodon.org/client/intro/",
+    "https://docs.joinmastodon.org/api/rate-limits/",
+    "https://docs.joinmastodon.org/methods/timelines/",
+    "https://docs.joinmastodon.org/client/token/",
+    "https://docs.joinmastodon.org/methods/apps/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

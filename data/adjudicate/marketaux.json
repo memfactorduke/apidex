@@ -1,0 +1,15 @@
+{
+  "id": "marketaux",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "100 API credits/day (Basic/free plan); credits may differ from request count depending on endpoint usage",
+  "rate_limits": "100 API credits/day on free tier; higher daily credit limits on paid plans (see marketaux.com/pricing)",
+  "cors": null,
+  "example_request": "curl \"https://api.marketaux.com/v1/news/all?symbols=AAPL&filter_entities=true&language=en&api_token=YOUR_API_KEY\"",
+  "example_response_snippet": "{\"meta\":{\"found\":1000000,\"returned\":3,\"limit\":3,\"page\":1},\"data\":[{\"uuid\":\"...\",\"title\":\"Apple announces...\",\"description\":\"...\",\"snippet\":\"...\",\"url\":\"https://...\",\"image_url\":\"https://...\",\"language\":\"en\",\"published_at\":\"2024-01-15T10:30:00.000000Z\",\"source\":\"...\",\"relevance_score\":null,\"entities\":[{\"symbol\":\"AAPL\",\"name\":\"Apple Inc\",\"exchange\":null,\"exchange_long\":null,\"country\":\"us\",\"type\":\"equity\",\"industry\":\"Technology\",\"match_score\":26.5,\"sentiment_score\":0.65,\"highlights\":[...]}]}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B correct \u2014 pricing uses API credits not requests; free Basic = 100 credits/day (marketaux.com/pricing). rate_limits: same credit terminology; free 100 credits/day, paid higher. example: curl already uses api_token (docs); keep that request; original response shape matches docs /news/all. Auth.details saying token= is wrong but not a disputed output field here."
+}

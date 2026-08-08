@@ -1,0 +1,52 @@
+{
+  "id": "iex-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.iex.cloud/v1",
+      "source": "https://iexcloud.io/docs/api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://iexcloud.io/docs/api/",
+      "source": "https://iexcloud.io/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://iexcloud.io/docs/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://iexcloud.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.iex.cloud/v1/data/core/quote/AAPL?token=YOUR_API_KEY\"",
+      "source": "https://iexcloud.io/docs/api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "IEX Cloud service shut down as of August 31, 2024; the API is no longer operational. Historical description of RESTful market data with token auth and usage-based pricing no longer applies.",
+      "source": "https://iexcloud.io/"
+    }
+  },
+  "notes": "IEX Cloud shut down Aug 31 2024; cloud.iexapis.com and iexcloud.io docs are dead/redirected. Entry status should be non-operational."
+}

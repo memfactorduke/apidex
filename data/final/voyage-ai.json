@@ -1,0 +1,103 @@
+{
+  "id": "voyage-ai",
+  "status": "operational",
+  "name": "Voyage AI",
+  "category": "ai-ml",
+  "tagline": "High-quality text embeddings and reranking for retrieval applications",
+  "description": "Voyage AI provides embedding and reranking APIs optimized for retrieval-augmented generation (RAG), semantic search, and document ranking.",
+  "base_url": "https://api.voyageai.com/v1",
+  "docs_url": "https://docs.voyageai.com/",
+  "signup_url": "https://dash.voyageai.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; self-serve signup at dash.voyageai.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "200M free tokens across models for new users (see pricing)",
+    "paid_plans": null
+  },
+  "rate_limits": "Published per model/tier (RPM and TPM)",
+  "example": {
+    "request": "curl https://api.voyageai.com/v1/embeddings -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"input\": [\"Sample text\"], \"model\": \"voyage-4\"}'",
+    "response_snippet": "{\"object\":\"list\",\"data\":[{\"object\":\"embedding\",\"embedding\":[0.01,-0.02],\"index\":0}],\"model\":\"voyage-4\",\"usage\":{\"total_tokens\":2}}"
+  },
+  "use_cases": [
+    "generate text embeddings for semantic search",
+    "rerank retrieved documents by relevance",
+    "embed documents for RAG pipelines",
+    "compare query and document similarity with embeddings"
+  ],
+  "sources": [
+    "https://docs.voyageai.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

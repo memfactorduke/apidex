@@ -1,0 +1,99 @@
+{
+  "id": "greynoise",
+  "status": "operational",
+  "name": "GreyNoise",
+  "category": "security-identity",
+  "tagline": "Internet noise intelligence that filters mass scanners from real attacks",
+  "description": "GreyNoise collects and analyzes internet-wide scanner and worm activity so security teams can distinguish background noise from targeted threats. Its API returns IP classification (benign, malicious, unknown), tags, CVEs, first/last-seen timestamps, and context for enrichment, SIEM workflows, and alert triage.",
+  "base_url": "https://api.greynoise.io/v3",
+  "docs_url": "https://docs.greynoise.io/",
+  "signup_url": "https://viz.greynoise.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key header (e.g. key: YOUR_API_KEY) or Authorization: Bearer YOUR_API_KEY; self-serve signup at viz.greynoise.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Community free tier: up to 50 searches/week (Community API + Visualizer combined; business email required for API key). Unauthenticated: limited daily lookups (docs show ~10/day).",
+    "paid_plans": "Enterprise/commercial plans with higher quotas, RIOT, GNQL, bulk, and historical data \u2014 see greynoise.io/pricing"
+  },
+  "rate_limits": "Free Community: 50 searches/week (combined API + Visualizer). Unauthenticated: limited daily IP lookups. Paid tiers: higher/unlimited quotas and Enterprise/GNQL API access \u2014 plan-dependent (see greynoise.io/pricing).",
+  "example": {
+    "request": "curl -s -H \"key: YOUR_API_KEY\" \"https://api.greynoise.io/v3/community/8.8.8.8\"",
+    "response_snippet": "{\"ip\":\"8.8.8.8\",\"noise\":false,\"riot\":true,\"classification\":\"benign\",\"name\":\"Google Public DNS\",\"link\":\"https://viz.greynoise.io/riot/8.8.8.8\",\"last_seen\":\"2024-01-15\",\"message\":\"Success\"}"
+  },
+  "use_cases": [
+    "classify an IP as internet noise vs targeted threat during alert triage",
+    "check if an IP is a known benign service (RIOT) before blocking",
+    "enrich SIEM alerts with GreyNoise tags and first/last-seen metadata",
+    "filter mass scanner traffic from firewall or IDS investigation queues",
+    "look up CVEs and tags associated with noisy scanner IPs"
+  ],
+  "sources": [
+    "https://docs.greynoise.io/",
+    "https://www.greynoise.io/",
+    "https://viz.greynoise.io/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

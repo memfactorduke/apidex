@@ -1,0 +1,52 @@
+{
+  "id": "intercom",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.intercom.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published: default ~10,000 API calls per minute per app (varies by plan/endpoint); see Intercom rate limiting docs and response headers (X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset)",
+      "source": "https://developers.intercom.com/docs/references/rest-api/errors/rate-limiting/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/admins/identifyadmin"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.intercom.com/docs"
+    }
+  },
+  "notes": "Rate limits ARE published (not \"not published\"). Base URL, docs, Bearer auth, /me example, and paid-product positioning match official docs. CORS remains unknown without browser-origin tests."
+}

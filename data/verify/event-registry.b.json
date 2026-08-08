@@ -1,0 +1,52 @@
+{
+  "id": "event-registry",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eventregistry.org/documentation?tab=introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eventregistry.org/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/EventRegistry/event-registry-python"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eventregistry.org/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 2,000 tokens/day (resets daily); limited access to some endpoints; free registration required",
+      "source": "https://eventregistry.org/plans"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Token-based quotas: Free 2,000 tokens/day; paid plans from 15,000 tokens/day (Startup) upward; token costs vary by endpoint (e.g. article search returns ~100 articles per token)",
+      "source": "https://eventregistry.org/plans"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/EventRegistry/event-registry-python/wiki/Searching-for-articles"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eventregistry.org"
+    }
+  },
+  "notes": "Adversarial review found free_tier_limits and rate_limits wrong (both were 'unknown'/'not published' but official plans page documents token quotas). base_url, docs, auth, free tier, example, and description match current Event Registry docs/GitHub. CORS not documented. API operational as of check."
+}

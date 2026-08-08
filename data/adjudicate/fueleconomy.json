@@ -1,0 +1,15 @@
+{
+  "id": "fueleconomy",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s \"https://www.fueleconomy.gov/ws/rest/vehicle/menu/year\" -H \"Accept: application/json\"",
+  "example_response_snippet": "{\"menuItem\":[{\"text\":\"2026\",\"value\":\"2026\"},{\"text\":\"2025\",\"value\":\"2025\"},{\"text\":\"2024\",\"value\":\"2024\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: disputed by Verifier B. Live GET https://www.fueleconomy.gov/ws/rest/vehicle/menu/year with Accept: application/json returns JSON {\"menuItem\":[{\"text\":\"YYYY\",\"value\":\"YYYY\"},...]} (years through current catalog, e.g. 2026). Default without Accept is XML; original curl includes Accept so request is correct. Updated response_snippet years to current catalog; structure confirmed. Evidence: https://www.fueleconomy.gov/ws/rest/vehicle/menu/year and https://www.fueleconomy.gov/feg/ws/index.shtml"
+}

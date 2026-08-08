@@ -1,0 +1,97 @@
+{
+  "id": "astronomyapi",
+  "status": "operational",
+  "name": "AstronomyAPI",
+  "category": "science-space",
+  "tagline": "Positions, moon phases, and star charts for developers",
+  "description": "AstronomyAPI provides astronomical data endpoints for positions, moon phases, and star charts. Developers use it to integrate sky data into apps and services.",
+  "base_url": "https://api.astronomyapi.com",
+  "docs_url": "https://docs.astronomyapi.com",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication (details verified from official docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free: 100 requests/day, 10 requests/minute",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: 100/day, 10/min; paid plans have higher limits",
+  "example": {
+    "request": "curl -X GET -u \"APPLICATION_ID:APPLICATION_SECRET\" \"https://api.astronomyapi.com/api/v2/bodies\"",
+    "response_snippet": "{\"data\":{\"bodies\":[{\"id\":\"sun\",\"name\":\"Sun\",\"type\":\"Star\"}]}}"
+  },
+  "use_cases": [
+    "get moon phase for a date",
+    "get planetary positions",
+    "generate star chart"
+  ],
+  "sources": [
+    "https://api.astronomyapi.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

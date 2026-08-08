@@ -1,0 +1,104 @@
+{
+  "id": "marinetraffic",
+  "status": "operational",
+  "name": "MarineTraffic",
+  "category": "transportation",
+  "tagline": "AIS vessel tracking and maritime intelligence API",
+  "description": "MarineTraffic provides AIS-based vessel tracking and maritime data via a commercial API for positions, voyages, ports, and related vessel intelligence.",
+  "base_url": "https://services.marinetraffic.com/api",
+  "docs_url": "https://www.marinetraffic.com/en/ais-api-services",
+  "signup_url": "https://www.marinetraffic.com/en/users/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key embedded in request path or as query parameter (services.marinetraffic.com); commercial signup required"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://services.marinetraffic.com/api/exportvessel/v:5/YOUR_API_KEY/timespan:10/mmsi:241486000/protocol:jsono\"",
+    "response_snippet": "[{\"MMSI\":\"241486000\",\"IMO\":\"9732171\",\"SHIP_ID\":\"123456\",\"LAT\":\"37.9\",\"LON\":\"23.6\",\"SPEED\":\"0\",\"HEADING\":\"0\",\"COURSE\":\"0\",\"STATUS\":\"5\",\"TIMESTAMP\":\"2024-01-01T12:00:00\"}]"
+  },
+  "use_cases": [
+    "track vessel position by MMSI",
+    "get vessel voyage history",
+    "list vessels in a geographic area",
+    "look up port arrivals and departures"
+  ],
+  "sources": [
+    "https://www.marinetraffic.com/en/ais-api-services"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": []
+  }
+}

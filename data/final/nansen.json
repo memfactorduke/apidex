@@ -1,0 +1,96 @@
+{
+  "id": "nansen",
+  "status": "operational",
+  "name": "Nansen",
+  "category": "crypto",
+  "tagline": "On-chain analytics and wallet intelligence API for crypto research and monitoring.",
+  "description": "Nansen provides institutional-grade on-chain data and wallet labeling APIs for tracking smart money, token flows, and portfolio activity across major blockchains. Developers use it for research, alerts, and analytics products that need labeled addresses and historical chain data.",
+  "base_url": "https://api.nansen.ai/api/v1",
+  "docs_url": "https://docs.nansen.ai",
+  "signup_url": "https://app.nansen.ai",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header (Bearer or API key scheme); confirm exact header from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes limited API credits (exact quotas vary; check pricing page)",
+    "paid_plans": null
+  },
+  "rate_limits": "Published per plan (e.g. Free: 5 RPM / 500 RPD); check docs.nansen.ai for current limits",
+  "example": {
+    "request": "curl -s \"https://api.nansen.ai/api/v1/profiler/address-portfolio\" -H \"apikey: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"address\":\"0x...\",\"chain\":\"ethereum\"}'",
+    "response_snippet": "{\"data\":[...]}"
+  },
+  "use_cases": [
+    "look up labeled wallet activity for a smart-money address",
+    "track token holder and flow analytics for a contract"
+  ],
+  "sources": [
+    "https://www.nansen.ai"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

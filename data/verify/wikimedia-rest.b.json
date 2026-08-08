@@ -1,0 +1,52 @@
+{
+  "id": "wikimedia-rest",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/api/rest_v1/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/api/rest_v1/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/api/rest_v1/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Max 200 requests/second (shared limit for all Wikimedia APIs); User-Agent required; polite use expected",
+      "source": "https://api.wikimedia.org/wiki/Documentation/Getting_started/Rate_limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/api/rest_v1/#!/Page_content/get_page_summary_title"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/api/rest_v1/"
+    }
+  },
+  "notes": "Rate limits are published (200 rps shared); entry said not published. Other fields match current REST v1 docs."
+}

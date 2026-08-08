@@ -1,0 +1,52 @@
+{
+  "id": "openuv",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openuv.io/uvindex"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openuv.io/uvindex"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openuv.io/uvindex"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openuv.io/price"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "30 requests/day free (trial plan) \u2014 not 50; entry overstated free quota",
+      "source": "https://www.openuv.io/price"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 30 req/day; paid tiers increase daily quota (see pricing page)",
+      "source": "https://www.openuv.io/price"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openuv.io/uvindex"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openuv.io/uvindex"
+    }
+  },
+  "notes": "Free quota is 30/day not 50; entry otherwise matches official docs (base URL, x-access-token auth, /uv endpoint). CORS not documented."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "fingerprint",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.fingerprint.com/docs/server-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.fingerprint.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.fingerprint.com/docs/server-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fingerprint.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan includes 20,000 free API calls per month (verify current dashboard/pricing page)",
+      "source": "https://fingerprint.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.fingerprint.com/docs/server-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use Server API paths such as GET https://api.fpjs.io/events/{request_id} with Auth-API-Key header (not bare root URL); region-specific hosts also apply",
+      "source": "https://dev.fingerprint.com/docs/server-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fingerprint.com"
+    }
+  },
+  "notes": "Researcher confidence was low; free_tier_limits and example are wrong. Confirm pricing numbers on official pricing page as they change."
+}

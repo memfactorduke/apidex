@@ -1,0 +1,15 @@
+{
+  "id": "meteostat",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1000 requests per month (hard limit on Basic/free plan)",
+  "rate_limits": "Free: 1000 req/month hard limit. Paid plans raise monthly quota only. HTTP 429 when quota exceeded. Per-request caps: hourly max 30 days; daily max 10 years. No separate per-second limit published.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Meteostat's JSON API serves historical hourly, daily, and monthly weather observations plus climate normals from thousands of stations and model-backed point queries. Hosted on RapidAPI, it returns JSON with meta and data objects for station lookup, nearby search, and time-series ranges. Free for light use (1000 calls/month); paid tiers raise monthly quotas. Separate free bulk dumps and a Python library exist outside this API.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: INCORRECT original (500); Verifier B correct. RapidAPI pricing page lists Basic (free) at 1000 requests/month hard limit \u2014 https://rapidapi.com/meteostat/api/meteostat/pricing. rate_limits: same correction (500\u21921000 free monthly hard limit); rest of original (429 on quota exceed, hourly max 30 days, daily max 10 years, no published per-second limit) consistent with docs \u2014 https://rapidapi.com/meteostat/api/meteostat/pricing and https://dev.meteostat.net/api. description: only free-tier call count wrong (500\u21921000); rest kept \u2014 same pricing source."
+}

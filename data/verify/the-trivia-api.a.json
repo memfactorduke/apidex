@@ -1,0 +1,52 @@
+{
+  "id": "the-trivia-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://the-trivia-api.com/v2",
+      "source": "https://the-trivia-api.com/docs/v2/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://the-trivia-api.com/docs/v2/",
+      "source": "https://the-trivia-api.com/docs/v2/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-trivia-api.com/docs/v2/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://the-trivia-api.com/docs/v2/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free public access without an API key; higher rate limits available with a free API key (exact free-key quotas not clearly published on docs)",
+      "source": "https://the-trivia-api.com/docs/v2/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits exist and are higher with an API key; exact numeric limits not clearly published on the public docs (entry should not claim 'not published' as definitive if docs mention keyed limits)",
+      "source": "https://the-trivia-api.com/docs/v2/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://the-trivia-api.com/v2/questions?limit=1' (v1 path /api/questions is legacy; current docs emphasize /v2)",
+      "source": "https://the-trivia-api.com/docs/v2/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Placeholder research description is vague but not false. Primary issues: base_url and docs point at outdated v1-style /api paths; current official surface is /v2. Auth none is correct for public access. Free tier true. Limits/rate details need care vs docs."
+}

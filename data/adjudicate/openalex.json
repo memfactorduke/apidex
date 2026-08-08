@@ -1,0 +1,15 @@
+{
+  "id": "openalex",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Polite pool (email via mailto/From): 10 req/s; default without email: 1 req/s; free tier soft daily limit ~100k without API key (paid Premium/Enterprise higher)",
+  "rate_limits": "Default 1 req/s; polite pool (email) 10 req/s; free ~100k calls/day soft limit without key; Premium 1M/day & 100 req/s; Enterprise custom",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: both verifiers wrong on details but right that original is incorrect. Docs (docs.openalex.org rate-limits) state 1 rps default / 10 rps polite pool; pricing (openalex.org/pricing) publishes Free 100k/day 10 req/s. Combined: free_tier_limits = polite pool 10 rps, default 1 rps, free soft ~100k/day. rate_limits: same evidence \u2014 not 'not published'; publish default/polite + free/premium quotas. Evidence: https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication and https://openalex.org/pricing"
+}

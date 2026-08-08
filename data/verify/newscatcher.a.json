@@ -1,0 +1,52 @@
+{
+  "id": "newscatcher",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://v3-api.newscatcherapi.com",
+      "source": "https://docs.newscatcherapi.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.newscatcherapi.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.newscatcherapi.com"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://www.newscatcherapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free trial/plan with limited credits (check current pricing page for exact numbers)",
+      "source": "https://www.newscatcherapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plan-dependent; documented per tier on pricing/docs",
+      "source": "https://docs.newscatcherapi.com"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "v3 API uses different base URL and paths than v2 example",
+      "source": "https://docs.newscatcherapi.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.newscatcherapi.com"
+    }
+  },
+  "notes": "Placeholder - need to verify with live docs"
+}

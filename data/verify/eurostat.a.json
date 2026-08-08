@@ -1,0 +1,52 @@
+{
+  "id": "eurostat",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-statistics"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-statistics"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-statistics"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access"
+    }
+  },
+  "notes": "Docs-first verification against Eurostat API guides. Base URL, auth (none), free open access, JSON-stat example path, and formats match. Rate limits exist but exact numbers are doc-side; entry correctly defers. CORS not documented."
+}

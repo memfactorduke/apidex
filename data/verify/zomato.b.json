@@ -1,0 +1,52 @@
+{
+  "id": "zomato",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No current public developer API at developers.zomato.com; Zomato's public API program was discontinued (endpoints historically under /api/v2.1 no longer offered to new developers).",
+      "source": "https://www.zomato.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "No current official public API docs at https://developers.zomato.com/api \u2014 site/docs for the public API are defunct or unavailable.",
+      "source": "https://www.zomato.com/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 no current public free developer API tier; the public Zomato API program is discontinued.",
+      "source": "https://www.zomato.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "N/A \u2014 no public free tier; historical free tier is not currently offered.",
+      "source": "https://www.zomato.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "N/A \u2014 no published public API rate limits because the public API is discontinued.",
+      "source": "https://www.zomato.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl against https://developers.zomato.com/api/v2.1/search is not a valid current public API call; endpoint/docs are defunct.",
+      "source": "https://www.zomato.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Not a currently available public API for restaurant search/details/reviews; Zomato's public developer API was shut down / is no longer offered.",
+      "source": "https://www.zomato.com/"
+    }
+  },
+  "notes": "Entry is stale. Public Zomato API (developers.zomato.com, user-key, v2.1) is widely reported discontinued; no authoritative 2026 public docs found. Status should not be operational."
+}

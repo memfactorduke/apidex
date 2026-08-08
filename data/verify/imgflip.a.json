@@ -1,0 +1,52 @@
+{
+  "id": "imgflip",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://imgflip.com/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://imgflip.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://imgflip.com/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://imgflip.com/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: get_memes + caption_image (watermarked) with fair-use rate limiting; not documented as unlimited. Premium ($9.99/mo) adds included Premium request allotments then per-request fees for GIF/search/AI/no-watermark (exact allotments on docs).",
+      "source": "https://imgflip.com/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://imgflip.com/api"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://imgflip.com/api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Imgflip's RESTful JSON API lists popular meme templates and captions them into shareable images. Free tier supports get_memes and caption_image (with watermark); Premium ($9.99/mo) unlocks GIF captioning, full meme search, AI generation, and watermark removal. Auth uses Imgflip username/password form fields\u2014no API key header. Free usage is fair-use rate-limited rather than documented as unlimited.",
+      "source": "https://imgflip.com/api"
+    }
+  },
+  "notes": "Docs confirm base URL, auth via username/password form fields, free get_memes/caption_image with watermark, Premium $9.99/mo for advanced features. Entry overstates free tier as \"unlimited\"; docs emphasize fair use and possible rate limiting. CORS not documented (unknown is correct)."
+}

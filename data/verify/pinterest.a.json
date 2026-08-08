@@ -1,0 +1,52 @@
+{
+  "id": "pinterest",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/api/v5/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/api/v5/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/getting-started/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per-endpoint/app quotas (not a single global number); see Rate limits docs and response headers. Entry said \"not published\" which is wrong.",
+      "source": "https://developers.pinterest.com/docs/reference/rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/api/v5/#operation/user_account/get"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/api/v5/"
+    }
+  },
+  "notes": "Rate limits are documented (entry said not published). Free tier exists via developer portal apps; free_tier_limits unknown is fair. CORS not stated in docs. Example GET /user_account with Bearer is valid. Overall fail due to rate_limits incorrect."
+}

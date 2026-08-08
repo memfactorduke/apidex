@@ -1,0 +1,15 @@
+{
+  "id": "aerodatabox",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Basic free plan: 600 API units/month; 1 request/second (RapidAPI also: 1000 requests/hour). Units \u2260 requests \u2014 endpoint cost varies by Tier.",
+  "rate_limits": "Published by plan: free Basic 1 req/s (+ 1000 req/hour on RapidAPI); Pro 1 req/s; Ultra 2 req/s; Mega 3 req/s (higher on direct/API.Market plans).",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected per Verifier B \u2014 aerodatabox.com/pricing (Basic 600 units/mo, 1 req/s; RapidAPI 1000 req/h; units\u2260requests). rate_limits: corrected per plan table on same page (Basic/Pro 1 r/s, Ultra 2, Mega 3). cors: yes \u2014 RapidAPI gateway reflects Origin on OPTIONS preflight for aerodatabox.p.rapidapi.com."
+}

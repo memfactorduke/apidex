@@ -1,0 +1,101 @@
+{
+  "id": "marketaux",
+  "status": "operational",
+  "name": "MarketAux",
+  "category": "news-media",
+  "tagline": "Financial news API with sentiment analysis for market intelligence",
+  "description": "MarketAux is a financial news API that aggregates real-time market news from thousands of sources, with built-in entity recognition, sentiment scoring, and filtering by stock symbols, industries, and countries. Designed for developers building trading apps, portfolio tools, and market research platforms who need structured news data with sentiment signals.",
+  "base_url": "https://api.marketaux.com/v1",
+  "docs_url": "https://www.marketaux.com/documentation",
+  "signup_url": "https://www.marketaux.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via token query parameter (token=YOUR_API_KEY), self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "100 API credits/day (Basic/free plan); credits may differ from request count depending on endpoint usage",
+    "paid_plans": "Starter, Professional, Business tiers with higher limits \u2014 see marketaux.com/pricing"
+  },
+  "rate_limits": "100 API credits/day on free tier; higher daily credit limits on paid plans (see marketaux.com/pricing)",
+  "example": {
+    "request": "curl \"https://api.marketaux.com/v1/news/all?symbols=AAPL&filter_entities=true&language=en&api_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"meta\":{\"found\":1000000,\"returned\":3,\"limit\":3,\"page\":1},\"data\":[{\"uuid\":\"...\",\"title\":\"Apple announces...\",\"description\":\"...\",\"snippet\":\"...\",\"url\":\"https://...\",\"image_url\":\"https://...\",\"language\":\"en\",\"published_at\":\"2024-01-15T10:30:00.000000Z\",\"source\":\"...\",\"relevance_score\":null,\"entities\":[{\"symbol\":\"AAPL\",\"name\":\"Apple Inc\",\"exchange\":null,\"exchange_long\":null,\"country\":\"us\",\"type\":\"equity\",\"industry\":\"Technology\",\"match_score\":26.5,\"sentiment_score\":0.65,\"highlights\":[...]}]}]}"
+  },
+  "use_cases": [
+    "fetch latest financial news for a stock ticker",
+    "get market news with sentiment scores for portfolio monitoring",
+    "filter news by industry, country, or entity type",
+    "build a market sentiment dashboard from multi-source headlines",
+    "aggregate real-time company news for trading signals"
+  ],
+  "sources": [
+    "https://www.marketaux.com/",
+    "https://www.marketaux.com/documentation",
+    "https://www.marketaux.com/pricing"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

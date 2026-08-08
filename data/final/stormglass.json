@@ -1,0 +1,96 @@
+{
+  "id": "stormglass",
+  "status": "operational",
+  "name": "Stormglass",
+  "category": "weather-environment",
+  "tagline": "Marine weather API combining multiple ocean and weather models",
+  "description": "Stormglass provides marine and coastal weather data by combining multiple weather and ocean models into a single API. It covers wave, wind, current, tide, and weather parameters for ocean and coastal applications.",
+  "base_url": "https://api.stormglass.io/v2",
+  "docs_url": "https://docs.stormglass.io/",
+  "signup_url": "https://dashboard.stormglass.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "10 requests/day; all weather parameters; non-commercial only (no support)",
+    "paid_plans": null
+  },
+  "rate_limits": "Daily request quotas by plan: Free 10/day; Small 500/day; Medium 5,000/day; Large 25,000/day; exceed \u2192 Too Many Requests",
+  "example": {
+    "request": "curl -H \"Authorization: YOUR_API_KEY\" \"https://api.stormglass.io/v2/weather/point?lat=58.7984&lng=17.8081&params=waveHeight,windSpeed\"",
+    "response_snippet": "{\"hours\":[{\"time\":\"2026-01-01T00:00:00+00:00\",\"waveHeight\":{\"noaa\":1.2,\"sg\":1.1}}],\"meta\":{\"cost\":1,\"dailyQuota\":50,\"lat\":58.7984,\"lng\":17.8081}}"
+  },
+  "use_cases": [
+    "get marine weather for a coastal point",
+    "fetch wave height and wind for sailing apps",
+    "get tide data for a location",
+    "retrieve ocean current forecasts"
+  ],
+  "sources": [
+    "https://stormglass.io/",
+    "https://docs.stormglass.io/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

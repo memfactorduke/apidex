@@ -1,0 +1,15 @@
+{
+  "id": "ipinfo",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "50,000 requests/month free; limited data fields vs paid plans",
+  "rate_limits": "Free: 50,000 requests/month; paid plans higher monthly quotas \u2014 see https://ipinfo.io/pricing",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: VERDICT incorrect/imprecise original \u2014 Verifier B correct. Pricing (https://ipinfo.io/pricing) shows free plan at 50k req/month with limited fields; drop vague 'Basic/Lite-style' naming. rate_limits: VERDICT incorrect original \u2014 Verifier B correct. Entry invents daily/minute limits not clearly documented; use monthly quota language matching free_tier_limits and point to pricing. Evidence: https://ipinfo.io/pricing, https://ipinfo.io/developers."
+}

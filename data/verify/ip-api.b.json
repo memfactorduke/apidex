@@ -1,0 +1,52 @@
+{
+  "id": "ip-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ip-api.com/docs/api:json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ip-api.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ip-api.com/docs/api:json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ip-api.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ip-api.com/docs/api:json"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 45 requests per minute per IP. Pro/Enterprise: unlimited (subject to Acceptable Use Policy)\u2014not plan-dependent rate caps.",
+      "source": "https://members.ip-api.com/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes \u2014 free endpoint returns Access-Control-Allow-Origin: * (and Access-Control-Allow-Methods: GET, POST, HEAD, OPTIONS)",
+      "source": "https://ip-api.com/docs/api:json"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ip-api.com/docs/api:json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ip-api.com/"
+    }
+  },
+  "notes": "Live GET http://ip-api.com/json/8.8.8.8 (2026-08-08) returned 200 + sample fields matching the entry. CORS is * (entry said unknown). Pro is unlimited on all paid tiers (entry claimed plan-dependent Pro limits). Pro auth is query key on pro.ip-api.com, not path."
+}

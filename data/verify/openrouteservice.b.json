@@ -1,0 +1,52 @@
+{
+  "id": "openrouteservice",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/dev/#/api-docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/dev/#/api-docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/dev/#/api-docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/plans/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 2000 directions requests/day (and other per-endpoint daily limits; see plans page). Not \"unknown\".",
+      "source": "https://openrouteservice.org/plans/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published on plans page (e.g. free: ~40 req/min directions; daily quotas per endpoint). Not \"not published\".",
+      "source": "https://openrouteservice.org/plans/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/dev/#/api-docs/v2/directions/{profile}/get"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openrouteservice.org/"
+    }
+  },
+  "notes": "Main errors: free_tier_limits and rate_limits are documented on openrouteservice.org/plans, not unknown/unpublished. API is live; base URL, apiKey auth, and directions GET example match current docs."
+}

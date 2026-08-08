@@ -1,0 +1,52 @@
+{
+  "id": "foursquare-places",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://places-api.foursquare.com",
+      "source": "https://docs.foursquare.com/fsq-developers-places/reference/places-api-new"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.foursquare.com/fsq-developers-places/reference/places-api-new",
+      "source": "https://docs.foursquare.com/fsq-developers-places/reference/places-api-new"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.foursquare.com/fsq-developers-places/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://foursquare.com/products/places/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free Sandbox: 10,000 calls/month (Places API); paid Pro/Enterprise scale beyond that \u2014 verify current quotas on pricing",
+      "source": "https://location.foursquare.com/developer/docs/places-api-rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per-endpoint and tier quotas (e.g. Sandbox monthly call caps); see rate-limits docs \u2014 not \"not published\"",
+      "source": "https://location.foursquare.com/developer/docs/places-api-rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://places-api.foursquare.com/places/search?query=coffee&ll=40.7,-74.0\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\" -H \"X-Places-Api-Version: 2025-06-17\"",
+      "source": "https://docs.foursquare.com/fsq-developers-places/reference/place-search"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.foursquare.com/fsq-developers-places/reference/places-api-new"
+    }
+  },
+  "notes": "V3 host api.foursquare.com/v3 and old docs paths 404; Places API migrated to places-api.foursquare.com with version header. Entry used deprecated base/docs URLs."
+}

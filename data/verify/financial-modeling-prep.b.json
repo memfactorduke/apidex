@@ -1,0 +1,52 @@
+{
+  "id": "financial-modeling-prep",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://financialmodelingprep.com/stable",
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://site.financialmodelingprep.com/developer/docs/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "250 requests/day (Stable Free plan; historical daily EOD and some other free endpoints only \u2014 not full API access)",
+      "source": "https://site.financialmodelingprep.com/developer/docs/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per plan (e.g. Free: 250 req/day; Starter: 300 req/min; Premium: 750 req/min; Ultimate: 3000 req/min \u2014 verify current pricing page)",
+      "source": "https://site.financialmodelingprep.com/developer/docs/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://financialmodelingprep.com/stable/quote?symbol=AAPL&apikey=YOUR_API_KEY\" (legacy /api/v3/quote/AAPL may still work but docs push /stable)",
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://site.financialmodelingprep.com/developer/docs"
+    }
+  },
+  "notes": "FMP migrated primary docs to Stable API (/stable) vs legacy /api/v3; free tier is 250/day not unknown; rate limits are published on pricing. Entry status operational confirmed."
+}

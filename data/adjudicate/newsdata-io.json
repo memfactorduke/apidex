@@ -1,0 +1,15 @@
+{
+  "id": "newsdata-io",
+  "base_url": "https://newsdata.io/api/1",
+  "docs_url": "https://newsdata.io/documentation",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "200 credits/day free (1 credit per article on free plan)",
+  "rate_limits": "not published precisely; free tier limited by daily credits",
+  "cors": "unknown",
+  "example_request": "curl \"https://newsdata.io/api/1/latest?apikey=YOUR_API_KEY&q=technology\"",
+  "example_response_snippet": "{\"status\":\"success\",\"totalResults\":10,\"results\":[{\"article_id\":\"...\",\"title\":\"...\",\"link\":\"...\",\"source_id\":\"...\",\"pubDate\":\"...\"}]}",
+  "description": "NewsData.io provides a REST API for accessing real-time and historical news articles from thousands of sources worldwide. Developers can search by keyword, country, language, category, and more, with JSON responses suitable for news aggregators, media monitoring, and AI applications.",
+  "status": null,
+  "resolution_notes": "Verifier B flagged all fields as incorrect but proposed the same values as the original \u2014 treating those as noise. Verified against current official sources (docs/pricing, 2026). base_url: CONFIRM https://newsdata.io/api/1 (docs). docs_url: CONFIRM https://newsdata.io/documentation. auth_type: CONFIRM apiKey (apikey query or X-ACCESS-KEY). free_tier: CONFIRM true. free_tier_limits: CONFIRM 200 credits/day free, 1 credit/article on free plan (pricing). rate_limits: CONFIRM credit-based daily limits; no precise RPS published. cors: KEEP unknown (not documented). example: CONFIRM latest endpoint curl pattern. description: CONFIRM accurate. status: operational (site/docs respond)."
+}

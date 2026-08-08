@@ -1,0 +1,52 @@
+{
+  "id": "event-registry",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/EventRegistry/event-registry-python"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eventregistry.org/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/EventRegistry/event-registry-python"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eventregistry.org/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "2000 tokens/month (free plan); tokens spent per request depend on endpoint and result size",
+      "source": "https://eventregistry.org/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/EventRegistry/event-registry-python/wiki/Searching-for-articles"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eventregistry.org/documentation"
+    }
+  },
+  "notes": "Docs-first check against eventregistry.org docs/pricing and GitHub SDK. Free plan is real (2000 tokens/mo), so free_tier_limits \"unknown\" is wrong. base_url, docs, apiKey auth, getArticles path, and description match. CORS and published numeric rate limits not found \u2014 entry correctly says unknown/not published."
+}

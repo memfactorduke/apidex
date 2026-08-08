@@ -1,0 +1,52 @@
+{
+  "id": "semantic-scholar",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.semanticscholar.org/api-docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.semanticscholar.org/api-docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.semanticscholar.org/product/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.semanticscholar.org/product/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Shared free tier: ~1 RPS without key; higher with free API key (exact shared-pool limits not fixed). Partner/higher tiers available via application.",
+      "source": "https://www.semanticscholar.org/product/api#api-key-form"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Unauthenticated: ~1 request/second. With free API key: higher shared limits (docs historically cite ~100 req/5 min unauthenticated and higher with key; product page emphasizes 1 RPS unauth and partner tiers).",
+      "source": "https://www.semanticscholar.org/product/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.semanticscholar.org/api-docs/graph"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.semanticscholar.org/product/api"
+    }
+  },
+  "notes": "Free API with optional key is accurate. free_tier_limits and rate_limits were too vague vs published unauth ~1 RPS and key/partner tiers; example path graph/v1/paper/search remains valid."
+}

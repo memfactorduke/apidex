@@ -1,0 +1,52 @@
+{
+  "id": "perigon",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.goperigon.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.goperigon.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.goperigon.com"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false",
+      "source": "https://www.goperigon.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No free tier \u2014 paid plans only",
+      "source": "https://www.goperigon.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.goperigon.com"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use apiKey query param or Authorization header; path may be /v1/articles/all or similar \u2014 verify current docs for exact endpoint",
+      "source": "https://docs.goperigon.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.goperigon.com"
+    }
+  },
+  "notes": "Placeholder \u2014 will verify against live sources"
+}

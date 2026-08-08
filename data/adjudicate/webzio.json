@@ -1,0 +1,15 @@
+{
+  "id": "webzio",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "News API Lite: 1,000 free requests/month (see product page); paid Free Trial also exists for full News API",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl \"https://api.webz.io/newsApiLite?token=YOUR_API_KEY&q=technology\"",
+  "example_response_snippet": "{\"posts\":[...],\"totalResults\":0,\"moreResultsAvailable\":0,\"next\":null,\"requestsLeft\":0}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier A correct \u2014 original \"unknown\" is wrong; News API Lite offers 1,000 free requests/month (https://webz.io/products/news-api#lite, https://webz.io/pricing/). example: Verifier B correct \u2014 docs show newsApiLite without sort=crawled as the canonical lite example (https://docs.webz.io/newsApiLite, https://docs.webz.io/docs/get-started); request corrected accordingly, response_snippet kept as realistic structure."
+}

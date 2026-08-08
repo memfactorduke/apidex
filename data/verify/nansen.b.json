@@ -1,0 +1,52 @@
+{
+  "id": "nansen",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.nansen.ai/api/v1",
+      "source": "https://docs.nansen.ai/api/authentication"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nansen.ai"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nansen.ai/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nansen.ai/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per plan; e.g. Free 5 RPM / 500 RPD (if free exists) or plan-specific \u2014 check docs.nansen.ai for current limits",
+      "source": "https://docs.nansen.ai"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl should use apiKey header or correct path from docs, not bare /v1/ with only Bearer",
+      "source": "https://docs.nansen.ai/api/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nansen.ai"
+    }
+  },
+  "notes": "Need live verification from official sources before finalizing."
+}

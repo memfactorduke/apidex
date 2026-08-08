@@ -1,0 +1,52 @@
+{
+  "id": "webzio",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webz.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webz.io/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.webz.io/"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.webz.io/newsApiLite?token=YOUR_API_KEY&q=technology\"",
+      "source": "https://docs.webz.io/newsApiLite"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webz.io/"
+    }
+  },
+  "notes": "Adversarial check against official docs/pricing. Base URL, docs, API-key auth, free tier, and description hold. Example used a non-standard endpoint; rate limits and CORS remain unpublished. Free-tier limits are plan-specific and should be verified on pricing."
+}

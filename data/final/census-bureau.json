@@ -1,0 +1,99 @@
+{
+  "id": "census-bureau",
+  "status": "operational",
+  "name": "Census Bureau",
+  "category": "data-analytics",
+  "tagline": "US Census Bureau open data APIs for demographic, economic, and geographic statistics",
+  "description": "The U.S. Census Bureau provides free public REST APIs for official American demographic, economic, and geographic statistics. Developers query ACS, Decennial Census, Economic Census, Population Estimates, and related datasets with variables, geographies, and optional API keys for higher rate limits.",
+  "base_url": "https://api.census.gov/data",
+  "docs_url": "https://www.census.gov/data/developers/guidance/api-user-guide.html",
+  "signup_url": "https://api.census.gov/data/key_signup.html",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key as query parameter key=YOUR_API_KEY. Key required for higher rate limits; signup at api.census.gov. Without a key, limited to 500 queries per IP per day."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "...",
+    "paid_plans": null
+  },
+  "rate_limits": "...",
+  "example": {
+    "request": "curl \"https://api.census.gov/data/2023/acs/acs1?get=NAME,B01001_001E&for=state:*&key=YOUR_API_KEY\"",
+    "response_snippet": "[[\"NAME\",\"B01001_001E\",\"state\"],[\"Alabama\",\"5108468\",\"01\"],[\"Alaska\",\"733406\",\"02\"],[\"Arizona\",\"7431344\",\"04\"]]"
+  },
+  "use_cases": [
+    "get ACS population estimates by state or county",
+    "query Decennial Census demographic variables for a geography",
+    "look up economic indicators from Economic Census datasets",
+    "fetch population estimates time series for US regions",
+    "resolve geographic FIPS codes and area names for census geographies"
+  ],
+  "sources": [
+    "https://www.census.gov/data/developers.html",
+    "https://www.census.gov/data/developers/guidance/api-user-guide.html",
+    "https://api.census.gov/data.html",
+    "https://api.census.gov/data/key_signup.html"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

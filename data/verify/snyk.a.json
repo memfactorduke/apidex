@@ -1,0 +1,52 @@
+{
+  "id": "snyk",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.snyk.io/snyk-api/rest-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.snyk.io/snyk-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.snyk.io/snyk-api/authentication-for-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://snyk.io/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://snyk.io/plans"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.snyk.io/snyk-api/rest-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.snyk.io/snyk-api"
+    }
+  },
+  "notes": "Verified against official Snyk docs (2026). Base URL, auth Bearer/token headers, REST /rest/self, free plan, and unpublished exact API quotas all match. Rate limits and CORS not published publicly \u2014 entry correctly reports that."
+}

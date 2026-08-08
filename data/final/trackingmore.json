@@ -1,0 +1,104 @@
+{
+  "id": "trackingmore",
+  "status": "operational",
+  "name": "TrackingMore",
+  "category": "transportation",
+  "tagline": "Global multi-carrier package tracking API for logistics apps.",
+  "description": "TrackingMore is a multi-carrier shipment tracking API that aggregates package status from hundreds of couriers worldwide. Developers use it to create trackings, poll delivery status, receive webhooks, and surface last-mile updates in ecommerce, logistics, and support tools without integrating each carrier separately.",
+  "base_url": "https://api.trackingmore.com/v4",
+  "docs_url": "https://www.trackingmore.com/api-docs",
+  "signup_url": "https://www.trackingmore.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Tracking-Api-Key header (self-serve signup). Some docs also show Authorization: Bearer YOUR_API_KEY."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 100 trackings/month (confirm on current pricing page)",
+    "paid_plans": null
+  },
+  "rate_limits": "Per-endpoint (docs): Create a tracking 3 req/s; Get tracking results 10/s; Batch create 1/s; Detect courier 3/s (varies by endpoint)",
+  "example": {
+    "request": "curl -X GET 'https://api.trackingmore.com/v4/trackings/get?tracking_numbers=1Z999AA10123456784&courier_code=ups' -H 'Tracking-Api-Key: YOUR_API_KEY' -H 'Content-Type: application/json'",
+    "response_snippet": "{\"meta\":{\"code\":200,\"message\":\"Success\"},\"data\":[{\"id\":\"...\",\"tracking_number\":\"1Z999AA10123456784\",\"courier_code\":\"ups\",\"delivery_status\":\"delivered\",\"origin_info\":{\"trackinfo\":[{\"checkpoint_date\":\"2024-01-15 10:00:00\",\"tracking_detail\":\"Delivered\"}]}}]}"
+  },
+  "use_cases": [
+    "get delivery status for a package tracking number",
+    "create multi-carrier shipment tracking for an order",
+    "list recent trackings for a logistics dashboard",
+    "detect courier from a tracking number",
+    "receive webhook updates when package status changes"
+  ],
+  "sources": [
+    "https://www.trackingmore.com",
+    "https://www.trackingmore.com/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

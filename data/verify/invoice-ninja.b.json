@@ -1,0 +1,52 @@
+{
+  "id": "invoice-ninja",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.invoicing.co/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.invoicing.co/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.invoicing.co/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://invoiceninja.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Hosted Free: 1 user, limited features (no client portal branding etc.); self-host free. API rate limits not published as free-tier request quotas.",
+      "source": "https://invoiceninja.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.invoicing.co/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.invoicing.co/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://invoiceninja.com/"
+    }
+  },
+  "notes": "Need to verify against live official docs \u2014 placeholder only; running adversarial web checks now."
+}

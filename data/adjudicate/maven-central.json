@@ -1,0 +1,15 @@
+{
+  "id": "maven-central",
+  "base_url": "https://search.maven.org/solrsearch/select",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl \"https://search.maven.org/solrsearch/select?q=g:com.google.guava+AND+a:guava&rows=5&wt=json\"",
+  "example_response_snippet": "{\"responseHeader\":{\"status\":0,\"QTime\":2},\"response\":{\"numFound\":1,\"start\":0,\"docs\":[{\"id\":\"com.google.guava:guava\",\"g\":\"com.google.guava\",\"a\":\"guava\",\"latestVersion\":\"33.0.0-jre\",\"repositoryId\":\"central\",\"p\":\"jar\",\"timestamp\":1700000000000,\"versionCount\":100,\"text\":[\"com.google.guava\",\"guava\"],\"ec\":[\".jar\",\".pom\"]}]}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "Disputed base_url: ORIGINAL confirmed. Verifier A claimed central.sonatype.com internal browse API is the current REST API; official Rest API Guide still documents the public Solr search endpoint at search.maven.org/solrsearch/select (and related Solr query parameters). Verifier B confirmed. Live curl of the original URL returns Solr JSON. Evidence: https://central.sonatype.org/search/rest-api-guide/ and https://search.maven.org/solrsearch/select. Disputed example: ORIGINAL form confirmed as working public API example; response shape matches Solrselect (responseHeader/response/docs). If docs emphasize other endpoints, those are additional/internal browse surfaces\u2014not a replacement that makes the documented search.maven.org Solr API incorrect for this directory entry. Evidence: same docs URL plus live response from the example request."
+}

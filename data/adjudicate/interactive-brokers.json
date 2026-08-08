@@ -1,0 +1,15 @@
+{
+  "id": "interactive-brokers",
+  "base_url": "https://localhost:5000/v1/api",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect as original. Official Client Portal Web API docs (https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/) document the REST base as the local Client Portal Gateway path https://localhost:5000/v1/api after login, not a public cloud host. Verifiers A/B both correct; no current official source supports https://api.ibkr.com/v1/api as the documented public base URL."
+}

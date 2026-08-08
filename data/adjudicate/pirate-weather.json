@@ -1,0 +1,15 @@
+{
+  "id": "pirate-weather",
+  "base_url": null,
+  "docs_url": "https://docs.pirateweather.net/en/latest/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "20,000 API calls/month (free plan)",
+  "rate_limits": "20,000 calls/month free; per-key rate limits apply by plan; monthly quota via Ratelimit-* response headers",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: both verifiers correct \u2014 official docs live at https://docs.pirateweather.net/en/latest/ (original pirateweather.net/en/latest/ returns 404). free_tier_limits: Verifier A correct per current pricing on https://pirateweather.net/ (20,000 calls/month free; Verifier B's 10k is outdated). rate_limits: free monthly quota is 20k; docs/changelog document per-key burst/rate limits and Ratelimit-* headers (https://docs.pirateweather.net/en/latest/changelog/). cors: Verifier B correct \u2014 changelog documents Access-Control-Allow-Origin: * (browser CORS allowed)."
+}

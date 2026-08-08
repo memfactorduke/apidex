@@ -1,0 +1,15 @@
+{
+  "id": "greynoise",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Community free tier: up to 50 searches/week (Community API + Visualizer combined; business email required for API key). Unauthenticated: limited daily lookups (docs show ~10/day).",
+  "rate_limits": "Free Community: 50 searches/week (combined API + Visualizer). Unauthenticated: limited daily IP lookups. Paid tiers: higher/unlimited quotas and Enterprise/GNQL API access \u2014 plan-dependent (see greynoise.io/pricing).",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: INCORRECT original (claimed vague daily quota). Verifier B is correct: Community free tier is 50 searches/week for Community API + Visualizer combined (business email required for API key); unauthenticated ~10/day. Sources: https://docs.greynoise.io/docs/using-the-greynoise-community-api and https://www.greynoise.io/plans. rate_limits: INCORRECT original (said Community has daily caps). Free Community is weekly (50/week), not daily; unauthenticated has daily caps; paid is plan-dependent. Same sources + greynoise.io/pricing."
+}

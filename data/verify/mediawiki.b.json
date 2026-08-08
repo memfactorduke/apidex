@@ -1,0 +1,52 @@
+{
+  "id": "mediawiki",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/w/api.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "unknown / site-dependent (Wikimedia allows CORS for some origins; not universally \"yes\" for all MediaWiki installs)",
+      "source": "https://www.mediawiki.org/wiki/API:Cross-site_requests"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The sample response shows page \"API\" as missing ({\"missing\":\"\"}); a working titles= query for a real page or titles=MediaWiki would return page content. Request shape is valid; response_snippet does not demonstrate a successful extracts query.",
+      "source": "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=API"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    }
+  },
+  "notes": "Adversarial pass found issues: cors blanket \"yes\" is too strong; example response is a missing-page failure not a successful extract. API is live. Auth/pricing/rate claims match MediaWiki docs."
+}

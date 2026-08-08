@@ -1,0 +1,15 @@
+{
+  "id": "open-textbook-library",
+  "base_url": "https://open.umn.edu/opentextbooks",
+  "docs_url": "https://open.umn.edu/opentextbooks/discovery",
+  "auth_type": "none",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s \"https://open.umn.edu/opentextbooks/textbooks.json?q=calculus\"",
+  "example_response_snippet": "{\n  \"data\": [\n    {\n      \"id\": 10,\n      \"title\": \"Calculus\",\n      \"edition_statement\": \"Third Edition\",\n      \"copyright_year\": 1991,\n      \"license\": \"Attribution-NonCommercial-ShareAlike\",\n      \"language\": \"eng\"\n    }\n  ]\n}",
+  "description": "The Open Textbook Library (University of Minnesota / Open Education Network) is a catalog of peer-reviewed open educational resource textbooks for higher education. It documents a public read-only JSON API: append .json to textbook and subject resource URLs (and related paths) for programmatic metadata access; OpenAPI docs are published at /opentextbooks/api-docs. CSV and MARC downloads are also provided.",
+  "status": null,
+  "resolution_notes": "base_url: corrected \u2014 original https://open.umn.edu/opentextbooks/api returns HTTP 404; official discovery docs say request the .json extension on library paths under https://open.umn.edu/opentextbooks (https://open.umn.edu/opentextbooks/discovery). auth_type: keep none \u2014 API is public programmatic read access with no key/token required (https://open.umn.edu/opentextbooks/api-docs/index.html; discovery page). example: corrected \u2014 /api/v1/textbooks?search=calculus returns 404; working pattern is textbooks.json?q=... (live curl 2026-08-08). description: corrected \u2014 site is an OER catalog AND documents a public JSON API via .json extension and Swagger/OpenAPI at api-docs; Verifier B overstated \u201cno API,\u201d but original overstated a /api base and invented v1 paths."
+}

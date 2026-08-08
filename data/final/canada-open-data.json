@@ -1,0 +1,97 @@
+{
+  "id": "canada-open-data",
+  "status": "operational",
+  "name": "Canadian Open Government Portal",
+  "category": "government-open-data",
+  "tagline": "Government of Canada open data and information via CKAN and public REST APIs.",
+  "description": "Public APIs for searching, browsing, and downloading Government of Canada open datasets and related open information. Built primarily on CKAN Action API endpoints with portal search, package metadata, and resource access for developers and agents.",
+  "base_url": "https://open.canada.ca/data/api/3",
+  "docs_url": "https://open.canada.ca/en/open-data",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public read endpoints require no authentication; write/admin actions (if any) are not for public self-serve use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://open.canada.ca/data/api/3/action/package_search?q=climate&rows=1'",
+    "response_snippet": "{\"help\": \"...\", \"success\": true, \"result\": {\"count\": 123, \"results\": [{\"id\": \"...\", \"name\": \"...\", \"title\": \"...\"}]}}"
+  },
+  "use_cases": [
+    "search Government of Canada open datasets by keyword",
+    "fetch package metadata for a known dataset id",
+    "list resources and download URLs for an open dataset",
+    "discover recently updated federal open data packages"
+  ],
+  "sources": [
+    "https://open.canada.ca"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

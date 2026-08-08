@@ -1,0 +1,52 @@
+{
+  "id": "x-twitter",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/fundamentals/base-url"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/fundamentals/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/getting-started/about-x-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/getting-started/about-x-api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/fundamentals/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Header should use the app-only Bearer access token (not \"YOUR_API_KEY\"). Example: curl \"https://api.x.com/2/users/by/username/X\" -H \"Authorization: Bearer $BEARER_TOKEN\"",
+      "source": "https://docs.x.com/x-api/users/lookup/get-users-by-username-username"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.com/x-api/getting-started/about-x-api"
+    }
+  },
+  "notes": "Base URL, docs, OAuth2/app-only, Free+Basic/Pro/Enterprise, and tier-varying rate limits match current docs.x.com. Free limits are intentionally vague in the entry (docs: 500 posts/mo write; reads change). Example path is valid but header placeholder is wrong (API key \u2260 Bearer). cors unknown is appropriate without browser evidence."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "intercom",
+  "status": "operational",
+  "name": "Intercom",
+  "category": "social-communication",
+  "tagline": "Customer messaging platform API for conversations, contacts, and support automation",
+  "description": "Intercom provides a REST API for customer messaging, support, and engagement\u2014contacts, conversations, companies, tickets, and help content. Developers use it to sync CRM data, automate messaging, and integrate support workflows with their apps.",
+  "base_url": "https://api.intercom.io",
+  "docs_url": "https://developers.intercom.com/docs",
+  "signup_url": "https://app.intercom.com/admins/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token (access token) in Authorization header; create tokens in Intercom Developer Hub / app settings"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "10,000 API calls/min per app (default); may vary by plan/endpoint. See X-RateLimit-* headers",
+  "example": {
+    "request": "curl https://api.intercom.io/me -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\" -H \"Intercom-Version: 2.11\"",
+    "response_snippet": "{\"type\":\"admin\",\"id\":\"...\",\"email\":\"...\",\"name\":\"...\"}"
+  },
+  "use_cases": [
+    "list open customer conversations",
+    "create or update a contact by email",
+    "send a reply in a conversation",
+    "search contacts by custom attributes",
+    "create a support ticket from app events"
+  ],
+  "sources": [
+    "https://developers.intercom.com/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

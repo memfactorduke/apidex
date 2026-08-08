@@ -1,0 +1,52 @@
+{
+  "id": "you-com",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.ydc-index.io (legacy) \u2014 current public docs point to Smart/Search API on You.com platform; verify live base host in current docs before use. Prefer confirming against https://documentation.you.com/api-reference",
+      "source": "https://documentation.you.com/api-reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.you.com/api-reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.you.com/api-reference"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Docs use Express Search and other paths under current API reference; path/header may not match /v1/search + X-API-Key as shown \u2014 re-copy from official reference",
+      "source": "https://documentation.you.com/api-reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Placeholder structure \u2014 re-verifying against live docs before final."
+}

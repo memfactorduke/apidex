@@ -1,0 +1,98 @@
+{
+  "id": "cryptocompare",
+  "status": "operational",
+  "name": "CryptoCompare",
+  "category": "crypto",
+  "tagline": "Crypto market data API for prices, historical OHLC, exchanges, and news",
+  "description": "CryptoCompare provides market data for cryptocurrencies including real-time and historical prices, OHLC candles, exchange and pair data, volume, indices, and news. Developers access REST endpoints (and streaming options) with an API key for portfolio trackers, trading tools, market dashboards, and research apps that need multi-asset crypto market coverage.",
+  "base_url": "https://min-api.cryptocompare.com",
+  "docs_url": "https://min-api.cryptocompare.com/documentation",
+  "signup_url": "https://www.cryptocompare.com/cryptopian/api-keys",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header as Apikey YOUR_API_KEY, or query parameter api_key=YOUR_API_KEY; free self-serve key from CryptoCompare account"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier available; exact request quotas vary by plan (see pricing page)",
+    "paid_plans": "Paid subscription plans with higher rate limits and data access"
+  },
+  "rate_limits": "Plan-dependent; published on pricing/docs (free tier has lower call limits)",
+  "example": {
+    "request": "curl -s \"https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,EUR\" -H \"Authorization: Apikey YOUR_API_KEY\"",
+    "response_snippet": "{\"USD\":65000.12,\"EUR\":60123.45}"
+  },
+  "use_cases": [
+    "get current BTC/ETH price in fiat",
+    "fetch historical daily OHLC for a coin",
+    "list top coins by market cap",
+    "get multi-symbol price quotes for a portfolio",
+    "pull crypto news headlines"
+  ],
+  "sources": [
+    "https://min-api.cryptocompare.com/documentation",
+    "https://www.cryptocompare.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

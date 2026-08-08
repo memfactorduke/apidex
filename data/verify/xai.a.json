@@ -1,0 +1,52 @@
+{
+  "id": "xai",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.ai/docs/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.ai/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.ai/docs/tutorial"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.ai/docs/models"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.ai/docs/key-information/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.ai/docs/guides/chat"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.x.ai/docs/overview"
+    }
+  },
+  "notes": "Verified against official docs.x.ai and console.x.ai. Base URL, Bearer auth, OpenAI-compatible chat path, and no free tier match current docs. Rate limits and CORS are correctly marked as not published / unknown. Example curl uses valid path and headers; model id may change over time."
+}

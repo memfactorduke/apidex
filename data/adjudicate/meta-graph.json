@@ -1,0 +1,15 @@
+{
+  "id": "meta-graph",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://graph.facebook.com/v23.0/me?fields=id,name\"",
+  "example_response_snippet": "{\"id\":\"1029384756102938\",\"name\":\"Jane Developer\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: Verifier B correct \u2014 v21.0 is outdated for 2026; Meta docs list current versions (v22.0/v23.0 era) and document Authorization: Bearer as the preferred header form while access_token query param still works. Corrected request uses a current versioned host path and Bearer auth. Evidence: https://developers.facebook.com/docs/graph-api/guides/using-graph-api and https://developers.facebook.com/docs/graph-api (versioned endpoints / changelog). Response shape for GET /me?fields=id,name remains {id,name}. All other fields confirmed by both verifiers against official docs \u2014 no change."
+}

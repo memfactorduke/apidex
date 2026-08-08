@@ -1,0 +1,52 @@
+{
+  "id": "pirate-weather",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pirateweather.net/en/latest/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.pirateweather.net/en/latest/",
+      "source": "https://docs.pirateweather.net/en/latest/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pirateweather.net/en/latest/API/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pirateweather.net/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "20,000 API calls/month (free plan)",
+      "source": "https://pirateweather.net/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "20,000 calls/month free; higher tiers available. No published per-second rate limit.",
+      "source": "https://pirateweather.net/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pirateweather.net/en/latest/API/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pirateweather.net/en/latest/"
+    }
+  },
+  "notes": "docs_url was wrong (pirateweather.net/en/latest \u2192 docs.pirateweather.net). Free tier is 20k/month, not \"unknown\". base_url path and API-key-in-URL auth match docs. Automated 404s likely due to missing key or wrong docs host."
+}

@@ -1,0 +1,94 @@
+{
+  "id": "world-news-api",
+  "status": "operational",
+  "name": "World News API",
+  "category": "news-media",
+  "tagline": "Global news search and extraction API with geo and sentiment filters.",
+  "description": "World News API provides search and retrieval of news articles from sources worldwide, with filters for location, language, sentiment, and entities. It offers search, top headlines, and extract endpoints for building news apps, media monitoring, and research tools.",
+  "base_url": "https://api.worldnewsapi.com",
+  "docs_url": "https://worldnewsapi.com/docs/",
+  "signup_url": "https://worldnewsapi.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api-key query parameter or header (self-serve signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free: 50 points/day (then no more calls until midnight UTC reset); 1-month history; backlink required. Points \u2260 1:1 requests (typical call costs ~1 point + 0.01/result).",
+    "paid_plans": null
+  },
+  "rate_limits": "Published by plan. Free: 60 req/min, 1 concurrent; Reporter: 2 req/s, 5 concurrent; Journalist: 10 req/s, 10 concurrent; Editor: 20 req/s, 10 concurrent. Daily point quotas on pricing.",
+  "example": {
+    "request": "curl \"https://api.worldnewsapi.com/search-news?text=technology&api-key=YOUR_API_KEY\"",
+    "response_snippet": "{\"offset\":0,\"number\":10,\"available\":100,\"news\":[{\"id\":123,\"title\":\"Sample\",\"text\":\"...\",\"url\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "search recent news by keyword",
+    "get top headlines by country",
+    "extract full text from a news URL"
+  ],
+  "sources": [
+    "https://worldnewsapi.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

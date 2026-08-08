@@ -1,0 +1,95 @@
+{
+  "id": "locationiq",
+  "status": "operational",
+  "name": "LocationIQ",
+  "category": "geo-maps",
+  "tagline": "Geocoding, reverse geocoding, and maps API built on OpenStreetMap data.",
+  "description": "LocationIQ provides geocoding, reverse geocoding, autocomplete, directions, and map tiles via a REST API. Developers authenticate with an API key and can call endpoints for address lookup, coordinate conversion, and routing. It is commonly used for location search, address validation, and embedding maps in applications.",
+  "base_url": "https://us1.locationiq.com/v1",
+  "docs_url": "https://locationiq.com/docs",
+  "signup_url": "https://locationiq.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter or Authorization: Bearer header; self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "5000 requests/day, 2 requests/second (Developer free tier)",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: 2 req/s; paid plans higher (e.g. 5\u201350+ req/s by tier). Published on pricing page.",
+  "example": {
+    "request": "curl \"https://us1.locationiq.com/v1/search?key=YOUR_API_KEY&q=Empire+State+Building&format=json\"",
+    "response_snippet": "[{\"place_id\":\"...\",\"licence\":\"...\",\"lat\":\"40.7484\",\"lon\":\"-73.9857\",\"display_name\":\"Empire State Building, ...\"}]"
+  },
+  "use_cases": [
+    "geocode an address to coordinates",
+    "reverse geocode lat/lon to an address",
+    "autocomplete place search as user types",
+    "get driving directions between two points"
+  ],
+  "sources": [
+    "https://locationiq.com/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

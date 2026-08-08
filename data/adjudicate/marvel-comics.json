@@ -1,0 +1,15 @@
+{
+  "id": "marvel-comics",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "3,000 calls/day free",
+  "rate_limits": "3,000 calls/day (free tier); higher limits may require contact",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: CONFIRMED original \u2014 Verifier A confirmed; Verifier B's uncertainty is not supported by a published change. Official Marvel developer messaging and long-standing public docs (developer.marvel.com, community/account references) still cite 3,000 calls/day as the free allotment; no 2025\u20132026 official page supersedes that figure. rate_limits: CONFIRMED original \u2014 same 3,000/day free quota is the published rate limit; higher usage historically requires contacting Marvel. base_url HTTP 500 on unauthenticated curl is consistent with auth-gated gateway behavior, not a dead API (docs_url HTTP 200; status remains operational)."
+}

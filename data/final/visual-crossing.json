@@ -1,0 +1,95 @@
+{
+  "id": "visual-crossing",
+  "status": "operational",
+  "name": "Visual Crossing Weather",
+  "category": "weather-environment",
+  "tagline": "Timeline weather API with historical data and forecasts in one call",
+  "description": "Timeline weather API combining historical observations and forecasts in one call. API-key auth; free tier includes 1000 records/day.",
+  "base_url": "https://weather.visualcrossing.com",
+  "docs_url": "https://www.visualcrossing.com/resources/documentation/weather-api/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Researching authentication method from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1000 records/day free (no credit card); record = one day of weather data for a location",
+    "paid_plans": null
+  },
+  "rate_limits": "Primary limit is daily record quota (Free: 1000 records/day); higher tiers raise caps. Fixed concurrent/RPM limits are plan-dependent and not always published as a single RPM figure",
+  "example": {
+    "request": "curl \"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?unitGroup=metric&key=YOUR_API_KEY&contentType=json\"",
+    "response_snippet": "{\"queryCost\":1,\"latitude\":51.5064,\"longitude\":-0.12721,\"resolvedAddress\":\"London, England, United Kingdom\",\"address\":\"London,UK\",\"timezone\":\"Europe/London\",\"days\":[{\"datetime\":\"2026-03-08\",\"tempmax\":12.1,\"tempmin\":5.2,\"temp\":8.4,\"conditions\":\"Partially cloudy\",\"description\":\"Partly cloudy throughout the day.\"}]}"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "retrieve historical weather data"
+  ],
+  "sources": [
+    "https://www.visualcrossing.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "x-twitter",
+  "status": "operational",
+  "name": "X API",
+  "category": "social-communication",
+  "tagline": "Official X (Twitter) platform API for posts, users, search, and engagement.",
+  "description": "X API (formerly Twitter API) provides programmatic access to posts, user profiles, timelines, search, direct messages, media, and engagement data on X. Developers authenticate with OAuth 2.0 or Bearer tokens, call REST endpoints under api.x.com, and choose Free, Basic, Pro, or Enterprise tiers depending on volume and features.",
+  "base_url": "https://api.x.com/2",
+  "docs_url": "https://docs.x.com/x-api/introduction",
+  "signup_url": "https://developer.x.com/en/portal/petition/essential/basic-info",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 (user context) or OAuth 2.0 App-Only Bearer Token; also OAuth 1.0a. Create a Project/App in the X Developer Portal; use Authorization: Bearer YOUR_BEARER_TOKEN or OAuth signed requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier exists with very low write/read caps (e.g. limited posts/month and read requests); exact published numbers change \u2014 verify on developer.x.com pricing. Pay-as-you-go Basic/Pro for higher volume.",
+    "paid_plans": "Basic, Pro, and Enterprise tiers via developer.x.com; pricing and included request quotas vary by product (posts, search, etc.)."
+  },
+  "rate_limits": "Per-endpoint and per-app/user limits vary by product tier; published in X API rate-limit docs (e.g. many v2 read endpoints ~15\u2013900 req/15 min depending on endpoint and auth).",
+  "example": {
+    "request": "curl \"https://api.x.com/2/users/by/username/X\" -H \"Authorization: Bearer $BEARER_TOKEN\"",
+    "response_snippet": "{\"data\":{\"id\":\"2244994945\",\"name\":\"X\",\"username\":\"X\"}}"
+  },
+  "use_cases": [
+    "fetch a user profile by username",
+    "post a tweet/status on behalf of a user",
+    "search recent public posts by keyword",
+    "get a user\u2019s recent timeline posts",
+    "lookup engagement metrics for a post",
+    "stream or poll mentions of a brand account"
+  ],
+  "sources": [
+    "https://docs.x.com/x-api/introduction",
+    "https://developer.x.com/en/docs/twitter-api",
+    "https://developer.x.com/en/portal/products"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

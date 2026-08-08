@@ -1,0 +1,52 @@
+{
+  "id": "vesselfinder",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.vesselfinder.com/vesselslist?userkey=YOUR_API_KEY&mmsi=MMSI\" (or other documented endpoints such as /vessels, /vesseltrack, /status; path and params must match current API docs)",
+      "source": "https://api.vesselfinder.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    }
+  },
+  "notes": "Docs-first check against api.vesselfinder.com. base_url, docs_url, apiKey auth, paid-only free_tier, and description hold. Example curl uses /vessels?userkey=... which is incomplete/wrong vs documented endpoints; rate_limits \"not published\" is fair. CORS unknown."
+}

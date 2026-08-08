@@ -1,0 +1,96 @@
+{
+  "id": "arxiv-api",
+  "status": "operational",
+  "name": "arXiv API",
+  "category": "science-space",
+  "tagline": "Search and retrieve physics, math, and CS preprints",
+  "description": "Search and retrieve metadata for arXiv preprints (physics, math, CS, and other fields) via an Atom 1.0 API; no authentication required.",
+  "base_url": "https://export.arxiv.org",
+  "docs_url": "https://info.arxiv.org/help/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Researching"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No formal free-tier quota; free use subject to fair-use rate limits (\u22641 request every 3 seconds, single connection). No paid plans.",
+    "paid_plans": null
+  },
+  "rate_limits": "\u22641 request every 3 seconds; single concurrent connection per source. Avoid bursts; use OAI-PMH/bulk for large harvests. max_results capped at 30000 (slices \u22642000).",
+  "example": {
+    "request": "curl \"https://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=1\"",
+    "response_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\" xmlns:opensearch=\"http://a9.com/-/spec/opensearch/1.1/\" xmlns:arxiv=\"http://arxiv.org/schemas/atom\">\n  <title>ArXiv Query: search_query=all:electron&amp;id_list=&amp;start=0&amp;max_results=1</title>\n  <opensearch:totalResults>1000</opensearch:totalResults>\n  <entry>\n    <id>http://arxiv.org/abs/hep-ex/0307015</id>\n    <title>Multi-Electron Production at High Transverse Momenta in ep Collisions at HERA</title>\n    <summary>Multi-electron production is studied at high electron transverse momentum...</summary>\n  </entry>\n</feed>"
+  },
+  "use_cases": [
+    "search preprints",
+    "get paper metadata"
+  ],
+  "sources": [
+    "https://info.arxiv.org/help/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

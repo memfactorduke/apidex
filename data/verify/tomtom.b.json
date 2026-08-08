@@ -1,0 +1,52 @@
+{
+  "id": "tomtom",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tomtom.com/search-api/documentation/product-information/introduction"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.tomtom.com/ (maps-api path is not the primary/canonical docs hub; use developer.tomtom.com or product-specific docs e.g. Search API)",
+      "source": "https://developer.tomtom.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tomtom.com/search-api/documentation/product-information/introduction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tomtom.com/store/maps-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tomtom.com/store/maps-api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tomtom.com/store/maps-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tomtom.com/search-api/documentation/geocoding-extension/geocode"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tomtom.com/"
+    }
+  },
+  "notes": "docs_url /maps-api is not a solid canonical landing path vs product docs; free-tier claims are soft/hedged. CORS unknown is correct."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "mailchimp",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free marketing plan: contact and monthly send caps on current pricing (limits change; verify on mailchimp.com/pricing). API access available on free accounts.",
+  "rate_limits": "10 concurrent connections per API key; soft throughput ~10 requests/second (higher on paid plans). Exact numbers per current developer docs.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "Disputed free_tier_limits: original \"unknown\" is too weak \u2014 Free plan has published contact/send limits on pricing page; corrected to note free-plan caps and that they change. Sources: https://mailchimp.com/pricing/marketing/ and https://mailchimp.com/pricing/. Disputed rate_limits: original \"not published\" is wrong \u2014 Mailchimp documents concurrent connection limits (10 per API key) and ~10 req/s soft guidance. Sources: https://mailchimp.com/developer/marketing/guides/how-to-use-oauth2/ and how-to-use-marketing-api. base_url HTTP 0 is expected for template URL https://<dc>.api.mailchimp.com/3.0 (not a live host); docs_url HTTP 200; status remains operational."
+}

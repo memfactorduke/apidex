@@ -1,0 +1,52 @@
+{
+  "id": "ensembl",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "15 requests/second per IP (global rate limit); 5500 requests/hour recommended maximum; bulk/download use discouraged via REST\u2014use FTP or Perl/Python APIs for large jobs.",
+      "source": "https://rest.ensembl.org"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.ensembl.org"
+    }
+  },
+  "notes": "Base and docs URLs return HTTP 0 in automated checks, but official sources confirm they are correct. Rate limits are outdated; current limits are higher."
+}

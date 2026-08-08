@@ -1,0 +1,15 @@
+{
+  "id": "brawl-stars",
+  "base_url": "https://api.brawlstars.com/v1",
+  "docs_url": "https://developer.brawlstars.com/",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "Free developer keys; exact free request quotas not clearly published on official docs",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.brawlstars.com/v1/players/%232PP\"",
+  "example_response_snippet": "{\"tag\":\"#2PP\",\"name\":\"...\",\"trophies\":0,\"expLevel\":1,\"expPoints\":0,\"highestTrophies\":0,\"powerPlayPoints\":0,\"highestPowerPlayPoints\":0,\"soloVictories\":0,\"duoVictories\":0,\"3vs3Victories\":0,\"bestRoboRumbleTime\":0,\"bestTimeAsBigBrawler\":0,\"brawlers\":[]}",
+  "description": "Official Brawl Stars developer API from Supercell providing access to player profiles, club information, battle logs, rankings, and brawler data. Developers obtain a free API key by registering with an IP allowlist; requests authenticate via Bearer token. Useful for stats trackers, club tools, and community dashboards.",
+  "status": "operational",
+  "resolution_notes": "example: original confirmed; path encoding %23 for # is correct per official docs. Response fields may be outdated (powerPlayPoints etc.) but encoding is correct. Verify exact path against current OpenAPI."
+}

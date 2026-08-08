@@ -1,0 +1,15 @@
+{
+  "id": "circleci",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free: 30,000 credits/mo (~6,000 min on small Docker), 5 active users, 30 concurrent jobs, 1 GB network, 2 GB storage. Linux OSS: up to 400,000 credits/mo. Check pricing for current numbers.",
+  "rate_limits": "Limits exist and vary by endpoint (no fixed public req/s). HTTP 429 with Retry-After; use RateLimit-*/X-RateLimit-* headers and exponential backoff. See API developer\u2019s guide.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: ORIGINAL \u201cunknown\u201d wrong; Verifier B partly right. Official pricing (https://circleci.com/pricing/) and credits docs (https://circleci.com/docs/guides/plans-pricing/credits/): Free = 30,000 credits/mo (~6,000 build min on small Docker), 5 users, 30\u00d7 concurrency, 1 GB network, 2 GB storage; OSS Linux up to 400,000 credits/mo. Not \u201c6,000 build credits.\u201d rate_limits: ORIGINAL \u201cnot published\u201d incomplete; Verifier B\u2019s \u201c15\u201350 req/s\u201d not in official docs. Developer\u2019s guide (https://circleci.com/docs/guides/toolkit/api-developers-guide/) documents rate limiting, 429 + Retry-After, RateLimit/X-RateLimit headers, limits vary by endpoint\u2014no fixed public numeric rate."
+}

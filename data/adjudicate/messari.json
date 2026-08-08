@@ -1,0 +1,15 @@
+{
+  "id": "messari",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Unpaid/Lite/Pro: 200 req/min (non-enterprise-gated endpoints). MessariAI Free: 10 req/day. Marketing may claim ~20 rpm free.",
+  "rate_limits": "Unpaid/Lite/Pro: 200 req/min; Enterprise: 600 req/min (global). Service-level limits per endpoint. MessariAI Free: 10/day; Enterprise AI: 600/min.",
+  "cors": null,
+  "example_request": "curl -s \"https://api.messari.io/metrics/v2/assets\" -H \"x-messari-api-key: YOUR_API_KEY\"",
+  "example_response_snippet": "{\"data\":[{\"id\":\"...\",\"symbol\":\"BTC\",\"name\":\"Bitcoin\",...}],\"metadata\":{...}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier: Verifier B correct \u2014 true (docs permissions). free_tier_limits: B correct (permissions page). rate_limits: B correct (published on permissions). example: B correct \u2014 /api/v1/assets 404; use /metrics/v2/assets. Sources: docs.messari.io permissions + metrics endpoints."
+}

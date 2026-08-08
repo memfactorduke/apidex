@@ -1,0 +1,52 @@
+{
+  "id": "pinterest",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/reference/rate-limits/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/api/v5/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/key-concepts/access-tiers/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Trial access: 1,000 requests/day per app (universal) plus per-category daily caps (e.g. org_write/ads_write 300/day). Standard access: 100 requests/second per user per app (universal) plus published per-category per-minute limits. No paid API usage tiers; free Trial/Standard with rate limits.",
+      "source": "https://developers.pinterest.com/docs/reference/rate-limits/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published. Universal: Trial 1000 req/day all requests; Standard 100 req/sec per user per app. Plus per-category limits (e.g. org_read Standard 1000/min, org_write 100/min, ads_analytics 300/min, ads_write 400/min, org_analytics 60/min). See official rate-limits table.",
+      "source": "https://developers.pinterest.com/docs/reference/rate-limits/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.pinterest.com/docs/api/v5/"
+    }
+  },
+  "notes": "Main failure: rate_limits claims 'not published' but official docs publish universal + per-category Trial/Standard limits (also free_tier_limits is not unknown). base_url, docs, OAuth2, GET /v5/user_account example, free access, and description match current v5 docs. CORS remains undocumented."
+}

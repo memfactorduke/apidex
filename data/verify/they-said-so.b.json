@@ -1,0 +1,52 @@
+{
+  "id": "they-said-so",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quotes.rest"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://theysaidso.com/api/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey (X-TheySaidSo-Api-Secret header preferred in docs; Authorization Bearer also mentioned; unauthenticated free access possible with tighter limits)",
+      "source": "https://theysaidso.com/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://theysaidso.com/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "10 requests/hour (public/unauthenticated); higher with free API key \u2014 verify current pricing page",
+      "source": "https://theysaidso.com/api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: ~10 req/hour unauthenticated; paid plans have higher limits published on pricing",
+      "source": "https://theysaidso.com/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quotes.rest"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://theysaidso.com/api/"
+    }
+  },
+  "notes": "PLACEHOLDER - need to verify with live sources"
+}

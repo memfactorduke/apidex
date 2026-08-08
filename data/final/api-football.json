@@ -1,0 +1,97 @@
+{
+  "id": "api-football",
+  "status": "operational",
+  "name": "API-Football (API-Sports)",
+  "category": "sports",
+  "tagline": "Largest football/soccer coverage: live scores, fixtures, odds, and standings",
+  "description": "API-Football by API-Sports provides comprehensive football (soccer) data including live scores, fixtures, lineups, standings, odds, players, and more. Accessible via RapidAPI or direct API-Sports endpoints with broad league and competition coverage worldwide.",
+  "base_url": "https://v3.football.api-sports.io",
+  "docs_url": "https://www.api-football.com/documentation-v3",
+  "signup_url": "https://dashboard.api-football.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-apisports-key header (direct) or X-RapidAPI-Key + X-RapidAPI-Host (RapidAPI). Self-serve signup at dashboard.api-football.com or RapidAPI."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 100 requests/day",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"x-apisports-key: YOUR_API_KEY\" \"https://v3.football.api-sports.io/status\"",
+    "response_snippet": "{\"get\":\"status\",\"parameters\":[],\"errors\":[],\"results\":1,\"response\":{\"account\":{\"firstname\":\"...\",\"lastname\":\"...\"},\"subscription\":{\"plan\":\"Free\",\"end\":\"...\",\"active\":true},\"requests\":{\"current\":0,\"limit_day\":100}}}"
+  },
+  "use_cases": [
+    "get live scores for a football match",
+    "list today's fixtures by league or date",
+    "fetch league standings and table",
+    "get match odds and betting markets",
+    "look up player stats and squads"
+  ],
+  "sources": [
+    "https://www.api-football.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

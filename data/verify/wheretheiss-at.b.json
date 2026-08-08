@@ -1,0 +1,52 @@
+{
+  "id": "wheretheiss-at",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wheretheiss.at/w/developer"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wheretheiss.at/w/developer"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wheretheiss.at/w/developer"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wheretheiss.at/w/developer"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wheretheiss.at/w/developer"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Approximately 1 request per second (documented as ~1 req/sec)",
+      "source": "https://wheretheiss.at/w/developer"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wheretheiss.at/w/developer"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wheretheiss.at/w/developer"
+    }
+  },
+  "notes": "Rate limits are published on the developer page (~1 req/sec); entry claimed \"not published\". Live GET /v1/satellites/25544 works with documented response shape. CORS not stated in docs."
+}

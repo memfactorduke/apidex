@@ -1,0 +1,52 @@
+{
+  "id": "ncbi-eutils",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25500/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25501/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey (optional; recommended). Unauthenticated access is allowed but rate-limited more tightly. Register at NCBI Account for an API key.",
+      "source": "https://www.ncbi.nlm.nih.gov/account/settings/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25497/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No paid tier. Free public access: 3 requests/second without API key; 10 requests/second with API key. No formal request-volume free-tier cap beyond rate limits and NCBI usage policies (do not overload servers; use API keys for higher throughput).",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25497/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Without API key: \u22643 requests/second. With API key: \u226410 requests/second. NCBI may block IPs that exceed limits or abuse the service.",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25497/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=asthma&retmode=json\"",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25500/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "NCBI E-utilities (Entrez Programming Utilities) is a set of server-side programs for programmatic access to the Entrez system and NCBI databases (PubMed, GenBank, Protein, etc.) via HTTP, returning XML, JSON, or other formats depending on the utility and parameters.",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25501/"
+    }
+  },
+  "notes": "Entry was essentially empty (empty base_url/docs_url/description/example/rate_limits). Automated curl HTTP 0 matches empty URLs. Auth is not strictly 'none'\u2014optional api_key is the recommended modern practice. Formats include XML and others, not only JSON. CORS not documented officially."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "17track",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "As of 2026-01-07, new accounts get a one-time free allocation of 200 tracking numbers (monthly free quota ended); paid plans by volume thereafter.",
+  "rate_limits": "3 requests/second (HTTP 429 when exceeded); max 40 tracking numbers per request; ~400,000 registrations/hour.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B correct \u2014 official docs (api.17track.net/en/doc) state monthly free quota ended 2026-01-07; new accounts get one-time 200 free tracking numbers, not a recurring monthly free plan. Original 'limited monthly quota' is outdated. rate_limits: Verifier B correct \u2014 official docs publish 3 req/s (429 on exceed), max 40 numbers/request, ~400k registrations/hour; original 'not published' is wrong."
+}

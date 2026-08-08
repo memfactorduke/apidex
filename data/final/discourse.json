@@ -1,0 +1,99 @@
+{
+  "id": "discourse",
+  "status": "operational",
+  "name": "Discourse",
+  "category": "social-communication",
+  "tagline": "Self-hosted forum platform API for topics, posts, users, and categories",
+  "description": "Discourse is an open-source community forum platform with a REST API available on every Discourse site. Developers authenticate with an API key plus username headers to list topics, create posts, manage users, and moderate content on self-hosted or Discourse-hosted instances. There is no single multi-tenant public API host\u2014each site exposes the same API at its own base URL.",
+  "base_url": "https://{your-forum}/",
+  "docs_url": "https://docs.discourse.org/",
+  "signup_url": "https://www.discourse.org/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP headers: Api-Key and Api-Username (user the key acts as). Keys created in Admin \u2192 API. User API keys (for mobile/user apps) use different User-Api-Key headers."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Self-hosted open source: free (unlimited API on your instance). Hosted Discourse plans billed separately; API access included with site hosting\u2014no published per-request free API tier.",
+    "paid_plans": "Discourse hosting plans (Standard/Business/Enterprise) include site + API; pricing at discourse.org/pricing. Self-hosted is free software."
+  },
+  "rate_limits": "Per-site; default Discourse rate limits apply (e.g. admin can configure). Not a single global published number\u2014depends on instance settings and user trust level.",
+  "example": {
+    "request": "curl -s \"https://meta.discourse.org/latest.json\" -H \"Api-Key: YOUR_API_KEY\" -H \"Api-Username: YOUR_USERNAME\"",
+    "response_snippet": "{\"users\":[...],\"topic_list\":{\"topics\":[{\"id\":123,\"title\":\"Welcome to Discourse\",\"slug\":\"welcome-to-discourse\",\"posts_count\":5,\"reply_count\":4,\"highest_post_number\":5,\"created_at\":\"...\",\"last_posted_at\":\"...\",\"bumped\":true,\"pinned\":false,\"visible\":true,\"closed\":false,\"archived\":false}],\"more_topics_url\":\"/latest?page=1\"}}"
+  },
+  "use_cases": [
+    "list latest topics from a Discourse forum",
+    "create a new topic or reply as a bot user",
+    "fetch a topic and its posts by ID or slug",
+    "search forum posts for a keyword",
+    "sync user or group membership with an external app",
+    "post status updates or announcements to a category"
+  ],
+  "sources": [
+    "https://docs.discourse.org/",
+    "https://meta.discourse.org/",
+    "https://www.discourse.org/",
+    "https://www.discourse.org/pricing"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

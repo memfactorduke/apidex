@@ -1,0 +1,97 @@
+{
+  "id": "claimbuster",
+  "status": "operational",
+  "name": "ClaimBuster",
+  "category": "news-media",
+  "tagline": "Real-time fact-checking API that scores claims for check-worthiness",
+  "description": "ClaimBuster is a public API from the University of Texas at Arlington that scores text for check-worthiness using machine learning. It helps developers identify which claims in news, social media, or political speech most need fact-checking.",
+  "base_url": "https://idir.uta.edu/claimbuster/api/v2",
+  "docs_url": "https://idir.uta.edu/claimbuster/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via header (details pending verification from official docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"x-api-key: YOUR_API_KEY\" \"https://idir.uta.edu/claimbuster/api/v2/score/text/example\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "score a sentence for check-worthiness",
+    "rank claims in a political speech for fact-checking priority"
+  ],
+  "sources": [
+    "https://idir.uta.edu/claimbuster/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

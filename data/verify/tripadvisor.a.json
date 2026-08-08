@@ -1,0 +1,52 @@
+{
+  "id": "tripadvisor",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.content.tripadvisor.com/api/v1",
+      "source": "https://tripadvisor-content-api.readme.io/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://tripadvisor-content-api.readme.io/",
+      "source": "https://tripadvisor-content-api.readme.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tripadvisor-content-api.readme.io/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tripadvisor-content-api.readme.io/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tripadvisor-content-api.readme.io/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tripadvisor-content-api.readme.io/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tripadvisor-content-api.readme.io/"
+    }
+  },
+  "notes": "Automated HTTP 403s are likely bot protection; docs live on readme.io. Entry fields largely match official Content API docs; docs_url host was the main issue."
+}

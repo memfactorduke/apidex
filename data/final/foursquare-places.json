@@ -1,0 +1,100 @@
+{
+  "id": "foursquare-places",
+  "status": "operational",
+  "name": "Foursquare Places",
+  "category": "food-drink",
+  "tagline": "Global venue search, place details, and location data for apps",
+  "description": "Foursquare Places API provides venue search, place details, categories, tips, photos, and geolocation data across millions of points of interest worldwide. Developers use it for location-based discovery, local business info, and place enrichment in consumer and enterprise apps.",
+  "base_url": "https://places-api.foursquare.com",
+  "docs_url": "https://docs.foursquare.com/fsq-developers-places/reference/places-api-overview",
+  "signup_url": "https://foursquare.com/developers/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header (Bearer or raw key); self-serve developer signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free/Sandbox: ~10,000 Place Search calls (tier/quota; confirm in console). Pro ~$20/mo with monthly Place Search + Place Details allowances; Enterprise custom. Verify current numbers on pricing.",
+    "paid_plans": null
+  },
+  "rate_limits": "Per-endpoint and plan quotas (not a single global RPM). Free/Sandbox call-budget limited; see rate-limits docs and developer console.",
+  "example": {
+    "request": "curl -X GET \"https://places-api.foursquare.com/places/search?query=coffee&ll=40.7,-74.0\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\" -H \"X-Places-Api-Version: 2025-06-17\"",
+    "response_snippet": "{ \"results\": [ { \"fsq_place_id\": \"...\", \"name\": \"...\", \"location\": { \"address\": \"...\" } } ] }"
+  },
+  "use_cases": [
+    "search nearby restaurants or coffee shops by query and coordinates",
+    "get place details, hours, and contact info by Foursquare ID",
+    "autocomplete place names as a user types a location query",
+    "find venues by category near a lat/lng",
+    "enrich addresses or coordinates with venue metadata"
+  ],
+  "sources": [
+    "https://docs.foursquare.com/",
+    "https://location.foursquare.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

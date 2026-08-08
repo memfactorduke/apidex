@@ -1,0 +1,52 @@
+{
+  "id": "sportradar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.sportradar.us (US host remains common in current NBA/v8 docs; product-specific hosts also appear as api.sportradar.com)",
+      "source": "https://developer.sportradar.com/basketball/reference/nba-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.sportradar.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.sportradar.com/getting-started/docs/api-basics"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.sportradar.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.sportradar.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.sportradar.com/getting-started/docs/api-basics"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl path should use api.sportradar.us host per current NBA docs: https://api.sportradar.us/nba/{access_level}/v8/en/games/{year}/{season_type}/schedule.{format}?api_key=YOUR_API_KEY",
+      "source": "https://developer.sportradar.com/basketball/reference/nba-overview"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.sportradar.com/"
+    }
+  },
+  "notes": "Base host is the main issue: NBA v8 docs still show api.sportradar.us; api.sportradar.com is not universally wrong but the entry example is host-inaccurate for that path. Auth, trial/commercial model, and unpublished public rate limits match docs."
+}

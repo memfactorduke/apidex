@@ -1,0 +1,99 @@
+{
+  "id": "maven-central",
+  "status": "operational",
+  "name": "Maven Central Search API",
+  "category": "dev-tools",
+  "tagline": "Search and resolve Maven packages from Central Repository",
+  "description": "The Maven Central Search API provides programmatic access to search, resolve, and retrieve metadata for artifacts published to Maven Central Repository. Developers can query by groupId, artifactId, version, class names, and other coordinates to discover packages and dependencies.",
+  "base_url": "https://search.maven.org/solrsearch/select",
+  "docs_url": "https://central.sonatype.org/search/rest-api-guide/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public search endpoints"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://search.maven.org/solrsearch/select?q=g:com.google.guava+AND+a:guava&rows=5&wt=json\"",
+    "response_snippet": "{\"responseHeader\":{\"status\":0,\"QTime\":2},\"response\":{\"numFound\":1,\"start\":0,\"docs\":[{\"id\":\"com.google.guava:guava\",\"g\":\"com.google.guava\",\"a\":\"guava\",\"latestVersion\":\"33.0.0-jre\",\"repositoryId\":\"central\",\"p\":\"jar\",\"timestamp\":1700000000000,\"versionCount\":100,\"text\":[\"com.google.guava\",\"guava\"],\"ec\":[\".jar\",\".pom\"]}]}}"
+  },
+  "use_cases": [
+    "search Maven artifacts by groupId and artifactId",
+    "find latest version of a Java library",
+    "lookup package coordinates for a dependency",
+    "discover artifacts by class name or checksum"
+  ],
+  "sources": [
+    "https://central.sonatype.org/search/rest-api-guide/",
+    "https://search.maven.org/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

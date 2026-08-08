@@ -1,0 +1,15 @@
+{
+  "id": "ipgeolocation-io",
+  "base_url": null,
+  "docs_url": "https://ipgeolocation.io/documentation",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1,000 requests/day (Free plan); paid plans have higher daily quotas",
+  "rate_limits": "Free: 1,000 requests/day; paid tiers publish higher daily quotas on pricing",
+  "cors": null,
+  "example_request": "curl \"https://api.ipgeolocation.io/ipgeo?apiKey=YOUR_API_KEY&ip=8.8.8.8\"",
+  "example_response_snippet": "{\"ip\":\"8.8.8.8\",\"continent_code\":\"NA\",\"continent_name\":\"North America\",\"country_code2\":\"US\",\"country_code3\":\"USA\",\"country_name\":\"United States\",\"city\":\"Mountain View\",\"zipcode\":\"94043\",\"latitude\":\"37.42240\",\"longitude\":\"-122.08421\",\"isp\":\"Google LLC\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: prefer https://ipgeolocation.io/documentation (canonical docs hub; .html also works). free_tier_limits/rate_limits: Free plan is 1,000 req/day per pricing (not monthly). example: docs use apiKey query + optional ip=; response shape from IP Geolocation API docs. Sources: pricing + IP Geolocation API documentation pages."
+}

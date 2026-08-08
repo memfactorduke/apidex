@@ -1,0 +1,52 @@
+{
+  "id": "pagerduty",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTUw-rest-api-v2-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pagerduty.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTUw-rest-api-v2-overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pagerduty.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pagerduty.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "PagerDuty documents REST API rate limits as typically 900 requests per minute for most endpoints (with some write endpoints lower); limits can vary by account/plan. Confirm exact current published values on developer.pagerduty.com rate-limit docs rather than treating 900/min as universal.",
+      "source": "https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTUz-rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pagerduty.com/api-reference/b3A6Mjc0ODEyNg-list-incidents"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pagerduty.com/docs"
+    }
+  },
+  "notes": "Adversarial pass found the rate-limits claim is the weakest: it states a specific 900/min figure that may be plan/account-dependent and should not be asserted as universal without the current official rate-limit page. Other fields match official PagerDuty docs structure (api.pagerduty.com, Token auth, Accept version header)."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "pokeapi",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Completely free; no hard rate limits on REST (static hosting since Nov 2018). Fair-use: cache locally; IP bans for abuse.",
+  "rate_limits": "No rate limits on REST API (removed Nov 2018). Fair-use caching expected; abuse may result in IP bans. GraphQL mirror (graphql.pokeapi.co): 100 calls/hour per IP.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B correct. Docs (https://pokeapi.co/docs/v2) state API is free with no rate limits since static hosting (Nov 2018); fair-use requires local caching; IP bans for abuse \u2014 not soft rate limiting. rate_limits: Verifier B correct. Same docs: rate limiting removed for REST; GraphQL at graphql.pokeapi.co limited to 100 calls/hour per IP. Original overstated soft rate limiting and omitted GraphQL limit."
+}

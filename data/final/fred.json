@@ -1,0 +1,100 @@
+{
+  "id": "fred",
+  "status": "operational",
+  "name": "FRED",
+  "category": "data-analytics",
+  "tagline": "Federal Reserve Economic Data time series API for U.S. and international economic indicators.",
+  "description": "FRED is the St. Louis Fed\u2019s public API for economic time series. It exposes observations, series metadata, categories, releases, sources, and tags for thousands of U.S. and international indicators (GDP, CPI, unemployment, interest rates, and more). Developers query JSON or XML with an API key; responses support vintage dates, frequency aggregation, and unit transformations useful for analytics and research apps.",
+  "base_url": "https://api.stlouisfed.org/fred",
+  "docs_url": "https://fred.stlouisfed.org/docs/api/fred/",
+  "signup_url": "https://fred.stlouisfed.org/docs/api/api_key.html",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key as query parameter api_key on every request; free self-serve registration at the St. Louis Fed FRED site."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free with API key; 120 requests/minute published rate limit (no paid tiers).",
+    "paid_plans": null
+  },
+  "rate_limits": "120 requests per minute",
+  "example": {
+    "request": "curl \"https://api.stlouisfed.org/fred/series/observations?series_id=GNPCA&api_key=YOUR_API_KEY&file_type=json\"",
+    "response_snippet": "{\"realtime_start\":\"2013-08-14\",\"realtime_end\":\"2013-08-14\",\"observation_start\":\"1600-01-01\",\"observation_end\":\"9999-12-31\",\"units\":\"lin\",\"output_type\":1,\"file_type\":\"json\",\"order_by\":\"observation_date\",\"sort_order\":\"asc\",\"count\":84,\"offset\":0,\"limit\":100000,\"observations\":[{\"realtime_start\":\"2013-08-14\",\"realtime_end\":\"2013-08-14\",\"date\":\"1929-01-01\",\"value\":\"1065.9\"},{\"realtime_start\":\"2013-08-14\",\"realtime_end\":\"2013-08-14\",\"date\":\"1930-01-01\",\"value\":\"975.5\"}]}"
+  },
+  "use_cases": [
+    "fetch historical GDP or GNP observations for a chart",
+    "look up CPI or unemployment series by series ID",
+    "list FRED categories and child series for browsing",
+    "get series metadata and last updated dates",
+    "pull interest rate or monetary aggregates for analysis",
+    "search economic series by keyword or tags"
+  ],
+  "sources": [
+    "https://fred.stlouisfed.org/docs/api/fred/",
+    "https://fred.stlouisfed.org/docs/api/api_key.html",
+    "https://fred.stlouisfed.org/docs/api/fred/series_observations.html",
+    "https://fredaccount.stlouisfed.org/apikeys"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

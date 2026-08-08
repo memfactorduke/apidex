@@ -1,0 +1,97 @@
+{
+  "id": "mailchimp",
+  "status": "operational",
+  "name": "Mailchimp",
+  "category": "social-communication",
+  "tagline": "Marketing platform API for email campaigns, audiences, and automations",
+  "description": "Mailchimp provides a REST API for managing email marketing audiences, campaigns, automations, templates, and reporting. Developers authenticate with API keys scoped to a datacenter-specific base URL, then create and manage lists, send campaigns, and pull engagement analytics programmatically.",
+  "base_url": "https://<dc>.api.mailchimp.com/3.0",
+  "docs_url": "https://mailchimp.com/developer/marketing/api/",
+  "signup_url": "https://login.mailchimp.com/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic Auth (anystring:API_KEY) or Authorization: Bearer YOUR_API_KEY; key suffix encodes datacenter (e.g. us19). Self-serve from account settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free marketing plan: contact and monthly send caps on current pricing (limits change; verify on mailchimp.com/pricing). API access available on free accounts.",
+    "paid_plans": null
+  },
+  "rate_limits": "10 concurrent connections per API key; soft throughput ~10 requests/second (higher on paid plans). Exact numbers per current developer docs.",
+  "example": {
+    "request": "curl --request GET --url 'https://usX.api.mailchimp.com/3.0/' --user 'anystring:YOUR_API_KEY'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "add or update a subscriber on an audience list",
+    "create and send an email campaign",
+    "list audience members and their status",
+    "trigger or manage marketing automations",
+    "pull campaign open and click reports"
+  ],
+  "sources": [
+    "https://mailchimp.com/developer/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

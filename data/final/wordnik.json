@@ -1,0 +1,96 @@
+{
+  "id": "wordnik",
+  "status": "operational",
+  "name": "Wordnik",
+  "category": "education-reference",
+  "tagline": "Large English word corpus with definitions, examples, and related words.",
+  "description": "Wordnik provides a public API over a large English word corpus including definitions, example sentences, related words, pronunciations, and audio. Developers can look up words, explore word relationships, and power dictionary-style features. Authentication is typically via API key; free-tier limits and rate limits should be verified from the current official docs and pricing page before production use.",
+  "base_url": "https://api.wordnik.com/v4",
+  "docs_url": "https://developer.wordnik.com/docs",
+  "signup_url": "https://developer.wordnik.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (self-serve signup on developer portal)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.wordnik.com/v4/word.json/example/definitions?api_key=YOUR_API_KEY\"",
+    "response_snippet": "[{\"text\":\"a thing characteristic of its kind or illustrating a general rule\",\"partOfSpeech\":\"noun\",\"sourceDictionary\":\"...\"}]"
+  },
+  "use_cases": [
+    "look up definitions for an English word",
+    "fetch example sentences for a word",
+    "get related words (synonyms, antonyms)",
+    "retrieve word pronunciations or audio"
+  ],
+  "sources": [
+    "https://developer.wordnik.com/",
+    "https://developer.wordnik.com/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

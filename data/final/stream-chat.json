@@ -1,0 +1,101 @@
+{
+  "id": "stream-chat",
+  "status": "operational",
+  "name": "Stream Chat",
+  "category": "social-communication",
+  "tagline": "Realtime chat and messaging API for in-app messaging",
+  "description": "Stream Chat is a hosted chat and messaging API that provides channels, messages, reactions, moderation, and realtime events for web and mobile apps. Developers use server-side SDKs or the REST API with API keys and user tokens for authentication.",
+  "base_url": "https://chat.stream-io-api.com",
+  "docs_url": "https://getstream.io/chat/docs/",
+  "signup_url": "https://getstream.io/try-for-free/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key and secret from the Stream dashboard; client uses API key plus user JWT tokens; server SDKs use API key and secret. Auth typically via stream-auth-type and Authorization headers or SDK config."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free Maker plan available with usage limits (confirm current quotas on pricing page)",
+    "paid_plans": "Starter, Team, and Enterprise plans with higher MAU and feature tiers"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://chat.stream-io-api.com/channels?api_key=YOUR_API_KEY\" -H \"Authorization: YOUR_USER_TOKEN\" -H \"stream-auth-type: jwt\" -H \"Content-Type: application/json\" -d '{\"filter_conditions\":{\"type\":\"messaging\"},\"sort\":[{\"field\":\"last_message_at\",\"direction\":-1}],\"state\":true,\"watch\":false,\"presence\":false,\"limit\":10}'",
+    "response_snippet": "{\"channels\":[{\"channel\":{\"id\":\"general\",\"type\":\"messaging\",\"cid\":\"messaging:general\",\"created_at\":\"2024-01-01T00:00:00.000000Z\",\"updated_at\":\"2024-01-01T00:00:00.000000Z\"},\"messages\":[],\"members\":[],\"watcher_count\":0}],\"duration\":\"12.34ms\"}"
+  },
+  "use_cases": [
+    "create a chat channel for a group of users",
+    "send a message in a channel",
+    "list recent messages in a channel",
+    "generate a user token for client auth",
+    "moderate or ban a user in chat"
+  ],
+  "sources": [
+    "https://getstream.io/chat/docs/",
+    "https://getstream.io/chat/pricing/",
+    "https://getstream.io/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

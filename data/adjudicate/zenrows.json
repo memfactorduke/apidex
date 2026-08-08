@@ -1,0 +1,15 @@
+{
+  "id": "zenrows",
+  "base_url": "https://api.zenrows.com/v1/",
+  "docs_url": "https://docs.zenrows.com/universal-scraper-api/api-reference",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1,000 free API credits on signup (no ongoing free plan; trial-style allotment)",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ORIGINAL confirmed \u2014 official docs still use https://api.zenrows.com/v1/ as the request endpoint (curl examples; Verifier A confirm; automated check returned HTTP 400 without params, not dead). Verifier B labeled incorrect but proposed the same URL. Evidence: https://docs.zenrows.com/universal-scraper-api/api-reference and https://docs.zenrows.com/api-reference/api-core. docs_url: INCORRECT original (HTTP 404 on automated check) \u2014 prefer Verifier A\u2019s canonical Universal Scraper API reference https://docs.zenrows.com/universal-scraper-api/api-reference over Verifier B\u2019s generic https://docs.zenrows.com/ and over the dead api-reference/api-core path. free_tier_limits: ORIGINAL \u201cunknown\u201d is wrong \u2014 Verifier A correction adopted: pricing page documents 1,000 free API credits on signup (trial-style, not an ongoing free plan). Verifier B confirmed free_tier but left limits as-is; evidence https://www.zenrows.com/pricing."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "openalex",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openalex.org/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Polite pool: 10 requests/second; default (no email): 1 request/second; daily soft limit around 100k requests without an API key",
+      "source": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default: 1 request/second; polite pool (email via mailto or From): 10 requests/second; daily soft limit ~100k without API key",
+      "source": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org/api-entities/works/get-a-single-work"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openalex.org"
+    }
+  },
+  "notes": "Rate limits and free-tier limits are documented (not 'unknown'/'not published'). Auth remains optional for basic use; polite-pool email still applies. API is operational at api.openalex.org."
+}

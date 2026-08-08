@@ -1,0 +1,97 @@
+{
+  "id": "pinterest",
+  "status": "operational",
+  "name": "Pinterest",
+  "category": "social-communication",
+  "tagline": "Create, manage, and analyze Pins and boards via Pinterest's official developer platform.",
+  "description": "Pinterest's REST API lets developers create and manage Pins, boards, and ads; fetch user and catalog data; and run analytics for businesses. Access is via OAuth 2.0 apps in the Pinterest developer portal, with endpoints for organic content, advertising, and commerce use cases under published rate limits.",
+  "base_url": "https://api.pinterest.com/v5",
+  "docs_url": "https://developers.pinterest.com/docs/api/v5/",
+  "signup_url": "https://developers.pinterest.com/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 access token in Authorization: Bearer header; register an app in the Pinterest developer portal (developers.pinterest.com)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Trial: 1,000 requests/day per app (universal) plus per-category daily caps (e.g. org_write/ads_write 300/day). Standard: 100 requests/second per user per app (universal) plus published per-category per-minute limits. No paid API usage tiers.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published. Universal: Trial 1,000 req/day all requests; Standard 100 req/sec per user per app. Plus per-category limits (e.g. org_read Standard 1,000/min, org_write 100/min, ads_analytics 300/min, ads_write 400/min, org_analytics 60/min). See official rate-limits table and response headers.",
+  "example": {
+    "request": "curl -X GET \"https://api.pinterest.com/v5/user_account\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"account_type\":\"BUSINESS\",\"profile_image\":\"https://i.pinimg.com/...\",\"website_url\":\"https://www.example.com\",\"username\":\"exampleuser\"}"
+  },
+  "use_cases": [
+    "get authenticated Pinterest user account profile",
+    "list boards for a connected Pinterest account",
+    "create a Pin on a board from an image URL",
+    "fetch Pin analytics for a business account",
+    "search Pins by keyword for content discovery"
+  ],
+  "sources": [
+    "https://developers.pinterest.com/",
+    "https://developers.pinterest.com/docs/api/v5/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

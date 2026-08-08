@@ -1,0 +1,96 @@
+{
+  "id": "ipgeolocation-io",
+  "status": "operational",
+  "name": "IP Geolocation API",
+  "category": "geo-maps",
+  "tagline": "IP-to-location, timezone, and security intelligence API",
+  "description": "ipgeolocation.io provides IP geolocation, timezone, astronomy, and related lookup APIs for developers. It maps IP addresses to geographic, network, and security attributes via a documented REST API with API-key authentication and a free tier.",
+  "base_url": "https://api.ipgeolocation.io",
+  "docs_url": "https://ipgeolocation.io/documentation",
+  "signup_url": "https://app.ipgeolocation.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or header (see official docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 requests/day (Free plan); paid plans have higher daily quotas",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: 1,000 requests/day; paid tiers publish higher daily quotas on pricing",
+  "example": {
+    "request": "curl \"https://api.ipgeolocation.io/ipgeo?apiKey=YOUR_API_KEY&ip=8.8.8.8\"",
+    "response_snippet": "{\"ip\":\"8.8.8.8\",\"continent_code\":\"NA\",\"continent_name\":\"North America\",\"country_code2\":\"US\",\"country_code3\":\"USA\",\"country_name\":\"United States\",\"city\":\"Mountain View\",\"zipcode\":\"94043\",\"latitude\":\"37.42240\",\"longitude\":\"-122.08421\",\"isp\":\"Google LLC\"}"
+  },
+  "use_cases": [
+    "geolocate a client IP address",
+    "resolve timezone from IP"
+  ],
+  "sources": [
+    "https://ipgeolocation.io"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

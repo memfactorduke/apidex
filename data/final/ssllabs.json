@@ -1,0 +1,98 @@
+{
+  "id": "ssllabs",
+  "status": "operational",
+  "name": "SSL Labs",
+  "category": "security-identity",
+  "tagline": "Public TLS/SSL server analysis and grading",
+  "description": "SSL Labs provides a public REST API for analyzing and grading the TLS/SSL configuration of public web servers. Developers can submit hostnames for assessment, poll analysis progress, and retrieve detailed certificate, protocol, cipher, and grade results without API-key authentication under published usage guidelines.",
+  "base_url": "https://api.ssllabs.com/api/v3",
+  "docs_url": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required; public free API with mandatory User-Agent identifying the calling tool/application and usage guidelines (no concurrent assessments beyond published limits)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public API; usage governed by rate limits and fair-use guidelines (no paid tier for the public API)",
+    "paid_plans": null
+  },
+  "rate_limits": "Max 25 assessments in progress; max 1 new assessment per second; max ~400 assessments/hour (check docs for current numbers)",
+  "example": {
+    "request": "curl -s \"https://api.ssllabs.com/api/v3/analyze?host=example.com&publish=off&fromCache=on&all=done\" -H \"User-Agent: YourApp/1.0\"",
+    "response_snippet": "{\"host\":\"example.com\",\"port\":443,\"protocol\":\"http\",\"isPublic\":false,\"status\":\"READY\",\"startTime\":1234567890123,\"testTime\":1234567890456,\"engineVersion\":\"2.2.0\",\"criteriaVersion\":\"2009q\",\"endpoints\":[{\"ipAddress\":\"93.184.216.34\",\"grade\":\"A\",\"hasWarnings\":false,\"isExceptional\":false}]}"
+  },
+  "use_cases": [
+    "grade a website's TLS configuration",
+    "check SSL certificate chain and expiry details for a host",
+    "list supported protocols and cipher suites for a server",
+    "poll assessment status until SSL Labs scan completes",
+    "compare TLS grades across multiple hostnames"
+  ],
+  "sources": [
+    "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md",
+    "https://www.ssllabs.com/ssltest/",
+    "https://api.ssllabs.com/api/v3/info"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

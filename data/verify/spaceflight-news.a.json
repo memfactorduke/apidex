@@ -1,0 +1,52 @@
+{
+  "id": "spaceflight-news",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Verified against official SNAPI docs, OpenAPI at api.spaceflightnewsapi.net/v4/docs/, and live GET /v4/articles/?limit=1. Base URL, docs URL, no-auth free public REST, and example curl all match. CORS remains unknown; free_tier_limits and rate_limits not published. Description claims about articles/blogs/reports and no auth hold."
+}

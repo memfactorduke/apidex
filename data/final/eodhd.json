@@ -1,0 +1,107 @@
+{
+  "id": "eodhd",
+  "status": "operational",
+  "name": "EODHD",
+  "category": "finance",
+  "tagline": "End-of-day and real-time financial market data API",
+  "description": "EODHD (End of Day Historical Data) provides financial market data APIs covering stocks, ETFs, mutual funds, forex, crypto, and indices. It offers end-of-day historical prices, real-time and delayed quotes, fundamentals, dividends, splits, options, and economic data via REST endpoints. Developers authenticate with an API key and can access data for portfolio tracking, backtesting, research, and fintech applications.",
+  "base_url": "https://eodhd.com/api",
+  "docs_url": "https://eodhd.com/financial-apis/",
+  "signup_url": "https://eodhd.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_token query parameter (self-serve signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "20 API calls/day; free EOD history limited to past year; some data types restricted",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: 20 API calls/day; paid: 100,000 API calls/day default; \u22641,000 requests/minute all plans (call cost varies by endpoint)",
+  "example": {
+    "request": "curl \"https://eodhd.com/api/eod/AAPL.US?api_token=YOUR_API_KEY&fmt=json\"",
+    "response_snippet": "[{\"date\":\"2024-01-02\",\"open\":187.15,\"high\":188.44,\"low\":183.89,\"close\":185.64,\"adjusted_close\":184.91,\"volume\":82488700}]"
+  },
+  "use_cases": [
+    "get end-of-day historical prices for a stock ticker",
+    "fetch real-time or delayed quotes for equities",
+    "pull company fundamentals and financial statements",
+    "list dividends and stock splits for a symbol",
+    "retrieve forex or crypto historical OHLCV data"
+  ],
+  "sources": [
+    "https://eodhd.com/",
+    "https://eodhd.com/financial-apis/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": []
+  }
+}

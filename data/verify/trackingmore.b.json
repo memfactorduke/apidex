@@ -1,0 +1,52 @@
+{
+  "id": "trackingmore",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.trackingmore.com/docs/trackingmore/d5ac762b64c4e-quick-start"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.trackingmore.com/docs/trackingmore/d5ac762b64c4e-quick-start (or https://www.trackingmore.com/api-docs.html; bare /docs 404s)",
+      "source": "https://www.trackingmore.com/docs/trackingmore/d5ac762b64c4e-quick-start"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.trackingmore.com/docs/trackingmore/d5ac762b64c4e-quick-start"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.trackingmore.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 100 tracking requests/month (see pricing; trial mentions may also apply)",
+      "source": "https://www.trackingmore.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per-endpoint: e.g. Create a tracking 3 req/s; Get tracking results 10/s; Batch create 1/s; Detect courier 3/s (varies by endpoint in API docs)",
+      "source": "https://www.trackingmore.com/docs/trackingmore/c3acd0a700dc7-create-a-tracking"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use GET https://api.trackingmore.com/v4/trackings/get with header Tracking-Api-Key (and optional params such as tracking_numbers). Official examples use tracking_numbers and courier_code together; bare path/param shape is close but should match current Get tracking results docs.",
+      "source": "https://www.trackingmore.com/docs/trackingmore/3faf81ce1a5f3-get-tracking-results"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.trackingmore.com"
+    }
+  },
+  "notes": "docs_url /docs 404s; real docs at /docs/trackingmore/... Rate limits and free tier (100/mo) are published. Auth is Tracking-Api-Key header. base_url v4 confirmed."
+}

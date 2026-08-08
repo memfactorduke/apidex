@@ -1,0 +1,100 @@
+{
+  "id": "comicvine",
+  "status": "operational",
+  "name": "Comic Vine",
+  "category": "games-comics",
+  "tagline": "Largest comic encyclopedia API: characters, volumes, issues, publishers, and people.",
+  "description": "Comic Vine is a comprehensive comic book encyclopedia API providing access to characters, volumes, issues, publishers, people, and other comic book related data. It's the largest publicly available comic book database with detailed information, images, and relationships between entities.",
+  "base_url": "https://comicvine.gamespot.com/api",
+  "docs_url": "https://comicvine.gamespot.com/api/documentation",
+  "signup_url": "https://comicvine.gamespot.com/api/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required via 'api_key' query parameter. Free self-serve signup at comicvine.gamespot.com/api/."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free with rate limits (exact limits not clearly published)",
+    "paid_plans": null
+  },
+  "rate_limits": "Rate limited; exact limits not clearly published in public docs",
+  "example": {
+    "request": "curl \"https://comicvine.gamespot.com/api/character/4005-1699/?api_key=YOUR_API_KEY&format=json\"",
+    "response_snippet": "{\"error\":\"OK\",\"limit\":1,\"offset\":0,\"number_of_page_results\":1,\"number_of_total_results\":1,\"status_code\":1,\"results\":{\"id\":1699,\"name\":\"Batman\",\"real_name\":\"Bruce Wayne\",\"...\"}}"
+  },
+  "use_cases": [
+    "Look up comic character details by name or ID",
+    "Get issue and volume information for a series",
+    "Search for comic books by title or character",
+    "Retrieve publisher and creator information",
+    "Build comic book collection databases"
+  ],
+  "sources": [
+    "https://comicvine.gamespot.com/api/",
+    "https://comicvine.gamespot.com/api/documentation"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

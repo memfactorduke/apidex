@@ -1,0 +1,15 @@
+{
+  "id": "shippo",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "API Starter (Free): 30 labels/month free, then 7\u00a2/label; no monthly platform fee. Standalone fees: tracking 2\u00a2/track, rating 1\u00a2/rate, US address validation 2\u00a2, non-US 8\u00a2 (see pricing/api).",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST https://api.goshippo.com/tracks/ -H \"Authorization: ShippoToken YOUR_API_KEY\" -d carrier=\"usps\" -d tracking_number=\"9205590164917312751089\"",
+  "example_response_snippet": "{\"carrier\":\"usps\",\"tracking_number\":\"9205590164917312751089\",\"tracking_status\":{\"status\":\"DELIVERED\",\"status_details\":\"Your shipment has been delivered at the destination mailbox.\",\"status_date\":\"2023-07-23T13:03:00Z\"},\"tracking_history\":[{\"status\":\"TRANSIT\",\"status_details\":\"Your shipment has been accepted.\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: REJECT original (vague) and Verifier B (denies fixed free labels). Official API pricing: 30 free labels/mo then 7\u00a2/label \u2014 https://goshippo.com/pricing/api; App Starter also up to 30 labels \u2014 https://goshippo.com/pricing. example: CORRECT to official POST /tracks/ form-data curl (docs omit -X POST but method is POST); response aligned to docs sample \u2014 https://docs.goshippo.com/docs/tracking/tracking/."
+}

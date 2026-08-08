@@ -1,0 +1,52 @@
+{
+  "id": "telegram-bot",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://core.telegram.org/bots/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://core.telegram.org/bots/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://core.telegram.org/bots/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://core.telegram.org/bots/faq"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free API use with no call quotas/monthly fees is supported; messaging is rate-limited (e.g. ~1 msg/sec private chat, 20 msg/min groups). Do not treat bulk ~30 msg/sec or paid-broadcast details as free-tier limits without matching current FAQ/BotFather text.",
+      "source": "https://core.telegram.org/bots/faq"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Cite only FAQ-published limits (\u2264~1 msg/sec private chat; \u226420 msg/min groups; 429 on excess). Verify paid broadcast throughput and Stars pricing on current BotFather/official pages before listing them as rate limits.",
+      "source": "https://core.telegram.org/bots/faq"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://core.telegram.org/bots/api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Keep free cloud Bot API + long polling/webhooks + token-in-URL auth; soften or source-check optional paid Telegram Stars broadcast throughput claims against current official docs.",
+      "source": "https://core.telegram.org/bots/faq"
+    }
+  },
+  "notes": "Docs confirm base URL, docs URL, bot-token path auth, free cloud API, getMe example, and classic FAQ rate limits. Paid Stars broadcast numbers and some bulk free limits need re-check against live BotFather/changelog before confirm."
+}

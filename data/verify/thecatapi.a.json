@@ -1,0 +1,52 @@
+{
+  "id": "thecatapi",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.thecatapi.com/view-account/ylX4blDYT9FaoGd5UhZi1qpb8"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.thecatapi.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.thecatapi.com/view-account/ylX4blDYT9FaoGd5UhZi1qpb8"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thecatapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier exists (e.g. 10,000 requests/month or similar published limits \u2014 see pricing page); not \"unknown\" if published",
+      "source": "https://thecatapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published on pricing/docs (e.g. requests per day/month by plan)",
+      "source": "https://thecatapi.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Placeholder curl is not a valid docs example; use e.g. GET /images/search with x-api-key",
+      "source": "https://developers.thecatapi.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.thecatapi.com/"
+    }
+  },
+  "notes": "Placeholder example and vague free_tier/rate_limit claims fail accuracy bar."
+}

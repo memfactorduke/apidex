@@ -1,0 +1,15 @@
+{
+  "id": "they-said-so",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": "10 requests/hour unauthenticated; free API key raises limits \u2014 verify pricing page",
+  "rate_limits": "Free unauthenticated ~10 req/hour; higher on free key and paid plans (see pricing)",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: keep apiKey \u2014 docs support Bearer and X-TheySaidSo-Api-Secret; unauthenticated free access exists but type remains apiKey (https://theysaidso.com/api/, https://quotes.rest/). free_tier_limits: Verifier B correct over original \"unknown\" \u2014 public tier ~10 req/hour; free key higher (https://theysaidso.com/api/). rate_limits: Verifier B correct over \"not published\" \u2014 free unauth ~10/hr; paid higher on pricing (https://theysaidso.com/api/)."
+}

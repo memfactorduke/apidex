@@ -1,0 +1,52 @@
+{
+  "id": "eodhd",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eodhd.com/financial-apis/api-for-historical-data-and-volumes"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eodhd.com/financial-apis/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eodhd.com/financial-apis/quick-start-with-our-financial-data-apis"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eodhd.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "20 API calls per day; free EOD history limited to past year; some data types restricted",
+      "source": "https://eodhd.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 20 API calls/day; paid: 100,000 API calls/day default; \u22641,000 requests/minute all plans (call cost varies by endpoint)",
+      "source": "https://eodhd.com/financial-apis/api-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eodhd.com/financial-apis/quick-start-with-our-financial-data-apis"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://eodhd.com/financial-apis/quick-start-with-our-financial-data-apis"
+    }
+  },
+  "notes": "API is live (demo EOD curl returns 200). Main errors: free_tier_limits and rate_limits are published (20/day free; 100k/day paid; 1k/min) but entry claimed unknown/not published. base_url, docs, api_token auth, and example path match current docs."
+}

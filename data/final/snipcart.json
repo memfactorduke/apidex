@@ -1,0 +1,98 @@
+{
+  "id": "snipcart",
+  "status": "operational",
+  "name": "Snipcart API",
+  "category": "ecommerce-payments",
+  "tagline": "Headless ecommerce cart and checkout API for custom storefronts",
+  "description": "Snipcart provides a REST API for managing carts, products, orders, customers, discounts, and inventory on its hosted ecommerce platform. Developers embed Snipcart on any site and use the Dashboard API with secret keys for server-side operations such as listing orders, updating products, and managing inventory. Public and private API keys support client-side cart flows and authenticated backend access.",
+  "base_url": "https://app.snipcart.com/api",
+  "docs_url": "https://docs.snipcart.com/v3/api-reference/introduction",
+  "signup_url": "https://app.snipcart.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "HTTP Basic Auth: Secret API key as username, empty password (Authorization: Basic base64(SECRET_KEY:)). Keys from Snipcart dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan available for testing/development; transaction fees apply on paid plans (verify current tiers on snipcart.com/pricing)",
+    "paid_plans": "Transaction-fee and subscription plans; see snipcart.com/pricing for current rates"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_API_KEY: -H \"Accept: application/json\" https://app.snipcart.com/api/orders",
+    "response_snippet": "{\"totalItems\":1,\"offset\":0,\"limit\":20,\"items\":[{\"token\":\"...\",\"invoiceNumber\":\"SNIP-...\",\"status\":\"Processed\",\"total\":29.99,\"currency\":\"usd\"}]}"
+  },
+  "use_cases": [
+    "list and filter store orders for fulfillment",
+    "create or update products and inventory via API",
+    "manage customers and abandoned carts",
+    "apply discounts and promotional codes programmatically",
+    "fetch order details for custom admin dashboards"
+  ],
+  "sources": [
+    "https://docs.snipcart.com/v3/api-reference/introduction",
+    "https://snipcart.com/pricing",
+    "https://docs.snipcart.com"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

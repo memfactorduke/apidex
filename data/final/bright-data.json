@@ -1,0 +1,96 @@
+{
+  "id": "bright-data",
+  "status": "operational",
+  "name": "Bright Data",
+  "category": "data-analytics",
+  "tagline": "Enterprise web data platform for scraping, SERP, and browser automation at scale",
+  "description": "Bright Data provides enterprise-grade web data collection APIs including Web Scraper API, SERP API, Web Unlocker, and Scraping Browser for reliable public web data extraction with proxy infrastructure, anti-bot handling, and structured datasets.",
+  "base_url": "https://api.brightdata.com",
+  "docs_url": "https://docs.brightdata.com/",
+  "signup_url": "https://brightdata.com/cp/start",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token (Bearer) or zone credentials; self-serve account signup. Common pattern: Authorization: Bearer YOUR_API_KEY on REST endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "5,000 free credits/month (~$7.50) shared across Web Unlocker, SERP, Web Scraper API, and Scraper Studio; no credit card required. Unfunded free-tier accounts capped at 1,000 req/min (SERP/Unlocker/Proxy). Proxies and Browser API excluded from monthly free credits (separate one-time trial credits).",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "Free tier (unfunded): 1,000 requests/min across SERP API, Web Unlocker API, and Proxy products (removed once funds added). Web Scraper API documents concurrent-job limits (e.g. up to 5,000 concurrent jobs; Discovery batch up to 100). Paid/general RPM is often zone/account-specific rather than a single public global number.",
+  "example": {
+    "request": "curl -X POST \"https://api.brightdata.com/request\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"zone\":\"YOUR_ZONE\",\"url\":\"https://example.com\",\"format\":\"raw\"}'",
+    "response_snippet": "{\"status_code\":200,\"headers\":{},\"body\":\"...\"}"
+  },
+  "use_cases": [
+    "scrape a product page with anti-bot bypass",
+    "run a SERP query for keyword rankings",
+    "unlock blocked public pages via residential proxies",
+    "extract structured e-commerce data at scale"
+  ],
+  "sources": [
+    "https://brightdata.com/",
+    "https://docs.brightdata.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

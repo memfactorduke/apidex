@@ -1,0 +1,52 @@
+{
+  "id": "trakt",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.tv/oauth/applications"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "1000 calls per 5 minutes (VIP: 2000/5min); X-Ratelimit headers; 429 with Retry-After",
+      "source": "https://trakt.docs.apiary.io/#introduction/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    }
+  },
+  "notes": "Rate limits ARE published in official Apiary docs (1000/5min), so \"not published\" is incorrect. Docs-first verification against trakt.docs.apiary.io and oauth/applications."
+}

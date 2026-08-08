@@ -1,0 +1,52 @@
+{
+  "id": "khan-academy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No current official public base URL; historical/community endpoint https://www.khanacademy.org/api/v1 is deprecated/unofficial and unreliable \u2014 do not treat as a supported public API",
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Do not use curl https://www.khanacademy.org/api/v1/topictree as a working public-API example; the v1 API and topictree path are historical/community and not a currently documented official endpoint",
+      "source": "https://github.com/Khan/khan-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Khan/khan-api"
+    }
+  },
+  "notes": "Adversarial check: GitHub Khan/khan-api is archival community docs for unofficial endpoints; no current official public API found. base_url and example overstate operability. free_tier cannot be confirmed without an official product."
+}

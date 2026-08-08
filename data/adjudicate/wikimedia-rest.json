@@ -1,0 +1,15 @@
+{
+  "id": "wikimedia-rest",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "200 requests/s hard limit; 100 requests/s recommended; User-Agent required",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: both verifiers correct that \"not published\" is wrong. Official MediaWiki REST API docs (https://www.mediawiki.org/wiki/Wikimedia_REST_API#Rate_limiting) state 200 req/s hard limit and 100 req/s recommended, with User-Agent required. Wikimedia API getting-started rate limits (https://api.wikimedia.org/wiki/Documentation/Getting_started/Rate_limits) describe a shared ~200 rps limit and polite-use/User-Agent requirements. Settled value merges both: hard 200/s, recommended 100/s, User-Agent required."
+}

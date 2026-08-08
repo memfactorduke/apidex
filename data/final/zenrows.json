@@ -1,0 +1,98 @@
+{
+  "id": "zenrows",
+  "status": "operational",
+  "name": "ZenRows",
+  "category": "data-analytics",
+  "tagline": "Anti-bot web scraping API with JavaScript rendering and proxy rotation",
+  "description": "ZenRows is a web scraping API that handles anti-bot protections, CAPTCHAs, JavaScript rendering, and rotating residential proxies so developers can extract HTML or structured data from hard-to-scrape sites without managing their own proxy infrastructure.",
+  "base_url": "https://api.zenrows.com/v1/",
+  "docs_url": "https://docs.zenrows.com/universal-scraper-api/api-reference",
+  "signup_url": "https://app.zenrows.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter (self-serve signup). Also supported as header in some SDKs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "html",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 free API credits on signup (no ongoing free plan; trial-style allotment)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.zenrows.com/v1/?apikey=YOUR_API_KEY&url=https%3A%2F%2Fhttpbin.io%2Fanything\"",
+    "response_snippet": "{\"html\": \"...\"}"
+  },
+  "use_cases": [
+    "scrape HTML from anti-bot protected sites",
+    "render JavaScript-heavy pages before extraction",
+    "bypass CAPTCHAs and geo-blocked content",
+    "extract structured data via CSS selectors"
+  ],
+  "sources": [
+    "https://www.zenrows.com/",
+    "https://docs.zenrows.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

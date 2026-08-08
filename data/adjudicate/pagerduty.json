@@ -1,0 +1,15 @@
+{
+  "id": "pagerduty",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Typically 900 requests per minute for most REST endpoints; some write endpoints lower. Exact limits may vary by account/plan.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: ORIGINAL CONFIRMED. Official PagerDuty rate-limiting docs state most REST endpoints are limited to ~900 requests/minute, with some write endpoints lower, and limits may vary by account/plan \u2014 matching the entry. Verifier B's note is cautionary (confirm on docs) not a factual correction of the published 900/min figure. Evidence: https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTU4-rate-limiting (and REST API overview rate-limiting docs)."
+}

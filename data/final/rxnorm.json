@@ -1,0 +1,98 @@
+{
+  "id": "rxnorm",
+  "status": "operational",
+  "name": "RxNorm",
+  "category": "health-fitness",
+  "tagline": "NLM drug nomenclature API for names, ingredients, and relationships",
+  "description": "RxNorm is the U.S. National Library of Medicine API for normalized drug names, ingredients, and related clinical drug concepts used in healthcare systems.",
+  "base_url": "https://rxnav.nlm.nih.gov",
+  "docs_url": "https://lhncbc.nlm.nih.gov/RxNav/APIs/index.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public REST endpoints; free public use under NLM terms."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "...",
+    "paid_plans": null
+  },
+  "rate_limits": "...",
+  "example": {
+    "request": "curl -s 'https://rxnav.nlm.nih.gov/REST/rxcui.json?name=lipitor'",
+    "response_snippet": "{\"idGroup\":{\"name\":\"lipitor\",\"rxnormId\":[\"153165\"]}}"
+  },
+  "use_cases": [
+    "resolve a drug brand name to an RxCUI",
+    "list ingredients for a clinical drug",
+    "find related drug concepts by relationship type",
+    "search RxNorm for approximate name matches",
+    "get NDCs associated with an RxCUI"
+  ],
+  "sources": [
+    "https://rxnav.nlm.nih.gov",
+    "https://lhncbc.nlm.nih.gov/RxNav/APIs/index.html"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

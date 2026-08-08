@@ -1,0 +1,100 @@
+{
+  "id": "woocommerce",
+  "status": "operational",
+  "name": "WooCommerce REST API",
+  "category": "ecommerce-payments",
+  "tagline": "REST API for managing products, orders, customers, and store data on WooCommerce sites",
+  "description": "WooCommerce REST API is a built-in WordPress/WooCommerce interface that lets developers read and write store data (products, orders, customers, coupons, reports) over HTTP. It runs on each merchant's site rather than a single SaaS host, using WordPress authentication (consumer key/secret or OAuth 1.0a) and JSON responses. Official docs cover endpoints, authentication, and versioning for WooCommerce 3.5+.",
+  "base_url": "https://your-store.com/wp-json/wc/v3",
+  "docs_url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+  "signup_url": "https://woocommerce.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Consumer key and secret generated in WooCommerce > Settings > Advanced > REST API; use HTTP Basic Auth over HTTPS (key as username, secret as password) or OAuth 1.0a on HTTP."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Included free with WooCommerce (open-source plugin); no per-request API fees from WooCommerce",
+    "paid_plans": "WooCommerce core is free; hosting and optional WooCommerce.com extensions may be paid separately"
+  },
+  "rate_limits": "Not published by WooCommerce; limited by the WordPress/host server configuration",
+  "example": {
+    "request": "curl https://your-store.com/wp-json/wc/v3/products -u ck_YOUR_CONSUMER_KEY:cs_YOUR_CONSUMER_SECRET",
+    "response_snippet": "[{\"id\":799,\"name\":\"Ship Your Idea\",\"slug\":\"ship-your-idea-22\",\"permalink\":\"https://example.com/product/ship-your-idea-22/\",\"type\":\"variable\",\"status\":\"publish\",\"price\":\"\",\"regular_price\":\"\",\"sale_price\":\"\",\"on_sale\":false,\"purchasable\":false,\"total_sales\":0,\"virtual\":false,\"downloadable\":false,\"categories\":[{\"id\":9,\"name\":\"Clothing\",\"slug\":\"clothing\"}],\"images\":[{\"id\":30,\"src\":\"https://example.com/wp-content/uploads/2013/06/T_4_front.jpg\",\"name\":\"T_4_front.jpg\",\"alt\":\"\"}]}]"
+  },
+  "use_cases": [
+    "list or create WooCommerce products for a store",
+    "fetch and update orders and order status",
+    "manage customers and customer data",
+    "create coupons and apply discount rules",
+    "pull sales reports and store analytics",
+    "sync inventory stock levels across systems"
+  ],
+  "sources": [
+    "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "https://developer.woocommerce.com/docs/apis/rest-api/",
+    "https://woocommerce.com/document/woocommerce-rest-api/",
+    "https://woocommerce.com/"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

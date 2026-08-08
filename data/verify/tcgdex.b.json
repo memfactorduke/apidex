@@ -1,0 +1,52 @@
+{
+  "id": "tcgdex",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/rest/card"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/faq"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/faq"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "no published hard limits (be considerate; cache bulk data)",
+      "source": "https://tcgdex.dev/faq"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/faq"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://api.tcgdex.net/v2/en/cards/swsh3-136"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/rest/card"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tcgdex.dev/"
+    }
+  },
+  "notes": "API live (HTTP 200). FAQ: free, no API key, no published hard rate limits. Live CORS headers return ACAO *, so cors/free_tier_limits 'unknown' are wrong. Example curl matches official docs. tcgdex.net homepage 404s (docs/API fine)."
+}

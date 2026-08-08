@@ -1,0 +1,15 @@
+{
+  "id": "openrouteservice",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free plan: 2,000 directions requests/day, ~40 requests/minute (endpoint-dependent daily caps; matrix/isochrones lower). See https://openrouteservice.org/plans/",
+  "rate_limits": "Published on plans page: free ~40 req/min and 2,000 req/day directions (endpoint-dependent); higher on paid plans",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: ORIGINAL \"unknown\" incorrect. Both verifiers correct; plans page publishes free quotas (2,000 directions/day, ~40/min, other endpoints lower). Evidence: https://openrouteservice.org/plans/. rate_limits: ORIGINAL \"not published\" incorrect. Same plans page publishes free/paid rate and daily limits. Evidence: https://openrouteservice.org/plans/."
+}

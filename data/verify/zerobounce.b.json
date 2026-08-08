@@ -1,0 +1,52 @@
+{
+  "id": "zerobounce",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.zerobounce.net/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.zerobounce.net/docs/email-validation-api-quickstart/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.zerobounce.net/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.zerobounce.net/email-validation/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 free credits on signup (no credit card required); free tier is credit-based rather than unlimited",
+      "source": "https://www.zerobounce.net/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.zerobounce.net/docs/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.zerobounce.net/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.zerobounce.net/"
+    }
+  },
+  "notes": "Free tier is real (100 credits) so free_tier_limits=unknown is wrong. Other fields match official v2 docs; cors remains unknown."
+}

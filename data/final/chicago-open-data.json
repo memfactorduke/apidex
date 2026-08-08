@@ -1,0 +1,100 @@
+{
+  "id": "chicago-open-data",
+  "status": "operational",
+  "name": "City of Chicago Open Data",
+  "category": "government-open-data",
+  "tagline": "Socrata SODA API for City of Chicago open datasets and civic data.",
+  "description": "Official open data platform for the City of Chicago, powered by Socrata (Tyler Technologies). Exposes hundreds of public datasets\u2014crime, 311, transportation, permits, demographics\u2014via the SODA REST API with JSON/CSV access. Developers query datasets by resource ID with filtering, paging, and SoQL. An app token is recommended for higher rate limits; many reads work without authentication.",
+  "base_url": "https://data.cityofchicago.org/resource",
+  "docs_url": "https://dev.socrata.com/foundry/data.cityofchicago.org/",
+  "signup_url": "https://data.cityofchicago.org/profile/app_tokens",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional Socrata app token via X-App-Token header (or $$app_token query param); self-serve from portal profile. Without a token, lower throttling applies. No OAuth required for public reads."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public data free; app token recommended for higher throughput. Exact free quotas not published as a fixed daily allotment.",
+    "paid_plans": null
+  },
+  "rate_limits": "Without app token: heavily throttled. With app token: higher limits (Socrata typically ~1,000 requests/hour without token; higher with token \u2014 confirm on Socrata docs). Exact Chicago-specific numbers not always published.",
+  "example": {
+    "request": "curl -H \"X-App-Token: YOUR_API_KEY\" \"https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=5\"",
+    "response_snippet": "[{\"id\":\"13291213\",\"case_number\":\"JG123456\",\"date\":\"2023-01-15T12:00:00.000\",\"block\":\"001XX N STATE ST\",\"primary_type\":\"THEFT\",\"description\":\"RETAIL THEFT\",\"location_description\":\"DEPARTMENT STORE\",\"arrest\":false,\"domestic\":false,\"district\":\"001\",\"ward\":\"42\",\"community_area\":\"32\",\"latitude\":\"41.884\",\"longitude\":\"-87.627\"}]"
+  },
+  "use_cases": [
+    "query Chicago crime incidents by date or type",
+    "fetch recent 311 service requests",
+    "list building permits or business licenses",
+    "get CTA or traffic-related open datasets",
+    "export neighborhood or demographic tables as JSON/CSV"
+  ],
+  "sources": [
+    "https://data.cityofchicago.org/",
+    "https://dev.socrata.com/",
+    "https://dev.socrata.com/docs/app-tokens.html",
+    "https://dev.socrata.com/foundry/data.cityofchicago.org/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

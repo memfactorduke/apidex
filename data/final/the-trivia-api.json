@@ -1,0 +1,96 @@
+{
+  "id": "the-trivia-api",
+  "status": "operational",
+  "name": "Trivia API (The Trivia API)",
+  "category": "fun-novelty",
+  "tagline": "Modern trivia questions API with tags, regions, and free public access",
+  "description": "Researching official docs, endpoints, auth, pricing, and examples for The Trivia API.",
+  "base_url": "https://the-trivia-api.com/v2",
+  "docs_url": "https://the-trivia-api.com/docs/v2/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Researching authentication requirements"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access without an API key; higher rate limits with a free API key (exact free-key quotas not clearly published on docs)",
+    "paid_plans": null
+  },
+  "rate_limits": "Rate limits exist and are higher with an API key; exact numeric limits not clearly published on public docs",
+  "example": {
+    "request": "curl 'https://the-trivia-api.com/v2/questions?limit=1'",
+    "response_snippet": "[{\"category\":\"Science\",\"id\":\"...\",\"correctAnswer\":\"...\",\"incorrectAnswers\":[\"...\",\"...\",\"...\"],\"question\":{\"text\":\"...\"},\"tags\":[\"science\"],\"type\":\"text_choice\",\"difficulty\":\"medium\",\"regions\":[],\"isNiche\":false}]"
+  },
+  "use_cases": [
+    "fetch trivia questions for a quiz game",
+    "filter trivia by category and difficulty"
+  ],
+  "sources": [
+    "https://the-trivia-api.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

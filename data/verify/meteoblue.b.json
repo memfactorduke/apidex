@@ -1,0 +1,52 @@
+{
+  "id": "meteoblue",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://my.meteoblue.com/packages/ (package-specific paths under my.meteoblue.com; docs also list dataset/map endpoints)",
+      "source": "https://docs.meteoblue.com/en/weather-apis/getting-started/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.meteoblue.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.meteoblue.com/en/weather-apis/getting-started/getting-started"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true (free trial credits / free tier access for evaluation; not purely paid-only)",
+      "source": "https://www.meteoblue.com/en/weather/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free trial typically includes limited credits (order of thousands of calls / package-dependent); exact numbers change \u2014 check current pricing/signup page",
+      "source": "https://www.meteoblue.com/en/weather/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.meteoblue.com"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.meteoblue.com/en/weather-apis/package-apis/package-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.meteoblue.com/en/weather/api"
+    }
+  },
+  "notes": "Adversarial check: base_url path is real but incomplete as sole root; free_tier=false is the main factual error \u2014 meteoblue offers free trial/evaluation access. Docs and apikey query auth hold. CORS not published."
+}

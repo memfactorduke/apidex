@@ -1,0 +1,100 @@
+{
+  "id": "hex-pm",
+  "status": "operational",
+  "name": "Hex.pm API",
+  "category": "dev-tools",
+  "tagline": "Official package registry API for the Elixir and Erlang ecosystem",
+  "description": "Hex.pm is the package manager and package repository for the Elixir and Erlang ecosystems. Its public REST API lets developers and tools search packages, read package and release metadata, list owners, and manage authenticated operations such as publishing or retiring packages. Most read endpoints are public; write and account operations require a Hex API key. Responses are JSON over HTTPS.",
+  "base_url": "https://hex.pm/api",
+  "docs_url": "https://hex.pm/docs/usage",
+  "signup_url": "https://hex.pm/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Hex API key via Authorization header (or X-Hex-Api-Key). Create keys at hex.pm after signup; public package reads need no auth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public registry usage; no published paid API plans",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS https://hex.pm/api/packages/phoenix",
+    "response_snippet": "{\n  \"name\": \"phoenix\",\n  \"html_url\": \"https://hex.pm/packages/phoenix\",\n  \"docs_html_url\": \"https://hexdocs.pm/phoenix/\",\n  \"meta\": {\n    \"description\": \"Peace of mind from prototype to production\",\n    \"licenses\": [\"MIT\"],\n    \"links\": {\"GitHub\": \"https://github.com/phoenixframework/phoenix\"}\n  },\n  \"releases\": [{\"version\": \"1.7.14\", \"url\": \"https://hex.pm/api/packages/phoenix/releases/1.7.14\"}],\n  \"downloads\": {\"all\": 50000000, \"day\": 10000, \"recent\": 300000},\n  \"owners\": [{\"username\": \"chrismccord\", \"url\": \"https://hex.pm/api/users/chrismccord\"}]\n}"
+  },
+  "use_cases": [
+    "look up Elixir package metadata and latest release version",
+    "search Hex packages by name or keyword",
+    "list package owners and release download stats",
+    "fetch a specific package release and its checksums",
+    "check whether a package name exists before publishing"
+  ],
+  "sources": [
+    "https://hex.pm/docs/api",
+    "https://hex.pm/",
+    "https://github.com/hexpm/hexpm"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

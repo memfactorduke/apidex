@@ -1,0 +1,100 @@
+{
+  "id": "cloudflare-doh",
+  "status": "operational",
+  "name": "Cloudflare DNS over HTTPS",
+  "category": "security-identity",
+  "tagline": "Public DoH resolver for privacy-preserving DNS queries over HTTPS.",
+  "description": "Cloudflare's free public DNS over HTTPS (DoH) resolver at cloudflare-dns.com. Clients send DNS queries as HTTPS requests (RFC 8484 binary wire format or JSON) and receive encrypted responses, avoiding cleartext DNS on the network. No account or API key is required for the public 1.1.1.1 DoH endpoints.",
+  "base_url": "https://cloudflare-dns.com/dns-query",
+  "docs_url": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public DoH resolver. Queries are accepted anonymously over HTTPS."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Unlimited free public use of 1.1.1.1 DoH; no paid plans for the public resolver",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (fair use; abuse may be rate-limited)",
+  "example": {
+    "request": "curl -H 'accept: application/dns-json' 'https://cloudflare-dns.com/dns-query?name=example.com&type=A'",
+    "response_snippet": "{\"Status\":0,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"example.com\",\"type\":1}],\"Answer\":[{\"name\":\"example.com\",\"type\":1,\"TTL\":300,\"data\":\"93.184.216.34\"}]}"
+  },
+  "use_cases": [
+    "resolve a hostname to A/AAAA records over HTTPS",
+    "look up MX or TXT records without a local resolver",
+    "perform DNSSEC-aware lookups from a backend service",
+    "test DoH client integration against Cloudflare's public resolver",
+    "query DNS from restricted networks where UDP/53 is blocked"
+  ],
+  "sources": [
+    "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/",
+    "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/make-api-requests/",
+    "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/make-api-requests/dns-json/",
+    "https://one.one.one.one/"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

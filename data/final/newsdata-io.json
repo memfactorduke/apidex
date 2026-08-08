@@ -1,0 +1,97 @@
+{
+  "id": "newsdata-io",
+  "status": "operational",
+  "name": "NewsData.io",
+  "category": "news-media",
+  "tagline": "Real-time and historical news API with global coverage and multi-language support",
+  "description": "NewsData.io provides a REST API for accessing real-time and historical news articles from thousands of sources worldwide. Developers can search by keyword, country, language, category, and more, with JSON responses suitable for news aggregators, media monitoring, and AI applications.",
+  "base_url": "https://newsdata.io/api/1",
+  "docs_url": "https://newsdata.io/documentation",
+  "signup_url": "https://newsdata.io/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter or X-ACCESS-KEY header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "200 credits/day free (1 credit per article on free plan)",
+    "paid_plans": "Starter, Professional, Corporate plans with higher credits and features"
+  },
+  "rate_limits": "not published precisely; free tier limited by daily credits",
+  "example": {
+    "request": "curl \"https://newsdata.io/api/1/latest?apikey=YOUR_API_KEY&q=technology\"",
+    "response_snippet": "{\"status\":\"success\",\"totalResults\":10,\"results\":[{\"article_id\":\"...\",\"title\":\"...\",\"link\":\"...\",\"source_id\":\"...\",\"pubDate\":\"...\"}]}"
+  },
+  "use_cases": [
+    "search latest news by keyword",
+    "get news headlines by country or language",
+    "monitor brand or topic mentions in news",
+    "fetch historical news articles for research"
+  ],
+  "sources": [
+    "https://newsdata.io",
+    "https://newsdata.io/documentation",
+    "https://newsdata.io/pricing"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

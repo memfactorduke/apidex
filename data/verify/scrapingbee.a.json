@@ -1,0 +1,52 @@
+{
+  "id": "scrapingbee",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.scrapingbee.com/documentation/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.scrapingbee.com/documentation/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.scrapingbee.com/documentation/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 trial is free credits after card signup, not an ongoing free tier",
+      "source": "https://www.scrapingbee.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1000 free credits with free trial (requires credit card); no ongoing free tier",
+      "source": "https://www.scrapingbee.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plan-based concurrency limits (e.g. Freelance 5 concurrent, Startup 50, Business 100, Business+ 200); no published RPS",
+      "source": "https://www.scrapingbee.com/pricing/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.scrapingbee.com/documentation/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.scrapingbee.com/documentation/"
+    }
+  },
+  "notes": "Docs-first verification. base_url, docs, apiKey auth, example curl, and description match official docs. free_tier/limits and rate_limits need correction from pricing (trial credits + concurrency caps)."
+}

@@ -1,0 +1,96 @@
+{
+  "id": "newscatcher",
+  "status": "operational",
+  "name": "NewsCatcher",
+  "category": "news-media",
+  "tagline": "News and media monitoring API for articles, headlines, and sources.",
+  "description": "NewsCatcher provides programmatic access to news articles, headlines, and media sources. Used for media monitoring, news aggregation, and research workflows. This entry needs verification against official 2026 docs for base URL, auth, pricing, and rate limits.",
+  "base_url": "https://v3-api.newscatcherapi.com",
+  "docs_url": "https://docs.newscatcherapi.com",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and signup flow need official docs confirmation."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "14-day trial: 50 requests/day, 1 request/second; no permanent free tier (confirm on pricing page)",
+    "paid_plans": null
+  },
+  "rate_limits": "Plan-dependent (e.g. Trial 1 rps / 50 req/day; higher tiers publish RPS and monthly call quotas on pricing)",
+  "example": {
+    "request": "curl -X GET \"https://v3-api.newscatcherapi.com/api/search?q=Microsoft&lang=en\" -H \"x-api-token: YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":\"ok\",\"total_hits\":0,\"page\":1,\"page_size\":100,\"articles\":[]}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword",
+    "monitor media coverage for a brand or topic"
+  ],
+  "sources": [
+    "https://www.newscatcherapi.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

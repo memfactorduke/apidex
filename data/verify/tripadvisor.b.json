@@ -1,0 +1,52 @@
+{
+  "id": "tripadvisor",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tripadvisor-content-api.readme.io/reference/searchforlocations"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://tripadvisor-content-api.readme.io/reference/overview",
+      "source": "https://tripadvisor-content-api.readme.io/reference/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tripadvisor-content-api.readme.io/reference/searchforlocations"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://tripadvisor-content-api.readme.io/reference/faq"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "First 5,000 API calls free every month after signup (credit card required for overage billing)",
+      "source": "https://tripadvisor-content-api.readme.io/reference/faq"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Search APIs: 10,000 calls/day; Location details/photos/reviews: set by daily budget; 50 QPS (24h rolling window)",
+      "source": "https://tripadvisor-content-api.readme.io/reference/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tripadvisor-content-api.readme.io/reference/searchforlocations"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tripadvisor-content-api.readme.io/reference/overview"
+    }
+  },
+  "notes": "docs_url path returns S3 AccessDenied; official API reference is tripadvisor-content-api.readme.io. free_tier false and rate_limits 'not published' are wrong per FAQ/rate-limits. base_url 403 without key is expected (API Gateway). Terra is the upcoming platform successor."
+}

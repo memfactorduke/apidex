@@ -1,0 +1,52 @@
+{
+  "id": "placekitten",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://placekitten.com is returning Cloudflare HTTP 521 (web server down); no working alternate official base URL confirmed as of check",
+      "source": "https://placekitten.com"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://placekitten.com is returning Cloudflare HTTP 521 (web server down); no working alternate official docs URL confirmed as of check",
+      "source": "https://placekitten.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://placekitten.com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://placekitten.com"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -sI \"https://placekitten.com/200/300\" currently fails with HTTP 521 (origin down); path pattern /{width}/{height} is historically correct but not currently operational",
+      "source": "https://placekitten.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://placekitten.com"
+    }
+  },
+  "notes": "Live checks return Cloudflare 521 for placekitten.com (origin web server down). Historical usage (public GET /w/h, no auth, free) is well-known and matches the entry, but automated flags are correct: service appears offline now. Marked base_url/docs_url/example incorrect on operational grounds; free-tier limits and rate limits remain unpublished and thus unverifiable from live docs."
+}

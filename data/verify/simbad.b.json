@@ -1,0 +1,52 @@
+{
+  "id": "simbad",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/sim-help?Page=sim-fscript"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/sim-help?Page=sim-url"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/sim-help?Page=sim-url"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cds.unistra.fr/resources/dsa.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cds.unistra.fr/resources/dsa.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/sim-help?Page=sim-url"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://simbad.cds.unistra.fr/simbad/"
+    }
+  },
+  "notes": "Verified against live CDS SIMBAD pages (2026). sim-script and sim-id URL interfaces remain public with no auth; free access; no hard numeric rate limits published. CORS left unknown. No shutdown or paid-tier notices found."
+}

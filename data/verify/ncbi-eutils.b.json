@@ -1,0 +1,52 @@
+{
+  "id": "ncbi-eutils",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25501/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25501/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey (optional but recommended; unauthenticated access still allowed with stricter rate limits)",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25497/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25497/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No monetary free-tier quota; public service with rate limits. API key free via NCBI account. Without key: 3 req/s; with key: 10 req/s. Recommended max 10 concurrent requests. Large jobs should use EDirect or local copies; third-party commercial redistribution may need NCBI permission.",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25497/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Without API key: 3 requests/second. With API key: 10 requests/second. Recommended not to exceed 10 concurrent requests. Do not post more than 100 UIDs per request for multi-UID operations; use history server for larger sets. Contact eutilities@ncbi.nlm.nih.gov for higher throughput needs.",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25497/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=asthma&retmode=json\"",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25499/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "NCBI E-utilities (Entrez Programming Utilities) is a set of eight server-side programs providing a stable API into the Entrez query and database system at NCBI (PubMed, GenBank, etc.). Access is free; an optional free API key raises the rate limit. Responses available in XML and JSON (retmode). Base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/.",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK25501/"
+    }
+  },
+  "notes": "Entry is nearly empty (base_url, docs_url, description, rate_limits, example blank). Official base is eutils.ncbi.nlm.nih.gov; auth is optional api_key not none; formats include XML not only JSON. Automated HTTP 0 likely network/env, not API death. CORS not documented."
+}

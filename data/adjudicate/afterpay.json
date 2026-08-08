@@ -1,0 +1,15 @@
+{
+  "id": "afterpay",
+  "base_url": "https://global-api.afterpay.com",
+  "docs_url": null,
+  "auth_type": "basic",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -u MERCHANT_ID:SECRET_KEY -H 'Accept: application/json' https://global-api.afterpay.com/v2/configuration",
+  "example_response_snippet": "{\"minimumAmount\":{\"amount\":\"1.00\",\"currency\":\"USD\"},\"maximumAmount\":{\"amount\":\"2000.00\",\"currency\":\"USD\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect; production is region-specific \u2014 US/CA global-api.afterpay.com (docs: https://developers.afterpay.com/afterpay-online/reference/api-environments). auth_type: basic \u2014 HTTP Basic with Merchant ID + Secret Key (https://developers.afterpay.com/afterpay-online/reference/authentication). example: bare GET https://api.afterpay.com/ is not documented; use authenticated region host + /v2/configuration (same API environments + auth pages)."
+}

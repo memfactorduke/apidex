@@ -1,0 +1,99 @@
+{
+  "id": "pandascore",
+  "status": "operational",
+  "name": "PandaScore",
+  "category": "sports",
+  "tagline": "Esports data API for scores, fixtures, and stats across major titles",
+  "description": "PandaScore provides real-time and historical esports data including live scores, match schedules, player and team stats, and tournament information for League of Legends, Counter-Strike, Dota 2, Valorant, and other competitive games via a REST API.",
+  "base_url": "https://api.pandascore.co",
+  "docs_url": "https://developers.pandascore.co/docs",
+  "signup_url": "https://app.pandascore.co/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via Authorization: Bearer header or token query parameter; self-serve signup at app.pandascore.co"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 1,000 requests/hour",
+    "paid_plans": "Paid plans for higher rate limits and premium data access"
+  },
+  "rate_limits": "Free: 1,000 req/hour; paid plans have higher per-plan limits (see pricing)",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.pandascore.co/matches/upcoming\"",
+    "response_snippet": "[{\"id\": 1, \"name\": \"Team A vs Team B\", \"status\": \"not_started\", \"scheduled_at\": \"2026-01-01T12:00:00Z\"}]"
+  },
+  "use_cases": [
+    "get upcoming esports matches for a game",
+    "fetch live match scores and status",
+    "list tournament brackets and schedules",
+    "get player or team statistics",
+    "search teams and players by name"
+  ],
+  "sources": [
+    "https://pandascore.co",
+    "https://developers.pandascore.co"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

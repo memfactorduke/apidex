@@ -1,0 +1,52 @@
+{
+  "id": "interactive-brokers",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://localhost:5000/v1/api (Client Portal Web API via Gateway; not a public cloud host like api.ibkr.com)",
+      "source": "https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.interactivebrokers.com/campus/ibkr-api-page/ibkr-api-home/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.interactivebrokers.com/en/trading/ib-api.php"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.interactivebrokers.com/en/trading/ib-api.php"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.interactivebrokers.com/campus/ibkr-api-page/ibkr-api-home/"
+    }
+  },
+  "notes": "base_url api.ibkr.com is wrong\u2014CPAPI is local Gateway; rest matches docs. Overall fail for incorrect base_url."
+}

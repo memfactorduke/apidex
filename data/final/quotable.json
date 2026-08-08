@@ -1,0 +1,106 @@
+{
+  "id": "quotable",
+  "status": "operational",
+  "name": "Quotable",
+  "category": "education-reference",
+  "tagline": "Open-source random quote API with tags, authors, and search.",
+  "description": "Quotable is an open-source REST API for random and filtered inspirational quotes. Developers can fetch random quotes, list authors, filter by tags, and search quote text without authentication. It is commonly used for demos, daily quote features, and lightweight content enrichment.",
+  "base_url": "https://api.quotable.io",
+  "docs_url": "https://github.com/lukePeavey/quotable",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints are open; no API key or signup."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free and open; no published request quota (community-hosted)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.quotable.io/random\"",
+    "response_snippet": "{\"_id\":\"\u2026\",\"content\":\"\u2026\",\"author\":\"\u2026\",\"tags\":[\"\u2026\"],\"authorSlug\":\"\u2026\",\"length\":42,\"dateAdded\":\"\u2026\",\"dateModified\":\"\u2026\"}"
+  },
+  "use_cases": [
+    "get a random inspirational quote",
+    "filter quotes by tag or author",
+    "list authors for a quote browser",
+    "search quotes by keyword",
+    "power a daily quote widget"
+  ],
+  "sources": [
+    "https://github.com/lukePeavey/quotable",
+    "https://api.quotable.io"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

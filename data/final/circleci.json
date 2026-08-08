@@ -1,0 +1,96 @@
+{
+  "id": "circleci",
+  "status": "operational",
+  "name": "CircleCI API",
+  "category": "dev-tools",
+  "tagline": "CI/CD API for pipelines, jobs, and project automation",
+  "description": "CircleCI provides a REST API for managing continuous integration and delivery: pipelines, workflows, jobs, projects, contexts, and artifacts. Developers use personal or project API tokens to trigger builds, inspect status, and automate CI operations from scripts and tools.",
+  "base_url": "https://circleci.com/api/v2",
+  "docs_url": "https://circleci.com/docs/api/v2/",
+  "signup_url": "https://circleci.com/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal or project API token via Circle-Token header (or query param). Self-serve account signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free: 30,000 credits/mo (~6,000 min on small Docker), 5 active users, 30 concurrent jobs, 1 GB network, 2 GB storage. Linux OSS: up to 400,000 credits/mo. Check pricing for current numbers.",
+    "paid_plans": null
+  },
+  "rate_limits": "Limits exist and vary by endpoint (no fixed public req/s). HTTP 429 with Retry-After; use RateLimit-*/X-RateLimit-* headers and exponential backoff. See API developer\u2019s guide.",
+  "example": {
+    "request": "curl -H \"Circle-Token: YOUR_API_KEY\" https://circleci.com/api/v2/me",
+    "response_snippet": "{\"id\":\"...\",\"login\":\"...\",\"name\":\"...\"}"
+  },
+  "use_cases": [
+    "trigger a pipeline for a branch",
+    "get pipeline or workflow status",
+    "list recent jobs for a project",
+    "fetch job artifacts",
+    "manage project environment variables"
+  ],
+  "sources": [
+    "https://circleci.com/docs/api/v2/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

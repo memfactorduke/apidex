@@ -1,0 +1,95 @@
+{
+  "id": "recurly",
+  "status": "operational",
+  "name": "Recurly",
+  "category": "ecommerce-payments",
+  "tagline": "Subscription billing and revenue management API for SaaS and digital businesses.",
+  "description": "Recurly provides a REST API for subscription management, recurring billing, invoices, payments, dunning, and revenue recognition. Developers manage accounts, plans, subscriptions, and transactions programmatically with JSON over HTTPS.",
+  "base_url": "https://v3.recurly.com",
+  "docs_url": "https://developers.recurly.com/api/v2021-02-25/",
+  "signup_url": "https://recurly.com/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic Auth (API key as username, empty password) or Authorization: Basic header; keys from Recurly admin."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_API_KEY: https://v3.recurly.com/sites",
+    "response_snippet": "{\"object\":\"list\",\"has_more\":false,\"next\":null,\"data\":[{\"id\":\"...\",\"object\":\"site\",\"...\"}]}"
+  },
+  "use_cases": [
+    "create a subscription for a customer",
+    "list invoices for an account",
+    "update a billing plan",
+    "process a one-time purchase",
+    "retrieve account payment methods"
+  ],
+  "sources": [
+    "https://developers.recurly.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

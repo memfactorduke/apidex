@@ -1,0 +1,100 @@
+{
+  "id": "financial-modeling-prep",
+  "status": "operational",
+  "name": "Financial Modeling Prep",
+  "category": "finance",
+  "tagline": "Stock market and financial statement data API for equities, ETFs, and more.",
+  "description": "Financial Modeling Prep (FMP) provides REST APIs for stock prices, company financials, ratios, market news, and related market data used in investment research and financial applications.",
+  "base_url": "https://financialmodelingprep.com/stable",
+  "docs_url": "https://site.financialmodelingprep.com/developer/docs",
+  "signup_url": "https://site.financialmodelingprep.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter apikey=YOUR_API_KEY (self-serve signup). Some endpoints may also accept the key in headers \u2014 verify current docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "250 API calls/day on Free plan; limited free endpoints (not full API)",
+    "paid_plans": null
+  },
+  "rate_limits": "Published by plan: Free 250/day; Starter 300/min; Premium 750/min; Ultimate 3000/min",
+  "example": {
+    "request": "curl \"https://financialmodelingprep.com/stable/quote?symbol=AAPL&apikey=YOUR_API_KEY\"",
+    "response_snippet": "[{\"symbol\":\"AAPL\",\"name\":\"Apple Inc.\",\"price\":178.72,\"changesPercentage\":0.5,\"change\":0.89,\"dayLow\":177.5,\"dayHigh\":179.2,\"yearHigh\":199.62,\"yearLow\":164.08,\"marketCap\":2800000000000,\"volume\":52000000,\"avgVolume\":55000000,\"exchange\":\"NASDAQ\",\"open\":178.0,\"previousClose\":177.83,\"eps\":6.13,\"pe\":29.15,\"earningsAnnouncement\":null,\"sharesOutstanding\":15550000000,\"timestamp\":1710000000}]"
+  },
+  "use_cases": [
+    "get real-time or delayed stock quote for a ticker",
+    "fetch company income statement or balance sheet",
+    "list historical daily prices for a symbol",
+    "screen stocks by market cap or sector",
+    "pull key financial ratios for valuation models"
+  ],
+  "sources": [
+    "https://site.financialmodelingprep.com/developer/docs",
+    "https://financialmodelingprep.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

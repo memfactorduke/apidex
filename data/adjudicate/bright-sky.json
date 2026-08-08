@@ -1,0 +1,15 @@
+{
+  "id": "bright-sky",
+  "base_url": "https://api.brightsky.dev",
+  "docs_url": "https://brightsky.dev/docs/",
+  "auth_type": "none",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl \"https://api.brightsky.dev/current_weather?lat=52.52&lon=13.41\"",
+  "example_response_snippet": "{\"weather\":{\"timestamp\":\"2026-01-01T12:00:00+00:00\",\"source_id\":0,\"precipitation\":0,\"pressure_msl\":1015,\"sunshine\":null,\"temperature\":8.5,\"wind_direction\":270,\"wind_speed\":12.0,\"cloud_cover\":50,\"condition\":\"partly-cloudy\",\"icon\":\"partly-cloudy-day\"},\"sources\":[{\"id\":0,\"dwd_station_id\":\"10384\",\"station_name\":\"Berlin-Tempelhof\"}]}",
+  "description": "Bright Sky is a free open-source weather API that wraps German Weather Service (DWD) observational and forecast data into a simple, well-documented JSON HTTP interface for developers.",
+  "status": "operational",
+  "resolution_notes": "example: Verifier A flagged incorrect, Verifier B confirmed. Live docs and API confirm /current_weather?lat=&lon= is valid; response shape matches docs."
+}

@@ -1,0 +1,99 @@
+{
+  "id": "scrapingbee",
+  "status": "operational",
+  "name": "ScrapingBee",
+  "category": "data-analytics",
+  "tagline": "Headless browser scrape API for HTML extraction and anti-bot bypass.",
+  "description": "ScrapingBee is a web scraping API that renders pages with headless browsers, handles proxies and CAPTCHAs, and returns HTML or extracted data so developers can scrape sites without running their own browser infrastructure.",
+  "base_url": "https://app.scrapingbee.com/api/v1",
+  "docs_url": "https://www.scrapingbee.com/documentation/",
+  "signup_url": "https://app.scrapingbee.com/account/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (self-serve signup at app.scrapingbee.com)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "html",
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "1,000 free trial credits after signup (credit card required); no ongoing free plan",
+    "paid_plans": null
+  },
+  "rate_limits": "Plan-based concurrent request limits (e.g. Freelance 5, Startup 50, Business 100, Business+ 200); no published RPS",
+  "example": {
+    "request": "curl \"https://app.scrapingbee.com/api/v1?api_key=YOUR_API_KEY&url=https%3A%2F%2Fhttpbin.org%2Fhtml\"",
+    "response_snippet": "<!DOCTYPE html>\\n<html>..."
+  },
+  "use_cases": [
+    "scrape JS-rendered page HTML",
+    "extract data with CSS selectors",
+    "screenshot a webpage",
+    "bypass basic anti-bot blocks"
+  ],
+  "sources": [
+    "https://www.scrapingbee.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "pokeapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pokeapi.co/docs/v2"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pokeapi.co/docs/v2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pokeapi.co/docs/v2"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pokeapi.co/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Completely free with no rate limits on the REST API since static hosting (Nov 2018); fair-use policy requires local caching; IP bans for abuse (not a soft rate limit)",
+      "source": "https://pokeapi.co/docs/v2"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limiting removed entirely for REST API since Nov 2018; fair-use policy (cache locally; IP ban for abuse). GraphQL at graphql.pokeapi.co has 100 calls/h per IP.",
+      "source": "https://pokeapi.co/docs/v2"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pokeapi.co/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pokeapi.co/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pokeapi.co/docs/v2"
+    }
+  },
+  "notes": "REST rate limiting is not soft/unpublished\u2014docs state it was removed entirely in Nov 2018 after static hosting. Fair-use is cache + no DoS (permanent IP ban), not rate limiting. GraphQL alone is rate-limited (100/h/IP)."
+}

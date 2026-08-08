@@ -1,0 +1,52 @@
+{
+  "id": "inaturalist",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.inaturalist.org/v1/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.inaturalist.org/v1/docs/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "api_key (JWT API token from user account; Authorization: Bearer or JWT). Entry uses type \"jwt\" which is nonstandard for this directory pattern \u2014 token is a self-serve JWT API token, not OAuth2-only. Prefer documenting as API token/JWT per official self-serve token page.",
+      "source": "https://www.inaturalist.org/users/api_token"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.inaturalist.org/v1/docs/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free public API with no paid plans. Exact free-tier numeric quotas are not cleanly published as \"~100 unauth / higher auth\"; rely on response rate-limit headers and current community/docs guidance rather than fixed published numbers.",
+      "source": "https://forum.inaturalist.org/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Do not state unauthenticated ~100/min and authenticated ~1000/min as established published limits; official docs emphasize checking rate-limit headers and that authenticated access gets higher limits. Community figures vary and are not authoritative fixed quotas.",
+      "source": "https://forum.inaturalist.org/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.inaturalist.org/v1/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.inaturalist.org/v1/docs/"
+    }
+  },
+  "notes": "Adversarial check: base_url and docs_url are live. Auth is a user JWT API token (often labeled jwt) with optional unauth reads \u2014 type naming is the main ambiguity. Rate-limit numbers (~100/min unauth, ~1000/min auth) are the weak/hallucination-prone claims and should not be treated as confirmed published limits. No shutdown found."
+}

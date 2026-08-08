@@ -1,0 +1,98 @@
+{
+  "id": "17track",
+  "status": "operational",
+  "name": "17TRACK",
+  "category": "transportation",
+  "tagline": "International multi-carrier parcel tracking API",
+  "description": "17TRACK provides a multi-carrier package tracking API that aggregates shipment status across hundreds of global postal and express carriers. Developers register numbers, receive tracking events, and get delivery updates for international e-commerce and logistics workflows.",
+  "base_url": "https://api.17track.net/track/v2.2",
+  "docs_url": "https://api.17track.net/doc?v=2.2",
+  "signup_url": "https://api.17track.net/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via 17token header (self-serve signup on api.17track.net)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "As of 2026-01-07, new accounts get a one-time free allocation of 200 tracking numbers (monthly free quota ended); paid plans by volume thereafter.",
+    "paid_plans": "Paid plans by tracking volume; see official pricing"
+  },
+  "rate_limits": "3 requests/second (HTTP 429 when exceeded); max 40 tracking numbers per request; ~400,000 registrations/hour.",
+  "example": {
+    "request": "curl -X POST 'https://api.17track.net/track/v2.2/gettrackinfo' -H '17token: YOUR_API_KEY' -H 'Content-Type: application/json' -d '[{\"number\":\"RR123456789CN\"}]'",
+    "response_snippet": "{\"code\":0,\"data\":{\"accepted\":[{\"number\":\"RR123456789CN\",\"track\":{\"e\":[{\"a\":\"2024-01-01 12:00\",\"z\":\"Delivered\"}]}}]}}"
+  },
+  "use_cases": [
+    "track a parcel by tracking number across carriers",
+    "register tracking numbers for push or poll updates",
+    "get multi-carrier delivery status for e-commerce orders",
+    "detect carrier from a tracking number",
+    "batch-check shipment status for fulfillment dashboards"
+  ],
+  "sources": [
+    "https://www.17track.net/",
+    "https://api.17track.net/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

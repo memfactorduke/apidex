@@ -1,0 +1,89 @@
+{
+  "id": "ebay",
+  "status": "operational",
+  "name": "eBay Buy API",
+  "category": "ecommerce-payments",
+  "tagline": "Search and purchase products across eBay marketplaces via REST APIs",
+  "description": "eBay Buy APIs let developers search listings, browse item details, and manage guest checkout and order flows on eBay marketplaces. The suite includes Browse, Order, Feed, Marketing, and related Buy resources under the eBay Developers Program, with OAuth application tokens for most read-only shopping use cases.",
+  "base_url": "https://api.ebay.com/buy",
+  "docs_url": "https://developer.ebay.com/api-docs/buy/static/overview.html",
+  "signup_url": "https://developer.ebay.com/signin?tab=register",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 client credentials (application token) for Browse and most Buy APIs; authorization code for user-consent Order flows. Create an app in the eBay Developers Program and request a token from the Identity API."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free access under eBay Developers Program with call limits by API; exact free quotas vary by resource and require account-level limits review",
+    "paid_plans": "Commercial use and higher volumes governed by eBay API license and call limits; contact eBay for enterprise agreements"
+  },
+  "rate_limits": "Published per API/resource in the eBay Developers Program call limits; typically application-level daily limits (exact numbers vary by API and tier)",
+  "example": {
+    "request": "curl -X GET 'https://api.ebay.com/buy/browse/v1/item_summary/search?q=iphone&limit=3' -H 'Authorization: Bearer YOUR_API_KEY' -H 'X-EBAY-C-MARKETPLACE-ID: EBAY_US' -H 'Content-Type: application/json'",
+    "response_snippet": "{\"href\":\"https://api.ebay.com/buy/browse/v1/item_summary/search?q=iphone&limit=3\",\"total\":10000,\"itemSummaries\":[{\"itemId\":\"v1|123|0\",\"title\":\"Apple iPhone\",\"price\":{\"value\":\"299.99\",\"currency\":\"USD\"},\"itemWebUrl\":\"https://www.ebay.com/itm/...\"}]}"
+  },
+  "use_cases": [
+    "search eBay product listings by keyword",
+    "get item details and prices for a listing",
+    "check product availability across marketplaces",
+    "retrieve seller and shipping info for an item",
+    "power affiliate or comparison shopping for eBay inventory"
+  ],
+  "sources": [
+    "https://developer.ebay.com/api-docs/buy/static/overview.html",
+    "https://developer.ebay.com/api-docs/buy/browse/overview.html",
+    "https://developer.ebay.com/api-docs/static/oauth-tokens.html",
+    "https://developer.ebay.com/develop/guides/application-keys"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

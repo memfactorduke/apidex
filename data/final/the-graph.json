@@ -1,0 +1,98 @@
+{
+  "id": "the-graph",
+  "status": "operational",
+  "name": "The Graph",
+  "category": "crypto",
+  "tagline": "Decentralized indexing protocol for querying blockchain data via GraphQL",
+  "description": "The Graph is a decentralized protocol for indexing and querying blockchain data. Developers deploy or query subgraphs\u2014open GraphQL APIs over Ethereum, Polygon, Arbitrum, and many other networks\u2014using hosted gateways or the decentralized network. Common use cases include on-chain balances, NFT metadata, DeFi protocol state, and historical event streams without running your own indexer.",
+  "base_url": "https://gateway.thegraph.com/api",
+  "docs_url": "https://thegraph.com/docs/",
+  "signup_url": "https://thegraph.com/studio/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key in path or query for Gateway queries (e.g. https://gateway.thegraph.com/api/[api-key]/subgraphs/id/[subgraph-id]); keys created in Subgraph Studio"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "graphql",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST -H \"Content-Type: application/json\" -d '{\"query\":\"{ _meta { block { number } } }\"}' \"https://gateway.thegraph.com/api/YOUR_API_KEY/subgraphs/id/SUBGRAPH_ID\"",
+    "response_snippet": "{\"data\":{\"_meta\":{\"block\":{\"number\":12345678}}}}"
+  },
+  "use_cases": [
+    "query indexed Ethereum smart contract events via GraphQL",
+    "fetch NFT collection metadata and transfer history from a subgraph",
+    "get DeFi protocol TVL and pool state from published subgraphs",
+    "stream historical on-chain activity without running a full node",
+    "look up token balances and transfers across supported chains"
+  ],
+  "sources": [
+    "https://thegraph.com/docs/",
+    "https://thegraph.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

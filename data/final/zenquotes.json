@@ -1,0 +1,96 @@
+{
+  "id": "zenquotes",
+  "status": "operational",
+  "name": "ZenQuotes",
+  "category": "education-reference",
+  "tagline": "Simple inspirational quotes API for apps and widgets",
+  "description": "ZenQuotes is a free public API that serves inspirational and motivational quotes in JSON format. It is designed for developers building apps, widgets, websites, and other projects that need random or daily quotes with minimal setup. The service provides endpoints for random quotes, daily quotes, and quote lists, and is commonly used without authentication for basic access.",
+  "base_url": "https://zenquotes.io/api",
+  "docs_url": "https://docs.zenquotes.io/zenquotes-documentation/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for basic free endpoints; optional API key available for higher usage via self-serve signup on zenquotes.io."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://zenquotes.io/api/random\"",
+    "response_snippet": "[{\"q\":\"The only way to do great work is to love what you do.\",\"a\":\"Steve Jobs\",\"h\":\"<blockquote>&ldquo;The only way to do great work is to love what you do.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>\"}]"
+  },
+  "use_cases": [
+    "fetch a random inspirational quote for a daily widget",
+    "get today's quote of the day for a homepage banner",
+    "pull a batch of quotes for offline caching in a mobile app",
+    "display motivational quotes in a Slack or Discord bot",
+    "seed demo content with famous author quotes"
+  ],
+  "sources": [
+    "https://zenquotes.io/",
+    "https://docs.zenquotes.io/zenquotes-documentation/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

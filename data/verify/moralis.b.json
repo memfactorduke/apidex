@@ -1,0 +1,52 @@
+{
+  "id": "moralis",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://deep-index.moralis.io/api/v2.2 (path requires an endpoint after base; root returns 404 \u2014 confirmed as current API base in docs)",
+      "source": "https://docs.moralis.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.moralis.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.moralis.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://moralis.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 40,000 Compute Units (CU)/month; rate limits apply by plan",
+      "source": "https://moralis.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.moralis.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Wallet balance path is /{address}/balance?chain=eth under v2.2; verify exact path against current Get Native Balance docs \u2014 automated check returned 404 on base alone which is expected",
+      "source": "https://docs.moralis.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.moralis.com/"
+    }
+  },
+  "notes": "Incomplete verification - need live docs fetch"
+}

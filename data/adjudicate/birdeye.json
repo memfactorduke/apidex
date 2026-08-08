@@ -1,0 +1,15 @@
+{
+  "id": "birdeye",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Standard (free): 30,000 CUs/month, 1 rps; limited but substantial endpoint access (e.g. /defi/price, OHLCV, token list, token overview); no CU overage",
+  "rate_limits": "Account-level: Standard 1 rps; Lite/Starter 15 rps; Premium 50 rps (~1000 rpm); Business 100 rps (~1500 rpm); Enterprise custom. Wallet APIs ~30 rpm; some heavy endpoints have lower per-API caps.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: confirm (docs pricing table). rate_limits: confirm (rate-limiting docs). Evidence: https://docs.birdeye.so/docs/pricing, https://docs.birdeye.so/docs/rate-limiting, https://birdeye.so/data-api/pricing"
+}

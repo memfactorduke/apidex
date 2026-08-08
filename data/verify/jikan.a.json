@@ -1,0 +1,52 @@
+{
+  "id": "jikan",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://jikan.moe"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests/minute, 3 requests/second (per IP)",
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests/minute, 3 requests/second (per IP)",
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.jikan.moe/"
+    }
+  },
+  "notes": "Automated 504 on base_url is a transient/gateway issue; docs and site confirm api.jikan.moe/v4. Rate limits are published in docs (3/sec, 60/min), so free_tier_limits and rate_limits were wrong as \"unknown\"/\"not published\"."
+}

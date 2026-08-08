@@ -1,0 +1,103 @@
+{
+  "id": "wikipedia",
+  "status": "operational",
+  "name": "Wikipedia API",
+  "category": "education-reference",
+  "tagline": "MediaWiki REST and Action APIs for Wikipedia encyclopedia content and page metadata.",
+  "description": "Wikipedia exposes free MediaWiki APIs for reading encyclopedia pages, summaries, search, revisions, and metadata. Developers typically use the Action API (api.php) or the MediaWiki REST API on language subdomains such as en.wikipedia.org. No API key is required for most read endpoints; Wikimedia asks clients to set a descriptive User-Agent. High-volume or commercial use should follow Wikimedia's API usage guidelines and rate expectations.",
+  "base_url": "https://en.wikipedia.org/w/api.php",
+  "docs_url": "https://www.mediawiki.org/wiki/API:Main_page",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key for standard public read access. Send a descriptive User-Agent (project URL/contact). OAuth available for authenticated writes and higher-privilege MediaWiki actions."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json",
+    "xml",
+    "html",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for public read access; no paid plans. High-volume use must respect Wikimedia rate/etiquette guidelines.",
+    "paid_plans": null
+  },
+  "rate_limits": "No fixed published quota for anonymous reads; follow polite use (maxlag, concurrency). Wikimedia may throttle aggressive clients; bot/OAuth accounts have separate expectations.",
+  "example": {
+    "request": "curl -s \"https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro=1&explaintext=1&titles=Earth&format=json\" -H \"User-Agent: MyApp/1.0 (https://example.com; contact@example.com)\"",
+    "response_snippet": "{\"batchcomplete\":\"\",\"query\":{\"pages\":{\"-1\":{\"ns\":0,\"title\":\"Earth\",\"missing\":\"\"}}}}"
+  },
+  "use_cases": [
+    "fetch a Wikipedia page summary or intro extract for a topic",
+    "search Wikipedia article titles matching a query",
+    "get page metadata such as pageid, last revision, and categories",
+    "retrieve plain-text or HTML content for a known article title",
+    "resolve redirects and normalize titles for entity linking"
+  ],
+  "sources": [
+    "https://www.mediawiki.org/wiki/API:Main_page",
+    "https://en.wikipedia.org/api/rest_v1/",
+    "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_API_Usage_Guidelines",
+    "https://www.mediawiki.org/wiki/API:Etiquette"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

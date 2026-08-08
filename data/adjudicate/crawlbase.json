@@ -1,0 +1,15 @@
+{
+  "id": "crawlbase",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Up to 20,000 free requests (no credit card); usable for normal or JS requests. Crawling API free starter; Smart AI Proxy free plan separately lists 5,000 credits.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: KEEP original https://api.crawlbase.com \u2014 Verifier A correct; Verifier B wrongly treated the full query-string template as base_url. Official docs Endpoint is GET/POST/PUT https://api.crawlbase.com/?token=\u2026&url=\u2026 (host root is the base). Source: https://crawlbase.com/docs/crawling-api/. free_tier_limits: CORRECT from unknown \u2014 official pricing repeatedly states \u201cUp to 20,000 requests free. No credit card.\u201d Verifier A\u2019s 1,000-request figure is outdated; Verifier B\u2019s confirm of \u201cunknown\u201d is also wrong vs current page. Free JS/normal requests confirmed in pricing FAQ. Source: https://crawlbase.com/pricing (also blog pricing explainer)."
+}

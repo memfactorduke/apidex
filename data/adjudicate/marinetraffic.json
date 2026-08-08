@@ -1,0 +1,15 @@
+{
+  "id": "marinetraffic",
+  "base_url": "https://services.marinetraffic.com/api",
+  "docs_url": "https://www.marinetraffic.com/en/ais-api-services",
+  "auth_type": "apiKey",
+  "free_tier": false,
+  "free_tier_limits": "no free tier",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl \"https://services.marinetraffic.com/api/exportvessel/v:5/YOUR_API_KEY/timespan:10/mmsi:241486000/protocol:jsono\"",
+  "example_response_snippet": "[{\"MMSI\":\"241486000\",\"IMO\":\"9732171\",\"SHIP_ID\":\"123456\",\"LAT\":\"37.9\",\"LON\":\"23.6\",\"SPEED\":\"0\",\"HEADING\":\"0\",\"COURSE\":\"0\",\"STATUS\":\"5\",\"TIMESTAMP\":\"2024-01-01T12:00:00\"}]",
+  "description": "MarineTraffic provides AIS-based vessel tracking and maritime data via a commercial API for positions, voyages, ports, and related vessel intelligence.",
+  "status": "operational",
+  "resolution_notes": "base_url: confirmed services.marinetraffic.com/api still used for export/legacy endpoints; primary product rebranded Maritime APIs. example: exportvessel/v:5 is legacy-style path still documented; treat as legacy. Sources: marinetraffic.com ais-api-services."
+}

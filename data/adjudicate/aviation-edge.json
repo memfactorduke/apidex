@@ -1,0 +1,15 @@
+{
+  "id": "aviation-edge",
+  "base_url": "https://aviation-edge.com/v2/public",
+  "docs_url": "https://aviation-edge.com/docs/",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "Limited free tier; concrete request caps not fully verified from pricing page \u2014 confirm on dashboard after signup.",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl \"https://aviation-edge.com/v2/public/flights?key=YOUR_API_KEY&flightIata=AA100\"",
+  "example_response_snippet": "[{\"aircraft\":{\"iataCode\":\"B738\",\"icao24\":\"a1b2c3\",\"icaoCode\":\"B738\",\"regNumber\":\"N12345\"},\"airline\":{\"iataCode\":\"AA\",\"icaoCode\":\"AAL\"},\"arrival\":{\"iataCode\":\"LAX\",\"icaoCode\":\"KLAX\"},\"departure\":{\"iataCode\":\"JFK\",\"icaoCode\":\"KJFK\"},\"flight\":{\"iataNumber\":\"AA100\",\"icaoNumber\":\"AAL100\"},\"status\":\"en-route\"}]",
+  "description": "Aviation Edge provides aviation data APIs covering real-time flights, airports, airlines, routes, schedules, and historical data. Developers use a free limited tier or paid plans via API key authentication. Endpoints return JSON for flight tracking, airport lookups, and route planning applications.",
+  "status": "operational",
+  "resolution_notes": "Disputed fields settled from live site checks: base_url and docs_url both 404 on automated curls, so re-verified against official docs and homepage; example path/params checked against current docs. Auth, free tier, rate limits, cors, description kept as original where confirmed or null per rules."
+}

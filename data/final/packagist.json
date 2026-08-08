@@ -1,0 +1,95 @@
+{
+  "id": "packagist",
+  "status": "operational",
+  "name": "Packagist API",
+  "category": "dev-tools",
+  "tagline": "Public Composer package registry API for PHP package discovery and metadata",
+  "description": "Packagist is the default Composer package repository. Its public API exposes package listings, metadata, search, and statistics so tools can resolve package names, versions, and download counts without scraping the website.",
+  "base_url": "https://packagist.org",
+  "docs_url": "https://packagist.org/apidoc",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Most public read endpoints require no authentication. Authenticated write or private-package flows use Packagist account credentials if applicable."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "No hard req/min quotas published. Soft limits/guidance on apidoc: max 10 concurrent requests (20 for static files); spread load; avoid XX:00 crons; send User-Agent with mailto. Prefer static repo.packagist.org metadata.",
+  "example": {
+    "request": "curl -s 'https://packagist.org/packages/list.json'",
+    "response_snippet": "{\"packageNames\":[\"vendor/package\",...]} "
+  },
+  "use_cases": [
+    "list all package names on Packagist",
+    "fetch package metadata and versions for a Composer package",
+    "search packages by keyword",
+    "get package download statistics"
+  ],
+  "sources": [
+    "https://packagist.org/apidoc"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

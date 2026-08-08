@@ -1,0 +1,52 @@
+{
+  "id": "udemy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "basic",
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Affiliate API access is free for approved Udemy affiliates; no separate paid API plan is published. Exact quota/rate free-tier limits are not publicly documented as a numeric free allowance.",
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -u {client_id}:{client_secret} \"https://www.udemy.com/api-2.0/courses/?page=1&page_size=1\" (Authorization must be Basic base64(client_id:client_secret), not a single YOUR_API_KEY; requires Affiliate API credentials from the Udemy Affiliate Program)",
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.udemy.com/developers/affiliate/"
+    }
+  },
+  "notes": "Affiliate API still documents api-2.0 + Basic auth for approved affiliates. Automated 403s match bot protection, not a dead API. Entry fails on auth_type, free_tier, free_tier_limits, and example Basic-auth shape."
+}

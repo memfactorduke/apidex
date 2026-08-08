@@ -1,0 +1,15 @@
+{
+  "id": "brevo",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Per-endpoint limits by tier (General/Advanced/Extended): RPH and RPS. General (Free\u2013Enterprise): e.g. POST /v3/smtp/email 3,600,000 RPH / 1,000 RPS; contacts 36,000 RPH / 10 RPS; default other endpoints 100 RPH. See developers.brevo.com/docs/api-limits.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Verifier B correct \u2014 official API limits page publishes per-endpoint RPH/RPS tables by General/Advanced/Extended (not \u201cunpublished\u201d). Source: https://developers.brevo.com/docs/api-limits. cors: Verifier B correct \u2014 live API returns Access-Control-Allow-Origin: * (and related Allow-Methods/Headers). Source: OPTIONS/GET https://api.brevo.com/v3/account; original \u201cunknown\u201d overturned."
+}

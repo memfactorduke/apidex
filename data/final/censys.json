@@ -1,0 +1,96 @@
+{
+  "id": "censys",
+  "status": "operational",
+  "name": "Censys",
+  "category": "security-identity",
+  "tagline": "Internet-wide scan data for hosts, certificates, and services used in attack-surface research",
+  "description": "Censys provides internet-wide scan data covering hosts, certificates, and services for attack-surface research and security analysis. The API enables searching and retrieving detailed information about internet-connected assets.",
+  "base_url": "https://api.platform.censys.io",
+  "docs_url": "https://docs.censys.com/reference/get-started",
+  "signup_url": "https://search.censys.io/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API ID and Secret via Basic Auth or headers, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free: 100 credits/mo (expire monthly); Free API limited to host/web-property/certificate lookups (1 credit each); standard search 5 credits; concurrent limit 1",
+    "paid_plans": null
+  },
+  "rate_limits": "By tier concurrent actions: Free/Starter 1; Search/Core 25. Full limits shown on Platform Personal Access Tokens page; API calls consume credits",
+  "example": {
+    "request": "curl --request GET --url 'https://api.platform.censys.io/v3/global/asset/host/8.8.8.8' --header 'Accept: application/vnd.censys.api.v3.host.v1+json' --header 'Authorization: Bearer YOUR_PAT'",
+    "response_snippet": "{\"result\":{\"resource\":{\"ip\":\"8.8.8.8\",\"location\":{\"country\":\"United States\",\"country_code\":\"US\"},\"services\":[{\"port\":53,\"protocol\":\"DNS\",\"transport_protocol\":\"udp\"}],\"service_count\":1}}}"
+  },
+  "use_cases": [
+    "lookup host details by IP address",
+    "search certificates by domain",
+    "find services exposed on the internet",
+    "research attack surface for an organization"
+  ],
+  "sources": [
+    "https://search.censys.io/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "vesselfinder",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.vesselfinder.com/services/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.vesselfinder.com/vesselslist?userkey=YOUR_API_KEY&format=json\" (or /vessels?imo=... /vesseltrack?mmsi=...); entry path /vessels?userkey= alone is incomplete vs documented endpoints",
+      "source": "https://api.vesselfinder.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.vesselfinder.com/"
+    }
+  },
+  "notes": "Docs live at api.vesselfinder.com. Auth is userkey query param. Commercial (no free tier). Example /vessels?userkey= alone is not a valid documented call; need vesselslist/imo/mmsi params. CORS unpublished. Paid plans exist but not fully enumerated here."
+}

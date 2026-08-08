@@ -1,0 +1,97 @@
+{
+  "id": "radar",
+  "status": "operational",
+  "name": "Radar",
+  "category": "geo-maps",
+  "tagline": "Location platform for geofencing, tracking, and place search",
+  "description": "Radar is a location infrastructure platform that provides APIs for geofencing, continuous location tracking, reverse geocoding, place search, distance/matrix routing, and trip tracking. Developers integrate Radar into mobile and web apps for location-based features without building their own location stack.",
+  "base_url": "https://api.radar.io/v1",
+  "docs_url": "https://docs.radar.com/",
+  "signup_url": "https://radar.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Publishable and secret API keys sent via Authorization: Bearer or Authorization: prj_live_pk_... header patterns; secret keys for server-side only."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.radar.io/v1/geocode/forward?query=20+W+34th+St,+New+York,+NY\" -H \"Authorization: prj_test_pk_YOUR_API_KEY\"",
+    "response_snippet": "{\"meta\":{\"code\":200},\"addresses\":[{\"latitude\":40.7484,\"longitude\":-73.9857,\"formattedAddress\":\"20 W 34th St, New York, NY\"}]}"
+  },
+  "use_cases": [
+    "forward geocode an address to coordinates",
+    "reverse geocode lat/lng to an address",
+    "search nearby places by category",
+    "calculate distance/duration between points",
+    "create and monitor geofences"
+  ],
+  "sources": [
+    "https://docs.radar.com/",
+    "https://radar.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

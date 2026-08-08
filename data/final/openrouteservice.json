@@ -1,0 +1,101 @@
+{
+  "id": "openrouteservice",
+  "status": "operational",
+  "name": "OpenRouteService",
+  "category": "geo-maps",
+  "tagline": "Open-source routing, geocoding, isochrones, and matrix APIs over OpenStreetMap",
+  "description": "OpenRouteService (ORS) provides free and paid HTTP APIs for car/bike/foot routing, distance matrices, isochrones, geocoding/reverse geocoding, POI search, elevation, and optimization on OpenStreetMap data. Hosted at api.openrouteservice.org; self-hosting is also supported via open-source engines.",
+  "base_url": "https://api.openrouteservice.org",
+  "docs_url": "https://openrouteservice.org/dev/#/api-docs",
+  "signup_url": "https://openrouteservice.org/dev/#/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header (or api_key query param on some endpoints); free self-serve signup at openrouteservice.org"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "grpc",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 2,000 directions requests/day, ~40 requests/minute (endpoint-dependent daily caps; matrix/isochrones lower). See https://openrouteservice.org/plans/",
+    "paid_plans": null
+  },
+  "rate_limits": "Published on plans page: free ~40 req/min and 2,000 req/day directions (endpoint-dependent); higher on paid plans",
+  "example": {
+    "request": "curl -X GET 'https://api.openrouteservice.org/v2/directions/driving-car?start=8.681495,49.41461&end=8.687872,49.420318' -H 'Authorization: YOUR_API_KEY'",
+    "response_snippet": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{\"segments\":[{\"distance\":1033.5,\"duration\":222.6}],\"summary\":{\"distance\":1033.5,\"duration\":222.6}},\"geometry\":{\"coordinates\":[[8.681495,49.41461],[8.687872,49.420318]],\"type\":\"LineString\"}}]}"
+  },
+  "use_cases": [
+    "get driving directions between two coordinates",
+    "compute travel-time isochrones around a point",
+    "build a distance/duration matrix for many origins and destinations",
+    "geocode an address to coordinates",
+    "optimize a multi-stop delivery route"
+  ],
+  "sources": [
+    "https://openrouteservice.org/",
+    "https://openrouteservice.org/dev/#/api-docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

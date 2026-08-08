@@ -1,0 +1,15 @@
+{
+  "id": "thecocktaildb",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free test key \"1\" for development/educational use; production/public app-store use requires Premium (~$10/\u00a310 one-off via PayPal). Free list capped at 100 items; Premium unlocks multi-ingredient filter, popular/latest, full DB listing, image APIs. (Current docs use PayPal Premium, not Patreon.)",
+  "rate_limits": "Official FAQ: no limits / unlimited usage (no numeric req/min published).",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "Adjudicated three disputed fields against official sources. free_tier_limits: VERDICT incorrect (Verifier A). Official api.php documents free test key \"1\" for development/education only; production and public app-store use require Premium (~$10/\u00a310 one-off via PayPal). Free list endpoints are capped at 100 items; Premium unlocks multi-ingredient filter, popular/latest, full DB listing, and image APIs. Docs currently describe PayPal Premium, not Patreon. Evidence: https://www.thecocktaildb.com/api.php. rate_limits: VERDICT incorrect (Verifier A). Official FAQ states no limits / unlimited usage; no numeric req/min is published. \"not published\" understates the FAQ claim of unlimited use. Evidence: https://www.thecocktaildb.com/faq.php. cors: VERDICT incorrect (Verifier A). Live API response includes Access-Control-Allow-Origin: * (CORS yes). Evidence: https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita. Verifier B confirmed originals without re-checking live headers/FAQ detail; Verifier A corrections match current official docs and live CORS headers."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "wikimedia-rest",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/api/rest_v1/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/api/rest_v1/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/Wikimedia_REST_API"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/Wikimedia_REST_API"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/Wikimedia_REST_API"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "200 requests/s (hard limit); 100 requests/s recommended; User-Agent required",
+      "source": "https://www.mediawiki.org/wiki/Wikimedia_REST_API#Rate_limiting"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/api/rest_v1/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wikipedia.org/api/rest_v1/"
+    }
+  },
+  "notes": "Rate limits are published on MediaWiki wiki (200 rps hard, 100 recommended). Entry said \"not published\". CORS remains unknown from docs alone. Other claims match official REST docs."
+}

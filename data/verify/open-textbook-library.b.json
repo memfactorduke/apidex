@@ -1,0 +1,52 @@
+{
+  "id": "open-textbook-library",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No public documented API base URL at https://open.umn.edu/opentextbooks/api; site is a web catalog, not a published developer API",
+      "source": "https://open.umn.edu/opentextbooks"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.umn.edu/opentextbooks"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "not applicable \u2014 no documented public API; auth.type \"none\" is fabricated for a non-existent API",
+      "source": "https://open.umn.edu/opentextbooks"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.umn.edu/opentextbooks"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl to https://open.umn.edu/opentextbooks/api/v1/textbooks?search=calculus is not documented; no official API path/version confirmed",
+      "source": "https://open.umn.edu/opentextbooks"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Open Textbook Library is a free peer-reviewed OER catalog (UMN); it does not document a public API for programmatic search/metadata/reviews as claimed",
+      "source": "https://open.umn.edu/opentextbooks"
+    }
+  },
+  "notes": "Entry fabricates a public REST API. open.umn.edu/opentextbooks is a web catalog; no official API docs, /api base, or v1 textbooks endpoint found. free_tier true for free books; rate/cors/limits N/A."
+}

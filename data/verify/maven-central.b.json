@@ -1,0 +1,52 @@
+{
+  "id": "maven-central",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/faq/429-error/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://central.sonatype.org/search/rest-api-guide/"
+    }
+  },
+  "notes": "Official docs still document https://search.maven.org/solrsearch/select; browser UI redirects to central.sonatype.com but API kept. Formats also include XML (wt=xml). Maven Central enforces consumption/429 limits without published numeric thresholds\u2014\"not published\" is fair for search API."
+}

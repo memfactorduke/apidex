@@ -1,0 +1,52 @@
+{
+  "id": "launchdarkly",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://launchdarkly.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://launchdarkly.com/docs/api",
+      "source": "https://launchdarkly.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://launchdarkly.com/docs/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://launchdarkly.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://launchdarkly.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://launchdarkly.com/docs/api"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes \u2014 CORS supported for any origin (Access-Control-Allow-Origin echoes Origin or *)",
+      "source": "https://launchdarkly.com/docs/api"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://launchdarkly.com/docs/api/projects/get-projects"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://launchdarkly.com/docs/guides/api/rest-api"
+    }
+  },
+  "notes": "docs_url 404s (old docs.launchdarkly.com path); use launchdarkly.com/docs/api. base_url https://app.launchdarkly.com/api/v2 is current. Auth is raw Authorization: <token> (not Bearer). Free Developer plan exists; numeric REST rate quotas unpublished though limit headers/429 are documented. CORS is documented as open, not unknown."
+}

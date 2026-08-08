@@ -1,0 +1,97 @@
+{
+  "id": "geonames",
+  "status": "operational",
+  "name": "GeoNames",
+  "category": "geo-maps",
+  "tagline": "Global place-name and geospatial web services for cities, elevations, and postal codes",
+  "description": "GeoNames provides free and commercial web services for geographic data: place search, reverse geocoding, postal codes, elevations, timezone lookup, and more, backed by a large open gazetteer of places worldwide.",
+  "base_url": "https://secure.geonames.org",
+  "docs_url": "https://www.geonames.org/export/web-services.html",
+  "signup_url": "https://www.geonames.org/login",
+  "auth": {
+    "type": "apiKey",
+    "details": "Username query parameter (username=YOUR_USERNAME); free account required; enable free web services in account settings"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1000 credits/hour, 20000 credits/day (most requests = 1 credit)",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: 1000 credits/hour and 20000 credits/day; commercial accounts have higher published limits",
+  "example": {
+    "request": "curl \"https://secure.geonames.org/searchJSON?q=London&maxRows=1&username=YOUR_API_KEY\"",
+    "response_snippet": "{\"totalResultsCount\":1,\"geonames\":[{\"name\":\"London\",\"countryName\":\"United Kingdom\",\"lat\":\"51.50853\",\"lng\":\"-0.12574\"}]}"
+  },
+  "use_cases": [
+    "search places by name",
+    "reverse geocode coordinates to place names",
+    "look up timezone for a location",
+    "get elevation for coordinates",
+    "find postal codes for a place"
+  ],
+  "sources": [
+    "https://www.geonames.org/export/web-services.html"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

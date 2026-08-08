@@ -1,0 +1,97 @@
+{
+  "id": "alpaca",
+  "status": "operational",
+  "name": "Alpaca",
+  "category": "finance",
+  "tagline": "Commission-free stock trading API for algo trading and market data",
+  "description": "Alpaca provides a commission-free stock and crypto trading API with market data, paper trading, and brokerage services. Developers use REST and WebSocket endpoints for equities, options, and crypto trading, account management, and real-time market data.",
+  "base_url": "https://api.alpaca.markets",
+  "docs_url": "https://docs.alpaca.markets/",
+  "signup_url": "https://app.alpaca.markets/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key and secret via APCA-API-KEY-ID and APCA-API-SECRET-KEY headers; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free Basic market data: IEX equities (limited history); SIP/full feeds require Unlimited. Trading free-tier numeric caps not published as a single free-tier string.",
+    "paid_plans": null
+  },
+  "rate_limits": "Trading API: 200 requests/minute per API key (HTTP 429 when exceeded). Market Data has separate subscription-based limits.",
+  "example": {
+    "request": "curl -X GET \"https://paper-api.alpaca.markets/v2/account\" -H \"APCA-API-KEY-ID: YOUR_API_KEY\" -H \"APCA-API-SECRET-KEY: YOUR_API_SECRET\"",
+    "response_snippet": "{\"id\":\"...\",\"account_number\":\"...\",\"status\":\"ACTIVE\",\"currency\":\"USD\",\"cash\":\"100000\",\"portfolio_value\":\"100000\"}"
+  },
+  "use_cases": [
+    "get brokerage account equity and cash balance",
+    "place a market order for a stock",
+    "fetch real-time stock quotes",
+    "list open positions in a portfolio",
+    "stream trade updates via WebSocket"
+  ],
+  "sources": [
+    "https://docs.alpaca.markets/",
+    "https://alpaca.markets/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

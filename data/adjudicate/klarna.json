@@ -1,0 +1,15 @@
+{
+  "id": "klarna",
+  "base_url": "https://api.klarna.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST -u YOUR_API_USERNAME:YOUR_API_PASSWORD -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{\"purchase_country\":\"SE\",\"purchase_currency\":\"SEK\",\"locale\":\"en-SE\",\"order_amount\":10000,\"order_lines\":[{\"type\":\"physical\",\"name\":\"Product\",\"quantity\":1,\"unit_price\":10000,\"total_amount\":10000}]}' 'https://api.klarna.com/payments/v1/sessions'",
+  "example_response_snippet": "{\n  \"session_id\": \"...\",\n  \"client_token\": \"...\",\n  \"payment_method_categories\": [ ... ]\n}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ORIGINAL kept as canonical EU production host; region variants (api-na, api-oc, *.playground) exist per docs.klarna.com/api/. example: corrected \u2014 create session requires POST + body; original was method-less curl (GET). Evidence: docs.klarna.com/api/ and payments API docs."
+}

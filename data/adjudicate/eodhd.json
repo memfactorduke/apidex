@@ -1,0 +1,15 @@
+{
+  "id": "eodhd",
+  "base_url": "https://eodhd.com/api",
+  "docs_url": "https://eodhd.com/financial-apis/",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "20 API calls/day; free EOD history limited to past year; some data types restricted",
+  "rate_limits": "Free: 20 API calls/day; paid: 100,000 API calls/day default; \u22641,000 requests/minute all plans (call cost varies by endpoint)",
+  "cors": "unknown",
+  "example_request": "curl \"https://eodhd.com/api/eod/AAPL.US?api_token=YOUR_API_KEY&fmt=json\"",
+  "example_response_snippet": "[{\"date\":\"2024-01-02\",\"open\":187.15,\"high\":188.44,\"low\":183.89,\"close\":185.64,\"adjusted_close\":184.91,\"volume\":82488700}]",
+  "description": "EODHD (End of Day Historical Data) provides financial market data APIs covering stocks, ETFs, mutual funds, forex, crypto, and indices. It offers end-of-day historical prices, real-time and delayed quotes, fundamentals, dividends, splits, options, and economic data via REST endpoints. Developers authenticate with an API key and can access data for portfolio tracking, backtesting, research, and fintech applications.",
+  "status": "operational",
+  "resolution_notes": "free_tier_limits: Verifier B correct \u2014 20 API calls/day, free EOD history limited to past year, some data types restricted (https://eodhd.com/pricing). rate_limits: Verifier B correct \u2014 Free 20/day; paid 100,000/day default; \u22641,000 requests/minute all plans; call cost varies by endpoint (https://eodhd.com/financial-apis/api-limits)."
+}

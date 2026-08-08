@@ -1,0 +1,15 @@
+{
+  "id": "bigcommerce",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "X-Rate-Limit headers; typical ~150\u2013450 requests per 30s window by plan; GraphQL has separate complexity/limits",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: Verifier B correct \u2014 apiKey. Official auth docs describe store-scoped access tokens (OAuth or API accounts) sent as X-Auth-Token; fits apiKey, not generic \"other\". Evidence: https://developer.bigcommerce.com/docs/start/authentication. rate_limits: Both verifiers correct \u2014 original \"not published\" is wrong. Official rate-limits page documents quotas/X-Rate-Limit headers; limits vary by plan (~150\u2013450 req/30s typical) and GraphQL has separate limits. Evidence: https://developer.bigcommerce.com/docs/start/best-practices/api-rate-limits"
+}

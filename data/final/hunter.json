@@ -1,0 +1,98 @@
+{
+  "id": "hunter",
+  "status": "operational",
+  "name": "Hunter",
+  "category": "social-communication",
+  "tagline": "Email finder and verifier API for discovering and validating professional emails at scale.",
+  "description": "Hunter provides REST APIs to find email addresses associated with domains and people, verify email deliverability, discover company domains, and enrich leads. Core products include Domain Search, Email Finder, Email Verifier, Email Count, and related enrichment endpoints used for outbound sales and recruiting workflows.",
+  "base_url": "https://api.hunter.io/v2",
+  "docs_url": "https://hunter.io/api-documentation/v2",
+  "signup_url": "https://hunter.io/users/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter api_key=YOUR_API_KEY (self-serve signup). Also supports Authorization: Bearer YOUR_API_KEY header."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes limited monthly searches/verifications (check pricing for current credits); API access on paid plans with higher limits.",
+    "paid_plans": "Starter, Growth, Business, and Enterprise tiers with monthly credit allowances; see hunter.io/pricing."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.hunter.io/v2/domain-search?domain=stripe.com&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":{\"domain\":\"stripe.com\",\"disposable\":false,\"webmail\":false,\"accept_all\":true,\"pattern\":\"{first}.{last}\",\"organization\":\"Stripe\",\"emails\":[{\"value\":\"...@stripe.com\",\"type\":\"personal\",\"confidence\":92}]},\"meta\":{\"results\":50,\"limit\":10}}"
+  },
+  "use_cases": [
+    "find email addresses for people at a company domain",
+    "verify whether an email address is deliverable",
+    "discover the most common email pattern for a domain",
+    "count how many emails Hunter has for a domain",
+    "enrich a lead with professional email and company data"
+  ],
+  "sources": [
+    "https://hunter.io/api-documentation/v2",
+    "https://hunter.io/pricing",
+    "https://hunter.io"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

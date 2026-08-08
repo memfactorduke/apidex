@@ -1,0 +1,98 @@
+{
+  "id": "tripadvisor",
+  "status": "operational",
+  "name": "TripAdvisor Content API",
+  "category": "food-drink",
+  "tagline": "Search and retrieve hotel, restaurant, and attraction content from TripAdvisor.",
+  "description": "TripAdvisor Content API provides programmatic access to location data, reviews, photos, and details for hotels, restaurants, and attractions. Developers can search locations, fetch ratings, and pull structured content for travel and hospitality apps.",
+  "base_url": "https://api.content.tripadvisor.com/api/v1",
+  "docs_url": "https://tripadvisor-content-api.readme.io/",
+  "signup_url": "https://developer-tripadvisor.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter; partner access required through TripAdvisor developer portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "First 5,000 API calls free every month after signup (credit card required for overage billing)",
+    "paid_plans": "Contact TripAdvisor for partner pricing; not publicly listed."
+  },
+  "rate_limits": "Search APIs: 10,000 calls/day; Location details/photos/reviews: set by daily budget; 50 QPS (24h rolling window)",
+  "example": {
+    "request": "curl -s \"https://api.content.tripadvisor.com/api/v1/location/search?key=YOUR_API_KEY&searchQuery=Paris&category=restaurants&language=en\"",
+    "response_snippet": "{\"data\":[{\"location_id\":\"187147\",\"name\":\"Paris\",\"address_obj\":{\"city\":\"Paris\",\"country\":\"France\"}}]}"
+  },
+  "use_cases": [
+    "search restaurants near a city or address",
+    "get hotel details and ratings by location id",
+    "fetch attraction photos and reviews for a destination",
+    "lookup location details for travel itinerary apps"
+  ],
+  "sources": [
+    "https://developer-tripadvisor.com/content-api/",
+    "https://tripadvisor-content-api.readme.io/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "udemy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "basic",
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Affiliate API access is free for approved Udemy affiliates; rate limits not published on docs page",
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://www.udemy.com/api-2.0/courses/?page=1&page_size=1\" -u \"CLIENT_ID:CLIENT_SECRET\"",
+      "source": "https://www.udemy.com/developers/affiliate/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.udemy.com/developers/affiliate/"
+    }
+  },
+  "notes": "Docs and base URL still valid for Affiliate API (Basic auth with client_id:client_secret). Entry understated free access for affiliates; example used wrong Basic header format (API key vs client credentials)."
+}

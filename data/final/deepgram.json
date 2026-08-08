@@ -1,0 +1,96 @@
+{
+  "id": "deepgram",
+  "status": "operational",
+  "name": "Deepgram",
+  "category": "ai-ml",
+  "tagline": "Speech-to-text and voice AI API for transcription, TTS, and audio intelligence.",
+  "description": "Deepgram provides speech-to-text, text-to-speech, and audio intelligence APIs for developers. Core endpoints live at api.deepgram.com and support live streaming and pre-recorded audio transcription with model selection, diarization, and language detection.",
+  "base_url": "https://api.deepgram.com",
+  "docs_url": "https://developers.deepgram.com/docs",
+  "signup_url": "https://console.deepgram.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Token YOUR_API_KEY header (self-serve signup in Deepgram Console)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://api.deepgram.com/v1/listen?model=nova-3\" -H \"Authorization: Token YOUR_API_KEY\" -H \"Content-Type: audio/wav\" --data-binary @audio.wav",
+    "response_snippet": "{\"metadata\":{\"transaction_key\":\"...\",\"request_id\":\"...\",\"sha256\":\"...\",\"created\":\"...\",\"duration\":...},\"results\":{\"channels\":[{\"alternatives\":[{\"transcript\":\"...\",\"confidence\":0.99,\"words\":[]}]}]}}"
+  },
+  "use_cases": [
+    "transcribe pre-recorded audio files to text",
+    "stream live microphone audio for real-time captions",
+    "convert text to speech with Deepgram TTS",
+    "extract speaker labels from multi-speaker audio",
+    "detect language in spoken audio clips"
+  ],
+  "sources": [
+    "https://developers.deepgram.com/docs",
+    "https://deepgram.com/pricing"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

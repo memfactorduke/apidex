@@ -1,0 +1,15 @@
+{
+  "id": "jikan",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "60 requests/minute, 3 requests/second (per IP)",
+  "rate_limits": "60 requests/minute, 3 requests/second (per IP)",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier A correct; original \"unknown\" is wrong. Official Jikan docs document 3 req/s and 60 req/min per IP for the public API (https://docs.api.jikan.moe/). Verifier B confirmed free_tier_limits as-is but that was inconsistent with rate_limits. rate_limits: Original \"not published\" is incorrect. Both verifiers agree limits are documented as ~3/sec and 60/min per IP; Verifier A\u2019s wording is preferred for clarity. CORS, auth, base_url, docs, free_tier, example, description left null (keep original). base_url 504 treated as transient/cache-related, not defunct\u2014docs still 200 and service longstanding free/keyless."
+}

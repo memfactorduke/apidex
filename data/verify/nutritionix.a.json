@@ -1,0 +1,52 @@
+{
+  "id": "nutritionix",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://trackapi.nutritionix.com/v2",
+      "source": "https://docs.nutritionix.com/docs/v2"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.nutritionix.com/docs/v2",
+      "source": "https://docs.nutritionix.com/docs/v2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nutritionix.com/docs/v2"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nutritionix.com/business/api"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nutritionix.com/docs/v2"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nutritionix.com/docs/v2"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nutritionix.com/docs/v2"
+    }
+  },
+  "notes": "Automated check showed base_url 404 and docs_url HTTP 0 \u2014 these are likely bot-detection false positives; need to verify against live official docs and pricing pages."
+}

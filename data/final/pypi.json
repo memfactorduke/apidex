@@ -1,0 +1,96 @@
+{
+  "id": "pypi",
+  "status": "operational",
+  "name": "PyPI JSON API",
+  "category": "dev-tools",
+  "tagline": "Package metadata and release data for Python packages on the Python Package Index",
+  "description": "Public JSON endpoints that expose package metadata, project details, and release information from the Python Package Index (pypi.org). Used by package managers, CI tooling, and developers to look up package versions, dependencies, and project metadata without scraping the web UI.",
+  "base_url": "https://pypi.org/pypi",
+  "docs_url": "https://docs.pypi.org/api/json/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public package metadata endpoints"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://pypi.org/pypi/requests/json",
+    "response_snippet": "{ \"info\": { \"name\": \"requests\", \"version\": \"2.32.3\", \"summary\": \"Python HTTP for Humans.\", \"author\": \"...\" }, \"releases\": { ... }, \"urls\": [ ... ] }"
+  },
+  "use_cases": [
+    "look up latest version of a Python package",
+    "get package metadata and dependencies",
+    "list available release versions for a package",
+    "check download URLs and file hashes for a release"
+  ],
+  "sources": [
+    "https://docs.pypi.org/api/json/",
+    "https://pypi.org"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

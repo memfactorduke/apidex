@@ -1,0 +1,99 @@
+{
+  "id": "openfda",
+  "status": "operational",
+  "name": "OpenFDA API",
+  "category": "government-open-data",
+  "tagline": "U.S. FDA public datasets for drugs, devices, food, and adverse events",
+  "description": "OpenFDA provides REST access to U.S. Food and Drug Administration public data, including drug and device adverse events, product labeling, recalls, and other regulated-product datasets. Developers query structured endpoints with optional API keys for higher rate limits, making it useful for pharmacovigilance research, compliance tooling, and consumer-safety applications.",
+  "base_url": "https://api.fda.gov",
+  "docs_url": "https://open.fda.gov/apis/",
+  "signup_url": "https://open.fda.gov/apis/authentication/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key as query parameter api_key=YOUR_API_KEY; self-serve key via open.fda.gov. Unauthenticated access allowed at lower rate limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public API; higher limits with free API key (see rate_limits)",
+    "paid_plans": null
+  },
+  "rate_limits": "Without key: 40 req/min, 1,000/day. With key: 240 req/min, 120,000/day (verify against current docs)",
+  "example": {
+    "request": "curl \"https://api.fda.gov/drug/event.json?search=patient.drug.openfda.brand_name:lipitor&limit=1\"",
+    "response_snippet": "{\"meta\":{\"disclaimer\":\"Do not rely on openFDA to make decisions regarding medical care...\",\"results\":{\"skip\":0,\"limit\":1,\"total\":...}},\"results\":[{\"safetyreportid\":\"...\",\"patient\":{...}}]}"
+  },
+  "use_cases": [
+    "search FDA drug adverse event reports by brand or generic name",
+    "look up drug labeling and indications from FDA label data",
+    "query medical device recalls and adverse events",
+    "find food enforcement and recall notices",
+    "check NDC or product codes against openFDA drug datasets"
+  ],
+  "sources": [
+    "https://open.fda.gov/apis/",
+    "https://open.fda.gov/apis/authentication/",
+    "https://api.fda.gov"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

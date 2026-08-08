@@ -1,0 +1,99 @@
+{
+  "id": "deepl",
+  "status": "operational",
+  "name": "DeepL API",
+  "category": "ai-ml",
+  "tagline": "Neural machine translation API for text and documents",
+  "description": "DeepL API provides high-quality neural machine translation for text and documents across many language pairs. Developers authenticate with an API key, call REST endpoints for translate/usage/languages, and choose Developer (free, 1M chars total), Growth, or Enterprise plans. Free keys use api-free.deepl.com; paid keys use api.deepl.com.",
+  "base_url": "https://api.deepl.com/v2",
+  "docs_url": "https://developers.deepl.com/docs",
+  "signup_url": "https://www.deepl.com/pro-api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: DeepL-Auth-Key YOUR_API_KEY header (or auth_key form field). Free keys use api-free.deepl.com; Pro keys use api.deepl.com. Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "DeepL API Free (500k chars/month) and API Pro can no longer be purchased. Current free plan is DeepL API Developer: 1,000,000 characters total (not monthly; does not reset). Free keys still use https://api-free.deepl.com; paid use api.deepl.com. Paid plans are Growth (included chars + overage) and Enterprise.",
+    "paid_plans": "DeepL API Pro: pay-as-you-go per character after included usage; enterprise options available \u2014 see pricing page"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST 'https://api-free.deepl.com/v2/translate' -H 'Authorization: DeepL-Auth-Key YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"text\":[\"Hello, world!\"],\"target_lang\":\"DE\"}'",
+    "response_snippet": "{\"translations\":[{\"detected_source_language\":\"EN\",\"text\":\"Hallo, Welt!\"}]}"
+  },
+  "use_cases": [
+    "translate text between languages via REST",
+    "detect source language of input text",
+    "check API character usage and quota remaining",
+    "list supported source and target languages",
+    "translate uploaded documents (PDF, DOCX, etc.)"
+  ],
+  "sources": [
+    "https://developers.deepl.com/docs",
+    "https://www.deepl.com/pro-api",
+    "https://developers.deepl.com/docs/getting-started/auth",
+    "https://developers.deepl.com/docs/api-reference/translate"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "woocommerce",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woocommerce.github.io/woocommerce-rest-api-docs/#introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woocommerce.github.io/woocommerce-rest-api-docs/#authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woocommerce.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woocommerce.com/document/woocommerce-rest-api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woocommerce.github.io/woocommerce-rest-api-docs/#list-all-products"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
+    }
+  },
+  "notes": "Verified against official WooCommerce REST API docs. base_url is a per-store template (your-store.com), so automated HTTP 0 is expected \u2014 not a dead API. Auth, free inclusion, and rate-limit claims match docs."
+}

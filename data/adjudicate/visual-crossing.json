@@ -1,0 +1,15 @@
+{
+  "id": "visual-crossing",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1000 records/day free (no credit card); record = one day of weather data for a location",
+  "rate_limits": "Primary limit is daily record quota (Free: 1000 records/day); higher tiers raise caps. Fixed concurrent/RPM limits are plan-dependent and not always published as a single RPM figure",
+  "cors": null,
+  "example_request": "curl \"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?unitGroup=metric&key=YOUR_API_KEY&contentType=json\"",
+  "example_response_snippet": "{\"queryCost\":1,\"latitude\":51.5064,\"longitude\":-0.12721,\"resolvedAddress\":\"London, England, United Kingdom\",\"address\":\"London,UK\",\"timezone\":\"Europe/London\",\"days\":[{\"datetime\":\"2026-03-08\",\"tempmax\":12.1,\"tempmin\":5.2,\"temp\":8.4,\"conditions\":\"Partially cloudy\",\"description\":\"Partly cloudy throughout the day.\"}]}",
+  "description": "Timeline weather API combining historical observations and forecasts in one call. API-key auth; free tier includes 1000 records/day.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: both verifiers correct on 1000 records/day free; confirmed via visualcrossing.com/weather-api-pricing and weather-data-editions (record = day of weather data). rate_limits: daily record quotas are primary (Free ~1000/day); concurrent/RPM not fixed public RPM \u2014 ruled with verifier consensus. example_request: Verifier A form (timeline/London,UK without /today) matches official Timeline docs; Verifier B /today variant also valid. example_response_snippet: realistic Timeline JSON shape from docs. description: original was research placeholder \u2014 replaced with product description per both verifiers + docs. cors/base_url/docs/auth/free_tier/status: null (undisputed or keep original)."
+}

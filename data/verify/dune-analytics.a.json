@@ -1,0 +1,52 @@
+{
+  "id": "dune-analytics",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.dune.com/api-reference/overview/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.dune.com/api-reference/overview/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.dune.com/api-reference/overview/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dune.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.dune.com/api-reference/overview/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.dune.com/api-reference/executions/endpoint/get-query-results"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.dune.com/api-reference/overview/introduction"
+    }
+  },
+  "notes": "Verified against official Dune docs (2026). Base URL, auth header, docs URL, and results endpoint example match current API reference. Free tier exists; entry correctly marks free_tier_limits/rate_limits as unknown/not published. No false claims found."
+}

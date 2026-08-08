@@ -1,0 +1,15 @@
+{
+  "id": "sportradar",
+  "base_url": "https://api.sportradar.us",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s \"https://api.sportradar.us/nba/trial/v8/en/games/2024/REG/schedule.json?api_key=YOUR_API_KEY\"",
+  "example_response_snippet": "{\n  \"league\": { \"id\": \"sr:league:132\", \"name\": \"NBA\", \"alias\": \"NBA\" },\n  \"season\": { \"id\": \"sr:season:...\", \"year\": 2024, \"type\": \"REG\" },\n  \"games\": [ { \"id\": \"...\", \"status\": \"closed\", \"home\": { \"name\": \"...\" }, \"away\": { \"name\": \"...\" } } ]\n}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect \u2192 use https://api.sportradar.us (NBA v8 and many product docs still document api.sportradar.us; api.sportradar.com also appears for some products \u2014 Verifier A, https://developer.sportradar.com/basketball/reference/nba-overview). example: incorrect host in sample curl \u2014 corrected to api.sportradar.us with path nba/{access_level}/v8/en/games/{year}/{season_type}/schedule.{format}?api_key= (same NBA overview docs)."
+}

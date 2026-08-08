@@ -1,0 +1,98 @@
+{
+  "id": "bigcommerce",
+  "status": "operational",
+  "name": "BigCommerce API",
+  "category": "ecommerce-payments",
+  "tagline": "REST and GraphQL APIs for headless and multi-channel BigCommerce storefronts",
+  "description": "BigCommerce provides REST Catalog, Management, and GraphQL Storefront APIs so developers can manage products, orders, customers, checkout, and storefront content for BigCommerce merchants. Access is store-scoped via OAuth or store API credentials.",
+  "base_url": "https://api.bigcommerce.com/stores/{store_hash}/v3",
+  "docs_url": "https://developer.bigcommerce.com/docs",
+  "signup_url": "https://developer.bigcommerce.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "Store-scoped OAuth access token or API account credentials; typically X-Auth-Token header with client ID for REST"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "X-Rate-Limit headers; typical ~150\u2013450 requests per 30s window by plan; GraphQL has separate complexity/limits",
+  "example": {
+    "request": "curl -s \"https://api.bigcommerce.com/stores/YOUR_STORE_HASH/v3/catalog/products\" -H \"X-Auth-Token: YOUR_API_KEY\" -H \"Accept: application/json\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"data\":[{\"id\":77,\"name\":\"Sample Product\",\"type\":\"physical\",\"sku\":\"SAMPLE-1\",\"price\":20}],\"meta\":{\"pagination\":{\"total\":1,\"count\":1,\"per_page\":50,\"current_page\":1,\"total_pages\":1}}}"
+  },
+  "use_cases": [
+    "list catalog products for a BigCommerce store",
+    "create or update product SKUs and prices",
+    "fetch orders and update fulfillment status",
+    "manage customers and customer groups",
+    "build a headless storefront with GraphQL Storefront API",
+    "sync inventory across channels"
+  ],
+  "sources": [
+    "https://developer.bigcommerce.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "aws-rekognition",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "12 months for new AWS accounts: 5,000 images/month (DetectLabels, DetectModerationLabels, DetectText, DetectFaces, RecognizeCelebrities, CompareFaces); 1,000 face metadata storage months; Face Liveness: 50 sessions/month (Group A) or 1,000 vector searches/month; Video (stored): 1,000 min/month group 1, 2,000 min group 2, 500 min group 3; Custom Labels free trial separate \u2014 see pricing page",
+  "rate_limits": "AWS publishes default service quotas (TPS) per API/region in Rekognition quotas docs and Service Quotas console; e.g. many image APIs default ~5 TPS (varies by API/region); limits are soft and increase-requestable",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "Verifying free_tier_limits and rate_limits against official AWS pricing and quotas docs before finalizing."
+}

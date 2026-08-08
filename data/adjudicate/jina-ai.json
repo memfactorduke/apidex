@@ -1,0 +1,15 @@
+{
+  "id": "jina-ai",
+  "base_url": "https://api.jina.ai",
+  "docs_url": "https://jina.ai/docs",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: keep https://api.jina.ai (host root; product paths like /v1/embeddings are versioned routes, not the base). Verifier A over-corrected by appending /v1. docs_url: keep https://jina.ai/docs as canonical docs hub (both verifiers flag it but offer the same URL or product pages). Automated 404s may be bot-detection; needs live docs check for final evidence URLs."
+}

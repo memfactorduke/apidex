@@ -1,0 +1,15 @@
+{
+  "id": "reddit",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Non-commercial free access within free rate limits (100 QPM per OAuth client); commercial/over-limit use needs Reddit approval and a separate agreement",
+  "rate_limits": "100 QPM per OAuth client ID, averaged over a 10-minute window (bursting allowed); monitor X-Ratelimit-Used/Remaining/Reset; User-Agent required; non-OAuth traffic blocked",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: partial/incorrect \u2014 original omits free quota; official free access is non-commercial within free rate limits; commercial/excess needs separate agreement (https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki; https://redditinc.com/policies/data-api-terms \u00a73.1). rate_limits: incorrect \u2014 official free limit is 100 QPM per OAuth client (10-min average), not \u201c60\u2013100\u201d; use X-Ratelimit-* headers (same Data API Wiki)."
+}

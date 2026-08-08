@@ -1,0 +1,104 @@
+{
+  "id": "google-fact-check",
+  "status": "operational",
+  "name": "Google Fact Check Tools API",
+  "category": "news-media",
+  "tagline": "Search published fact checks by text or image; manage ClaimReview markup pages.",
+  "description": "Google\u2019s Fact Check Tools API (factchecktools.googleapis.com, v1alpha1) exposes the same claim index as Fact Check Explorer plus a publisher CRUD surface for ClaimReview markup. claims.search and claims.imageSearch return structured reviews (rating, publisher, URL, dates). pages.* create/update/list/delete markup for Search Console\u2013authorized sites. Claim search uses an API key; page management needs OAuth and site access.",
+  "base_url": "https://factchecktools.googleapis.com",
+  "docs_url": "https://developers.google.com/fact-check/tools/api",
+  "signup_url": "https://support.google.com/googleapi/answer/6158862",
+  "auth": {
+    "type": "apiKey",
+    "details": "Claim search (claims.search / claims.imageSearch): Google Cloud API key as query param key= (required; enable Fact Check Tools API in a GCP project). ClaimReview pages (pages.*): OAuth 2.0 scope https://www.googleapis.com/auth/factchecktools plus Search Console restricted/full user on the site."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No official per-call pricing page or free-quota numbers published; API key use appears unmetered by SKU\u2014subject to project quotas in Google Cloud Console.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://factchecktools.googleapis.com/v1alpha1/claims:search?query=climate%20change&languageCode=en&pageSize=5&key=YOUR_API_KEY\"",
+    "response_snippet": "{\n  \"claims\": [\n    {\n      \"text\": \"The body of a homeless man found in San Diego has been identified as that of Elvis Presley.\",\n      \"claimReview\": [\n        {\n          \"publisher\": { \"name\": \"Snopes\", \"site\": \"snopes.com\" },\n          \"url\": \"https://www.snopes.com/fact-check/elvis-presley-body-elderly-homeless-man/\",\n          \"title\": \"Was the Body of an Elderly Homeless Man Identified as Elvis Presley?\",\n          \"reviewDate\": \"2015-01-31T16:00:00Z\",\n          \"textualRating\": \"False\",\n          \"languageCode\": \"en\"\n        }\n      ]\n    }\n  ],\n  \"nextPageToken\": \"...\"\n}"
+  },
+  "use_cases": [
+    "search fact-check articles matching a claim or keyword",
+    "find fact checks for an image URL (visual misinformation)",
+    "filter recent reviews by publisher site or language",
+    "monitor new fact checks for a recurring query over time",
+    "create or update ClaimReview markup for a publisher\u2019s article URL",
+    "list ClaimReview pages registered for an organization"
+  ],
+  "sources": [
+    "https://developers.google.com/fact-check/tools/api",
+    "https://developers.google.com/fact-check/tools/api/reference/rest",
+    "https://developers.google.com/fact-check/tools/api/reference/rest/v1alpha1/claims/search",
+    "https://developers.google.com/fact-check/tools/api/reference/rest/v1alpha1/claims",
+    "https://developers.google.com/fact-check/tools/api/reference/rest/v1alpha1/claims/imageSearch",
+    "https://developers.google.com/fact-check/tools/api/reference/rpc/google.factchecking.factchecktools.v1alpha1",
+    "https://developers.google.com/fact-check/tools/api/terms",
+    "https://factchecktools.googleapis.com/$discovery/rest?version=v1alpha1"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "podcast-index",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/pi_api.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/pi_api.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Podcastindex-org/docs-api/issues/30"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Podcastindex-org/docs-api/issues/30"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes",
+      "source": "https://api.podcastindex.org/api/1.0"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://podcastindex-org.github.io/docs-api/pi_api.json"
+    }
+  },
+  "notes": "Live OPTIONS/GET on api.podcastindex.org return Access-Control-Allow-Origin: * (CORS yes), so cors=unknown is wrong. OpenAPI servers confirm base_url; free key + SHA-1 header auth confirmed. Founder: rate limits intentionally unpublished. API operational (401 without auth; Apple-replacement /search works). Example path/headers match docs (User-Agent also required but not falsified)."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "trakt",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.tv/vip"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "1000 requests per 5 minutes for VIP; lower for non-VIP (see official docs)",
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trakt.docs.apiary.io/"
+    }
+  },
+  "notes": "I need to actually verify against sources before filling this in"
+}

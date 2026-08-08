@@ -1,0 +1,52 @@
+{
+  "id": "klarna",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.klarna.com (EU/live base used in current docs for many products; region/environment hosts also exist, e.g. api-na.klarna.com, api-oc.klarna.com, and *.playground.klarna.com for test) \u2014 verify product-specific host in docs rather than assuming a single global host",
+      "source": "https://docs.klarna.com/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.klarna.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.klarna.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use a documented product path and host for the intended region/environment; Payments create session is typically POST to a Klarna API host under /payments/v1/sessions with Basic Auth (not a bare GET-style curl without method)",
+      "source": "https://docs.klarna.com/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.klarna.com/"
+    }
+  },
+  "notes": "Placeholder \u2014 will be replaced after full docs verification."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "massive",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.massive.com (no /v2 in base; paths include /v2/ and /v3/)",
+      "source": "https://massive.com/docs/rest/quickstart"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://massive.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://massive.com/docs/rest/quickstart"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://massive.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "5 API calls/minute (Stocks Free); delayed US stocks data only; options/forex/crypto free tiers also exist with plan-specific limits",
+      "source": "https://massive.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per plan: Free 5/min; Starter 100/min; Developer 500/min; Advanced 1000/min; plus burst (e.g. Free max burst 25)",
+      "source": "https://massive.com/docs/rest/stocks/aggregates/custom-bars"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://massive.com/docs/rest/stocks/aggregates/previous-day"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://massive.com"
+    }
+  },
+  "notes": "Massive is the rebrand of Polygon.io; docs and pricing are live. Base path should not hardcode /v2. Free tier and rate limits are published (not unknown/not published). Auth via apiKey query or Bearer header confirmed."
+}

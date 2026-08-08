@@ -1,0 +1,15 @@
+{
+  "id": "brewerydb",
+  "base_url": "https://api.brewerydb.com/v2",
+  "docs_url": "https://www.brewerydb.com/developers",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl \"https://api.brewerydb.com/v2/beer/random?key=YOUR_API_KEY\"",
+  "example_response_snippet": "{\"status\":\"success\",\"data\":{\"id\":\"abc123\",\"name\":\"Example IPA\",\"abv\":\"6.5\",\"style\":{\"name\":\"American IPA\"}},\"message\":\"Request Successful\"}",
+  "description": "BreweryDB provides a comprehensive REST API covering beers, breweries, styles, ingredients, glassware, and related beer-industry data. Developers use it to build craft-beer discovery apps, menus, and product catalogs. Authentication is typically via an API key obtained after signup. Pricing and rate limits should be verified on the current official site, as the service has changed ownership and product packaging over time.",
+  "status": "operational",
+  "resolution_notes": "Adjudication incomplete: disputed fields not yet verified against live 2026 sources."
+}

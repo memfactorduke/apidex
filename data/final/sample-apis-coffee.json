@@ -1,0 +1,90 @@
+{
+  "id": "sample-apis-coffee",
+  "status": "operational",
+  "name": "Sample APIs Coffee",
+  "category": "food-drink",
+  "tagline": "Free mock coffee product data for demos and learning",
+  "description": "SampleAPIs Coffee is a free, public mock REST API that returns coffee product data (hot and iced) as JSON. No authentication is required. It is intended for prototyping, tutorials, and frontend demos rather than production use.",
+  "base_url": "https://api.sampleapis.com/coffee",
+  "docs_url": "https://sampleapis.com/api-list/coffee",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints accept unauthenticated GET requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public sample API; no published request quotas",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.sampleapis.com/coffee/hot\"",
+    "response_snippet": "[{\"title\":\"Black Coffee\",\"description\":\"Savor the simplicity of a classic black coffee...\",\"ingredients\":[\"Coffee\"],\"image\":\"https://images.unsplash.com/...\",\"id\":1}]"
+  },
+  "use_cases": [
+    "list hot coffee drinks for a menu UI demo",
+    "fetch iced coffee items for a mock product catalog",
+    "get a single coffee drink by id for detail pages",
+    "prototype a coffee shop app without a backend",
+    "practice REST/JSON parsing with food product data"
+  ],
+  "sources": [
+    "https://sampleapis.com/api-list/coffee",
+    "https://api.sampleapis.com/coffee/hot",
+    "https://sampleapis.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url"
+    ],
+    "unverifiable": []
+  }
+}

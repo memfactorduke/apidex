@@ -1,0 +1,52 @@
+{
+  "id": "waqi",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/data-platform/token/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "All APIs free with a valid token; default quota 1,000 requests per second (per official docs); commercial/for-profit use requires agreement. Note: independent verification of exact published quota wording may vary by page.",
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default quota: 1,000 requests per second; contact for higher limits (per docs if stated)",
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aqicn.org/json-api/doc/"
+    }
+  },
+  "notes": "placeholder"
+}
