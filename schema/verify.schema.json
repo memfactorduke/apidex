@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "overall", "verdicts", "notes"],
+  "properties": {
+    "id": { "type": "string" },
+    "overall": { "type": "string", "enum": ["pass", "fail"] },
+    "verdicts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["base_url", "docs_url", "auth_type", "free_tier", "free_tier_limits", "rate_limits", "cors", "example", "description"],
+      "patternProperties": {
+        "^(base_url|docs_url|auth_type|free_tier|free_tier_limits|rate_limits|cors|example|description)$": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["verdict"],
+          "properties": {
+            "verdict": { "type": "string", "enum": ["confirm", "incorrect", "unverifiable"] },
+            "correction": { "type": ["string", "null"] },
+            "source": { "type": ["string", "null"] }
+          }
+        }
+      }
+    },
+    "notes": { "type": "string", "maxLength": 500 }
+  }
+}

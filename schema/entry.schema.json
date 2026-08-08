@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "name", "category", "tagline", "description", "base_url", "docs_url",
+    "auth", "https", "cors", "formats", "pricing", "rate_limits", "example",
+    "use_cases", "sources", "researcher_confidence", "status"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,48}$" },
+    "status": { "type": "string", "enum": ["operational", "degraded", "defunct"] },
+    "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "category": {
+      "type": "string",
+      "enum": [
+        "weather-environment", "geo-maps", "finance", "crypto", "sports",
+        "news-media", "ai-ml", "dev-tools", "government-open-data",
+        "transportation", "health-fitness", "food-drink", "entertainment",
+        "games-comics", "science-space", "social-communication",
+        "ecommerce-payments", "security-identity", "education-reference",
+        "fun-novelty", "utilities", "data-analytics"
+      ]
+    },
+    "tagline": { "type": "string", "minLength": 10, "maxLength": 110 },
+    "description": { "type": "string", "minLength": 50, "maxLength": 600 },
+    "base_url": { "type": "string", "pattern": "^https?://" },
+    "docs_url": { "type": "string", "pattern": "^https?://" },
+    "signup_url": { "type": ["string", "null"], "pattern": "^https?://" },
+    "auth": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "details"],
+      "properties": {
+        "type": { "type": "string", "enum": ["none", "apiKey", "oauth2", "basic", "jwt", "other"] },
+        "details": { "type": "string", "maxLength": 300 }
+      }
+    },
+    "https": { "type": "boolean" },
+    "cors": { "type": "string", "enum": ["yes", "no", "unknown"] },
+    "formats": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "string", "enum": ["json", "xml", "csv", "graphql", "grpc", "html", "binary", "text", "other"] }
+    },
+    "pricing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["free_tier", "free_tier_limits"],
+      "properties": {
+        "free_tier": { "type": "boolean" },
+        "free_tier_limits": { "type": "string", "maxLength": 300 },
+        "paid_plans": { "type": ["string", "null"], "maxLength": 300 }
+      }
+    },
+    "rate_limits": { "type": "string", "maxLength": 300 },
+    "example": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["request", "response_snippet"],
+      "properties": {
+        "request": { "type": "string", "maxLength": 600 },
+        "response_snippet": { "type": "string", "maxLength": 800 }
+      }
+    },
+    "use_cases": {
+      "type": "array", "minItems": 2, "maxItems": 6,
+      "items": { "type": "string", "maxLength": 120 }
+    },
+    "sources": {
+      "type": "array", "minItems": 1, "maxItems": 8,
+      "items": { "type": "string", "pattern": "^https?://" }
+    },
+    "researcher_confidence": { "type": "string", "enum": ["high", "medium", "low"] }
+  }
+}
