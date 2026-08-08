@@ -1,0 +1,41 @@
+{
+  "id": "deepinfra",
+  "status": "operational",
+  "name": "DeepInfra",
+  "category": "ai-ml",
+  "tagline": "Serverless inference for open-source LLMs and generative models",
+  "description": "DeepInfra provides a unified API for running open-source large language models, embeddings, and generative AI models (including OpenAI-compatible endpoints) with pay-per-use pricing. Developers can call chat completions, text generation, embeddings, and image models without managing GPUs.",
+  "base_url": "https://api.deepinfra.com/v1",
+  "docs_url": "https://deepinfra.com/docs",
+  "signup_url": "https://deepinfra.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; self-serve signup at deepinfra.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.deepinfra.com/v1/openai/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"meta-llama/Meta-Llama-3-8B-Instruct\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"...\",\"object\":\"chat.completion\",\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"Hello!\"}}]}"
+  },
+  "use_cases": [
+    "run open-source LLM chat completions",
+    "generate text embeddings",
+    "call OpenAI-compatible inference endpoints",
+    "generate images from text prompts"
+  ],
+  "sources": [
+    "https://deepinfra.com/docs",
+    "https://deepinfra.com/"
+  ],
+  "researcher_confidence": "low"
+}

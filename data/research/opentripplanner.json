@@ -1,0 +1,45 @@
+{
+  "id": "opentripplanner",
+  "status": "operational",
+  "name": "OpenTripPlanner",
+  "category": "transportation",
+  "tagline": "Open-source multimodal trip planner with HTTP routing APIs",
+  "description": "OpenTripPlanner (OTP) is an open-source multimodal journey planning engine that combines transit schedules (GTFS/GTFS-RT), OSM street data, and optional bike/car networks into a routing graph. When self-hosted (or via public demo instances), it exposes REST and GraphQL HTTP APIs for trip planning, stop/route lookups, and isochrones. Developers typically run their own OTP server; there is no single commercial multi-tenant API product with paid plans.",
+  "base_url": "https://otp-demo.ibi-transit.com/otp",
+  "docs_url": "https://docs.opentripplanner.org/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required on the public IBI demo and typical self-hosted OTP servers. Production deployments may put OTP behind a reverse proxy, API gateway, or network ACL; OTP core does not ship a built-in API key or OAuth scheme."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Open-source software: unlimited use when self-hosted. Public demo instances are free but informal (no published quota).",
+    "paid_plans": "None from the OTP project. Commercial hosting/support available from third parties (e.g. IBI Group / Conveyal ecosystem)."
+  },
+  "rate_limits": "not published (self-hosted: operator-defined; public demos have no documented limits)",
+  "example": {
+    "request": "curl -sS 'https://otp-demo.ibi-transit.com/otp/routers/default/plan?fromPlace=45.5304,-122.6640&toPlace=45.4948,-122.5525&mode=TRANSIT,WALK&time=10:00am&date=08-08-2026&arriveBy=false&numItineraries=1'",
+    "response_snippet": "{\n  \"requestParameters\": { \"fromPlace\": \"45.5304,-122.6640\", \"toPlace\": \"45.4948,-122.5525\", \"mode\": \"TRANSIT,WALK\" },\n  \"plan\": {\n    \"date\": 1754647200000,\n    \"from\": { \"name\": \"Origin\", \"lat\": 45.5304, \"lon\": -122.664 },\n    \"to\": { \"name\": \"Destination\", \"lat\": 45.4948, \"lon\": -122.5525 },\n    \"itineraries\": [{\n      \"duration\": 2340,\n      \"startTime\": 1754647200000,\n      \"endTime\": 1754649540000,\n      \"walkTime\": 420,\n      \"transitTime\": 1800,\n      \"legs\": [{ \"mode\": \"WALK\", \"distance\": 350.2 }, { \"mode\": \"BUS\", \"route\": \"20\", \"from\": { \"name\": \"Stop A\" }, \"to\": { \"name\": \"Stop B\" } }]\n    }]\n  }\n}"
+  },
+  "use_cases": [
+    "plan a multimodal transit+walk itinerary between two lat/lon points",
+    "list nearby transit stops or routes for a map location",
+    "compute isochrones / travel-time polygons from a point",
+    "query real-time or scheduled trip options for a public-transport app",
+    "geocode-adjacent routing for last-mile bike or micromobility legs"
+  ],
+  "sources": [
+    "https://www.opentripplanner.org/",
+    "https://docs.opentripplanner.org/",
+    "https://docs.opentripplanner.org/en/latest/",
+    "https://github.com/opentripplanner/OpenTripPlanner"
+  ],
+  "researcher_confidence": "medium"
+}

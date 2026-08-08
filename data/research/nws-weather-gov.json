@@ -1,0 +1,45 @@
+{
+  "id": "nws-weather-gov",
+  "status": "operational",
+  "name": "National Weather Service API",
+  "category": "weather-environment",
+  "tagline": "Official US government weather forecasts, alerts, and observations \u2014 free, no API key.",
+  "description": "The National Weather Service (NWS) API at api.weather.gov provides authoritative US weather data including forecasts, active weather alerts, observations, and radar. It is a free public service of the US federal government with no API key required. Clients must identify themselves with a descriptive User-Agent header. Data covers the United States and territories.",
+  "base_url": "https://api.weather.gov",
+  "docs_url": "https://www.weather.gov/documentation/services-web-api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required. A descriptive User-Agent header (app name and contact) is required per NWS terms; requests without it may be blocked."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public government API; no paid plans. Fair-use rate limiting applies.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as fixed numbers; fair-use throttling \u2014 avoid excessive concurrent requests",
+  "example": {
+    "request": "curl -s -H \"User-Agent: (myapp, contact@example.com)\" -H \"Accept: application/geo+json\" \"https://api.weather.gov/points/39.7456,-97.0892\"",
+    "response_snippet": "{\"@context\":[\"https://geojson.org/geojson-ld/geojson-context.jsonld\"],\"id\":\"https://api.weather.gov/points/39.7456,-97.0892\",\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[-97.0892,39.7456]},\"properties\":{\"@id\":\"https://api.weather.gov/points/39.7456,-97.0892\",\"gridId\":\"TOP\",\"gridX\":31,\"gridY\":80,\"forecast\":\"https://api.weather.gov/gridpoints/TOP/31,80/forecast\"}}"
+  },
+  "use_cases": [
+    "get forecast for US lat/lon coordinates",
+    "fetch active weather alerts by state or zone",
+    "resolve lat/lon to NWS grid point and forecast office",
+    "get current observations from a weather station",
+    "list forecast discussion text products for a WFO"
+  ],
+  "sources": [
+    "https://www.weather.gov/documentation/services-web-api",
+    "https://api.weather.gov/",
+    "https://www.weather.gov/documentation/services-web-api#/default/point"
+  ],
+  "researcher_confidence": "medium"
+}

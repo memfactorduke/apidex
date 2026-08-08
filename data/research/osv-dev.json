@@ -1,0 +1,45 @@
+{
+  "id": "osv-dev",
+  "status": "operational",
+  "name": "OSV",
+  "category": "security-identity",
+  "tagline": "Google-backed open-source vulnerability database with package-level queries across ecosystems",
+  "description": "OSV is a free, open-source vulnerability database and API maintained by Google that provides detailed vulnerability information for packages across multiple ecosystems including npm, PyPI, Maven, Go, crates.io, and more. Developers can query by package name/version or by commit hash to retrieve vulnerability details, severity scores, and affected versions. The API is unauthenticated and free to use with published rate limits.",
+  "base_url": "https://api.osv.dev/v1",
+  "docs_url": "https://google.github.io/osv.dev/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. The API is publicly accessible without API keys or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free with no paid plans; rate limited to 1000 requests/hour for unauthenticated use",
+    "paid_plans": null
+  },
+  "rate_limits": "1000 requests per hour (unauthenticated); higher limits available via contact",
+  "example": {
+    "request": "curl -X POST https://api.osv.dev/v1/query -H 'Content-Type: application/json' -d '{\"package\": {\"name\": \"lodash\", \"ecosystem\": \"npm\"}, \"version\": \"4.17.20\"}'",
+    "response_snippet": "{\"vulns\": [{\"id\": \"GHSA-35jh-r3h4-6jhm\", \"summary\": \"Prototype Pollution in lodash\", \"details\": \"...\", \"affected\": [{\"package\": {\"name\": \"lodash\", \"ecosystem\": \"npm\"}, \"ranges\": [...]}]}]}"
+  },
+  "use_cases": [
+    "check if a package version has known vulnerabilities",
+    "query vulnerabilities by Git commit hash",
+    "batch-query multiple packages for CVEs",
+    "get vulnerability details by OSV or CVE ID",
+    "list affected versions for a security advisory",
+    "integrate vulnerability scanning into CI/CD pipelines"
+  ],
+  "sources": [
+    "https://osv.dev/",
+    "https://google.github.io/osv.dev/",
+    "https://google.github.io/osv.dev/api/",
+    "https://api.osv.dev/v1"
+  ],
+  "researcher_confidence": "high"
+}

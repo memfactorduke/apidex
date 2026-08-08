@@ -1,0 +1,43 @@
+{
+  "id": "alchemy",
+  "status": "operational",
+  "name": "Alchemy",
+  "category": "crypto",
+  "tagline": "Blockchain developer platform with node APIs, NFT data, and web3 infrastructure",
+  "description": "Alchemy is a blockchain developer platform providing node infrastructure, enhanced APIs, NFT and token data, webhooks, and developer tools across major EVM chains and others. Developers authenticate with an API key embedded in the HTTPS endpoint path (or via header on some products), call JSON-RPC methods and Alchemy-enhanced APIs, and build wallets, dapps, and indexers without running their own nodes.",
+  "base_url": "https://eth-mainnet.g.alchemy.com/v2",
+  "docs_url": "https://docs.alchemy.com/",
+  "signup_url": "https://dashboard.alchemy.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via URL path (https://{network}.g.alchemy.com/v2/YOUR_API_KEY) or Alchemy-Auth header on some APIs; self-serve dashboard signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier with monthly compute unit (CU) allowance; exact CU and rate limits vary by plan \u2014 confirm on pricing page",
+    "paid_plans": "Pay-as-you-go and Growth/Enterprise plans based on compute units"
+  },
+  "rate_limits": "Plan-dependent CU/sec and monthly CU caps; Free tier has lower throughput than Growth",
+  "example": {
+    "request": "curl -s -X POST https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY -H 'Content-Type: application/json' -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"eth_blockNumber\",\"params\":[]}'",
+    "response_snippet": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"0x13a2b40\"}"
+  },
+  "use_cases": [
+    "get latest Ethereum block number via JSON-RPC",
+    "fetch NFT metadata and ownership for a wallet",
+    "subscribe to address activity webhooks",
+    "query token balances across chains",
+    "send eth_call or getTransactionReceipt without running a node"
+  ],
+  "sources": [
+    "https://docs.alchemy.com/",
+    "https://www.alchemy.com/pricing",
+    "https://docs.alchemy.com/reference/api-overview"
+  ],
+  "researcher_confidence": "medium"
+}

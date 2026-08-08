@@ -1,0 +1,42 @@
+{
+  "id": "opencage",
+  "status": "operational",
+  "name": "OpenCage Geocoding",
+  "category": "geo-maps",
+  "tagline": "Forward and reverse geocoding with global coverage",
+  "description": "OpenCage Geocoding API converts addresses to coordinates and coordinates to addresses using aggregated open data. It provides structured place data, timezone, annotations, and confidence scores for apps that need reliable place lookup worldwide.",
+  "base_url": "https://api.opencagedata.com/geocode/v1",
+  "docs_url": "https://opencagedata.com/api",
+  "signup_url": "https://opencagedata.com/users/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter (self-serve signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.opencagedata.com/geocode/v1/json?q=Berlin&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"results\":[{\"formatted\":\"Berlin, Germany\",\"geometry\":{\"lat\":52.52,\"lng\":13.405}}]}"
+  },
+  "use_cases": [
+    "convert a street address to latitude/longitude",
+    "reverse-geocode coordinates to a place name",
+    "look up timezone for a location",
+    "normalize user-entered place strings"
+  ],
+  "sources": [
+    "https://opencagedata.com/api"
+  ],
+  "researcher_confidence": "low"
+}

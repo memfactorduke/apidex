@@ -1,0 +1,43 @@
+{
+  "id": "spoonacular",
+  "status": "operational",
+  "name": "Spoonacular",
+  "category": "food-drink",
+  "tagline": "Food and recipe API with nutrition data, meal planning, and grocery product info",
+  "description": "Spoonacular is a food data API offering recipes, ingredients, nutrition analysis, meal planning, grocery products, menu items, and wine pairings. Developers authenticate with an API key and call REST endpoints for search, similar recipes, convert amounts, compute nutrition, and generate meal plans. It is widely used in cooking apps, diet trackers, and grocery tools.",
+  "base_url": "https://api.spoonacular.com",
+  "docs_url": "https://spoonacular.com/food-api/docs",
+  "signup_url": "https://spoonacular.com/food-api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query param apiKey= or x-api-key header; self-serve signup at spoonacular.com/food-api"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.spoonacular.com/recipes/complexSearch?query=pasta&number=2&apiKey=YOUR_API_KEY\"",
+    "response_snippet": "{\"results\":[{\"id\":654959,\"title\":\"Pasta With Tuna\",\"image\":\"https://img.spoonacular.com/recipes/654959-312x231.jpg\",\"imageType\":\"jpg\"}],\"offset\":0,\"number\":2,\"totalResults\":86}"
+  },
+  "use_cases": [
+    "search recipes by ingredients or diet",
+    "get nutrition facts for a recipe or ingredient",
+    "generate a meal plan for a day or week",
+    "find similar recipes to a given dish",
+    "look up grocery product information by UPC",
+    "analyze a recipe's nutrition from free text"
+  ],
+  "sources": [
+    "https://spoonacular.com/food-api/docs",
+    "https://spoonacular.com/food-api"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "currents-api",
+  "status": "operational",
+  "name": "Currents API",
+  "category": "news-media",
+  "tagline": "Real-time news search and headlines from thousands of sources worldwide",
+  "description": "Currents API provides real-time news data, latest headlines, and keyword search across thousands of global sources. Developers can query by language, category, region, and date, or fetch top stories, making it useful for news apps, alerts, and content aggregation.",
+  "base_url": "https://api.currentsapi.services/v1",
+  "docs_url": "https://currentsapi.services/en/docs/",
+  "signup_url": "https://currentsapi.services/en/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apiKey query parameter or Authorization header; free self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "600 req/day free (Starter plan)",
+    "paid_plans": "Paid plans available with higher limits; see pricing page for current tiers"
+  },
+  "rate_limits": "600 requests/day on free tier; higher on paid plans",
+  "example": {
+    "request": "curl \"https://api.currentsapi.services/v1/latest-news?language=en&apiKey=YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":\"ok\",\"news\":[{\"id\":\"...\",\"title\":\"...\",\"description\":\"...\",\"url\":\"...\",\"author\":\"...\",\"image\":\"...\",\"language\":\"en\",\"category\":[\"general\"],\"published\":\"2024-01-01 12:00:00 +0000\"}]}"
+  },
+  "use_cases": [
+    "fetch latest headlines by language or category",
+    "search news articles by keyword",
+    "get region-specific news for a country",
+    "power a news aggregator or alert bot"
+  ],
+  "sources": [
+    "https://currentsapi.services/",
+    "https://currentsapi.services/en/docs/",
+    "https://api.currentsapi.services/v1"
+  ],
+  "researcher_confidence": "medium"
+}

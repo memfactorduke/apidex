@@ -1,0 +1,41 @@
+{
+  "id": "weatherbit",
+  "status": "operational",
+  "name": "Weatherbit",
+  "category": "weather-environment",
+  "tagline": "Global weather, air quality, and energy/agri APIs with a free developer tier.",
+  "description": "Weatherbit provides global current weather, forecasts, historical data, air quality, and agriculture/energy endpoints via a REST API. Developers authenticate with an API key and can start on a free tier with documented daily request limits.",
+  "base_url": "https://api.weatherbit.io/v2.0",
+  "docs_url": "https://www.weatherbit.io/api",
+  "signup_url": "https://www.weatherbit.io/account/create",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter key=YOUR_API_KEY (or header in some SDKs); self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.weatherbit.io/v2.0/current?city=Raleigh,NC&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[{\"city_name\":\"Raleigh\",\"temp\":22.5,\"weather\":{\"description\":\"Clear sky\"}}],\"count\":1}"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "get multi-day weather forecast by coordinates",
+    "retrieve historical weather for a date range",
+    "check air quality index for a location"
+  ],
+  "sources": [
+    "https://www.weatherbit.io/api",
+    "https://www.weatherbit.io/pricing"
+  ],
+  "researcher_confidence": "low"
+}

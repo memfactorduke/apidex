@@ -1,0 +1,44 @@
+{
+  "id": "gnews",
+  "status": "operational",
+  "name": "GNews",
+  "category": "news-media",
+  "tagline": "Real-time news search and headline API with worldwide coverage",
+  "description": "GNews is a REST API that delivers news articles and top headlines from thousands of sources worldwide. Developers can search by keywords, topics, language, and country, and receive structured article metadata including title, description, content snippet, URL, image, published date, and source.",
+  "base_url": "https://gnews.io/api/v4",
+  "docs_url": "https://docs.gnews.io/",
+  "signup_url": "https://gnews.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter apikey=YOUR_API_KEY (self-serve signup on gnews.io)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "100 requests/day free",
+    "paid_plans": "Paid plans available with higher daily quotas; see pricing page for current tiers"
+  },
+  "rate_limits": "Daily request quotas by plan (free: 100/day); additional per-second limits not clearly published",
+  "example": {
+    "request": "curl \"https://gnews.io/api/v4/search?q=technology&lang=en&max=10&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{\"totalArticles\":12345,\"articles\":[{\"title\":\"Example headline\",\"description\":\"Short summary...\",\"content\":\"Article snippet...\",\"url\":\"https://example.com/article\",\"image\":\"https://...\",\"publishedAt\":\"2026-01-15T12:00:00Z\",\"source\":{\"name\":\"Example News\",\"url\":\"https://example.com\"}}]}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword",
+    "fetch top headlines for a country or topic",
+    "monitor brand or product mentions in news",
+    "build a news feed filtered by language",
+    "aggregate multi-source coverage on a breaking event"
+  ],
+  "sources": [
+    "https://gnews.io/",
+    "https://docs.gnews.io/",
+    "https://gnews.io/docs/v4",
+    "https://gnews.io/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -30,6 +30,12 @@ LENS_B = "\nYour approach: adversarial. Assume at least one field in this entry 
 
 
 def main():
+    machine = {}
+    mc = ROOT / "logs" / "machine_check.jsonl"
+    if mc.exists():
+        for line in mc.read_text().splitlines():
+            r = json.loads(line)
+            machine[r["id"]] = r
     jobs = []
     for f in sorted((ROOT / "data" / "research").glob("*.json")):
         entry = json.loads(f.read_text())
@@ -37,6 +43,13 @@ def main():
             continue
         slug = entry["id"]
         base = COMMON.format(entry_json=json.dumps(entry, indent=1), slug=slug)
+        m = machine.get(slug)
+        if m and m["flags"]:
+            base += ("\nAUTOMATED CHECK RESULTS (curl, may be bot-detection false "
+                     f"positives): base_url returned HTTP {m['base_http']}, docs_url "
+                     f"HTTP {m['docs_http']}. Flags: {'; '.join(m['flags'])}. "
+                     "Pay special attention to these fields; if a URL is genuinely "
+                     "wrong, mark it incorrect with the right one.\n")
         for tag, lens in (("a", LENS_A), ("b", LENS_B)):
             jobs.append({
                 "id": f"verify-{slug}-{tag}",

@@ -1,0 +1,43 @@
+{
+  "id": "punk-api",
+  "status": "operational",
+  "name": "Punk API",
+  "category": "food-drink",
+  "tagline": "Free beer data API with 325 BrewDog beers and full recipes",
+  "description": "Punk API is a free, open beer database API providing detailed information on BrewDog beers including ingredients, methods, and food pairings. Originally offering 325 beers from the BrewDog DIY Dog archive, it requires no authentication and returns JSON. The API supports filtering, pagination, and random beer endpoints for builders, recipe apps, and beer discovery tools.",
+  "base_url": "https://api.punkapi.com/v2",
+  "docs_url": "https://punkapi.com/documentation/v2",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints are open without API keys or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.punkapi.com/v2/beers/1\"",
+    "response_snippet": "[{\"id\":1,\"name\":\"Buzz\",\"tagline\":\"A Real Bitter Experience.\",\"first_brewed\":\"09/2007\",\"description\":\"A light, crisp and bitter IPA...\",\"abv\":4.5,\"ibu\":60,\"ebc\":20,\"srm\":10,\"ph\":4.4,\"attenuation_level\":75,\"volume\":{\"value\":20,\"unit\":\"litres\"},\"ingredients\":{\"malt\":[...],\"hops\":[...],\"yeast\":\"Wyeast 1056 - American Ale\u2122\"},\"food_pairing\":[\"Spicy chicken tikka masala\",\"Grilled chicken quesadilla\",\"Caramel toffee cake\"]}]"
+  },
+  "use_cases": [
+    "get details for a specific beer by ID",
+    "list beers with filters (ABV, IBU, name)",
+    "fetch a random beer for discovery apps",
+    "look up beer recipes including malt, hops, and yeast",
+    "find food pairings for a given beer"
+  ],
+  "sources": [
+    "https://punkapi.com/",
+    "https://punkapi.com/documentation/v2",
+    "https://github.com/samjbmason/punkapi"
+  ],
+  "researcher_confidence": "low"
+}

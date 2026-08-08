@@ -1,0 +1,44 @@
+{
+  "id": "congress-gov",
+  "status": "operational",
+  "name": "Congress.gov API",
+  "category": "government-open-data",
+  "tagline": "Official REST API for U.S. congressional legislative data from Congress.gov",
+  "description": "Public API from the Library of Congress providing structured access to bills, amendments, members, committees, nominations, treaties, and related legislative data on Congress.gov. Requires a free API key; responses are primarily JSON.",
+  "base_url": "https://api.congress.gov/v3",
+  "docs_url": "https://api.congress.gov/",
+  "signup_url": "https://api.congress.gov/sign-up/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-API-Key header or api_key query parameter; free self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 free key required; published rate limit 5,000 requests/hour",
+    "paid_plans": null
+  },
+  "rate_limits": "5,000 requests per hour per API key (published)",
+  "example": {
+    "request": "curl -H \"X-API-Key: YOUR_API_KEY\" \"https://api.congress.gov/v3/bill/118/hr/1?format=json\"",
+    "response_snippet": "{\"bill\":{\"congress\":118,\"type\":\"HR\",\"number\":\"1\",\"title\":\"...\",\"originChamber\":\"House\",\"updateDate\":\"...\",\"url\":\"https://api.congress.gov/v3/bill/118/hr/1?format=json\"}}"
+  },
+  "use_cases": [
+    "look up a bill by congress, type, and number",
+    "list recent bills for a given Congress",
+    "get member bio and sponsored legislation",
+    "fetch committee memberships and activity",
+    "retrieve amendment details for a bill"
+  ],
+  "sources": [
+    "https://api.congress.gov/",
+    "https://github.com/LibraryOfCongress/api.congress.gov",
+    "https://www.congress.gov/help/legislative-glossary"
+  ],
+  "researcher_confidence": "medium"
+}

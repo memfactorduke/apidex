@@ -1,0 +1,42 @@
+{
+  "id": "datamuse",
+  "status": "operational",
+  "name": "Datamuse",
+  "category": "education-reference",
+  "tagline": "Word-finding API for rhymes, synonyms, and constrained word search",
+  "description": "Datamuse is a free word-finding API for developers. It returns English words matching constraints such as meaning relatedness, sound-alike (rhymes), spelling similarity, and letter patterns. Common uses include writing tools, crossword helpers, games, and NLP demos. No authentication is required for basic use; commercial use may need permission.",
+  "base_url": "https://api.datamuse.com",
+  "docs_url": "https://www.datamuse.com/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required for typical use; requests are made as plain GET queries. Heavy or commercial use may require contacting the operator."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.datamuse.com/words?rel_rhy=forgetful&max=5\"",
+    "response_snippet": "[{\"word\":\"regretful\",\"score\":441,\"numSyllables\":3},{\"word\":\"fretful\",\"score\":337,\"numSyllables\":2}]"
+  },
+  "use_cases": [
+    "find rhymes for a word",
+    "look up synonyms or related words",
+    "constrained word search by spelling pattern",
+    "build crossword or word-game helpers",
+    "suggest similar-sounding words for writing tools"
+  ],
+  "sources": [
+    "https://www.datamuse.com/api/",
+    "https://www.datamuse.com/"
+  ],
+  "researcher_confidence": "medium"
+}

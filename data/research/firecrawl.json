@@ -1,0 +1,46 @@
+{
+  "id": "firecrawl",
+  "status": "operational",
+  "name": "Firecrawl",
+  "category": "data-analytics",
+  "tagline": "LLM-ready web scraping and crawling API for clean, structured page data",
+  "description": "Firecrawl turns websites into clean, LLM-ready markdown, HTML, and structured JSON via scrape, crawl, map, and extract endpoints. Developers send a URL (or site) and receive token-friendly content with optional AI extraction schemas, suitable for RAG pipelines, agents, and data workflows. Authentication uses a Bearer API key from a self-serve dashboard.",
+  "base_url": "https://api.firecrawl.dev/v2",
+  "docs_url": "https://docs.firecrawl.dev",
+  "signup_url": "https://www.firecrawl.dev/signin",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer API key in Authorization header (Authorization: Bearer YOUR_API_KEY); obtain key from Firecrawl dashboard after self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes a limited credit allotment for new accounts (commonly cited as ~500 credits); exact free quota and whether it renews vary\u2014confirm on firecrawl.dev/pricing. Credits scale by endpoint (scrape vs crawl vs extract).",
+    "paid_plans": "Hobby, Standard, Growth, and Enterprise tiers billed by credits/month with higher concurrency and features; see firecrawl.dev/pricing for current prices."
+  },
+  "rate_limits": "Plan-based concurrency and request limits (not a single public global RPS number); higher tiers raise concurrent browsers/requests. Check dashboard or pricing for your plan; not fully published as one fixed limit.",
+  "example": {
+    "request": "curl -X POST https://api.firecrawl.dev/v2/scrape \\\n  -H 'Content-Type: application/json' \\\n  -H 'Authorization: Bearer YOUR_API_KEY' \\\n  -d '{\"url\":\"https://example.com\",\"formats\":[\"markdown\"]}'",
+    "response_snippet": "{\"success\":true,\"data\":{\"markdown\":\"# Example Domain\\n\\nThis domain is for use in illustrative examples...\",\"metadata\":{\"title\":\"Example Domain\",\"sourceURL\":\"https://example.com\",\"statusCode\":200}}}"
+  },
+  "use_cases": [
+    "scrape a URL to clean markdown for RAG or LLM context",
+    "crawl a documentation site and return multi-page content",
+    "map all discovered URLs on a domain before selective scraping",
+    "extract structured fields from a page with a JSON schema",
+    "batch-scrape a list of product or article URLs"
+  ],
+  "sources": [
+    "https://docs.firecrawl.dev",
+    "https://docs.firecrawl.dev/api-reference/endpoint/scrape",
+    "https://docs.firecrawl.dev/introduction",
+    "https://www.firecrawl.dev/pricing",
+    "https://www.firecrawl.dev",
+    "https://api.firecrawl.dev"
+  ],
+  "researcher_confidence": "medium"
+}

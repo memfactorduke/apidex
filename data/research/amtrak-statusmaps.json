@@ -1,0 +1,42 @@
+{
+  "id": "amtrak-statusmaps",
+  "status": "operational",
+  "name": "Amtrak StatusMaps / Track API",
+  "category": "transportation",
+  "tagline": "Real-time Amtrak train status and tracking via public StatusMaps endpoints",
+  "description": "Public Amtrak StatusMaps JSON endpoints used by amtrak.com for live train locations, schedules, and station status. Widely reverse-engineered by third parties; no official public developer portal or key-based API product is published as of 2026.",
+  "base_url": "https://maps.amtrak.com",
+  "docs_url": "https://www.amtrak.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No public API key or OAuth. Browser-facing StatusMaps endpoints historically callable without auth; may use opaque tokens or anti-bot measures. Not a supported developer product."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "no official product or published free tier; public map endpoints historically free/unauthenticated",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://maps.amtrak.com/services/MapDataService/trains/getTrainStatus?train_num=1'",
+    "response_snippet": "{\"success\":true,\"TrainNum\":\"1\",\"TrainName\":\"Sunset Limited\",\"TrainState\":\"Active\",\"Velocity\":0,\"Latitude\":29.95,\"Longitude\":-90.07,\"Stations\":[{\"code\":\"NOL\",\"status\":\"Departed\"}]}"
+  },
+  "use_cases": [
+    "get live status for an Amtrak train number",
+    "list active Amtrak trains on the map",
+    "look up station arrival/departure status",
+    "track train lat/long for a journey",
+    "check whether a train is delayed or on time"
+  ],
+  "sources": [
+    "https://www.amtrak.com/",
+    "https://maps.amtrak.com/"
+  ],
+  "researcher_confidence": "low"
+}

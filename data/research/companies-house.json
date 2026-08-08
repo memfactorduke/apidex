@@ -1,0 +1,43 @@
+{
+  "id": "companies-house",
+  "status": "operational",
+  "name": "Companies House API",
+  "category": "government-open-data",
+  "tagline": "UK company registry data \u2014 search, profiles, filings, and officers via the official government API",
+  "description": "Official UK government API for Companies House public company information. Search companies by name or number, retrieve company profiles, filing history, officers, persons with significant control (PSC), registered office addresses, and insolvency data. Used by developers building KYC, compliance, business intelligence, and due-diligence tools against the live UK company register.",
+  "base_url": "https://api.company-information.service.gov.uk",
+  "docs_url": "https://developer.company-information.service.gov.uk/api/docs/",
+  "signup_url": "https://developer.company-information.service.gov.uk/",
+  "auth": {
+    "type": "apiKey",
+    "details": "HTTP Basic Auth: API key as username, blank password (or key in Authorization header as Basic base64(key:)). Free self-serve signup at the developer hub."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public data API with rate limits; no per-request charge for standard public data endpoints",
+    "paid_plans": "Streaming API and some bulk/product offerings may be paid; check developer hub for current product pricing"
+  },
+  "rate_limits": "600 requests per 5 minutes per API key (public data API); check developer hub for product-specific limits",
+  "example": {
+    "request": "curl -u YOUR_API_KEY: \"https://api.company-information.service.gov.uk/company/00000006\"",
+    "response_snippet": "{\"company_name\":\"PUBLIC LIMITED COMPANY\",\"company_number\":\"00000006\",\"company_status\":\"active\",\"company_status_detail\":null,\"date_of_creation\":\"1862-01-01\",\"jurisdiction\":\"england-wales\",\"type\":\"plc\",\"registered_office_address\":{\"address_line_1\":\"...\",\"locality\":\"...\",\"postal_code\":\"...\",\"country\":\"England\"},\"sic_codes\":[\"...\"]}"
+  },
+  "use_cases": [
+    "look up a UK company by company number",
+    "search companies by name for KYC or onboarding",
+    "list officers and directors for a company",
+    "fetch filing history or latest accounts metadata",
+    "get persons with significant control (PSC) for compliance checks"
+  ],
+  "sources": [
+    "https://developer.company-information.service.gov.uk/",
+    "https://developer.company-information.service.gov.uk/api/docs/",
+    "https://developer-specs.company-information.service.gov.uk/"
+  ],
+  "researcher_confidence": "medium"
+}

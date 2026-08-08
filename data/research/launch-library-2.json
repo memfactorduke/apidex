@@ -1,0 +1,41 @@
+{
+  "id": "launch-library-2",
+  "status": "operational",
+  "name": "Launch Library 2",
+  "category": "science-space",
+  "tagline": "Global space launch schedule and event data API from The Space Devs",
+  "description": "Launch Library 2 provides comprehensive, community-maintained data on space launches, spacecraft, agencies, and related events worldwide. It is the public REST API for The Space Devs project and is widely used for launch schedules, countdowns, and aerospace research integrations.",
+  "base_url": "https://ll.thespacedevs.com/2.2.0",
+  "docs_url": "https://ll.thespacedevs.com/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for free tier; optional API token for higher rate limits via Authorization header after free signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://ll.thespacedevs.com/2.2.0/launch/upcoming/?limit=1\"",
+    "response_snippet": "{\"count\": 100, \"next\": \"...\", \"previous\": null, \"results\": [{\"id\": \"...\", \"name\": \"...\", \"status\": {\"id\": 1, \"name\": \"Go\"}, \"net\": \"2026-...\", \"pad\": {...}}]}"
+  },
+  "use_cases": [
+    "list upcoming space launches",
+    "get details for a specific launch by ID",
+    "search launches by rocket or agency",
+    "track launch status and NET times",
+    "list space agencies and spacecraft"
+  ],
+  "sources": [
+    "https://ll.thespacedevs.com/"
+  ],
+  "researcher_confidence": "low"
+}

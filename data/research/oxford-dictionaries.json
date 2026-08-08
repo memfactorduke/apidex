@@ -1,0 +1,41 @@
+{
+  "id": "oxford-dictionaries",
+  "status": "operational",
+  "name": "Oxford Dictionaries",
+  "category": "education-reference",
+  "tagline": "Premium lexical data from Oxford University Press",
+  "description": "Oxford Dictionaries API provides dictionary definitions, translations, thesauri, and lexical data from Oxford University Press for English and other languages. Access headword lookups, senses, examples, pronunciations, and related linguistic data via REST endpoints for language apps, writing tools, and educational products.",
+  "base_url": "https://od-api.oxforddictionaries.com/api/v2",
+  "docs_url": "https://developer.oxforddictionaries.com/",
+  "signup_url": "https://developer.oxforddictionaries.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "App ID and App Key via app_id and app_key headers after signup on the developer portal"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://od-api.oxforddictionaries.com/api/v2/entries/en-us/ace\" -H \"app_id: YOUR_APP_ID\" -H \"app_key: YOUR_API_KEY\"",
+    "response_snippet": "{\"id\":\"ace\",\"metadata\":{\"operation\":\"retrieve\"},\"results\":[{\"id\":\"ace\",\"language\":\"en-us\",\"lexicalEntries\":[{\"entries\":[{\"senses\":[{\"definitions\":[\"a playing card with a single spot\"]}]}]}]}]}"
+  },
+  "use_cases": [
+    "look up dictionary definitions for a word",
+    "get thesaurus synonyms and antonyms",
+    "fetch word pronunciations and audio",
+    "translate words between supported languages",
+    "retrieve example sentences for a sense"
+  ],
+  "sources": [
+    "https://developer.oxforddictionaries.com/"
+  ],
+  "researcher_confidence": "low"
+}

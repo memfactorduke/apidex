@@ -1,0 +1,42 @@
+{
+  "id": "alpha-vantage",
+  "status": "operational",
+  "name": "Alpha Vantage",
+  "category": "finance",
+  "tagline": "Free stock, forex, crypto, and economic time series API for market data.",
+  "description": "Alpha Vantage provides real-time and historical market data via a REST API covering equities, forex, cryptocurrencies, technical indicators, and macroeconomic indicators. Developers authenticate with a free API key and call function-based endpoints that return JSON or CSV. A free tier is available with daily request caps; paid premium plans raise rate limits and unlock higher-frequency data.",
+  "base_url": "https://www.alphavantage.co/query",
+  "docs_url": "https://www.alphavantage.co/documentation/",
+  "signup_url": "https://www.alphavantage.co/support/#api-key",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter; free self-serve key from the website."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "25 requests/day free (as of recent docs \u2014 verify current)",
+    "paid_plans": "Premium plans available for higher limits"
+  },
+  "rate_limits": "Free: 25 req/day; premium higher",
+  "example": {
+    "request": "curl \"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{ \"Global Quote\": { \"01. symbol\": \"IBM\", \"05. price\": \"...\" } }"
+  },
+  "use_cases": [
+    "get latest stock quote for a ticker",
+    "fetch daily historical OHLCV for a symbol",
+    "pull forex exchange rates",
+    "get crypto price time series",
+    "compute technical indicators for a stock"
+  ],
+  "sources": [
+    "https://www.alphavantage.co/documentation/"
+  ],
+  "researcher_confidence": "low"
+}

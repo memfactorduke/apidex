@@ -1,0 +1,41 @@
+{
+  "id": "maxmind-geoip",
+  "status": "operational",
+  "name": "MaxMind GeoIP2",
+  "category": "geo-maps",
+  "tagline": "IP geolocation and enrichment via MaxMind's GeoIP2 web services",
+  "description": "MaxMind GeoIP2 is a commercial IP intelligence API that returns geolocation, ISP, organization, and risk-related attributes for IPv4/IPv6 addresses. Developers call HTTPS endpoints under geoip.maxmind.com with account credentials to look up single IPs or use related web services for city, country, insights, and other database-backed responses.",
+  "base_url": "https://geoip.maxmind.com/geoip/v2.1",
+  "docs_url": "https://dev.maxmind.com/geoip/docs/web-services",
+  "signup_url": "https://www.maxmind.com/en/geolite2/signup",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with MaxMind account ID as username and license key as password; self-serve account signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_ACCOUNT_ID:YOUR_LICENSE_KEY https://geoip.maxmind.com/geoip/v2.1/city/128.101.101.101",
+    "response_snippet": "{\"city\":{\"names\":{\"en\":\"Minneapolis\"}},\"country\":{\"iso_code\":\"US\",\"names\":{\"en\":\"United States\"}},\"location\":{\"latitude\":44.9759,\"longitude\":-93.2166},\"traits\":{\"ip_address\":\"128.101.101.101\"}}"
+  },
+  "use_cases": [
+    "lookup city and country for a client IP address",
+    "enrich request logs with ISP and organization data",
+    "detect country of origin for content localization",
+    "flag high-risk or anonymous proxy IPs for fraud checks"
+  ],
+  "sources": [
+    "https://dev.maxmind.com/geoip/docs/web-services",
+    "https://www.maxmind.com/en/geoip2-precision-services"
+  ],
+  "researcher_confidence": "low"
+}

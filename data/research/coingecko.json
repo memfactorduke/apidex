@@ -1,0 +1,43 @@
+{
+  "id": "coingecko",
+  "status": "operational",
+  "name": "CoinGecko",
+  "category": "crypto",
+  "tagline": "Comprehensive cryptocurrency market data API for prices, market caps, and on-chain metrics",
+  "description": "CoinGecko provides a widely used cryptocurrency data API covering coin prices, market capitalizations, trading volumes, historical charts, exchanges, NFTs, and on-chain/DeFi metrics. Developers use free and paid tiers to power portfolios, price trackers, and market analytics without scraping public pages.",
+  "base_url": "https://api.coingecko.com/api/v3",
+  "docs_url": "https://docs.coingecko.com/",
+  "signup_url": "https://www.coingecko.com/en/api/pricing",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-cg-demo-api-key (Demo) or x-cg-pro-api-key (Pro) header, or query param; self-serve signup at CoinGecko"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Demo API: 10,000 calls/month, ~30 calls/min; Pro plans start higher",
+    "paid_plans": "Analyst, Lite, Pro, Enterprise with higher rate limits and exclusive endpoints"
+  },
+  "rate_limits": "Demo ~30 calls/min; Pro plans 500\u20131000+ calls/min depending on tier",
+  "example": {
+    "request": "curl -s \"https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd\" -H \"x-cg-demo-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\"bitcoin\":{\"usd\":67432}}"
+  },
+  "use_cases": [
+    "get current price of a cryptocurrency in USD",
+    "fetch market cap and 24h volume for top coins",
+    "retrieve historical price chart data for a coin",
+    "list supported exchanges and trading pairs",
+    "get coin metadata and contract addresses by platform"
+  ],
+  "sources": [
+    "https://docs.coingecko.com/",
+    "https://www.coingecko.com/en/api",
+    "https://www.coingecko.com/en/api/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

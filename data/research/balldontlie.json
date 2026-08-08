@@ -1,0 +1,40 @@
+{
+  "id": "balldontlie",
+  "status": "operational",
+  "name": "balldontlie",
+  "category": "sports",
+  "tagline": "Clean NBA stats API with games, players, teams, and season averages; developer-friendly JSON.",
+  "description": "A public sports data API focused on NBA statistics. Provides endpoints for games, players, teams, and season averages with simple JSON responses aimed at developers building sports apps and analytics tools.",
+  "base_url": "https://api.balldontlie.io",
+  "docs_url": "https://www.balldontlie.io",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required; method and header name need verification from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.balldontlie.io/v1/players\"",
+    "response_snippet": "{\"data\":[...],\"meta\":{...}}"
+  },
+  "use_cases": [
+    "look up NBA player stats by name",
+    "fetch game results for a date or season",
+    "list teams and rosters",
+    "get season averages for a player"
+  ],
+  "sources": [
+    "https://www.balldontlie.io"
+  ],
+  "researcher_confidence": "low"
+}

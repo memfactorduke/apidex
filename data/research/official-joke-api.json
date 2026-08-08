@@ -1,0 +1,42 @@
+{
+  "id": "official-joke-api",
+  "status": "operational",
+  "name": "Official Joke API",
+  "category": "fun-novelty",
+  "tagline": "Free no-auth setup/punchline jokes for demos and teaching",
+  "description": "A simple public HTTP API serving random and typed jokes in a setup/punchline JSON format. No authentication is required. It is commonly used for demos, teaching REST, and light novelty features.",
+  "base_url": "https://official-joke-api.appspot.com",
+  "docs_url": "https://github.com/15Dkatz/official_joke_api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; all endpoints are public and unauthenticated."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://official-joke-api.appspot.com/random_joke",
+    "response_snippet": "{\"id\":1,\"type\":\"general\",\"setup\":\"What did the fish say when it hit the wall?\",\"punchline\":\"Dam.\"}"
+  },
+  "use_cases": [
+    "fetch a random setup/punchline joke",
+    "list jokes by type such as programming or general",
+    "get ten random jokes for a demo UI",
+    "look up a joke by numeric id",
+    "teach basic HTTP GET and JSON parsing"
+  ],
+  "sources": [
+    "https://github.com/15Dkatz/official_joke_api",
+    "https://official-joke-api.appspot.com"
+  ],
+  "researcher_confidence": "low"
+}

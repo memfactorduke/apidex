@@ -1,0 +1,43 @@
+{
+  "id": "numbers-api",
+  "status": "operational",
+  "name": "Numbers API",
+  "category": "fun-novelty",
+  "tagline": "Trivia, math, date, and year facts for any number\u2014long-running novelty staple.",
+  "description": "A free, no-authentication HTTP API that returns interesting trivia, mathematical properties, historical dates, and year facts for any integer. Long-running staple of developer demos and educational apps; supports plain text and JSON responses with optional fragments and default fallbacks when no fact is known.",
+  "base_url": "http://numbersapi.com",
+  "docs_url": "http://numbersapi.com",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints accept unauthenticated GET requests; optional JSON via Accept header or query param."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unlimited free public use (no published quota); no paid plans",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"http://numbersapi.com/42?json\"",
+    "response_snippet": "{\"text\":\"42 is the answer to the Ultimate Question of Life, the Universe, and Everything.\",\"number\":42,\"found\":true,\"type\":\"trivia\"}"
+  },
+  "use_cases": [
+    "get a trivia fact for a number",
+    "fetch math properties of an integer",
+    "get historical facts for a calendar date",
+    "retrieve year-based historical trivia",
+    "add random number facts to a demo or chatbot"
+  ],
+  "sources": [
+    "http://numbersapi.com",
+    "https://numbersapi.com"
+  ],
+  "researcher_confidence": "medium"
+}

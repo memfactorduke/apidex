@@ -1,0 +1,43 @@
+{
+  "id": "currencyapi",
+  "status": "operational",
+  "name": "CurrencyAPI",
+  "category": "finance",
+  "tagline": "Real-time and historical foreign exchange rates for 168+ currencies via REST.",
+  "description": "CurrencyAPI (currencyapi.com) provides a REST API for live and historical currency conversion rates, covering 168+ world currencies plus metals and cryptocurrencies depending on plan. Developers authenticate with an API key and can fetch latest rates, convert amounts, list supported currencies, and pull historical data. Common use cases include multi-currency pricing, fintech dashboards, and e-commerce checkout conversion. Free and paid tiers are available with monthly request quotas.",
+  "base_url": "https://api.currencyapi.com/v3",
+  "docs_url": "https://currencyapi.com/docs",
+  "signup_url": "https://currencyapi.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter or apikey header (self-serve signup at currencyapi.com)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "300 requests/month free (Free plan); paid plans from $10/mo",
+    "paid_plans": "Basic $10/mo, Pro $30/mo, Business $99.99/mo \u2014 higher monthly request quotas and features"
+  },
+  "rate_limits": "Monthly quota by plan (e.g. Free 300/mo); additional per-minute limits not clearly published",
+  "example": {
+    "request": "curl \"https://api.currencyapi.com/v3/latest?apikey=YOUR_API_KEY&base_currency=USD&currencies=EUR,GBP\"",
+    "response_snippet": "{\"meta\":{\"last_updated_at\":\"2024-01-15T12:00:00Z\"},\"data\":{\"EUR\":{\"code\":\"EUR\",\"value\":0.92},\"GBP\":{\"code\":\"GBP\",\"value\":0.79}}}"
+  },
+  "use_cases": [
+    "get latest exchange rates for a base currency",
+    "convert an amount between two currencies",
+    "list supported currency codes and metadata",
+    "fetch historical FX rates for a given date",
+    "build multi-currency product pricing"
+  ],
+  "sources": [
+    "https://currencyapi.com/",
+    "https://currencyapi.com/docs",
+    "https://currencyapi.com/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

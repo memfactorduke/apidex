@@ -1,0 +1,45 @@
+{
+  "id": "musicbrainz",
+  "status": "operational",
+  "name": "MusicBrainz",
+  "category": "entertainment",
+  "tagline": "Open music encyclopedia API for artists, releases, recordings, and relationships",
+  "description": "MusicBrainz provides a free, community-maintained music metadata API covering artists, releases, recordings, labels, works, and relationships. The JSON/XML web service is the primary developer interface, with strict rate limits and a required identifying User-Agent.",
+  "base_url": "https://musicbrainz.org/ws/2",
+  "docs_url": "https://musicbrainz.org/doc/MusicBrainz_API",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key. Identify with a descriptive User-Agent (app name + contact URL or email). OAuth is optional for edit/submit operations."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use; commercial use requires a license agreement with MetaBrainz",
+    "paid_plans": "Commercial licensing available via MetaBrainz Foundation"
+  },
+  "rate_limits": "1 request per second average; bursts may be throttled; anonymous/shared IPs more restricted",
+  "example": {
+    "request": "curl -H \"User-Agent: MyApp/1.0 (https://example.com)\" \"https://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?fmt=json\"",
+    "response_snippet": "{\"id\":\"5b11f4ce-a62d-471e-81fc-a69a8278c7da\",\"name\":\"Nirvana\",\"type\":\"Group\",\"country\":\"US\",\"life-span\":{\"begin\":\"1988\",\"end\":\"1994\",\"ended\":true}}"
+  },
+  "use_cases": [
+    "look up an artist by MusicBrainz ID",
+    "search releases by title and artist",
+    "resolve ISRC or barcode to a recording/release",
+    "get relationships (members, covers, samples) for an entity",
+    "fetch track listings and medium info for a release"
+  ],
+  "sources": [
+    "https://musicbrainz.org/doc/MusicBrainz_API",
+    "https://musicbrainz.org/doc/MusicBrainz_API/Search",
+    "https://musicbrainz.org/doc/XML_Web_Service/Rate_Limiting",
+    "https://metabrainz.org/supporters/account-type"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "twelve-data",
+  "status": "operational",
+  "name": "Twelve Data",
+  "category": "finance",
+  "tagline": "Real-time and historical stock, forex, crypto, and market data API",
+  "description": "Twelve Data provides market data APIs for stocks, forex, cryptocurrencies, ETFs, and more, including real-time quotes, time series, technical indicators, and fundamentals. Developers authenticate with an API key and call REST endpoints for prices, candles, and reference data across global markets.",
+  "base_url": "https://api.twelvedata.com",
+  "docs_url": "https://twelvedata.com/docs",
+  "signup_url": "https://twelvedata.com/pricing",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter or Authorization header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.twelvedata.com/price?symbol=AAPL&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{\"price\": \"178.72\"}"
+  },
+  "use_cases": [
+    "get real-time stock quote for a ticker",
+    "fetch historical OHLCV time series for a symbol",
+    "compute technical indicators for a security",
+    "list forex or crypto exchange rates"
+  ],
+  "sources": [
+    "https://twelvedata.com"
+  ],
+  "researcher_confidence": "low"
+}

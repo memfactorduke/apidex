@@ -1,0 +1,38 @@
+{
+  "id": "slack",
+  "status": "operational",
+  "name": "Slack",
+  "category": "social-communication",
+  "tagline": "Workspace messaging API for chat, files, channels, and apps",
+  "description": "Slack Web API for posting messages, managing channels, files, users, and building workspace apps with OAuth and bot tokens.",
+  "base_url": "https://slack.com/api",
+  "docs_url": "https://api.slack.com/",
+  "signup_url": "https://api.slack.com/apps",
+  "auth": {
+    "type": "oauth2",
+    "details": "Bot/user tokens via OAuth 2.0 (Bearer Authorization header); also legacy tokens and signing secrets for Events API"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://slack.com/api/auth.test",
+    "response_snippet": "{\"ok\":true}"
+  },
+  "use_cases": [
+    "post a message to a channel",
+    "list channels in a workspace"
+  ],
+  "sources": [
+    "https://api.slack.com/"
+  ],
+  "researcher_confidence": "low"
+}

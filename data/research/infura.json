@@ -1,0 +1,41 @@
+{
+  "id": "infura",
+  "status": "operational",
+  "name": "Infura",
+  "category": "crypto",
+  "tagline": "Ethereum and multi-chain Web3 API infrastructure for dapps and wallets",
+  "description": "Infura provides hosted JSON-RPC and WebSocket access to Ethereum and other networks, plus IPFS, so developers can read chain state, send transactions, and subscribe to events without running their own nodes.",
+  "base_url": "https://mainnet.infura.io/v3",
+  "docs_url": "https://docs.infura.io",
+  "signup_url": "https://app.infura.io/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key (project ID) in the path as https://<network>.infura.io/v3/YOUR_API_KEY; self-serve signup at Infura dashboard"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://mainnet.infura.io/v3/YOUR_API_KEY -H \"Content-Type: application/json\" -d '{\"jsonrpc\":\"2.0\",\"method\":\"eth_blockNumber\",\"params\":[],\"id\":1}'",
+    "response_snippet": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"0x12a05f1\"}"
+  },
+  "use_cases": [
+    "get latest Ethereum block number via JSON-RPC",
+    "read ERC-20 token balances on mainnet",
+    "send signed transactions without running a node",
+    "subscribe to pending transactions over WebSocket"
+  ],
+  "sources": [
+    "https://docs.infura.io",
+    "https://www.infura.io"
+  ],
+  "researcher_confidence": "low"
+}

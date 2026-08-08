@@ -1,0 +1,43 @@
+{
+  "id": "usaspending",
+  "status": "operational",
+  "name": "USA Spending API",
+  "category": "government-open-data",
+  "tagline": "Federal award spending data from USAspending.gov for contracts, grants, loans, and more.",
+  "description": "Public REST API from the U.S. Treasury\u2019s USAspending.gov that exposes federal award and spending data: contracts, grants, loans, direct payments, and agency budgets. Developers query awards, recipients, agencies, and geographic breakdowns as JSON without an API key for most endpoints.",
+  "base_url": "https://api.usaspending.gov/api/v2",
+  "docs_url": "https://api.usaspending.gov/docs/endpoints",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints; requests are open over HTTPS."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public API; no paid plans or usage quotas published",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.usaspending.gov/api/v2/references/toptier_agencies/\"",
+    "response_snippet": "{\"results\":[{\"agency_id\":1,\"toptier_code\":\"001\",\"abbreviation\":\"USAID\",\"agency_name\":\"Agency for International Development\",...}]}"
+  },
+  "use_cases": [
+    "search federal contract awards by agency or keyword",
+    "look up grant spending for a recipient or location",
+    "list top-tier federal agencies and budget authority",
+    "get award details for a known award ID",
+    "break down federal spending by state or congressional district"
+  ],
+  "sources": [
+    "https://api.usaspending.gov/docs/endpoints",
+    "https://api.usaspending.gov/",
+    "https://github.com/fedspendingtransparency/usaspending-api"
+  ],
+  "researcher_confidence": "medium"
+}

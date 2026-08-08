@@ -1,0 +1,45 @@
+{
+  "id": "groq",
+  "status": "operational",
+  "name": "Groq API",
+  "category": "ai-ml",
+  "tagline": "Ultra-fast LLM inference via OpenAI-compatible API",
+  "description": "Groq provides high-speed inference for open-source and proprietary large language models through an OpenAI-compatible REST API. Developers send chat completions, tool calls, and embeddings to models like Llama, Mixtral, and Gemma, typically with very low latency on Groq\u2019s LPU hardware. Authentication uses a Bearer API key; free and paid tiers include rate limits that vary by model and plan.",
+  "base_url": "https://api.groq.com/openai/v1",
+  "docs_url": "https://console.groq.com/docs",
+  "signup_url": "https://console.groq.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; create keys in Groq Console after free signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier with rate limits that vary by model (e.g. requests/min and tokens/min); exact free allowances change \u2014 check console rate-limits docs",
+    "paid_plans": "Pay-as-you-go per million tokens by model; higher rate limits on Developer/Enterprise plans"
+  },
+  "rate_limits": "Per-model RPM/TPM/RPD limits; free tier lower, paid higher \u2014 see console rate limits page",
+  "example": {
+    "request": "curl https://api.groq.com/openai/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"llama-3.3-70b-versatile\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"chatcmpl-...\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":8,\"total_tokens\":18}}"
+  },
+  "use_cases": [
+    "run fast chat completions with open LLMs",
+    "stream low-latency LLM responses for agents",
+    "call tools/functions via OpenAI-compatible chat API",
+    "batch or high-throughput inference with rate-limited free tier",
+    "swap OpenAI client base URL to Groq for cheaper/faster models"
+  ],
+  "sources": [
+    "https://console.groq.com/docs",
+    "https://console.groq.com/docs/quickstart",
+    "https://console.groq.com/docs/api-reference",
+    "https://console.groq.com/docs/rate-limits",
+    "https://groq.com/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

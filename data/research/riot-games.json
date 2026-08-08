@@ -1,0 +1,45 @@
+{
+  "id": "riot-games",
+  "status": "operational",
+  "name": "Riot Games API",
+  "category": "games-comics",
+  "tagline": "Official competitive game data for League of Legends, Valorant, TFT, and more",
+  "description": "The Riot Games API provides developers with programmatic access to official competitive data across Riot titles including League of Legends, VALORANT, Teamfight Tactics, Legends of Runeterra, and more. It exposes match history, player stats, ranked ladders, live game data, and account identity via regional routing. Authentication uses a free personal API key from the Riot Developer Portal with strict rate limits; production apps require a formal application for higher limits.",
+  "base_url": "https://{region}.api.riotgames.com",
+  "docs_url": "https://developer.riotgames.com/docs/portal",
+  "signup_url": "https://developer.riotgames.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal API key via X-Riot-Token header (or api_key query param). Self-serve signup at developer.riotgames.com; keys expire after 24 hours for development, production keys via application approval."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Personal development keys: free with short-term expiration (24h renewal) and low rate limits; production keys free after application approval with higher limits",
+    "paid_plans": null
+  },
+  "rate_limits": "Personal keys typically 20 requests/1s and 100 requests/2min (app-specific limits shown in developer portal); production apps get higher limits after approval",
+  "example": {
+    "request": "curl -H \"X-Riot-Token: YOUR_API_KEY\" \"https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Doublelift\"",
+    "response_snippet": "{\n  \"id\": \"abc123...\",\n  \"accountId\": \"xyz789...\",\n  \"puuid\": \"puuid-here\",\n  \"name\": \"Doublelift\",\n  \"profileIconId\": 29,\n  \"revisionDate\": 1609459200000,\n  \"summonerLevel\": 500\n}"
+  },
+  "use_cases": [
+    "look up a League of Legends summoner by name or PUUID",
+    "fetch match history and match details for a player",
+    "get ranked ladder standings for a queue",
+    "retrieve VALORANT player match stats by region",
+    "get Teamfight Tactics (TFT) ranked leaderboard data",
+    "resolve Riot account identity across games via account-v1"
+  ],
+  "sources": [
+    "https://developer.riotgames.com/",
+    "https://developer.riotgames.com/docs/portal",
+    "https://developer.riotgames.com/apis",
+    "https://developer.riotgames.com/docs/lol"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "airnow",
+  "status": "operational",
+  "name": "EPA AirNow API",
+  "category": "government-open-data",
+  "tagline": "Real-time and forecast air quality data from the U.S. EPA AirNow program",
+  "description": "Official U.S. Environmental Protection Agency AirNow web services for current conditions, forecasts, observations, and historical air quality (AQI) data by ZIP code, lat/long, or reporting area. Returns pollutant-level data (ozone, PM2.5, PM10, etc.) used in environmental apps, health alerts, and research.",
+  "base_url": "https://www.airnowapi.org",
+  "docs_url": "https://docs.airnowapi.org",
+  "signup_url": "https://docs.airnowapi.org/account/request/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via API_KEY query parameter after free self-serve registration at docs.airnowapi.org; key required for all web service calls."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use; rate limits apply (see rate_limits). Commercial use may require agreement.",
+    "paid_plans": null
+  },
+  "rate_limits": "500 requests per hour per API key (commonly cited; verify in account/docs)",
+  "example": {
+    "request": "curl \"https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=90210&distance=25&API_KEY=YOUR_API_KEY\"",
+    "response_snippet": "[{\"DateObserved\":\"2026-03-15\",\"HourObserved\":12,\"LocalTimeZone\":\"PST\",\"ReportingArea\":\"Los Angeles\",\"StateCode\":\"CA\",\"Latitude\":34.05,\"Longitude\":-118.24,\"ParameterName\":\"O3\",\"AQI\":45,\"Category\":{\"Number\":1,\"Name\":\"Good\"}}]"
+  },
+  "use_cases": [
+    "get current AQI by ZIP code",
+    "fetch air quality forecast for lat/long",
+    "retrieve historical observations for a reporting area",
+    "map nearby monitoring stations and pollutant readings",
+    "build health alerts from ozone and PM2.5 AQI"
+  ],
+  "sources": [
+    "https://docs.airnowapi.org",
+    "https://www.airnowapi.org",
+    "https://www.airnow.gov"
+  ],
+  "researcher_confidence": "medium"
+}

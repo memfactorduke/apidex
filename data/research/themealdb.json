@@ -1,0 +1,42 @@
+{
+  "id": "themealdb",
+  "status": "operational",
+  "name": "TheMealDB",
+  "category": "food-drink",
+  "tagline": "Free recipe and meal database API for meals, ingredients, and categories",
+  "description": "TheMealDB is a free open recipe database with a REST API for searching meals by name, ingredient, category, or area; looking up full recipes with instructions and images; listing categories and random meals. Popular with developers for demos and food apps. Free test key is available; premium paid keys unlock higher limits.",
+  "base_url": "https://www.themealdb.com/api/json/v1",
+  "docs_url": "https://www.themealdb.com/api.php",
+  "signup_url": "https://www.themealdb.com/api.php",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key in URL path as /api/json/v1/{API_KEY}/... Free test key is 1. Premium keys available via Patreon/subscription."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free test API key \"1\" with limited access; premium paid keys via Patreon for higher limits (exact limits not fully published on main docs)",
+    "paid_plans": "Premium API key via TheMealDB Patreon/subscription"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata\"",
+    "response_snippet": "{\"meals\":[{\"idMeal\":\"52771\",\"strMeal\":\"Spicy Arrabiata Penne\",\"strCategory\":\"Vegetarian\",\"strArea\":\"Italian\",\"strInstructions\":\"Bring a large pot of water to a boil...\",\"strMealThumb\":\"https://www.themealdb.com/images/media/meals/...\",\"strIngredient1\":\"penne rigate\",\"strMeasure1\":\"1 pound\"}]}"
+  },
+  "use_cases": [
+    "search recipes by meal name",
+    "look up full recipe with ingredients and instructions",
+    "filter meals by main ingredient",
+    "list meal categories or random meal ideas",
+    "get meals by cuisine/area"
+  ],
+  "sources": [
+    "https://www.themealdb.com/api.php",
+    "https://www.themealdb.com/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "urlscan-io",
+  "status": "operational",
+  "name": "urlscan.io",
+  "category": "security-identity",
+  "tagline": "Live website scanning and sandboxing for phishing and malware investigation.",
+  "description": "urlscan.io is a public API for submitting URLs to a browser sandbox, capturing screenshots, network activity, DOM, and threat indicators. Used by security teams and researchers to investigate phishing, malware, and suspicious sites with search and result APIs.",
+  "base_url": "https://urlscan.io/api/v1",
+  "docs_url": "https://urlscan.io/docs/api/",
+  "signup_url": "https://urlscan.io/user/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via API-Key header (or ?apiKey= query param on some endpoints); self-serve signup at urlscan.io. Public search may work unauthenticated with lower limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"API-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"url\":\"https://example.com\",\"visibility\":\"public\"}' https://urlscan.io/api/v1/scan/",
+    "response_snippet": "{\"message\":\"Submission successful\",\"uuid\":\"...\",\"result\":\"https://urlscan.io/result/.../\",\"api\":\"https://urlscan.io/api/v1/result/.../\",\"visibility\":\"public\",\"url\":\"https://example.com\",\"country\":\"US\"}"
+  },
+  "use_cases": [
+    "submit a URL for sandbox scanning and get a result UUID",
+    "fetch scan result JSON including network requests and screenshots",
+    "search historical urlscan results for a domain or hash",
+    "check if a URL has been scanned before for phishing investigation"
+  ],
+  "sources": [
+    "https://urlscan.io/docs/api/"
+  ],
+  "researcher_confidence": "low"
+}

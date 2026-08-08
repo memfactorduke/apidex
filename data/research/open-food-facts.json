@@ -1,0 +1,44 @@
+{
+  "id": "open-food-facts",
+  "status": "operational",
+  "name": "Open Food Facts",
+  "category": "food-drink",
+  "tagline": "Open product database API for food barcodes, ingredients, nutrition, and labels worldwide",
+  "description": "Open Food Facts is a free, collaborative database of food products from around the world. Its public API lets developers look up products by barcode, search by name or brand, and retrieve ingredients, nutrition facts, allergens, labels, and scores (Nutri-Score, NOVA, Eco-Score). Data is crowd-sourced and available under an open license. No API key is required for standard read access.",
+  "base_url": "https://world.openfoodfacts.org",
+  "docs_url": "https://openfoodfacts.github.io/openfoodfacts-server/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for standard product read and search endpoints. Write operations (product contributions) require a free user account with User-Agent identification recommended for all requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free and open; no paid plans. Rate limiting applies (see rate_limits).",
+    "paid_plans": null
+  },
+  "rate_limits": "not published in detail; community guidance recommends ~100 req/min for product queries and identifying via User-Agent. Avoid bulk scraping without coordination.",
+  "example": {
+    "request": "curl -s \"https://world.openfoodfacts.org/api/v2/product/3017620422003.json\" -H \"User-Agent: YourApp/1.0 (contact@example.com)\"",
+    "response_snippet": "{\"code\":\"3017620422003\",\"status\":1,\"status_verbose\":\"product found\",\"product\":{\"product_name\":\"Nutella\",\"brands\":\"Ferrero\",\"nutriscore_grade\":\"e\",\"ingredients_text\":\"...\",\"nutriments\":{\"energy-kcal_100g\":539}}}"
+  },
+  "use_cases": [
+    "look up a food product by barcode for ingredients and nutrition",
+    "search products by name or brand",
+    "get Nutri-Score, NOVA, and allergen info for a product",
+    "build a shopping or diet app product catalog from open data",
+    "check labels and additives for a packaged food item"
+  ],
+  "sources": [
+    "https://openfoodfacts.github.io/openfoodfacts-server/api/",
+    "https://world.openfoodfacts.org",
+    "https://wiki.openfoodfacts.org/API",
+    "https://github.com/openfoodfacts/openfoodfacts-server"
+  ],
+  "researcher_confidence": "medium"
+}

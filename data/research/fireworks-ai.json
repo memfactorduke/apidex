@@ -1,0 +1,41 @@
+{
+  "id": "fireworks-ai",
+  "status": "operational",
+  "name": "Fireworks AI",
+  "category": "ai-ml",
+  "tagline": "Fast inference API for open-source LLMs and multimodal models",
+  "description": "Fireworks AI provides a high-performance inference API for open-source and proprietary large language models, image generation, embeddings, and fine-tuning. Developers call an OpenAI-compatible REST API at api.fireworks.ai for chat completions, text generation, and related model endpoints with serverless or dedicated deployments.",
+  "base_url": "https://api.fireworks.ai/inference/v1",
+  "docs_url": "https://docs.fireworks.ai/",
+  "signup_url": "https://fireworks.ai/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (or FIREWORKS_API_KEY). Self-serve signup at fireworks.ai; keys managed in account console."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.fireworks.ai/inference/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"accounts/fireworks/models/llama-v3p1-8b-instruct\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"...\",\"object\":\"chat.completion\",\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help?\"}}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":8}}"
+  },
+  "use_cases": [
+    "run chat completions with open-source LLMs",
+    "generate embeddings for RAG",
+    "call vision or multimodal models",
+    "deploy fine-tuned models via serverless inference"
+  ],
+  "sources": [
+    "https://docs.fireworks.ai/",
+    "https://fireworks.ai/"
+  ],
+  "researcher_confidence": "low"
+}

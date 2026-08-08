@@ -1,0 +1,39 @@
+{
+  "id": "exa",
+  "status": "operational",
+  "name": "Exa",
+  "category": "data-analytics",
+  "tagline": "Neural web search API for finding relevant pages and content",
+  "description": "Exa is a neural web search API that helps developers find relevant web pages and content using semantic search. It provides endpoints for searching, finding similar pages, and retrieving content from the web.",
+  "base_url": "https://api.exa.ai",
+  "docs_url": "https://docs.exa.ai",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-api-key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.exa.ai/search -H \"x-api-key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\": \"latest AI research\"}'",
+    "response_snippet": "{\"results\": [{\"title\": \"Example\", \"url\": \"https://example.com\"}]}"
+  },
+  "use_cases": [
+    "find relevant web pages for a research query",
+    "get content from search results",
+    "find similar pages to a given URL"
+  ],
+  "sources": [
+    "https://exa.ai",
+    "https://docs.exa.ai"
+  ],
+  "researcher_confidence": "low"
+}

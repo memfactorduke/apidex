@@ -1,0 +1,40 @@
+{
+  "id": "jokeapi",
+  "status": "operational",
+  "name": "JokeAPI",
+  "category": "fun-novelty",
+  "tagline": "Free multi-language joke API with category filters and blacklists",
+  "description": "JokeAPI is a free public joke API that serves jokes in multiple languages with filtering by category, type, and blacklist flags. It supports no-key access for common client use, optional safe-mode filtering, and JSON responses suitable for bots, apps, and demos.",
+  "base_url": "https://v2.jokeapi.dev",
+  "docs_url": "https://v2.jokeapi.dev/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for standard public endpoints; requests work without an API key."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://v2.jokeapi.dev/joke/Any\"",
+    "response_snippet": "{\"error\":false,\"category\":\"Programming\",\"type\":\"single\",\"joke\":\"...\",\"id\":0,\"safe\":true,\"lang\":\"en\"}"
+  },
+  "use_cases": [
+    "fetch a random joke for a chatbot reply",
+    "get programming jokes with blacklist filters",
+    "list joke categories for a joke picker UI",
+    "fetch multi-language jokes for localization demos"
+  ],
+  "sources": [
+    "https://v2.jokeapi.dev/"
+  ],
+  "researcher_confidence": "low"
+}

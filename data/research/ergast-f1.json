@@ -1,0 +1,42 @@
+{
+  "id": "ergast-f1",
+  "status": "operational",
+  "name": "Ergast F1",
+  "category": "sports",
+  "tagline": "Classic Formula 1 historical race results and standings API",
+  "description": "Ergast provides historical Formula 1 data including race results, qualifying, drivers, constructors, circuits, and championship standings via a free public HTTP API. The classic ergast.com service has been widely used by developers; current host and operational status should be verified against official docs.",
+  "base_url": "https://ergast.com/api/f1",
+  "docs_url": "https://ergast.com/mrd/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public API access"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://ergast.com/api/f1/2024/1/results.json'",
+    "response_snippet": "{\"MRData\":{\"xmlns\":\"http://ergast.com/mrd/1.5\",\"series\":\"f1\",\"url\":\"http://ergast.com/api/f1/2024/1/results.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"RaceTable\":{\"season\":\"2024\",\"round\":\"1\",\"Races\":[{\"season\":\"2024\",\"round\":\"1\",\"raceName\":\"Bahrain Grand Prix\",\"Results\":[{\"number\":\"1\",\"position\":\"1\",\"positionText\":\"1\",\"points\":\"26\",\"Driver\":{\"driverId\":\"max_verstappen\",\"givenName\":\"Max\",\"familyName\":\"Verstappen\"},\"Constructor\":{\"constructorId\":\"red_bull\",\"name\":\"Red Bull\"}}]}]}}}"
+  },
+  "use_cases": [
+    "get Formula 1 race results for a season or round",
+    "fetch driver or constructor championship standings",
+    "list F1 circuits, drivers, or constructors by season",
+    "get qualifying results for a specific Grand Prix",
+    "look up lap times or pit stops for a race"
+  ],
+  "sources": [
+    "https://ergast.com/mrd/"
+  ],
+  "researcher_confidence": "low"
+}

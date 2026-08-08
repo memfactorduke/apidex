@@ -1,0 +1,43 @@
+{
+  "id": "here",
+  "status": "operational",
+  "name": "HERE Maps",
+  "category": "geo-maps",
+  "tagline": "Maps, geocoding, routing, and location services for global applications",
+  "description": "HERE Location Services provide maps, geocoding, reverse geocoding, routing, traffic, and places APIs used by developers to build location-aware applications. Official docs and self-serve credentials live on the HERE developer platform.",
+  "base_url": "https://geocode.search.hereapi.com",
+  "docs_url": "https://www.here.com/docs",
+  "signup_url": "https://platform.here.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter apiKey= (self-serve platform signup); OAuth/JWT also available for enterprise."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://geocode.search.hereapi.com/v1/geocode?q=Berlin&apiKey=YOUR_API_KEY\"",
+    "response_snippet": "{\"items\":[{\"title\":\"Berlin, Germany\",\"id\":\"here:cm:namedplace:20187403\",\"resultType\":\"locality\",\"address\":{\"label\":\"Berlin, Germany\",\"countryCode\":\"DEU\",\"countryName\":\"Germany\",\"state\":\"Berlin\",\"city\":\"Berlin\"},\"position\":{\"lat\":52.51604,\"lng\":13.37691}}]}"
+  },
+  "use_cases": [
+    "geocode an address to coordinates",
+    "reverse-geocode lat/lng to an address",
+    "calculate a driving route between two points",
+    "search nearby places by category",
+    "get traffic conditions along a route"
+  ],
+  "sources": [
+    "https://www.here.com/docs",
+    "https://www.here.com/docs/bundle/geocoding-and-search-api-v7-api-reference/page/index.html",
+    "https://platform.here.com/"
+  ],
+  "researcher_confidence": "low"
+}

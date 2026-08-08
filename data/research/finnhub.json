@@ -1,0 +1,42 @@
+{
+  "id": "finnhub",
+  "status": "operational",
+  "name": "Finnhub",
+  "category": "finance",
+  "tagline": "Real-time stock, forex, crypto, and company fundamentals API for markets data",
+  "description": "Finnhub provides market data APIs for stocks, forex, crypto, company fundamentals, news, and economic indicators. Developers authenticate with a free API key and call REST endpoints for quotes, candles, financials, and more; WebSocket streaming is also available for real-time trades.",
+  "base_url": "https://finnhub.io/api/v1",
+  "docs_url": "https://finnhub.io/docs/api",
+  "signup_url": "https://finnhub.io/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via token query parameter (?token=YOUR_API_KEY) or X-Finnhub-Token header; free self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier available; exact current limits vary by plan \u2014 verify on pricing page",
+    "paid_plans": "Paid plans available for higher rate limits and premium data"
+  },
+  "rate_limits": "Published limits depend on plan; free tier has request-per-minute limits",
+  "example": {
+    "request": "curl \"https://finnhub.io/api/v1/quote?symbol=AAPL&token=YOUR_API_KEY\"",
+    "response_snippet": "{\"c\":172.5,\"d\":1.2,\"dp\":0.7,\"h\":173.0,\"l\":171.0,\"o\":171.5,\"pc\":171.3,\"t\":1699999999}"
+  },
+  "use_cases": [
+    "get real-time stock quote for a ticker",
+    "fetch historical OHLCV candles for a symbol",
+    "retrieve company financials and fundamentals",
+    "stream real-time trades over WebSocket",
+    "get market news for a company or general market"
+  ],
+  "sources": [
+    "https://finnhub.io/docs/api",
+    "https://finnhub.io/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "uniprot",
+  "status": "operational",
+  "name": "UniProt",
+  "category": "science-space",
+  "tagline": "Universal protein sequence and functional annotation REST API",
+  "description": "UniProt provides free REST access to the Universal Protein Resource: protein sequences, function annotations, taxonomy, and cross-references across Swiss-Prot and TrEMBL. Developers query by accession, search with Lucene-style syntax, stream bulk downloads, and retrieve JSON or other formats from rest.uniprot.org without API keys for typical use.",
+  "base_url": "https://rest.uniprot.org",
+  "docs_url": "https://www.uniprot.org/help/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or account required for public REST access; requests are open over HTTPS. Heavy bulk use should follow published rate guidance and contact UniProt support if needed."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "text",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public academic resource; no paid plans. Practical limits are rate-based (see rate_limits), not a free-tier quota.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published guidance: about 5 requests/second per IP for interactive use; bulk jobs and streaming preferred for large downloads. Exact hard caps may vary; contact UniProt for sustained high volume.",
+  "example": {
+    "request": "curl -s \"https://rest.uniprot.org/uniprotkb/P05067.json\"",
+    "response_snippet": "{\"entryType\":\"UniProtKB reviewed (Swiss-Prot)\",\"primaryAccession\":\"P05067\",\"uniProtkbId\":\"A4_HUMAN\",\"organism\":{\"scientificName\":\"Homo sapiens\",\"taxonId\":9606},\"proteinDescription\":{\"recommendedName\":{\"fullName\":{\"value\":\"Amyloid-beta precursor protein\"}}},\"sequence\":{\"value\":\"MLPGLA...\",\"length\":770}}"
+  },
+  "use_cases": [
+    "fetch protein sequence and annotations by UniProt accession",
+    "search UniProtKB with gene name or organism filters",
+    "retrieve cross-references to PDB, Ensembl, or GO for a protein",
+    "stream bulk UniProt entries for offline analysis",
+    "map protein IDs across databases via UniProt ID mapping",
+    "get taxonomy-linked protein sets for a species"
+  ],
+  "sources": [
+    "https://www.uniprot.org/help/api",
+    "https://www.uniprot.org/help/api_queries",
+    "https://rest.uniprot.org/",
+    "https://www.uniprot.org/"
+  ],
+  "researcher_confidence": "medium"
+}

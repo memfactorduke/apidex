@@ -1,0 +1,45 @@
+{
+  "id": "openai",
+  "status": "operational",
+  "name": "OpenAI API",
+  "category": "ai-ml",
+  "tagline": "Hosted models for chat, embeddings, images, audio, and more",
+  "description": "OpenAI's REST API for developers to call GPT and other models for chat completions, embeddings, image generation, speech, and related AI tasks. Authenticate with an API key, send HTTPS requests to api.openai.com, and receive JSON responses. Used widely for agents, apps, and automation that need language or multimodal model inference.",
+  "base_url": "https://api.openai.com/v1",
+  "docs_url": "https://platform.openai.com/docs",
+  "signup_url": "https://platform.openai.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token in Authorization header (API key from platform.openai.com); organization/project headers optional"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Pay-as-you-go by model and usage (tokens, images, audio); see platform.openai.com/docs/pricing"
+  },
+  "rate_limits": "Tier-based RPM/TPM limits that scale with usage and spend; exact numbers depend on account tier (see rate-limit docs)",
+  "example": {
+    "request": "curl https://api.openai.com/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"gpt-4o-mini\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"chatcmpl-...\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help you today?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":10,\"total_tokens\":18}}"
+  },
+  "use_cases": [
+    "generate chat completions with a GPT model",
+    "create text embeddings for search or clustering",
+    "generate or edit images from a prompt",
+    "transcribe audio to text with Whisper",
+    "build agent tools that call models via the Responses API"
+  ],
+  "sources": [
+    "https://platform.openai.com/docs",
+    "https://platform.openai.com/docs/api-reference",
+    "https://platform.openai.com/docs/pricing",
+    "https://platform.openai.com/docs/guides/rate-limits",
+    "https://status.openai.com"
+  ],
+  "researcher_confidence": "medium"
+}

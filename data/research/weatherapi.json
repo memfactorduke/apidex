@@ -1,0 +1,41 @@
+{
+  "id": "weatherapi",
+  "status": "operational",
+  "name": "WeatherAPI.com",
+  "category": "weather-environment",
+  "tagline": "REST weather API for forecasts, history, astronomy, and sports",
+  "description": "WeatherAPI.com is a REST weather data service offering current conditions, multi-day forecasts, historical weather, astronomy, and sports-related weather endpoints. Developers authenticate with a free API key and call JSON endpoints for location-based weather queries worldwide.",
+  "base_url": "https://api.weatherapi.com/v1",
+  "docs_url": "https://www.weatherapi.com/docs/",
+  "signup_url": "https://www.weatherapi.com/signup.aspx",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter key=YOUR_API_KEY (self-serve signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=London\"",
+    "response_snippet": "{\"location\":{\"name\":\"London\",\"region\":\"City of London, Greater London\",\"country\":\"United Kingdom\"},\"current\":{\"temp_c\":15.0,\"condition\":{\"text\":\"Partly cloudy\"}}}"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "get multi-day weather forecast for a location",
+    "look up historical weather for a past date",
+    "get astronomy data (sunrise, moon phase) for a location"
+  ],
+  "sources": [
+    "https://www.weatherapi.com/",
+    "https://www.weatherapi.com/docs/"
+  ],
+  "researcher_confidence": "low"
+}

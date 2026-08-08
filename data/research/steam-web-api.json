@@ -1,0 +1,51 @@
+{
+  "id": "steam-web-api",
+  "status": "operational",
+  "name": "Steam Web API",
+  "category": "games-comics",
+  "tagline": "Valve\u2019s official HTTP API for Steam players, games, news, and app data",
+  "description": "Valve\u2019s Steamworks Web API exposes public and partner HTTP methods for Steam. Developers query player profiles, owned and recently played games, achievements/stats, VAC bans, news, and more via interface-style paths. Public methods use a free user API key; publisher keys unlock ownership, microtransactions, and other partner-only calls. Hosted at api.steampowered.com (partner.steam-api.com for publisher traffic).",
+  "base_url": "https://api.steampowered.com",
+  "docs_url": "https://partner.steamgames.com/doc/webapi_overview",
+  "signup_url": "https://steamcommunity.com/dev/apikey",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query param key= or request header x-webapi-key. User keys: free self-serve at steamcommunity.com/dev/apikey (Steam account + domain, accept ToS). Publisher keys via Steamworks for protected methods. Some public methods need no key."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free API; 100,000 calls per day (Steam Web API Terms of Use)",
+    "paid_plans": null
+  },
+  "rate_limits": "100,000 calls per day (official ToS); excess use may return HTTP 429 or access denials",
+  "example": {
+    "request": "curl \"https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=YOUR_API_KEY&steamids=76561197960435530\"",
+    "response_snippet": "{\"response\":{\"players\":[{\"steamid\":\"76561197960435530\",\"communityvisibilitystate\":3,\"personaname\":\"...\",\"profileurl\":\"https://steamcommunity.com/id/.../\",\"avatar\":\"https://...jpg\",\"avatarmedium\":\"https://..._medium.jpg\",\"avatarfull\":\"https://..._full.jpg\"}]}}"
+  },
+  "use_cases": [
+    "get Steam player profile summary by 64-bit SteamID",
+    "list a user's owned games and playtime",
+    "fetch global or player achievement/stats for an app",
+    "resolve a vanity profile URL to a SteamID",
+    "get recent news posts for a Steam app",
+    "check VAC/community ban status for SteamIDs"
+  ],
+  "sources": [
+    "https://partner.steamgames.com/doc/webapi_overview",
+    "https://partner.steamgames.com/doc/webapi_overview/auth",
+    "https://partner.steamgames.com/doc/webapi",
+    "https://partner.steamgames.com/doc/webapi/ISteamUser",
+    "https://partner.steamgames.com/doc/webapi/ISteamNews",
+    "https://partner.steamgames.com/doc/webapi/IPlayerService",
+    "https://steamcommunity.com/dev",
+    "https://steamcommunity.com/dev/apiterms"
+  ],
+  "researcher_confidence": "high"
+}

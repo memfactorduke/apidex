@@ -1,0 +1,47 @@
+{
+  "id": "gitlab",
+  "status": "operational",
+  "name": "GitLab API",
+  "category": "dev-tools",
+  "tagline": "REST and GraphQL API for GitLab projects, issues, CI/CD, and repositories.",
+  "description": "GitLab provides a comprehensive REST API (v4) and GraphQL API for managing projects, repositories, issues, merge requests, CI/CD pipelines, users, and more. Available on GitLab.com (SaaS) and self-managed instances. Supports personal access tokens, OAuth 2.0, and project/group access tokens for authentication.",
+  "base_url": "https://gitlab.com/api/v4",
+  "docs_url": "https://docs.gitlab.com/ee/api/",
+  "signup_url": "https://gitlab.com/users/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal/project/group access token via PRIVATE-TOKEN header or Authorization: Bearer. OAuth 2.0 also supported. Self-serve signup on GitLab.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "GitLab.com Free plan includes API access; rate limits apply (see rate_limits). Paid tiers (Premium, Ultimate) add features, not separate API pricing.",
+    "paid_plans": "Free, Premium, Ultimate (per-user/seat pricing for Premium/Ultimate); self-managed has separate licensing."
+  },
+  "rate_limits": "GitLab.com enforces rate limits; exact numbers vary by endpoint and plan \u2014 check docs for current unauthenticated/authenticated limits.",
+  "example": {
+    "request": "curl --header \"PRIVATE-TOKEN: YOUR_API_KEY\" \"https://gitlab.com/api/v4/projects?membership=true&per_page=5\"",
+    "response_snippet": "[{\"id\":278964,\"description\":\"GitLab Community Edition\",\"name\":\"GitLab\",\"name_with_namespace\":\"GitLab.org / GitLab\",\"path\":\"gitlab\",\"path_with_namespace\":\"gitlab-org/gitlab\",\"created_at\":\"2011-10-06T00:00:00.000Z\",\"default_branch\":\"master\",\"...\"}]"
+  },
+  "use_cases": [
+    "list projects the authenticated user belongs to",
+    "create or update issues on a GitLab project",
+    "trigger or inspect CI/CD pipelines",
+    "read merge request status and comments",
+    "clone or inspect repository file contents via API",
+    "manage project members and access tokens"
+  ],
+  "sources": [
+    "https://docs.gitlab.com/ee/api/",
+    "https://docs.gitlab.com/ee/api/rest/",
+    "https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html",
+    "https://about.gitlab.com/pricing/",
+    "https://docs.gitlab.com/ee/security/rate_limits.html"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "free-dictionary-api",
+  "status": "operational",
+  "name": "Free Dictionary API",
+  "category": "education-reference",
+  "tagline": "Free English dictionary API with definitions, phonetics, and word origins.",
+  "description": "Public Free Dictionary API (dictionaryapi.dev) that returns word definitions, phonetics, part-of-speech entries, meanings, and origin data for English words. No authentication required; simple REST GET endpoints. Commonly used for language tools, learning apps, and NLP demos. Confirm current base URL, rate limits, and response shape from official docs before production use.",
+  "base_url": "https://api.dictionaryapi.dev/api/v2",
+  "docs_url": "https://dictionaryapi.dev/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public free endpoints; no API key or signup needed for standard dictionary lookups."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.dictionaryapi.dev/api/v2/entries/en/hello\"",
+    "response_snippet": "[{\"word\":\"hello\",\"phonetics\":[{\"text\":\"/h\u0259\u02c8l\u0259\u028a/\",\"audio\":\"https://api.dictionaryapi.dev/media/pronunciations/en/hello-uk.mp3\"}],\"meanings\":[{\"partOfSpeech\":\"noun\",\"definitions\":[{\"definition\":\"A greeting\",\"synonyms\":[],\"antonyms\":[]}]}],\"license\":{\"name\":\"CC BY-SA 3.0\"},\"sourceUrls\":[\"https://en.wiktionary.org/wiki/hello\"]}]"
+  },
+  "use_cases": [
+    "look up definitions and parts of speech for an English word",
+    "fetch phonetic transcription and pronunciation audio URL for a word",
+    "get word origin/etymology data when available",
+    "build a vocabulary or spelling helper for learning apps",
+    "resolve synonyms and related senses from dictionary entries"
+  ],
+  "sources": [
+    "https://dictionaryapi.dev/",
+    "https://api.dictionaryapi.dev/api/v2/entries/en/hello"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "merriam-webster",
+  "status": "operational",
+  "name": "Merriam-Webster Dictionary",
+  "category": "education-reference",
+  "tagline": "Authoritative English dictionary and thesaurus API for definitions, synonyms, and word data",
+  "description": "Merriam-Webster's Dictionary API provides programmatic access to trusted English dictionary and thesaurus content, including definitions, pronunciations, etymologies, synonyms, antonyms, and example sentences. Developers get free API keys for the Collegiate Dictionary, Thesaurus, and other reference products, making it a standard choice for language tools, writing apps, and educational products.",
+  "base_url": "https://www.dictionaryapi.com/api/v3",
+  "docs_url": "https://dictionaryapi.com/products",
+  "signup_url": "https://dictionaryapi.com/register/index",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key as query parameter `key`; free self-serve registration at dictionaryapi.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1000 requests/day per API key (standard free tier; confirm on account dashboard)",
+    "paid_plans": "Commercial/higher-volume plans available via Merriam-Webster sales"
+  },
+  "rate_limits": "1000 requests per day on free tier; higher limits via commercial agreement",
+  "example": {
+    "request": "curl \"https://www.dictionaryapi.com/api/v3/references/collegiate/json/hello?key=YOUR_API_KEY\"",
+    "response_snippet": "[{\"meta\":{\"id\":\"hello\",\"uuid\":\"...\",\"src\":\"collegiate\",\"section\":\"alpha\",\"stems\":[\"hello\"],\"offensive\":false},\"hwi\":{\"hw\":\"hel*lo\",\"prs\":[{\"mw\":\"h\u0259-\u02c8l\u014d\",\"sound\":{\"audio\":\"hello01\"}}]},\"fl\":\"interjection\",\"shortdef\":[\"used as a greeting or to begin a phone conversation\"]}]"
+  },
+  "use_cases": [
+    "look up dictionary definition for an English word",
+    "fetch synonyms and antonyms from a thesaurus",
+    "get pronunciation and audio reference for a word",
+    "resolve word stems and alternative spellings",
+    "build spell-check or vocabulary learning features"
+  ],
+  "sources": [
+    "https://dictionaryapi.com/",
+    "https://dictionaryapi.com/products",
+    "https://www.dictionaryapi.com/api/v3"
+  ],
+  "researcher_confidence": "medium"
+}

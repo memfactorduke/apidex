@@ -1,0 +1,43 @@
+{
+  "id": "kraken",
+  "status": "operational",
+  "name": "Kraken",
+  "category": "crypto",
+  "tagline": "Spot and futures cryptocurrency trading and market data API",
+  "description": "Kraken provides REST and WebSocket APIs for spot and derivatives trading, market data, account balances, order management, and funding operations. Public market endpoints require no authentication; private account and trading endpoints use API key authentication with request signing. Widely used by traders and bots for automated exchange access.",
+  "base_url": "https://api.kraken.com",
+  "docs_url": "https://docs.kraken.com/api/",
+  "signup_url": "https://www.kraken.com/u/security/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "Public endpoints need no auth. Private REST endpoints require API-Key and API-Sign headers (HMAC-SHA512 of nonce+POST data with base64-decoded secret), self-serve key creation in account settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access included with account; no separate API fee. Trading subject to Kraken fee schedule by volume.",
+    "paid_plans": "Volume-based trading fees; no separate API subscription tiers documented."
+  },
+  "rate_limits": "REST: counter-based (starts ~15, decays over time); private endpoints cost more. Exact counters vary by endpoint; WebSocket has separate limits. See docs for current tables.",
+  "example": {
+    "request": "curl -s 'https://api.kraken.com/0/public/Ticker?pair=XBTUSD'",
+    "response_snippet": "{\"error\":[],\"result\":{\"XXBTZUSD\":{\"a\":[\"65000.0\",\"1\",\"1.000\"],\"b\":[\"64999.0\",\"1\",\"1.000\"],\"c\":[\"65000.5\",\"0.01\"],\"v\":[\"100.5\",\"500.2\"],\"p\":[\"64800.0\",\"64750.0\"],\"t\":[1000,5000],\"l\":[\"64000.0\",\"63500.0\"],\"h\":[\"65500.0\",\"66000.0\"],\"o\":\"64500.0\"}}}"
+  },
+  "use_cases": [
+    "get live BTC/USD ticker price",
+    "place and cancel spot orders programmatically",
+    "fetch account balances and trade history",
+    "stream order book updates via WebSocket",
+    "pull OHLC candles for backtesting"
+  ],
+  "sources": [
+    "https://docs.kraken.com/api/",
+    "https://docs.kraken.com/rest/",
+    "https://www.kraken.com/features/api"
+  ],
+  "researcher_confidence": "medium"
+}

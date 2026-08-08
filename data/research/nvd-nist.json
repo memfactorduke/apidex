@@ -1,0 +1,40 @@
+{
+  "id": "nvd-nist",
+  "status": "operational",
+  "name": "NVD (NIST)",
+  "category": "security-identity",
+  "tagline": "US government CVE/CPE vulnerability catalog and API for scanners and SBOMs",
+  "description": "The National Vulnerability Database (NVD) is NIST\u2019s authoritative US government repository of standards-based vulnerability management data. It provides REST APIs for CVEs, CPEs, and related vulnerability metadata used by security scanners, SBOM tools, and vulnerability management systems.",
+  "base_url": "https://services.nvd.nist.gov/rest/json",
+  "docs_url": "https://nvd.nist.gov/developers",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via apiKey query parameter or header; higher rate limits with key from self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44228\"",
+    "response_snippet": "{\"resultsPerPage\":1,\"startIndex\":0,\"totalResults\":1,\"format\":\"NVD_CVE\",\"version\":\"2.0\",\"vulnerabilities\":[{\"cve\":{\"id\":\"CVE-2021-44228\",\"sourceIdentifier\":\"...\",\"published\":\"...\",\"vulnStatus\":\"Analyzed\"}}]}"
+  },
+  "use_cases": [
+    "look up CVE details by CVE ID",
+    "search recent CVEs by keyword or CPE",
+    "fetch CPE product dictionary matches",
+    "monitor new NVD vulnerability publications for a product"
+  ],
+  "sources": [
+    "https://nvd.nist.gov/developers"
+  ],
+  "researcher_confidence": "low"
+}

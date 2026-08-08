@@ -1,0 +1,39 @@
+{
+  "id": "ipapi",
+  "status": "operational",
+  "name": "ipapi",
+  "category": "geo-maps",
+  "tagline": "IP geolocation API for location, ASN, currency, and security data",
+  "description": "ipapi.co is a geolocation API that maps IP addresses to location and network metadata including city, region, country, timezone, currency, ASN, and optional security fields. Developers call a simple HTTPS JSON endpoint with an optional API key for higher rate limits. Free tier available for light use; paid plans for production volume.",
+  "base_url": "https://ipapi.co",
+  "docs_url": "https://ipapi.co/api/",
+  "signup_url": "https://ipapi.co/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via path (?key=) or query; free unauthenticated tier available with lower limits. Paid plans require key from self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://ipapi.co/8.8.8.8/json/\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "geolocate a client IP for localization",
+    "enrich logs with country/city from IP"
+  ],
+  "sources": [
+    "https://ipapi.co"
+  ],
+  "researcher_confidence": "low"
+}

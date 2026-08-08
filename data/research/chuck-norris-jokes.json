@@ -1,0 +1,43 @@
+{
+  "id": "chuck-norris-jokes",
+  "status": "operational",
+  "name": "Chuck Norris Jokes",
+  "category": "fun-novelty",
+  "tagline": "Free public API for random Chuck Norris jokes and facts by category",
+  "description": "A free, no-auth public API that serves random Chuck Norris jokes and facts. Developers can fetch random jokes, filter by category, search by keyword, and list available categories. Responses are JSON with joke text, category tags, and unique IDs. Ideal for demos, sample apps, and lightweight entertainment features.",
+  "base_url": "https://api.chucknorris.io",
+  "docs_url": "https://api.chucknorris.io/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; all endpoints are publicly accessible without API keys or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public API with no published usage caps",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://api.chucknorris.io/jokes/random",
+    "response_snippet": "{\"categories\":[],\"created_at\":\"2020-01-05 13:42:19.104863\",\"icon_url\":\"https://assets.chucknorris.host/img/avatar/chuck-norris.png\",\"id\":\"...\",\"updated_at\":\"2020-01-05 13:42:19.104863\",\"url\":\"https://api.chucknorris.io/jokes/...\",\"value\":\"Chuck Norris can divide by zero.\"}"
+  },
+  "use_cases": [
+    "get a random Chuck Norris joke",
+    "list available joke categories",
+    "fetch a random joke from a specific category",
+    "search Chuck Norris jokes by keyword",
+    "populate demo UI with sample joke data"
+  ],
+  "sources": [
+    "https://api.chucknorris.io/",
+    "https://api.chucknorris.io/jokes/random",
+    "https://api.chucknorris.io/jokes/categories"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "uselessfacts",
+  "status": "operational",
+  "name": "Useless Facts",
+  "category": "fun-novelty",
+  "tagline": "Random useless facts API with English and German support, daily fact endpoint, and no authentication required.",
+  "description": "Public API that serves random and daily useless facts in English and German. Developers call simple GET endpoints on uselessfacts.jsph.pl with optional language and path variants; no API key or signup is needed. Responses are JSON (or plain text) and suit demos, chat bots, onboarding copy, and novelty features. Confirm live base URL, paths, CORS, and any published limits against official docs before production use.",
+  "base_url": "https://uselessfacts.jsph.pl",
+  "docs_url": "https://uselessfacts.jsph.pl",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public GET endpoints; no API key, OAuth, or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://uselessfacts.jsph.pl/api/v2/facts/random\"",
+    "response_snippet": "{\n  \"id\": \"...\",\n  \"text\": \"A fact goes here.\",\n  \"source\": \"djtech.net\",\n  \"source_url\": \"http://www.djtech.net/humor/useless_facts.htm\",\n  \"language\": \"en\",\n  \"permalink\": \"https://uselessfacts.jsph.pl/api/v2/facts/...\"\n}"
+  },
+  "use_cases": [
+    "fetch a random English useless fact for a chat bot reply",
+    "get the daily useless fact for a homepage or newsletter widget",
+    "request a German-language random fact for localization demos",
+    "pull a fact as plain text for CLI or terminal tools",
+    "seed onboarding or empty-state copy with light novelty content"
+  ],
+  "sources": [
+    "https://uselessfacts.jsph.pl",
+    "https://uselessfacts.jsph.pl/api/v2/facts/random",
+    "https://github.com/jsphpl/api.uselessfacts.jsph.pl"
+  ],
+  "researcher_confidence": "medium"
+}

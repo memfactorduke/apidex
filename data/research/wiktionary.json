@@ -1,0 +1,43 @@
+{
+  "id": "wiktionary",
+  "status": "operational",
+  "name": "Wiktionary",
+  "category": "education-reference",
+  "tagline": "Multilingual dictionary and thesaurus via MediaWiki API",
+  "description": "Public MediaWiki API for Wiktionary providing dictionary definitions, translations, etymology, and linguistic data across many languages. Query page content, parse wikitext, search terms, and access structured extracts without a paid account.",
+  "base_url": "https://en.wiktionary.org/w/api.php",
+  "docs_url": "https://www.mediawiki.org/wiki/API:Main_page",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required for read-only public requests. Optional MediaWiki account/OAuth for authenticated or write actions; identify clients with a descriptive User-Agent."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for public read access; no paid API plans",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://en.wiktionary.org/w/api.php?action=query&prop=extracts&titles=dictionary&format=json&explaintext=1\"",
+    "response_snippet": "{\"batchcomplete\":\"\",\"query\":{\"pages\":{\"-1\":{\"ns\":0,\"title\":\"dictionary\",\"missing\":\"\"}}}}"
+  },
+  "use_cases": [
+    "look up a word definition in English Wiktionary",
+    "fetch translations of a term across languages",
+    "search dictionary entries by keyword",
+    "get page extract text for a lemma",
+    "check if a word page exists on Wiktionary"
+  ],
+  "sources": [
+    "https://www.mediawiki.org/wiki/API:Main_page",
+    "https://en.wiktionary.org/w/api.php"
+  ],
+  "researcher_confidence": "low"
+}

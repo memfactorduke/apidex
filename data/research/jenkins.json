@@ -1,0 +1,45 @@
+{
+  "id": "jenkins",
+  "status": "operational",
+  "name": "Jenkins Remote API",
+  "category": "dev-tools",
+  "tagline": "Remote REST/JSON API for Jenkins CI servers",
+  "description": "Jenkins exposes a Remote Access API on every object, allowing developers and automation tools to query jobs, builds, nodes, and system state, and to trigger builds over HTTP. It is server-local (each Jenkins instance hosts its own API), typically returning JSON or XML, and commonly authenticated with API tokens or username/password. As self-hosted software, pricing and rate limits are instance-specific rather than SaaS-wide.",
+  "base_url": "https://YOUR_JENKINS_HOST/",
+  "docs_url": "https://www.jenkins.io/doc/book/using/remote-access-api/",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "API token or username:password via HTTP Basic Auth (or crumb + session for CSRF-protected POSTs); configured per Jenkins instance, not a global SaaS key."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "html"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Open-source self-hosted; no SaaS free-tier quotas \u2014 limits depend on your Jenkins instance",
+    "paid_plans": "Jenkins core is free/open source; commercial support available via CloudBees and other vendors"
+  },
+  "rate_limits": "not published (self-hosted; instance-dependent)",
+  "example": {
+    "request": "curl -s -u YOUR_USERNAME:YOUR_API_TOKEN \"https://YOUR_JENKINS_HOST/api/json?pretty=true\"",
+    "response_snippet": "{\"_class\":\"hudson.model.Hudson\",\"mode\":\"NORMAL\",\"nodeDescription\":\"the master Jenkins node\",\"nodeName\":\"\",\"numExecutors\":2,\"description\":null,\"jobs\":[{\"_class\":\"hudson.model.FreeStyleProject\",\"name\":\"example-job\",\"url\":\"https://YOUR_JENKINS_HOST/job/example-job/\",\"color\":\"blue\"}],\"primaryView\":{\"_class\":\"hudson.model.AllView\",\"name\":\"all\",\"url\":\"https://YOUR_JENKINS_HOST/\"},\"quietingDown\":false,\"slaveAgentPort\":50000,\"useCrumbs\":true,\"useSecurity\":true,\"views\":[{\"_class\":\"hudson.model.AllView\",\"name\":\"all\",\"url\":\"https://YOUR_JENKINS_HOST/\"}]}"
+  },
+  "use_cases": [
+    "list jobs and their last build status on a Jenkins instance",
+    "trigger a parameterized build remotely",
+    "fetch build console log or build metadata by job name",
+    "check queue and executor status for CI capacity",
+    "get Jenkins version and system info from the root API"
+  ],
+  "sources": [
+    "https://www.jenkins.io/doc/book/using/remote-access-api/",
+    "https://www.jenkins.io/doc/",
+    "https://www.jenkins.io/"
+  ],
+  "researcher_confidence": "medium"
+}

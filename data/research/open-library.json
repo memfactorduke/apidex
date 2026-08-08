@@ -1,0 +1,41 @@
+{
+  "id": "open-library",
+  "status": "operational",
+  "name": "Open Library",
+  "category": "education-reference",
+  "tagline": "Internet Archive book catalog with search, editions, and cover images.",
+  "description": "Open Library is an Internet Archive project that exposes a free public API for searching books, resolving works and editions by ISBN/OLID, fetching metadata (authors, subjects, publish dates), and retrieving cover images. Developers use it for catalog lookup, book discovery, and enrichment without requiring commercial licensing for typical read-only access.",
+  "base_url": "https://openlibrary.org",
+  "docs_url": "https://openlibrary.org/developers/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Read-only catalog and cover endpoints require no authentication. Some write/account features may require login; typical public use is unauthenticated."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://openlibrary.org/search.json?q=the+lord+of+the+rings&limit=1\"",
+    "response_snippet": "{\"numFound\":...,\"docs\":[{\"key\":\"/works/OL...\",\"title\":\"The Lord of the Rings\",\"author_name\":[\"J. R. R. Tolkien\"],...}]}"
+  },
+  "use_cases": [
+    "search books by title or author",
+    "look up a book edition by ISBN",
+    "fetch work metadata and subjects",
+    "get cover image URLs for a book",
+    "resolve Open Library IDs for catalog linking"
+  ],
+  "sources": [
+    "https://openlibrary.org/developers/api"
+  ],
+  "researcher_confidence": "low"
+}

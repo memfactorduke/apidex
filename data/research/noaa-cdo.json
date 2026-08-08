@@ -1,0 +1,44 @@
+{
+  "id": "noaa-cdo",
+  "status": "operational",
+  "name": "NOAA Climate Data Online",
+  "category": "government-open-data",
+  "tagline": "Historical weather and climate observations from NOAA's National Centers for Environmental Information",
+  "description": "NOAA Climate Data Online (CDO) provides web services for accessing historical weather and climate data from the National Centers for Environmental Information (NCEI). Developers can query stations, datasets, data types, locations, and daily/monthly/annual observations worldwide via a token-authenticated REST API returning JSON or CSV.",
+  "base_url": "https://www.ncdc.noaa.gov/cdo-web/api/v2",
+  "docs_url": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+  "signup_url": "https://www.ncdc.noaa.gov/cdo-web/token",
+  "auth": {
+    "type": "apiKey",
+    "details": "Token via token header (not Authorization). Self-serve request at ncdc.noaa.gov/cdo-web/token; emailed after approval."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free with token; 5 requests/second and 10,000 requests/day (published service limits)",
+    "paid_plans": null
+  },
+  "rate_limits": "5 requests/second; 10,000 requests/day per token",
+  "example": {
+    "request": "curl -H \"token: YOUR_API_KEY\" \"https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets\"",
+    "response_snippet": "{\"metadata\":{\"resultset\":{\"offset\":1,\"count\":11,\"limit\":25}},\"results\":[{\"uid\":\"gov.noaa.ncdc:C00861\",\"mindate\":\"1763-01-01\",\"maxdate\":\"2024-12-31\",\"name\":\"Daily Summaries\",\"datacoverage\":1,\"id\":\"GHCND\"}]}"
+  },
+  "use_cases": [
+    "list available climate datasets and coverage dates",
+    "find weather stations near a lat/lon or by state",
+    "fetch daily precipitation and temperature for a station and date range",
+    "look up data types (TMAX, PRCP, etc.) for a dataset",
+    "query location catalogs (cities, ZIP, counties) for climate queries"
+  ],
+  "sources": [
+    "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+    "https://www.ncdc.noaa.gov/cdo-web/token",
+    "https://www.ncei.noaa.gov/cdo-web/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "virustotal",
+  "status": "operational",
+  "name": "VirusTotal",
+  "category": "security-identity",
+  "tagline": "Multi-engine file, URL, domain, and IP reputation scanning for security analysis",
+  "description": "VirusTotal aggregates antivirus engines, website scanners, and threat intelligence to analyze files, URLs, domains, and IP addresses. Its public API lets developers submit samples, retrieve multi-engine scan reports, and query reputation data used widely in security tooling and threat research.",
+  "base_url": "https://www.virustotal.com/api/v3",
+  "docs_url": "https://docs.virustotal.com/reference/overview",
+  "signup_url": "https://www.virustotal.com/gui/join-us",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-apikey header; free key from VirusTotal account after signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public API: 4 req/min, 500 req/day (typical free-tier limits; verify on account)",
+    "paid_plans": "Premium/enterprise API with higher quotas and additional endpoints"
+  },
+  "rate_limits": "Public API commonly 4 requests/minute and 500/day; premium tiers higher \u2014 confirm in account/docs",
+  "example": {
+    "request": "curl --request GET --url https://www.virustotal.com/api/v3/files/44d88612fea8a8f36de82e1278abb02f --header 'x-apikey: YOUR_API_KEY'",
+    "response_snippet": "{\"data\":{\"type\":\"file\",\"id\":\"44d88612fea8a8f36de82e1278abb02f\",\"attributes\":{\"last_analysis_stats\":{\"malicious\":0,\"suspicious\":0,\"undetected\":60,\"harmless\":0},\"meaningful_name\":\"eicar.com\",\"type_description\":\"DOS EXE\"}}}"
+  },
+  "use_cases": [
+    "check file hash reputation across antivirus engines",
+    "scan a URL for multi-engine malware detection",
+    "get domain or IP threat intelligence report",
+    "submit a file for analysis and poll for results",
+    "retrieve relationship data (e.g. contacted domains for a sample)"
+  ],
+  "sources": [
+    "https://docs.virustotal.com/",
+    "https://www.virustotal.com/"
+  ],
+  "researcher_confidence": "medium"
+}

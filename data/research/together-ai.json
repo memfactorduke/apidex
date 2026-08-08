@@ -1,0 +1,45 @@
+{
+  "id": "together-ai",
+  "status": "operational",
+  "name": "Together AI",
+  "category": "ai-ml",
+  "tagline": "Open-source model inference and fine-tuning API with serverless endpoints",
+  "description": "Together AI provides a unified API for running and fine-tuning open-source large language models, image models, and embeddings. Developers call chat completions, completions, embeddings, and image generation endpoints against hosted models (Llama, Mixtral, Qwen, FLUX, and others) with OpenAI-compatible request shapes and pay-as-you-go pricing.",
+  "base_url": "https://api.together.xyz/v1",
+  "docs_url": "https://docs.together.ai/",
+  "signup_url": "https://api.together.xyz/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token API key in Authorization header (Authorization: Bearer YOUR_API_KEY); keys created in the Together dashboard after self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "New accounts typically receive free trial credits on signup (amount varies; confirm in dashboard); no unlimited free request tier. Pay-as-you-go after credits.",
+    "paid_plans": "Pay-as-you-go per million tokens / per image by model; dedicated endpoints and enterprise plans available. See together.ai/pricing."
+  },
+  "rate_limits": "not published as a single global limit; tiered by account and model (check dashboard / rate-limit headers). Default serverless limits apply per model family.",
+  "example": {
+    "request": "curl https://api.together.xyz/v1/chat/completions \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\": \"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}], \"max_tokens\": 64}'",
+    "response_snippet": "{\"id\": \"chatcmpl-...\", \"object\": \"chat.completion\", \"choices\": [{\"index\": 0, \"message\": {\"role\": \"assistant\", \"content\": \"Hello! How can I help you today?\"}, \"finish_reason\": \"stop\"}], \"usage\": {\"prompt_tokens\": 12, \"completion_tokens\": 10, \"total_tokens\": 22}}"
+  },
+  "use_cases": [
+    "run chat completions with open-source LLMs",
+    "generate text embeddings for search or RAG",
+    "generate images from text prompts",
+    "fine-tune an open-source model on custom data",
+    "list available hosted models and pricing"
+  ],
+  "sources": [
+    "https://docs.together.ai/",
+    "https://docs.together.ai/docs/quickstart",
+    "https://docs.together.ai/reference/chat-completions",
+    "https://www.together.ai/pricing",
+    "https://api.together.xyz/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "nhl-api",
+  "status": "operational",
+  "name": "NHL API",
+  "category": "sports",
+  "tagline": "Official NHL web API for schedules, scores, standings, and team/player data",
+  "description": "Unofficial but widely used NHL web API at api-web.nhle.com providing live scores, schedules, standings, team rosters, and player statistics without authentication. Used by developers to build sports apps, dashboards, and fantasy tools. No official public documentation or pricing from the NHL; community-documented endpoints. Free to use with no published rate limits.",
+  "base_url": "https://api-web.nhle.com",
+  "docs_url": "https://github.com/Zmalski/NHL-API-Reference",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints accessible without API keys or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No signup or paid plans; unrestricted public access with no published free-tier caps",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api-web.nhle.com/v1/scoreboard/now\"",
+    "response_snippet": "{\"focusedDate\":\"2025-01-15\",\"gamesByDate\":[{\"date\":\"2025-01-15\",\"games\":[{\"id\":2024020123,\"season\":20242025,\"gameType\":2,\"venue\":{\"default\":\"Madison Square Garden\"},\"startTimeUTC\":\"2025-01-16T00:00:00Z\",\"gameState\":\"OFF\",\"homeTeam\":{\"id\":3,\"abbrev\":\"NYR\",\"score\":4},\"awayTeam\":{\"id\":6,\"abbrev\":\"BOS\",\"score\":2}}]}]}"
+  },
+  "use_cases": [
+    "get today's NHL scoreboard and live game scores",
+    "fetch current NHL standings by conference or division",
+    "look up a team's roster and player stats for a season",
+    "get the schedule for a specific NHL team or date",
+    "retrieve boxscore and play-by-play for a completed game",
+    "find player career stats and game logs by player ID"
+  ],
+  "sources": [
+    "https://api-web.nhle.com/v1/scoreboard/now",
+    "https://api-web.nhle.com/v1/standings/now",
+    "https://github.com/Zmalski/NHL-API-Reference",
+    "https://gitlab.com/dword4/nhlapi",
+    "https://www.nhl.com"
+  ],
+  "researcher_confidence": "medium"
+}

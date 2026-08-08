@@ -1,0 +1,43 @@
+{
+  "id": "etherscan",
+  "status": "operational",
+  "name": "Etherscan",
+  "category": "crypto",
+  "tagline": "Ethereum blockchain explorer API for transactions, balances, and contract data",
+  "description": "Etherscan provides a REST API for querying Ethereum blockchain data: addresses, transactions, blocks, tokens, contracts, gas, and logs. Developers use it to read chain state without running a full node.",
+  "base_url": "https://api.etherscan.io/api",
+  "docs_url": "https://docs.etherscan.io/",
+  "signup_url": "https://etherscan.io/apis",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter; free self-serve signup at etherscan.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.etherscan.io/api?module=account&action=balance&address=0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae&tag=latest&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":\"1\",\"message\":\"OK\",\"result\":\"39188856792214612666746\"}"
+  },
+  "use_cases": [
+    "get ETH balance for an address",
+    "list transactions for a wallet",
+    "fetch ERC-20 token transfers",
+    "get current gas price",
+    "read verified contract ABI",
+    "get block by number"
+  ],
+  "sources": [
+    "https://docs.etherscan.io/",
+    "https://etherscan.io/apis"
+  ],
+  "researcher_confidence": "low"
+}

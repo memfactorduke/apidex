@@ -1,0 +1,42 @@
+{
+  "id": "adyen",
+  "status": "operational",
+  "name": "Adyen API",
+  "category": "ecommerce-payments",
+  "tagline": "Enterprise payment platform API for global card, wallet, and local payment processing",
+  "description": "Adyen provides a unified payments platform API for accepting, processing, and managing card, digital wallet, and local payment methods worldwide. Developers use Checkout, Payments, and Management APIs with API-key authentication to create sessions, authorize transactions, handle refunds, and configure merchant accounts across test and live environments.",
+  "base_url": "https://checkout-test.adyen.com/v71",
+  "docs_url": "https://docs.adyen.com/",
+  "signup_url": "https://www.adyen.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-API-Key header; create keys in Customer Area. Separate test and live credentials."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Transaction-based pricing; contact sales for rates"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://checkout-test.adyen.com/v71/paymentMethods -H 'X-API-Key: YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"merchantAccount\":\"YOUR_MERCHANT_ACCOUNT\"}'",
+    "response_snippet": "{\"paymentMethods\":[{\"name\":\"Cards\",\"type\":\"scheme\"},{\"name\":\"PayPal\",\"type\":\"paypal\"}]}"
+  },
+  "use_cases": [
+    "list available payment methods for a merchant",
+    "create a checkout payment session",
+    "authorize a card payment",
+    "refund a captured payment",
+    "get payment details by PSP reference"
+  ],
+  "sources": [
+    "https://docs.adyen.com/",
+    "https://www.adyen.com/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "mbta-v3",
+  "status": "operational",
+  "name": "MBTA V3 API",
+  "category": "transportation",
+  "tagline": "Boston transit real-time and schedule data as JSON:API",
+  "description": "Official Massachusetts Bay Transportation Authority (MBTA) V3 API delivering real-time predictions, vehicle locations, schedules, routes, stops, alerts, and related transit data for the Boston area in JSON:API format. Built on GTFS and GTFS-Realtime concepts with a free public tier and optional API key for higher rate limits.",
+  "base_url": "https://api-v3.mbta.com",
+  "docs_url": "https://api-v3.mbta.com/docs/swagger/index.html",
+  "signup_url": "https://api-v3.mbta.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via api_key query parameter or x-api-key header; free self-serve registration at the portal. Unauthenticated requests allowed at lower rate limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free with optional key; higher limits with registered key (exact quotas from portal)",
+    "paid_plans": null
+  },
+  "rate_limits": "Published on MBTA developer portal; typically lower without key, higher with registered API key",
+  "example": {
+    "request": "curl -s \"https://api-v3.mbta.com/predictions?filter[stop]=place-pktrm&page[limit]=5\" -H \"x-api-key: YOUR_API_KEY\" -H \"Accept: application/vnd.api+json\"",
+    "response_snippet": "{\"data\":[{\"type\":\"prediction\",\"id\":\"...\",\"attributes\":{\"arrival_time\":\"...\",\"departure_time\":\"...\",\"status\":null,\"stop_sequence\":...},\"relationships\":{\"route\":{\"data\":{\"type\":\"route\",\"id\":\"Red\"}},\"stop\":{\"data\":{\"type\":\"stop\",\"id\":\"place-pktrm\"}}}}],\"jsonapi\":{\"version\":\"1.0\"}}"
+  },
+  "use_cases": [
+    "get real-time arrival predictions for an MBTA stop",
+    "list active service alerts for Boston subway/bus/commuter rail",
+    "fetch vehicle locations for a route",
+    "look up routes, stops, and schedules for trip planning",
+    "get shapes and stops for mapping MBTA lines"
+  ],
+  "sources": [
+    "https://api-v3.mbta.com/",
+    "https://api-v3.mbta.com/docs/swagger/index.html",
+    "https://www.mbta.com/developers/v3-api"
+  ],
+  "researcher_confidence": "medium"
+}

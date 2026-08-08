@@ -1,0 +1,48 @@
+{
+  "id": "polygon-io",
+  "status": "operational",
+  "name": "Polygon.io (Massive)",
+  "category": "finance",
+  "tagline": "Stock market API with real-time and historical tick data via REST and WebSockets.",
+  "description": "Polygon.io (rebranded Massive in late 2025) provides financial market data APIs for US stocks, options, forex, crypto, indices, and futures. Developers can query historical and real-time aggregates, trades, quotes, reference data, and more over REST, WebSocket streams, and flat files. Existing api.polygon.io endpoints and API keys remain supported in parallel with the new api.massive.com base.",
+  "base_url": "https://api.polygon.io",
+  "docs_url": "https://polygon.io/docs",
+  "signup_url": "https://polygon.io/dashboard/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter ?apiKey=YOUR_API_KEY or Authorization: Bearer YOUR_API_KEY header; self-serve signup at dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "5 API requests per minute; delayed data (not real-time); limited historical depth on free plans",
+    "paid_plans": "Starter from ~$29/mo; higher tiers for real-time data and unlimited requests \u2014 see pricing page"
+  },
+  "rate_limits": "Free: 5 requests/minute. Paid: unlimited API requests (recommend staying under 100 req/s to avoid throttling).",
+  "example": {
+    "request": "curl \"https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2023-01-09/2023-01-09?adjusted=true&apiKey=YOUR_API_KEY\"",
+    "response_snippet": "{\"ticker\":\"AAPL\",\"queryCount\":1,\"resultsCount\":1,\"adjusted\":true,\"results\":[{\"v\":7.48e7,\"vw\":130.0,\"o\":130.28,\"c\":130.15,\"h\":133.41,\"l\":129.89,\"t\":1673240400000,\"n\":650000}],\"status\":\"OK\",\"request_id\":\"...\",\"count\":1}"
+  },
+  "use_cases": [
+    "get daily OHLCV bars for a stock ticker",
+    "fetch real-time or delayed stock quotes",
+    "list ticker reference data and company details",
+    "stream live trades via WebSocket",
+    "get options contracts and aggregates",
+    "retrieve forex or crypto exchange rates"
+  ],
+  "sources": [
+    "https://polygon.io/docs",
+    "https://polygon.io/docs/rest/quickstart",
+    "https://polygon.io/blog/polygon-is-now-massive",
+    "https://massive.com/knowledge-base/article/what-is-the-request-limit-for-massives-restful-apis",
+    "https://polygon.io/",
+    "https://massive.com/docs/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "tmdb",
+  "status": "operational",
+  "name": "The Movie Database",
+  "category": "entertainment",
+  "tagline": "Community-driven movie and TV metadata API for films, people, and images",
+  "description": "The Movie Database (TMDB) API provides searchable movie, TV, and person metadata including cast, crew, posters, trailers, ratings, and watch-provider info. Developers use API keys or read-access tokens to power media apps, recommendation engines, and entertainment search experiences.",
+  "base_url": "https://api.themoviedb.org/3",
+  "docs_url": "https://developer.themoviedb.org/docs",
+  "signup_url": "https://www.themoviedb.org/settings/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query param or Authorization: Bearer <v4 access token>; free self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.themoviedb.org/3/movie/550?api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"id\":550,\"title\":\"Fight Club\",\"original_title\":\"Fight Club\",\"overview\":\"...\",\"release_date\":\"1999-10-15\"}"
+  },
+  "use_cases": [
+    "search movies by title",
+    "get movie details and cast",
+    "list popular or trending films",
+    "fetch TV show seasons and episodes",
+    "get person filmography",
+    "find where to watch a title"
+  ],
+  "sources": [
+    "https://developer.themoviedb.org/docs",
+    "https://www.themoviedb.org/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "navitia",
+  "status": "operational",
+  "name": "Navitia",
+  "category": "transportation",
+  "tagline": "Multimodal public-transport journey planner with open data and free developer access",
+  "description": "Navitia is a multimodal trip-planning API covering public transit, bike, walking, and car. Developers query coverage regions, stop areas, schedules, and door-to-door journeys. Authentication uses a self-serve API key; free tiers and paid plans are documented on the vendor site.",
+  "base_url": "https://api.navitia.io/v1",
+  "docs_url": "https://doc.navitia.io",
+  "signup_url": "https://navitia.io",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic auth (key as username, empty password) or Authorization header; self-serve signup at navitia.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u \"YOUR_API_KEY:\" \"https://api.navitia.io/v1/coverage\"",
+    "response_snippet": "{\"regions\":[{\"id\":\"fr-idf\",\"name\":\"\u00cele-de-France\",...}]}"
+  },
+  "use_cases": [
+    "plan multimodal transit journeys between two points",
+    "list transit coverage regions and networks",
+    "get next departures at a stop area",
+    "geocode places near transit for routing"
+  ],
+  "sources": [
+    "https://navitia.io",
+    "https://doc.navitia.io"
+  ],
+  "researcher_confidence": "low"
+}

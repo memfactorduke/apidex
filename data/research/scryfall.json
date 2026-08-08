@@ -1,0 +1,43 @@
+{
+  "id": "scryfall",
+  "status": "operational",
+  "name": "Scryfall",
+  "category": "games-comics",
+  "tagline": "Magic: The Gathering card search API with rulings, printings, and bulk data",
+  "description": "Public REST API for Magic: The Gathering card data. Search cards by name or full-text query, resolve exact printings, fetch rulings, set metadata, and download bulk data dumps. No API key required; rate-limited for fair use.",
+  "base_url": "https://api.scryfall.com",
+  "docs_url": "https://scryfall.com/docs/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication or API key required. Public endpoints; identify your app via a descriptive User-Agent header (recommended)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use within rate limits; commercial use requires prior written permission",
+    "paid_plans": null
+  },
+  "rate_limits": "About 10 requests/second; space requests ~50\u2013100ms apart; 429 if exceeded",
+  "example": {
+    "request": "curl -s -H 'User-Agent: MyApp/1.0' -H 'Accept: application/json' 'https://api.scryfall.com/cards/named?fuzzy=lightning+bolt'",
+    "response_snippet": "{\n  \"object\": \"card\",\n  \"id\": \"...\",\n  \"name\": \"Lightning Bolt\",\n  \"mana_cost\": \"{R}\",\n  \"type_line\": \"Instant\",\n  \"oracle_text\": \"Lightning Bolt deals 3 damage to any target.\",\n  \"set\": \"lea\",\n  \"rarity\": \"common\",\n  \"prices\": { \"usd\": \"...\" }\n}"
+  },
+  "use_cases": [
+    "search Magic cards by name or full-text query",
+    "fetch a card's oracle text, mana cost, and prices",
+    "list printings of a card across sets",
+    "get official rulings for a card",
+    "download bulk card data dumps for offline use"
+  ],
+  "sources": [
+    "https://scryfall.com/docs/api",
+    "https://scryfall.com/docs/api/cards",
+    "https://scryfall.com/docs/api/bulk-data"
+  ],
+  "researcher_confidence": "medium"
+}

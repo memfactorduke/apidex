@@ -1,0 +1,42 @@
+{
+  "id": "huggingface-inference",
+  "status": "operational",
+  "name": "Hugging Face Inference API",
+  "category": "ai-ml",
+  "tagline": "Run open models for text, images, audio, and embeddings via HTTP",
+  "description": "Hugging Face Inference API (Serverless) lets developers call open models hosted on the Hugging Face Hub for generation, embeddings, classification, and multimodal tasks without managing GPUs. Authenticate with a user access token; responses are JSON (or binary for some media tasks). Pricing and limits depend on account plan and model size; free usage is rate-limited and may queue under load.",
+  "base_url": "https://api-inference.huggingface.co",
+  "docs_url": "https://huggingface.co/docs/api-inference",
+  "signup_url": "https://huggingface.co/join",
+  "auth": {
+    "type": "apiKey",
+    "details": "HF user access token via Authorization: Bearer <token> header; create tokens at huggingface.co/settings/tokens"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 free tier exists but exact request quotas need verification from current pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api-inference.huggingface.co/models/gpt2 -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"inputs\": \"Hello world\"}'",
+    "response_snippet": "[{\"generated_text\": \"Hello world, this is a sample continuation...\"}]"
+  },
+  "use_cases": [
+    "run text generation with an open LLM on the Hub",
+    "compute sentence embeddings for semantic search",
+    "classify text sentiment or zero-shot labels",
+    "generate images from text with a diffusion model",
+    "transcribe audio with a speech-to-text model"
+  ],
+  "sources": [
+    "https://huggingface.co/docs/api-inference"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "boardgamegeek",
+  "status": "operational",
+  "name": "BoardGameGeek XML API2",
+  "category": "games-comics",
+  "tagline": "Canonical board-game catalog, ratings, ranks, and collection data via XML",
+  "description": "BoardGameGeek's XML API2 provides programmatic access to the community's board-game database: game metadata, rankings, hot lists, user collections, plays, and ratings. It is the standard public interface for building tools around BGG's catalog and community data.",
+  "base_url": "https://boardgamegeek.com/xmlapi2",
+  "docs_url": "https://boardgamegeek.com/wiki/page/BGG_XML_API2",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public endpoints require no authentication for most reads; some collection/user endpoints may require a BGG account session or login credentials via the older API patterns \u2014 verify current docs for exact requirements."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://boardgamegeek.com/xmlapi2/thing?id=13&stats=1\"",
+    "response_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?><items termsofuse=\"https://boardgamegeek.com/xmlapi/termsofuse\"><item type=\"boardgame\" id=\"13\">...</item></items>"
+  },
+  "use_cases": [
+    "look up board game metadata by BGG id",
+    "fetch community ratings and ranks for a game",
+    "get a user's board game collection",
+    "list currently hot board games",
+    "search games by name"
+  ],
+  "sources": [
+    "https://boardgamegeek.com/wiki/page/BGG_XML_API2"
+  ],
+  "researcher_confidence": "low"
+}

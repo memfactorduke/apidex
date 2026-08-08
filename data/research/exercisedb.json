@@ -1,0 +1,42 @@
+{
+  "id": "exercisedb",
+  "status": "operational",
+  "name": "ExerciseDB",
+  "category": "health-fitness",
+  "tagline": "Exercise library with GIF demos, body-part and equipment filters via RapidAPI",
+  "description": "ExerciseDB provides a large library of exercise data with animated GIF demonstrations, searchable and filterable by body part, target muscle, and equipment. Hosted primarily on RapidAPI, it is commonly used in fitness and workout apps for exercise catalogs, routine builders, and demo media.",
+  "base_url": "https://exercisedb.p.rapidapi.com",
+  "docs_url": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb",
+  "signup_url": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb",
+  "auth": {
+    "type": "apiKey",
+    "details": "RapidAPI key via X-RapidAPI-Key and X-RapidAPI-Host headers; self-serve signup on RapidAPI"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --request GET --url 'https://exercisedb.p.rapidapi.com/exercises?limit=10' --header 'X-RapidAPI-Key: YOUR_API_KEY' --header 'X-RapidAPI-Host: exercisedb.p.rapidapi.com'",
+    "response_snippet": "[{\"id\":\"0001\",\"name\":\"3/4 sit-up\",\"bodyPart\":\"waist\",\"equipment\":\"body weight\",\"gifUrl\":\"https://v2.exercisedb.io/image/...\",\"target\":\"abs\",\"secondaryMuscles\":[\"hip flexors\",\"lower back\"],\"instructions\":[\"Lie flat on your back with your knees bent...\"]}]"
+  },
+  "use_cases": [
+    "list exercises by body part for a workout planner",
+    "filter exercises by equipment available at home",
+    "show animated GIF demos for exercise form",
+    "search exercises by target muscle group",
+    "build a catalog of beginner bodyweight moves"
+  ],
+  "sources": [
+    "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb",
+    "https://exercisedb.p.rapidapi.com"
+  ],
+  "researcher_confidence": "low"
+}

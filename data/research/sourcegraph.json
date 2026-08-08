@@ -1,0 +1,42 @@
+{
+  "id": "sourcegraph",
+  "status": "operational",
+  "name": "Sourcegraph API",
+  "category": "dev-tools",
+  "tagline": "GraphQL API for code search, navigation, and repository intelligence across large codebases.",
+  "description": "Sourcegraph exposes a GraphQL API (and supporting REST/batch endpoints) for searching code, browsing repositories, resolving symbols, managing batch changes, and integrating with self-hosted or Sourcegraph.com instances. Developers typically authenticate with an access token and query the GraphQL schema for search results, file contents, and code intelligence data used by IDE extensions, bots, and automation.",
+  "base_url": "https://sourcegraph.com/.api/graphql",
+  "docs_url": "https://sourcegraph.com/docs/api",
+  "signup_url": "https://sourcegraph.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal access token via Authorization: token YOUR_API_KEY header (or Sourcegraph-Auth-Token); create tokens in user settings on Sourcegraph.com or self-hosted instances."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "graphql",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST 'https://sourcegraph.com/.api/graphql' -H 'Authorization: token YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"query\":\"query { currentUser { username } }\"}'",
+    "response_snippet": "{\"data\":{\"currentUser\":{\"username\":\"alice\"}}}"
+  },
+  "use_cases": [
+    "search code across repositories with Sourcegraph query syntax",
+    "resolve symbol definitions and references in a large monorepo",
+    "fetch file contents and repository metadata for automation",
+    "run or inspect batch changes programmatically",
+    "list repositories and check indexing status for a Sourcegraph instance"
+  ],
+  "sources": [
+    "https://sourcegraph.com/docs/api"
+  ],
+  "researcher_confidence": "low"
+}

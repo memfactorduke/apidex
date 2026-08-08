@@ -1,0 +1,41 @@
+{
+  "id": "circleci",
+  "status": "operational",
+  "name": "CircleCI API",
+  "category": "dev-tools",
+  "tagline": "CI/CD API for pipelines, jobs, and project automation",
+  "description": "CircleCI provides a REST API for managing continuous integration and delivery: pipelines, workflows, jobs, projects, contexts, and artifacts. Developers use personal or project API tokens to trigger builds, inspect status, and automate CI operations from scripts and tools.",
+  "base_url": "https://circleci.com/api/v2",
+  "docs_url": "https://circleci.com/docs/api/v2/",
+  "signup_url": "https://circleci.com/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal or project API token via Circle-Token header (or query param). Self-serve account signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Circle-Token: YOUR_API_KEY\" https://circleci.com/api/v2/me",
+    "response_snippet": "{\"id\":\"...\",\"login\":\"...\",\"name\":\"...\"}"
+  },
+  "use_cases": [
+    "trigger a pipeline for a branch",
+    "get pipeline or workflow status",
+    "list recent jobs for a project",
+    "fetch job artifacts",
+    "manage project environment variables"
+  ],
+  "sources": [
+    "https://circleci.com/docs/api/v2/"
+  ],
+  "researcher_confidence": "low"
+}

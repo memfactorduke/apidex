@@ -1,0 +1,47 @@
+{
+  "id": "paypal",
+  "status": "operational",
+  "name": "PayPal REST API",
+  "category": "ecommerce-payments",
+  "tagline": "Accept payments, issue refunds, and manage orders via PayPal's REST APIs.",
+  "description": "PayPal's REST APIs let developers accept online payments, create and capture orders, manage subscriptions, handle refunds, and integrate checkout for web and mobile apps. Authentication uses OAuth 2.0 client credentials (Client ID and Secret) against sandbox or live endpoints. Core payment flows center on the Orders and Payments APIs, with additional products for invoicing, payouts, and webhooks.",
+  "base_url": "https://api-m.paypal.com",
+  "docs_url": "https://developer.paypal.com/docs/api/overview/",
+  "signup_url": "https://developer.paypal.com/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 client credentials: POST client_id:client_secret to /v1/oauth2/token for a Bearer access token. Sandbox: api-m.sandbox.paypal.com. Self-serve app creation in the Developer Dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access is free; PayPal charges per transaction (standard merchant rates). Sandbox is free for testing. Exact fee schedule varies by country and product.",
+    "paid_plans": "Transaction-based merchant fees (e.g. typical US card rates ~2.99% + fixed fee); no separate API subscription. See PayPal merchant fees for current rates."
+  },
+  "rate_limits": "not published as a single global limit; some products document per-endpoint limits. 429 responses indicate throttling.",
+  "example": {
+    "request": "curl -s -X POST https://api-m.sandbox.paypal.com/v1/oauth2/token -u \"YOUR_CLIENT_ID:YOUR_CLIENT_SECRET\" -H \"Accept: application/json\" -H \"Accept-Language: en_US\" -d \"grant_type=client_credentials\"",
+    "response_snippet": "{\"scope\":\"https://uri.paypal.com/services/payments/realtimepayment ...\",\"access_token\":\"A21AA...\",\"token_type\":\"Bearer\",\"app_id\":\"APP-80W284485P519543T\",\"expires_in\":32400,\"nonce\":\"...\"}"
+  },
+  "use_cases": [
+    "create a PayPal checkout order for a cart total",
+    "capture payment after buyer approval",
+    "refund a completed PayPal capture",
+    "list or get order details by order ID",
+    "set up a recurring subscription plan",
+    "verify webhook signatures for payment events"
+  ],
+  "sources": [
+    "https://developer.paypal.com/docs/api/overview/",
+    "https://developer.paypal.com/api/rest/",
+    "https://developer.paypal.com/api/rest/authentication/",
+    "https://developer.paypal.com/api/rest/requests/",
+    "https://www.paypal.com/us/business/paypal-business-fees",
+    "https://developer.paypal.com/api/rest/reference/orders/v2/"
+  ],
+  "researcher_confidence": "medium"
+}

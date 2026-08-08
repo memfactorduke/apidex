@@ -1,0 +1,45 @@
+{
+  "id": "tfl-unified",
+  "status": "operational",
+  "name": "Transport for London Unified API",
+  "category": "transportation",
+  "tagline": "Live London tube, bus, rail, bike, and road status via one free REST API",
+  "description": "Transport for London's Unified API provides real-time and static data for London transport modes including Tube, bus, DLR, Overground, Elizabeth line, National Rail in London, river, cycle hire, roads, and disruptions. Developers register for a free Application ID and primary key, then call REST endpoints under api.tfl.gov.uk. Responses are primarily JSON (with XML options on some resources). The API is widely used for journey planning, line status, arrivals, and stop/point lookups.",
+  "base_url": "https://api.tfl.gov.uk",
+  "docs_url": "https://api.tfl.gov.uk/",
+  "signup_url": "https://api-portal.tfl.gov.uk/",
+  "auth": {
+    "type": "apiKey",
+    "details": "App ID and primary key from TfL API Portal; pass as query params app_id and app_key, or as headers (AppID/AppKey). Free self-serve registration."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for most non-commercial use with registration; commercial use may require agreement \u2014 confirm on portal",
+    "paid_plans": null
+  },
+  "rate_limits": "Published fair-use style limits via portal; historically ~500 requests/min \u2014 verify current quota on api-portal.tfl.gov.uk",
+  "example": {
+    "request": "curl -s \"https://api.tfl.gov.uk/Line/Mode/tube/Status?app_key=YOUR_API_KEY\"",
+    "response_snippet": "[{\"$type\":\"Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities\",\"id\":\"bakerloo\",\"name\":\"Bakerloo\",\"modeName\":\"tube\",\"lineStatuses\":[{\"statusSeverity\":10,\"statusSeverityDescription\":\"Good Service\",\"reason\":null}]}]"
+  },
+  "use_cases": [
+    "get live Tube line status for all lines",
+    "fetch next bus arrivals at a stop",
+    "plan a journey between two London locations",
+    "list disruptions on roads or transport modes",
+    "get Santander Cycle hire availability near a point",
+    "look up stop or station details by ID or search"
+  ],
+  "sources": [
+    "https://api.tfl.gov.uk/",
+    "https://api-portal.tfl.gov.uk/",
+    "https://tfl.gov.uk/info-for/open-data-users/"
+  ],
+  "researcher_confidence": "medium"
+}

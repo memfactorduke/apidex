@@ -1,0 +1,43 @@
+{
+  "id": "cat-facts",
+  "status": "operational",
+  "name": "Cat Facts",
+  "category": "fun-novelty",
+  "tagline": "Simple public API for random cat facts and breed data",
+  "description": "Cat Facts (catfact.ninja) is a free public REST API that returns random cat facts and a list of cat breeds. It is commonly used as a hello-world API for learning HTTP clients, teaching demos, and lightweight novelty features. No authentication is required for the documented endpoints.",
+  "base_url": "https://catfact.ninja",
+  "docs_url": "https://catfact.ninja",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints accept unauthenticated GET requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://catfact.ninja/fact",
+    "response_snippet": "{\"fact\":\"Cats have five toes on their front paws, but only four toes on their back paws.\",\"length\":78}"
+  },
+  "use_cases": [
+    "fetch a random cat fact for a demo or tutorial",
+    "list cat breeds with pagination",
+    "test HTTP client libraries with a live public endpoint",
+    "populate placeholder content in a fun pet-themed UI",
+    "verify JSON parsing in integration smoke tests"
+  ],
+  "sources": [
+    "https://catfact.ninja",
+    "https://catfact.ninja/docs",
+    "https://github.com/alexwohlbruck/cat-facts"
+  ],
+  "researcher_confidence": "medium"
+}

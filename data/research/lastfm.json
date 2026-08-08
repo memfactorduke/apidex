@@ -1,0 +1,50 @@
+{
+  "id": "lastfm",
+  "status": "operational",
+  "name": "Last.fm API",
+  "category": "entertainment",
+  "tagline": "Music metadata, charts, similar artists, and scrobbling from Last.fm\u2019s listening graph",
+  "description": "Public REST API for Last.fm music data: artist/album/track metadata and tags, similar artists, charts, user listening history (scrobbles), and authenticated write methods for scrobbling. Calls go to a single root with a method query parameter; responses are XML by default or JSON with format=json. Free self-serve API keys for non-commercial use; commercial/research use requires contacting Last.fm.",
+  "base_url": "https://ws.audioscrobbler.com/2.0/",
+  "docs_url": "https://www.last.fm/api",
+  "signup_url": "https://www.last.fm/api/account/create",
+  "auth": {
+    "type": "apiKey",
+    "details": "Self-serve API account (API key + shared secret) via last.fm/api/account/create after a free Last.fm login. Read methods take api_key as a query parameter. Write/user methods need a user session (web/desktop/mobile auth flows) plus api_sig (MD5 of sorted params + secret)."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use with self-serve API key; no published request quota. ToS caps stored Last.fm data at ~100 MB (Reasonable Usage Cap). Commercial/research use: contact partners@last.fm.",
+    "paid_plans": "No public paid plans; commercial use negotiated via partners@last.fm"
+  },
+  "rate_limits": "Not published as fixed numbers. Docs warn accounts may be suspended for continuous multi-request-per-second or excessive use; error 29 = rate limit exceeded (per IP/short period). Higher limits require partners@last.fm consent.",
+  "example": {
+    "request": "curl \"https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=YOUR_API_KEY&format=json\"",
+    "response_snippet": "{\"artist\":{\"name\":\"Cher\",\"mbid\":\"bfcc6d75-a6a5-4bc6-8282-47aec8531818\",\"url\":\"https://www.last.fm/music/Cher\",\"stats\":{\"listeners\":\"196440\",\"plays\":\"1599101\"},\"similar\":{\"artist\":[{\"name\":\"Madonna\",\"url\":\"https://www.last.fm/music/Madonna\"}]},\"tags\":{\"tag\":[{\"name\":\"pop\",\"url\":\"https://www.last.fm/tag/pop\"}]},\"bio\":{\"summary\":\"...\",\"content\":\"...\"}}}"
+  },
+  "use_cases": [
+    "get artist biography, tags, and similar artists by name",
+    "look up album metadata and tracklist by artist + album",
+    "search tracks and fetch track info / MusicBrainz IDs",
+    "fetch a user\u2019s recent scrobbles and now-playing track",
+    "get global or country charts for artists and tracks",
+    "scrobble a played track for an authenticated Last.fm user"
+  ],
+  "sources": [
+    "https://www.last.fm/api",
+    "https://www.last.fm/api/intro",
+    "https://www.last.fm/api/rest",
+    "https://www.last.fm/api/authentication",
+    "https://www.last.fm/api/tos",
+    "https://www.last.fm/api/show/artist.getInfo",
+    "https://www.last.fm/api/account/create",
+    "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=invalid&format=json"
+  ],
+  "researcher_confidence": "high"
+}

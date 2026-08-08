@@ -1,0 +1,41 @@
+{
+  "id": "edamam-recipe",
+  "status": "operational",
+  "name": "Edamam Recipe Search",
+  "category": "food-drink",
+  "tagline": "Recipe and nutrition search API with ingredients, diets, and health filters",
+  "description": "Edamam Recipe Search API lets developers query a large recipe database by keyword, ingredients, diet, allergies, and nutrition constraints. Responses include recipe metadata, ingredient lines, nutrition estimates, and source links. Commonly used for meal planners, recipe apps, and food discovery features.",
+  "base_url": "https://api.edamam.com/api/recipes/v2",
+  "docs_url": "https://developer.edamam.com/edamam-docs-recipe-api",
+  "signup_url": "https://developer.edamam.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Application ID and Application Key as query params (app_id, app_key) after self-serve developer signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=YOUR_APP_ID&app_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"from\":1,\"to\":20,\"count\":10000,\"hits\":[{\"recipe\":{\"uri\":\"...\",\"label\":\"Chicken Vesuvio\",\"image\":\"...\",\"source\":\"Serious Eats\",\"url\":\"...\",\"ingredientLines\":[\"...\"],\"calories\":4050.0}}]}"
+  },
+  "use_cases": [
+    "search recipes by ingredient or keyword",
+    "filter recipes by diet allergy or calorie range",
+    "fetch nutrition estimates for a recipe",
+    "power meal planner recipe discovery"
+  ],
+  "sources": [
+    "https://developer.edamam.com/edamam-docs-recipe-api",
+    "https://developer.edamam.com/"
+  ],
+  "researcher_confidence": "low"
+}

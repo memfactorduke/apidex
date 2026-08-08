@@ -1,0 +1,45 @@
+{
+  "id": "square",
+  "status": "operational",
+  "name": "Square API",
+  "category": "ecommerce-payments",
+  "tagline": "Full-stack payments and commerce API for in-person and online businesses",
+  "description": "Square provides a comprehensive REST API for payments, orders, catalogs, customers, inventory, subscriptions, and point-of-sale operations. Developers build payment apps, e-commerce backends, and business tooling with OAuth or personal access tokens against production and sandbox hosts.",
+  "base_url": "https://connect.squareup.com/v2",
+  "docs_url": "https://developer.squareup.com/docs",
+  "signup_url": "https://developer.squareup.com/apps",
+  "auth": {
+    "type": "oauth2",
+    "details": "Bearer access token in Authorization header (OAuth 2.0 or personal access token). Sandbox uses sandbox tokens against connect.squareupsandbox.com. Square-Version header required for API versioning."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access free; payment processing fees apply (e.g. ~2.6% + 10\u00a2 online typical); no free transaction fee tier for card processing",
+    "paid_plans": "Transaction-based processing fees; volume discounts available; no separate API subscription for standard use"
+  },
+  "rate_limits": "not published in full; some endpoints document per-endpoint limits; 429 with Retry-After on exceed",
+  "example": {
+    "request": "curl https://connect.squareup.com/v2/locations -H \"Square-Version: 2025-01-23\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"locations\":[{\"id\":\"LOCATION_ID\",\"name\":\"My Business\",\"address\":{\"address_line_1\":\"123 Main St\",\"locality\":\"San Francisco\",\"administrative_district_level_1\":\"CA\",\"postal_code\":\"94114\",\"country\":\"US\"},\"status\":\"ACTIVE\",\"currency\":\"USD\"}]}"
+  },
+  "use_cases": [
+    "process a card payment for an order",
+    "list business locations and their settings",
+    "create and update catalog items and prices",
+    "search customers by email or phone",
+    "create an order and take payment",
+    "generate OAuth authorize URL for a seller"
+  ],
+  "sources": [
+    "https://developer.squareup.com/docs",
+    "https://developer.squareup.com/docs/build-basics/general-considerations/using-rest-api",
+    "https://developer.squareup.com/docs/build-basics/access-tokens",
+    "https://squareup.com/us/en/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

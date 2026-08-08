@@ -1,0 +1,47 @@
+{
+  "id": "wikidata",
+  "status": "operational",
+  "name": "Wikidata",
+  "category": "data-analytics",
+  "tagline": "Free, collaborative knowledge graph of structured data",
+  "description": "Wikidata is a free, open, collaborative knowledge base that acts as central storage for structured data used by Wikimedia projects and third-party applications. Its public APIs (MediaWiki Action API, Wikibase REST API, and SPARQL endpoint) let developers query entities, properties, and linked data without a paid plan.",
+  "base_url": "https://www.wikidata.org/w/api.php",
+  "docs_url": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public read access needs no key. Write operations use OAuth or a bot password via the MediaWiki Action API; User-Agent identifying the client is strongly recommended."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free for public read access; no paid tiers. Subject to rate limits and fair-use policy.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as fixed quotas; clients should set a descriptive User-Agent, avoid high concurrency, and prefer bulk dumps or SPARQL for heavy use (see Wikimedia API etiquette).",
+  "example": {
+    "request": "curl -s \"https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q42&format=json&props=labels|descriptions&languages=en\" -H \"User-Agent: YourApp/1.0 (https://example.com; contact@example.com)\"",
+    "response_snippet": "{\"entities\":{\"Q42\":{\"type\":\"item\",\"id\":\"Q42\",\"labels\":{\"en\":{\"language\":\"en\",\"value\":\"Douglas Adams\"}},\"descriptions\":{\"en\":{\"language\":\"en\",\"value\":\"English science fiction writer and humorist\"}}}},\"success\":1}"
+  },
+  "use_cases": [
+    "look up a Wikidata entity by Q-ID and get labels/descriptions",
+    "resolve a Wikipedia title to a Wikidata item ID",
+    "run a SPARQL query for structured facts across entities",
+    "fetch property values (claims) for an item such as birth date or coordinates",
+    "search entities by text for autocomplete or entity linking"
+  ],
+  "sources": [
+    "https://www.wikidata.org/wiki/Wikidata:Data_access",
+    "https://www.wikidata.org/wiki/Wikidata:REST_API",
+    "https://www.wikidata.org/w/api.php",
+    "https://query.wikidata.org/",
+    "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_API_Usage_Guidelines"
+  ],
+  "researcher_confidence": "medium"
+}

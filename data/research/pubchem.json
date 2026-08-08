@@ -1,0 +1,45 @@
+{
+  "id": "pubchem",
+  "status": "operational",
+  "name": "PubChem",
+  "category": "science-space",
+  "tagline": "NCBI open chemistry API for structures, properties, and bioassays",
+  "description": "PubChem is NCBI's free chemical information system. Its REST (PUG-REST) and related programmatic interfaces return compound structures, properties, synonyms, and bioassay data for chemistry and cheminformatics applications.",
+  "base_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug",
+  "docs_url": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required for standard programmatic access; requests are identified by IP and subject to usage policies."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv",
+    "text",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public service; subject to rate and volume policies (no paid plans)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/aspirin/property/MolecularFormula,MolecularWeight/JSON\"",
+    "response_snippet": "{\"PropertyTable\":{\"Properties\":[{\"CID\":2244,\"MolecularFormula\":\"C9H8O4\",\"MolecularWeight\":180.16}]}"
+  },
+  "use_cases": [
+    "look up a compound by name or CID",
+    "fetch molecular formula and weight",
+    "retrieve SMILES or InChI for a structure",
+    "search similar compounds",
+    "get bioassay activity for a chemical"
+  ],
+  "sources": [
+    "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest"
+  ],
+  "researcher_confidence": "medium"
+}

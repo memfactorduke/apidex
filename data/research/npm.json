@@ -1,0 +1,43 @@
+{
+  "id": "npm",
+  "status": "operational",
+  "name": "npm Registry API",
+  "category": "dev-tools",
+  "tagline": "Public package metadata and tarball API for the npm JavaScript registry",
+  "description": "The npm Registry API exposes package metadata, versions, dist-tags, and tarball downloads for the public npm registry at registry.npmjs.org. It is the same HTTP surface used by the npm CLI for install and publish workflows. Most read endpoints require no authentication; publish and account-scoped operations use npm tokens. There is no paid commercial API product\u2014access is free subject to rate limiting and Accept header conventions (application/json or the CouchDB-style application/vnd.npm.install-v1+json).",
+  "base_url": "https://registry.npmjs.org",
+  "docs_url": "https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public package metadata and tarball GETs need no auth. Write/publish and some account operations use Bearer npm access tokens (or legacy _auth) obtained via npm login / tokens; not a self-serve API-key product."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public read access; no commercial paid API plans published",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as fixed public quotas; aggressive clients may be throttled (npm has historically rate-limited bulk/metadata scrapers)",
+  "example": {
+    "request": "curl -sS -H 'Accept: application/json' 'https://registry.npmjs.org/lodash'",
+    "response_snippet": "{\n  \"name\": \"lodash\",\n  \"dist-tags\": { \"latest\": \"4.17.21\" },\n  \"versions\": {\n    \"4.17.21\": {\n      \"name\": \"lodash\",\n      \"version\": \"4.17.21\",\n      \"dist\": {\n        \"tarball\": \"https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz\",\n        \"shasum\": \"...\",\n        \"integrity\": \"sha512-...\"\n      }\n    }\n  }\n}"
+  },
+  "use_cases": [
+    "fetch latest version and dist-tags for an npm package",
+    "list all published versions and peer dependency ranges",
+    "resolve tarball URL and integrity for a specific version",
+    "check whether a package name exists before publishing",
+    "read package.json metadata (description, license, maintainers) for dependency audit"
+  ],
+  "sources": [
+    "https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md",
+    "https://docs.npmjs.com/cli/v10/using-npm/registry",
+    "https://registry.npmjs.org"
+  ],
+  "researcher_confidence": "medium"
+}

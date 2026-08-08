@@ -1,0 +1,42 @@
+{
+  "id": "open-meteo",
+  "status": "operational",
+  "name": "Open-Meteo",
+  "category": "science-space",
+  "tagline": "Free weather forecast API with no API key required",
+  "description": "Open-Meteo provides free weather forecast APIs with no API key required. It offers current weather, forecasts, historical data, and more for various locations worldwide. The API is designed for developers and is free for non-commercial use.",
+  "base_url": "https://api.open-meteo.com/v1",
+  "docs_url": "https://open-meteo.com/en/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for free tier"
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "10,000 requests/day free for non-commercial use",
+    "paid_plans": "Commercial use requires a paid plan starting at $29/month"
+  },
+  "rate_limits": "10,000 requests/day free for non-commercial use",
+  "example": {
+    "request": "curl \"https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true\"",
+    "response_snippet": "{\"latitude\":52.52,\"longitude\":13.419,\"generationtime_ms\":0.234,\"utc_offset_seconds\":0,\"timezone\":\"GMT\",\"timezone_abbreviation\":\"GMT\",\"elevation\":38.0,\"current_weather\":{\"temperature\":8.1,\"windspeed\":10.2,\"winddirection\":270,\"weathercode\":3,\"is_day\":1,\"time\":\"2024-01-15T12:00\"}}"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "fetch 7-day weather forecast",
+    "retrieve historical weather data",
+    "get air quality data",
+    "fetch marine weather conditions"
+  ],
+  "sources": [
+    "https://open-meteo.com/",
+    "https://open-meteo.com/en/docs"
+  ],
+  "researcher_confidence": "medium"
+}

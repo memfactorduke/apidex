@@ -1,0 +1,43 @@
+{
+  "id": "binance",
+  "status": "operational",
+  "name": "Binance",
+  "category": "crypto",
+  "tagline": "Global cryptocurrency exchange APIs for market data, trading, and account management.",
+  "description": "Binance provides REST and WebSocket APIs for spot, futures, and related crypto markets, covering market data, order placement, account balances, and more. Developers typically use API keys with HMAC-SHA256 signatures for private endpoints; many public market-data endpoints require no auth. Rate limits and endpoint availability are published in the official API documentation and change by product (spot vs futures).",
+  "base_url": "https://api.binance.com",
+  "docs_url": "https://developers.binance.com/docs/binance-spot-api-docs",
+  "signup_url": "https://www.binance.com/en/my/settings/api-management",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-MBX-APIKEY header; signed endpoints require HMAC-SHA256 signature of query string with secret. Self-serve key creation in account settings; public market data often needs no key."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access is free; usage constrained by published request weight / IP rate limits, not a paid API plan",
+    "paid_plans": null
+  },
+  "rate_limits": "Spot REST: typically 6,000 request weight per minute per IP (and related order-count limits); see official rate-limit docs for current weights",
+  "example": {
+    "request": "curl -s 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT'",
+    "response_snippet": "{\"symbol\":\"BTCUSDT\",\"price\":\"43250.12000000\"}"
+  },
+  "use_cases": [
+    "get latest price for a trading pair",
+    "fetch order book depth for a symbol",
+    "list recent trades for a market",
+    "place or cancel a spot order with API keys",
+    "stream live kline/candlestick updates over WebSocket",
+    "check account balances for an authenticated user"
+  ],
+  "sources": [
+    "https://developers.binance.com/docs/binance-spot-api-docs",
+    "https://binance-docs.github.io/apidocs/spot/en/"
+  ],
+  "researcher_confidence": "medium"
+}

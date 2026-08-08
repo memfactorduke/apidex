@@ -1,0 +1,41 @@
+{
+  "id": "tavily",
+  "status": "operational",
+  "name": "Tavily",
+  "category": "data-analytics",
+  "tagline": "AI-optimized web search API for research agents",
+  "description": "Tavily is a search API built for AI agents and RAG pipelines. It returns concise, source-backed web results optimized for LLM consumption, with search, extract, crawl, and map endpoints for research workflows.",
+  "base_url": "https://api.tavily.com",
+  "docs_url": "https://docs.tavily.com",
+  "signup_url": "https://app.tavily.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization Bearer header or api_key body field; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.tavily.com/search -H 'Content-Type: application/json' -H 'Authorization: Bearer YOUR_API_KEY' -d '{\"query\":\"latest AI news\"}'",
+    "response_snippet": "{\"query\":\"latest AI news\",\"results\":[{\"title\":\"...\",\"url\":\"...\",\"content\":\"...\"}]}"
+  },
+  "use_cases": [
+    "search the web for current facts for an agent",
+    "extract clean page content for RAG",
+    "research a topic with source-backed snippets",
+    "crawl a site for documentation ingestion"
+  ],
+  "sources": [
+    "https://tavily.com",
+    "https://docs.tavily.com"
+  ],
+  "researcher_confidence": "low"
+}

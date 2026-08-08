@@ -1,0 +1,43 @@
+{
+  "id": "cheapshark",
+  "status": "operational",
+  "name": "CheapShark",
+  "category": "games-comics",
+  "tagline": "Free game deal aggregator with price alerts and historical lows",
+  "description": "CheapShark aggregates digital game deals across major stores (Steam, Epic, GOG, and more), exposing current prices, historical lows, store metadata, and email-based price alerts. The public REST API requires no API key for core deal and game lookups, making it popular for price-tracking bots, deal dashboards, and wishlist tools.",
+  "base_url": "https://www.cheapshark.com/api/1.0",
+  "docs_url": "https://apidocs.cheapshark.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required for public REST endpoints; requests are made directly to the open API."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15&pageSize=5'",
+    "response_snippet": "[{\"internalName\":\"GAMETITLE\",\"title\":\"Game Title\",\"metacriticLink\":\"/game/pc/game-title\",\"dealID\":\"...\",\"storeID\":\"1\",\"gameID\":\"123\",\"salePrice\":\"9.99\",\"normalPrice\":\"59.99\",\"isOnSale\":\"1\",\"savings\":\"83.33\",\"metacriticScore\":\"85\",\"steamRatingText\":\"Very Positive\",\"steamRatingPercent\":\"90\",\"steamRatingCount\":\"10000\",\"steamAppID\":\"12345\",\"releaseDate\":1609459200,\"lastChange\":1700000000,\"dealRating\":\"9.5\",\"thumb\":\"https://...\"}]"
+  },
+  "use_cases": [
+    "find current lowest prices for a PC game across digital stores",
+    "list top deals under a price cap on Steam or other stores",
+    "look up a game's historical low and deal history by game ID",
+    "set or manage email price alerts for a wishlist game",
+    "fetch store metadata and active store IDs for deal filtering"
+  ],
+  "sources": [
+    "https://apidocs.cheapshark.com/",
+    "https://www.cheapshark.com/api/1.0",
+    "https://www.cheapshark.com/"
+  ],
+  "researcher_confidence": "medium"
+}

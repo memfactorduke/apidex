@@ -1,0 +1,48 @@
+{
+  "id": "mapbox",
+  "status": "operational",
+  "name": "Mapbox",
+  "category": "geo-maps",
+  "tagline": "Maps, geocoding, directions, and location services for web and mobile apps.",
+  "description": "Mapbox provides APIs and SDKs for interactive maps, geocoding, reverse geocoding, routing/directions, matrix travel times, isochrones, map matching, static map images, and tile services. Developers authenticate with an access token, call REST endpoints under api.mapbox.com, and render results with Mapbox GL JS or native SDKs. Common building blocks include Styles, Tilesets, the Geocoding API, and the Directions API for turn-by-turn navigation and place search.",
+  "base_url": "https://api.mapbox.com",
+  "docs_url": "https://docs.mapbox.com/api/",
+  "signup_url": "https://account.mapbox.com/auth/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Access token (public or secret) via query param access_token= or Authorization: Bearer. Self-serve signup at account.mapbox.com; tokens managed in Account dashboard."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json",
+    "binary",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier includes monthly free usage allowances that vary by product (e.g. map loads, geocoding requests, directions); exact free units listed on pricing page and may change\u2014verify current allowances on mapbox.com/pricing.",
+    "paid_plans": "Pay-as-you-go after free tier; volume pricing and enterprise plans available. Priced per product (Maps, Navigation, Search, etc.)."
+  },
+  "rate_limits": "Product-specific rate limits apply (e.g. Geocoding and Directions have documented default request rates); higher limits available on paid/enterprise. Check docs per API product.",
+  "example": {
+    "request": "curl \"https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"type\":\"FeatureCollection\",\"query\":[\"los\",\"angeles\"],\"features\":[{\"id\":\"place.123\",\"type\":\"Feature\",\"place_type\":[\"place\"],\"relevance\":1,\"properties\":{},\"text\":\"Los Angeles\",\"place_name\":\"Los Angeles, California, United States\",\"center\":[-118.2437,34.0522],\"geometry\":{\"type\":\"Point\",\"coordinates\":[-118.2437,34.0522]}}],\"attribution\":\"NOTICE: \u00a9 Mapbox...\"}"
+  },
+  "use_cases": [
+    "geocode a place name to coordinates",
+    "reverse-geocode lat/lng to an address",
+    "get driving directions between two points",
+    "render a static map image for a location",
+    "get travel-time matrix between multiple origins and destinations",
+    "search for nearby places or POIs"
+  ],
+  "sources": [
+    "https://docs.mapbox.com/api/",
+    "https://docs.mapbox.com/api/search/geocoding/",
+    "https://www.mapbox.com/pricing",
+    "https://docs.mapbox.com/help/getting-started/access-tokens/",
+    "https://status.mapbox.com/"
+  ],
+  "researcher_confidence": "medium"
+}

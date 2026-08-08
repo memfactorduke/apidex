@@ -1,0 +1,45 @@
+{
+  "id": "openweathermap",
+  "status": "operational",
+  "name": "OpenWeatherMap",
+  "category": "weather-environment",
+  "tagline": "Global weather data API for current conditions, forecasts, historical data, and air quality.",
+  "description": "OpenWeatherMap provides weather data APIs covering current weather, multi-day forecasts, historical archives, and air pollution for locations worldwide. Developers authenticate with a free API key and call HTTPS REST endpoints that return JSON. The free tier supports basic current weather and forecast calls with daily call limits; paid plans unlock higher volume, longer history, and specialized products.",
+  "base_url": "https://api.openweathermap.org/data/2.5",
+  "docs_url": "https://openweathermap.org/api",
+  "signup_url": "https://home.openweathermap.org/users/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via appid query parameter (also supported as header in some products); self-serve signup at openweathermap.org."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "html"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier available; exact 2026 call limits should be verified on pricing page (historically ~1,000 calls/day for Current Weather & Forecasts).",
+    "paid_plans": "Startup, Developer, Professional, Expert, Enterprise tiers with higher limits and products."
+  },
+  "rate_limits": "Varies by plan; free tier historically ~60 calls/minute; confirm on current pricing/docs.",
+  "example": {
+    "request": "curl \"https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KEY&units=metric\"",
+    "response_snippet": "{\"coord\":{\"lon\":-0.1257,\"lat\":51.5085},\"weather\":[{\"id\":800,\"main\":\"Clear\",\"description\":\"clear sky\"}],\"main\":{\"temp\":15.2,\"humidity\":72},\"name\":\"London\"}"
+  },
+  "use_cases": [
+    "get current weather for a city by name",
+    "get 5-day / 3-hour forecast for coordinates",
+    "fetch air pollution / AQI for a location",
+    "look up weather by ZIP or city ID",
+    "power weather widgets or alerts in an app"
+  ],
+  "sources": [
+    "https://openweathermap.org/api",
+    "https://openweathermap.org/current",
+    "https://openweathermap.org/price"
+  ],
+  "researcher_confidence": "medium"
+}

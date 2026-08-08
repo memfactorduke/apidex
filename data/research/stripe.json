@@ -1,0 +1,44 @@
+{
+  "id": "stripe",
+  "status": "operational",
+  "name": "Stripe API",
+  "category": "ecommerce-payments",
+  "tagline": "Payment processing API for online payments, subscriptions, and financial infrastructure.",
+  "description": "Stripe provides a REST API for accepting payments, managing customers, subscriptions, invoices, payouts, and related financial operations. Developers authenticate with secret API keys and can use official SDKs or direct HTTP calls against api.stripe.com.",
+  "base_url": "https://api.stripe.com",
+  "docs_url": "https://docs.stripe.com/api",
+  "signup_url": "https://dashboard.stripe.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "Secret API key via HTTP Basic Auth (key as username, empty password) or Authorization: Bearer sk_...; keys from Dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No per-request API fee; pay-as-you-go transaction fees (e.g. standard card rates). Test mode free. Exact rates vary by country/product.",
+    "paid_plans": "Transaction-based pricing (cards, billing, Connect, etc.); no separate API subscription required for core use."
+  },
+  "rate_limits": "Default ~100 read operations/sec and ~100 write operations/sec in live mode; higher in test mode. Exact limits not fully public; 429 on exceed.",
+  "example": {
+    "request": "curl https://api.stripe.com/v1/balance -u YOUR_API_KEY:",
+    "response_snippet": "{\"object\":\"balance\",\"available\":[{\"amount\":0,\"currency\":\"usd\",\"source_types\":{\"card\":0}}],\"livemode\":false,\"pending\":[{\"amount\":0,\"currency\":\"usd\"}]}"
+  },
+  "use_cases": [
+    "create a payment intent for a checkout",
+    "list customers or retrieve a customer by id",
+    "create a subscription for a price",
+    "refund a charge or payment intent",
+    "list recent balance transactions"
+  ],
+  "sources": [
+    "https://docs.stripe.com/api",
+    "https://stripe.com/pricing",
+    "https://docs.stripe.com/keys",
+    "https://docs.stripe.com/rate-limits"
+  ],
+  "researcher_confidence": "medium"
+}

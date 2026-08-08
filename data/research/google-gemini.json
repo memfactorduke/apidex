@@ -1,0 +1,47 @@
+{
+  "id": "google-gemini",
+  "status": "operational",
+  "name": "Google Gemini API",
+  "category": "ai-ml",
+  "tagline": "Google's multimodal generative AI API for text, images, audio, video, and code.",
+  "description": "The Google Gemini API (Generative Language API) provides access to Gemini multimodal models for text generation, image/audio/video understanding, embeddings, function calling, and structured output. Developers call it via REST or official SDKs on generativelanguage.googleapis.com using an API key, with free and paid tiers through Google AI Studio.",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta",
+  "docs_url": "https://ai.google.dev/gemini-api/docs",
+  "signup_url": "https://aistudio.google.com/apikey",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter ?key= or x-goog-api-key header; free self-serve keys from Google AI Studio (aistudio.google.com). OAuth/service accounts available for Vertex AI, not the consumer Gemini API."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier available with model- and region-dependent RPM/TPM/RPD limits (e.g. Gemini 2.5 Flash often ~10 RPM / ~250k TPM / ~250 RPD on free; verify current table).",
+    "paid_plans": "Pay-as-you-go via Google AI billing; token pricing varies by model (input/output, cached tokens, media). Higher rate limits on paid tier."
+  },
+  "rate_limits": "Published per model and tier (Free vs Pay-as-you-go): RPM, TPM, RPD. Free tier is tighter; paid raises limits. Exact numbers change\u2014see ai.google.dev rate-limits page.",
+  "example": {
+    "request": "curl \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"x-goog-api-key: YOUR_API_KEY\" \\\n  -d '{\"contents\":[{\"parts\":[{\"text\":\"Explain how AI works in a few words\"}]}]}'",
+    "response_snippet": "{\"candidates\":[{\"content\":{\"parts\":[{\"text\":\"AI learns patterns from data to make predictions or generate content.\"}],\"role\":\"model\"},\"finishReason\":\"STOP\"}],\"usageMetadata\":{\"promptTokenCount\":8,\"candidatesTokenCount\":14,\"totalTokenCount\":22}}"
+  },
+  "use_cases": [
+    "generate text or chat replies with a Gemini model",
+    "analyze an image or PDF and answer questions about it",
+    "call tools/functions from model output for agent workflows",
+    "create embeddings for semantic search or RAG",
+    "stream long model responses for interactive UIs",
+    "extract structured JSON from unstructured text"
+  ],
+  "sources": [
+    "https://ai.google.dev/gemini-api/docs",
+    "https://ai.google.dev/gemini-api/docs/api-key",
+    "https://ai.google.dev/gemini-api/docs/quickstart",
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://ai.google.dev/gemini-api/docs/rate-limits",
+    "https://ai.google.dev/api"
+  ],
+  "researcher_confidence": "medium"
+}

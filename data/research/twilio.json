@@ -1,0 +1,47 @@
+{
+  "id": "twilio",
+  "status": "operational",
+  "name": "Twilio",
+  "category": "social-communication",
+  "tagline": "Programmable voice, SMS, video, and messaging APIs for global communication",
+  "description": "Twilio provides cloud communications APIs that let developers send and receive SMS, make and receive phone calls, build video and chat experiences, and orchestrate omnichannel messaging (WhatsApp, email, etc.) with programmable webhooks and SDKs.",
+  "base_url": "https://api.twilio.com/2010-04-01",
+  "docs_url": "https://www.twilio.com/docs",
+  "signup_url": "https://www.twilio.com/try-twilio",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with Account SID as username and Auth Token (or API Key SID + Secret) as password. Account SID and Auth Token from the Console; API Keys preferred for production."
+  },
+  "https": true,
+  "cors": "no",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Trial credit (~$15) for new accounts; trial numbers and restrictions apply until upgraded. No unlimited free production quota \u2014 pay-as-you-go after credit.",
+    "paid_plans": "Pay-as-you-go SMS/voice/etc. by country and channel; volume discounts and committed-use plans available."
+  },
+  "rate_limits": "Not a single global limit; product-specific concurrent and request limits (e.g. messaging throughput varies by number type/country). See Twilio rate limits docs.",
+  "example": {
+    "request": "curl -X GET 'https://api.twilio.com/2010-04-01/Accounts/YOUR_ACCOUNT_SID/Messages.json?PageSize=1' -u 'YOUR_ACCOUNT_SID:YOUR_AUTH_TOKEN'",
+    "response_snippet": "{\"uri\": \"/2010-04-01/Accounts/ACxxxx/Messages.json\", \"first_page_uri\": \"...\", \"messages\": [{\"sid\": \"SMxxxx\", \"status\": \"delivered\", \"from\": \"+15551234567\", \"to\": \"+15557654321\", \"body\": \"Hello\"}], \"page\": 0, \"page_size\": 1}"
+  },
+  "use_cases": [
+    "send an SMS or MMS to a phone number",
+    "make or receive programmable voice calls",
+    "verify a user phone number with OTP/2FA",
+    "send WhatsApp business messages",
+    "build video or chat sessions",
+    "look up phone number carrier and type"
+  ],
+  "sources": [
+    "https://www.twilio.com/docs",
+    "https://www.twilio.com/docs/usage/api",
+    "https://www.twilio.com/docs/iam/api-keys",
+    "https://www.twilio.com/pricing",
+    "https://status.twilio.com"
+  ],
+  "researcher_confidence": "medium"
+}

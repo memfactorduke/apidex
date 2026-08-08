@@ -1,0 +1,42 @@
+{
+  "id": "travis-ci",
+  "status": "operational",
+  "name": "Travis CI API",
+  "category": "dev-tools",
+  "tagline": "REST API for Travis CI build status, jobs, and repository automation",
+  "description": "Travis CI provides a REST API for CI/CD automation: query builds, jobs, logs, and repositories; trigger builds; manage settings. Primarily used with Travis CI.com for private/public repos. Auth via API token in Authorization header. Useful for agents integrating CI status into dashboards, bots, or release workflows.",
+  "base_url": "https://api.travis-ci.com",
+  "docs_url": "https://docs.travis-ci.com/user/developer/",
+  "signup_url": "https://app.travis-ci.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via Authorization: token YOUR_API_KEY (or Travis-API-Version: 3 header). Tokens from account settings; no OAuth required for basic use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Travis-API-Version: 3\" -H \"Authorization: token YOUR_API_KEY\" https://api.travis-ci.com/user",
+    "response_snippet": "{\"@type\":\"user\",\"id\":12345,\"login\":\"example\",\"name\":\"Example User\",\"email\":\"user@example.com\",\"is_syncing\":false,\"synced_at\":\"2024-01-01T00:00:00Z\"}"
+  },
+  "use_cases": [
+    "get latest build status for a GitHub repository",
+    "list recent builds and jobs for a project",
+    "trigger a new Travis CI build for a branch",
+    "fetch build logs for a failed job",
+    "check if a repo is active on Travis CI"
+  ],
+  "sources": [
+    "https://docs.travis-ci.com/user/developer/",
+    "https://developer.travis-ci.com/"
+  ],
+  "researcher_confidence": "medium"
+}

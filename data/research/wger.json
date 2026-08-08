@@ -1,0 +1,41 @@
+{
+  "id": "wger",
+  "status": "operational",
+  "name": "Wger Workout Manager",
+  "category": "health-fitness",
+  "tagline": "Open-source workout and nutrition REST API",
+  "description": "Open-source exercise, workout, and nutrition REST API from wger.de with public exercise data, workout plans, and meal tracking endpoints for fitness apps.",
+  "base_url": "https://wger.de/api/v2",
+  "docs_url": "https://wger.de/en/software/api",
+  "signup_url": "https://wger.de/en/user/registration",
+  "auth": {
+    "type": "apiKey",
+    "details": "Token auth via Authorization: Token header; self-serve registration on wger.de for personal data"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public instance free with rate limits; self-hostable",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://wger.de/api/v2/exerciseinfo/?limit=1&language=2'",
+    "response_snippet": "{\"count\": ..., \"results\": [{\"id\": 1, \"name\": \"...\", \"description\": \"...\"}]}"
+  },
+  "use_cases": [
+    "list exercises by muscle group",
+    "fetch exercise details and images",
+    "create personal workouts",
+    "look up nutrition/ingredient data",
+    "sync workout logs"
+  ],
+  "sources": [
+    "https://wger.de"
+  ],
+  "researcher_confidence": "low"
+}

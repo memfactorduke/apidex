@@ -1,0 +1,41 @@
+{
+  "id": "transitland",
+  "status": "operational",
+  "name": "Transitland",
+  "category": "transportation",
+  "tagline": "Global GTFS/GTFS-RT aggregator with routing and stop APIs",
+  "description": "Transitland aggregates GTFS and GTFS-Realtime feeds worldwide, offering REST endpoints for stops, routes, schedules, routing, and real-time vehicle data. Free tier available for real API calls with higher paid plans.",
+  "base_url": "https://transit.land/api/v2",
+  "docs_url": "https://www.transit.land/documentation/",
+  "signup_url": "https://www.transit.land/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter or Authorization header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://transit.land/api/v2/rest/stops?apikey=YOUR_API_KEY&lat=37.7749&lon=-122.4194&radius=1000\"",
+    "response_snippet": "{\"stops\":[{\"onestop_id\":\"s-9q8yy-...\",\"name\":\"...\"}]}"
+  },
+  "use_cases": [
+    "find nearby transit stops by lat/lon",
+    "look up routes and schedules for a city",
+    "get real-time vehicle positions",
+    "plan multi-modal transit routes"
+  ],
+  "sources": [
+    "https://www.transit.land/",
+    "https://www.transit.land/documentation/"
+  ],
+  "researcher_confidence": "low"
+}

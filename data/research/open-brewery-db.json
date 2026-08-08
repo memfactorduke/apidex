@@ -1,0 +1,44 @@
+{
+  "id": "open-brewery-db",
+  "status": "operational",
+  "name": "Open Brewery DB",
+  "category": "food-drink",
+  "tagline": "Free open dataset and REST API of US and global breweries",
+  "description": "Open Brewery DB is a free and open-source dataset and REST API providing public brewery data including names, locations, types, and contact details. Developers can list, search, filter, and autocomplete breweries for maps, directories, and food-and-drink apps without authentication.",
+  "base_url": "https://api.openbrewerydb.org/v1",
+  "docs_url": "https://www.openbrewerydb.org/documentation",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public API access; no API key or signup."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free and open; no paid plans published",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.openbrewerydb.org/v1/breweries?by_city=san_diego&per_page=3\"",
+    "response_snippet": "[{\"id\":\"b54b16e1-ac3b-4bff-a11f-f7ae9ddc27e0\",\"name\":\"10 Barrel Brewing Co\",\"brewery_type\":\"large\",\"address_1\":\"1501 E St\",\"city\":\"San Diego\",\"state_province\":\"California\",\"postal_code\":\"92101-6618\",\"country\":\"United States\",\"longitude\":\"-117.129593\",\"latitude\":\"32.714813\",\"phone\":\"6195782311\",\"website_url\":\"http://10barrel.com\",\"state\":\"California\",\"street\":\"1501 E St\"}]"
+  },
+  "use_cases": [
+    "search breweries by city or state",
+    "look up a brewery by id",
+    "autocomplete brewery names for a typeahead",
+    "filter breweries by type (micro, brewpub, etc.)",
+    "list breweries near a lat/long",
+    "build a map or directory of local breweries"
+  ],
+  "sources": [
+    "https://www.openbrewerydb.org/",
+    "https://www.openbrewerydb.org/documentation",
+    "https://api.openbrewerydb.org/v1/breweries"
+  ],
+  "researcher_confidence": "medium"
+}

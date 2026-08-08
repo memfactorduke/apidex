@@ -1,0 +1,49 @@
+{
+  "id": "github",
+  "status": "operational",
+  "name": "GitHub REST API",
+  "category": "dev-tools",
+  "tagline": "Programmatic access to repositories, issues, PRs, users, and GitHub platform data.",
+  "description": "Official REST API for GitHub.com and GitHub Enterprise. Authenticate with personal access tokens, GitHub Apps, or OAuth; list and manage repos, issues, pull requests, workflows, users, orgs, and more. Responses are JSON over HTTPS at api.github.com with documented rate limits and media types.",
+  "base_url": "https://api.github.com",
+  "docs_url": "https://docs.github.com/en/rest",
+  "signup_url": "https://github.com/settings/tokens",
+  "auth": {
+    "type": "other",
+    "details": "Bearer token via Authorization: Bearer YOUR_TOKEN (classic/fine-grained PAT, GitHub App installation token, or OAuth access token). Unauthenticated requests allowed with very low rate limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access included with free GitHub accounts; primary cost is rate limits (see rate_limits), not per-request fees",
+    "paid_plans": "Paid GitHub plans (Pro, Team, Enterprise) raise some product limits; API itself has no separate per-call pricing on github.com"
+  },
+  "rate_limits": "Authenticated (PAT/OAuth/App user-to-server): 5,000 req/hour primary; GitHub App installation: up to 15,000 req/hour (scales with seats for Enterprise). Unauthenticated: 60 req/hour per IP. Secondary limits and GraphQL point costs also apply.",
+  "example": {
+    "request": "curl -s -H \"Accept: application/vnd.github+json\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"X-GitHub-Api-Version: 2022-11-28\" https://api.github.com/repos/octocat/Hello-World",
+    "response_snippet": "{\"id\":1296269,\"node_id\":\"MDEwOlJlcG9zaXRvcnkxMjk2MjY5\",\"name\":\"Hello-World\",\"full_name\":\"octocat/Hello-World\",\"private\":false,\"owner\":{\"login\":\"octocat\",\"id\":1,\"type\":\"User\"},\"html_url\":\"https://github.com/octocat/Hello-World\",\"description\":\"My first repository on GitHub!\",\"fork\":false,\"stargazers_count\":2500,\"watchers_count\":2500,\"language\":null,\"default_branch\":\"master\"}"
+  },
+  "use_cases": [
+    "list open issues or PRs on a repository",
+    "get repository metadata, stars, and default branch",
+    "create or update an issue comment from an automation",
+    "fetch a user's public profile and repositories",
+    "check workflow run status for a CI integration",
+    "search code or repositories across GitHub"
+  ],
+  "sources": [
+    "https://docs.github.com/en/rest",
+    "https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api",
+    "https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api",
+    "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+    "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "https://docs.github.com/en/rest/repos/repos",
+    "https://docs.github.com/en/billing/concepts/product-billing/github-packages",
+    "https://www.githubstatus.com/"
+  ],
+  "researcher_confidence": "high"
+}

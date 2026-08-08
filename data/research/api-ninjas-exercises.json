@@ -1,0 +1,44 @@
+{
+  "id": "api-ninjas-exercises",
+  "status": "operational",
+  "name": "API Ninjas Exercises",
+  "category": "health-fitness",
+  "tagline": "Search 3,000+ exercises by muscle, type, and difficulty",
+  "description": "The API Ninjas Exercises API provides a searchable database of over 3,000 workout exercises targeting every major muscle group. Query by name, exercise type, muscle, difficulty, and equipment. Returns structured exercise data including instructions. Note: commercial use and possibly full access require a premium subscription \u2014 the free tier is limited.",
+  "base_url": "https://api.api-ninjas.com/v1",
+  "docs_url": "https://api-ninjas.com/api/exercises",
+  "signup_url": "https://api-ninjas.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header; self-serve signup at api-ninjas.com/register"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "3,000 API calls/month platform-wide; Exercises API commercial use not permitted on free tier (premium required for commercial)",
+    "paid_plans": "Developer $39\u201359/mo (100k calls), Business $99\u2013149/mo (1M), Professional $199\u2013299/mo (10M), Enterprise custom"
+  },
+  "rate_limits": "Monthly quotas by plan (Free 3,000; Developer 100,000; Business 1,000,000; Professional 10,000,000). Requests denied after quota; no published per-second rate limit.",
+  "example": {
+    "request": "curl -X GET \"https://api.api-ninjas.com/v1/exercises?muscle=biceps\" -H \"X-Api-Key: YOUR_API_KEY\"",
+    "response_snippet": "[{\"name\": \"incline hammer curls\", \"type\": \"strength\", \"muscle\": \"biceps\", \"equipment\": \"dumbbell\", \"difficulty\": \"beginner\", \"instructions\": \"Seat yourself on an incline bench with a dumbbell in each hand...\"}]"
+  },
+  "use_cases": [
+    "search exercises by target muscle group",
+    "filter workout moves by difficulty level",
+    "list exercises by type (cardio, strength, stretching)",
+    "build a muscle-group workout library",
+    "look up exercise instructions by name"
+  ],
+  "sources": [
+    "https://api-ninjas.com/api/exercises",
+    "https://api-ninjas.com/pricing",
+    "https://api-ninjas.com/",
+    "https://api-ninjas.com/register"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "disease-sh",
+  "status": "operational",
+  "name": "Disease.sh",
+  "category": "health-fitness",
+  "tagline": "Free COVID-19 and disease statistics API for global cases, vaccines, and historical data",
+  "description": "Disease.sh provides free, no-key access to COVID-19 and related disease statistics aggregated from public sources such as Johns Hopkins, Worldometers, and government health agencies. Developers can query global, country, state, and historical case counts, vaccine coverage, and related metrics via simple REST endpoints. Commonly used for dashboards, research tools, and educational apps that need current or historical pandemic data without authentication.",
+  "base_url": "https://disease.sh/v3",
+  "docs_url": "https://disease.sh/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints are open with no API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no published request quota on official docs",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://disease.sh/v3/covid-19/all\"",
+    "response_snippet": "{\"updated\":1704067200000,\"cases\":700000000,\"todayCases\":0,\"deaths\":7000000,\"todayDeaths\":0,\"recovered\":675000000,\"active\":18000000,\"critical\":0,\"casesPerOneMillion\":90000,\"deathsPerOneMillion\":900,\"tests\":7000000000,\"population\":7900000000,\"affectedCountries\":230}"
+  },
+  "use_cases": [
+    "get global COVID-19 case and death totals",
+    "fetch current COVID-19 stats for a specific country",
+    "retrieve historical COVID-19 time series for a country",
+    "get vaccine coverage statistics by country",
+    "list US state-level COVID-19 case counts"
+  ],
+  "sources": [
+    "https://disease.sh/",
+    "https://disease.sh/docs/",
+    "https://github.com/disease-sh/API"
+  ],
+  "researcher_confidence": "medium"
+}
