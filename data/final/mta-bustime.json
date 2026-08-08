@@ -1,0 +1,98 @@
+{
+  "id": "mta-bustime",
+  "status": "operational",
+  "name": "MTA Bus Time / SIRI",
+  "category": "transportation",
+  "tagline": "NYC real-time bus arrivals and vehicle locations via SIRI and GTFS-RT",
+  "description": "MTA Bus Time provides real-time New York City bus arrival predictions, vehicle locations, and stop/route data through SIRI (Service Interface for Real Time Information) REST endpoints and GTFS-Realtime feeds. Developers register for an API key and query stop monitoring, vehicle monitoring, and related discovery services for MTA bus routes across the five boroughs.",
+  "base_url": "https://bustime.mta.info/api",
+  "docs_url": "https://bustime.mta.info/wiki/Developers/Index",
+  "signup_url": "https://bustime.mta.info/wiki/Developers/Register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required as query parameter key=YOUR_API_KEY; free self-serve registration at bustime.mta.info developer portal"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free with API key registration for non-commercial use; commercial use requires separate approval (per registration terms)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://bustime.mta.info/api/siri/stop-monitoring.json?key=YOUR_API_KEY&MonitoringRef=MTA_401000&LineRef=MTA%20NYCT_M15\"",
+    "response_snippet": "{\"Siri\":{\"ServiceDelivery\":{\"ResponseTimestamp\":\"2026-01-15T12:00:00-05:00\",\"StopMonitoringDelivery\":[{\"MonitoredStopVisit\":[{\"MonitoredVehicleJourney\":{\"LineRef\":\"MTA NYCT_M15\",\"PublishedLineName\":\"M15\",\"DestinationName\":\"East Harlem\",\"MonitoredCall\":{\"ExpectedArrivalTime\":\"2026-01-15T12:08:00-05:00\",\"StopPointName\":\"1 AV/E 14 ST\"}}]}]}}}"
+  },
+  "use_cases": [
+    "get real-time bus arrival predictions for a stop",
+    "track live bus vehicle locations on a route",
+    "list routes and stops for an MTA bus line",
+    "build a NYC bus countdown display or transit app",
+    "monitor service disruptions via SIRI situation exchange"
+  ],
+  "sources": [
+    "https://bustime.mta.info/wiki/Developers/Index",
+    "https://bustime.mta.info/wiki/Developers/SIRIIntro",
+    "https://bustime.mta.info/",
+    "https://new.mta.info/developers"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "sofascore",
+  "status": "defunct",
+  "name": "SofaScore",
+  "category": "sports",
+  "tagline": "Live scores and sports statistics API (no public self-serve developer access)",
+  "description": "SofaScore is a commercial sports data platform covering football, basketball, tennis, and many other sports with live scores, statistics, fixtures, standings, and player data. There is no public self-serve developer API with documented signup, pricing, or official docs for third-party apps. Community reverse-engineered endpoints exist under api.sofascore.com but are unofficial, unsupported, and subject to blocking or terms-of-service restrictions. Partner or enterprise data access may exist via commercial sales channels only.",
+  "base_url": "https://api.sofascore.com/api/v1",
+  "docs_url": "https://www.sofascore.com",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No public developer authentication or self-serve API keys. Unofficial community-documented endpoints typically require no API key but are not authorized for third-party production use. Enterprise/partner access, if available, is via private commercial sales only."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "No public pricing. Partner or enterprise data access, if offered, is sales-negotiated only."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://api.sofascore.com/api/v1/sport/football/events/live' -H 'User-Agent: Mozilla/5.0' -H 'Accept: application/json'",
+    "response_snippet": "{\"events\":[{\"id\":12345678,\"slug\":\"team-a-team-b\",\"tournament\":{\"name\":\"Premier League\"},\"homeTeam\":{\"name\":\"Team A\"},\"awayTeam\":{\"name\":\"Team B\"},\"status\":{\"type\":\"inprogress\",\"description\":\"2nd half\"},\"homeScore\":{\"current\":1},\"awayScore\":{\"current\":0}}]}"
+  },
+  "use_cases": [
+    "get live football match scores and status",
+    "fetch upcoming fixtures for a tournament",
+    "retrieve team standings and league tables",
+    "look up player statistics for a match",
+    "get tennis or basketball event schedules"
+  ],
+  "sources": [
+    "https://www.sofascore.com",
+    "https://www.sofascore.com/api",
+    "https://api.sofascore.com",
+    "https://github.com/sofascore",
+    "https://www.reddit.com/r/webdev",
+    "https://stackoverflow.com/questions/tagged/sofascore"
+  ],
+  "researcher_confidence": "medium"
+}

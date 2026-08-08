@@ -1,0 +1,43 @@
+{
+  "id": "azure-openai",
+  "status": "operational",
+  "name": "Azure OpenAI",
+  "category": "ai-ml",
+  "tagline": "Microsoft-hosted OpenAI models via Azure with enterprise security and regional deployment",
+  "description": "Azure OpenAI Service provides REST APIs for GPT, embeddings, and other OpenAI models hosted on Microsoft Azure. Developers call resource-specific endpoints with an API key or Microsoft Entra ID, choosing deployment names, regions, and compliance options not available on the public OpenAI API.",
+  "base_url": "https://{resource}.openai.azure.com",
+  "docs_url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/",
+  "signup_url": "https://portal.azure.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api-key header (or Microsoft Entra ID Bearer token); keys from Azure portal resource"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Pay-as-you-go per 1K tokens by model; also PTUs and provisioned capacity"
+  },
+  "rate_limits": "Per-deployment TPM/RPM quotas vary by model and region; not a single global limit",
+  "example": {
+    "request": "curl https://YOUR_RESOURCE.openai.azure.com/openai/deployments/YOUR_DEPLOYMENT/chat/completions?api-version=2024-10-21 -H \"Content-Type: application/json\" -H \"api-key: YOUR_API_KEY\" -d '{\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"chatcmpl-...\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":9,\"total_tokens\":17}}"
+  },
+  "use_cases": [
+    "run chat completions with a deployed GPT model",
+    "generate embeddings for RAG or search",
+    "create images with DALL-E deployments",
+    "transcribe or translate audio with Whisper",
+    "moderate content with Azure OpenAI safety APIs"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/ai-services/openai/",
+    "https://learn.microsoft.com/en-us/azure/ai-services/openai/reference",
+    "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+  ],
+  "researcher_confidence": "medium"
+}

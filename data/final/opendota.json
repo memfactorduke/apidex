@@ -1,0 +1,101 @@
+{
+  "id": "opendota",
+  "status": "operational",
+  "name": "OpenDota",
+  "category": "games-comics",
+  "tagline": "Free open-source Dota 2 match, hero, and player analytics API",
+  "description": "Open-source API providing Dota 2 match data, player statistics, hero analytics, rankings, and pro scene data. Offers generous free access with optional API key for higher rate limits. Community-driven project with comprehensive endpoints for match history, live games, and performance metrics.",
+  "base_url": "https://api.opendota.com/api",
+  "docs_url": "https://docs.opendota.com",
+  "signup_url": "https://www.opendota.com/api-keys",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via api_key query parameter for higher rate limits. Self-serve signup at opendota.com/api-keys. Unauthenticated requests allowed at lower limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "60 requests/minute without a key; free API key: 60 requests/minute and 50,000 requests/month",
+    "paid_plans": "Premium plans available for higher limits"
+  },
+  "rate_limits": "60 req/min unauthenticated; free API key: 60 req/min and 50,000/month; paid tiers for higher",
+  "example": {
+    "request": "curl \"https://api.opendota.com/api/heroes\"",
+    "response_snippet": "[{\"id\":1,\"name\":\"npc_dota_hero_antimage\",\"localized_name\":\"Anti-Mage\",\"primary_attr\":\"agi\",\"attack_type\":\"Melee\",\"roles\":[\"Carry\",\"Escape\",\"Nuker\"],\"legs\":2},...]"
+  },
+  "use_cases": [
+    "get recent matches for a Dota 2 player by account ID",
+    "fetch hero statistics and win rates",
+    "look up pro player rankings and team data",
+    "get detailed match analysis including item builds and gold graphs",
+    "search players by name",
+    "retrieve live game data"
+  ],
+  "sources": [
+    "https://docs.opendota.com",
+    "https://www.opendota.com",
+    "https://api.opendota.com/api"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "uk-parliament",
+  "resolution_notes": "Settled base_url against current official sources. UK Parliament publishes a family of separate subdomain APIs (members-api, bills-api, committees-api, etc.), not one single base. https://members-api.parliament.uk/api is a real, operational Members API root (Swagger at members-api.parliament.uk; example Search works), and the entry\u2019s description already frames this as a family. Verifier B\u2019s \u201cincorrect\u201d without a correction is weaker than that live evidence; keeping members-api as the representative base_url is justified for a multi-service open-data family when no single umbrella API host exists. All other fields left null (keep original).",
+  "base_url": "https://members-api.parliament.uk/api",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

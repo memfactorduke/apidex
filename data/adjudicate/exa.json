@@ -1,0 +1,15 @@
+{
+  "id": "exa",
+  "resolution_notes": "Disputed free_tier_limits and rate_limits both fail against current official docs. Free tier is credit-based ($20 on signup \u22482,800 searches, plus $10/month recurring; no card)\u2014not \u201cunknown\u201d and not a flat 1,000 searches. Rate limits are published at exa.ai/docs/reference/rate-limits (defaults: /search 10 QPS, /contents 100 QPS, /answer 10 QPS; enterprise for higher), so \u201cnot published\u201d is wrong. Verifier A was directionally right; Verifier B was wrong on both. All other fields keep the original.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "$20 free credits on signup (~2,800 searches) + $10 free credits/month; no payment method required",
+  "rate_limits": "Default: /search 10 QPS, /contents 100 QPS, /answer 10 QPS; higher via Enterprise (exa.ai/docs/reference/rate-limits)",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

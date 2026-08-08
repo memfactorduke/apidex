@@ -1,0 +1,44 @@
+{
+  "id": "inaturalist",
+  "status": "operational",
+  "name": "iNaturalist",
+  "category": "science-space",
+  "tagline": "Citizen-science species observations and identifications",
+  "description": "iNaturalist API provides access to citizen-science species observations, identifications, taxa, places, and users. Developers can query public biodiversity data, submit observations with OAuth2, and integrate species occurrence records into research apps, educational tools, and conservation platforms.",
+  "base_url": "https://api.inaturalist.org/v1",
+  "docs_url": "https://api.inaturalist.org/v1/docs/",
+  "signup_url": "https://www.inaturalist.org/users/api_token",
+  "auth": {
+    "type": "jwt",
+    "details": "Optional JWT API token (Authorization: Bearer or Authorization: JWT) for higher rate limits and authenticated writes; self-serve from user account. Many read endpoints work unauthenticated."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public API; unauthenticated ~100 req/min, authenticated higher (see rate_limits). No paid plans published.",
+    "paid_plans": null
+  },
+  "rate_limits": "Unauthenticated: ~100 requests/minute. Authenticated with JWT: higher limits (community reports ~1000/min). Exact published numbers vary; check docs/headers.",
+  "example": {
+    "request": "curl -s 'https://api.inaturalist.org/v1/observations?taxon_name=Danaus+plexippus&per_page=1'",
+    "response_snippet": "{\"total_results\":12345,\"page\":1,\"per_page\":1,\"results\":[{\"id\":123,\"species_guess\":\"Monarch\",\"taxon\":{\"id\":48662,\"name\":\"Danaus plexippus\",\"rank\":\"species\"},\"observed_on\":\"2024-06-15\",\"place_guess\":\"California, US\"}]}"
+  },
+  "use_cases": [
+    "search species observations by taxon name or location",
+    "look up taxon taxonomy and common names",
+    "get observation details with photos and identifications",
+    "list nearby wildlife observations for a map",
+    "fetch place boundaries used in iNaturalist",
+    "query user observations for citizen-science apps"
+  ],
+  "sources": [
+    "https://api.inaturalist.org/v1/docs/",
+    "https://www.inaturalist.org/pages/api+reference",
+    "https://forum.inaturalist.org/"
+  ],
+  "researcher_confidence": "medium"
+}

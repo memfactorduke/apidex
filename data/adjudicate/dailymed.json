@@ -1,0 +1,15 @@
+{
+  "id": "dailymed",
+  "resolution_notes": "Both verifiers correctly flag the homepage as docs and the placeholder example; official web-services page confirms free unauthenticated REST access, soft rate guidance without numeric quotas, and SPL endpoints. Description remains a research placeholder in the original \u2014 Verifier A\u2019s rewrite is accurate. Adjudicated values ship from dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm and live endpoint checks.",
+  "base_url": null,
+  "docs_url": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free public API (no auth); no published numeric free-tier quota. Rate limiting may apply under high load; avoid parallel requests and paginate large result sets (page/pagesize).",
+  "rate_limits": "No public numeric quota. Official guidance: do not send simultaneous/parallel requests; use sequential requests and pagination for large queries; rate limiting may apply under high load.",
+  "cors": null,
+  "example_request": "curl \"https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=aspirin\"",
+  "example_response_snippet": "{\"data\":[{\"setid\":\"...\",\"title\":\"...\",\"published_date\":\"...\"}],\"metadata\":{\"total_elements\":...,\"total_pages\":...,\"current_page\":1,\"elements_per_page\":100}}",
+  "description": "US NLM DailyMed web services for Structured Product Labeling (SPL) \u2014 drug package inserts, labels, and related metadata via REST (JSON/XML/ZIP).",
+  "status": null
+}

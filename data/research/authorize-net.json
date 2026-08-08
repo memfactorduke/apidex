@@ -1,0 +1,44 @@
+{
+  "id": "authorize-net",
+  "status": "operational",
+  "name": "Authorize.Net API",
+  "category": "ecommerce-payments",
+  "tagline": "Payment gateway API for card authorization, capture, and recurring billing",
+  "description": "Authorize.Net is a Visa payment gateway offering REST-style and XML APIs for accepting credit cards, eChecks, and digital payments. Developers integrate via Accept.js, the Payment Gateway API, or the Transaction Reporting API to authorize, capture, refund, and manage customer payment profiles. Production and sandbox environments are available with name/transaction-key authentication.",
+  "base_url": "https://api.authorize.net/xml/v1/request.api",
+  "docs_url": "https://developer.authorize.net/api/reference/index.html",
+  "signup_url": "https://developer.authorize.net/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API Login ID and Transaction Key sent in the merchantAuthentication object of each JSON/XML request body (not a header). Obtain credentials from the Merchant Interface or sandbox account."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Sandbox free for development; production has monthly gateway fees and per-transaction fees (varies by processor/reseller \u2014 check current pricing)",
+    "paid_plans": "Gateway and per-transaction fees; pricing depends on reseller and payment processor"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://apitest.authorize.net/xml/v1/request.api -H \"Content-Type: application/json\" -d '{\"getMerchantDetailsRequest\":{\"merchantAuthentication\":{\"name\":\"YOUR_API_LOGIN_ID\",\"transactionKey\":\"YOUR_TRANSACTION_KEY\"}}}'",
+    "response_snippet": "{\"merchantName\":\"Test Merchant\",\"gatewayId\":\"...\",\"isTestMode\":true,\"processors\":[...],\"publicClientKey\":\"...\"}"
+  },
+  "use_cases": [
+    "authorize a credit card payment",
+    "capture a previously authorized transaction",
+    "create a customer payment profile for recurring billing",
+    "refund a settled transaction",
+    "list settled batch transactions for reporting",
+    "validate merchant API credentials in sandbox"
+  ],
+  "sources": [
+    "https://developer.authorize.net/api/reference/index.html",
+    "https://developer.authorize.net/"
+  ],
+  "researcher_confidence": "medium"
+}

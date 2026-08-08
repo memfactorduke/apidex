@@ -1,0 +1,44 @@
+{
+  "id": "invoice-ninja",
+  "status": "operational",
+  "name": "Invoice Ninja API",
+  "category": "ecommerce-payments",
+  "tagline": "Open-source invoicing and billing API for invoices, clients, payments, and expenses",
+  "description": "Invoice Ninja provides a REST API for self-hosted and hosted invoicing: create clients and invoices, track payments and expenses, manage products and recurring billing. Authentication uses an API token (X-API-TOKEN) plus company context headers. Hosted plans start free; self-host is free under open source.",
+  "base_url": "https://invoicing.co/api/v1",
+  "docs_url": "https://api-docs.invoicing.co/",
+  "signup_url": "https://app.invoiceninja.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via X-API-TOKEN header; X-API-SECRET and X-Requested-With often required. Token from Settings \u2192 Account Management \u2192 API Tokens. Company context via X-API-COMPANY-KEY or token binding."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Hosted Free plan available (limited features/users); self-host free. API rate limits not clearly published as free-tier request quotas.",
+    "paid_plans": "Pro and Enterprise hosted plans; see invoiceninja.com/pricing for current tiers."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://invoicing.co/api/v1/clients\" -H \"X-API-TOKEN: YOUR_API_KEY\" -H \"X-Requested-With: XMLHttpRequest\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"data\":[{\"id\":\"AbC12d\",\"name\":\"Acme Corp\",\"balance\":1200.5,\"paid_to_date\":500,\"currency_id\":\"1\",\"created_at\":1700000000}],\"meta\":{\"pagination\":{\"total\":1,\"count\":1,\"per_page\":20,\"current_page\":1,\"total_pages\":1}}}"
+  },
+  "use_cases": [
+    "list or create clients for invoicing",
+    "create and send invoices programmatically",
+    "record and list payments against invoices",
+    "manage products/services and recurring invoices",
+    "pull expense and report data for accounting automation"
+  ],
+  "sources": [
+    "https://invoiceninja.com/",
+    "https://api-docs.invoicing.co/",
+    "https://invoiceninja.github.io/docs/",
+    "https://invoiceninja.com/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

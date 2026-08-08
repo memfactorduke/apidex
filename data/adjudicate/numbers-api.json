@@ -1,0 +1,15 @@
+{
+  "id": "numbers-api",
+  "resolution_notes": "Both verifiers correctly flagged HTTP\u2192HTTPS: official site and live API use https://numbersapi.com; entry already sets https:true. Corrected base_url, docs_url, and example_request to HTTPS. Live check of /42?json returned a working JSON fact (found:true, type:trivia); response text varies by fact DB so snippet is a realistic shape from the live payload. Auth none, free unlimited, rate_limits unpublished, and cors unknown remain confirmed; status operational.",
+  "base_url": "https://numbersapi.com",
+  "docs_url": "https://numbersapi.com",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s \"https://numbersapi.com/42?json\"",
+  "example_response_snippet": "{\"text\":\"42 is the answer to the Ultimate Question of Life, the Universe, and Everything.\",\"number\":42,\"found\":true,\"type\":\"trivia\"}",
+  "description": null,
+  "status": null
+}

@@ -1,0 +1,52 @@
+{
+  "id": "abstract-email",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.abstractapi.com/email-validation"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.abstractapi.com/email-validation",
+      "source": "https://www.abstractapi.com/api/email-validation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.abstractapi.com/email-validation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abstractapi.com/api/email-validation"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 100 requests/month",
+      "source": "https://www.abstractapi.com/api/email-validation"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.abstractapi.com/email-validation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.abstractapi.com/email-validation"
+    }
+  },
+  "notes": "docs_url 404 on automated check but opens correctly; free tier is specifically 100 req/mo not vague. Rate limits still not published on official pages."
+}

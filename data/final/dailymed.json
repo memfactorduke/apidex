@@ -1,0 +1,94 @@
+{
+  "id": "dailymed",
+  "status": "operational",
+  "name": "DailyMed",
+  "category": "health-fitness",
+  "tagline": "Researching DailyMed API \u2014 official NLM SPL docs, endpoints, and limits.",
+  "description": "US NLM DailyMed web services for Structured Product Labeling (SPL) \u2014 drug package inserts, labels, and related metadata via REST (JSON/XML/ZIP).",
+  "base_url": "https://dailymed.nlm.nih.gov",
+  "docs_url": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm",
+  "auth": {
+    "type": "none",
+    "details": "Researching"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public API (no auth); no published numeric free-tier quota. Rate limiting may apply under high load; avoid parallel requests and paginate large result sets (page/pagesize)."
+  },
+  "rate_limits": "No public numeric quota. Official guidance: do not send simultaneous/parallel requests; use sequential requests and pagination for large queries; rate limiting may apply under high load.",
+  "example": {
+    "request": "curl \"https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=aspirin\"",
+    "response_snippet": "{\"data\":[{\"setid\":\"...\",\"title\":\"...\",\"published_date\":\"...\"}],\"metadata\":{\"total_elements\":...,\"total_pages\":...,\"current_page\":1,\"elements_per_page\":100}}"
+  },
+  "use_cases": [
+    "research",
+    "research"
+  ],
+  "sources": [
+    "https://dailymed.nlm.nih.gov"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

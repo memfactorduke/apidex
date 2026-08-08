@@ -1,0 +1,41 @@
+{
+  "id": "khan-academy",
+  "status": "operational",
+  "name": "Khan Academy",
+  "category": "education-reference",
+  "tagline": "Educational content and exercise data from Khan Academy's learning platform",
+  "description": "Khan Academy provides educational content covering math, science, economics, and more. Historically offered unofficial/community APIs and internal endpoints for content and exercises; developers should verify current public API availability, authentication, and terms of use before production integration.",
+  "base_url": "https://www.khanacademy.org/api/v1",
+  "docs_url": "https://github.com/Khan/khan-api",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Historical public endpoints often required no auth; OAuth was used for user-specific data. Current official public API status is uncertain\u2014verify before use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://www.khanacademy.org/api/v1/topictree\"",
+    "response_snippet": "{\"kind\":\"Topic\",\"relative_url\":\"/\",\"slug\":\"\",\"title\":\"Khan Academy\",\"children\":[...]}"
+  },
+  "use_cases": [
+    "fetch Khan Academy topic tree structure",
+    "look up exercise or video metadata by ID",
+    "list topics and subtopics for curriculum mapping",
+    "retrieve exercise problem data for learning apps"
+  ],
+  "sources": [
+    "https://github.com/Khan/khan-api",
+    "https://www.khanacademy.org"
+  ],
+  "researcher_confidence": "low"
+}

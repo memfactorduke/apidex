@@ -1,0 +1,44 @@
+{
+  "id": "mediawiki",
+  "status": "operational",
+  "name": "MediaWiki API",
+  "category": "news-media",
+  "tagline": "Query and edit wiki content via MediaWiki\u2019s action API",
+  "description": "The MediaWiki Action API is the primary machine interface for MediaWiki sites (Wikipedia, Wikimedia projects, and self-hosted wikis). It supports read queries, search, page content, revisions, login, and write actions over HTTP with JSON (or XML) responses. No central paid SaaS: each wiki hosts its own API; rate limits and auth vary by site.",
+  "base_url": "https://en.wikipedia.org/w/api.php",
+  "docs_url": "https://www.mediawiki.org/wiki/API:Main_page",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Most read queries need no auth. Write/login use bot passwords or OAuth (MediaWiki OAuth extension); cookies/tokens for session. Self-hosted wikis may differ."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free on public Wikimedia sites; no commercial paid tier from MediaWiki itself",
+    "paid_plans": null
+  },
+  "rate_limits": "Wikimedia: polite use requested; bots should identify User-Agent. Exact limits vary; heavy use may be throttled. Self-hosted: admin-defined.",
+  "example": {
+    "request": "curl \"https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=API\"",
+    "response_snippet": "{\"batchcomplete\":\"\",\"query\":{\"pages\":{\"-1\":{\"ns\":0,\"title\":\"API\",\"missing\":\"\"}}}}"
+  },
+  "use_cases": [
+    "fetch Wikipedia page extracts or summaries",
+    "search wiki titles and content",
+    "list page revisions or categories",
+    "check if a page exists and get its pageid",
+    "export structured wikitext or parse HTML"
+  ],
+  "sources": [
+    "https://www.mediawiki.org/wiki/API:Main_page",
+    "https://www.mediawiki.org/wiki/API:Etiquette",
+    "https://en.wikipedia.org/w/api.php"
+  ],
+  "researcher_confidence": "medium"
+}

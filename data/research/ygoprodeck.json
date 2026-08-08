@@ -1,0 +1,42 @@
+{
+  "id": "ygoprodeck",
+  "status": "operational",
+  "name": "Yu-Gi-Oh! API (YGOPRODeck)",
+  "category": "games-comics",
+  "tagline": "Free Yu-Gi-Oh card database with images, sets, archetypes, and banlist data",
+  "description": "YGOPRODeck provides a free public REST API for Yu-Gi-Oh! TCG/OCG card data: names, effects, attributes, types, ATK/DEF, set codes, rarity, banlist status, archetypes, and card images. Commonly used for deck builders, price trackers, and card search tools without requiring authentication for basic card queries.",
+  "base_url": "https://db.ygoprodeck.com/api/v7",
+  "docs_url": "https://ygoprodeck.com/api-guide/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required for public card database endpoints; requests are made directly to the open REST API."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public API; rate limits apply (see rate_limits). No paid plans published for the core card database API.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published guidance historically around 20 requests/second; confirm current limits on official docs. Excess may return HTTP 429.",
+  "example": {
+    "request": "curl -s 'https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician'",
+    "response_snippet": "{\"data\":[{\"id\":46986414,\"name\":\"Dark Magician\",\"type\":\"Normal Monster\",\"frameType\":\"normal\",\"desc\":\"The ultimate wizard in terms of attack and defense.\",\"atk\":2500,\"def\":2100,\"level\":7,\"race\":\"Spellcaster\",\"attribute\":\"DARK\",...}]}"
+  },
+  "use_cases": [
+    "look up a Yu-Gi-Oh card by name or ID",
+    "fetch card images for a deck list",
+    "get banlist status for a card",
+    "list cards in a set or archetype",
+    "search cards by type, attribute, or ATK/DEF filters"
+  ],
+  "sources": [
+    "https://ygoprodeck.com/api-guide/",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php"
+  ],
+  "researcher_confidence": "medium"
+}

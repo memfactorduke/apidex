@@ -1,0 +1,40 @@
+{
+  "id": "sportsdataio",
+  "status": "operational",
+  "name": "SportsDataIO",
+  "category": "sports",
+  "tagline": "US major-league sports stats and fantasy data via REST APIs",
+  "description": "SportsDataIO provides real-time and historical sports statistics, scores, projections, and fantasy data for NFL, NBA, MLB, NHL, and other leagues. Developers integrate via REST endpoints with API-key authentication; trial and paid tiers support apps needing league coverage beyond open scrapes.",
+  "base_url": "https://api.sportsdata.io",
+  "docs_url": "https://sportsdata.io/developers",
+  "signup_url": "https://sportsdata.io/developers/api-key",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or header (verify in docs); self-serve developer signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.sportsdata.io/v3/nfl/scores/json/ScoresByWeek/2024/1?key=YOUR_API_KEY\"",
+    "response_snippet": "{\"GameKey\":\"...\",\"Season\":2024,\"Week\":1,...}"
+  },
+  "use_cases": [
+    "get NFL scores for a given week",
+    "fetch NBA player season stats",
+    "pull MLB standings",
+    "get fantasy football projections"
+  ],
+  "sources": [
+    "https://sportsdata.io"
+  ],
+  "researcher_confidence": "low"
+}

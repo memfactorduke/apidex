@@ -1,0 +1,38 @@
+{
+  "id": "vesselfinder",
+  "status": "operational",
+  "name": "VesselFinder",
+  "category": "transportation",
+  "tagline": "AIS ship positions and maritime vessel tracking API",
+  "description": "VesselFinder provides AIS-based ship tracking data via a commercial REST API, including live vessel positions, voyage details, and fleet monitoring for maritime applications.",
+  "base_url": "https://api.vesselfinder.com",
+  "docs_url": "https://api.vesselfinder.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header or query parameter not fully verified without account access"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.vesselfinder.com/vessels?userkey=YOUR_API_KEY\"",
+    "response_snippet": "{\"error\": \"placeholder \u2014 research incomplete\"}"
+  },
+  "use_cases": [
+    "get live AIS position for a vessel by MMSI",
+    "list vessels in a geographic area"
+  ],
+  "sources": [
+    "https://www.vesselfinder.com"
+  ],
+  "researcher_confidence": "low"
+}

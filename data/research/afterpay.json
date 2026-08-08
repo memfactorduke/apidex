@@ -1,0 +1,38 @@
+{
+  "id": "afterpay",
+  "status": "operational",
+  "name": "Afterpay/Clearpay API",
+  "category": "ecommerce-payments",
+  "tagline": "Buy now, pay later checkout and payment APIs for merchants",
+  "description": "Afterpay (Clearpay in the UK/EU) provides merchant APIs for buy-now-pay-later checkout, payment authorisation, order capture/refunds, and related e-commerce flows. Merchants integrate via server-side REST endpoints using merchant credentials; documentation covers Online API, Express Checkout, and platform-specific SDKs.",
+  "base_url": "https://api.afterpay.com",
+  "docs_url": "https://developers.afterpay.com",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "unknown \u2014 needs official docs verification"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://api.afterpay.com/",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "create Afterpay checkout session for an order",
+    "capture or refund an Afterpay payment"
+  ],
+  "sources": [
+    "https://developers.afterpay.com"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "stability-ai",
+  "status": "operational",
+  "name": "Stability AI API",
+  "category": "ai-ml",
+  "tagline": "Generative AI API for image, video, 3D, and audio models from Stability AI",
+  "description": "Stability AI provides a REST API for accessing generative models including Stable Diffusion for image generation/editing, Stable Video Diffusion, 3D generation, and audio models. Developers authenticate with API keys and call endpoints at api.stability.ai for text-to-image, image-to-image, upscaling, and related generative tasks.",
+  "base_url": "https://api.stability.ai",
+  "docs_url": "https://platform.stability.ai/docs",
+  "signup_url": "https://platform.stability.ai",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (self-serve signup on platform.stability.ai)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X POST \"https://api.stability.ai/v2beta/stable-image/generate/core\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: image/*\" -F \"prompt=a lighthouse on a cliff\" -F \"output_format=png\" --output lighthouse.png",
+    "response_snippet": "Binary image bytes (PNG/JPEG/WebP) when Accept: image/*; or JSON with base64 when Accept: application/json"
+  },
+  "use_cases": [
+    "generate an image from a text prompt",
+    "edit or inpaint an existing image",
+    "upscale a low-resolution image",
+    "generate a short video from an image",
+    "remove background from a product photo"
+  ],
+  "sources": [
+    "https://platform.stability.ai/docs",
+    "https://platform.stability.ai"
+  ],
+  "researcher_confidence": "low"
+}

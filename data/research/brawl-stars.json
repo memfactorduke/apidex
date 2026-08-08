@@ -1,0 +1,41 @@
+{
+  "id": "brawl-stars",
+  "status": "operational",
+  "name": "Brawl Stars API",
+  "category": "games-comics",
+  "tagline": "Official Supercell API for Brawl Stars player, club, and battle data",
+  "description": "Official Brawl Stars developer API from Supercell providing access to player profiles, club information, battle logs, rankings, and brawler data. Developers obtain a free API key by registering with an IP allowlist; requests authenticate via Bearer token. Useful for stats trackers, club tools, and community dashboards.",
+  "base_url": "https://api.brawlstars.com/v1",
+  "docs_url": "https://developer.brawlstars.com/",
+  "signup_url": "https://developer.brawlstars.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token API key via Authorization header; free self-serve signup with IP allowlist at developer.brawlstars.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free developer keys; exact free request quotas not clearly published on official docs",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.brawlstars.com/v1/players/%232PP\"",
+    "response_snippet": "{\"tag\":\"#2PP\",\"name\":\"...\",\"trophies\":0,\"expLevel\":1,\"expPoints\":0,\"highestTrophies\":0,\"powerPlayPoints\":0,\"highestPowerPlayPoints\":0,\"soloVictories\":0,\"duoVictories\":0,\"3vs3Victories\":0,\"bestRoboRumbleTime\":0,\"bestTimeAsBigBrawler\":0,\"brawlers\":[]}"
+  },
+  "use_cases": [
+    "look up a Brawl Stars player profile by tag",
+    "fetch a player's recent battle log",
+    "get club members and club stats",
+    "list brawlers and their metadata",
+    "query current event/map rotation or rankings"
+  ],
+  "sources": [
+    "https://developer.brawlstars.com/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "webzio",
+  "status": "operational",
+  "name": "Webz.io",
+  "category": "news-media",
+  "tagline": "Real-time web, news, and dark web data APIs for developers",
+  "description": "Webz.io (formerly Webhose.io) provides REST APIs that deliver structured data from news sites, blogs, forums, reviews, and dark web sources. Developers query by keywords, filters, and time ranges to monitor media, brand mentions, and threat intelligence at scale.",
+  "base_url": "https://api.webz.io",
+  "docs_url": "https://docs.webz.io/",
+  "signup_url": "https://webz.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via token query parameter (?token=YOUR_API_KEY); self-serve signup on webz.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.webz.io/newsApiLite?token=YOUR_API_KEY&q=technology&sort=crawled\"",
+    "response_snippet": "{\"posts\":[...],\"totalResults\":0,\"moreResultsAvailable\":0,\"next\":null,\"requestsLeft\":0}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword",
+    "monitor brand mentions across news and blogs",
+    "fetch structured web data for media monitoring",
+    "query dark web sources for threat intelligence"
+  ],
+  "sources": [
+    "https://webz.io/",
+    "https://docs.webz.io/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "brevo",
+  "status": "operational",
+  "name": "Brevo (Sendinblue)",
+  "category": "social-communication",
+  "tagline": "Transactional email, SMS, WhatsApp, and marketing automation API",
+  "description": "Brevo (formerly Sendinblue) provides REST APIs for transactional email, SMS, WhatsApp, contacts, campaigns, and marketing automation. Developers authenticate with an API key and call versioned endpoints under api.brevo.com for sending, list management, and event tracking.",
+  "base_url": "https://api.brevo.com/v3",
+  "docs_url": "https://developers.brevo.com/",
+  "signup_url": "https://app.brevo.com/account/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api-key header (also supports partner-key); create keys in Brevo dashboard under SMTP & API"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes limited daily email sends (commonly cited ~300/day); API access on free plans \u2014 verify current limits on brevo.com/pricing",
+    "paid_plans": "Starter, Business, and Enterprise with higher send volumes and features"
+  },
+  "rate_limits": "not published in a single public table; varies by account and endpoint \u2014 check dashboard/docs",
+  "example": {
+    "request": "curl -X GET 'https://api.brevo.com/v3/account' -H 'accept: application/json' -H 'api-key: YOUR_API_KEY'",
+    "response_snippet": "{\"email\":\"user@example.com\",\"firstName\":\"Jane\",\"lastName\":\"Doe\",\"companyName\":\"Acme\",\"plan\":[{\"type\":\"free\",\"credits\":300,\"creditsType\":\"sendLimit\"}]}"
+  },
+  "use_cases": [
+    "send a transactional email to a user",
+    "add or update a contact in a mailing list",
+    "send an SMS or WhatsApp message",
+    "create or trigger an email campaign",
+    "fetch account plan and remaining send credits"
+  ],
+  "sources": [
+    "https://developers.brevo.com/",
+    "https://developers.brevo.com/docs",
+    "https://www.brevo.com/pricing/",
+    "https://api.brevo.com/"
+  ],
+  "researcher_confidence": "medium"
+}

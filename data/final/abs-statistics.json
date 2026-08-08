@@ -1,0 +1,100 @@
+{
+  "id": "abs-statistics",
+  "status": "operational",
+  "name": "Australian Bureau of Statistics API",
+  "category": "government-open-data",
+  "tagline": "ABS SDMX-JSON open data for Australian statistics and census",
+  "description": "Official Australian Bureau of Statistics (ABS.Stat) web services expose economic, demographic, labour, and census datasets via SDMX-JSON (and related) REST endpoints at api.data.abs.gov.au. Developers query dataflows, structure, and observations without an API key for public open data use cases.",
+  "base_url": "https://api.data.abs.gov.au",
+  "docs_url": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public ABS.Stat open data endpoints; requests are unauthenticated HTTPS GETs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public open data; no charge for standard API use (fair-use / capacity limits may apply)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.data.abs.gov.au/data/ABS,CPI,1.0.0/1.50.10001.10.Q?startPeriod=2020-Q1&endPeriod=2020-Q4&format=jsondata\"",
+    "response_snippet": "{\"header\":{\"id\":\"...\",\"prepared\":\"...\",\"sender\":{\"id\":\"ABS\"}},\"dataSets\":[{\"action\":\"Information\",\"series\":{\"0:0:0:0:0\":{\"observations\":{\"0\":[116.6],\"1\":[114.4]}}}}],\"structure\":{\"dimensions\":{\"series\":[...],\"observation\":[{\"id\":\"TIME_PERIOD\",\"values\":[{\"id\":\"2020-Q1\"},{\"id\":\"2020-Q2\"}]}]}}"
+  },
+  "use_cases": [
+    "fetch CPI or inflation time series by region and period",
+    "query labour force or unemployment statistics",
+    "retrieve census or demographic dataflow observations",
+    "list available ABS dataflows and data structure definitions",
+    "build dashboards of Australian economic indicators"
+  ],
+  "sources": [
+    "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis",
+    "https://api.data.abs.gov.au"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

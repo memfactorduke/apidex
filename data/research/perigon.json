@@ -1,0 +1,39 @@
+{
+  "id": "perigon",
+  "status": "operational",
+  "name": "Perigon",
+  "category": "news-media",
+  "tagline": "Real-time news and web content API for developers",
+  "description": "Perigon provides a news and web content API that delivers real-time articles, headlines, and structured media data for applications that need current events coverage, media monitoring, or content intelligence.",
+  "base_url": "https://api.goperigon.com/v1",
+  "docs_url": "https://docs.goperigon.com",
+  "signup_url": "https://www.goperigon.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header/query method needs verification from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.goperigon.com/v1/articles/all?apiKey=YOUR_API_KEY&q=technology\"",
+    "response_snippet": "{ \"status\": 200, \"numResults\": 0, \"articles\": [] }"
+  },
+  "use_cases": [
+    "search recent news articles by keyword",
+    "monitor headlines for a topic or company",
+    "fetch structured article metadata for media apps"
+  ],
+  "sources": [
+    "https://www.goperigon.com"
+  ],
+  "researcher_confidence": "low"
+}

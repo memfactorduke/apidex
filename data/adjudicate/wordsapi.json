@@ -1,0 +1,15 @@
+{
+  "id": "wordsapi",
+  "resolution_notes": "Disputed free_tier_limits and rate_limits: Verifier B correctly found published quotas but used wrong numbers/limit types. Official wordsapi.com pricing and RapidAPI public plans (BASIC/PRO/ULTRA/MEGA) show Basic free 2,500/day, Pro 25,000/day, Ultra 250,000/day, Mega 500,000/day\u2014all soft daily quotas with overages (not hard free, not 50k/1M). Docs do not define separate per-second rate caps for public plans. Other fields kept.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "2,500 requests/day on RapidAPI BASIC free plan (soft limit; overage $0.004/request)",
+  "rate_limits": "BASIC free: 2,500/day soft (+$0.004 overage); Pro: 25,000/day soft; Ultra: 250,000/day soft; Mega: 500,000/day soft (RapidAPI daily quotas)",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "mailchimp",
+  "status": "operational",
+  "name": "Mailchimp",
+  "category": "social-communication",
+  "tagline": "Marketing platform API for email campaigns, audiences, and automations",
+  "description": "Mailchimp provides a REST API for managing email marketing audiences, campaigns, automations, templates, and reporting. Developers authenticate with API keys scoped to a datacenter-specific base URL, then create and manage lists, send campaigns, and pull engagement analytics programmatically.",
+  "base_url": "https://<dc>.api.mailchimp.com/3.0",
+  "docs_url": "https://mailchimp.com/developer/marketing/api/",
+  "signup_url": "https://login.mailchimp.com/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic Auth (anystring:API_KEY) or Authorization: Bearer YOUR_API_KEY; key suffix encodes datacenter (e.g. us19). Self-serve from account settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --request GET --url 'https://usX.api.mailchimp.com/3.0/' --user 'anystring:YOUR_API_KEY'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "add or update a subscriber on an audience list",
+    "create and send an email campaign",
+    "list audience members and their status",
+    "trigger or manage marketing automations",
+    "pull campaign open and click reports"
+  ],
+  "sources": [
+    "https://mailchimp.com/developer/"
+  ],
+  "researcher_confidence": "low"
+}

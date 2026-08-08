@@ -1,0 +1,44 @@
+{
+  "id": "rubygems",
+  "status": "operational",
+  "name": "RubyGems API",
+  "category": "dev-tools",
+  "tagline": "Official public API for RubyGems.org package registry data and gem metadata.",
+  "description": "The RubyGems API provides programmatic access to the RubyGems.org package registry, including gem metadata, versions, dependencies, downloads, and search. Developers use it to query published gems, resolve versions, and integrate Ruby package information into tools and CI without scraping the website.",
+  "base_url": "https://rubygems.org/api/v1",
+  "docs_url": "https://guides.rubygems.org/rubygems-org-api/",
+  "signup_url": "https://rubygems.org/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key (or OAuth) for write/authenticated endpoints; many read endpoints are public with no auth. Key via Authorization header or as query param depending on endpoint."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://rubygems.org/api/v1/gems/rails.json",
+    "response_snippet": "{\"name\":\"rails\",\"downloads\":...,\"version\":\"...\",\"info\":\"...\",\"authors\":\"...\",\"project_uri\":\"https://rubygems.org/gems/rails\",...}"
+  },
+  "use_cases": [
+    "look up gem metadata and latest version by name",
+    "list versions and dependencies for a Ruby gem",
+    "search gems by keyword for package discovery",
+    "check download counts or reverse dependencies",
+    "verify whether a gem version exists before install"
+  ],
+  "sources": [
+    "https://guides.rubygems.org/rubygems-org-api/",
+    "https://rubygems.org"
+  ],
+  "researcher_confidence": "medium"
+}

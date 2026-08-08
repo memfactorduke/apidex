@@ -1,0 +1,44 @@
+{
+  "id": "deepl",
+  "status": "operational",
+  "name": "DeepL API",
+  "category": "ai-ml",
+  "tagline": "Neural machine translation API for text and documents",
+  "description": "DeepL API provides high-quality neural machine translation for text and documents across many language pairs. Developers authenticate with an API key, call REST endpoints for translate/usage/languages, and choose Free or Pro plans with different hosts and quotas.",
+  "base_url": "https://api.deepl.com/v2",
+  "docs_url": "https://developers.deepl.com/docs",
+  "signup_url": "https://www.deepl.com/pro-api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: DeepL-Auth-Key YOUR_API_KEY header (or auth_key form field). Free keys use api-free.deepl.com; Pro keys use api.deepl.com. Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "DeepL API Free: 500,000 characters/month; Free keys must use https://api-free.deepl.com",
+    "paid_plans": "DeepL API Pro: pay-as-you-go per character after included usage; enterprise options available \u2014 see pricing page"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST 'https://api-free.deepl.com/v2/translate' -H 'Authorization: DeepL-Auth-Key YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"text\":[\"Hello, world!\"],\"target_lang\":\"DE\"}'",
+    "response_snippet": "{\"translations\":[{\"detected_source_language\":\"EN\",\"text\":\"Hallo, Welt!\"}]}"
+  },
+  "use_cases": [
+    "translate text between languages via REST",
+    "detect source language of input text",
+    "check API character usage and quota remaining",
+    "list supported source and target languages",
+    "translate uploaded documents (PDF, DOCX, etc.)"
+  ],
+  "sources": [
+    "https://developers.deepl.com/docs",
+    "https://www.deepl.com/pro-api",
+    "https://developers.deepl.com/docs/getting-started/auth",
+    "https://developers.deepl.com/docs/api-reference/translate"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "razorpay",
+  "status": "operational",
+  "name": "Razorpay API",
+  "category": "ecommerce-payments",
+  "tagline": "India-focused payments platform for accepting cards, UPI, wallets, and bank transfers",
+  "description": "Razorpay provides a REST API for collecting payments, creating orders, managing refunds, settlements, and related payment workflows primarily for Indian businesses. Developers authenticate with Key ID and Key Secret over Basic Auth, create Orders server-side, and complete checkout via Razorpay Checkout or Payment Links.",
+  "base_url": "https://api.razorpay.com/v1",
+  "docs_url": "https://razorpay.com/docs/api/",
+  "signup_url": "https://dashboard.razorpay.com/signup",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with Key ID as username and Key Secret as password (Base64). Keys from Dashboard \u2192 Account & Settings \u2192 API Keys. Live vs test via key prefix (rzp_live_ / rzp_test_)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No per-request API free quota published; test mode free. Live fees are transaction-based (cards/UPI/netbanking etc.), not request-based.",
+    "paid_plans": "Transaction fees vary by method; see pricing page. No separate paid API plan tiers commonly published for core REST."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_KEY_ID:YOUR_KEY_SECRET https://api.razorpay.com/v1/orders -H \"Content-Type: application/json\" -d '{\"amount\":50000,\"currency\":\"INR\",\"receipt\":\"receipt_1\"}'",
+    "response_snippet": "{\"id\":\"order_xxx\",\"entity\":\"order\",\"amount\":50000,\"currency\":\"INR\",\"status\":\"created\"}"
+  },
+  "use_cases": [
+    "create a payment order for checkout",
+    "fetch payment status by payment id",
+    "issue a full or partial refund",
+    "create a payment link for invoice collection",
+    "list settlements or capture authorized payments"
+  ],
+  "sources": [
+    "https://razorpay.com/docs/api/",
+    "https://razorpay.com/docs/",
+    "https://razorpay.com/pricing/"
+  ],
+  "researcher_confidence": "medium"
+}

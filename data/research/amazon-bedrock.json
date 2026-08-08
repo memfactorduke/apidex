@@ -1,0 +1,41 @@
+{
+  "id": "amazon-bedrock",
+  "status": "operational",
+  "name": "Amazon Bedrock",
+  "category": "ai-ml",
+  "tagline": "Managed foundation models via AWS API",
+  "description": "Amazon Bedrock is a fully managed AWS service for invoking foundation models (Anthropic Claude, Amazon Titan, Meta Llama, and others) through a unified API with AWS SigV4 authentication. Runtime endpoints are regional under bedrock-runtime.",
+  "base_url": "https://bedrock-runtime.{region}.amazonaws.com",
+  "docs_url": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html",
+  "signup_url": "https://console.aws.amazon.com/bedrock/",
+  "auth": {
+    "type": "other",
+    "details": "AWS Signature Version 4 (SigV4) with IAM credentials; no simple API key. Use AWS access key/secret or temporary STS credentials. Service name is bedrock for control plane and bedrock-runtime for InvokeModel/Converse."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Pay-per-token and provisioned throughput; model- and region-specific. See AWS Bedrock pricing."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://bedrock-runtime.us-east-1.amazonaws.com/model/anthropic.claude-3-haiku-20240307-v1:0/invoke\" -H \"Content-Type: application/json\" -H \"Authorization: AWS4-HMAC-SHA256 Credential=YOUR_ACCESS_KEY/...\" -d '{\"anthropic_version\":\"bedrock-2023-05-31\",\"max_tokens\":100,\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"msg_...\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"Hello!\"}],\"stop_reason\":\"end_turn\"}"
+  },
+  "use_cases": [
+    "invoke a foundation model for chat completion",
+    "run multi-turn converse API with tools",
+    "embed text with a Bedrock embedding model",
+    "stream token responses from a model",
+    "list and get foundation model metadata via control plane"
+  ],
+  "sources": [
+    "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html"
+  ],
+  "researcher_confidence": "low"
+}

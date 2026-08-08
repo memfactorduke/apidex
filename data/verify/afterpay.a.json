@@ -1,0 +1,52 @@
+{
+  "id": "afterpay",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://global-api.afterpay.com (US/CA; region-specific: api.eu.afterpay.com, api.au.afterpay.com, api.afterpay.com for NZ) \u2014 not a single https://api.afterpay.com root",
+      "source": "https://developers.afterpay.com/afterpay-online/reference/api-environments"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.afterpay.com"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "basic (HTTP Basic Auth with Merchant ID as username and Secret Key as password)",
+      "source": "https://developers.afterpay.com/afterpay-online/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.afterpay.com"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.afterpay.com/afterpay-online/reference/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl example must use region host + Basic Auth + Accept header, e.g. curl -u MERCHANT_ID:SECRET_KEY -H 'Accept: application/json' https://global-api.afterpay.com/v2/configuration \u2014 bare GET https://api.afterpay.com/ is not a documented endpoint",
+      "source": "https://developers.afterpay.com/afterpay-online/reference/api-environments"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.afterpay.com"
+    }
+  },
+  "notes": "Docs live. Base URL is region-split (global-api/eu/au/nz hosts), not single api.afterpay.com. Auth is HTTP Basic (merchant ID + secret), not unknown. Rate limiting exists (headers/429) but public numeric limits not published. No free public API tier for merchants. Example curl is invalid. CORS not documented."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "spoonacular",
+  "resolution_notes": "Verifier B is correct on both disputed fields. Official pricing (https://spoonacular.com/food-api/pricing) publishes a free tier of 150 points/day; endpoints are point-weighted rather than a flat request count. The original \"unknown\" / \"not published\" values are therefore wrong\u2014limits appear on the pricing page (Free 150/day; paid tiers scale to 1,500\u2013150,000+ points/day). All other fields remain as in the original entry.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "150 points/day free (Food API pricing; points are endpoint-weighted, not a flat request count)",
+  "rate_limits": "Free: 150 points/day; paid plans scale higher (e.g. 1,500\u2013150,000+ points/day). Limits are published on pricing.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

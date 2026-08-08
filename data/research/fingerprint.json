@@ -1,0 +1,38 @@
+{
+  "id": "fingerprint",
+  "status": "operational",
+  "name": "Fingerprint",
+  "category": "security-identity",
+  "tagline": "Device fingerprinting and bot detection for fraud prevention",
+  "description": "Server-side and client identification APIs that recognize returning browsers and devices, detect bots, and score suspicious activity for fraud prevention and account security.",
+  "base_url": "https://api.fpjs.io",
+  "docs_url": "https://dev.fingerprint.com/docs",
+  "signup_url": "https://dashboard.fingerprint.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header or query param; public key for client, secret for server"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://api.fpjs.io/' -H 'Auth-API-Key: YOUR_API_KEY'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "identify returning browsers for fraud prevention",
+    "detect automated bot traffic on signup"
+  ],
+  "sources": [
+    "https://fingerprint.com"
+  ],
+  "researcher_confidence": "low"
+}

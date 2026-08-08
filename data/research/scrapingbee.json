@@ -1,0 +1,42 @@
+{
+  "id": "scrapingbee",
+  "status": "operational",
+  "name": "ScrapingBee",
+  "category": "data-analytics",
+  "tagline": "Headless browser scrape API for HTML extraction and anti-bot bypass.",
+  "description": "ScrapingBee is a web scraping API that renders pages with headless browsers, handles proxies and CAPTCHAs, and returns HTML or extracted data so developers can scrape sites without running their own browser infrastructure.",
+  "base_url": "https://app.scrapingbee.com/api/v1",
+  "docs_url": "https://www.scrapingbee.com/documentation/",
+  "signup_url": "https://app.scrapingbee.com/account/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (self-serve signup at app.scrapingbee.com)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "html",
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://app.scrapingbee.com/api/v1?api_key=YOUR_API_KEY&url=https%3A%2F%2Fhttpbin.org%2Fhtml\"",
+    "response_snippet": "<!DOCTYPE html>\\n<html>..."
+  },
+  "use_cases": [
+    "scrape JS-rendered page HTML",
+    "extract data with CSS selectors",
+    "screenshot a webpage",
+    "bypass basic anti-bot blocks"
+  ],
+  "sources": [
+    "https://www.scrapingbee.com/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "adsb-exchange",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://adsbexchange.com/api/aircraft/v2 (RapidAPI: https://rapidapi.com/adsbx/api/adsbexchange-com1); do not use bare https://adsbexchange.com/api as the documented base",
+      "source": "https://www.adsbexchange.com/data/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.adsbexchange.com/data/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/adsbx/api/adsbexchange-com1"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true (via RapidAPI free plan / free tier of ADSBx API on RapidAPI \u2014 verify current quota on RapidAPI; not fully free unlimited)",
+      "source": "https://rapidapi.com/adsbx/api/adsbexchange-com1"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "RapidAPI free tier typically documents request quotas (historically ~100\u20131000s/month depending on plan listing; check live RapidAPI pricing page \u2014 not \"unknown\" if free tier exists)",
+      "source": "https://rapidapi.com/adsbx/api/adsbexchange-com1"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published via RapidAPI plan quotas/rate limits on the ADSBx listing (not merely \"not published\")",
+      "source": "https://rapidapi.com/adsbx/api/adsbexchange-com1"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Current public path uses RapidAPI host + X-RapidAPI-Key / X-RapidAPI-Host headers (not api-auth on adsbexchange.com/api). Example shape: GET https://adsbexchange-com1.p.rapidapi.com/v2/lat/.../lon/.../dist/.../ with RapidAPI headers",
+      "source": "https://rapidapi.com/adsbx/api/adsbexchange-com1"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.adsbexchange.com/data/"
+    }
+  },
+  "notes": "Entry mixes pre-RapidAPI and current access. Official data page points to RapidAPI; free tier + limits exist there. Direct adsbexchange.com/api + api-auth curl is outdated/wrong for current public access."
+}

@@ -1,0 +1,102 @@
+{
+  "id": "launch-library-2",
+  "status": "operational",
+  "name": "Launch Library 2",
+  "category": "science-space",
+  "tagline": "Global space launch schedule and event data API from The Space Devs",
+  "description": "string|null",
+  "base_url": "string|null",
+  "docs_url": "string|null",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for free tier; optional API token for higher rate limits via Authorization header after free signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "string|null",
+    "paid_plans": null
+  },
+  "rate_limits": "string|null",
+  "example": {
+    "request": "string|null",
+    "response_snippet": "string|null"
+  },
+  "use_cases": [
+    "list upcoming space launches",
+    "get details for a specific launch by ID",
+    "search launches by rocket or agency",
+    "track launch status and NET times",
+    "list space agencies and spacecraft"
+  ],
+  "sources": [
+    "https://ll.thespacedevs.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "dbpedia",
+  "status": "operational",
+  "name": "DBpedia",
+  "category": "data-analytics",
+  "tagline": "Wikipedia knowledge graph as structured Linked Data",
+  "description": "DBpedia extracts structured data from Wikipedia and exposes it as a large public knowledge graph via SPARQL and Linked Data endpoints. Developers query entities, relationships, and multilingual facts (people, places, works, concepts) without scraping Wikipedia, using standard RDF/SPARQL tooling for research, entity linking, and semantic applications.",
+  "base_url": "https://dbpedia.org/sparql",
+  "docs_url": "https://www.dbpedia.org/resources/sparql/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public SPARQL and Linked Data endpoints; no API key or OAuth required for standard use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -G 'https://dbpedia.org/sparql' --data-urlencode 'query=SELECT ?label WHERE { dbr:Berlin rdfs:label ?label . FILTER (lang(?label) = \"en\") } LIMIT 1' -H 'Accept: application/sparql-results+json'",
+    "response_snippet": "{\"head\":{\"vars\":[\"label\"]},\"results\":{\"bindings\":[{\"label\":{\"type\":\"literal\",\"xml:lang\":\"en\",\"value\":\"Berlin\"}}]}}"
+  },
+  "use_cases": [
+    "run SPARQL queries over Wikipedia-derived entities and relations",
+    "resolve a Wikipedia concept to a DBpedia URI and fetch RDF facts",
+    "look up multilingual labels and abstracts for a person, place, or work",
+    "entity-link free text mentions against the DBpedia knowledge graph",
+    "explore ontology types and properties for semantic data modeling"
+  ],
+  "sources": [
+    "https://www.dbpedia.org/",
+    "https://www.dbpedia.org/resources/sparql/",
+    "https://dbpedia.org/sparql",
+    "https://www.dbpedia.org/resources/"
+  ],
+  "researcher_confidence": "medium"
+}

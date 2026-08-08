@@ -1,0 +1,104 @@
+{
+  "id": "braintree",
+  "status": "operational",
+  "name": "Braintree",
+  "category": "ecommerce-payments",
+  "tagline": "PayPal-owned payment platform for cards, wallets, and merchant accounts",
+  "description": "Braintree is a full-stack payments platform (PayPal) for accepting cards, PayPal, Venmo, Apple Pay, Google Pay, and more. Merchants use server SDKs or GraphQL to create customers, vault payment methods, authorize/capture transactions, and manage refunds. Access requires a merchant account; credentials are public key, private key, and merchant ID (or GraphQL access tokens).",
+  "base_url": "https://api.braintreegateway.com (prod REST); sandbox REST https://api.sandbox.braintreegateway.com; GraphQL https://payments.braintree-api.com/graphql (sandbox: https://payments.sandbox.braintree-api.com/graphql)",
+  "docs_url": "https://developer.paypal.com/braintree/docs",
+  "signup_url": "https://www.braintreepayments.com/sandbox",
+  "auth": {
+    "type": "other",
+    "details": "Server SDKs: public key, private key, and merchant ID (Basic auth style). GraphQL: Bearer access token. Sandbox and production use separate credentials and hosts."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Sandbox free for full API testing; no free production transaction quota. US standard cards 2.89%+$0.29 (as of May 2026); rates vary by region/method \u2014 confirm official pricing",
+    "paid_plans": "Transaction-based; contact sales for enterprise/volume"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://payments.sandbox.braintree-api.com/graphql -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Braintree-Version: 2024-08-01\" -H \"Content-Type: application/json\" -d '{\"query\":\"query { ping }\"}'",
+    "response_snippet": "{\"data\":{\"ping\":\"pong\"}}"
+  },
+  "use_cases": [
+    "create a payment transaction from a client nonce",
+    "vault a customer's card for recurring charges",
+    "refund or void a prior Braintree transaction",
+    "generate a client token for Drop-in UI",
+    "look up a transaction by ID",
+    "create a customer and store a payment method"
+  ],
+  "sources": [
+    "https://developer.paypal.com/braintree/docs",
+    "https://developer.paypal.com/braintree/docs/reference/general/authentication",
+    "https://developer.paypal.com/braintree/docs/guides/graphql/overview",
+    "https://www.braintreepayments.com/pricing"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

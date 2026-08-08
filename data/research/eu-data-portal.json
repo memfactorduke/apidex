@@ -1,0 +1,38 @@
+{
+  "id": "eu-data-portal",
+  "status": "operational",
+  "name": "EU Open Data Portal API",
+  "category": "government-open-data",
+  "tagline": "Search and access open data from EU institutions and member states",
+  "description": "The EU Open Data Portal API provides programmatic access to the European Union's open data catalogue at data.europa.eu, covering datasets, distributions, catalogues, and related metadata from EU institutions and member states.",
+  "base_url": "https://data.europa.eu/api",
+  "docs_url": "https://data.europa.eu/en/help/data-providers/apis",
+  "auth": {
+    "type": "none",
+    "details": "unknown"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl 'https://data.europa.eu/api/hub/search/datasets?query=climate&limit=1'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "search EU open datasets by keyword",
+    "fetch dataset metadata and distributions",
+    "list catalogues from EU institutions"
+  ],
+  "sources": [
+    "https://data.europa.eu"
+  ],
+  "researcher_confidence": "low"
+}

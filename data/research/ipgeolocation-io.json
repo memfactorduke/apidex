@@ -1,0 +1,38 @@
+{
+  "id": "ipgeolocation-io",
+  "status": "operational",
+  "name": "IP Geolocation API",
+  "category": "geo-maps",
+  "tagline": "IP-to-location, timezone, and security intelligence API",
+  "description": "ipgeolocation.io provides IP geolocation, timezone, astronomy, and related lookup APIs for developers. It maps IP addresses to geographic, network, and security attributes via a documented REST API with API-key authentication and a free tier.",
+  "base_url": "https://api.ipgeolocation.io",
+  "docs_url": "https://ipgeolocation.io/documentation.html",
+  "signup_url": "https://app.ipgeolocation.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or header (see official docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.ipgeolocation.io/ipgeo?apiKey=YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "geolocate a client IP address",
+    "resolve timezone from IP"
+  ],
+  "sources": [
+    "https://ipgeolocation.io"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "okta",
+  "status": "operational",
+  "name": "Okta",
+  "category": "security-identity",
+  "tagline": "Enterprise identity and access management APIs for auth, users, and MFA",
+  "description": "Okta provides cloud-based identity and access management (IAM) APIs for authentication, user lifecycle, multi-factor authentication (MFA), SSO, and directory management. Organizations use Okta as an identity provider with REST APIs for managing users, groups, applications, and sessions, plus OIDC/OAuth 2.0 endpoints for modern authentication flows.",
+  "base_url": "https://{yourOktaDomain}/api/v1",
+  "docs_url": "https://developer.okta.com/docs/",
+  "signup_url": "https://developer.okta.com/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "SSWS API token via Authorization: SSWS {token} header, or OAuth 2.0 Bearer tokens for scoped API access; tokens created in Admin Console"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://YOUR_OKTA_DOMAIN/api/v1/users/me\" -H \"Authorization: SSWS YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\n  \"id\": \"00u1abc2def3ghi4jkl\",\n  \"status\": \"ACTIVE\",\n  \"profile\": {\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"email\": \"jane.doe@example.com\",\n    \"login\": \"jane.doe@example.com\"\n  }\n}"
+  },
+  "use_cases": [
+    "list and search users in an Okta org",
+    "create or update a user profile and credentials",
+    "enroll or verify multi-factor authentication factors",
+    "manage groups and app assignments for access control",
+    "authenticate users via OIDC/OAuth 2.0 and session APIs"
+  ],
+  "sources": [
+    "https://developer.okta.com/docs/"
+  ],
+  "researcher_confidence": "low"
+}

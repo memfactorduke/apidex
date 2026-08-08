@@ -1,0 +1,15 @@
+{
+  "id": "open-food-facts",
+  "resolution_notes": "Settled rate_limits against the official Open Food Facts API docs (openfoodfacts.github.io). Docs publish explicit guidance: product queries ~100 req/min, search ~10 req/min, facet ~2 req/min, with User-Agent identification required and bulk use coordinated\u2014not merely unpublished community tips. Other fields were undisputed and left null (keep original).",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Product queries ~100 req/min; search ~10 req/min; facet ~2 req/min. User-Agent identification required. Bulk use needs coordination with Open Food Facts.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

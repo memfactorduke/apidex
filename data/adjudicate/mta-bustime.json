@@ -1,0 +1,15 @@
+{
+  "id": "mta-bustime",
+  "resolution_notes": "Verified against current MTA Bus Time developer docs (Index, Register, SIRI Stop Monitoring). base_url stays https://bustime.mta.info/api \u2014 SIRI paths are under /api/siri/... while OneBusAway discovery is under /api/where/..., so the API root is correct. free_tier_limits tightened to non-commercial free key + commercial approval when registration terms still say so. example curl kept with documented /api/siri/stop-monitoring.json shape; MonitoringRef/LineRef formats match wiki examples (MTA_ stop prefix, LineRef like MTA NYCT_M15).",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free with API key registration for non-commercial use; commercial use requires separate approval (per registration terms)",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

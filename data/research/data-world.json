@@ -1,0 +1,43 @@
+{
+  "id": "data-world",
+  "status": "operational",
+  "name": "data.world",
+  "category": "data-analytics",
+  "tagline": "Collaborative open data platform with REST API for datasets, queries, and files",
+  "description": "data.world is a collaborative data catalog and analytics platform where organizations and communities publish, discover, and query datasets. Its REST API lets developers manage datasets and projects, download files, run SQL/SPARQL queries, and integrate open and private data into applications and pipelines.",
+  "base_url": "https://api.data.world/v0",
+  "docs_url": "https://docs.data.world/api/",
+  "signup_url": "https://data.world/login",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token (API token) via Authorization header; create tokens in account settings after free signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.data.world/v0/datasets/search?q=climate\"",
+    "response_snippet": "{\"count\": 1, \"records\": [{\"owner\": \"example\", \"id\": \"dataset-id\", \"title\": \"Example Dataset\"}]}"
+  },
+  "use_cases": [
+    "search public datasets by keyword",
+    "download a file from a dataset",
+    "run SQL against a dataset",
+    "list files in a dataset",
+    "fetch dataset metadata"
+  ],
+  "sources": [
+    "https://docs.data.world/"
+  ],
+  "researcher_confidence": "low"
+}

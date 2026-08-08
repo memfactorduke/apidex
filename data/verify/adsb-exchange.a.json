@@ -1,0 +1,52 @@
+{
+  "id": "adsb-exchange",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://adsbexchange.com/api/aircraft/v2 (RapidAPI base is https://adsbexchange-com1.p.rapidapi.com; official site points developers to RapidAPI rather than a public root of https://adsbexchange.com/api alone)",
+      "source": "https://www.adsbexchange.com/data/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.adsbexchange.com/data/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.adsbexchange.com/data/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true (RapidAPI Basic free plan listed for ADS-B Exchange APIs; confirm current limits on RapidAPI)",
+      "source": "https://rapidapi.com/adsbx/api/adsbexchange-com1"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Check RapidAPI plan cards for current request quotas (often low free tier / hard limits; do not treat as unlimited)",
+      "source": "https://rapidapi.com/adsbx/api/adsbexchange-com1"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published on RapidAPI pricing (per-plan request limits); not 'not published' once accessed via RapidAPI",
+      "source": "https://rapidapi.com/adsbx/api/adsbexchange-com1"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use RapidAPI host/headers (e.g. x-rapidapi-key, x-rapidapi-host) against the RapidAPI base; path shape like /v2/lat/{lat}/lon/{lon}/dist/{dist}/ is documented there, not bare api-auth against https://adsbexchange.com/api alone",
+      "source": "https://rapidapi.com/adsbx/api/adsbexchange-com1"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.adsbexchange.com/data/"
+    }
+  },
+  "notes": "Official data page steers paid/dev access via RapidAPI; entry's direct base URL, auth header, free_tier false, and unpublished rate limits do not match current 2026 access path."
+}

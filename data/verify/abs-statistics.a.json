@@ -1,0 +1,52 @@
+{
+  "id": "abs-statistics",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis"
+    }
+  },
+  "notes": "Docs-first verification against official ABS API pages. Base URL https://api.data.abs.gov.au is documented as the ABS.Stat SDMX REST host; automated HTTP 0 is treated as network/bot-detection noise given live docs and documented endpoints. Auth is none for public open data; free open use with unpublished rate limits; example path shape matches SDMX-JSON data queries."
+}

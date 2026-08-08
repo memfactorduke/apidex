@@ -1,0 +1,15 @@
+{
+  "id": "scryfall",
+  "resolution_notes": "Verifier B is correct on all three disputed fields. Official docs (rate-limits page) define method-specific hard limits: 2/s for search/named/random/collection, 10/min for manifest, 10/s elsewhere, with 429 then 30s limited access\u2014not a blanket ~10 req/s. free_tier_limits should reflect data/image guidelines (Magic software, research, community; no paywalling or bare repackaging) rather than \u201ccommercial requires prior written permission.\u201d CORS is documented as yes for GET/HEAD/POST/OPTIONS when Origin is sent (http-concerns). All other fields left null (keep original).",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free under Scryfall data/image guidelines (Magic software, research, community content); no paywalling or bare repackaging; commercial use not simply \u201crequires written permission\u201d as originally stated",
+  "rate_limits": "Hard limits: /cards/search, /named, /random, /collection = 2/s; /cards/manifest = 10/min; other methods = 10/s; 429 then ~30s limited access",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

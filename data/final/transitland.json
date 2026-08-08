@@ -1,0 +1,97 @@
+{
+  "id": "transitland",
+  "status": "operational",
+  "name": "Transitland",
+  "category": "transportation",
+  "tagline": "Global GTFS/GTFS-RT aggregator with routing and stop APIs",
+  "description": "Transitland aggregates GTFS and GTFS-Realtime feeds worldwide, offering REST endpoints for stops, routes, schedules, routing, and real-time vehicle data. Free tier available for real API calls with higher paid plans.",
+  "base_url": "https://transit.land/api/v2",
+  "docs_url": "https://www.transit.land/documentation/",
+  "signup_url": "https://www.transit.land/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter or Authorization header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 requests/day (Free plan)",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: 1,000 requests/day; higher paid plans increase daily quotas (see pricing)",
+  "example": {
+    "request": "curl \"https://transit.land/api/v2/rest/stops?apikey=YOUR_API_KEY&lat=37.7749&lon=-122.4194&radius=1000\"",
+    "response_snippet": "{\"stops\":[{\"onestop_id\":\"s-9q8yy-...\",\"name\":\"...\"}]}"
+  },
+  "use_cases": [
+    "find nearby transit stops by lat/lon",
+    "look up routes and schedules for a city",
+    "get real-time vehicle positions",
+    "plan multi-modal transit routes"
+  ],
+  "sources": [
+    "https://www.transit.land/",
+    "https://www.transit.land/documentation/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

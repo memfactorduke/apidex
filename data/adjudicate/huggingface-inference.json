@@ -1,0 +1,15 @@
+{
+  "id": "huggingface-inference",
+  "resolution_notes": "Both verifiers correctly flag the old api-inference host. Official 2026 docs use https://router.huggingface.co/hf-inference as the serverless Inference API base; examples and client defaults match that host. Legacy api-inference.huggingface.co may still work for some routes but is not the documented current base. example_request is updated to the router path; response shape for text generation remains the standard generated_text array. Other fields were confirmed by both verifiers and left unchanged (null).",
+  "base_url": "https://router.huggingface.co/hf-inference",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl https://router.huggingface.co/hf-inference/models/gpt2 -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"inputs\": \"Hello world\"}'",
+  "example_response_snippet": "[{\"generated_text\": \"Hello world, this is a sample continuation...\"}]",
+  "description": null,
+  "status": null
+}

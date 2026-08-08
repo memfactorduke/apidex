@@ -1,0 +1,44 @@
+{
+  "id": "lemon-squeezy",
+  "status": "operational",
+  "name": "Lemon Squeezy API",
+  "category": "ecommerce-payments",
+  "tagline": "Merchant-of-record payments API for SaaS and digital products",
+  "description": "REST API for Lemon Squeezy's merchant-of-record platform: products, checkouts, subscriptions, orders, customers, licenses, discounts, and webhooks. JSON:API format with Bearer token authentication.",
+  "base_url": "https://api.lemonsqueezy.com/v1",
+  "docs_url": "https://docs.lemonsqueezy.com/api",
+  "signup_url": "https://app.lemonsqueezy.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token API key in Authorization header; create keys in dashboard Settings \u2192 API."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Platform free until first sale; API usage not separately metered. Transaction fees apply on sales.",
+    "paid_plans": "Transaction-based: typically 5% + $0.50 per transaction (plus payment processing); no separate API subscription tiers."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.lemonsqueezy.com/v1/users/me\" -H \"Accept: application/vnd.api+json\" -H \"Content-Type: application/vnd.api+json\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"jsonapi\":{\"version\":\"1.0\"},\"links\":{\"self\":\"https://api.lemonsqueezy.com/v1/users/1\"},\"data\":{\"type\":\"users\",\"id\":\"1\",\"attributes\":{\"name\":\"John Doe\",\"email\":\"john@example.com\",\"status\":\"active\"}}}"
+  },
+  "use_cases": [
+    "list products and variants for a store",
+    "create a checkout URL for a product",
+    "retrieve subscription status for a customer",
+    "list orders and order items",
+    "manage license keys for digital products",
+    "register webhooks for order and subscription events"
+  ],
+  "sources": [
+    "https://docs.lemonsqueezy.com/api",
+    "https://docs.lemonsqueezy.com/api/getting-started",
+    "https://www.lemonsqueezy.com/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

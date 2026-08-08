@@ -1,0 +1,98 @@
+{
+  "id": "exercisedb",
+  "status": "operational",
+  "name": "ExerciseDB",
+  "category": "health-fitness",
+  "tagline": "Exercise library with GIF demos, body-part and equipment filters via RapidAPI",
+  "description": "ExerciseDB provides a large library of exercise data with animated GIF demonstrations, searchable and filterable by body part, target muscle, and equipment. Hosted primarily on RapidAPI, it is commonly used in fitness and workout apps for exercise catalogs, routine builders, and demo media.",
+  "base_url": "https://exercisedb.p.rapidapi.com",
+  "docs_url": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb",
+  "signup_url": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb",
+  "auth": {
+    "type": "apiKey",
+    "details": "RapidAPI key via X-RapidAPI-Key and X-RapidAPI-Host headers; self-serve signup on RapidAPI"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "BASIC (free): 100 requests/day; PRO 10,000/day; ULTRA 50,000/day; MEGA 1,000,000/day (RapidAPI plan quotas)",
+    "paid_plans": null
+  },
+  "rate_limits": "Published as RapidAPI plan daily quotas (BASIC 100/day, PRO 10,000/day, ULTRA 50,000/day, MEGA 1,000,000/day); per-second/minute rates not separately published on the listing",
+  "example": {
+    "request": "curl --request GET --url 'https://exercisedb.p.rapidapi.com/exercises?limit=10' --header 'X-RapidAPI-Key: YOUR_API_KEY' --header 'X-RapidAPI-Host: exercisedb.p.rapidapi.com'",
+    "response_snippet": "[{\"bodyPart\":\"waist\",\"equipment\":\"body weight\",\"gifUrl\":\"https://v2.exercisedb.io/image/\u2026\",\"id\":\"0001\",\"name\":\"3/4 sit-up\",\"target\":\"abs\",\"secondaryMuscles\":[\"hip flexors\",\"lower back\"],\"instructions\":[\"Lie flat on your back with your knees bent and feet flat on the ground.\",\"\u2026\"]}]"
+  },
+  "use_cases": [
+    "list exercises by body part for a workout planner",
+    "filter exercises by equipment available at home",
+    "show animated GIF demos for exercise form",
+    "search exercises by target muscle group",
+    "build a catalog of beginner bodyweight moves"
+  ],
+  "sources": [
+    "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb",
+    "https://exercisedb.p.rapidapi.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

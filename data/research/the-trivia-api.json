@@ -1,0 +1,38 @@
+{
+  "id": "the-trivia-api",
+  "status": "operational",
+  "name": "Trivia API (The Trivia API)",
+  "category": "fun-novelty",
+  "tagline": "Modern trivia questions API with tags, regions, and free public access",
+  "description": "Researching official docs, endpoints, auth, pricing, and examples for The Trivia API.",
+  "base_url": "https://the-trivia-api.com/api",
+  "docs_url": "https://the-trivia-api.com/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Researching authentication requirements"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl 'https://the-trivia-api.com/api/questions?limit=1'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "fetch trivia questions for a quiz game",
+    "filter trivia by category and difficulty"
+  ],
+  "sources": [
+    "https://the-trivia-api.com"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,96 @@
+{
+  "id": "exchangerate-api",
+  "status": "operational",
+  "name": "ExchangeRate-API",
+  "category": "finance",
+  "tagline": "Currency exchange rates API with free and paid plans for 160+ currencies.",
+  "description": "ExchangeRate-API provides real-time and historical foreign exchange rates for 160+ currencies. Developers authenticate with an API key and can fetch latest rates, pair conversion, and supported currency lists via REST endpoints. Free tier available with daily request limits; paid plans increase volume and unlock additional features.",
+  "base_url": "https://v6.exchangerate-api.com/v6",
+  "docs_url": "https://www.exchangerate-api.com/docs",
+  "signup_url": "https://app.exchangerate-api.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key in path: https://v6.exchangerate-api.com/v6/YOUR_API_KEY/... Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,500 requests/month free (Open Access)",
+    "paid_plans": "Paid plans available for higher volume and historical data"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD\"",
+    "response_snippet": "{\"result\":\"success\",\"base_code\":\"USD\",\"conversion_rates\":{\"EUR\":0.92,\"GBP\":0.79,\"JPY\":149.5}}"
+  },
+  "use_cases": [
+    "get latest FX rates for a base currency",
+    "convert an amount between two currencies",
+    "list supported currency codes",
+    "fetch pair conversion rate (e.g. USD to EUR)"
+  ],
+  "sources": [
+    "https://www.exchangerate-api.com/",
+    "https://www.exchangerate-api.com/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

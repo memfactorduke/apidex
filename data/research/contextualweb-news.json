@@ -1,0 +1,41 @@
+{
+  "id": "contextualweb-news",
+  "status": "operational",
+  "name": "ContextualWeb News",
+  "category": "news-media",
+  "tagline": "Search and retrieve current news articles via ContextualWeb Search API.",
+  "description": "ContextualWeb News is a news-search API (part of ContextualWeb / Web Search API) that returns news articles matching a query, with metadata such as titles, URLs, sources, and publication times. Used for building news aggregators, monitoring topics, and enriching applications with current events.",
+  "base_url": "https://contextualwebsearch-websearch-v1.p.rapidapi.com",
+  "docs_url": "https://rapidapi.com/contextualwebsearch/api/web-search",
+  "signup_url": "https://rapidapi.com/contextualwebsearch/api/web-search",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via RapidAPI headers X-RapidAPI-Key and X-RapidAPI-Host; signup on RapidAPI marketplace."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": "RapidAPI freemium tiers; exact limits not independently verified in this pass."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --request GET --url 'https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q=Tesla&pageNumber=1&pageSize=10&autoCorrect=true&fromPublishedDate=null&toPublishedDate=null' --header 'X-RapidAPI-Key: YOUR_API_KEY' --header 'X-RapidAPI-Host: contextualwebsearch-websearch-v1.p.rapidapi.com'",
+    "response_snippet": "{\"_type\":\"NewsSearchAPI\",\"value\":[{\"id\":\"...\",\"title\":\"...\",\"url\":\"...\",\"description\":\"...\",\"body\":\"...\",\"keywords\":\"...\",\"language\":\"en\",\"isSafe\":true,\"datePublished\":\"...\",\"provider\":{\"name\":\"...\"},\"image\":{\"url\":\"...\",\"height\":0,\"width\":0}}]}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword",
+    "monitor brand or topic mentions in the news",
+    "fetch headlines for a news aggregator dashboard",
+    "enrich apps with current-event context for a query"
+  ],
+  "sources": [
+    "https://rapidapi.com/contextualwebsearch/api/web-search",
+    "https://contextualwebsearch.com"
+  ],
+  "researcher_confidence": "low"
+}

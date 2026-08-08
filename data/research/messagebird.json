@@ -1,0 +1,48 @@
+{
+  "id": "messagebird",
+  "status": "operational",
+  "name": "MessageBird",
+  "category": "social-communication",
+  "tagline": "SMS, voice, and omnichannel messaging APIs for global customer communication.",
+  "description": "MessageBird (now part of Bird) provides REST APIs for SMS, MMS, voice calling/messaging, conversations (WhatsApp, etc.), email, and number management. Developers authenticate with AccessKey headers against rest.messagebird.com and related service hosts to send messages, check balance, and manage communications programmatically.",
+  "base_url": "https://rest.messagebird.com/",
+  "docs_url": "https://developers.messagebird.com/api",
+  "signup_url": "https://dashboard.messagebird.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API access key via Authorization: AccessKey {accessKey} header. Create keys in MessageBird Dashboard (test_ prefix for test keys; live keys have no required prefix). Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Pay-as-you-go starts free (no card for trial usage); SMS billed per message by destination after credits. Exact free SMS allotment not clearly published on legacy MessageBird pricing\u2014Bird email free tier is 1,000 emails/month (50/day cap). Treat free SMS as limited trial/credits; confirm in dashboard.",
+    "paid_plans": "Usage-based SMS/voice by destination country; Bird also offers Startup/Growth email volume plans and enterprise channel bundles. Contact sales for volume SMS discounts."
+  },
+  "rate_limits": "SMS/REST API: GET/PATCH/DELETE 50 req/s, POST 500 req/s; excess returns 429. Contact support for higher limits. Newer Bird Channels API: GET 50 req/s, POST 500 req/s per workspace.",
+  "example": {
+    "request": "curl -X GET https://rest.messagebird.com/balance -H 'Authorization: AccessKey YOUR_API_KEY'",
+    "response_snippet": "{\n  \"payment\": \"prepaid\",\n  \"type\": \"credits\",\n  \"amount\": 9.5\n}"
+  },
+  "use_cases": [
+    "send SMS OTP or alert to a phone number",
+    "check account balance and remaining credits",
+    "send and track omnichannel conversation messages (WhatsApp/SMS)",
+    "purchase or list virtual phone numbers",
+    "send text-to-speech voice messages",
+    "list SMS message status and delivery reports"
+  ],
+  "sources": [
+    "https://developers.messagebird.com/api",
+    "https://developers.messagebird.com/api/sms-messaging/",
+    "https://developers.messagebird.com/api/balance/",
+    "https://docs.bird.com/api/api-access/common-api-usage",
+    "https://docs.bird.com/api/channels-api/rate-limit",
+    "https://bird.com/en-us/pricing",
+    "https://developers.messagebird.com/api/conversations/"
+  ],
+  "researcher_confidence": "medium"
+}

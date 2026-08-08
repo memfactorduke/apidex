@@ -1,0 +1,42 @@
+{
+  "id": "new-relic",
+  "status": "operational",
+  "name": "New Relic API",
+  "category": "dev-tools",
+  "tagline": "Observability platform API for metrics, logs, APM, and account management",
+  "description": "New Relic provides REST and GraphQL (NerdGraph) APIs for querying telemetry, managing alerts, entities, and accounts across its observability platform. Developers use user API keys or license keys with HTTPS endpoints for data ingest and query.",
+  "base_url": "https://api.newrelic.com",
+  "docs_url": "https://docs.newrelic.com/docs/apis/intro-apis/",
+  "signup_url": "https://newrelic.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Api-Key header (NerdGraph/REST) or X-License-Key for ingest; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.newrelic.com/graphql -H \"Content-Type: application/json\" -H \"API-Key: YOUR_API_KEY\" -d '{\"query\":\"{ actor { user { email } } }\"}'",
+    "response_snippet": "{\"data\":{\"actor\":{\"user\":{\"email\":\"user@example.com\"}}}}"
+  },
+  "use_cases": [
+    "query APM application performance metrics",
+    "list and manage New Relic alerts and conditions",
+    "ingest custom metrics or events",
+    "fetch entity inventory and relationships",
+    "run NRQL queries via NerdGraph"
+  ],
+  "sources": [
+    "https://docs.newrelic.com/docs/apis/intro-apis/"
+  ],
+  "researcher_confidence": "low"
+}

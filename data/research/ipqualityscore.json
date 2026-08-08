@@ -1,0 +1,44 @@
+{
+  "id": "ipqualityscore",
+  "status": "operational",
+  "name": "IPQualityScore",
+  "category": "security-identity",
+  "tagline": "Fraud, proxy/VPN, and email validation scoring APIs.",
+  "description": "IPQualityScore (IPQS) provides real-time fraud prevention APIs for IP reputation, proxy/VPN/tor detection, email validation, phone verification, device fingerprinting, and transaction risk scoring. Developers use scored risk signals to block abuse, reduce chargebacks, and validate user identity at signup or checkout.",
+  "base_url": "https://www.ipqualityscore.com/api/json",
+  "docs_url": "https://www.ipqualityscore.com/documentation/overview",
+  "signup_url": "https://www.ipqualityscore.com/create-account",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key path segment after /api/json/{service}/YOUR_API_KEY/; self-serve dashboard signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan with limited monthly lookups (tier varies; confirm on pricing page)",
+    "paid_plans": "Paid plans by monthly volume; see ipqualityscore.com/pricing"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.ipqualityscore.com/api/json/ip/YOUR_API_KEY/8.8.8.8\"",
+    "response_snippet": "{\"success\":true,\"message\":\"Success\",\"fraud_score\":0,\"country_code\":\"US\",\"proxy\":false,\"vpn\":false,\"tor\":false,\"isp\":\"GOOGLE\",\"organization\":\"GOOGLE\",\"is_crawler\":false,\"mobile\":false,\"host\":\"dns.google\",\"recent_abuse\":false,\"bot_status\":false}"
+  },
+  "use_cases": [
+    "score an IP for proxy, VPN, or tor risk",
+    "validate email deliverability and fraud risk",
+    "check phone number legitimacy before signup",
+    "enrich login or checkout with IP reputation",
+    "detect disposable email or high-risk devices"
+  ],
+  "sources": [
+    "https://www.ipqualityscore.com/",
+    "https://www.ipqualityscore.com/documentation/overview",
+    "https://www.ipqualityscore.com/documentation/proxy-detection-api/overview",
+    "https://www.ipqualityscore.com/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

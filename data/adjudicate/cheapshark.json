@@ -1,0 +1,15 @@
+{
+  "id": "cheapshark",
+  "resolution_notes": "Disputed fields were rate_limits and description. Official API docs (apidocs.cheapshark.com) state the API is free with no key, require a descriptive User-Agent, return HTTP 429 when rate-limited, and warn that excessive catalog scraping can lead to permanent blocks\u2014so 'not published' understates that limits exist without numeric quotas. Description incorrectly lists Epic; docs/store list emphasize Steam, GreenManGaming, Fanatical, GOG and other PC stores, not Epic as a tracked store. Base URL, docs, no-auth free API, examples, and operational status remain as originally entered.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Rate limited (HTTP 429 when exceeded); exact numeric limits not published. Docs require a descriptive User-Agent; excessive catalog scraping can lead to permanent blocks.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "CheapShark tracks digital PC game prices across stores including Steam, GreenManGaming, Fanatical, GOG and others; docs do not list Epic as a tracked store. API is free (must use CheapShark deal links); no API key. Supports deals, games, stores, and email price alerts.",
+  "status": null
+}

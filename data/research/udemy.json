@@ -1,0 +1,38 @@
+{
+  "id": "udemy",
+  "status": "operational",
+  "name": "Udemy",
+  "category": "education-reference",
+  "tagline": "Affiliate and course catalog APIs for Udemy marketplace data",
+  "description": "Udemy provides affiliate and course catalog APIs for accessing marketplace course listings, pricing, and affiliate-linked discovery. Research focuses on current official endpoints, auth, pricing, and verified request examples for 2026.",
+  "base_url": "https://www.udemy.com/api-2.0",
+  "docs_url": "https://www.udemy.com/developers/affiliate/",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Researching current auth method from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.udemy.com/api-2.0/courses/?page=1&page_size=1\" -H \"Authorization: Basic YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "search Udemy courses by keyword",
+    "get course details for affiliate links"
+  ],
+  "sources": [
+    "https://www.udemy.com"
+  ],
+  "researcher_confidence": "low"
+}

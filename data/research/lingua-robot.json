@@ -1,0 +1,42 @@
+{
+  "id": "lingua-robot",
+  "status": "operational",
+  "name": "Lingua Robot",
+  "category": "education-reference",
+  "tagline": "English dictionary and linguistic data API for words, definitions, and language analysis.",
+  "description": "Lingua Robot is an English dictionary and linguistic data API that provides word definitions, pronunciations, synonyms, and related language information for developer applications. It targets education, writing tools, and language-learning products that need structured English lexical data via HTTP.",
+  "base_url": "https://lingua-robot.p.rapidapi.com",
+  "docs_url": "https://www.linguarobot.io/",
+  "signup_url": "https://www.linguarobot.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via RapidAPI subscription headers (X-RapidAPI-Key and X-RapidAPI-Host); exact self-serve flow not independently verified in this pass."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X GET \"https://lingua-robot.p.rapidapi.com/language/v1/entries/en/hello\" -H \"X-RapidAPI-Key: YOUR_API_KEY\" -H \"X-RapidAPI-Host: lingua-robot.p.rapidapi.com\"",
+    "response_snippet": "{\"entries\":[{\"entry\":\"hello\",\"interpretations\":[{\"partOfSpeech\":\"interjection\",\"definitions\":[{\"definition\":\"Used as a greeting or to begin a phone conversation.\"}]}],\"pronunciations\":[{\"transcriptions\":[{\"transcription\":\"h\u0259\u02c8l\u0259\u028a\",\"notation\":\"IPA\"}]}]}]}"
+  },
+  "use_cases": [
+    "look up English word definitions and parts of speech",
+    "fetch pronunciations and IPA transcriptions for a word",
+    "get synonyms and related word senses for writing tools",
+    "power dictionary lookup in language-learning apps",
+    "validate or enrich English vocabulary in educational products"
+  ],
+  "sources": [
+    "https://www.linguarobot.io/",
+    "https://rapidapi.com/lingua-robot/api/lingua-robot"
+  ],
+  "researcher_confidence": "low"
+}

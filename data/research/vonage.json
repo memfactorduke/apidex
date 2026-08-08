@@ -1,0 +1,40 @@
+{
+  "id": "vonage",
+  "status": "operational",
+  "name": "Vonage",
+  "category": "social-communication",
+  "tagline": "Cloud communications APIs for SMS, voice, video, and verify workflows.",
+  "description": "Vonage (formerly Nexmo) provides programmable communications APIs for SMS, voice, video, 2FA/verify, and messaging. Developers authenticate with API key and secret (or JWT for newer APIs) and call REST endpoints to send messages, place calls, and verify users.",
+  "base_url": "https://rest.nexmo.com",
+  "docs_url": "https://developer.vonage.com/",
+  "signup_url": "https://dashboard.nexmo.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key and secret via query params or Basic auth for classic REST; JWT for newer APIs. Self-serve dashboard signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 credit-based trial common; confirm on pricing page",
+    "paid_plans": "Pay-as-you-go per message/minute plus account plans"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://rest.nexmo.com/sms/json\" -d \"api_key=YOUR_API_KEY\" -d \"api_secret=YOUR_API_SECRET\" -d \"to=447700900000\" -d \"from=Vonage\" -d \"text=Hello\"",
+    "response_snippet": "{\"message-count\":\"1\",\"messages\":[{\"to\":\"447700900000\",\"status\":\"0\",\"message-id\":\"...\",\"remaining-balance\":\"...\"}]}"
+  },
+  "use_cases": [
+    "send an SMS to a phone number",
+    "verify a user with a one-time code",
+    "make or receive a voice call",
+    "send a WhatsApp or multi-channel message"
+  ],
+  "sources": [
+    "https://developer.vonage.com/"
+  ],
+  "researcher_confidence": "low"
+}

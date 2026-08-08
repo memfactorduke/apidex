@@ -1,0 +1,45 @@
+{
+  "id": "cloudflare-workers-ai",
+  "status": "operational",
+  "name": "Cloudflare Workers AI",
+  "category": "ai-ml",
+  "tagline": "Run AI models on Cloudflare's global GPU network via REST or Workers",
+  "description": "Cloudflare Workers AI lets developers run inference on popular open-source LLMs, embeddings, image, speech, and other models at the edge. Access is via the Cloudflare API at /client/v4/accounts/{account_id}/ai/run/{model}, or from Cloudflare Workers with the AI binding. Authentication uses a Cloudflare API token with Workers AI permissions. Pricing is usage-based with free daily neuron allocations on Free and Workers Paid plans.",
+  "base_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai",
+  "docs_url": "https://developers.cloudflare.com/workers-ai/",
+  "signup_url": "https://dash.cloudflare.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token (Cloudflare API Token) in Authorization header; token needs Workers AI permissions. Account ID required in path. Self-serve signup via Cloudflare dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 10,000 Neurons/day; Workers Paid: 10,000 Neurons/day free then $0.011 per 1,000 Neurons. Models priced in Neurons per unit (e.g. tokens, audio seconds).",
+    "paid_plans": "Workers Paid ($5/month minimum) unlocks higher usage; overage $0.011 per 1,000 Neurons after daily free allocation. Some models have unit prices (e.g. Whisper $0.00045/audio-minute equivalent in Neurons)."
+  },
+  "rate_limits": "Default Cloudflare API rate limits apply; Workers AI also has model-specific concurrency and request size limits documented per model. Exact global RPS not published as a single number \u2014 not fully published beyond API platform defaults.",
+  "example": {
+    "request": "curl https://api.cloudflare.com/client/v4/accounts/YOUR_ACCOUNT_ID/ai/run/@cf/meta/llama-3.1-8b-instruct \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"result\":{\"response\":\"Hello! How can I help you today?\"},\"success\":true,\"errors\":[],\"messages\":[]}"
+  },
+  "use_cases": [
+    "run LLM chat completion on an open model at the edge",
+    "generate text embeddings for semantic search",
+    "transcribe audio with Whisper-class models",
+    "generate or classify images with Workers AI vision models",
+    "call AI from a Cloudflare Worker via AI binding without managing GPUs"
+  ],
+  "sources": [
+    "https://developers.cloudflare.com/workers-ai/",
+    "https://developers.cloudflare.com/workers-ai/get-started/rest-api/",
+    "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+    "https://developers.cloudflare.com/workers-ai/models/",
+    "https://developers.cloudflare.com/fundamentals/api/"
+  ],
+  "researcher_confidence": "medium"
+}

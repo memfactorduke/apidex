@@ -1,0 +1,44 @@
+{
+  "id": "aftership",
+  "status": "operational",
+  "name": "AfterShip",
+  "category": "transportation",
+  "tagline": "Unified package tracking across 1,000+ carriers worldwide.",
+  "description": "AfterShip provides a Tracking API and related logistics APIs for real-time multi-carrier package tracking, delivery status webhooks, estimated delivery dates, and shipment analytics. Developers authenticate with an API key and can create trackers, retrieve checkpoint timelines, and monitor delivery exceptions across more than 1,000 global carriers from a single integration.",
+  "base_url": "https://api.aftership.com/tracking/2025-07",
+  "docs_url": "https://www.aftership.com/docs/tracking/quickstart/api-quick-start",
+  "signup_url": "https://www.aftership.com/pricing",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via as-api-key header (or Authorization: AS-Api-Key). Self-serve signup at aftership.com; key from account settings. Optional as-store-id for multi-store."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 free plan exists; concrete request/tracker quotas not confirmed on public pricing page without account",
+    "paid_plans": "Essentials, Pro, Premier, Enterprise \u2014 usage-based tracking quotas; contact sales for Enterprise"
+  },
+  "rate_limits": "not published in public docs as fixed global numbers; plan-dependent (check dashboard/rate-limit headers)",
+  "example": {
+    "request": "curl --request GET --url https://api.aftership.com/tracking/2025-07/trackings --header 'Content-Type: application/json' --header 'as-api-key: YOUR_API_KEY'",
+    "response_snippet": "{\"meta\":{\"code\":200},\"data\":{\"trackings\":[{\"id\":\"...\",\"tracking_number\":\"1Z999...\",\"slug\":\"ups\",\"tag\":\"InTransit\",\"checkpoints\":[{\"message\":\"Package in transit\",\"tag\":\"InTransit\"}]}]}}"
+  },
+  "use_cases": [
+    "create a multi-carrier tracking record from a tracking number",
+    "get latest delivery status and checkpoint timeline for a shipment",
+    "list recent trackings for an e-commerce order dashboard",
+    "subscribe to webhook delivery status updates for packages",
+    "look up estimated delivery date for a tracked parcel"
+  ],
+  "sources": [
+    "https://www.aftership.com/docs/tracking/quickstart/api-quick-start",
+    "https://www.aftership.com/docs/tracking/api/api-overview",
+    "https://www.aftership.com/pricing",
+    "https://www.aftership.com/tracking-api"
+  ],
+  "researcher_confidence": "medium"
+}

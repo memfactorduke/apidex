@@ -1,0 +1,43 @@
+{
+  "id": "you-com",
+  "status": "operational",
+  "name": "You.com Search API",
+  "category": "data-analytics",
+  "tagline": "AI-native web search API for real-time results and citations",
+  "description": "You.com Search API provides AI-powered web search for developers and agents. It returns ranked results, snippets, and source citations suitable for grounding LLM answers, research workflows, and retrieval-augmented generation. Typical use is server-side with an API key; confirm current endpoints, auth headers, free-tier quotas, and rate limits in the official docs and pricing pages before production use.",
+  "base_url": "https://api.ydc-index.io",
+  "docs_url": "https://documentation.you.com/api-reference",
+  "signup_url": "https://you.com/platform",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-API-Key header (self-serve signup on You.com platform); exact header name and key issuance flow confirmed in official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.ydc-index.io/v1/search?query=latest%20AI%20news\" -H \"X-API-Key: YOUR_API_KEY\"",
+    "response_snippet": "{\"results\":[{\"title\":\"...\",\"url\":\"https://...\",\"snippets\":[\"...\"]}],\"metadata\":{\"query\":\"latest AI news\"}}"
+  },
+  "use_cases": [
+    "run web search for a coding agent answer with citations",
+    "ground an LLM response with current sources",
+    "fetch recent news and page snippets for a topic",
+    "power retrieval for RAG over the live web",
+    "compare multi-source answers for research tasks"
+  ],
+  "sources": [
+    "https://you.com",
+    "https://documentation.you.com",
+    "https://api.ydc-index.io"
+  ],
+  "researcher_confidence": "low"
+}

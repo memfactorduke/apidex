@@ -1,0 +1,100 @@
+{
+  "id": "numbers-api",
+  "status": "operational",
+  "name": "Numbers API",
+  "category": "fun-novelty",
+  "tagline": "Trivia, math, date, and year facts for any number\u2014long-running novelty staple.",
+  "description": "A free, no-authentication HTTP API that returns interesting trivia, mathematical properties, historical dates, and year facts for any integer. Long-running staple of developer demos and educational apps; supports plain text and JSON responses with optional fragments and default fallbacks when no fact is known.",
+  "base_url": "https://numbersapi.com",
+  "docs_url": "https://numbersapi.com",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints accept unauthenticated GET requests; optional JSON via Accept header or query param."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unlimited free public use (no published quota); no paid plans",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://numbersapi.com/42?json\"",
+    "response_snippet": "{\"text\":\"42 is the answer to the Ultimate Question of Life, the Universe, and Everything.\",\"number\":42,\"found\":true,\"type\":\"trivia\"}"
+  },
+  "use_cases": [
+    "get a trivia fact for a number",
+    "fetch math properties of an integer",
+    "get historical facts for a calendar date",
+    "retrieve year-based historical trivia",
+    "add random number facts to a demo or chatbot"
+  ],
+  "sources": [
+    "http://numbersapi.com",
+    "https://numbersapi.com"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "clerk",
+  "status": "operational",
+  "name": "Clerk",
+  "category": "security-identity",
+  "tagline": "Developer-first authentication and user management API for modern apps",
+  "description": "Clerk provides authentication, user management, and session APIs for web and mobile apps. It covers sign-up, sign-in, organizations, and backend user administration with SDKs and REST endpoints so developers can ship secure auth without building it from scratch.",
+  "base_url": "https://api.clerk.com/v1",
+  "docs_url": "https://clerk.com/docs",
+  "signup_url": "https://dashboard.clerk.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Secret key via Authorization: Bearer sk_... header for Backend API; publishable key for frontend SDKs. Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.clerk.com/v1/users -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[],\"total_count\":0}"
+  },
+  "use_cases": [
+    "list users for an application",
+    "create a user via backend API",
+    "verify a session token",
+    "manage organization memberships"
+  ],
+  "sources": [
+    "https://clerk.com"
+  ],
+  "researcher_confidence": "low"
+}

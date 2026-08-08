@@ -1,0 +1,50 @@
+{
+  "id": "stadia-maps",
+  "status": "operational",
+  "name": "Stadia Maps",
+  "category": "geo-maps",
+  "tagline": "Privacy-first maps, geocoding, routing, and geospatial APIs with credit-based pricing",
+  "description": "Stadia Maps provides map tiles (vector/raster/satellite/static), geocoding and autocomplete search, routing and navigation (routes, matrices, isochrones, map matching), plus time zone and elevation APIs. Hosted at api.stadiamaps.com with an optional EU endpoint. Auth is API key (query or Authorization: Stadia-Auth) for servers/apps, or domain-based Origin/Referer auth for browsers; localhost needs no key. Free tier: 200,000 credits/month, non-commercial.",
+  "base_url": "https://api.stadiamaps.com",
+  "docs_url": "https://docs.stadiamaps.com/",
+  "signup_url": "https://client.stadiamaps.com/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query param api_key=YOUR_API_KEY or header Authorization: Stadia-Auth YOUR_API_KEY; self-serve free signup (no card). Browsers: domain auth via Origin/Referer. Localhost needs no key."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "200,000 credits/month; non-commercial only; hard-limited (HTTP 429) when exhausted; 14-day Professional trial on signup",
+    "paid_plans": "Starter $20/mo (1M credits), Standard $80/mo (7.5M), Professional $250/mo (25M); overages from ~1.5\u20133\u00a2/1k credits; enterprise available"
+  },
+  "rate_limits": "Exact QPS not published for authenticated traffic; free/paid hard credit caps \u2192 HTTP 429; local keyless access has unpublished strict limits; complexity caps (e.g. routing, bulk geocode \u22645000)",
+  "example": {
+    "request": "curl \"https://api.stadiamaps.com/tz/lookup/v1?lat=40.71278&lng=-74.00611&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"tz_id\":\"America/New_York\",\"base_utc_offset\":-18000,\"dst_offset\":3600,\"timestamp\":1749479378,\"local_rfc_2822_timestamp\":\"Mon, 9 Jun 2025 10:29:38 -0400\",\"local_rfc_3389_timestamp\":\"2025-06-09T10:29:38-04:00\"}"
+  },
+  "use_cases": [
+    "forward-geocode an address to coordinates",
+    "reverse-geocode lat/lng to a place or address",
+    "get turn-by-turn route between two points",
+    "look up time zone and local time for coordinates",
+    "load vector or raster basemap tiles in a web map",
+    "compute travel-time isochrones or a time/distance matrix"
+  ],
+  "sources": [
+    "https://docs.stadiamaps.com/",
+    "https://docs.stadiamaps.com/authentication/",
+    "https://docs.stadiamaps.com/tz/",
+    "https://docs.stadiamaps.com/limits/",
+    "https://stadiamaps.com/pricing/",
+    "https://status.stadiamaps.com/",
+    "https://stadiamaps.com/faqs/",
+    "https://docs.stadiamaps.com/geocoding-search-autocomplete/overview/"
+  ],
+  "researcher_confidence": "high"
+}

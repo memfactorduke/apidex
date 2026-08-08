@@ -1,0 +1,45 @@
+{
+  "id": "shippo",
+  "status": "operational",
+  "name": "Shippo",
+  "category": "transportation",
+  "tagline": "Multi-carrier shipping labels, rates, tracking, and address validation via one API.",
+  "description": "Shippo is a multi-carrier shipping platform API that lets apps get live rates, buy and print labels, track packages, validate addresses, and manage returns across carriers such as USPS, UPS, FedEx, and DHL. Developers authenticate with API tokens (test and live), use a free starter tier for label volume, and integrate via a REST JSON API with official SDKs for common languages.",
+  "base_url": "https://api.goshippo.com",
+  "docs_url": "https://docs.goshippo.com/",
+  "signup_url": "https://apps.goshippo.com/join",
+  "auth": {
+    "type": "apiKey",
+    "details": "Shippo API token as Authorization: ShippoToken YOUR_API_KEY (test and live tokens from the dashboard after self-serve signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free starter plan: pay-as-you-go labels with platform fees; free tier includes starter label volume (confirm current monthly free labels on pricing page). No separate per-request free quota published as a pure free API quota.",
+    "paid_plans": "Pay-as-you-go and higher volume plans with discounted platform fees per label; enterprise options available."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.goshippo.com/tracks/ -H \"Authorization: ShippoToken YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"carrier\":\"usps\",\"tracking_number\":\"9205590164917312751089\"}'",
+    "response_snippet": "{\"tracking_number\":\"9205590164917312751089\",\"carrier\":\"usps\",\"tracking_status\":{\"status\":\"TRANSIT\",\"status_details\":\"Your shipment is in transit.\",\"status_date\":\"2024-01-15T12:00:00Z\"},\"tracking_history\":[]}"
+  },
+  "use_cases": [
+    "get live multi-carrier shipping rates for a package",
+    "buy and download a shipping label PDF",
+    "track a package by carrier and tracking number",
+    "validate and standardize a shipping address",
+    "create a multi-piece shipment and purchase labels"
+  ],
+  "sources": [
+    "https://docs.goshippo.com/",
+    "https://goshippo.com/pricing",
+    "https://docs.goshippo.com/docs/guides_general/authentication/",
+    "https://docs.goshippo.com/docs/tracking/tracking/",
+    "https://goshippo.com/"
+  ],
+  "researcher_confidence": "medium"
+}

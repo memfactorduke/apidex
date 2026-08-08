@@ -1,0 +1,43 @@
+{
+  "id": "mapquest",
+  "status": "operational",
+  "name": "MapQuest",
+  "category": "geo-maps",
+  "tagline": "Mapping, geocoding, directions, and place search APIs for location-aware applications",
+  "description": "MapQuest provides REST APIs for geocoding, reverse geocoding, routing/directions, static and interactive maps, place search, and traffic data. Developers authenticate with a self-serve API key and call endpoints under mapquestapi.com. The platform is widely used for address validation, turn-by-turn directions, and embedding maps without building a full mapping stack.",
+  "base_url": "https://www.mapquestapi.com",
+  "docs_url": "https://developer.mapquest.com/documentation/",
+  "signup_url": "https://developer.mapquest.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter (e.g. ?key=YOUR_API_KEY); self-serve signup at developer.mapquest.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify current free tier on developer.mapquest.com pricing",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.mapquestapi.com/geocoding/v1/address?key=YOUR_API_KEY&location=Denver,CO\"",
+    "response_snippet": "{\"info\":{\"statuscode\":0,\"messages\":[]},\"results\":[{\"providedLocation\":{\"location\":\"Denver,CO\"},\"locations\":[{\"latLng\":{\"lat\":39.74001,\"lng\":-104.99202},\"adminArea5\":\"Denver\",\"adminArea3\":\"CO\",\"adminArea1\":\"US\"}]}]}"
+  },
+  "use_cases": [
+    "geocode an address to lat/lng coordinates",
+    "get driving directions between two points",
+    "reverse-geocode coordinates to a street address",
+    "generate a static map image for a location",
+    "search for nearby places by category"
+  ],
+  "sources": [
+    "https://developer.mapquest.com/documentation/",
+    "https://www.mapquestapi.com"
+  ],
+  "researcher_confidence": "low"
+}

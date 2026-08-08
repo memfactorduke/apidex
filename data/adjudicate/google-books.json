@@ -1,0 +1,15 @@
+{
+  "id": "google-books",
+  "resolution_notes": "Verifier B's free_tier_limits and rate_limits (default ~1,000 QPD per project via Cloud Console quotas for books.googleapis.com) are supported by community/support threads and Console practice, but official Books docs still do not publish a fixed public quota table\u2014so ship those as Console-backed defaults, not a separate RPM schedule. CORS: a live GET to the volumes endpoint returns Access-Control-Allow-Origin: *, so cors=yes. Undisputed fields left null (keep original).",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Default 1,000 queries per day per project (Google Cloud Console quotas for books.googleapis.com; increases via Console)",
+  "rate_limits": "Default ~1,000 queries/day per project (Queries / defaultPerDayPerProject on books.googleapis.com); view/adjust in Cloud Console\u2014no separate public RPM table",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

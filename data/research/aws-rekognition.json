@@ -1,0 +1,41 @@
+{
+  "id": "aws-rekognition",
+  "status": "operational",
+  "name": "AWS Rekognition",
+  "category": "ai-ml",
+  "tagline": "Amazon computer vision API for image and video analysis at scale",
+  "description": "AWS Rekognition is Amazon's managed computer vision service for detecting objects, faces, text, unsafe content, and custom labels in images and videos. Developers call region-specific HTTPS endpoints with SigV4-signed requests to run analysis jobs, face comparison, and content moderation without training models. It integrates with S3, IAM, and other AWS services for production media pipelines.",
+  "base_url": "https://rekognition.{region}.amazonaws.com",
+  "docs_url": "https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html",
+  "signup_url": "https://portal.aws.amazon.com/billing/signup",
+  "auth": {
+    "type": "other",
+    "details": "AWS Signature Version 4 (SigV4) with IAM access key ID and secret access key (or temporary STS credentials). No simple API key header; requests must be signed per AWS protocol."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://rekognition.us-east-1.amazonaws.com/ -H 'Content-Type: application/x-amz-json-1.1' -H 'X-Amz-Target: RekognitionService.DetectLabels' -H 'Authorization: AWS4-HMAC-SHA256 Credential=YOUR_API_KEY/...' -d '{\"Image\":{\"S3Object\":{\"Bucket\":\"my-bucket\",\"Name\":\"photo.jpg\"}},\"MaxLabels\":10}'",
+    "response_snippet": "{\"Labels\":[{\"Name\":\"Person\",\"Confidence\":99.1,\"Instances\":[]}],\"LabelModelVersion\":\"3.0\"}"
+  },
+  "use_cases": [
+    "detect objects and scenes in an image",
+    "moderate user-uploaded photos for unsafe content",
+    "compare two face images for identity match",
+    "extract text (OCR) from images and screenshots",
+    "index faces for search in a collection"
+  ],
+  "sources": [
+    "https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html"
+  ],
+  "researcher_confidence": "low"
+}

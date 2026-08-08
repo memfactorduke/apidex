@@ -1,0 +1,41 @@
+{
+  "id": "azure-maps",
+  "status": "operational",
+  "name": "Azure Maps",
+  "category": "geo-maps",
+  "tagline": "Microsoft cloud geospatial platform for maps, search, routing, and location services",
+  "description": "Azure Maps provides REST APIs for interactive maps, geocoding, reverse geocoding, routing, traffic, weather, and spatial analytics. Developers authenticate with a subscription key or Microsoft Entra ID and call atlas.microsoft.com endpoints for location-aware applications.",
+  "base_url": "https://atlas.microsoft.com",
+  "docs_url": "https://learn.microsoft.com/en-us/azure/azure-maps/",
+  "signup_url": "https://portal.azure.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Subscription key via subscription-key query param or subscription-key header; also Microsoft Entra ID (Azure AD) OAuth2 bearer tokens for managed identity/app registration"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://atlas.microsoft.com/search/address/json?api-version=1.0&query=Seattle&subscription-key=YOUR_API_KEY\"",
+    "response_snippet": "{\"summary\":{\"query\":\"Seattle\",\"numResults\":1},\"results\":[{\"type\":\"Geography\",\"position\":{\"lat\":47.60357,\"lon\":-122.32945}}]}"
+  },
+  "use_cases": [
+    "geocode an address to coordinates",
+    "reverse geocode lat/lon to an address",
+    "get driving directions between two points",
+    "search nearby points of interest",
+    "display map tiles in a web or mobile app"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/azure-maps/"
+  ],
+  "researcher_confidence": "low"
+}

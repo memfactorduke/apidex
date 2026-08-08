@@ -1,0 +1,44 @@
+{
+  "id": "clash-of-clans",
+  "status": "operational",
+  "name": "Clash of Clans API",
+  "category": "games-comics",
+  "tagline": "Supercell official REST API for Clash of Clans player, clan, war, and league data",
+  "description": "Official Supercell REST API for Clash of Clans. Developers can query clan and player profiles, clan wars and war leagues, capital raids, leagues and rankings, locations, and labels using a free API key. Responses are JSON over HTTPS; authentication is a Bearer JWT issued after registering an IP-restricted key on the developer portal.",
+  "base_url": "https://api.clashofclans.com/v1",
+  "docs_url": "https://developer.clashofclans.com/#/documentation",
+  "signup_url": "https://developer.clashofclans.com/#/",
+  "auth": {
+    "type": "jwt",
+    "details": "JWT API key as Authorization: Bearer <token>. Keys are created on the developer portal and bound to allowed IP addresses; self-serve free signup required."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free API keys for non-commercial use; no published request quota on the developer portal (IP-restricted keys)",
+    "paid_plans": "No public paid tiers; commercial use requires contacting Supercell"
+  },
+  "rate_limits": "not published as fixed quotas; keys restricted to registered IP addresses; excessive use may be throttled",
+  "example": {
+    "request": "curl -s \"https://api.clashofclans.com/v1/clans/%232PP\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\n  \"tag\": \"#2PP\",\n  \"name\": \"Example Clan\",\n  \"type\": \"open\",\n  \"description\": \"...\",\n  \"location\": { \"id\": 32000249, \"name\": \"International\", \"isCountry\": false },\n  \"badgeUrls\": { \"small\": \"https://...\", \"medium\": \"https://...\", \"large\": \"https://...\" },\n  \"clanLevel\": 10,\n  \"clanPoints\": 12345,\n  \"members\": 45,\n  \"memberList\": [ { \"tag\": \"#ABC\", \"name\": \"Player\", \"role\": \"leader\", \"expLevel\": 150 } ]\n}"
+  },
+  "use_cases": [
+    "look up a Clash of Clans player profile by player tag",
+    "fetch clan details, member list, and war log for a clan tag",
+    "get current clan war or clan war league group status",
+    "list top clans or players by location and league",
+    "search clans by name with filters (min members, war frequency)"
+  ],
+  "sources": [
+    "https://developer.clashofclans.com/",
+    "https://developer.clashofclans.com/#/documentation",
+    "https://developer.clashofclans.com/#/getting-started",
+    "https://developer.clashofclans.com/api-docs/index.html"
+  ],
+  "researcher_confidence": "medium"
+}

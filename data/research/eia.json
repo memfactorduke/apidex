@@ -1,0 +1,39 @@
+{
+  "id": "eia",
+  "status": "operational",
+  "name": "EIA Open Data API",
+  "category": "government-open-data",
+  "tagline": "US Energy Information Administration open data API for energy statistics",
+  "description": "Official US Energy Information Administration (EIA) REST API providing free access to energy production, consumption, prices, electricity, petroleum, natural gas, and related statistical series for the United States.",
+  "base_url": "https://api.eia.gov",
+  "docs_url": "https://www.eia.gov/opendata/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter api_key=YOUR_API_KEY; free self-serve registration on EIA Open Data site"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.eia.gov/v2/electricity/rto/region-data/data/?api_key=YOUR_API_KEY&frequency=hourly&data[0]=value&length=1\"",
+    "response_snippet": "{\"response\":{\"total\":\"...\",\"data\":[{\"period\":\"...\",\"value\":...}]},\"request\":{...}}"
+  },
+  "use_cases": [
+    "fetch US electricity generation by fuel type",
+    "get petroleum price series over time",
+    "query natural gas production statistics",
+    "pull state-level energy consumption data"
+  ],
+  "sources": [
+    "https://www.eia.gov/opendata/"
+  ],
+  "researcher_confidence": "low"
+}

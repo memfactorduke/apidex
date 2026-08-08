@@ -1,0 +1,38 @@
+{
+  "id": "wikimedia-rest",
+  "status": "operational",
+  "name": "Wikipedia REST API",
+  "category": "education-reference",
+  "tagline": "Page summaries and media from Wikimedia projects",
+  "description": "Wikimedia REST API for Wikipedia page summaries, media, and related content.",
+  "base_url": "https://en.wikipedia.org/api/rest_v1",
+  "docs_url": "https://en.wikipedia.org/api/rest_v1/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints; User-Agent recommended."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://en.wikipedia.org/api/rest_v1/page/summary/Earth\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "get Wikipedia page summary for a topic",
+    "fetch page media metadata"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/api/rest_v1/"
+  ],
+  "researcher_confidence": "low"
+}

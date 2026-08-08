@@ -1,0 +1,15 @@
+{
+  "id": "exercisedb",
+  "resolution_notes": "Settled disputed free_tier_limits, rate_limits, and example against current RapidAPI listing and pricing. Verifier A was right on quotas; request shape is valid with RapidAPI headers. gifUrl host in the sample may vary by playground version.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "BASIC (free): 100 requests/day; PRO 10,000/day; ULTRA 50,000/day; MEGA 1,000,000/day (RapidAPI plan quotas)",
+  "rate_limits": "Published as RapidAPI plan daily quotas (BASIC 100/day, PRO 10,000/day, ULTRA 50,000/day, MEGA 1,000,000/day); per-second/minute rates not separately published on the listing",
+  "cors": null,
+  "example_request": "curl --request GET --url 'https://exercisedb.p.rapidapi.com/exercises?limit=10' --header 'X-RapidAPI-Key: YOUR_API_KEY' --header 'X-RapidAPI-Host: exercisedb.p.rapidapi.com'",
+  "example_response_snippet": "[{\"bodyPart\":\"waist\",\"equipment\":\"body weight\",\"gifUrl\":\"https://v2.exercisedb.io/image/\u2026\",\"id\":\"0001\",\"name\":\"3/4 sit-up\",\"target\":\"abs\",\"secondaryMuscles\":[\"hip flexors\",\"lower back\"],\"instructions\":[\"Lie flat on your back with your knees bent and feet flat on the ground.\",\"\u2026\"]}]",
+  "description": null,
+  "status": null
+}

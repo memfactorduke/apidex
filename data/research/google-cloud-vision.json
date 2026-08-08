@@ -1,0 +1,46 @@
+{
+  "id": "google-cloud-vision",
+  "status": "operational",
+  "name": "Google Cloud Vision",
+  "category": "ai-ml",
+  "tagline": "Google Cloud image analysis API for labels, OCR, faces, landmarks, and more",
+  "description": "Google Cloud Vision API detects objects, faces, text, landmarks, logos, and safe-search attributes in images via REST and client libraries. It supports feature detection on local or remote images, document text (OCR), and batch annotation, typically authenticated with a Google Cloud API key or service account and billed per feature unit.",
+  "base_url": "https://vision.googleapis.com/v1",
+  "docs_url": "https://cloud.google.com/vision/docs",
+  "signup_url": "https://console.cloud.google.com/apis/library/vision.googleapis.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key as query param key=YOUR_API_KEY (or OAuth2/service-account Bearer token). Enable Cloud Vision API in a GCP project; self-serve via Google Cloud Console."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "First 1,000 units/month free per feature (label, OCR, face, etc.); web detection 1,000 free; storage/document features have separate free allotments \u2014 confirm current pricing page",
+    "paid_plans": "Pay-as-you-go after free tier; pricing varies by feature (e.g. Label Detection, Text Detection, Face Detection billed per image unit)"
+  },
+  "rate_limits": "Default quotas apply per project (e.g. requests per minute); exact defaults vary and are configurable in GCP Console Quotas \u2014 see Cloud Vision quotas docs",
+  "example": {
+    "request": "curl -s -X POST \"https://vision.googleapis.com/v1/images:annotate?key=YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"requests\":[{\"image\":{\"source\":{\"imageUri\":\"https://cloud.google.com/vision/docs/images/ferry_in_nyc.jpg\"}},\"features\":[{\"type\":\"LABEL_DETECTION\",\"maxResults\":5}]}]}'",
+    "response_snippet": "{\"responses\":[{\"labelAnnotations\":[{\"mid\":\"/m/0k4j\",\"description\":\"Boat\",\"score\":0.95,\"topicality\":0.95},{\"description\":\"Water\",\"score\":0.91}]}]}"
+  },
+  "use_cases": [
+    "detect objects and labels in an uploaded product photo",
+    "extract printed or handwritten text (OCR) from an image or PDF page",
+    "detect faces and approximate emotions in a photo",
+    "flag adult or violent content with Safe Search detection",
+    "recognize landmarks or logos in user-uploaded images"
+  ],
+  "sources": [
+    "https://cloud.google.com/vision/docs",
+    "https://cloud.google.com/vision/docs/detect-labels",
+    "https://cloud.google.com/vision/docs/auth",
+    "https://cloud.google.com/vision/pricing",
+    "https://cloud.google.com/vision/quotas",
+    "https://cloud.google.com/vision/docs/reference/rest"
+  ],
+  "researcher_confidence": "medium"
+}

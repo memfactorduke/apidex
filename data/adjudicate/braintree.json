@@ -1,0 +1,15 @@
+{
+  "id": "braintree",
+  "resolution_notes": "Both verifiers correctly flagged base_url: official SDK/docs use env-specific REST hosts (prod https://api.braintreegateway.com:443, sandbox https://api.sandbox.braintreegateway.com:443) plus separate GraphQL endpoints (payments.braintree-api.com / payments.sandbox.braintree-api.com). free_tier_limits was wrong on the quoted US card rate\u2014official PayPal Braintree fees (updated May 7, 2026) list standard US cards at 2.89% + $0.29, not 2.59%+$0.49; free tier is sandbox-only with no free production quota. Other fields kept as original.",
+  "base_url": "https://api.braintreegateway.com (prod REST); sandbox REST https://api.sandbox.braintreegateway.com; GraphQL https://payments.braintree-api.com/graphql (sandbox: https://payments.sandbox.braintree-api.com/graphql)",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Sandbox free for full API testing; no free production transaction quota. US standard cards 2.89%+$0.29 (as of May 2026); rates vary by region/method \u2014 confirm official pricing",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

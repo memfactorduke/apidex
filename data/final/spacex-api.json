@@ -1,0 +1,104 @@
+{
+  "id": "spacex-api",
+  "status": "operational",
+  "name": "SpaceX API",
+  "category": "science-space",
+  "tagline": "Community-maintained SpaceX launch, rocket, and vehicle data",
+  "description": "string or null",
+  "base_url": "string or null",
+  "docs_url": "string or null",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public read endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "string or null",
+    "paid_plans": null
+  },
+  "rate_limits": "string or null",
+  "example": {
+    "request": "string or null",
+    "response_snippet": "string or null"
+  },
+  "use_cases": [
+    "get latest SpaceX launch details",
+    "list upcoming launches",
+    "get rocket specifications by ID",
+    "query historical launch outcomes"
+  ],
+  "sources": [
+    "https://github.com/r-spacex/SpaceX-API"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description",
+      "status"
+    ],
+    "unverifiable": []
+  }
+}

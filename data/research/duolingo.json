@@ -1,0 +1,38 @@
+{
+  "id": "duolingo",
+  "status": "operational",
+  "name": "Duolingo",
+  "category": "education-reference",
+  "tagline": "Language learning platform with unofficial community APIs",
+  "description": "Duolingo is a popular language-learning platform. There is no known official public developer API for third-party apps; community reverse-engineered endpoints and unofficial wrappers exist for user progress, streak, and vocabulary data.",
+  "base_url": "https://www.duolingo.com",
+  "docs_url": "https://www.duolingo.com",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "No official public API authentication. Unofficial clients typically use session cookies or JWT from login."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://www.duolingo.com/2017-06-30/users?username=YOUR_USERNAME'",
+    "response_snippet": "{\"users\":[{\"username\":\"...\",\"streak\":0,\"totalXp\":0}]}"
+  },
+  "use_cases": [
+    "fetch a learner's public profile and streak",
+    "look up XP and language progress for a username"
+  ],
+  "sources": [
+    "https://www.duolingo.com"
+  ],
+  "researcher_confidence": "low"
+}

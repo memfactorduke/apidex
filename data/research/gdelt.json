@@ -1,0 +1,51 @@
+{
+  "id": "gdelt",
+  "status": "operational",
+  "name": "GDELT",
+  "category": "news-media",
+  "tagline": "Global news monitoring APIs for full-text, geo, and TV coverage search",
+  "description": "The GDELT Project monitors worldwide broadcast, print, and web news and exposes free realtime JSON APIs (DOC, GEO, TV, Context) for full-text search, geographic mapping, television monitoring, and contextual snippets. Data is also available as bulk downloads and via Google BigQuery. No signup or API key is required for the public v2 APIs at api.gdeltproject.org.",
+  "base_url": "https://api.gdeltproject.org/api/v2",
+  "docs_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public GET endpoints accept query parameters only; no API key, OAuth, or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "html",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public APIs; no paid tier on api.gdeltproject.org. Soft limit typically treated as ~1 request per 5 seconds by community clients; no official free-tier quota page.",
+    "paid_plans": null
+  },
+  "rate_limits": "Not formally published with hard numbers on official docs; community clients and GDELT MCP enforce ~1 request per 5 seconds. Exceeding may yield errors or throttling.",
+  "example": {
+    "request": "curl \"https://api.gdeltproject.org/api/v2/doc/doc?query=climate&mode=ArtList&maxrecords=10&format=json\"",
+    "response_snippet": "{\"articles\":[{\"url\":\"https://example.com/story\",\"url_mobile\":\"\",\"title\":\"Climate talks intensify\",\"seendate\":\"20260115T120000Z\",\"socialimage\":\"\",\"domain\":\"example.com\",\"language\":\"English\",\"sourcecountry\":\"United States\"}]}"
+  },
+  "use_cases": [
+    "search recent global news articles by keyword or phrase",
+    "chart news volume over time for a topic",
+    "map geographic mentions of a keyword in world news",
+    "analyze tone/sentiment distribution of media coverage",
+    "search TV news transcripts by network or market",
+    "pull contextual sentence snippets matching a query"
+  ],
+  "sources": [
+    "https://www.gdeltproject.org/data.html",
+    "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+    "https://blog.gdeltproject.org/gdelt-geo-2-0-api-debuts/",
+    "https://blog.gdeltproject.org/gdelt-2-0-television-api-debuts/",
+    "https://blog.gdeltproject.org/announcing-the-gdelt-context-2-0-api/",
+    "https://github.com/cyanheads/gdelt-mcp-server",
+    "https://www.gdeltproject.org/"
+  ],
+  "researcher_confidence": "medium"
+}

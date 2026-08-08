@@ -1,0 +1,96 @@
+{
+  "id": "wordsapi",
+  "status": "operational",
+  "name": "WordsAPI",
+  "category": "education-reference",
+  "tagline": "Word definitions, synonyms, rhymes, and frequency data for English vocabulary.",
+  "description": "WordsAPI provides dictionary and lexical data for English words including definitions, synonyms, antonyms, rhymes, pronunciation, frequency, and related word forms via a REST API. It is commonly used for language tools, education apps, word games, and NLP features that need structured lexical lookup rather than full NLP pipelines.",
+  "base_url": "https://wordsapiv1.p.rapidapi.com",
+  "docs_url": "https://www.wordsapi.com/docs",
+  "signup_url": "https://rapidapi.com/dpventures/api/wordsapi",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via RapidAPI headers (X-RapidAPI-Key and X-RapidAPI-Host); self-serve signup on RapidAPI."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "2,500 requests/day on RapidAPI BASIC free plan (soft limit; overage $0.004/request)",
+    "paid_plans": "Paid tiers via RapidAPI; exact limits not verified in this pass"
+  },
+  "rate_limits": "BASIC free: 2,500/day soft (+$0.004 overage); Pro: 25,000/day soft; Ultra: 250,000/day soft; Mega: 500,000/day soft (RapidAPI daily quotas)",
+  "example": {
+    "request": "curl --request GET --url 'https://wordsapiv1.p.rapidapi.com/words/example' --header 'X-RapidAPI-Key: YOUR_API_KEY' --header 'X-RapidAPI-Host: wordsapiv1.p.rapidapi.com'",
+    "response_snippet": "{\"word\":\"example\",\"results\":[{\"definition\":\"a representative form or pattern\",\"partOfSpeech\":\"noun\",\"synonyms\":[\"model\"],\"typeOf\":[\"representation\",\"internal representation\",\"mental representation\"]}]}"
+  },
+  "use_cases": [
+    "look up definitions and part of speech for a word",
+    "get synonyms or antonyms for thesaurus features",
+    "find rhyming words for poetry or games",
+    "retrieve word frequency or pronunciation data"
+  ],
+  "sources": [
+    "https://www.wordsapi.com/",
+    "https://www.wordsapi.com/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

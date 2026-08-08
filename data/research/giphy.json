@@ -1,0 +1,42 @@
+{
+  "id": "giphy",
+  "status": "operational",
+  "name": "GIPHY",
+  "category": "fun-novelty",
+  "tagline": "Industry-standard GIF search, trending, and stickers API for apps",
+  "description": "GIPHY provides a REST API for searching, browsing trending content, and retrieving GIFs and stickers. Developers use an API key with self-serve signup; free and paid tiers are available for production apps.",
+  "base_url": "https://api.giphy.com/v1",
+  "docs_url": "https://developers.giphy.com/docs/",
+  "signup_url": "https://developers.giphy.com/dashboard/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter; self-serve signup at developers.giphy.com dashboard"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.giphy.com/v1/gifs/search?api_key=YOUR_API_KEY&q=cats&limit=1\"",
+    "response_snippet": "{\"data\":[{\"type\":\"gif\",\"id\":\"...\",\"url\":\"https://giphy.com/gifs/...\",\"images\":{\"original\":{\"url\":\"https://media.giphy.com/...\"}}}],\"meta\":{\"status\":200,\"msg\":\"OK\"},\"pagination\":{\"total_count\":0,\"count\":1,\"offset\":0}}"
+  },
+  "use_cases": [
+    "search GIFs by keyword for chat or messaging features",
+    "fetch trending GIFs for a discovery feed",
+    "get a random GIF for a reaction or placeholder",
+    "search stickers for emoji-style reactions",
+    "translate text into a relevant GIF"
+  ],
+  "sources": [
+    "https://developers.giphy.com/docs/",
+    "https://developers.giphy.com/"
+  ],
+  "researcher_confidence": "low"
+}

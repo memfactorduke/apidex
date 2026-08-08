@@ -1,0 +1,99 @@
+{
+  "id": "cheapshark",
+  "status": "operational",
+  "name": "CheapShark",
+  "category": "games-comics",
+  "tagline": "Free game deal aggregator with price alerts and historical lows",
+  "description": "CheapShark tracks digital PC game prices across stores including Steam, GreenManGaming, Fanatical, GOG and others; docs do not list Epic as a tracked store. API is free (must use CheapShark deal links); no API key. Supports deals, games, stores, and email price alerts.",
+  "base_url": "https://www.cheapshark.com/api/1.0",
+  "docs_url": "https://apidocs.cheapshark.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required for public REST endpoints; requests are made directly to the open API."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "Rate limited (HTTP 429 when exceeded); exact numeric limits not published. Docs require a descriptive User-Agent; excessive catalog scraping can lead to permanent blocks.",
+  "example": {
+    "request": "curl -s 'https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15&pageSize=5'",
+    "response_snippet": "[{\"internalName\":\"GAMETITLE\",\"title\":\"Game Title\",\"metacriticLink\":\"/game/pc/game-title\",\"dealID\":\"...\",\"storeID\":\"1\",\"gameID\":\"123\",\"salePrice\":\"9.99\",\"normalPrice\":\"59.99\",\"isOnSale\":\"1\",\"savings\":\"83.33\",\"metacriticScore\":\"85\",\"steamRatingText\":\"Very Positive\",\"steamRatingPercent\":\"90\",\"steamRatingCount\":\"10000\",\"steamAppID\":\"12345\",\"releaseDate\":1609459200,\"lastChange\":1700000000,\"dealRating\":\"9.5\",\"thumb\":\"https://...\"}]"
+  },
+  "use_cases": [
+    "find current lowest prices for a PC game across digital stores",
+    "list top deals under a price cap on Steam or other stores",
+    "look up a game's historical low and deal history by game ID",
+    "set or manage email price alerts for a wishlist game",
+    "fetch store metadata and active store IDs for deal filtering"
+  ],
+  "sources": [
+    "https://apidocs.cheapshark.com/",
+    "https://www.cheapshark.com/api/1.0",
+    "https://www.cheapshark.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "cors",
+      "example"
+    ],
+    "corrected": [
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "clarifai",
+  "status": "operational",
+  "name": "Clarifai",
+  "category": "ai-ml",
+  "tagline": "Computer vision and multimodal AI platform API",
+  "description": "Clarifai provides a cloud AI platform for image, video, text, and audio models\u2014classification, detection, embeddings, and generative workflows\u2014via a REST API centered on apps, inputs, and model predictions.",
+  "base_url": "https://api.clarifai.com",
+  "docs_url": "https://docs.clarifai.com",
+  "signup_url": "https://clarifai.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal access token (PAT) or API key via Authorization: Key YOUR_API_KEY header"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST 'https://api.clarifai.com/v2/models/aaa03c23b3724a16a56b629203edc62c/outputs' -H 'Authorization: Key YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"inputs\":[{\"data\":{\"image\":{\"url\":\"https://samples.clarifai.com/metro-north.jpg\"}}}]}'",
+    "response_snippet": "{\"status\":{\"code\":10000,\"description\":\"Ok\"},\"outputs\":[{\"data\":{\"concepts\":[{\"name\":\"train\",\"value\":0.99}]}}]}"
+  },
+  "use_cases": [
+    "classify objects in an image URL",
+    "run a custom Clarifai model prediction",
+    "detect faces or concepts in uploaded media",
+    "search visual similarity across app inputs"
+  ],
+  "sources": [
+    "https://docs.clarifai.com",
+    "https://www.clarifai.com"
+  ],
+  "researcher_confidence": "low"
+}

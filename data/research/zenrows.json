@@ -1,0 +1,43 @@
+{
+  "id": "zenrows",
+  "status": "operational",
+  "name": "ZenRows",
+  "category": "data-analytics",
+  "tagline": "Anti-bot web scraping API with JavaScript rendering and proxy rotation",
+  "description": "ZenRows is a web scraping API that handles anti-bot protections, CAPTCHAs, JavaScript rendering, and rotating residential proxies so developers can extract HTML or structured data from hard-to-scrape sites without managing their own proxy infrastructure.",
+  "base_url": "https://api.zenrows.com/v1/",
+  "docs_url": "https://docs.zenrows.com/api-reference/api-core",
+  "signup_url": "https://app.zenrows.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter (self-serve signup). Also supported as header in some SDKs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "html",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.zenrows.com/v1/?apikey=YOUR_API_KEY&url=https%3A%2F%2Fhttpbin.io%2Fanything\"",
+    "response_snippet": "{\"html\": \"...\"}"
+  },
+  "use_cases": [
+    "scrape HTML from anti-bot protected sites",
+    "render JavaScript-heavy pages before extraction",
+    "bypass CAPTCHAs and geo-blocked content",
+    "extract structured data via CSS selectors"
+  ],
+  "sources": [
+    "https://www.zenrows.com/",
+    "https://docs.zenrows.com/"
+  ],
+  "researcher_confidence": "low"
+}

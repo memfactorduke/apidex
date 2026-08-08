@@ -1,0 +1,40 @@
+{
+  "id": "packagist",
+  "status": "operational",
+  "name": "Packagist API",
+  "category": "dev-tools",
+  "tagline": "Public Composer package registry API for PHP package discovery and metadata",
+  "description": "Packagist is the default Composer package repository. Its public API exposes package listings, metadata, search, and statistics so tools can resolve package names, versions, and download counts without scraping the website.",
+  "base_url": "https://packagist.org",
+  "docs_url": "https://packagist.org/apidoc",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Most public read endpoints require no authentication. Authenticated write or private-package flows use Packagist account credentials if applicable."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://packagist.org/packages/list.json'",
+    "response_snippet": "{\"packageNames\":[\"vendor/package\",...]} "
+  },
+  "use_cases": [
+    "list all package names on Packagist",
+    "fetch package metadata and versions for a Composer package",
+    "search packages by keyword",
+    "get package download statistics"
+  ],
+  "sources": [
+    "https://packagist.org/apidoc"
+  ],
+  "researcher_confidence": "low"
+}

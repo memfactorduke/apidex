@@ -1,0 +1,44 @@
+{
+  "id": "swapi",
+  "status": "defunct",
+  "name": "SWAPI",
+  "category": "fun-novelty",
+  "tagline": "Star Wars film, character, and planet data for learning REST.",
+  "description": "SWAPI (the Star Wars API) historically provided free, no-auth JSON REST endpoints for Star Wars people, films, planets, starships, vehicles, and species. The canonical domain swapi.dev no longer resolves as of August 2026, so the service appears offline. Community mirrors such as swapi.info exist, but this entry covers the original SWAPI project only.",
+  "base_url": "https://swapi.dev/api",
+  "docs_url": "https://swapi.dev/documentation",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required historically; open public GET endpoints with no API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free historically; 10,000 requests/day per IP (as published on docs).",
+    "paid_plans": null
+  },
+  "rate_limits": "Historically 10,000 API requests per day per IP address (per official documentation).",
+  "example": {
+    "request": "curl -sS \"https://swapi.dev/api/people/1/\"",
+    "response_snippet": "{\n  \"name\": \"Luke Skywalker\",\n  \"height\": \"172\",\n  \"mass\": \"77\",\n  \"hair_color\": \"blond\",\n  \"skin_color\": \"fair\",\n  \"eye_color\": \"blue\",\n  \"birth_year\": \"19BBY\",\n  \"gender\": \"male\",\n  \"homeworld\": \"https://swapi.dev/api/planets/1/\",\n  \"films\": [\"https://swapi.dev/api/films/1/\", \"...\"],\n  \"url\": \"https://swapi.dev/api/people/1/\"\n}"
+  },
+  "use_cases": [
+    "list Star Wars characters for a teaching REST tutorial",
+    "fetch film details and linked character URLs",
+    "look up planet attributes like climate and population",
+    "build a fan directory of starships and vehicles",
+    "practice nested resource following via people\u2192homeworld\u2192films"
+  ],
+  "sources": [
+    "https://swapi.dev/documentation",
+    "https://swapi.dev/about",
+    "https://swapi.info/about",
+    "https://dev.to/simplr_sh/star-wars-apis-swapi-2025-403l"
+  ],
+  "researcher_confidence": "medium"
+}

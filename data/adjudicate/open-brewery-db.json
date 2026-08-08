@@ -1,0 +1,15 @@
+{
+  "id": "open-brewery-db",
+  "resolution_notes": "Verified rate limits against official Open Brewery DB documentation. Docs explicitly state a 120 requests/minute per-IP limit with rate-limit response headers, so Verifier B is correct; original \"not published\" and Verifier A's confirm are wrong. All other fields remain as originally entered.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "120 requests per minute (per IP); rate limit headers returned",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

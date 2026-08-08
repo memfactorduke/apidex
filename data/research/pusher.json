@@ -1,0 +1,41 @@
+{
+  "id": "pusher",
+  "status": "operational",
+  "name": "Pusher",
+  "category": "social-communication",
+  "tagline": "Hosted WebSocket-based real-time messaging and presence for apps",
+  "description": "Pusher is a hosted real-time communication platform that provides Channels (WebSocket pub/sub with presence and client events), Beams (push notifications), and related SDKs. Developers publish events from servers via a REST API and subscribe from clients over WebSockets. Common for live dashboards, chat, collaborative apps, and notifications without running your own WebSocket infrastructure.",
+  "base_url": "https://api-{cluster}.pusher.com",
+  "docs_url": "https://pusher.com/docs",
+  "signup_url": "https://dashboard.pusher.com/accounts/sign_up",
+  "auth": {
+    "type": "other",
+    "details": "Server REST uses HMAC-SHA256 signed requests with app_id, key, and secret (auth_key, auth_timestamp, auth_version, body_md5, auth_signature query params). Client libraries use app key; private/presence channels use endpoint auth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify current plan limits on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api-mt1.pusher.com/apps/YOUR_APP_ID/events?auth_key=YOUR_KEY&auth_timestamp=YOUR_TS&auth_version=1.0&body_md5=YOUR_MD5&auth_signature=YOUR_SIG\" -H \"Content-Type: application/json\" -d '{\"name\":\"my-event\",\"channels\":[\"my-channel\"],\"data\":\"{\\\"message\\\":\\\"hello\\\"}\"}'",
+    "response_snippet": "{\"status\":200}"
+  },
+  "use_cases": [
+    "publish a real-time event to a channel from a server",
+    "build live chat or presence indicators with WebSockets",
+    "trigger client UI updates without polling",
+    "send push notifications via Beams",
+    "authenticate private or presence channel subscriptions"
+  ],
+  "sources": [
+    "https://pusher.com/docs"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "weatherapi",
+  "status": "operational",
+  "name": "WeatherAPI.com",
+  "category": "weather-environment",
+  "tagline": "REST weather API for forecasts, history, astronomy, and sports",
+  "description": "WeatherAPI.com is a REST weather data service offering current conditions, multi-day forecasts, historical weather, astronomy, and sports-related weather endpoints. Developers authenticate with a free API key and call JSON endpoints for location-based weather queries worldwide.",
+  "base_url": "https://api.weatherapi.com/v1",
+  "docs_url": "https://www.weatherapi.com/docs/",
+  "signup_url": "https://www.weatherapi.com/signup.aspx",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter key=YOUR_API_KEY (self-serve signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000,000 calls/month; Free plan feature limits (e.g. forecast days, history window, locations, no commercial use) as published on pricing.aspx",
+    "paid_plans": null
+  },
+  "rate_limits": "Plan-dependent RPM on pricing page (Free ~15 calls/min; higher plans scale, e.g. Standard ~50/min)",
+  "example": {
+    "request": "curl \"https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=London\"",
+    "response_snippet": "{\"location\":{\"name\":\"London\",\"region\":\"City of London, Greater London\",\"country\":\"United Kingdom\"},\"current\":{\"temp_c\":15.0,\"condition\":{\"text\":\"Partly cloudy\"}}}"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "get multi-day weather forecast for a location",
+    "look up historical weather for a past date",
+    "get astronomy data (sunrise, moon phase) for a location"
+  ],
+  "sources": [
+    "https://www.weatherapi.com/",
+    "https://www.weatherapi.com/docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "opentdb",
+  "status": "operational",
+  "name": "Open Trivia DB",
+  "category": "fun-novelty",
+  "tagline": "Free community trivia questions by category, difficulty, and type",
+  "description": "Open Trivia Database (OpenTDB) is a free, user-contributed trivia question bank with a simple JSON HTTP API. Developers request questions with query params (amount, category, difficulty, type, encoding) and optional session tokens to avoid duplicates. No API key or signup is required. Limits include max 50 questions per call, one category per call, and one request every 5 seconds per IP. Data is under CC BY-SA 4.0.",
+  "base_url": "https://opentdb.com",
+  "docs_url": "https://opentdb.com/api_config.php",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or signup. Optional session token via GET /api_token.php?command=request; pass as token= query param to avoid duplicate questions. Tokens expire after 6 hours of inactivity."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Completely free; no key or paid tier. Max 50 questions/call; 1 category/call; 1 request per 5 seconds per IP.",
+    "paid_plans": null
+  },
+  "rate_limits": "1 request per 5 seconds per IP (response_code 5 / HTTP 429 if exceeded). Max 50 questions per call; only 1 category per call.",
+  "example": {
+    "request": "curl -s \"https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple\"",
+    "response_snippet": "{\"response_code\":0,\"results\":[{\"type\":\"multiple\",\"difficulty\":\"easy\",\"category\":\"Mythology\",\"question\":\"The Nike apparel and footwear brand takes it&#039;s name from the Greek goddess of what?\",\"correct_answer\":\"Victory\",\"incorrect_answers\":[\"Courage\",\"Strength\",\"Honor\"]}]}"
+  },
+  "use_cases": [
+    "fetch random trivia questions for a quiz app",
+    "list trivia categories and their IDs",
+    "get N multiple-choice questions filtered by category and difficulty",
+    "request a session token to avoid repeat questions in a game",
+    "look up verified question counts per category or globally"
+  ],
+  "sources": [
+    "https://opentdb.com/api_config.php",
+    "https://opentdb.com/",
+    "https://opentdb.com/api.php?amount=1",
+    "https://opentdb.com/api_category.php",
+    "https://opentdb.com/api_token.php?command=request",
+    "https://opentdb.com/api_count_global.php"
+  ],
+  "researcher_confidence": "high"
+}

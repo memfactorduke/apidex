@@ -1,0 +1,42 @@
+{
+  "id": "graphhopper",
+  "status": "operational",
+  "name": "GraphHopper",
+  "category": "geo-maps",
+  "tagline": "Routing, geocoding, and isochrones API for maps and logistics",
+  "description": "GraphHopper provides a routing and geospatial API for turn-by-turn directions, matrix travel times, isochrones, map matching, and geocoding. Developers use it for logistics, delivery apps, and map-based products that need road-network routing with customizable vehicle profiles and real-time traffic options.",
+  "base_url": "https://graphhopper.com/api/1",
+  "docs_url": "https://docs.graphhopper.com/",
+  "signup_url": "https://graphhopper.com/dashboard/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter key=YOUR_API_KEY or header Authorization; self-serve signup at GraphHopper dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://graphhopper.com/api/1/route?point=51.131,12.414&point=48.224,3.867&vehicle=car&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"paths\":[{\"distance\":450123.2,\"time\":16200000,\"points\":\"...\",\"instructions\":[...]}]}"
+  },
+  "use_cases": [
+    "get driving directions between two coordinates",
+    "compute travel-time matrix for multiple origins and destinations",
+    "calculate isochrone polygons for reachability",
+    "geocode an address to coordinates",
+    "match GPS traces to the road network"
+  ],
+  "sources": [
+    "https://www.graphhopper.com/",
+    "https://docs.graphhopper.com/"
+  ],
+  "researcher_confidence": "low"
+}

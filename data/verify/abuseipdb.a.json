@@ -1,0 +1,52 @@
+{
+  "id": "abuseipdb",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.abuseipdb.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.abuseipdb.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.abuseipdb.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.abuseipdb.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 check requests/day (Standard free plan); higher limits on paid plans (Basic 3,000/day, Premium 10,000/day, etc.) \u2014 see pricing page for full tier details",
+      "source": "https://www.abuseipdb.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Daily check quotas by plan (free: 1,000/day); rate limiting also applies \u2014 consult docs and pricing for current limits",
+      "source": "https://www.abuseipdb.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.abuseipdb.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.abuseipdb.com/"
+    }
+  },
+  "notes": "Free tier exists with published daily check limits (not \"unknown\"). Rate limits/quotas are published on pricing. Base URL, Key auth, and check example match official docs."
+}

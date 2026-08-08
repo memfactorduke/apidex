@@ -1,0 +1,99 @@
+{
+  "id": "guardian",
+  "status": "operational",
+  "name": "The Guardian Open Platform",
+  "category": "news-media",
+  "tagline": "Search and retrieve Guardian news content, tags, sections, and editions via a documented REST API.",
+  "description": "The Guardian Open Platform is a public REST API for The Guardian\u2019s journalism archive and live content. Developers can search articles, retrieve full content fields, explore tags and sections, and filter by date, section, and other facets. Access requires a free API key from the developer portal; tiered rate limits apply, and commercial use has separate terms.",
+  "base_url": "https://content.guardianapis.com",
+  "docs_url": "https://open-platform.theguardian.com/documentation/",
+  "signup_url": "https://bonobo.capi.gutools.co.uk/register/developer",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api-key query parameter (or Authorization header with Bearer per docs variants); free self-serve registration at the developer portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "...",
+    "paid_plans": null
+  },
+  "rate_limits": "...",
+  "example": {
+    "request": "curl \"https://content.guardianapis.com/search?q=climate&api-key=YOUR_API_KEY\"",
+    "response_snippet": "{\"response\":{\"status\":\"ok\",\"userTier\":\"developer\",\"total\":12345,\"startIndex\":1,\"pageSize\":10,\"currentPage\":1,\"pages\":1235,\"orderBy\":\"relevance\",\"results\":[{\"id\":\"environment/2024/...\",\"type\":\"article\",\"sectionId\":\"environment\",\"webTitle\":\"...\",\"webUrl\":\"https://www.theguardian.com/...\",\"apiUrl\":\"https://content.guardianapis.com/...\"}]}}"
+  },
+  "use_cases": [
+    "search Guardian articles by keyword and date range",
+    "fetch full article content fields for a known path",
+    "list sections and tags for navigation or filters",
+    "build a news aggregator feed from Guardian content",
+    "monitor recent coverage on a topic for research agents"
+  ],
+  "sources": [
+    "https://open-platform.theguardian.com/",
+    "https://open-platform.theguardian.com/documentation/",
+    "https://open-platform.theguardian.com/access/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

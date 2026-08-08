@@ -1,0 +1,44 @@
+{
+  "id": "pokeapi",
+  "status": "operational",
+  "name": "PokeAPI",
+  "category": "fun-novelty",
+  "tagline": "Free RESTful Pok\u00e9mon data API for species, moves, abilities, and more",
+  "description": "PokeAPI is a free, open-source RESTful API that provides comprehensive Pok\u00e9mon data including species, moves, abilities, types, games, and evolution chains. No authentication is required. Widely used in hobby projects, games, and educational apps. Note: this is the general Pok\u00e9mon data API at pokeapi.co, not the separate Pok\u00e9mon TCG card API.",
+  "base_url": "https://pokeapi.co/api/v2",
+  "docs_url": "https://pokeapi.co/docs/v2",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Fully public API with no API keys or signup."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Completely free; fair-use rate limiting applies (no published hard free quota)",
+    "paid_plans": null
+  },
+  "rate_limits": "Soft rate limiting for fair use; exact numeric limits not published. Caching and the GraphQL mirror are recommended for heavy use.",
+  "example": {
+    "request": "curl -s https://pokeapi.co/api/v2/pokemon/ditto",
+    "response_snippet": "{\"id\":132,\"name\":\"ditto\",\"base_experience\":101,\"height\":3,\"weight\":40,\"abilities\":[{\"ability\":{\"name\":\"limber\",\"url\":\"https://pokeapi.co/api/v2/ability/7/\"},\"is_hidden\":false,\"slot\":1}],\"sprites\":{\"front_default\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png\"},\"types\":[{\"slot\":1,\"type\":{\"name\":\"normal\",\"url\":\"https://pokeapi.co/api/v2/type/1/\"}}]}"
+  },
+  "use_cases": [
+    "look up a Pok\u00e9mon species by name or national dex ID",
+    "list moves, abilities, and type effectiveness for a Pok\u00e9mon",
+    "fetch evolution chain data for a species",
+    "get sprite and artwork URLs for a Pok\u00e9mon",
+    "browse Pok\u00e9mon by generation, type, or egg group",
+    "build a Pok\u00e9dex UI with paginated resource lists"
+  ],
+  "sources": [
+    "https://pokeapi.co/",
+    "https://pokeapi.co/docs/v2",
+    "https://github.com/PokeAPI/pokeapi"
+  ],
+  "researcher_confidence": "high"
+}

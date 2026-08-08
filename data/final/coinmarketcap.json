@@ -1,0 +1,99 @@
+{
+  "id": "coinmarketcap",
+  "status": "operational",
+  "name": "CoinMarketCap",
+  "category": "crypto",
+  "tagline": "Market data API for cryptocurrency prices, market caps, and exchange metrics",
+  "description": "CoinMarketCap provides a RESTful cryptocurrency market data API covering prices, market capitalization, volume, rankings, historical OHLCV, exchange listings, and metadata for thousands of digital assets. Developers use it for portfolio trackers, trading bots, dashboards, and research tools. Access is API-key authenticated with tiered free and paid plans; endpoints return JSON and enforce plan-based rate and credit limits.",
+  "base_url": "https://pro-api.coinmarketcap.com",
+  "docs_url": "https://coinmarketcap.com/api/documentation/v1/",
+  "signup_url": "https://coinmarketcap.com/api/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-CMC_PRO_API_KEY header (or query param CMC_PRO_API_KEY); self-serve signup at coinmarketcap.com/api"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Basic (free): 10,000 credits/month (~333/day), 30 requests/minute; no monthly fee. Confirm on pricing page if tiers change.",
+    "paid_plans": "Startup, Standard, Professional, Enterprise tiers with higher credits and call rates"
+  },
+  "rate_limits": "Plan-based monthly credits and per-minute request limits; exact numbers vary by tier \u2014 see pricing/docs",
+  "example": {
+    "request": "curl -H \"X-CMC_PRO_API_KEY: YOUR_API_KEY\" -H \"Accept: application/json\" \"https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=BTC\"",
+    "response_snippet": "{\"status\":{\"timestamp\":\"...\",\"error_code\":0,\"error_message\":null},\"data\":{\"BTC\":{\"id\":1,\"name\":\"Bitcoin\",\"symbol\":\"BTC\",\"quote\":{\"USD\":{\"price\":...,\"market_cap\":...,\"volume_24h\":...}}}}"
+  },
+  "use_cases": [
+    "get latest USD price and market cap for a cryptocurrency by symbol",
+    "list top cryptocurrencies ranked by market capitalization",
+    "fetch historical OHLCV candles for a coin",
+    "look up coin metadata (logo, website, tags) by CMC id or slug",
+    "get exchange listings and pair quotes for a market",
+    "convert crypto amounts between currencies using live rates"
+  ],
+  "sources": [
+    "https://coinmarketcap.com/api/",
+    "https://coinmarketcap.com/api/documentation/v1/",
+    "https://coinmarketcap.com/api/pricing/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "17track",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.17track.net/en/doc"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.17track.net/doc?v=2.2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.17track.net/en/doc"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.17track.net/en/doc"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "As of 2026-01-07 00:00 UTC, monthly free quota ended. New accounts get a one-time allocation of 200 free tracking numbers (not a recurring monthly free plan).",
+      "source": "https://api.17track.net/en/doc"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "3 requests/second (HTTP 429 when exceeded); max 40 tracking numbers per request; about 400,000 registrations/hour.",
+      "source": "https://api.17track.net/en/doc"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.17track.net/en/doc"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.17track.net/en/doc"
+    }
+  },
+  "notes": "API live (v2.2 and v2.4 both respond). Current docs center on v2.4 but keep v2.2 online. Rate limits are published (3 req/s), not \u201cnot published.\u201d Free monthly quota ended Jan 2026; new accounts get one-time 200. Example path/headers OK for still-supported v2.2."
+}

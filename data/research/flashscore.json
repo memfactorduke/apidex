@@ -1,0 +1,39 @@
+{
+  "id": "flashscore",
+  "status": "defunct",
+  "name": "Flashscore",
+  "category": "sports",
+  "tagline": "No public self-serve developer API found for flashscore.com",
+  "description": "Flashscore (flashscore.com) is a commercial live sports scores and statistics website. Extensive 2026 research found no official public developer API with self-serve signup, documented endpoints, or published pricing. Third-party scrapers and unofficial reverse-engineered clients exist but are not sanctioned APIs.",
+  "base_url": "https://www.flashscore.com",
+  "docs_url": "https://www.flashscore.com",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No public self-serve API authentication documented. Flashscore does not offer an official developer API."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "html"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier \u2014 no public API",
+    "paid_plans": null
+  },
+  "rate_limits": "not published \u2014 no public API",
+  "example": {
+    "request": "curl -I https://www.flashscore.com",
+    "response_snippet": "HTTP/2 200 \u2014 HTML marketing/site response only; no documented JSON API root."
+  },
+  "use_cases": [
+    "look up live sports scores on flashscore.com (web only)",
+    "find third-party sports data alternatives when an official Flashscore API is required"
+  ],
+  "sources": [
+    "https://www.flashscore.com",
+    "https://www.google.com/search?q=Flashscore+API+developer+documentation"
+  ],
+  "researcher_confidence": "low"
+}

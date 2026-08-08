@@ -1,0 +1,43 @@
+{
+  "id": "the-odds-api",
+  "status": "operational",
+  "name": "The Odds API",
+  "category": "sports",
+  "tagline": "Sports betting odds from many bookmakers with a free monthly developer quota",
+  "description": "The Odds API aggregates real-time and historical sports betting odds from dozens of bookmakers worldwide. It covers major sports and leagues with endpoints for events, odds, scores, and participant data. Developers authenticate with a self-serve API key and start on a free monthly request quota, with paid tiers for higher volume and historical data access.",
+  "base_url": "https://api.the-odds-api.com/v4",
+  "docs_url": "https://the-odds-api.com/liveapi/guides/v4/",
+  "signup_url": "https://the-odds-api.com/#get-access",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apiKey query parameter (self-serve signup); key also accepted in some client examples. No OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "500 requests/month free (verify on pricing page)",
+    "paid_plans": "Paid plans scale by monthly request volume; see official pricing"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.the-odds-api.com/v4/sports?apiKey=YOUR_API_KEY\"",
+    "response_snippet": "[{\"key\":\"americanfootball_nfl\",\"group\":\"American Football\",\"title\":\"NFL\",\"description\":\"US Football\",\"active\":true,\"has_outrights\":false}]"
+  },
+  "use_cases": [
+    "list active sports and leagues available for odds",
+    "get current betting odds for a sport across bookmakers",
+    "fetch live scores for upcoming or in-play events",
+    "compare bookmaker odds for arbitrage or value spotting",
+    "pull historical odds snapshots for backtesting models"
+  ],
+  "sources": [
+    "https://the-odds-api.com/",
+    "https://the-odds-api.com/liveapi/guides/v4/",
+    "https://the-odds-api.com/#get-access"
+  ],
+  "researcher_confidence": "low"
+}
