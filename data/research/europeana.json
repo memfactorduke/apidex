@@ -1,0 +1,45 @@
+{
+  "id": "europeana",
+  "status": "operational",
+  "name": "Europeana",
+  "category": "education-reference",
+  "tagline": "Search Europe's libraries, museums, and cultural heritage collections via one API.",
+  "description": "Europeana is the EU-backed digital cultural heritage platform. Its Search and Record APIs let developers query millions of digitized items from European libraries, museums, archives, and galleries \u2014 books, artworks, photos, videos, and more \u2014 with facets, full-text, and metadata in standard formats.",
+  "base_url": "https://api.europeana.eu/record/v2",
+  "docs_url": "https://apis.europeana.eu/",
+  "signup_url": "https://pro.europeana.eu/page/get-api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via wskey query parameter (self-serve registration at Europeana Pro). Required on all Search and Record requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.europeana.eu/record/v2/search.json?wskey=YOUR_API_KEY&query=Mona+Lisa&rows=2\"",
+    "response_snippet": "{\"apikey\":\"...\",\"success\":true,\"requestNumber\":999,\"itemsCount\":2,\"totalResults\":12345,\"items\":[{\"id\":\"/9200365/...\",\"title\":[\"Mona Lisa\"],\"type\":\"IMAGE\",\"dcCreator\":[\"Leonardo da Vinci\"],...}]}"
+  },
+  "use_cases": [
+    "search European cultural heritage items by keyword",
+    "fetch metadata for a specific Europeana record",
+    "find digitized artworks, books, or photos from EU museums",
+    "build educational apps over open cultural collections",
+    "facet search by country, type, or provider"
+  ],
+  "sources": [
+    "https://apis.europeana.eu/",
+    "https://pro.europeana.eu/page/apis",
+    "https://pro.europeana.eu/page/get-api"
+  ],
+  "researcher_confidence": "low"
+}

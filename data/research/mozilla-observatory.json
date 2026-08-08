@@ -1,0 +1,41 @@
+{
+  "id": "mozilla-observatory",
+  "status": "operational",
+  "name": "Mozilla Observatory",
+  "category": "security-identity",
+  "tagline": "HTTP security header and best-practice scanning for websites",
+  "description": "Mozilla Observatory analyzes websites for security best practices, focusing on HTTP security headers, TLS configuration, and related hardening signals. Developers use its API to scan sites, retrieve grade/score results, and track security posture over time.",
+  "base_url": "https://http-observatory.security.mozilla.org/api/v1",
+  "docs_url": "https://github.com/mozilla/http-observatory/blob/master/httpobs/docs/api.md",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public scan and result endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://http-observatory.security.mozilla.org/api/v1/analyze?host=example.com\"",
+    "response_snippet": "{\"end_time\":\"...\",\"grade\":\"B\",\"score\":70,\"state\":\"FINISHED\",\"tests_passed\":8,\"tests_failed\":2}"
+  },
+  "use_cases": [
+    "scan a website for HTTP security header issues",
+    "retrieve Mozilla Observatory grade and score for a host",
+    "check whether a site enables HSTS, CSP, or related headers",
+    "monitor security posture of domains over time"
+  ],
+  "sources": [
+    "https://observatory.mozilla.org/",
+    "https://github.com/mozilla/http-observatory"
+  ],
+  "researcher_confidence": "low"
+}

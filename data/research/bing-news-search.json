@@ -1,0 +1,42 @@
+{
+  "id": "bing-news-search",
+  "status": "operational",
+  "name": "Bing News Search",
+  "category": "news-media",
+  "tagline": "Microsoft Bing News Search API for real-time news articles and headlines worldwide.",
+  "description": "Bing News Search is a Microsoft Azure Cognitive Services API that returns news articles and headlines matching a query or category. Developers call REST endpoints with a subscription key to fetch ranked news results, trending topics, and category-specific feeds with metadata such as provider, date, and image thumbnails.",
+  "base_url": "https://api.bing.microsoft.com/v7.0",
+  "docs_url": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/",
+  "signup_url": "https://portal.azure.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Subscription key via Ocp-Apim-Subscription-Key header; create a Bing Search resource in Azure portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Azure free tier / F0 or S1 transaction quotas vary by SKU; confirm on Azure pricing page",
+    "paid_plans": "Pay-as-you-go via Azure Cognitive Services Bing Search SKUs"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Ocp-Apim-Subscription-Key: YOUR_API_KEY\" \"https://api.bing.microsoft.com/v7.0/news/search?q=Microsoft&mkt=en-US&count=10\"",
+    "response_snippet": "{\"_type\":\"News\",\"value\":[{\"name\":\"...\",\"url\":\"...\",\"description\":\"...\",\"provider\":[{\"name\":\"...\"}],\"datePublished\":\"...\"}]}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword",
+    "get trending news topics",
+    "fetch news by category (business, sports, technology)",
+    "monitor brand or topic mentions in news",
+    "build a news aggregator feed for a region"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/",
+    "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/search-api/"
+  ],
+  "researcher_confidence": "medium"
+}

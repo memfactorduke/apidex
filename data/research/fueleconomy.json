@@ -1,0 +1,43 @@
+{
+  "id": "fueleconomy",
+  "status": "operational",
+  "name": "Fuel Economy.gov",
+  "category": "transportation",
+  "tagline": "EPA fuel economy ratings for US vehicles via free public API",
+  "description": "Public API from fueleconomy.gov providing EPA fuel economy ratings, vehicle specifications, MPG data, and emissions information for US vehicles. Free to use with no authentication required for standard endpoints.",
+  "base_url": "https://www.fueleconomy.gov/ws/rest",
+  "docs_url": "https://www.fueleconomy.gov/feg/ws/index.shtml",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public REST endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public API; no published request quota",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://www.fueleconomy.gov/ws/rest/vehicle/menu/year\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"menuItem\":[{\"text\":\"2024\",\"value\":\"2024\"},{\"text\":\"2023\",\"value\":\"2023\"}]}"
+  },
+  "use_cases": [
+    "look up EPA MPG for a vehicle year/make/model",
+    "list available model years for fuel economy data",
+    "get vehicle options by year and make",
+    "fetch detailed fuel economy specs by vehicle ID",
+    "compare emissions ratings across US vehicles"
+  ],
+  "sources": [
+    "https://www.fueleconomy.gov/feg/ws/index.shtml",
+    "https://www.fueleconomy.gov"
+  ],
+  "researcher_confidence": "medium"
+}

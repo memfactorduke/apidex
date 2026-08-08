@@ -1,0 +1,52 @@
+{
+  "id": "mapbox",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/help/getting-started/access-tokens/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mapbox.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mapbox.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Geocoding v5 (mapbox.places) is deprecated/legacy; current docs recommend Geocoding API v6. Prefer e.g. curl \"https://api.mapbox.com/search/geocode/v6/forward?q=Los%20Angeles&access_token=YOUR_API_KEY\" (or document v5 as legacy).",
+      "source": "https://docs.mapbox.com/api/search/geocoding/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/api/"
+    }
+  },
+  "notes": "Adversarial check found Geocoding v5 still works but is legacy; entry example uses deprecated path. CORS not clearly documented as blanket yes. Free tier and product-specific limits confirmed as variable."
+}

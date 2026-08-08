@@ -1,0 +1,52 @@
+{
+  "id": "virustotal",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/public-vs-premium-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/public-vs-premium-api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/public-vs-premium-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/file-info"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/overview"
+    }
+  },
+  "notes": "Verified against official VirusTotal docs (2026). Base URL, auth (x-apikey), free-tier limits (4/min, 500/day), and file-report example match current v3 docs. CORS not documented. Entry is operational."
+}

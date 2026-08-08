@@ -1,0 +1,52 @@
+{
+  "id": "weatherapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/pricing.aspx"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000,000 calls/month; current + 3-day forecast only on free plan (history/astronomy limited by plan)",
+      "source": "https://www.weatherapi.com/pricing.aspx"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: typically ~15\u201320 requests/min (plan-dependent; see pricing for calls/month)",
+      "source": "https://www.weatherapi.com/pricing.aspx"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    }
+  },
+  "notes": "Placeholder \u2014 need to verify free tier limits and rate limits on pricing page before finalizing."
+}

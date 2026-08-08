@@ -1,0 +1,41 @@
+{
+  "id": "thenewsapi",
+  "status": "operational",
+  "name": "The News API",
+  "category": "news-media",
+  "tagline": "Global news search and top headlines API with multi-language coverage",
+  "description": "The News API aggregates news articles from thousands of sources worldwide. It provides endpoints for top headlines, all-news search, and similar-article discovery with filters for language, country, category, and date range.",
+  "base_url": "https://api.thenewsapi.com/v1",
+  "docs_url": "https://www.thenewsapi.com/documentation",
+  "signup_url": "https://www.thenewsapi.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via query parameter api_token (self-serve signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.thenewsapi.com/v1/news/top?api_token=YOUR_API_KEY&locale=us&limit=3\"",
+    "response_snippet": "{\"meta\":{\"found\":1000000,\"returned\":3,\"limit\":3,\"page\":1},\"data\":[{\"uuid\":\"...\",\"title\":\"...\",\"description\":\"...\",\"url\":\"...\",\"source\":\"...\"}]}"
+  },
+  "use_cases": [
+    "fetch top headlines for a country",
+    "search recent articles by keyword",
+    "filter news by language or category",
+    "find similar articles to a URL"
+  ],
+  "sources": [
+    "https://www.thenewsapi.com/",
+    "https://www.thenewsapi.com/documentation"
+  ],
+  "researcher_confidence": "low"
+}

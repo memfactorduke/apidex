@@ -1,0 +1,96 @@
+{
+  "id": "listen-notes",
+  "status": "operational",
+  "name": "Listen Notes",
+  "category": "entertainment",
+  "tagline": "Podcast search and directory API for discovery, episodes, and analytics",
+  "description": "Listen Notes provides a podcast search and directory API with endpoints for searching podcasts and episodes, browsing top charts, retrieving podcast and episode details, fetching best podcasts by genre, and accessing related content. It is commonly used to power podcast apps, recommendation features, and media research tools.",
+  "base_url": "https://listen-api.listennotes.com/api/v2",
+  "docs_url": "https://www.listennotes.com/api/docs/",
+  "signup_url": "https://www.listennotes.com/api/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-ListenAPI-Key header; self-serve signup on listennotes.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-ListenAPI-Key: YOUR_API_KEY\" \"https://listen-api.listennotes.com/api/v2/search?q=startup&type=episode\"",
+    "response_snippet": "{\"count\": 10, \"total\": 12345, \"results\": [{\"id\": \"...\", \"title_original\": \"...\", \"podcast\": {\"title_original\": \"...\"}}]}"
+  },
+  "use_cases": [
+    "search podcasts and episodes by keyword",
+    "get podcast details and episode lists",
+    "browse top charts by genre or region",
+    "fetch related podcasts for recommendations"
+  ],
+  "sources": [
+    "https://www.listennotes.com/api/",
+    "https://www.listennotes.com/api/docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

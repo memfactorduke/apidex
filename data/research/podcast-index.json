@@ -1,0 +1,41 @@
+{
+  "id": "podcast-index",
+  "status": "operational",
+  "name": "Podcast Index",
+  "category": "entertainment",
+  "tagline": "Open podcast search and directory API for the modern podcast ecosystem",
+  "description": "Podcast Index provides a free, open API for searching and retrieving podcast metadata, episodes, and related data from a large independent podcast directory. It supports discovery, episode lookup, and Podcasting 2.0 features without relying on Apple's closed ecosystem.",
+  "base_url": "https://api.podcastindex.org/api/1.0",
+  "docs_url": "https://podcastindex-org.github.io/docs-api/",
+  "signup_url": "https://api.podcastindex.org/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key and secret via Authorization header (SHA-1 hash) and X-Auth-Date/X-Auth-Key headers; free self-serve registration"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-Auth-Key: YOUR_API_KEY\" -H \"X-Auth-Date: $(date +%s)\" -H \"Authorization: YOUR_AUTH_HASH\" \"https://api.podcastindex.org/api/1.0/search/byterm?q=batman\"",
+    "response_snippet": "{\"status\":\"true\",\"feeds\":[{\"id\":920666,\"title\":\"Batman University\",\"url\":\"...\"}],\"count\":1,\"query\":\"batman\",\"description\":\"Found matching feeds.\"}"
+  },
+  "use_cases": [
+    "search podcasts by keyword",
+    "get podcast episodes by feed ID",
+    "look up podcast by iTunes ID",
+    "fetch recent podcast episodes"
+  ],
+  "sources": [
+    "https://podcastindex.org/",
+    "https://podcastindex-org.github.io/docs-api/"
+  ],
+  "researcher_confidence": "medium"
+}

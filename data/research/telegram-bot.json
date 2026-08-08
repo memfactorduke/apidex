@@ -1,0 +1,45 @@
+{
+  "id": "telegram-bot",
+  "status": "operational",
+  "name": "Telegram Bot API",
+  "category": "social-communication",
+  "tagline": "HTTPS Bot API for sending messages, media, and bot interactions on Telegram",
+  "description": "Official HTTP interface for Telegram bots: send and receive messages, media, keyboards, payments, Mini Apps, and updates via long polling or webhooks. Auth is a bot token from @BotFather placed in the request URL. The cloud API is free of charge; rate limits apply to outbound messaging, with optional paid broadcasts via Telegram Stars for higher throughput.",
+  "base_url": "https://api.telegram.org",
+  "docs_url": "https://core.telegram.org/bots/api",
+  "signup_url": "https://t.me/BotFather",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bot token issued by @BotFather (self-serve in Telegram). Pass it in the URL path: https://api.telegram.org/bot<token>/METHOD_NAME. No Authorization header required for standard Bot API calls."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free unlimited API use (no call quotas or monthly fees). Free messaging subject to rate limits: ~1 msg/sec per private chat, 20 msg/min per group, ~30 msg/sec bulk broadcast.",
+    "paid_plans": "Optional paid broadcasts (BotFather): up to 1000 msg/sec; 0.1 Telegram Stars per message over free 30/sec. Requires \u2265100,000 Stars balance and \u2265100,000 monthly active users."
+  },
+  "rate_limits": "Official FAQ: \u2264~1 message/sec per private chat; \u226420 messages/min per group; \u2264~30 messages/sec bulk free; paid broadcasts up to 1000/sec. 429 on excess. Other method limits not fully published.",
+  "example": {
+    "request": "curl \"https://api.telegram.org/botYOUR_API_KEY/getMe\"",
+    "response_snippet": "{\"ok\":true,\"result\":{\"id\":123456789,\"is_bot\":true,\"first_name\":\"ExampleBot\",\"username\":\"ExampleBot\",\"can_join_groups\":true,\"can_read_all_group_messages\":false,\"supports_inline_queries\":false}}"
+  },
+  "use_cases": [
+    "send a text message to a Telegram user or chat",
+    "poll getUpdates for new bot messages (long polling)",
+    "set or remove a webhook for bot updates",
+    "download a file users sent to the bot",
+    "send a photo, document, or location to a chat",
+    "verify bot token and identity with getMe"
+  ],
+  "sources": [
+    "https://core.telegram.org/bots/api",
+    "https://core.telegram.org/bots/faq",
+    "https://core.telegram.org/",
+    "https://core.telegram.org/bots/api-changelog"
+  ],
+  "researcher_confidence": "high"
+}

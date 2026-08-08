@@ -1,0 +1,42 @@
+{
+  "id": "data-gov",
+  "status": "operational",
+  "name": "data.gov",
+  "category": "data-analytics",
+  "tagline": "US federal open data catalog API for discovering and accessing government datasets",
+  "description": "data.gov is the United States government's open data catalog, providing a CKAN-based API to search, discover, and retrieve metadata for federal datasets across agencies. Developers can query packages, organizations, and resources programmatically without authentication for most catalog operations.",
+  "base_url": "https://catalog.data.gov/api/3",
+  "docs_url": "https://catalog.data.gov/api/3",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Most catalog endpoints require no authentication. Some write or agency-specific operations may require API keys; public read access is unauthenticated."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no published request quota for catalog API",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://catalog.data.gov/api/3/action/package_search?q=climate&rows=5\"",
+    "response_snippet": "{\"help\": \"https://catalog.data.gov/api/3/action/help_show?name=package_search\", \"success\": true, \"result\": {\"count\": 12345, \"results\": [{\"id\": \"...\", \"name\": \"...\", \"title\": \"...\"}]}}"
+  },
+  "use_cases": [
+    "search federal open datasets by keyword",
+    "list datasets from a specific US agency",
+    "get metadata for a government dataset package",
+    "find downloadable resource URLs for open data files",
+    "discover climate or census datasets across agencies"
+  ],
+  "sources": [
+    "https://catalog.data.gov/api/3",
+    "https://www.data.gov/"
+  ],
+  "researcher_confidence": "medium"
+}

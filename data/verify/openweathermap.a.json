@@ -1,0 +1,52 @@
+{
+  "id": "openweathermap",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openweathermap.org/current"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openweathermap.org/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openweathermap.org/appid"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openweathermap.org/price"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openweathermap.org/price"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openweathermap.org/price"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openweathermap.org/current"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openweathermap.org/api"
+    }
+  },
+  "notes": "All claims verified against official OpenWeatherMap docs and pricing as of 2026. Free tier historically ~1000/day and ~60/min; entry hedges correctly. Base URL /data/2.5, appid auth, and example curl match current Current Weather docs."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "giantbomb",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    }
+  },
+  "notes": "Verified against official Giant Bomb API pages. Base/docs URLs are correct; 403s match bot detection, not dead endpoints. Auth is api_key (query and documented header options). Free self-serve key with 200 req/hour; no paid tiers published. CORS left as unknown. Example path/params match docs."
+}

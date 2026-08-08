@@ -1,0 +1,52 @@
+{
+  "id": "wikipedia",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_API_Usage_Guidelines"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_API_Usage_Guidelines"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "unknown (CORS support is endpoint- and origin-dependent; not a simple global \"yes\" for all MediaWiki/Wikipedia API usage)",
+      "source": "https://www.mediawiki.org/wiki/API:Cross-site_requests"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Response snippet is wrong for titles=Earth: a real query returns pageid and extract for Earth, not pages.\"-1\" with \"missing\". Also prefer formatversion=2 and a real User-Agent.",
+      "source": "https://www.mediawiki.org/wiki/API:Query"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    }
+  },
+  "notes": "Main claims (Action API at en.wikipedia.org/w/api.php, free reads, User-Agent etiquette, no fixed public quota) check out. Failures: example response is a missing-page shape for a real title; cors=\"yes\" overstates MediaWiki CORS (requires origin param / limited cross-origin)."
+}

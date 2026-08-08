@@ -1,0 +1,44 @@
+{
+  "id": "openrouter",
+  "status": "operational",
+  "name": "OpenRouter",
+  "category": "ai-ml",
+  "tagline": "Unified API gateway for 300+ language models from many providers",
+  "description": "OpenRouter provides a single OpenAI-compatible HTTP API that routes chat and completion requests across hundreds of models from many providers. Developers authenticate with an API key, select models by name, and can use provider routing, usage tracking, and optional fallbacks without integrating each model vendor separately.",
+  "base_url": "https://openrouter.ai/api/v1",
+  "docs_url": "https://openrouter.ai/docs",
+  "signup_url": "https://openrouter.ai/keys",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; self-serve signup at openrouter.ai. Optionally set HTTP-Referer and X-Title for app attribution."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free models available; paid models billed per token with account credits. Exact free allowance depends on selected free models\u2014verify current list on openrouter.ai/models.",
+    "paid_plans": "Pay-as-you-go per model token rates; credits purchased on account. Some models free; others charged by input/output tokens."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://openrouter.ai/api/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"openai/gpt-4o-mini\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"gen-...\",\"model\":\"openai/gpt-4o-mini\",\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":8}}"
+  },
+  "use_cases": [
+    "chat complete with a specific model by OpenRouter model id",
+    "list available models and pricing metadata",
+    "route LLM calls across providers with one OpenAI-compatible client",
+    "get account credits and generation usage for a request"
+  ],
+  "sources": [
+    "https://openrouter.ai/docs",
+    "https://openrouter.ai/docs/quickstart",
+    "https://openrouter.ai/docs/api-reference/overview",
+    "https://openrouter.ai/models",
+    "https://openrouter.ai/docs/api-reference/limits"
+  ],
+  "researcher_confidence": "medium"
+}

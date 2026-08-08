@@ -1,0 +1,52 @@
+{
+  "id": "wikidata",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wikidata.org/w/api.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wikidata.org/wiki/Wikidata:Data_access"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wikidata.org/wiki/Wikidata:Data_access"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wikidata.org/wiki/Wikidata:Data_access"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_API_Usage_Guidelines"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_API_Usage_Guidelines"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wikidata.org/w/api.php?action=help&modules=wbgetentities"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wikidata.org/wiki/Wikidata:Data_access"
+    }
+  },
+  "notes": "Verified against official Wikimedia/Wikidata docs. Public read access needs no key; writes use OAuth/bot password. No paid tiers. Rate limits are etiquette-based (User-Agent, concurrency) not fixed published quotas. Example wbgetentities request is valid."
+}

@@ -1,0 +1,100 @@
+{
+  "id": "google-maps",
+  "status": "operational",
+  "name": "Google Maps Platform",
+  "category": "geo-maps",
+  "tagline": "Maps, routes, places, and geocoding APIs for location-aware apps",
+  "description": "Google Maps Platform provides a suite of web services for maps, geocoding, places search, directions, distance matrix, elevation, and related geospatial data. Developers call REST endpoints under maps.googleapis.com (and related Google hosts) with an API key, and can embed interactive maps via client libraries. Billing is usage-based with monthly free credit; many products remain available under free-tier quotas that change over time.",
+  "base_url": "https://maps.googleapis.com/maps/api",
+  "docs_url": "https://developers.google.com/maps/documentation",
+  "signup_url": "https://console.cloud.google.com/google/maps-apis",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter key=YOUR_API_KEY (or X-Goog-Api-Key for some newer APIs); create key in Google Cloud Console, restrict by API and referrer/IP. OAuth optional for some server products."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Pay-as-you-go after free credit; product SKUs priced per request or per map load"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"results\":[{\"formatted_address\":\"1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA\",\"geometry\":{\"location\":{\"lat\":37.4224764,\"lng\":-122.0842499}}}],\"status\":\"OK\"}"
+  },
+  "use_cases": [
+    "geocode an address to lat/lng",
+    "reverse-geocode coordinates to an address",
+    "get driving directions between two points",
+    "search nearby places by type or text query",
+    "compute distance and travel time matrix",
+    "load static map images for a location"
+  ],
+  "sources": [
+    "https://developers.google.com/maps/documentation",
+    "https://developers.google.com/maps/documentation/geocoding/overview",
+    "https://developers.google.com/maps/billing-and-pricing/pricing"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

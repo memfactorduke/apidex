@@ -1,0 +1,43 @@
+{
+  "id": "hypixel",
+  "status": "operational",
+  "name": "Hypixel API",
+  "category": "games-comics",
+  "tagline": "Minecraft network stats for players, guilds, and SkyBlock profiles",
+  "description": "Public REST API for the Hypixel Minecraft network providing player stats, guild data, game modes, SkyBlock profiles, and server status. Developers use a free self-serve API key for authenticated requests against api.hypixel.net.",
+  "base_url": "https://api.hypixel.net",
+  "docs_url": "https://api.hypixel.net/",
+  "signup_url": "https://developer.hypixel.net/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter or API-Key header; free self-serve keys from developer.hypixel.net"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free API keys with rate limits by key type; concrete free quota numbers not published as a daily allowance",
+    "paid_plans": null
+  },
+  "rate_limits": "Personal keys typically ~120 requests/minute; higher limits for application keys \u2014 confirm current values in developer portal",
+  "example": {
+    "request": "curl -s \"https://api.hypixel.net/v2/player?uuid=YOUR_PLAYER_UUID\" -H \"API-Key: YOUR_API_KEY\"",
+    "response_snippet": "{\"success\":true,\"player\":{\"_id\":\"...\",\"uuid\":\"...\",\"displayname\":\"Notch\",\"rank\":\"...\",\"stats\":{}}}"
+  },
+  "use_cases": [
+    "look up a Hypixel player profile by UUID",
+    "fetch guild members and guild stats",
+    "get SkyBlock profile data for a player",
+    "check Hypixel network player counts and status",
+    "retrieve recent games or achievements for a player"
+  ],
+  "sources": [
+    "https://api.hypixel.net/",
+    "https://developer.hypixel.net/",
+    "https://github.com/HypixelDev/PublicAPI"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "transitland",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://transit.land/api/v2/rest",
+      "source": "https://www.transit.land/documentation/rest-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transit.land/documentation/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transit.land/documentation/rest-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transit.land/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan includes 1,000 requests/day (and related plan limits as published on pricing)",
+      "source": "https://www.transit.land/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published on pricing/plan pages (e.g. free tier request quotas); not \"not published\"",
+      "source": "https://www.transit.land/pricing/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transit.land/documentation/rest-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transit.land/documentation/"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against official sources before finalizing."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "huggingface-inference",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://router.huggingface.co/hf-inference",
+      "source": "https://huggingface.co/docs/api-inference/en/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/api-inference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/api-inference/en/getting-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/api-inference/en/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/api-inference/en/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl https://router.huggingface.co/hf-inference/models/gpt2 -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"inputs\": \"Hello world\"}'",
+      "source": "https://huggingface.co/docs/api-inference/en/getting-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/api-inference"
+    }
+  },
+  "notes": "Legacy base URL api-inference.huggingface.co is deprecated; docs now use router.huggingface.co/hf-inference. Free tier exists; rate limits depend on plan/provider and are not a single public number."
+}

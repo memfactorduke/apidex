@@ -1,0 +1,52 @@
+{
+  "id": "open-food-facts",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://world.openfoodfacts.org"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Official docs publish specific limits: product queries ~100 req/min; search ~10 req/min; facet ~2 req/min. User-Agent required. Bulk use needs coordination.",
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    }
+  },
+  "notes": "rate_limits understated: docs publish numeric caps (100/10/2 req/min by endpoint type), not only vague community guidance. Other fields match current OFF API docs."
+}

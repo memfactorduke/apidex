@@ -1,0 +1,52 @@
+{
+  "id": "guardian",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-platform.theguardian.com/documentation/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-platform.theguardian.com/documentation/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-platform.theguardian.com/documentation/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-platform.theguardian.com/access/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free developer tier is documented as 12 calls per second (not \"unknown\"); higher tiers and commercial terms are on the access page \u2014 confirm current daily caps on the developer portal if still listed there.",
+      "source": "https://open-platform.theguardian.com/access/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Public docs state free developer keys are limited to 12 calls per second; rate limits are published for the free tier (not only post-registration).",
+      "source": "https://open-platform.theguardian.com/access/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-platform.theguardian.com/documentation/search"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-platform.theguardian.com/"
+    }
+  },
+  "notes": "Adversarial check: free_tier_limits and rate_limits are wrong \u2014 Guardian publishes free-tier 12 req/s on access page; entry said limits are unpublished/unknown. base_url, docs, apiKey auth, search example, and free tier otherwise check out against open-platform.theguardian.com."
+}

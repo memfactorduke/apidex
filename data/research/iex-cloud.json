@@ -1,0 +1,41 @@
+{
+  "id": "iex-cloud",
+  "status": "operational",
+  "name": "IEX Cloud",
+  "category": "finance",
+  "tagline": "Stock market data API for quotes, fundamentals, and financial datasets",
+  "description": "IEX Cloud provides RESTful market data APIs covering equities, fundamentals, news, and related financial datasets. Developers authenticate with a publishable or secret token and call versioned HTTP endpoints for real-time and historical data. Pricing is usage-based with published free and paid tiers.",
+  "base_url": "https://cloud.iexapis.com/stable",
+  "docs_url": "https://iexcloud.io/docs/",
+  "signup_url": "https://iexcloud.io/console/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token as query parameter token=YOUR_API_KEY (or Authorization header). Self-serve signup for publishable and secret tokens."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://cloud.iexapis.com/stable/stock/AAPL/quote?token=YOUR_API_KEY\"",
+    "response_snippet": "{\"symbol\":\"AAPL\",\"companyName\":\"Apple Inc\",\"latestPrice\":190.5,\"change\":1.2,\"changePercent\":0.0063,\"marketCap\":3000000000000}"
+  },
+  "use_cases": [
+    "get real-time stock quote for a ticker",
+    "fetch company fundamentals and key stats",
+    "pull historical daily prices for a symbol",
+    "get latest market news for a stock"
+  ],
+  "sources": [
+    "https://iexcloud.io/",
+    "https://iexcloud.io/docs/"
+  ],
+  "researcher_confidence": "low"
+}

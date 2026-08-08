@@ -1,0 +1,52 @@
+{
+  "id": "serpapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://serpapi.com/search-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://serpapi.com/search-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://serpapi.com/search-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://serpapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 free searches/month for new users (or as listed on current pricing); throughput/hour may differ from 50 \u2014 verify current Free plan on https://serpapi.com/pricing",
+      "source": "https://serpapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 1,000 searches/hour (not 50/hour). Plan throughput is documented per plan on pricing; free tier is not 50 throughput/hour.",
+      "source": "https://serpapi.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://serpapi.com/search-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://serpapi.com/"
+    }
+  },
+  "notes": "Pricing and free-tier numbers need live verification; entry's 250/mo and 50/hr free limits appear outdated vs current official pricing."
+}

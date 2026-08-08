@@ -1,0 +1,52 @@
+{
+  "id": "currents-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "600 req/day free (Basic plan)",
+      "source": "https://currentsapi.services/en/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/pricing/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/"
+    }
+  },
+  "notes": "Entry is mostly accurate. Free tier limit of 600 req/day is correct but plan name is Starter in entry vs Basic on pricing page (minor). Auth supports apiKey query param. CORS unknown is appropriate. No shutdown notices found. API appears operational."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "open-brewery-db",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openbrewerydb.org/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openbrewerydb.org/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openbrewerydb.org/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openbrewerydb.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openbrewerydb.org/documentation"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "120 requests per minute (per IP); rate limit headers returned",
+      "source": "https://www.openbrewerydb.org/documentation"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openbrewerydb.org/documentation"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openbrewerydb.org/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openbrewerydb.org/"
+    }
+  },
+  "notes": "Rate limits are published (120 req/min), not \"not published\". Other fields match current docs/API."
+}

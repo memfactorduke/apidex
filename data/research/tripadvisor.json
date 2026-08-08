@@ -1,0 +1,41 @@
+{
+  "id": "tripadvisor",
+  "status": "operational",
+  "name": "TripAdvisor Content API",
+  "category": "food-drink",
+  "tagline": "Search and retrieve hotel, restaurant, and attraction content from TripAdvisor.",
+  "description": "TripAdvisor Content API provides programmatic access to location data, reviews, photos, and details for hotels, restaurants, and attractions. Developers can search locations, fetch ratings, and pull structured content for travel and hospitality apps.",
+  "base_url": "https://api.content.tripadvisor.com/api/v1",
+  "docs_url": "https://developer-tripadvisor.com/content-api/",
+  "signup_url": "https://developer-tripadvisor.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter; partner access required through TripAdvisor developer portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Contact TripAdvisor for partner pricing; not publicly listed."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.content.tripadvisor.com/api/v1/location/search?key=YOUR_API_KEY&searchQuery=Paris&category=restaurants&language=en\"",
+    "response_snippet": "{\"data\":[{\"location_id\":\"187147\",\"name\":\"Paris\",\"address_obj\":{\"city\":\"Paris\",\"country\":\"France\"}}]}"
+  },
+  "use_cases": [
+    "search restaurants near a city or address",
+    "get hotel details and ratings by location id",
+    "fetch attraction photos and reviews for a destination",
+    "lookup location details for travel itinerary apps"
+  ],
+  "sources": [
+    "https://developer-tripadvisor.com/content-api/",
+    "https://tripadvisor-content-api.readme.io/"
+  ],
+  "researcher_confidence": "low"
+}

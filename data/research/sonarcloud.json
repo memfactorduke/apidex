@@ -1,0 +1,44 @@
+{
+  "id": "sonarcloud",
+  "status": "operational",
+  "name": "SonarCloud",
+  "category": "dev-tools",
+  "tagline": "Cloud code quality and security analysis for CI and pull requests",
+  "description": "SonarCloud is a SaaS static analysis platform from SonarSource for continuous inspection of code quality and security. Its REST API exposes projects, measures, issues, quality gates, and analysis status so teams can automate reporting, gate checks, and dashboards in CI/CD.",
+  "base_url": "https://sonarcloud.io/api",
+  "docs_url": "https://sonarcloud.io/web_api",
+  "signup_url": "https://sonarcloud.io/sessions/new",
+  "auth": {
+    "type": "other",
+    "details": "User token via HTTP Basic: token as username, empty password (Authorization: Basic base64(token:)). Generate tokens under My Account \u2192 Security."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan for public open-source projects; private projects require paid plan (limits not expressed as API request quotas)",
+    "paid_plans": "Paid plans for private code analysis (Team/Enterprise-style); see sonarcloud.io/pricing \u2014 priced mainly by lines of code analyzed, not API calls"
+  },
+  "rate_limits": "not published (standard web API; no public per-endpoint RPS table found)",
+  "example": {
+    "request": "curl -u YOUR_API_KEY: \"https://sonarcloud.io/api/projects/search?ps=3\"",
+    "response_snippet": "{\"paging\":{\"pageIndex\":1,\"pageSize\":3,\"total\":12},\"components\":[{\"key\":\"org_example-project\",\"name\":\"example-project\",\"qualifier\":\"TRK\",\"visibility\":\"public\"}]}"
+  },
+  "use_cases": [
+    "list SonarCloud projects for an organization",
+    "fetch quality gate status for a project analysis",
+    "get code coverage or maintainability measures for a component",
+    "search open issues (bugs, vulnerabilities, code smells) by project",
+    "check latest analysis status before merging a PR"
+  ],
+  "sources": [
+    "https://sonarcloud.io/web_api",
+    "https://docs.sonarsource.com/sonarqube-cloud/",
+    "https://sonarcloud.io/pricing",
+    "https://docs.sonarsource.com/sonarqube-cloud/advanced-setup/web-api/"
+  ],
+  "researcher_confidence": "medium"
+}

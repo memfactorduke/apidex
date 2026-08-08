@@ -1,0 +1,41 @@
+{
+  "id": "dune-analytics",
+  "status": "operational",
+  "name": "Dune Analytics",
+  "category": "crypto",
+  "tagline": "SQL-powered blockchain analytics API for querying on-chain data",
+  "description": "Dune Analytics provides a REST API for executing SQL queries against blockchain data, retrieving results, managing queries, and accessing pre-built dashboards and tables. Developers use API keys to run queries programmatically, poll for results, and integrate on-chain analytics into apps and data pipelines.",
+  "base_url": "https://api.dune.com/api/v1",
+  "docs_url": "https://docs.dune.com/api-reference/overview/introduction",
+  "signup_url": "https://dune.com/settings/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Dune-Api-Key header (self-serve from account settings)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"X-Dune-Api-Key: YOUR_API_KEY\" \"https://api.dune.com/api/v1/query/1215383/results\"",
+    "response_snippet": "{\"execution_id\":\"...\",\"query_id\":1215383,\"state\":\"QUERY_STATE_COMPLETED\",\"result\":{\"rows\":[...],\"metadata\":{...}}}"
+  },
+  "use_cases": [
+    "run a saved Dune SQL query and fetch results",
+    "poll query execution status by execution id",
+    "list or search public blockchain analytics queries",
+    "export on-chain metrics into a data pipeline",
+    "check credits or API usage for a Dune account"
+  ],
+  "sources": [
+    "https://docs.dune.com"
+  ],
+  "researcher_confidence": "low"
+}

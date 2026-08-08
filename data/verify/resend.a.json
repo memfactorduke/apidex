@@ -1,0 +1,52 @@
+{
+  "id": "resend",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/docs/api-reference/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/docs/api-reference/introduction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 3,000 emails/month, 100 emails/day; 1 custom domain; limited features vs Pro.",
+      "source": "https://resend.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Documented: 2 requests/second default for most endpoints; higher on some plans; email sending has separate daily/monthly quotas. See https://resend.com/docs/api-reference/rate-limit",
+      "source": "https://resend.com/docs/api-reference/rate-limit"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/docs/api-reference/emails/send-email"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com"
+    }
+  },
+  "notes": "Free tier and rate limits are published; entry left them as unknown/not published. Base URL, auth Bearer API key, send-email example, and docs URL match official docs."
+}

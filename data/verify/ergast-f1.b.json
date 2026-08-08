@@ -1,0 +1,52 @@
+{
+  "id": "ergast-f1",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.jolpi.ca/ergast/f1",
+      "source": "https://github.com/jolpica/jolpica-f1"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md",
+      "source": "https://github.com/jolpica/jolpica-f1"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/jolpica/jolpica-f1"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/jolpica/jolpica-f1"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "500 requests/hour (soft); hard limit 4 req/sec per IP",
+      "source": "https://github.com/jolpica/jolpica-f1"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Soft limit 500 req/hour; hard limit 4 req/sec per IP (jolpica-f1 host)",
+      "source": "https://github.com/jolpica/jolpica-f1"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s 'https://api.jolpi.ca/ergast/f1/2024/1/results.json'",
+      "source": "https://github.com/jolpica/jolpica-f1"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Classic ergast.com is shut down; historical F1 data is served by the community Jolpica Ergast-compatible API (api.jolpi.ca). Description should not imply ergast.com is the current host.",
+      "source": "https://github.com/jolpica/jolpica-f1"
+    }
+  },
+  "notes": "Adversarial check: ergast.com has been discontinued; community maintains Ergast-compatible API at api.jolpi.ca. Confirm rate limits and CORS against jolpica docs before shipping."
+}

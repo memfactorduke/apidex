@@ -1,0 +1,44 @@
+{
+  "id": "amazon-paapi",
+  "status": "operational",
+  "name": "Amazon Product Advertising API",
+  "category": "ecommerce-payments",
+  "tagline": "Amazon product catalog search, pricing, and affiliate links via Product Advertising API 5.0",
+  "description": "Amazon Product Advertising API (PA-API 5.0) lets registered Associates search Amazon's product catalog, retrieve item details, offers, images, and browse nodes, and generate affiliate-tracked links. Access requires an Amazon Associates account that meets program eligibility rules and approved API credentials. Requests use AWS Signature Version 4 over HTTPS to regional endpoints.",
+  "base_url": "https://webservices.amazon.com/paapi5",
+  "docs_url": "https://webservices.amazon.com/paapi5/documentation/",
+  "signup_url": "https://affiliate-program.amazon.com/",
+  "auth": {
+    "type": "other",
+    "details": "AWS Signature Version 4 with Access Key and Secret Key from Associates Central; also requires Partner Tag (Store ID). Not a simple API key header."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No usage fees; access gated by Associates account status and performance (e.g. qualifying sales). Rate/throughput limits apply; exact free request quotas not a classic freemium tier.",
+    "paid_plans": "No paid API plans; monetized via Associates referral commissions, not per-request API billing."
+  },
+  "rate_limits": "Account-based; starts low and scales with revenue (commonly cited: 1 TPD initially, increases with shipped-item revenue). Exact current formula in official docs / account dashboard.",
+  "example": {
+    "request": "curl -X POST 'https://webservices.amazon.com/paapi5/searchitems' -H 'Content-Type: application/json; charset=utf-8' -H 'X-Amz-Target: com.amazon.paapi5.v1.ProductAdvertisingAPIv1.SearchItems' -H 'Content-Encoding: amz-1.0' --aws-sigv4 'aws:amz:us-east-1:ProductAdvertisingAPI' --user 'YOUR_ACCESS_KEY:YOUR_SECRET_KEY' -d '{\"PartnerTag\":\"YOUR_PARTNER_TAG\",\"PartnerType\":\"Associates\",\"Keywords\":\" mechan\",\"SearchIndex\":\"All\",\"ItemCount\":1,\"Resources\":[\"ItemInfo.Title\",\"Offers.Listings.Price\"]}'",
+    "response_snippet": "{\"SearchResult\":{\"Items\":[{\"ASIN\":\"B08N5WRWNW\",\"DetailPageURL\":\"https://www.amazon.com/dp/B08N5WRWNW?tag=YOUR_PARTNER_TAG\",\"ItemInfo\":{\"Title\":{\"DisplayValue\":\"Example Product\"}},\"Offers\":{\"Listings\":[{\"Price\":{\"DisplayAmount\":\"$29.99\",\"Amount\":29.99,\"Currency\":\"USD\"}}]}}],\"TotalResultCount\":1}}"
+  },
+  "use_cases": [
+    "search Amazon products by keyword and get ASINs",
+    "get product title, price, and image for an ASIN",
+    "build affiliate product links with partner tag",
+    "compare offers or check availability for a product",
+    "browse category nodes for product discovery"
+  ],
+  "sources": [
+    "https://webservices.amazon.com/paapi5/documentation/",
+    "https://webservices.amazon.com/paapi5/documentation/register-for-pa-api.html",
+    "https://webservices.amazon.com/paapi5/documentation/troubleshooting/api-rates.html",
+    "https://affiliate-program.amazon.com/"
+  ],
+  "researcher_confidence": "medium"
+}

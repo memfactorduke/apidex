@@ -1,0 +1,43 @@
+{
+  "id": "reddit",
+  "status": "operational",
+  "name": "Reddit API",
+  "category": "news-media",
+  "tagline": "Read and post Reddit content via OAuth2",
+  "description": "Official Reddit API for reading posts, comments, subreddits, and user data, plus posting and moderation with OAuth2. Supports public read endpoints and authenticated write actions for apps and bots.",
+  "base_url": "https://oauth.reddit.com",
+  "docs_url": "https://www.reddit.com/dev/api",
+  "signup_url": "https://www.reddit.com/prefs/apps",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth2 (script/web/installed app). Client credentials via https://www.reddit.com/api/v1/access_token; user token for most reads/writes. User-Agent required."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial; commercial requires approval and paid terms",
+    "paid_plans": "Commercial use requires Reddit approval and commercial API terms"
+  },
+  "rate_limits": "Roughly 60\u2013100 req/min per OAuth client (varies by endpoint); User-Agent required",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"User-Agent: YOUR_APP/1.0\" \"https://oauth.reddit.com/r/programming/hot?limit=5\"",
+    "response_snippet": "{\"kind\":\"Listing\",\"data\":{\"children\":[{\"kind\":\"t3\",\"data\":{\"title\":\"...\",\"author\":\"...\",\"score\":123,\"url\":\"...\"}}]}}"
+  },
+  "use_cases": [
+    "fetch hot posts from a subreddit",
+    "search Reddit for a topic",
+    "get comments on a post",
+    "post a comment as an authenticated bot",
+    "list a user's recent submissions"
+  ],
+  "sources": [
+    "https://www.reddit.com/dev/api",
+    "https://github.com/reddit-archive/reddit/wiki/API",
+    "https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki"
+  ],
+  "researcher_confidence": "medium"
+}

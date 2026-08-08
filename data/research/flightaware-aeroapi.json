@@ -1,0 +1,40 @@
+{
+  "id": "flightaware-aeroapi",
+  "status": "operational",
+  "name": "FlightAware AeroAPI",
+  "category": "transportation",
+  "tagline": "Industry-standard flight tracking and historical flight data API.",
+  "description": "FlightAware AeroAPI provides real-time and historical flight tracking, airport information, flight status, and related aviation data used by developers and aviation applications worldwide.",
+  "base_url": "https://aeroapi.flightaware.com/aeroapi",
+  "docs_url": "https://www.flightaware.com/aeroapi/portal/documentation",
+  "signup_url": "https://www.flightaware.com/aeroapi/portal/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-apikey header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"x-apikey: YOUR_API_KEY\" \"https://aeroapi.flightaware.com/aeroapi/flights/AAL100\"",
+    "response_snippet": "{ \"flights\": [ { \"ident\": \"AAL100\", \"origin\": { \"code\": \"KJFK\" }, \"destination\": { \"code\": \"EGLL\" } } ] }"
+  },
+  "use_cases": [
+    "get live status of a flight by ident",
+    "look up arrivals and departures at an airport",
+    "retrieve historical flight tracks",
+    "get airport information and delays"
+  ],
+  "sources": [
+    "https://www.flightaware.com/"
+  ],
+  "researcher_confidence": "low"
+}

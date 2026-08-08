@@ -1,0 +1,41 @@
+{
+  "id": "apify",
+  "status": "operational",
+  "name": "Apify",
+  "category": "data-analytics",
+  "tagline": "Cloud platform for web scraping and automation Actors",
+  "description": "Apify is a cloud platform for running web scraping and automation Actors. It provides REST APIs to start runs, store datasets, manage key-value stores, and integrate scrapers into applications.",
+  "base_url": "https://api.apify.com/v2",
+  "docs_url": "https://docs.apify.com/api/v2",
+  "signup_url": "https://console.apify.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via Authorization: Bearer YOUR_API_TOKEN or token query parameter; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.apify.com/v2/users/me\"",
+    "response_snippet": "{\"data\":{\"id\":\"...\",\"username\":\"...\"}}"
+  },
+  "use_cases": [
+    "run a web scraper Actor",
+    "fetch scraped dataset items",
+    "monitor Actor run status",
+    "store key-value results from scrapers"
+  ],
+  "sources": [
+    "https://docs.apify.com/api/v2",
+    "https://apify.com"
+  ],
+  "researcher_confidence": "low"
+}

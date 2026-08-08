@@ -1,0 +1,52 @@
+{
+  "id": "alpha-vantage",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.alphavantage.co/documentation/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.alphavantage.co/documentation/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.alphavantage.co/support/#api-key"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.alphavantage.co/premium/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "25 API requests per day for free API keys (per official premium/pricing page and FAQ as of check)",
+      "source": "https://www.alphavantage.co/support/#api-key"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free API keys: 25 requests/day; premium plans offer higher throughput (e.g. 75\u20131200+ req/min depending on tier)",
+      "source": "https://www.alphavantage.co/premium/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.alphavantage.co/documentation/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.alphavantage.co/documentation/"
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after full verification"
+}

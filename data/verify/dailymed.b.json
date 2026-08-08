@@ -1,0 +1,52 @@
+{
+  "id": "dailymed",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm",
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No formal free-tier quota published; service is free with no authentication. Practical limits: avoid simultaneous/parallel requests; large result sets should use pagination (page/pagesize) rather than unbounded dumps.",
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No numeric rate limit published. Official guidance: do not send simultaneous (parallel) requests; prefer sequential requests and pagination for large queries.",
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=aspirin\"",
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    }
+  },
+  "notes": "Placeholder entry with low confidence; base domain and no-auth free access hold, but docs_url, example curl, and unknown limits need correction from official web-services page. REST v2 under /dailymed/services/v2/; JSON+XML supported."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "brave-search",
+  "status": "operational",
+  "name": "Brave Search",
+  "category": "data-analytics",
+  "tagline": "Independent web search API for privacy-focused results, news, images, videos, and AI answers.",
+  "description": "Brave Search API provides independent web search results, news, images, videos, and AI-powered answers without relying on Google or Bing indexes. Developers use it for search-powered applications, RAG pipelines, research tools, and content discovery with privacy-first defaults. The API is served from api.search.brave.com with API-key authentication and documented free and paid usage tiers.",
+  "base_url": "https://api.search.brave.com/res/v1",
+  "docs_url": "https://api-dashboard.search.brave.com/app/documentation/web-search/get-started",
+  "signup_url": "https://api-dashboard.search.brave.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Subscription-Token header; self-serve signup at Brave Search API dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.search.brave.com/res/v1/web/search?q=brave+search+api\" -H \"Accept: application/json\" -H \"X-Subscription-Token: YOUR_API_KEY\"",
+    "response_snippet": "{\"type\":\"search\",\"query\":{\"original\":\"brave search api\"},\"web\":{\"results\":[{\"title\":\"Brave Search\",\"url\":\"https://search.brave.com/\",\"description\":\"...\"}]}}"
+  },
+  "use_cases": [
+    "run independent web search for a query",
+    "fetch recent news articles for a topic",
+    "search images or videos for a term",
+    "power RAG retrieval with live web results",
+    "build a privacy-focused search feature in an app"
+  ],
+  "sources": [
+    "https://api-dashboard.search.brave.com/app/documentation/web-search/get-started",
+    "https://brave.com/search/api/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

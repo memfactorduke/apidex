@@ -1,0 +1,52 @@
+{
+  "id": "gitlab",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/api/rest/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.gitlab.com/api/ (docs.gitlab.com/ee/api/ redirects; current REST/GraphQL docs live under /api/)",
+      "source": "https://docs.gitlab.com/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/api/rest/authentication.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://about.gitlab.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://about.gitlab.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/security/rate_limits.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/api/projects.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/api/"
+    }
+  },
+  "notes": "docs_url path /ee/api/ is outdated vs current /api/; other claims match official GitLab REST v4, auth, Free plan, and rate-limit docs."
+}

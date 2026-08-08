@@ -1,0 +1,52 @@
+{
+  "id": "twelve-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "8 API credits/minute, 800 API credits/day (Basic free plan); endpoints consume 1+ credits depending on complexity",
+      "source": "https://twelvedata.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 8 credits/min; paid tiers scale (e.g. Grow 55/min, Pro 610/min, Ultra 1440/min) \u2014 published on pricing page",
+      "source": "https://twelvedata.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs/reference/price"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs"
+    }
+  },
+  "notes": "Rate limits and free-tier limits are published on pricing (not \"unknown\"/\"not published\"). Auth, base URL, docs, free tier, and /price example match official docs."
+}

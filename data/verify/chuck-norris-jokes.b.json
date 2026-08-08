@@ -1,0 +1,52 @@
+{
+  "id": "chuck-norris-jokes",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.chucknorris.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.chucknorris.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.chucknorris.io/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.chucknorris.io/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.chucknorris.io/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.chucknorris.io/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://api.chucknorris.io/jokes/random"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.chucknorris.io/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.chucknorris.io/"
+    }
+  },
+  "notes": "API is live (2026-08-08). Endpoints /jokes/random, /jokes/categories, /jokes/search work; no auth. Free forever; no published rate caps. cors=\"unknown\" is wrong\u2014live responses send Access-Control-Allow-Origin: *. Example curl path is correct."
+}

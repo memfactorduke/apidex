@@ -1,0 +1,52 @@
+{
+  "id": "wiktionary",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wiktionary.org/w/api.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Cross-site_requests"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The example response_snippet shows title \"dictionary\" as missing; English Wiktionary uses capitalized page titles (e.g. Dictionary). A working extract query should use an existing lemma title. Request shape (action=query&prop=extracts&format=json) is valid MediaWiki API usage.",
+      "source": "https://en.wiktionary.org/w/api.php"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    }
+  },
+  "notes": "Placeholder - will replace after verification"
+}

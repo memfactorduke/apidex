@@ -1,0 +1,99 @@
+{
+  "id": "accuweather",
+  "status": "operational",
+  "name": "AccuWeather",
+  "category": "weather-environment",
+  "tagline": "Enterprise-grade forecasts, severe weather alerts, and lifestyle indices via API",
+  "description": "AccuWeather provides enterprise-grade weather data APIs including current conditions, forecasts, severe weather alerts, location services, and lifestyle indices. Developers can obtain free limited API keys for evaluation; production use typically requires a paid plan with higher call volumes and commercial licensing.",
+  "base_url": "https://dataservice.accuweather.com",
+  "docs_url": "https://developer.accuweather.com/apis",
+  "signup_url": "https://developer.accuweather.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key passed as apikey query parameter on every request; self-serve signup at developer.accuweather.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Limited free developer key (historically ~50 calls/day on Standard trial; confirm current limits at signup)",
+    "paid_plans": "Contact sales for commercial/enterprise packages with higher volume"
+  },
+  "rate_limits": "Varies by subscription tier; free/trial keys are heavily limited (see portal after signup)",
+  "example": {
+    "request": "curl \"https://dataservice.accuweather.com/currentconditions/v1/349727?apikey=YOUR_API_KEY\"",
+    "response_snippet": "[{\"LocalObservationDateTime\":\"2024-01-15T14:30:00-05:00\",\"WeatherText\":\"Partly cloudy\",\"Temperature\":{\"Metric\":{\"Value\":12.8,\"Unit\":\"C\"},\"Imperial\":{\"Value\":55.0,\"Unit\":\"F\"}}}]"
+  },
+  "use_cases": [
+    "get current weather conditions for a city by location key",
+    "look up location key from city name or geocoordinates",
+    "get multi-day daily forecasts for a location",
+    "retrieve severe weather alerts for a region",
+    "fetch hourly forecasts for short-term planning"
+  ],
+  "sources": [
+    "https://developer.accuweather.com/",
+    "https://developer.accuweather.com/apis",
+    "https://developer.accuweather.com/packages"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

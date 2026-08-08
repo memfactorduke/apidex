@@ -1,0 +1,52 @@
+{
+  "id": "here",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "HERE Free plan includes limited monthly transactions (commonly cited as ~250k free transactions/month for Location Services; verify current plan at platform.here.com \u2014 exact free quotas vary by service and plan edition).",
+      "source": "https://www.here.com/get-started/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits/QPS are plan-dependent and documented/enforced via HERE platform plans (not literally unpublished); check platform plan details and service-specific limits.",
+      "source": "https://www.here.com/get-started/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Need live official verification \u2014 provisional structure only; will re-check docs."
+}

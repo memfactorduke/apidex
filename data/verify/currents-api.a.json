@@ -1,0 +1,52 @@
+{
+  "id": "currents-api",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "600 requests/day on free Starter plan (confirm exact wording from pricing)",
+      "source": "https://currentsapi.services/en/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://currentsapi.services/en/docs/"
+    }
+  },
+  "notes": "I need to actually verify against live docs - let me fetch the official pages now."
+}

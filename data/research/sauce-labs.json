@@ -1,0 +1,42 @@
+{
+  "id": "sauce-labs",
+  "status": "operational",
+  "name": "Sauce Labs API",
+  "category": "dev-tools",
+  "tagline": "Cloud testing platform REST API for automated browser and mobile app tests",
+  "description": "Sauce Labs provides REST APIs for managing automated browser, mobile, and visual tests on a cloud grid. Developers use it to launch sessions, query jobs, manage assets, and integrate CI pipelines with Sauce Labs infrastructure.",
+  "base_url": "https://api.us-west-1.saucelabs.com",
+  "docs_url": "https://docs.saucelabs.com/dev/api/",
+  "signup_url": "https://accounts.saucelabs.com/am/XUI/?realm=/alpha#login/",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with Sauce Labs username and access key (username:access_key). Access key available from User Settings after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free trial available; concrete free-tier API request limits not clearly published as a permanent free plan",
+    "paid_plans": "Usage-based and subscription plans for Live, Automated, Mobile, Visual, and Error Reporting products"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_USERNAME:YOUR_ACCESS_KEY https://api.us-west-1.saucelabs.com/rest/v1/YOUR_USERNAME/jobs?limit=5",
+    "response_snippet": "[{\"id\":\"...\",\"name\":\"...\",\"status\":\"complete\",\"passed\":true,\"browser\":\"chrome\",\"os\":\"Windows 10\"}]"
+  },
+  "use_cases": [
+    "list recent Sauce Labs test jobs for a user",
+    "get status and metadata for a specific test job",
+    "download job assets like screenshots or videos",
+    "start or manage automated browser test sessions via WebDriver",
+    "query account concurrency and usage for CI capacity planning"
+  ],
+  "sources": [
+    "https://docs.saucelabs.com/dev/api/",
+    "https://saucelabs.com/pricing"
+  ],
+  "researcher_confidence": "low"
+}

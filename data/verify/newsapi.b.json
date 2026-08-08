@@ -1,0 +1,52 @@
+{
+  "id": "newsapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.org/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.org/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.org/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.org/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Developer: 100 req/day, development/testing only (not for production); articles delayed ~24h; CORS restricted; limited search window (last month only on free tier for /everything)",
+      "source": "https://newsapi.org/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.org/pricing"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "no",
+      "source": "https://newsapi.org/pricing"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.org/docs/endpoints/top-headlines"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.org/docs"
+    }
+  },
+  "notes": "Placeholder - need real verification"
+}

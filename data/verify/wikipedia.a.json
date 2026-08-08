@@ -1,0 +1,52 @@
+{
+  "id": "wikipedia",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_API_Usage_Guidelines"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_API_Usage_Guidelines"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Cross-site_requests"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The curl request is valid, but the response_snippet shows a missing page (\"missing\":\"\") for titles=Earth, which is wrong \u2014 Earth exists. A real extracts query returns pageid and extract text, not missing.",
+      "source": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro=1&explaintext=1&titles=Earth&format=json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    }
+  },
+  "notes": "Example request is correct; only the sample response is fabricated/wrong (missing page for Earth). All other claims match official MediaWiki/Wikimedia docs."
+}

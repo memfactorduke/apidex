@@ -1,0 +1,52 @@
+{
+  "id": "osv-dev",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://google.github.io/osv.dev/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://google.github.io/osv.dev/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://google.github.io/osv.dev/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://osv.dev/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Fully free; no documented fixed 1000 req/hour quota \u2014 docs describe rate limiting and ask high-volume users to contact osv-discuss@google.com rather than a published unauthenticated ceiling",
+      "source": "https://google.github.io/osv.dev/faq/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limited (exact numbers not publicly documented as 1000/hour); contact osv-discuss@google.com for higher/sustained use",
+      "source": "https://google.github.io/osv.dev/faq/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://google.github.io/osv.dev/api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Remove or soften the claim of published rate limits of 1000/hour; API is free and unauthenticated but fixed public numeric limits are not documented that way",
+      "source": "https://google.github.io/osv.dev/faq/"
+    }
+  },
+  "notes": "Main failure is invented/outdated rate-limit numbers (1000/hour). Base URL, docs, auth=none, free tier, and query example match official OSV docs. CORS not documented. API appears operational."
+}

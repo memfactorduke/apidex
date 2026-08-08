@@ -1,0 +1,52 @@
+{
+  "id": "coinmarketcap",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://coinmarketcap.com/api/documentation/v1/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://coinmarketcap.com/api/documentation/v1/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://coinmarketcap.com/api/documentation/v1/#section/Authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://coinmarketcap.com/api/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Basic plan is free (no monthly fee); monthly credit allotment is plan-specific on the current pricing page (historically often ~10k credits for Basic \u2014 verify live pricing, as tiers and numbers change)",
+      "source": "https://coinmarketcap.com/api/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://coinmarketcap.com/api/documentation/v1/#section/Error-Codes"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyQuotesLatest"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://coinmarketcap.com/api/"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live official docs before finalizing."
+}

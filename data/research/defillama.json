@@ -1,0 +1,38 @@
+{
+  "id": "defillama",
+  "status": "operational",
+  "name": "DefiLlama",
+  "category": "crypto",
+  "tagline": "Open DeFi TVL, fees, and protocol analytics API",
+  "description": "DefiLlama provides free public APIs for DeFi TVL, yields, fees, bridges, stablecoins, coins, and protocol analytics across chains.",
+  "base_url": "https://api.llama.fi",
+  "docs_url": "https://defillama.com/docs/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public free endpoints require no auth; some pro endpoints may use API keys."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.llama.fi/protocols",
+    "response_snippet": "[]"
+  },
+  "use_cases": [
+    "list DeFi protocols by TVL",
+    "get TVL history for a protocol"
+  ],
+  "sources": [
+    "https://defillama.com"
+  ],
+  "researcher_confidence": "low"
+}

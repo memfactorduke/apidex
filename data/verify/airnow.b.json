@@ -1,0 +1,52 @@
+{
+  "id": "airnow",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.airnowapi.org"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.airnowapi.org"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.airnowapi.org"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.airnowapi.org"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for non-commercial use after registration; commercial use may require agreement. Do not state a specific hourly quota without account/docs confirmation \u2014 the commonly cited 500 req/hr is not clearly documented as an official free-tier limit on public docs.",
+      "source": "https://docs.airnowapi.org"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are not publicly documented as a fixed 500 requests per hour per API key on official docs; verify in account settings or contact AirNow. Treat 500/hr as unconfirmed folklore.",
+      "source": "https://docs.airnowapi.org"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.airnowapi.org"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.airnowapi.org"
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after full verification against official sources."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ipinfo",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers#authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/pricing"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers"
+    }
+  },
+  "notes": "Verified against official IPinfo docs and pricing. Base URL, auth (token query or Bearer), free tier ~50k/month, example curl, and description all match current official sources. CORS remains unknown as stated."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "clinicaltrials-gov",
+  "status": "operational",
+  "name": "ClinicalTrials.gov API",
+  "category": "government-open-data",
+  "tagline": "US government registry API for clinical study listings and results",
+  "description": "Official ClinicalTrials.gov REST API for searching and retrieving US clinical trial registry records, study protocols, eligibility criteria, locations, and posted results. Supports structured queries, field selection, and paging without requiring authentication.",
+  "base_url": "https://clinicaltrials.gov/api/v2",
+  "docs_url": "https://clinicaltrials.gov/data-api/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or OAuth required. Public HTTP GET endpoints; no signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no paid plans. Rate limits apply (see rate_limits).",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://clinicaltrials.gov/api/v2/studies?query.cond=diabetes&pageSize=1&format=json'",
+    "response_snippet": "{\"studies\":[{\"protocolSection\":{\"identificationModule\":{\"nctId\":\"NCT...\",\"briefTitle\":\"...\"}}}],\"nextPageToken\":\"...\"}"
+  },
+  "use_cases": [
+    "search clinical trials by condition or intervention",
+    "fetch a study record by NCT ID",
+    "list trial locations and contacts for a study",
+    "retrieve posted study results and outcome measures",
+    "filter open recruiting trials by location or phase"
+  ],
+  "sources": [
+    "https://clinicaltrials.gov/data-api/api",
+    "https://clinicaltrials.gov/"
+  ],
+  "researcher_confidence": "medium"
+}

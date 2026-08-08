@@ -1,0 +1,52 @@
+{
+  "id": "npm",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://registry.npmjs.org"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.npmjs.com/cli/v10/using-npm/registry"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md"
+    }
+  },
+  "notes": "Verified against npm registry docs and live registry.npmjs.org; public GETs need no auth, no commercial API product/fixed quotas found."
+}

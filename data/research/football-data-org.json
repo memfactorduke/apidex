@@ -1,0 +1,43 @@
+{
+  "id": "football-data-org",
+  "status": "operational",
+  "name": "Football-Data.org",
+  "category": "sports",
+  "tagline": "European football fixtures, results, and standings via a free-tier REST API",
+  "description": "Football-Data.org provides REST access to European football competitions, match fixtures and results, team data, and league tables. Developers use a free API key with published request caps; higher tiers unlock more competitions and higher limits. Coverage focuses on major European leagues and UEFA competitions rather than global sports data.",
+  "base_url": "https://api.football-data.org/v4",
+  "docs_url": "https://docs.football-data.org/",
+  "signup_url": "https://www.football-data.org/client/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Auth-Token header after self-serve registration on football-data.org"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier with request rate limits and limited competition access; exact 2026 caps confirmed on pricing/docs pages",
+    "paid_plans": "Paid plans expand competitions and rate limits"
+  },
+  "rate_limits": "Published on free vs paid tiers; confirm exact numbers from official pricing",
+  "example": {
+    "request": "curl -H \"X-Auth-Token: YOUR_API_KEY\" https://api.football-data.org/v4/competitions/PL/standings",
+    "response_snippet": "{ \"filters\": {}, \"area\": { \"id\": 2072, \"name\": \"England\" }, \"competition\": { \"id\": 2021, \"name\": \"Premier League\", \"code\": \"PL\" }, \"standings\": [ { \"stage\": \"REGULAR_SEASON\", \"type\": \"TOTAL\", \"table\": [ { \"position\": 1, \"team\": { \"id\": 57, \"name\": \"Arsenal FC\" }, \"playedGames\": 10, \"points\": 24 } ] } ] }"
+  },
+  "use_cases": [
+    "get Premier League standings table",
+    "list today's fixtures for a competition",
+    "fetch match results for a team",
+    "look up competition schedule by season",
+    "get squad/roster for a club"
+  ],
+  "sources": [
+    "https://www.football-data.org/",
+    "https://docs.football-data.org/",
+    "https://www.football-data.org/coverage"
+  ],
+  "researcher_confidence": "medium"
+}

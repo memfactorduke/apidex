@@ -1,0 +1,48 @@
+{
+  "id": "ensembl",
+  "status": "operational",
+  "name": "Ensembl REST API",
+  "category": "science-space",
+  "tagline": "Genome annotation and comparative genomics REST API from EMBL-EBI",
+  "description": "Ensembl's public REST API provides programmatic access to genome annotation, gene models, sequence, variation, homology, and comparative genomics data across vertebrate and model organism assemblies. It is the standard HTTP interface for querying Ensembl databases without bulk FTP downloads.",
+  "base_url": "https://rest.ensembl.org",
+  "docs_url": "https://rest.ensembl.org/documentation",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or OAuth required for the public REST service; requests are unauthenticated over HTTPS. Optional User-Agent identification is recommended by EMBL-EBI for fair-use tracking."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "text",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public service; no paid plans. Subject to published rate limits and fair-use policy.",
+    "paid_plans": null
+  },
+  "rate_limits": "15 requests/second per IP (global rate limit); 5500 requests/hour recommended maximum; bulk/download use discouraged via REST\u2014use FTP or Perl/Python APIs for large jobs.",
+  "example": {
+    "request": "curl -s 'https://rest.ensembl.org/lookup/symbol/homo_sapiens/BRCA2?content-type=application/json'",
+    "response_snippet": "{\"id\":\"ENSG00000139618\",\"species\":\"homo_sapiens\",\"object_type\":\"Gene\",\"db_type\":\"core\",\"biotype\":\"protein_coding\",\"display_name\":\"BRCA2\",\"seq_region_name\":\"13\",\"start\":32315086,\"end\":32400266,\"strand\":1,\"assembly_name\":\"GRCh38\",\"description\":\"BRCA2 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1101]\"}"
+  },
+  "use_cases": [
+    "look up a human gene by symbol and get Ensembl ID and genomic coordinates",
+    "fetch genomic sequence for a region or transcript",
+    "get VEP-style variant consequences for a SNP or indel",
+    "retrieve orthologs/homologs for a gene across species",
+    "map coordinates between genome assemblies",
+    "list transcripts and exons for a gene"
+  ],
+  "sources": [
+    "https://rest.ensembl.org",
+    "https://rest.ensembl.org/documentation",
+    "https://www.ensembl.org/info/data/rest.html",
+    "https://github.com/Ensembl/ensembl-rest"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "nasa-open-data",
+  "status": "operational",
+  "name": "NASA Open Data",
+  "category": "data-analytics",
+  "tagline": "Unified gateway to NASA space datasets and APIs",
+  "description": "NASA Open Data provides free API access to space imagery, planetary data, Earth observations, and mission datasets through a shared API key gateway at api.nasa.gov. Developers can query astronomy picture of the day, Mars rover photos, NEO asteroids, Earth imagery, and many other NASA open science endpoints.",
+  "base_url": "https://api.nasa.gov",
+  "docs_url": "https://api.nasa.gov/",
+  "signup_url": "https://api.nasa.gov/",
+  "auth": {
+    "type": "apiKey",
+    "details": "DEMO_KEY or personal API key via api_key query parameter; free self-serve signup at api.nasa.gov"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "DEMO_KEY: 30 req/hour, 50 req/day; registered key: 1,000 req/hour",
+    "paid_plans": null
+  },
+  "rate_limits": "DEMO_KEY: 30 requests/hour and 50 requests/day; registered API key: 1,000 requests/hour",
+  "example": {
+    "request": "curl \"https://api.nasa.gov/planetary/apod?api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"copyright\":\"...\",\"date\":\"2024-01-01\",\"explanation\":\"...\",\"hdurl\":\"https://...\",\"media_type\":\"image\",\"service_version\":\"v1\",\"title\":\"...\",\"url\":\"https://...\"}"
+  },
+  "use_cases": [
+    "fetch Astronomy Picture of the Day (APOD)",
+    "list Mars rover photos by sol or earth date",
+    "query Near Earth Objects (asteroids) by date",
+    "get Earth Landsat imagery for lat/lon",
+    "search NASA image and video library"
+  ],
+  "sources": [
+    "https://api.nasa.gov/"
+  ],
+  "researcher_confidence": "medium"
+}

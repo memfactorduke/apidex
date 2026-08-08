@@ -1,0 +1,52 @@
+{
+  "id": "finnhub",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finnhub.io/docs/api/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finnhub.io/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finnhub.io/docs/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finnhub.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finnhub.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finnhub.io/pricing"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finnhub.io/docs/api/quote"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finnhub.io/docs/api"
+    }
+  },
+  "notes": "Verified against official Finnhub docs and pricing. Base URL, auth (token query or X-Finnhub-Token), quote example path, free tier, and product scope match. free_tier_limits/rate_limits intentionally vague and still accurate; exact Free RPM not required by the entry."
+}

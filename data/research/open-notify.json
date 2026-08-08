@@ -1,0 +1,40 @@
+{
+  "id": "open-notify",
+  "status": "operational",
+  "name": "Open Notify",
+  "category": "science-space",
+  "tagline": "ISS location and people currently in space",
+  "description": "Open Notify is a free public API that returns the International Space Station's current location and the list of astronauts in space, with no API key required for basic endpoints.",
+  "base_url": "http://api.open-notify.org",
+  "docs_url": "http://open-notify.org/Open-Notify-API/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public unauthenticated HTTP endpoints."
+  },
+  "https": false,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s http://api.open-notify.org/iss-now.json",
+    "response_snippet": "{\"message\": \"success\", \"timestamp\": 1712345678, \"iss_position\": {\"latitude\": \"-45.1234\", \"longitude\": \"123.4567\"}}"
+  },
+  "use_cases": [
+    "get current ISS latitude and longitude",
+    "list astronauts currently in space",
+    "get next ISS pass times over a location"
+  ],
+  "sources": [
+    "http://open-notify.org/Open-Notify-API/",
+    "http://api.open-notify.org"
+  ],
+  "researcher_confidence": "low"
+}

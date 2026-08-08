@@ -1,0 +1,52 @@
+{
+  "id": "merriam-webster",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.dictionaryapi.com/api/v3/references",
+      "source": "https://dictionaryapi.com/products/api-collegiate-dictionary"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://dictionaryapi.com/",
+      "source": "https://dictionaryapi.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dictionaryapi.com/products/api-collegiate-dictionary"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dictionaryapi.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dictionaryapi.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dictionaryapi.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dictionaryapi.com/products/api-collegiate-dictionary"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dictionaryapi.com/"
+    }
+  },
+  "notes": "Automated 404s appear to be bot-detection/false positives or path-root issues; www.dictionaryapi.com/api/v3 alone 404s without /references/{dict}/json/{word}. Free tier 1000 req/day confirmed on homepage. Products path may redirect; prefer dictionaryapi.com root or product-specific docs."
+}

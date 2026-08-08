@@ -1,0 +1,52 @@
+{
+  "id": "open-meteo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-meteo.com/en/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-meteo.com/en/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-meteo.com/en/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-meteo.com/en/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "10,000 API calls per day for non-commercial use (fair-use); commercial use requires a subscription. Exact free-tier wording should cite official pricing \u2014 do not invent dollar figures without checking.",
+      "source": "https://open-meteo.com/en/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "See free_tier_limits; also subject to fair-use and possible per-minute/minutely constraints on official pricing/docs.",
+      "source": "https://open-meteo.com/en/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-meteo.com/en/docs"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Free for non-commercial use is accurate in spirit, but commercial pricing claims in the entry may be wrong or outdated \u2014 verify against pricing page.",
+      "source": "https://open-meteo.com/en/pricing"
+    }
+  },
+  "notes": "Adversarial review: pricing and free-tier limits are the usual hallucination targets for Open-Meteo; re-check official pricing before confirming."
+}

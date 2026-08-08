@@ -1,0 +1,41 @@
+{
+  "id": "freetogame",
+  "status": "operational",
+  "name": "FreeToGame",
+  "category": "games-comics",
+  "tagline": "Free-to-play MMO and browser games catalog with platform and genre filters",
+  "description": "FreeToGame provides a public catalog API for free-to-play MMO, multiplayer, and browser games. Developers can list games, filter by platform (PC, browser, etc.) and genre, and fetch game details for discovery apps, recommendation tools, and game directories.",
+  "base_url": "https://www.freetogame.com/api",
+  "docs_url": "https://www.freetogame.com/api-doc",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.freetogame.com/api/games?platform=browser&category=mmorpg\"",
+    "response_snippet": "[{\"id\":1,\"title\":\"...\",\"thumbnail\":\"...\",\"short_description\":\"...\",\"game_url\":\"...\",\"genre\":\"MMORPG\",\"platform\":\"PC (Windows)\",\"publisher\":\"...\",\"developer\":\"...\",\"release_date\":\"...\",\"freetogame_profile_url\":\"...\"}]"
+  },
+  "use_cases": [
+    "list free-to-play games by platform",
+    "filter free MMOs by genre",
+    "get details for a free-to-play game by id",
+    "build a free-to-play game discovery directory",
+    "recommend browser-based multiplayer games"
+  ],
+  "sources": [
+    "https://www.freetogame.com/api-doc"
+  ],
+  "researcher_confidence": "low"
+}

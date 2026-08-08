@@ -1,0 +1,43 @@
+{
+  "id": "jolpica-f1",
+  "status": "operational",
+  "name": "Jolpica F1",
+  "category": "sports",
+  "tagline": "Ergast-compatible Formula 1 results and standings API for historical and current seasons.",
+  "description": "Jolpica F1 is a community-maintained Formula 1 data API that preserves Ergast-compatible endpoints for race results, qualifying, lap times, pit stops, driver and constructor standings, and circuit information after Ergast\u2019s service changes. It targets developers building F1 apps, analytics tools, and season trackers who need a drop-in or near-drop-in replacement for Ergast-style queries.",
+  "base_url": "https://api.jolpi.ca/ergast/f1",
+  "docs_url": "https://github.com/jolpica/jolpica-f1",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required for the public Ergast-compatible HTTP endpoints; requests are unauthenticated."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.jolpi.ca/ergast/f1/current/driverStandings.json\"",
+    "response_snippet": "{\"MRData\":{\"xmlns\":\"\",\"series\":\"f1\",\"url\":\"http://api.jolpi.ca/ergast/f1/current/driverStandings.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"StandingsTable\":{\"season\":\"2025\",\"StandingsLists\":[{\"season\":\"2025\",\"round\":\"...\",\"DriverStandings\":[{\"position\":\"1\",\"positionText\":\"1\",\"points\":\"...\",\"wins\":\"...\",\"Driver\":{\"driverId\":\"...\",\"code\":\"...\",\"givenName\":\"...\",\"familyName\":\"...\"}}]}]}}}"
+  },
+  "use_cases": [
+    "get current season driver championship standings",
+    "fetch race results for a specific season and round",
+    "list constructors and driver standings after a race weekend",
+    "query qualifying results or lap times for a Grand Prix",
+    "look up circuit information and race schedule for a season"
+  ],
+  "sources": [
+    "https://github.com/jolpica/jolpica-f1",
+    "https://api.jolpi.ca"
+  ],
+  "researcher_confidence": "low"
+}

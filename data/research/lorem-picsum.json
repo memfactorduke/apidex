@@ -1,0 +1,42 @@
+{
+  "id": "lorem-picsum",
+  "status": "operational",
+  "name": "Lorem Picsum",
+  "category": "fun-novelty",
+  "tagline": "Placeholder photos by size/ID with grayscale and blur\u2014modern Lorem Ipsum for images.",
+  "description": "Lorem Picsum is a free placeholder image service that serves real photos from Unsplash, allowing developers to request images by dimensions, specific photo IDs, random selection, and apply grayscale or blur effects. It requires no authentication and is commonly used for mockups, UI prototyping, and testing image-dependent layouts.",
+  "base_url": "https://picsum.photos",
+  "docs_url": "https://picsum.photos/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints are accessible without API keys or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "binary",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -I \"https://picsum.photos/200/300\"",
+    "response_snippet": "HTTP/2 302\nlocation: https://fastly.picsum.photos/id/870/200/300.jpg?hmac=..."
+  },
+  "use_cases": [
+    "get a placeholder image of specific width and height",
+    "fetch a specific Unsplash photo by ID for mock UI",
+    "apply grayscale or blur to a placeholder image",
+    "list photo metadata via the Picsum list API",
+    "seed random images for consistent demo screenshots"
+  ],
+  "sources": [
+    "https://picsum.photos/"
+  ],
+  "researcher_confidence": "medium"
+}

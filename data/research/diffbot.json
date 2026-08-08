@@ -1,0 +1,49 @@
+{
+  "id": "diffbot",
+  "status": "operational",
+  "name": "Diffbot",
+  "category": "data-analytics",
+  "tagline": "Structure the public web into a knowledge graph and extract entities from pages and text",
+  "description": "Diffbot turns unstructured web content into structured, linked knowledge. Core products: Extract (rule-free page classification and JSON extraction), Knowledge Graph Search/DQL and Enhance (query or enrich entities like people and organizations), Natural Language (entities, facts, sentiment from raw text), and Crawl/Bulk for site-scale jobs. Hosts differ by product: api.diffbot.com (Extract/Crawl), kg.diffbot.com (DQL/Enhance), nl.diffbot.com (NLP).",
+  "base_url": "https://api.diffbot.com/v3",
+  "docs_url": "https://www.diffbot.com/docs/",
+  "signup_url": "https://app.diffbot.com/get-started/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token as query parameter `token` on GET and POST (created on free self-serve signup at app.diffbot.com; also viewable in Dashboard). Example hosts also accept token on kg.diffbot.com and nl.diffbot.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "10,000 credits/month, all four product APIs, no credit card; Free rate 5 req/min. Free monthly caps: Extract 10k calls, NLP 500 calls, DQL 400 entities, Enhance 400 entities. 429 when quota/rate exceeded; quotas reset each billing period.",
+    "paid_plans": "Startup $299/mo (250k credits, overage $0.001/credit, 5 req/s); Plus $899/mo (1M credits, overage $0.0009/credit, Crawl, 25 req/s); Enterprise custom. Credit costs e.g. 1 page extract=1, KG entity export=25, web search=1."
+  },
+  "rate_limits": "By plan: Free 5 calls/min; Startup 5 calls/sec; Plus 25 calls/sec (Enterprise custom). Free also caps Extract 10k/mo, NLP 500/mo, DQL 400 entities/mo, Enhance 400 entities/mo; Plus Crawl 25 active / 1000 total jobs.",
+  "example": {
+    "request": "curl --request GET --url 'https://api.diffbot.com/v3/analyze?token=YOUR_API_KEY&url=https%3A%2F%2Fwww.diffbot.com' --header 'accept: application/json'",
+    "response_snippet": "{\n  \"request\": {\"pageUrl\": \"https://www.diffbot.com\", \"api\": \"analyze\", \"version\": 3},\n  \"humanLanguage\": \"en\",\n  \"objects\": [{\n    \"type\": \"article\",\n    \"title\": \"...\",\n    \"author\": \"...\",\n    \"tags\": [{\"label\": \"Diffbot\", \"uri\": \"https://diffbot.com/entity/...\", \"score\": 0.96}],\n    \"pageUrl\": \"https://www.diffbot.com\"\n  }]\n}"
+  },
+  "use_cases": [
+    "extract structured article or product JSON from any public page URL",
+    "query the Knowledge Graph with DQL for orgs/people matching filters",
+    "extract entities, facts, and relationships from raw text via NLP",
+    "enrich a company or person record with public-web KG data (Enhance)",
+    "crawl a site and bulk-extract page objects without per-site rules"
+  ],
+  "sources": [
+    "https://www.diffbot.com/docs/",
+    "https://www.diffbot.com/docs/authentication",
+    "https://www.diffbot.com/docs/extract/",
+    "https://www.diffbot.com/docs/extract/analyze",
+    "https://www.diffbot.com/docs/dql/",
+    "https://www.diffbot.com/docs/dql/get",
+    "https://www.diffbot.com/docs/natural-language/",
+    "https://www.diffbot.com/docs/natural-language/process-text"
+  ],
+  "researcher_confidence": "high"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "numbers-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://numbersapi.com",
+      "source": "https://numbersapi.com"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://numbersapi.com",
+      "source": "https://numbersapi.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://numbersapi.com/42?json\"",
+      "source": "https://numbersapi.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    }
+  },
+  "notes": "Automated curl got HTTP 0 (likely bot/TLS); site responds over HTTPS. Entry used http:// while https flag is true; prefer https://numbersapi.com for base/docs/example. Auth none, free unlimited, no published rate limits \u2014 consistent with docs. CORS still unknown (no header claim in docs)."
+}

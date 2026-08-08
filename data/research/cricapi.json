@@ -1,0 +1,42 @@
+{
+  "id": "cricapi",
+  "status": "operational",
+  "name": "CricAPI / CricketData",
+  "category": "sports",
+  "tagline": "Cricket scores and series data API for live matches, schedules, and statistics",
+  "description": "Public cricket data API providing live scores, match schedules, series information, and player statistics. Currently branded under CricketData (formerly CricAPI). Developers authenticate with an API key obtained via self-serve signup.",
+  "base_url": "https://api.cricapi.com/v1",
+  "docs_url": "https://cricketdata.org/",
+  "signup_url": "https://cricketdata.org/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter apikey=YOUR_API_KEY (self-serve signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.cricapi.com/v1/currentMatches?apikey=YOUR_API_KEY&offset=0\"",
+    "response_snippet": "{\"apikey\":\"...\",\"data\":[{\"id\":\"...\",\"name\":\"...\",\"status\":\"...\",\"venue\":\"...\",\"date\":\"...\",\"teams\":[\"...\",\"...\"],\"score\":[...]}],\"status\":\"success\",\"info\":{\"hitsToday\":1,\"hitsUsed\":1,\"hitsLimit\":100,\"credits\":0,\"server\":1,\"offsetRows\":0,\"totalRows\":25,\"queryTime\":12.5,\"s\":0,\"cache\":0}}"
+  },
+  "use_cases": [
+    "get live cricket match scores",
+    "list current matches and schedules",
+    "fetch series and tournament data",
+    "look up player statistics",
+    "get match scorecards and results"
+  ],
+  "sources": [
+    "https://cricketdata.org/",
+    "https://cricapi.com/"
+  ],
+  "researcher_confidence": "low"
+}

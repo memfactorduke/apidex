@@ -1,0 +1,52 @@
+{
+  "id": "tmdb",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/docs/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/docs/authentication-application"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themoviedb.org/faq/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "About 50 requests per second (soft limit); documented in API FAQ / rate limiting guidance",
+      "source": "https://developer.themoviedb.org/docs/rate-limiting"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/reference/movie-details"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/docs"
+    }
+  },
+  "notes": "Rate limits are published (~50 req/s); free_tier_limits remain unspecified beyond rate limiting. Auth supports both api_key and Bearer v4 token as stated."
+}

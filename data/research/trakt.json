@@ -1,0 +1,42 @@
+{
+  "id": "trakt",
+  "status": "operational",
+  "name": "Trakt.tv",
+  "category": "entertainment",
+  "tagline": "Track TV shows and movies with a social entertainment API",
+  "description": "Trakt.tv provides a REST API for tracking what users watch, discovering TV shows and movies, managing lists and collections, and syncing watch history across apps. Developers use OAuth2 or API keys to build media clients, scrobblers, and recommendation tools.",
+  "base_url": "https://api.trakt.tv",
+  "docs_url": "https://trakt.docs.apiary.io/",
+  "signup_url": "https://trakt.tv/oauth/applications",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth2 with client ID/secret; also require Trakt-Api-Key header (client ID) and Trakt-Api-Version: 2 on all requests"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Content-Type: application/json\" -H \"trakt-api-version: 2\" -H \"trakt-api-key: YOUR_API_KEY\" \"https://api.trakt.tv/shows/trending\"",
+    "response_snippet": "[{\"watchers\":100,\"show\":{\"title\":\"Game of Thrones\",\"year\":2011,\"ids\":{\"trakt\":1,\"slug\":\"game-of-thrones\",\"tvdb\":121361,\"imdb\":\"tt0944947\",\"tmdb\":1399}}}]"
+  },
+  "use_cases": [
+    "get trending TV shows",
+    "scrobble a movie a user is watching",
+    "sync a user's watch history",
+    "search movies and shows by title",
+    "get episode calendar for a user"
+  ],
+  "sources": [
+    "https://trakt.docs.apiary.io/",
+    "https://trakt.tv"
+  ],
+  "researcher_confidence": "low"
+}

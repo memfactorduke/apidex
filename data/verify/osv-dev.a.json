@@ -1,0 +1,52 @@
+{
+  "id": "osv-dev",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://google.github.io/osv.dev/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://google.github.io/osv.dev/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://google.github.io/osv.dev/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://osv.dev/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Fully free; no documented paid plans. Rate limits are not published as a fixed 1000 req/hour \u2014 see rate_limits.",
+      "source": "https://google.github.io/osv.dev/faq/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Not publicly documented as a fixed 1000 requests/hour. Official FAQ states abusive/high-volume use may be rate-limited and users should contact osv-discuss@googlegroups.com for high volume; no published numerical free-tier quota found on official docs.",
+      "source": "https://google.github.io/osv.dev/faq/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://google.github.io/osv.dev/api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Remove or soften the claim of 'published rate limits' \u2014 official docs do not publish a fixed numerical rate limit for unauthenticated use; high-volume/abusive use may be limited and contact is suggested for heavy use.",
+      "source": "https://google.github.io/osv.dev/faq/"
+    }
+  },
+  "notes": "base_url, docs, auth (none), free access, and /v1/query example match official OSV docs. The main failure is invented numerical rate limits (1000/hour) and 'higher limits via contact' framing that overstates what official sources publish; FAQ only discusses high-volume contact and possible rate limiting of abuse."
+}

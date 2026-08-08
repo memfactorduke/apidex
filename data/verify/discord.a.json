@@ -1,0 +1,52 @@
+{
+  "id": "discord",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/intro"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/topics/oauth2"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/intro"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/intro"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/topics/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/reference"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/resources/user"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/intro"
+    }
+  },
+  "notes": "Verified against Discord official docs 2026. base_url v10 is current. Auth is Bot token or OAuth2. API access free. Global ~50 req/s is documented. CORS no for bot tokens (browser). Example curl matches /users/@me. Description accurate."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "etherscan",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.etherscan.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.etherscan.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.etherscan.io/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://etherscan.io/apis"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free API plan: 3 calls/second, 100,000 calls/day (Free API Key tier per Etherscan plans page)",
+      "source": "https://etherscan.io/apis"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 3 calls/sec, 100k/day; higher tiers increase throughput (e.g. Standard/Advanced/Professional plans on etherscan.io/apis)",
+      "source": "https://etherscan.io/apis"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.etherscan.io/api-endpoints/accounts"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.etherscan.io/"
+    }
+  },
+  "notes": "Docs-first check against docs.etherscan.io and etherscan.io/apis. Base URL, docs, apiKey auth, free tier, account balance example, and description match official docs. free_tier_limits and rate_limits are published (not \"unknown\"/\"not published\"). CORS not stated. V2 migration notes exist but V1-style /api still documented."
+}

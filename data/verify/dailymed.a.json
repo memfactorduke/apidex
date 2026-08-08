@@ -1,0 +1,52 @@
+{
+  "id": "dailymed",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm",
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free public API; rate limiting applies under high load (exact numeric limits not publicly documented)",
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limiting enforced under high load; no public numeric quota documented",
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json\"",
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "US NLM DailyMed web services for Structured Product Labeling (SPL) \u2014 drug package inserts, labels, and related metadata via REST (JSON/XML/ZIP).",
+      "source": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm"
+    }
+  },
+  "notes": "Entry is a low-confidence research stub: root docs_url, placeholder description/example, duplicate use_cases. Official API is free, no-auth REST at /dailymed/services/v2/; rate limits mentioned but not quantified. CORS unstated in docs."
+}

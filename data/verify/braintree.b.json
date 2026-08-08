@@ -1,0 +1,52 @@
+{
+  "id": "braintree",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "REST/server SDK host is environment-specific (e.g. https://api.sandbox.braintreegateway.com for sandbox; production is https://api.braintreegateway.com). GraphQL uses https://payments.braintree-api.com/graphql (prod) and https://payments.sandbox.braintree-api.com/graphql (sandbox) \u2014 not a single base of https://api.braintreegateway.com alone.",
+      "source": "https://developer.paypal.com/braintree/docs/reference/general/authentication"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paypal.com/braintree/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paypal.com/braintree/docs/reference/general/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.braintreepayments.com/sandbox"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Sandbox is free. Production US card rates are typically 2.59% + $0.49 for Braintree Direct (confirm current regional pricing); do not treat the parenthetical US card figure as a universal free-tier limit.",
+      "source": "https://www.braintreepayments.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paypal.com/braintree/docs/guides/graphql/overview"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paypal.com/braintree/docs"
+    }
+  },
+  "notes": "Placeholder"
+}

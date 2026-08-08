@@ -1,0 +1,42 @@
+{
+  "id": "foursquare-places",
+  "status": "operational",
+  "name": "Foursquare Places",
+  "category": "food-drink",
+  "tagline": "Global venue search, place details, and location data for apps",
+  "description": "Foursquare Places API provides venue search, place details, categories, tips, photos, and geolocation data across millions of points of interest worldwide. Developers use it for location-based discovery, local business info, and place enrichment in consumer and enterprise apps.",
+  "base_url": "https://api.foursquare.com/v3",
+  "docs_url": "https://docs.foursquare.com/developer/reference/places-api-overview",
+  "signup_url": "https://foursquare.com/developers/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header (Bearer or raw key); self-serve developer signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.foursquare.com/v3/places/search?query=coffee&ll=40.7,-74.0\" -H \"Authorization: YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{ \"results\": [ { \"fsq_id\": \"...\", \"name\": \"...\", \"location\": { \"address\": \"...\" } } ] }"
+  },
+  "use_cases": [
+    "search nearby restaurants or coffee shops by query and coordinates",
+    "get place details, hours, and contact info by Foursquare ID",
+    "autocomplete place names as a user types a location query",
+    "find venues by category near a lat/lng",
+    "enrich addresses or coordinates with venue metadata"
+  ],
+  "sources": [
+    "https://docs.foursquare.com/",
+    "https://location.foursquare.com/"
+  ],
+  "researcher_confidence": "low"
+}

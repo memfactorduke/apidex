@@ -1,0 +1,95 @@
+{
+  "id": "nytimes",
+  "status": "operational",
+  "name": "New York Times API",
+  "category": "news-media",
+  "tagline": "Access NYT article search, top stories, bestsellers, and archive data via REST",
+  "description": "The New York Times Developer Network provides REST APIs for article search, top stories, most popular content, books bestsellers, movie reviews, and historical archives. Developers authenticate with an API key obtained through self-serve registration and can query current and archival news data in JSON.",
+  "base_url": "https://api.nytimes.com",
+  "docs_url": "https://developer.nytimes.com/",
+  "signup_url": "https://developer.nytimes.com/get-started",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api-key query parameter (or X-Api-Key header on some endpoints); self-serve signup at developer.nytimes.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.nytimes.com/svc/topstories/v2/home.json?api-key=YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":\"OK\",\"copyright\":\"Copyright (c) The New York Times Company.\",\"section\":\"home\",\"num_results\":25,\"results\":[{\"section\":\"us\",\"title\":\"Example Headline\",\"url\":\"https://www.nytimes.com/...\",\"published_date\":\"2026-01-01T12:00:00-05:00\"}]}"
+  },
+  "use_cases": [
+    "search NYT articles by keyword and date range",
+    "get today's top stories by section",
+    "fetch current NYT bestsellers list",
+    "retrieve most popular articles by views or shares",
+    "look up movie reviews and critics picks"
+  ],
+  "sources": [
+    "https://developer.nytimes.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

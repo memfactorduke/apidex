@@ -1,0 +1,52 @@
+{
+  "id": "maxmind-geoip",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.maxmind.com/geoip/docs/web-services/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.maxmind.com/geoip/docs/web-services/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.maxmind.com/geoip/docs/web-services/requests/#authorization"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true \u2014 free GeoLite2 web services available with free account; commercial GeoIP2 Precision still paid",
+      "source": "https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "GeoLite2 free web services have lower accuracy/update frequency than paid; rate limits apply (see rate_limits)",
+      "source": "https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "GeoIP2 Precision: 1,000 queries/day on City/Country (varies by service); GeoLite2 free services have separate published limits \u2014 check account dashboard and docs",
+      "source": "https://dev.maxmind.com/geoip/docs/web-services/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.maxmind.com/geoip/docs/web-services/requests/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.maxmind.com/geoip/docs/web-services/"
+    }
+  },
+  "notes": "Placeholder \u2014 need to verify against live docs first."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "urlscan-io",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    }
+  },
+  "notes": "Verified against official docs. Entry is conservative (unknown free limits, not published rates) and matches current API: base https://urlscan.io/api/v1, API-Key header, POST /scan/, search/result endpoints. No shutdown/migration found."
+}

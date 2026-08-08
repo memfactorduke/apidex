@@ -1,0 +1,52 @@
+{
+  "id": "stripe",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stripe.com/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stripe.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stripe.com/keys"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stripe.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stripe.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stripe.com/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stripe.com/api/balance/balance_retrieve"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.stripe.com/api"
+    }
+  },
+  "notes": "Docs-first verification against official Stripe docs (api, keys, rate-limits, pricing). Base URL, auth (Basic/Bearer with secret key), pay-as-you-go (no API subscription), ~100 r/w ops/sec live rate limits, and balance curl example all match current official sources. CORS remains unknown (server-side keys; no browser CORS claim)."
+}

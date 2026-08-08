@@ -1,0 +1,52 @@
+{
+  "id": "coinbase",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/rest-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "jwt or multi (CDP API key + JWT Bearer for Advanced Trade / CDP; Sign-in with Coinbase OAuth2 and legacy Coinbase App keys also exist \u2014 not a simple X-Api-Key apiKey header alone)",
+      "source": "https://docs.cdp.coinbase.com/api-reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per product (e.g. Advanced Trade public 10 req/s, private 30 req/s; Coinbase App / exchange endpoints document specific limits \u2014 not \"not published\")",
+      "source": "https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/rest-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Public spot price does not require X-Api-Key; correct unauthenticated example: curl https://api.coinbase.com/v2/prices/BTC-USD/spot (no API key header). Response shape is data.amount/base/currency.",
+      "source": "https://docs.cdp.coinbase.com/coinbase-app/v2/reference/getprice"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/"
+    }
+  },
+  "notes": "Entry mixes Coinbase App v2 public prices with CDP trading auth. Auth is JWT/OAuth2 not X-Api-Key; rate limits are published; example wrongly requires API key for public endpoint."
+}

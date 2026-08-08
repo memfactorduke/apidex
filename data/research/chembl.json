@@ -1,0 +1,41 @@
+{
+  "id": "chembl",
+  "status": "operational",
+  "name": "ChEMBL",
+  "category": "science-space",
+  "tagline": "Bioactive molecules and drug-like compound data from EMBL-EBI",
+  "description": "ChEMBL is a manually curated database of bioactive molecules with drug-like properties. It brings together chemical, bioactivity and genomic data to aid the translation of genomic information into effective new drugs.",
+  "base_url": "https://www.ebi.ac.uk/chembl/api/data",
+  "docs_url": "https://chembl.gitbook.io/chembl-interface-documentation/web-services",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public data access"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl 'https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL25.json'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "look up bioactive compounds by ChEMBL ID",
+    "search molecules by SMILES or InChI",
+    "retrieve bioactivity assay data for a target",
+    "get drug mechanism of action information"
+  ],
+  "sources": [
+    "https://www.ebi.ac.uk/chembl/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "yelp-fusion",
+  "status": "operational",
+  "name": "Yelp Fusion",
+  "category": "food-drink",
+  "tagline": "Search local businesses, reviews, and photos via Yelp's public Fusion API.",
+  "description": "Yelp Fusion is Yelp's developer platform API for searching businesses, reading reviews and photos, and looking up places by phone or transaction type. It is commonly used for local discovery, restaurant search, and location-aware apps. Developers authenticate with a Bearer API key after creating an app in the Yelp Developer Portal.",
+  "base_url": "https://api.yelp.com/v3",
+  "docs_url": "https://docs.developer.yelp.com/docs/fusion-intro",
+  "signup_url": "https://www.yelp.com/developers/v3/manage_app",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer API key via Authorization header (Authorization: Bearer YOUR_API_KEY). Create an app in the Yelp Developer Portal to obtain a free API key."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier available; exact request quotas and paid plan details vary by endpoint and should be confirmed on the current pricing page.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published per-endpoint daily quotas on the developer pricing page; not fully verified in this research pass.",
+  "example": {
+    "request": "curl -X GET \"https://api.yelp.com/v3/businesses/search?location=San%20Francisco&term=restaurants&limit=5\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"businesses\":[{\"id\":\"...\",\"name\":\"...\",\"rating\":4.5,\"review_count\":1234,\"location\":{\"address1\":\"...\",\"city\":\"San Francisco\",\"state\":\"CA\"},\"coordinates\":{\"latitude\":37.78,\"longitude\":-122.41}}],\"total\":240,\"region\":{\"center\":{\"latitude\":37.77,\"longitude\":-122.42}}}"
+  },
+  "use_cases": [
+    "search restaurants and local businesses near a location",
+    "look up a business by Yelp ID for details and hours",
+    "find businesses by phone number",
+    "list reviews for a business",
+    "search businesses that support delivery or pickup"
+  ],
+  "sources": [
+    "https://docs.developer.yelp.com/docs/fusion-intro",
+    "https://docs.developer.yelp.com/reference/v3_business_search",
+    "https://www.yelp.com/developers"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

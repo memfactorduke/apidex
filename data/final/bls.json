@@ -1,0 +1,101 @@
+{
+  "id": "bls",
+  "status": "operational",
+  "name": "Bureau of Labor Statistics API",
+  "category": "government-open-data",
+  "tagline": "Official U.S. labor statistics: employment, inflation, wages, and economic indicators via public API",
+  "description": "The BLS Public Data API provides programmatic access to U.S. Bureau of Labor Statistics time series data, including employment, unemployment, CPI inflation, wages, and productivity. Developers can request single or multiple series, with optional registration for higher daily limits. Responses are JSON (v2) or JSON/XML (v1).",
+  "base_url": "https://api.bls.gov/publicAPI/v2",
+  "docs_url": "https://www.bls.gov/developers/api_signature_v2.htm",
+  "signup_url": "https://data.bls.gov/registrationEngine/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional registration key for higher limits; pass as registrationkey query param or in POST body. Unregistered access allowed with lower daily caps."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free; unregistered 25 queries/day (25 series/query); registered 500 queries/day (50 series/query). No paid plans.",
+    "paid_plans": null
+  },
+  "rate_limits": "Unregistered: 25 queries/day, 25 series per query. Registered: 500 queries/day, 50 series per query. Not published as per-second limits.",
+  "example": {
+    "request": "curl -X POST 'https://api.bls.gov/publicAPI/v2/timeseries/data/' -H 'Content-Type: application/json' -d '{\"seriesid\":[\"CUUR0000SA0\"],\"startyear\":\"2023\",\"endyear\":\"2024\",\"registrationkey\":\"YOUR_API_KEY\"}'",
+    "response_snippet": "{\"status\":\"REQUEST_SUCCEEDED\",\"responseTime\":120,\"message\":[],\"Results\":{\"series\":[{\"seriesID\":\"CUUR0000SA0\",\"data\":[{\"year\":\"2024\",\"period\":\"M12\",\"periodName\":\"December\",\"value\":\"315.605\",\"footnotes\":[{}]}]}]}}"
+  },
+  "use_cases": [
+    "fetch CPI inflation time series for a date range",
+    "pull unemployment rate series by geography",
+    "get employment and wage indicators for economic dashboards",
+    "batch-retrieve multiple BLS series IDs in one request",
+    "compare labor market metrics year-over-year for analysis"
+  ],
+  "sources": [
+    "https://www.bls.gov/developers/",
+    "https://www.bls.gov/developers/api_signature_v2.htm",
+    "https://www.bls.gov/developers/api_faqs.htm",
+    "https://www.bls.gov/developers/api_signature.htm",
+    "https://data.bls.gov/registrationEngine/"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "opendota",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests/minute without a key; free API key raises limit to 1200 requests/day (and higher limits with paid plans)",
+      "source": "https://docs.opendota.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 req/min unauthenticated; free API key increases to 1200/day; paid tiers for higher",
+      "source": "https://docs.opendota.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/#api-heroes"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    }
+  },
+  "notes": "PLACEHOLDER - need to verify properly"
+}

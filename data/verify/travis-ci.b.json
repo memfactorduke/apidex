@@ -1,0 +1,52 @@
+{
+  "id": "travis-ci",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.travis-ci.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.travis-ci.com/user/developer/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.travis-ci.com/user/developer/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.travis-ci.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.travis-ci.com/user/developer/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.travis-ci.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.travis-ci.com/user/developer/"
+    }
+  },
+  "notes": "Verified against official Travis CI developer docs and pricing. Base URL, auth, and example match current API v3 guidance. Free tier exists; exact free limits and CORS not clearly documented, so those entry values are appropriately cautious. No shutdown or endpoint migration found."
+}

@@ -1,0 +1,103 @@
+{
+  "id": "open-exchange-rates",
+  "status": "operational",
+  "name": "Open Exchange Rates API",
+  "category": "ecommerce-payments",
+  "tagline": "Live and historical FX rates for 200+ currencies via a simple JSON API.",
+  "description": "Open Exchange Rates provides a lightweight HTTPS JSON API for live and historical foreign-exchange rates across 200+ currencies (plus alternatives like BTC and precious metals). Rates are blended from multiple sources and served relative to a base currency (USD on free; any base on paid). Core routes include latest, historical, currencies, time-series, and convert (higher tiers). Auth is a free App ID from self-serve signup.",
+  "base_url": "https://openexchangerates.org/api",
+  "docs_url": "https://docs.openexchangerates.org/reference/api-introduction",
+  "signup_url": "https://openexchangerates.org/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "App ID (32-char hex) via query param app_id=YOUR_APP_ID, or Authorization: Token YOUR_APP_ID header. Self-serve free signup at openexchangerates.org/signup."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Forever Free: 1,000 requests/month; hourly updates; USD base only; daily historical data; no advanced queries (time-series/convert/etc.).",
+    "paid_plans": "Developer $12/mo (10k req, all base currencies); Enterprise $47/mo (100k req, 30-min updates, time-series); Unlimited $97/mo (unlimited req, 5-min updates, convert). VIP tiers available."
+  },
+  "rate_limits": "Monthly soft quotas by plan (free 1k, Developer 10k, Enterprise 100k, Unlimited unlimited). Slight overage not hard-blocked; high usage prompts email/upgrade. Per-second limits not published.",
+  "example": {
+    "request": "curl -s \"https://openexchangerates.org/api/latest.json?app_id=YOUR_API_KEY\"",
+    "response_snippet": "{\n  \"disclaimer\": \"https://openexchangerates.org/terms/\",\n  \"license\": \"https://openexchangerates.org/license/\",\n  \"timestamp\": 1449877801,\n  \"base\": \"USD\",\n  \"rates\": {\n    \"AED\": 3.672538,\n    \"AFN\": 66.809999,\n    \"GBP\": 0.656741,\n    \"EUR\": 0.920123\n  }\n}"
+  },
+  "use_cases": [
+    "get latest USD exchange rates for all currencies",
+    "convert a price to multiple currencies for a shopping cart",
+    "fetch end-of-day historical rates for a given date",
+    "list supported ISO currency codes and names",
+    "check remaining monthly API quota for an App ID",
+    "pull time-series FX rates over a date range (paid plans)"
+  ],
+  "sources": [
+    "https://docs.openexchangerates.org/reference/api-introduction",
+    "https://docs.openexchangerates.org/reference/latest-json",
+    "https://docs.openexchangerates.org/reference/authentication",
+    "https://openexchangerates.org/signup",
+    "https://openexchangerates.org/signup/free",
+    "https://openexchangerates.org/faq",
+    "https://status.openexchangerates.org/"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

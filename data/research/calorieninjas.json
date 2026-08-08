@@ -1,0 +1,38 @@
+{
+  "id": "calorieninjas",
+  "status": "operational",
+  "name": "CalorieNinjas",
+  "category": "food-drink",
+  "tagline": "Nutrition data API for food text and image lookups",
+  "description": "CalorieNinjas provides nutrition facts for foods and recipes from natural-language queries and optional image analysis. Developers typically use it to estimate calories, macros, and micronutrients for apps, meal trackers, and fitness tools.",
+  "base_url": "https://api.calorieninjas.com/v1",
+  "docs_url": "https://calorieninjas.com/api",
+  "signup_url": "https://calorieninjas.com/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header; self-serve signup on calorieninjas.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"X-Api-Key: YOUR_API_KEY\" \"https://api.calorieninjas.com/v1/nutrition?query=3lb%20carrots%20and%20a%20chicken%20sandwich\"",
+    "response_snippet": "{\"items\":[{\"name\":\"carrots\",\"calories\":...}]}"
+  },
+  "use_cases": [
+    "get nutrition facts for a food text query",
+    "estimate calories and macros for a meal description"
+  ],
+  "sources": [
+    "https://calorieninjas.com/api"
+  ],
+  "researcher_confidence": "low"
+}

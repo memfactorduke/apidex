@@ -1,0 +1,52 @@
+{
+  "id": "opendota",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opendota.com/api-keys"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "60 calls/minute without a key; 60 calls/minute and 50,000 calls/month with a free API key (not 1200/day)",
+      "source": "https://www.opendota.com/api-keys"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 req/min unauthenticated; free API key: 60 req/min and 50,000/month; paid tiers for more (not 1200/day)",
+      "source": "https://www.opendota.com/api-keys"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opendota.com/"
+    }
+  },
+  "notes": "Main error: free key limits are 60/min + 50k/month, not 1200/day. Base URL, docs, optional api_key auth, /heroes example, and free tier are confirmed. CORS not documented; not probed."
+}

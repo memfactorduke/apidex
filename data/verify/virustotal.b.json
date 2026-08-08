@@ -1,0 +1,52 @@
+{
+  "id": "virustotal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/public-vs-premium-api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Public API: 4 requests/minute, 500 requests/day (still stated for public tier; exact wording varies by account page)",
+      "source": "https://docs.virustotal.com/reference/public-vs-premium-api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Public API: 4 requests/minute, 500 requests/day; premium higher",
+      "source": "https://docs.virustotal.com/reference/public-vs-premium-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/file-info"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.virustotal.com/reference/overview"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live docs now."
+}

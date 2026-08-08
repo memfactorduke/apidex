@@ -1,0 +1,52 @@
+{
+  "id": "discord",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/intro"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/reference"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/intro"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/intro"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Global rate limit is 50 requests per second per bot; per-route buckets with X-RateLimit-* headers; invalid request limits apply (see docs). Note: the global limit is often stated as ~50 req/s but docs may specify exact figures differently.",
+      "source": "https://discord.com/developers/docs/topics/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Authorization header should use Bot YOUR_BOT_TOKEN not YOUR_API_KEY; User-Agent format is required",
+      "source": "https://discord.com/developers/docs/reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://discord.com/developers/docs/intro"
+    }
+  },
+  "notes": "Placeholder"
+}

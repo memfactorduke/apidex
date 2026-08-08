@@ -1,0 +1,52 @@
+{
+  "id": "haveibeenpwned",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 public/individual free access is gone; paid subscription required for breach/paste APIs; Pwned Passwords range remains free without key",
+      "source": "https://haveibeenpwned.com/API/Key"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "no free tier for breach/paste APIs (paid subscription only); Pwned Passwords range API is free and unauthenticated",
+      "source": "https://haveibeenpwned.com/API/Key"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "documented: paid API key rate limits apply (e.g. 10 requests per minute for standard); 429 with Retry-After; Pwned Passwords has separate guidance",
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    }
+  },
+  "notes": "Adversarial check found pricing/rate-limit claims wrong: breach/paste need paid keys; free_tier true and rate_limits 'not published' fail. base_url/docs/auth/example/description hold."
+}

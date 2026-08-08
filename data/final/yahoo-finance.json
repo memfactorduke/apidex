@@ -1,0 +1,95 @@
+{
+  "id": "yahoo-finance",
+  "status": "operational",
+  "name": "Yahoo Finance (unofficial)",
+  "category": "finance",
+  "tagline": "Unofficial market data endpoints used by Yahoo Finance clients",
+  "description": "Community-documented, unofficial Yahoo Finance query endpoints for quotes, charts, fundamentals, and related market data. Not an officially supported public product; endpoints, auth cookies, and rate limits can change without notice.",
+  "base_url": "https://query1.finance.yahoo.com",
+  "docs_url": "https://finance.yahoo.com",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No official API key. Many endpoints work unauthenticated; some scrapers use session cookies from finance.yahoo.com. Subject to change."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://query1.finance.yahoo.com/v8/finance/chart/AAPL?interval=1d&range=5d' -H 'User-Agent: Mozilla/5.0'",
+    "response_snippet": "{\"chart\":{\"result\":[{\"meta\":{\"symbol\":\"AAPL\",\"currency\":\"USD\",\"regularMarketPrice\":...},\"timestamp\":[...],\"indicators\":{\"quote\":[{\"close\":[...]}]}}],\"error\":null}}"
+  },
+  "use_cases": [
+    "get current stock quote for a ticker",
+    "fetch historical OHLCV chart data",
+    "look up company fundamentals",
+    "search tickers by company name"
+  ],
+  "sources": [
+    "https://finance.yahoo.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "shopify",
+  "status": "operational",
+  "name": "Shopify Admin API",
+  "category": "ecommerce-payments",
+  "tagline": "Manage products, orders, customers, inventory, and store data via REST or GraphQL.",
+  "description": "Shopify Admin API lets apps and integrations manage a merchant's store: products, variants, inventory, orders, customers, fulfillments, discounts, and more. Developers can use REST or GraphQL over HTTPS against shop-specific endpoints, with OAuth for public apps and access tokens for custom apps. It is the primary backend surface for Shopify app development and store automation.",
+  "base_url": "https://{shop}.myshopify.com/admin/api/{version}",
+  "docs_url": "https://shopify.dev/docs/api/admin",
+  "signup_url": "https://partners.shopify.com/signup",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 for public/custom apps (Bearer access token); custom apps also use Admin API access tokens from the Shopify admin. Scopes required per resource."
+  },
+  "https": true,
+  "cors": "no",
+  "formats": [
+    "json",
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access included with Shopify store plans; Partner/dev stores free. No per-request API fee for standard Admin API usage \u2014 store subscription required.",
+    "paid_plans": "Shopify store plans (Basic and up); app billing via Shopify Billing API optional for public apps."
+  },
+  "rate_limits": "REST: 2 req/s bucket (leaky); GraphQL: cost-based (points/sec). Plus plans higher. Exact limits vary by plan and version \u2014 see docs.",
+  "example": {
+    "request": "curl -X GET \"https://YOUR_SHOP.myshopify.com/admin/api/2025-01/products.json?limit=1\" -H \"X-Shopify-Access-Token: YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"products\":[{\"id\":632910392,\"title\":\"IPod Nano - 8GB\",\"body_html\":\"...\",\"vendor\":\"Apple\",\"product_type\":\"Cult Products\",\"created_at\":\"...\",\"handle\":\"ipod-nano\",\"status\":\"active\",\"variants\":[{\"id\":808950810,\"price\":\"199.00\",\"sku\":\"IPOD2008PINK\",\"inventory_quantity\":10}]}],\"...\"}"
+  },
+  "use_cases": [
+    "list products and variants for a Shopify store",
+    "create or update orders and fulfillments",
+    "sync inventory quantities across locations",
+    "fetch customers and order history for CRM integration",
+    "manage discounts, price rules, or gift cards",
+    "subscribe to webhooks for order/product changes"
+  ],
+  "sources": [
+    "https://shopify.dev/docs/api/admin",
+    "https://shopify.dev/docs/api/admin-rest",
+    "https://shopify.dev/docs/api/usage/authentication",
+    "https://shopify.dev/docs/api/usage/rate-limits"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "openfec",
+  "status": "operational",
+  "name": "OpenFEC API",
+  "category": "government-open-data",
+  "tagline": "Federal campaign finance data: candidates, committees, contributions, and filings",
+  "description": "Public REST API from the U.S. Federal Election Commission providing structured access to campaign finance disclosure data\u2014candidates, committees, itemized receipts and disbursements, independent expenditures, filings, and election results. Data is sourced from FEC filings and updated as reports are processed. Requires a free API key; rate limits apply.",
+  "base_url": "https://api.open.fec.gov/v1",
+  "docs_url": "https://api.open.fec.gov/developers/",
+  "signup_url": "https://api.data.gov/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (or DEMO_KEY for light testing). Free key from api.data.gov signup; required for production use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free via api.data.gov key; default 1,000 requests/hour (confirm current data.gov limits)",
+    "paid_plans": null
+  },
+  "rate_limits": "Default ~1,000 requests/hour per API key via api.data.gov; DEMO_KEY has lower shared limits",
+  "example": {
+    "request": "curl \"https://api.open.fec.gov/v1/candidates/?api_key=YOUR_API_KEY&office=P&cycle=2024&per_page=2\"",
+    "response_snippet": "{\"api_version\":\"1.0\",\"pagination\":{\"page\":1,\"per_page\":2,\"count\":...},\"results\":[{\"candidate_id\":\"P...\",\"name\":\"...\",\"office\":\"P\",\"party\":\"...\",\"state\":\"...\",\"cycles\":[2024],...}]}"
+  },
+  "use_cases": [
+    "search presidential or congressional candidates by cycle and office",
+    "look up PAC or candidate committee registration and totals",
+    "list itemized individual contributions to a committee",
+    "fetch independent expenditure reports for an election",
+    "get schedule filings and financial summary totals for a candidate"
+  ],
+  "sources": [
+    "https://api.open.fec.gov/developers/",
+    "https://api.data.gov/signup/",
+    "https://www.fec.gov/data/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

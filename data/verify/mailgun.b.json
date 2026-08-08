@@ -1,0 +1,52 @@
+{
+  "id": "mailgun",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.mailgun.com/docs/mailgun/api-reference/mg-auth"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "No forever free tier for production sending; free trial only (or limited sandbox). Verify current pricing page.",
+      "source": "https://www.mailgun.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Pricing and free allotments have changed; entry's 100 emails/day forever plan is outdated.",
+      "source": "https://www.mailgun.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.mailgun.com/docs/mailgun/api-reference/send/mailgun/messages"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Remove or update free-tier claim (100 emails/day) and paid plan prices if pricing page differs.",
+      "source": "https://www.mailgun.com/pricing/"
+    }
+  },
+  "notes": "Adversarial check incomplete without live fetch; pricing is highest-risk field."
+}

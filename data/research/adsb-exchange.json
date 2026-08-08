@@ -1,0 +1,41 @@
+{
+  "id": "adsb-exchange",
+  "status": "operational",
+  "name": "ADS-B Exchange",
+  "category": "transportation",
+  "tagline": "Crowdsourced ADS-B aircraft tracking and flight data API",
+  "description": "ADS-B Exchange provides real-time and historical aircraft tracking data from a global network of ADS-B receivers. Developers can query live positions, aircraft details, and related flight information via a REST API for aviation apps, logistics, and research.",
+  "base_url": "https://adsbexchange.com/api",
+  "docs_url": "https://www.adsbexchange.com/data/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required; obtain via paid subscription or data access program (verify current signup path on official site)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"api-auth: YOUR_API_KEY\" \"https://adsbexchange.com/api/aircraft/v2/lat/37.7749/lon/-122.4194/dist/10/\"",
+    "response_snippet": "{ \"ac\": [ { \"hex\": \"a1b2c3\", \"flight\": \"UAL123\", \"lat\": 37.77, \"lon\": -122.42, \"alt_baro\": 35000, \"gs\": 450 } ], \"total\": 1 }"
+  },
+  "use_cases": [
+    "get aircraft currently near a lat/lon",
+    "look up a flight by callsign or ICAO hex",
+    "track live aircraft positions for a map",
+    "filter aircraft by altitude or distance"
+  ],
+  "sources": [
+    "https://www.adsbexchange.com/",
+    "https://www.adsbexchange.com/data/"
+  ],
+  "researcher_confidence": "low"
+}

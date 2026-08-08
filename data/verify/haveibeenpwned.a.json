@@ -1,0 +1,52 @@
+{
+  "id": "haveibeenpwned",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/Key"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: paid HIBP API keys are rate-limited (commonly described as ~10 requests per minute for the standard key); Pwned Passwords range API has separate/high-volume guidance. Check current docs/pricing for exact figures.",
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://haveibeenpwned.com/API/v3"
+    }
+  },
+  "notes": "Docs-first check of haveibeenpwned.com/API/v3 and API Key pages. Base URL, docs URL, API-key auth, example headers/path, and description match current docs. Free tier/paid plans exist but free-tier limits remain poorly specified as 'unknown'. Rate limits are published for authenticated endpoints (not 'not published'); CORS still not clearly documented."
+}

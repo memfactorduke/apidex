@@ -1,0 +1,52 @@
+{
+  "id": "coinbase",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.coinbase.com (or product-specific CDP Advanced Trade/Exchange URLs; v2 is only one of several surfaces)",
+      "source": "https://docs.cdp.coinbase.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Multiple: JWT/CDP API keys (Advanced Trade), OAuth2, and Coinbase App API key authentication \u2014 not simply \"apiKey\" via X-Api-Key alone",
+      "source": "https://docs.cdp.coinbase.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per product (e.g. public endpoints often ~10 req/s; private vary by endpoint)",
+      "source": "https://docs.cdp.coinbase.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Public spot price does not require X-Api-Key; path/host for prices may still work under Coinbase App API but auth header is wrong for public data",
+      "source": "https://docs.cdp.coinbase.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/"
+    }
+  },
+  "notes": "Placeholder \u2014 researching live docs now."
+}

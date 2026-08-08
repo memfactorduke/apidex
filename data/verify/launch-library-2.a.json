@@ -1,0 +1,52 @@
+{
+  "id": "launch-library-2",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thespacedevs.com/llapi"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ll.thespacedevs.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thespacedevs.com/llapi"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thespacedevs.com/llapi"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "15 req/hour (anonymous); free signup unlocks higher limits (documented on The Space Devs site)",
+      "source": "https://thespacedevs.com/llapi"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Anonymous: 15 requests per hour; authenticated free users get higher limits (exact numbers on The Space Devs LLAPI page)",
+      "source": "https://thespacedevs.com/llapi"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ll.thespacedevs.com/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thespacedevs.com/llapi"
+    }
+  },
+  "notes": "Free-tier and rate limits are published (not unknown/not published). API version 2.2.0 and docs URL remain valid. CORS not documented."
+}

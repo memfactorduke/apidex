@@ -1,0 +1,52 @@
+{
+  "id": "api-ninjas-exercises",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "10,000 API calls/month platform-wide on free tier; commercial use of Exercises API still not permitted on free (premium required)",
+      "source": "https://api-ninjas.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Monthly quotas by plan (Free 10,000; higher plans per pricing page). Requests denied after quota; no published per-second rate limit.",
+      "source": "https://api-ninjas.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live sources now."
+}

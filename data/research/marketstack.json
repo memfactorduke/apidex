@@ -1,0 +1,46 @@
+{
+  "id": "marketstack",
+  "status": "operational",
+  "name": "Marketstack",
+  "category": "finance",
+  "tagline": "Real-time, intraday, and historical stock market data API for global exchanges.",
+  "description": "Marketstack is a RESTful JSON API for stock market data, covering real-time, intraday, and end-of-day historical prices across tens of thousands of tickers and 70+ global exchanges. Powered by apilayer, it exposes endpoints for EOD data, tickers, exchanges, splits, dividends, and related metadata. Developers authenticate with a free or paid API access key and call HTTPS GET endpoints under api.marketstack.com.",
+  "base_url": "https://api.marketstack.com/v1",
+  "docs_url": "https://marketstack.com/documentation",
+  "signup_url": "https://marketstack.com/signup/free",
+  "auth": {
+    "type": "apiKey",
+    "details": "API access key passed as the access_key query parameter on every request; self-serve free signup at marketstack.com/signup/free."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "100 requests/month; end-of-day data only; up to 1 year of history (Free plan).",
+    "paid_plans": "Basic ~10,000 req/mo; Professional ~100,000 req/mo; Business higher tiers; custom enterprise available (see pricing page for current USD)."
+  },
+  "rate_limits": "Plan monthly request quotas (e.g. Free 100/mo, Basic 10,000/mo, Professional 100,000/mo); per-second/minute burst limits not clearly published on pricing.",
+  "example": {
+    "request": "curl \"https://api.marketstack.com/v1/eod/latest?access_key=YOUR_API_KEY&symbols=AAPL\"",
+    "response_snippet": "{\n  \"pagination\": { \"limit\": 100, \"offset\": 0, \"count\": 1, \"total\": 1 },\n  \"data\": [{\n    \"open\": 129.8,\n    \"high\": 133.04,\n    \"low\": 129.47,\n    \"close\": 132.995,\n    \"volume\": 106686703.0,\n    \"adj_high\": 133.04,\n    \"adj_low\": 129.47,\n    \"adj_close\": 132.995,\n    \"adj_open\": 129.8,\n    \"adj_volume\": 106686703.0,\n    \"split_factor\": 1.0,\n    \"dividend\": 0.0,\n    \"symbol\": \"AAPL\",\n    \"exchange\": \"XNAS\",\n    \"date\": \"2021-04-09T00:00:00+0000\"\n  }]\n}"
+  },
+  "use_cases": [
+    "get latest end-of-day OHLCV for one or more stock symbols",
+    "fetch historical EOD prices for a ticker over a date range",
+    "list stock tickers and exchange metadata",
+    "retrieve stock splits and dividend history for a symbol",
+    "look up exchange trading hours, currencies, and timezones"
+  ],
+  "sources": [
+    "https://marketstack.com/",
+    "https://marketstack.com/pricing",
+    "https://marketstack.com/documentation",
+    "https://marketstack.com/faq",
+    "https://docs.apilayer.com/marketstack/docs/api-documentation",
+    "https://status.marketstack.com"
+  ],
+  "researcher_confidence": "high"
+}

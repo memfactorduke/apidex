@@ -1,0 +1,52 @@
+{
+  "id": "urlscan-io",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlscan.io/docs/api/"
+    }
+  },
+  "notes": "Docs-first verification against official urlscan.io API docs and pricing. Base URL, auth (API-Key header), scan example, and description match. Free tier exists; free_tier_limits remains correctly marked unknown. Rate limits described as not fully published in entry is acceptable given docs mention quotas per plan without inventing numbers. CORS left unknown."
+}

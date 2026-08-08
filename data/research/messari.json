@@ -1,0 +1,41 @@
+{
+  "id": "messari",
+  "status": "operational",
+  "name": "Messari",
+  "category": "crypto",
+  "tagline": "Crypto market data and research API for assets, metrics, and on-chain intelligence.",
+  "description": "Messari provides a developer API for cryptocurrency market data, asset profiles, quantitative metrics, news, and research. Developers use it to pull token fundamentals, price/market stats, and project intelligence into apps, dashboards, and agents. Access is typically API-key authenticated against Messari's documented API base URL.",
+  "base_url": "https://api.messari.io",
+  "docs_url": "https://docs.messari.io",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header/query scheme verified from official docs when available."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.messari.io/api/v1/assets\" -H \"x-messari-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":{\"elapsed\":0,\"timestamp\":\"...\"},\"data\":[{\"id\":\"...\",\"symbol\":\"BTC\",\"name\":\"Bitcoin\",...}]}"
+  },
+  "use_cases": [
+    "get crypto asset profile and market metrics by symbol",
+    "list top assets by market cap for a dashboard",
+    "pull historical price or metric time series for a token",
+    "fetch crypto news headlines for market monitoring"
+  ],
+  "sources": [
+    "https://messari.io",
+    "https://docs.messari.io"
+  ],
+  "researcher_confidence": "low"
+}

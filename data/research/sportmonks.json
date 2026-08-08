@@ -1,0 +1,38 @@
+{
+  "id": "sportmonks",
+  "status": "operational",
+  "name": "Sportmonks",
+  "category": "sports",
+  "tagline": "Commercial football and multi-sport data platform with self-serve plans",
+  "description": "Sportmonks provides commercial sports data APIs covering football and multi-sport feeds, with self-serve plans and developer documentation for fixtures, standings, livescores, and related sports data.",
+  "base_url": "https://api.sportmonks.com",
+  "docs_url": "https://docs.sportmonks.com",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.sportmonks.com/v3/football/leagues?api_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[]}"
+  },
+  "use_cases": [
+    "get football fixtures for a league",
+    "get live scores for matches"
+  ],
+  "sources": [
+    "https://www.sportmonks.com"
+  ],
+  "researcher_confidence": "low"
+}

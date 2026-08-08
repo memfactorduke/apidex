@@ -1,0 +1,40 @@
+{
+  "id": "voyage-ai",
+  "status": "operational",
+  "name": "Voyage AI",
+  "category": "ai-ml",
+  "tagline": "High-quality text embeddings and reranking for retrieval applications",
+  "description": "Voyage AI provides embedding and reranking APIs optimized for retrieval-augmented generation (RAG), semantic search, and document ranking. Developers send text or multimodal inputs and receive dense vector embeddings or relevance scores for ranking candidate documents.",
+  "base_url": "https://api.voyageai.com/v1",
+  "docs_url": "https://docs.voyageai.com/",
+  "signup_url": "https://dash.voyageai.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; self-serve signup at dash.voyageai.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.voyageai.com/v1/embeddings -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"input\": [\"hello world\"], \"model\": \"voyage-3\"}'",
+    "response_snippet": "{\"object\":\"list\",\"data\":[{\"object\":\"embedding\",\"embedding\":[0.01,-0.02],\"index\":0}],\"model\":\"voyage-3\",\"usage\":{\"total_tokens\":2}}"
+  },
+  "use_cases": [
+    "generate text embeddings for semantic search",
+    "rerank retrieved documents by relevance",
+    "embed documents for RAG pipelines",
+    "compare query and document similarity with embeddings"
+  ],
+  "sources": [
+    "https://docs.voyageai.com/"
+  ],
+  "researcher_confidence": "low"
+}

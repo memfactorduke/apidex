@@ -1,0 +1,52 @@
+{
+  "id": "shopify",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://shopify.dev/docs/api/admin"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://shopify.dev/docs/api/admin"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://shopify.dev/docs/api/usage/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://shopify.dev/docs/api/admin"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://shopify.dev/docs/api/admin"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://shopify.dev/docs/api/usage/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://shopify.dev/docs/api/admin-rest"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://shopify.dev/docs/api/admin"
+    }
+  },
+  "notes": "Verified against Shopify official docs 2026. Base URL pattern, OAuth/access tokens, rate limits (REST leaky bucket 2/s, GraphQL cost-based), and free tier with store plans all match. CORS typically not for browser direct calls. Example curl structure valid."
+}

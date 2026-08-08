@@ -1,0 +1,46 @@
+{
+  "id": "nyc-open-data",
+  "status": "operational",
+  "name": "NYC Open Data API",
+  "category": "government-open-data",
+  "tagline": "Socrata-powered API for New York City public datasets and city records.",
+  "description": "NYC Open Data exposes thousands of City of New York datasets through a SODA (Socrata Open Data API) interface on data.cityofnewyork.us. Developers can query JSON, CSV, and other formats for 311 complaints, taxi trips, inspections, permits, and more. Authentication is optional for light public use and recommended via app token for higher throughput.",
+  "base_url": "https://data.cityofnewyork.us/resource",
+  "docs_url": "https://dev.socrata.com/foundry/data.cityofnewyork.us/",
+  "signup_url": "https://data.cityofnewyork.us/profile/app_tokens",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional Socrata app token via X-App-Token header (or $$app_token query param); self-serve from developer profile. Without a token, low anonymous throttling applies."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; higher throughput with free app token (exact quotas not published as a paid product).",
+    "paid_plans": null
+  },
+  "rate_limits": "Without app token: very low anonymous limits. With app token: substantially higher (historically ~1,000 requests/hour per IP without token; with token much higher \u2014 confirm current Socrata limits).",
+  "example": {
+    "request": "curl -H \"X-App-Token: YOUR_API_KEY\" \"https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=5\"",
+    "response_snippet": "[{\"unique_key\":\"...\",\"created_date\":\"2024-01-15T10:30:00.000\",\"agency\":\"NYPD\",\"complaint_type\":\"Noise - Residential\",\"borough\":\"MANHATTAN\"}]"
+  },
+  "use_cases": [
+    "query recent 311 service requests by borough or complaint type",
+    "fetch restaurant inspection grades and scores",
+    "pull taxi or for-hire vehicle trip sample records",
+    "list building permits or housing violations for an address",
+    "export open dataset rows as JSON or CSV for analysis"
+  ],
+  "sources": [
+    "https://data.cityofnewyork.us/",
+    "https://dev.socrata.com/",
+    "https://dev.socrata.com/docs/app-tokens.html"
+  ],
+  "researcher_confidence": "medium"
+}

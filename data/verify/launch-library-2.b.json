@@ -1,0 +1,52 @@
+{
+  "id": "launch-library-2",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://ll.thespacedevs.com/2.3.0",
+      "source": "https://ll.thespacedevs.com/2.3.0/schema/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ll.thespacedevs.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/TheSpaceDevs/Tutorials/blob/main/faqs/faq_LL2.md"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thespacedevs.com/llapi"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "15 requests per hour for non-authenticated (per IP); higher limits require a Patreon-backed API token",
+      "source": "https://ll.thespacedevs.com/2.3.0/schema/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "15 calls/hour unauthenticated; higher via Patreon API key (e.g. supporter tiers advertise ~210/hour)",
+      "source": "https://thespacedevs.com/llapi"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=1"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=1\"",
+      "source": "https://github.com/TheSpaceDevs/Tutorials/blob/main/faqs/faq_LL2.md"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thespacedevs.com/llapi"
+    }
+  },
+  "notes": "v2.2.0 is officially Unsupported/deprecated; current supported production API is 2.3.0 with plural paths (/launches/). Free tier is 15/hour, not unknown. Optional tokens come from Patreon, not free signup. CORS is open (*)."
+}

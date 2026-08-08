@@ -1,0 +1,41 @@
+{
+  "id": "cohere",
+  "status": "operational",
+  "name": "Cohere",
+  "category": "ai-ml",
+  "tagline": "Enterprise-grade large language models and embeddings via API",
+  "description": "Cohere provides a REST API for text generation, chat, embeddings, reranking, and classification using its Command and Embed model families. Developers authenticate with an API key and call production endpoints for RAG, semantic search, and generative applications.",
+  "base_url": "https://api.cohere.com",
+  "docs_url": "https://docs.cohere.com",
+  "signup_url": "https://dashboard.cohere.com/welcome/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (or X-Api-Key), self-serve from dashboard"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.cohere.com/v2/chat -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"command-r-plus\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"...\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"Hello! How can I help you today?\"}]}}"
+  },
+  "use_cases": [
+    "generate chat completions with Command models",
+    "create text embeddings for semantic search",
+    "rerank search results by relevance",
+    "classify text into custom labels"
+  ],
+  "sources": [
+    "https://docs.cohere.com",
+    "https://api.cohere.com"
+  ],
+  "researcher_confidence": "low"
+}

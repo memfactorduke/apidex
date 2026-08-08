@@ -1,0 +1,52 @@
+{
+  "id": "themealdb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themealdb.com/docs_api_guide.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themealdb.com/api.php"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themealdb.com/docs_api_guide.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themealdb.com/api.php"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free test key \"1\" for development/education; free full-list capped at 100 items. Premium (~$10 lifetime via PayPal, not primarily Patreon) unlocks V2 endpoints (multi-ingredient, random selection, latest), full listing, and a production key\u2014not mainly higher rate limits.",
+      "source": "https://www.themealdb.com/api.php"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No limits; unlimited usage (official FAQ)",
+      "source": "https://www.themealdb.com/faq.php"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themealdb.com/api.php"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themealdb.com/api.php"
+    }
+  },
+  "notes": "API is live (HTTP 200, Arrabiata example matches). Failures: rate_limits published as unlimited in FAQ (not \"not published\"); CORS is open (*), not unknown; free_tier_limits overstates Patreon\u2014current upgrade is PayPal ~$10 lifetime for V2/production features."
+}

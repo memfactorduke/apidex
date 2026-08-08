@@ -1,0 +1,52 @@
+{
+  "id": "amtrak-statusmaps",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://maps.amtrak.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://maps.amtrak.com/ (no official developer docs; www.amtrak.com is a consumer site, not API documentation)",
+      "source": "https://www.amtrak.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/amtraker/amtraker"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Endpoint path/params appear outdated; historical reverse-engineered paths may no longer match. Verify against live maps.amtrak.com traffic or community reverse-engineering (e.g. amtraker).",
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "No official Amtrak developer API for StatusMaps. maps.amtrak.com exists as map infrastructure; endpoints are reverse-engineered, undocumented, and unstable. docs_url should not point at the consumer homepage as API docs. Automated curl: base 301, docs 0."
+}

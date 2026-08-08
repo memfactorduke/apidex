@@ -1,0 +1,52 @@
+{
+  "id": "amtrak-statusmaps",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://maps.amtrak.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.amtrak.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://maps.amtrak.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://maps.amtrak.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://maps.amtrak.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://maps.amtrak.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Endpoint path and response shape are reverse-engineered and may have changed; no official docs. Automated curl checks and community reports indicate StatusMaps endpoints are unstable/anti-bot protected \u2014 treat example as historical, not authoritative.",
+      "source": "https://maps.amtrak.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://maps.amtrak.com/"
+    }
+  },
+  "notes": "Entry correctly frames this as unofficial reverse-engineered StatusMaps, not a supported developer API. docs_url is weak (homepage only). Example request is the weakest claim \u2014 path may be outdated/blocked."
+}

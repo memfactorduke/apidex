@@ -1,0 +1,52 @@
+{
+  "id": "numbers-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://numbersapi.com",
+      "source": "https://numbersapi.com"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://numbersapi.com",
+      "source": "https://numbersapi.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://numbersapi.com/42?json\"",
+      "source": "https://numbersapi.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://numbersapi.com"
+    }
+  },
+  "notes": "HTTPS is the preferred base; HTTP may redirect. Entry used http:// while listing https:true. Site is live; free, no auth."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "lastfm",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/rest"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/tos"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/tos"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/tos"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/show/artist.getInfo"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/intro"
+    }
+  },
+  "notes": "Verified against official Last.fm API docs and ToS (2026). Base URL, method-query pattern, JSON format, free non-commercial keys, Reasonable Usage Cap, and rate-limit guidance all match sources. CORS confirmed via live OPTIONS/preflight or documented browser access patterns."
+}

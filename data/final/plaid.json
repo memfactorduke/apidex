@@ -1,0 +1,96 @@
+{
+  "id": "plaid",
+  "status": "operational",
+  "name": "Plaid API",
+  "category": "ecommerce-payments",
+  "tagline": "Connect bank accounts, verify identity, and move money via financial APIs",
+  "description": "Plaid is a financial data platform that lets apps securely link bank accounts, fetch balances and transactions, verify identity and income, and initiate payments. Developers integrate via REST APIs with Link for account connection and product endpoints for data and money movement.",
+  "base_url": "https://production.plaid.com",
+  "docs_url": "https://plaid.com/docs/",
+  "signup_url": "https://dashboard.plaid.com/signup",
+  "auth": {
+    "type": "other",
+    "details": "Client ID and secret in JSON body (client_id, secret); product-specific access tokens after Link"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://production.plaid.com/accounts/get -H 'Content-Type: application/json' -d '{\"client_id\":\"YOUR_CLIENT_ID\",\"secret\":\"YOUR_API_KEY\",\"access_token\":\"access-sandbox-xxx\"}'",
+    "response_snippet": "{\"accounts\":[{\"account_id\":\"...\",\"balances\":{\"available\":100,\"current\":110},\"name\":\"Checking\"}],\"item\":{\"item_id\":\"...\"}}"
+  },
+  "use_cases": [
+    "link a user's bank account",
+    "fetch account balances",
+    "list recent transactions",
+    "verify bank account ownership",
+    "initiate ACH payments"
+  ],
+  "sources": [
+    "https://plaid.com/docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

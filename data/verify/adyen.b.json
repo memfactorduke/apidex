@@ -1,0 +1,52 @@
+{
+  "id": "adyen",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Versioned Checkout test base is region-dependent; docs currently document e.g. https://checkout-test.adyen.com/v71 as a test endpoint pattern but live/base URLs and current major version must be taken from Adyen's environment/URL docs \u2014 verify against https://docs.adyen.com/api-explorer/ and https://docs.adyen.com/development-resources/live-endpoints (v71 may not be the only/current version; base should not hardcode a single version if the directory expects a stable root).",
+      "source": "https://docs.adyen.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.adyen.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.adyen.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.adyen.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.adyen.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.adyen.com/"
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after live verification."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "covalent",
+  "status": "operational",
+  "name": "Covalent",
+  "category": "crypto",
+  "tagline": "Unified multichain blockchain data API for wallets, tokens, NFTs, and on-chain analytics",
+  "description": "Covalent (covalenthq.com) provides a unified REST API that indexes blockchain data across many networks so developers can query balances, transactions, token transfers, NFTs, and historical prices without running their own nodes. Typical usage is authenticated API-key requests against a versioned HTTPS base URL for wallet portfolio, activity, and token metadata endpoints.",
+  "base_url": "https://api.covalenthq.com/v1",
+  "docs_url": "https://www.covalenthq.com/docs/api/",
+  "signup_url": "https://www.covalenthq.com/platform/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization Bearer header or query parameter (self-serve signup on Covalent platform)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.covalenthq.com/v1/eth-mainnet/address/0x.../balances_v2/?key=YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":{\"address\":\"0x...\",\"updated_at\":\"...\",\"items\":[{\"contract_decimals\":18,\"contract_name\":\"Ether\",\"balance\":\"...\"}]}}"
+  },
+  "use_cases": [
+    "get token balances for a wallet address on a chain",
+    "list recent transactions for an address",
+    "fetch NFT holdings for a wallet",
+    "get historical token prices",
+    "query token transfer activity across chains"
+  ],
+  "sources": [
+    "https://www.covalenthq.com/",
+    "https://www.covalenthq.com/docs/api/"
+  ],
+  "researcher_confidence": "low"
+}

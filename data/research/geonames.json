@@ -1,0 +1,42 @@
+{
+  "id": "geonames",
+  "status": "operational",
+  "name": "GeoNames",
+  "category": "geo-maps",
+  "tagline": "Global place-name and geospatial web services for cities, elevations, and postal codes",
+  "description": "GeoNames provides free and commercial web services for geographic data: place search, reverse geocoding, postal codes, elevations, timezone lookup, and more, backed by a large open gazetteer of places worldwide.",
+  "base_url": "https://secure.geonames.org",
+  "docs_url": "https://www.geonames.org/export/web-services.html",
+  "signup_url": "https://www.geonames.org/login",
+  "auth": {
+    "type": "apiKey",
+    "details": "Username query parameter (username=YOUR_USERNAME); free account required; enable free web services in account settings"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://secure.geonames.org/searchJSON?q=London&maxRows=1&username=YOUR_API_KEY\"",
+    "response_snippet": "{\"totalResultsCount\":1,\"geonames\":[{\"name\":\"London\",\"countryName\":\"United Kingdom\",\"lat\":\"51.50853\",\"lng\":\"-0.12574\"}]}"
+  },
+  "use_cases": [
+    "search places by name",
+    "reverse geocode coordinates to place names",
+    "look up timezone for a location",
+    "get elevation for coordinates",
+    "find postal codes for a place"
+  ],
+  "sources": [
+    "https://www.geonames.org/export/web-services.html"
+  ],
+  "researcher_confidence": "low"
+}

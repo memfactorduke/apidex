@@ -1,0 +1,52 @@
+{
+  "id": "jokeapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://v2.jokeapi.dev/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://v2.jokeapi.dev/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://v2.jokeapi.dev/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://v2.jokeapi.dev/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://v2.jokeapi.dev/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "120 requests per minute (default public rate limit)",
+      "source": "https://v2.jokeapi.dev/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes",
+      "source": "https://v2.jokeapi.dev/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://v2.jokeapi.dev/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://v2.jokeapi.dev/"
+    }
+  },
+  "notes": "Rate limits and CORS are documented (120/min; CORS enabled). Other fields match official docs. API is operational."
+}

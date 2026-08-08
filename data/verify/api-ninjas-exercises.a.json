@@ -1,0 +1,52 @@
+{
+  "id": "api-ninjas-exercises",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "50,000 API calls/month platform-wide on free tier (not 3,000). Exercises API commercial use restricted on free tier \u2014 premium required for commercial.",
+      "source": "https://api-ninjas.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Monthly quotas by plan (Free 50,000; Developer 100,000; Business 1,000,000; Professional 10,000,000). Exact plan call volumes and prices should be verified on pricing page; no published per-second rate limit found.",
+      "source": "https://api-ninjas.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-ninjas.com/api/exercises"
+    }
+  },
+  "notes": "Free tier quota claim of 3,000/month is outdated; pricing page shows higher free allowance. Paid plan price ranges in entry were not fully verified line-by-line. CORS not documented."
+}

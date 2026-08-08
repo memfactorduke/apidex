@@ -1,0 +1,100 @@
+{
+  "id": "spotify",
+  "status": "operational",
+  "name": "Spotify Web API",
+  "category": "entertainment",
+  "tagline": "Programmatic access to Spotify catalog, playback, and user library data.",
+  "description": "Spotify Web API lets developers query music metadata, manage playlists, control playback on Spotify clients, and access user library and recommendations. OAuth 2.0 is required for user data and most write actions; client credentials cover catalog-only reads. Official docs and developer dashboard are the source of truth for scopes, endpoints, and app registration.",
+  "base_url": "https://api.spotify.com/v1",
+  "docs_url": "https://developer.spotify.com/documentation/web-api",
+  "signup_url": "https://developer.spotify.com/dashboard",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 Authorization Code (with PKCE recommended) or Client Credentials; Bearer token in Authorization header. Register an app in the Spotify Developer Dashboard for client ID/secret."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free app registration; commercial/extended use subject to Spotify Developer Terms and quota (confirm on dashboard)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as fixed global numbers; 429 with Retry-After when exceeded; per-app quotas may apply",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl\"",
+    "response_snippet": "{\"id\":\"11dFghVXANMlKmJXsNCbNl\",\"name\":\"Cut To The Feeling\",\"type\":\"track\",\"uri\":\"spotify:track:11dFghVXANMlKmJXsNCbNl\",\"artists\":[{\"name\":\"Carly Rae Jepsen\"}],\"album\":{\"name\":\"Cut To The Feeling\"},\"duration_ms\":207959}"
+  },
+  "use_cases": [
+    "search tracks, albums, and artists by name",
+    "get track metadata and audio features",
+    "list and manage a user's playlists",
+    "get currently playing track for a user",
+    "create a playlist and add tracks",
+    "fetch artist top tracks or related artists"
+  ],
+  "sources": [
+    "https://developer.spotify.com/documentation/web-api",
+    "https://developer.spotify.com/documentation/web-api/concepts/api-calls",
+    "https://developer.spotify.com/documentation/web-api/concepts/authorization",
+    "https://developer.spotify.com/documentation/web-api/concepts/rate-limits",
+    "https://developer.spotify.com/dashboard"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

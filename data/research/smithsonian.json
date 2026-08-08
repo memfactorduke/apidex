@@ -1,0 +1,41 @@
+{
+  "id": "smithsonian",
+  "status": "operational",
+  "name": "Smithsonian Open Access",
+  "category": "education-reference",
+  "tagline": "Search Smithsonian museum collections and open-access media.",
+  "description": "Public API for searching Smithsonian museum collections and open-access media across SI units. Developers can query object metadata, images, and related resources from the Smithsonian Institution's digitized collections.",
+  "base_url": "https://api.si.edu/openaccess/api/v1.0",
+  "docs_url": "https://www.si.edu/openaccess/devtools",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required; obtain via self-serve registration on the Smithsonian Open Access developer portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.si.edu/openaccess/api/v1.0/search?q=butterfly&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"response\":{\"rows\":[{\"id\":\"...\",\"title\":\"...\",\"content\":{...}}],\"rowCount\":...,\"start\":0}}"
+  },
+  "use_cases": [
+    "search Smithsonian museum object metadata by keyword",
+    "retrieve open-access images and media for a collection object",
+    "look up records across Smithsonian units (museums, archives, libraries)",
+    "fetch structured collection data for education or research apps"
+  ],
+  "sources": [
+    "https://www.si.edu/openaccess",
+    "https://www.si.edu/openaccess/devtools"
+  ],
+  "researcher_confidence": "low"
+}

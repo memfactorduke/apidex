@@ -1,0 +1,43 @@
+{
+  "id": "kanye-rest",
+  "status": "operational",
+  "name": "Kanye Rest",
+  "category": "fun-novelty",
+  "tagline": "Simple random Kanye West quote API for demos and fun apps",
+  "description": "Kanye Rest is a free, no-auth novelty API that returns a random Kanye West quote as JSON. The classic endpoint is a single GET that responds with a short quote object, making it a common demo choice for teaching HTTP, JSON parsing, and browser fetch. It is minimal by design: one resource, no account, and no published commercial plans, so it suits prototypes and teaching\u2014not production-critical workloads.",
+  "base_url": "https://api.kanye.rest",
+  "docs_url": "https://github.com/ajzbc/kanye.rest",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public GET endpoints work without keys or signup."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free with no signup; no published request quota",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://api.kanye.rest",
+    "response_snippet": "{\"quote\":\"I feel like I'm too busy writing history to read it.\"}"
+  },
+  "use_cases": [
+    "fetch a random Kanye West quote as JSON",
+    "demo HTTP GET and JSON parsing in tutorials",
+    "seed placeholder text with celebrity quotes",
+    "test CORS-enabled browser fetch against a public API",
+    "power a novelty quote widget or bot reply"
+  ],
+  "sources": [
+    "https://github.com/ajzbc/kanye.rest",
+    "https://kanye.rest",
+    "https://api.kanye.rest"
+  ],
+  "researcher_confidence": "high"
+}

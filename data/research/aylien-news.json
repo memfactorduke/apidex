@@ -1,0 +1,41 @@
+{
+  "id": "aylien-news",
+  "status": "operational",
+  "name": "Aylien News API",
+  "category": "news-media",
+  "tagline": "AI-powered news search and analysis over a large media index",
+  "description": "Aylien News API provides programmatic access to a large news and blog index with search, clustering, entity extraction, and sentiment analysis. Developers query current and historical media coverage via authenticated REST endpoints for monitoring, research, and content intelligence workflows.",
+  "base_url": "https://api.aylien.com/news",
+  "docs_url": "https://docs.aylien.com/",
+  "signup_url": "https://aylien.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "App ID and API key (verify exact headers and signup path from current docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-AYLIEN-NewsAPI-Application-ID: YOUR_APP_ID\" -H \"X-AYLIEN-NewsAPI-Application-Key: YOUR_API_KEY\" \"https://api.aylien.com/news/stories?text=climate&language=en&per_page=1\"",
+    "response_snippet": "{\"stories\":[{\"title\":\"...\",\"body\":\"...\",\"source\":{\"name\":\"...\"}}],\"next_page_cursor\":\"...\"}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword or entity",
+    "monitor brand or topic coverage over time",
+    "extract entities and sentiment from news stories",
+    "cluster related articles on a topic"
+  ],
+  "sources": [
+    "https://aylien.com/",
+    "https://docs.aylien.com/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "tradier",
+  "status": "operational",
+  "name": "Tradier",
+  "category": "finance",
+  "tagline": "Brokerage API for market data, quotes, options chains, and live trading",
+  "description": "Tradier provides a REST API for retail and developer brokerage: real-time and delayed market data, options chains/expirations, historical quotes, streaming via WebSocket/Socket.IO, account balances, positions, orders, and live equity/options trading on US markets. Sandbox (paper) and production endpoints are separate; authentication is Bearer access tokens from developer applications. Suitable for building trading bots, portfolio dashboards, options scanners, and market-data tools.",
+  "base_url": "https://api.tradier.com/v1",
+  "docs_url": "https://documentation.tradier.com/",
+  "signup_url": "https://developer.tradier.com/signup",
+  "auth": {
+    "type": "other",
+    "details": "Bearer access token in Authorization header (Authorization: Bearer YOUR_ACCESS_TOKEN). Create an app in the Tradier Developer portal (sandbox and/or production); token is issued per environment. OAuth-style account linking available for multi-user apps."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Sandbox free for development; production brokerage/API access requires a funded Tradier brokerage account\u2014market-data and trading fees follow account/subscription plans (exact free request caps not published as a simple req/day free tier)",
+    "paid_plans": "Brokerage commissions and optional market-data subscriptions; details on Tradier pricing and developer portal\u2014confirm current tiers on site"
+  },
+  "rate_limits": "not fully published as a single public table; some endpoints document practical limits\u2014treat as account/plan-dependent; not published in aggregate",
+  "example": {
+    "request": "curl -X GET \"https://api.tradier.com/v1/markets/quotes?symbols=AAPL\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"quotes\":{\"quote\":{\"symbol\":\"AAPL\",\"description\":\"Apple Inc\",\"exch\":\"Q\",\"type\":\"stock\",\"last\":227.52,\"change\":1.23,\"change_percentage\":0.54,\"volume\":45231000,\"average_volume\":55000000,\"last_volume\":100,\"trade_date\":1723075200000,\"open\":226.10,\"high\":228.00,\"low\":225.50,\"close\":null,\"prevclose\":226.29,\"bid\":227.50,\"ask\":227.55,\"bidsize\":2,\"asksize\":1,\"week_52_high\":237.23,\"week_52_low\":164.08}}}"
+  },
+  "use_cases": [
+    "get real-time or delayed stock quotes for symbols",
+    "fetch options chains and expirations for a ticker",
+    "place or cancel equity and options orders",
+    "list account balances, positions, and order history",
+    "stream market quotes or trade events over WebSocket",
+    "pull historical OHLCV bars for backtesting"
+  ],
+  "sources": [
+    "https://documentation.tradier.com/",
+    "https://developer.tradier.com/",
+    "https://www.tradier.com/"
+  ],
+  "researcher_confidence": "medium"
+}

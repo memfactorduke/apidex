@@ -1,0 +1,40 @@
+{
+  "id": "perplexity",
+  "status": "operational",
+  "name": "Perplexity API",
+  "category": "ai-ml",
+  "tagline": "Search-grounded LLM API with real-time web results and citations",
+  "description": "Perplexity API provides OpenAI-compatible chat completions powered by Sonar models that ground answers in live web search with citations. Developers call a REST endpoint with an API key for grounded Q&A, research, and retrieval-augmented generation without managing their own search stack.",
+  "base_url": "https://api.perplexity.ai",
+  "docs_url": "https://docs.perplexity.ai",
+  "signup_url": "https://www.perplexity.ai/settings/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; create keys in Perplexity account settings (self-serve)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.perplexity.ai/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"sonar\",\"messages\":[{\"role\":\"user\",\"content\":\"What is the capital of France?\"}]}'",
+    "response_snippet": "{\"id\":\"...\",\"model\":\"sonar\",\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"Paris is the capital of France.\"},\"finish_reason\":\"stop\"}],\"citations\":[\"https://...\"]}"
+  },
+  "use_cases": [
+    "answer a factual question with live web grounding and citations",
+    "research a current topic and return sources",
+    "summarize recent news on a company or product",
+    "compare products using up-to-date web information"
+  ],
+  "sources": [
+    "https://docs.perplexity.ai"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "nhl-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-web.nhle.com/v1/scoreboard/now"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-web.nhle.com/v1/scoreboard/now"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "no (Access-Control-Allow-Origin only for https://www.nhl.com; third-party browser origins blocked)",
+      "source": "https://github.com/vitejs/vite/discussions/15185"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    }
+  },
+  "notes": "API is live (2026 data). CORS is the hard fail: Origin https://www.nhl.com gets ACAO; other origins get none. Entry said unknown. Auth none, free/no published limits, /v1/scoreboard/now, and community docs all check out. Not an official developer product; ToS still relevant for commercial scraping."
+}

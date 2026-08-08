@@ -1,0 +1,44 @@
+{
+  "id": "auth0",
+  "status": "operational",
+  "name": "Auth0",
+  "category": "security-identity",
+  "tagline": "Identity platform with OAuth/OIDC, MFA, and social login APIs for authentication and user management.",
+  "description": "Auth0 is a cloud identity platform that provides authentication, authorization, and user management via OAuth 2.0, OpenID Connect, MFA, social logins, and a Management API. Developers integrate Auth0 into apps to handle login, signup, passwordless flows, and role-based access without building identity infrastructure. Tenant-specific API hosts and the Authentication/Management APIs support production identity workloads.",
+  "base_url": "https://YOUR_DOMAIN.auth0.com",
+  "docs_url": "https://auth0.com/docs",
+  "signup_url": "https://auth0.com/signup",
+  "auth": {
+    "type": "oauth2",
+    "details": "Authentication API: public/confidential client credentials and tokens (OAuth 2.0/OIDC). Management API: Bearer access token (Machine-to-Machine client credentials) in Authorization header. Self-serve signup at auth0.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan available (limits vary by plan; check pricing for MAU/feature caps \u2014 verify current numbers on pricing page)",
+    "paid_plans": "Essentials, Professional, Enterprise \u2014 usage-based (MAUs and features); see auth0.com/pricing"
+  },
+  "rate_limits": "Published per-endpoint Management API rate limits (tenant-dependent); Authentication API has separate limits \u2014 see Auth0 rate limit docs",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://YOUR_DOMAIN.auth0.com/api/v2/users?per_page=10\"",
+    "response_snippet": "[{\"user_id\":\"auth0|507f1f77bcf86cd799439011\",\"email\":\"john.doe@gmail.com\",\"email_verified\":false,\"name\":\"John Doe\",\"created_at\":\"2019-01-01T00:00:00.000Z\"}]"
+  },
+  "use_cases": [
+    "authenticate users with OAuth/OIDC login",
+    "manage users via Management API",
+    "enable social login providers",
+    "enforce MFA and passwordless flows",
+    "issue and validate access tokens",
+    "configure tenant applications and connections"
+  ],
+  "sources": [
+    "https://auth0.com/docs",
+    "https://auth0.com/pricing",
+    "https://auth0.com/docs/api"
+  ],
+  "researcher_confidence": "medium"
+}

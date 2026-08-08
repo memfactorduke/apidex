@@ -1,0 +1,52 @@
+{
+  "id": "cheapshark",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apidocs.cheapshark.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apidocs.cheapshark.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apidocs.cheapshark.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apidocs.cheapshark.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apidocs.cheapshark.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limited (HTTP 429 when exceeded); exact numeric limits not published. Docs require a descriptive User-Agent; excessive catalog scraping can lead to permanent blocks.",
+      "source": "https://apidocs.cheapshark.com/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apidocs.cheapshark.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "CheapShark tracks digital PC game prices across stores including Steam, GreenManGaming, Fanatical, GOG and others; docs do not list Epic as a tracked store. API is free (must use CheapShark deal links); no API key. Supports deals, games, stores, and email price alerts.",
+      "source": "https://apidocs.cheapshark.com/"
+    }
+  },
+  "notes": "Docs confirm free public API at /api/1.0, no key, User-Agent required, rate limits with 429 (limits unpublished). Description overclaims Epic; rate_limits 'not published' understates that limits exist. CORS left unknown without live check."
+}

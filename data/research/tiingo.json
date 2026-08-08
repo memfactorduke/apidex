@@ -1,0 +1,50 @@
+{
+  "id": "tiingo",
+  "status": "operational",
+  "name": "Tiingo",
+  "category": "finance",
+  "tagline": "Enterprise-grade market data API for equities, crypto, news, and fundamentals",
+  "description": "Tiingo is a financial markets data platform offering REST and WebSocket APIs for end-of-day (EOD) stock prices, IEX real-time/intraday data, overnight BOATS prices, cryptocurrency prices across many exchanges, U.S. fundamentals, and institutional financial news. Developers authenticate with a free self-serve API token. A free Starter tier supports light usage; paid Power and commercial plans unlock higher limits and broader product access.",
+  "base_url": "https://api.tiingo.com",
+  "docs_url": "https://www.tiingo.com/documentation/",
+  "signup_url": "https://www.tiingo.com/account/api/token",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token from free self-serve signup; pass as Authorization: Token YOUR_API_KEY header (also supports ?token= query param). Token shown under Account \u2192 API."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Starter ($0): 500 unique symbols/month, 50 requests/hour, 1,000 requests/day, 1 GB bandwidth/month; includes EOD, crypto, IEX, limited news",
+    "paid_plans": "Power $30/mo ($300/yr) individual: ~109k symbols/mo, 10k req/hr, 100k req/day, 40 GB/mo; commercial ~$50/mo ($499/yr); higher Start-up/Enterprise plans available"
+  },
+  "rate_limits": "Free Starter: 50 requests/hour, 1,000 requests/day; Power: 10,000 requests/hour, 100,000 requests/day (per pricing page)",
+  "example": {
+    "request": "curl -H \"Authorization: Token YOUR_API_KEY\" -H \"Content-Type: application/json\" \"https://api.tiingo.com/tiingo/daily/aapl/prices?startDate=2024-01-01&endDate=2024-01-05\"",
+    "response_snippet": "[{\"date\":\"2024-01-02T00:00:00.000Z\",\"close\":185.64,\"high\":188.44,\"low\":183.89,\"open\":187.15,\"volume\":82488700,\"adjClose\":184.06,\"adjHigh\":186.84,\"adjLow\":182.32,\"adjOpen\":185.56,\"adjVolume\":82488700,\"divCash\":0.0,\"splitFactor\":1.0}]"
+  },
+  "use_cases": [
+    "fetch end-of-day OHLCV history for a US stock or ETF",
+    "get latest EOD price for one or more tickers",
+    "pull consolidated crypto prices across exchanges",
+    "stream or poll IEX real-time equity quotes",
+    "search financial news articles for a ticker or topic",
+    "retrieve U.S. fundamental indicators for equities"
+  ],
+  "sources": [
+    "https://www.tiingo.com/",
+    "https://www.tiingo.com/documentation/",
+    "https://www.tiingo.com/documentation/end-of-day",
+    "https://www.tiingo.com/documentation/general/connecting",
+    "https://www.tiingo.com/about/pricing",
+    "https://www.tiingo.com/blog/best-stock-price-api/",
+    "https://www.tiingo.com/blog/overnight-stock-data-api/",
+    "https://www.tiingo.com/account/api/token"
+  ],
+  "researcher_confidence": "high"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "thecocktaildb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thecocktaildb.com/api.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thecocktaildb.com/api.php"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thecocktaildb.com/AGENTS.md"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thecocktaildb.com/api.php"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free test key \"1\" for development/educational use; production/public app-store use requires Premium (~$10/\u00a310 one-off via PayPal). Free list capped at 100 items; Premium unlocks multi-ingredient filter, popular/latest, full DB listing, image APIs. (Current docs use PayPal Premium, not Patreon.)",
+      "source": "https://www.thecocktaildb.com/api.php"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Official FAQ: no limits / unlimited usage (no numeric req/min published).",
+      "source": "https://www.thecocktaildb.com/faq.php"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thecocktaildb.com/api.php"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thecocktaildb.com/api.php"
+    }
+  },
+  "notes": "API live (HTTP 200). Main docs now sell Premium via PayPal one-off ($10/\u00a310), not Patreon (FAQ still mentions Patreon). auth.details also wrongly say paid keys via Patreon. Preferred docs path may be /documentation; api.php still valid."
+}

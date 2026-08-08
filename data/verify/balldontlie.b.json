@@ -1,0 +1,52 @@
+{
+  "id": "balldontlie",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.balldontlie.io/v1",
+      "source": "https://docs.balldontlie.io"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.balldontlie.io",
+      "source": "https://docs.balldontlie.io"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.balldontlie.io"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.balldontlie.io"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 5 requests/minute; paid plans scale higher (ALL-STAR 60/min, GOAT 600/min, GOAT+ unlimited). Free tier covers NBA basic endpoints.",
+      "source": "https://www.balldontlie.io"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 5 req/min; ALL-STAR: 60/min; GOAT: 600/min; GOAT+: unlimited (per pricing page)",
+      "source": "https://www.balldontlie.io"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.balldontlie.io/v1/players\" -H \"Authorization: YOUR_API_KEY\"",
+      "source": "https://docs.balldontlie.io"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.balldontlie.io"
+    }
+  },
+  "notes": "API is operational with free + paid tiers. Auth is API key via Authorization header (not query). Docs live at docs.balldontlie.io; marketing site is www.balldontlie.io. Rate limits and free-tier limits are published. Example curl omitted required Authorization header."
+}

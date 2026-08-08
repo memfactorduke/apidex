@@ -1,0 +1,43 @@
+{
+  "id": "lichess",
+  "status": "operational",
+  "name": "Lichess",
+  "category": "games-comics",
+  "tagline": "Open chess platform API for games, puzzles, tournaments, bots, and real-time board streams",
+  "description": "Lichess is a free and open-source chess platform offering a comprehensive public API for accessing games, puzzles, tournaments, user data, and real-time board streams. The API supports both unauthenticated public endpoints and authenticated access for personal data and bot operations. Developers can build chess applications, bots, analytics tools, and real-time game clients using REST endpoints and Server-Sent Events (SSE) streams.",
+  "base_url": "https://lichess.org/api",
+  "docs_url": "https://lichess.org/api",
+  "signup_url": "https://lichess.org/account/oauth/token",
+  "auth": {
+    "type": "oauth2",
+    "details": "Personal access tokens (OAuth2) via Authorization: Bearer header. Create tokens at lichess.org/account/oauth/token. Many public endpoints work without auth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no paid plans. Rate limits apply (see rate_limits).",
+    "paid_plans": null
+  },
+  "rate_limits": "Not published as fixed numbers; docs warn to throttle and avoid hammering. Typical guidance: ~20-30 req/s for some endpoints; excess may return 429.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://lichess.org/api/account",
+    "response_snippet": "{\"id\":\"user\",\"username\":\"User\",\"perfs\":{\"blitz\":{\"games\":100,\"rating\":1500}},\"createdAt\":1234567890000,\"seenAt\":1234567890000,\"playTime\":{\"total\":3600},\"url\":\"https://lichess.org/@/User\"}"
+  },
+  "use_cases": [
+    "fetch a user's recent games and ratings",
+    "stream live game moves via board API",
+    "get daily chess puzzles",
+    "create or join arena tournaments",
+    "control a Lichess bot account",
+    "export games in PGN format"
+  ],
+  "sources": [
+    "https://lichess.org/api"
+  ],
+  "researcher_confidence": "medium"
+}

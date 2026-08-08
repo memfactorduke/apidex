@@ -1,0 +1,41 @@
+{
+  "id": "tumblr",
+  "status": "operational",
+  "name": "Tumblr",
+  "category": "social-communication",
+  "tagline": "Social blogging platform API for posts, blogs, likes, and reblogs",
+  "description": "Tumblr API provides programmatic access to blogs, posts, likes, follows, and user data on the Tumblr social blogging platform. Supports OAuth 1.0a/2.0 authentication for reading and writing content, discovering blogs, and interacting with the Tumblr ecosystem.",
+  "base_url": "https://api.tumblr.com/v2",
+  "docs_url": "https://www.tumblr.com/docs/en/api/v2",
+  "signup_url": "https://www.tumblr.com/oauth/apps",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 1.0a and OAuth 2.0; consumer key/secret from app registration at tumblr.com/oauth/apps"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.tumblr.com/v2/blog/staff.tumblr.com/info?api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"meta\":{\"status\":200,\"msg\":\"OK\"},\"response\":{\"blog\":{\"title\":\"Staff\",\"name\":\"staff\",\"total_posts\":1234,\"url\":\"https://staff.tumblr.com/\"}}}"
+  },
+  "use_cases": [
+    "fetch blog info and post counts",
+    "list recent posts from a Tumblr blog",
+    "create or reblog a post to a blog",
+    "search tagged posts across Tumblr",
+    "get authenticated user likes and following"
+  ],
+  "sources": [
+    "https://www.tumblr.com/docs/en/api/v2"
+  ],
+  "researcher_confidence": "low"
+}

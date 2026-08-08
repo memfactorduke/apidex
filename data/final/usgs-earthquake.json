@@ -1,0 +1,104 @@
+{
+  "id": "usgs-earthquake",
+  "status": "operational",
+  "name": "USGS Earthquake Catalog API",
+  "category": "science-space",
+  "tagline": "Real-time and historical global earthquake data from the USGS Earthquake Catalog",
+  "description": "USGS provides free, no-key public web services for real-time and historical earthquake data worldwide. The primary FDSN Event Web Service returns GeoJSON (and other formats) for queries by time, magnitude, location, and depth, plus real-time GeoJSON summary feeds for significant events. Data powers maps, alerts, research, and monitoring apps. No authentication is required for standard catalog and feed endpoints.",
+  "base_url": "https://earthquake.usgs.gov/fdsnws/event/1",
+  "docs_url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public FDSN Event and GeoJSON summary feed endpoints; free open government data."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv",
+    "text",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public API; no paid plans. Usage expected to be reasonable; heavy automated use may be throttled.",
+    "paid_plans": null
+  },
+  "rate_limits": "Not published as a fixed quota; USGS asks for reasonable use and may throttle abusive traffic. Prefer GeoJSON summary feeds for real-time maps over high-frequency catalog queries.",
+  "example": {
+    "request": "curl -s \"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&endtime=2024-01-02&minmagnitude=5\"",
+    "response_snippet": "{\"type\":\"FeatureCollection\",\"metadata\":{\"generated\":1704153600000,\"url\":\"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&endtime=2024-01-02&minmagnitude=5\",\"title\":\"USGS Earthquakes\",\"status\":200,\"api\":\"1.14.1\",\"count\":12},\"features\":[{\"type\":\"Feature\",\"properties\":{\"mag\":5.2,\"place\":\"84 km WSW of Kirakira, Solomon Islands\",\"time\":1704067200000,\"updated\":1704070800000,\"tz\":null,\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/...\",\"detail\":\"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=...\",\"status\":\"reviewed\",\"tsunami\":0,\"sig\":416,\"net\":\"us\",\"code\":\"7000abcd\",\"ids\":\",us7000abcd,\",\"sources\":\",us,\",\"types\":\",origin,phase-data,\",\"nst\":null,\"dmin\":null,\"rms\":0.82,\"gap\":null,\"magType\":\"mb\",\"type\":\"earthquake\",\"title\":\"M 5.2 - 84 km WSW of Kirakira, Solomon Islands\"},\"geometry\":{\"type\":\"Point\",\"coordinates\":[161.2,-10.5,35.0]},\"id\":\"us7000abcd\"}]}"
+  },
+  "use_cases": [
+    "query recent earthquakes above a magnitude threshold worldwide",
+    "fetch historical quakes in a bounding box for a date range",
+    "get real-time GeoJSON feed of significant earthquakes for a map",
+    "look up details for a specific earthquake event ID",
+    "count earthquakes matching magnitude and time filters"
+  ],
+  "sources": [
+    "https://earthquake.usgs.gov/fdsnws/event/1/",
+    "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
+    "https://earthquake.usgs.gov/data/comcat/",
+    "https://www.usgs.gov/programs/earthquake-hazards/earthquakes"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

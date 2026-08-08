@@ -1,0 +1,52 @@
+{
+  "id": "bls",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.bls.gov/developers/api_signature_v2.htm"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.bls.gov/developers/api_signature_v2.htm"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.bls.gov/developers/api_faqs.htm"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.bls.gov/developers/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.bls.gov/developers/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.bls.gov/developers/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.bls.gov/developers/api_signature_v2.htm"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.bls.gov/developers/"
+    }
+  },
+  "notes": "Official BLS pages confirm base_url, docs, optional registration key, free limits (25/500 queries/day), and example POST shape. Automated 503/403 look like bot-blocking, not dead endpoints. CORS not documented."
+}

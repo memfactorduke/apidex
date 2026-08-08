@@ -1,0 +1,52 @@
+{
+  "id": "pubchem",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pubchem.ncbi.nlm.nih.gov/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No more than 5 requests per second; dynamic throttling and concurrent request limits also apply (see NCBI usage policies and PUG-REST docs)",
+      "source": "https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest"
+    }
+  },
+  "notes": "Rate limits are published (not \"not published\"): NCBI documents ~5 req/s and related throttling for programmatic access. Other core fields match current PUG-REST docs."
+}

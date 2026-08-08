@@ -1,0 +1,42 @@
+{
+  "id": "tomtom",
+  "status": "operational",
+  "name": "TomTom Maps",
+  "category": "geo-maps",
+  "tagline": "Global maps, search, routing, and traffic APIs for location apps",
+  "description": "TomTom Maps is a commercial location platform offering map display, geocoding, places search, routing, traffic, and EV services via REST APIs. Developers use API keys with HTTPS endpoints under api.tomtom.com for navigation, logistics, and location-aware products.",
+  "base_url": "https://api.tomtom.com",
+  "docs_url": "https://developer.tomtom.com/maps-api",
+  "signup_url": "https://developer.tomtom.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key as query param key= or header; free self-serve developer account"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free trial credits; concrete free quotas vary by product \u2014 verify on pricing page",
+    "paid_plans": "Pay-as-you-go and enterprise plans via TomTom developer portal"
+  },
+  "rate_limits": "Product-specific QPS and daily limits; published in developer portal",
+  "example": {
+    "request": "curl \"https://api.tomtom.com/search/2/geocode/Amsterdam.json?key=YOUR_API_KEY\"",
+    "response_snippet": "{\"summary\":{\"query\":\"Amsterdam\",\"numResults\":1},\"results\":[{\"type\":\"Geography\",\"id\":\"...\",\"position\":{\"lat\":52.37,\"lon\":4.89}}]}"
+  },
+  "use_cases": [
+    "geocode an address to coordinates",
+    "reverse geocode lat/lon to an address",
+    "get driving route between two points",
+    "search nearby points of interest",
+    "get real-time traffic incidents on a route"
+  ],
+  "sources": [
+    "https://developer.tomtom.com/",
+    "https://api.tomtom.com"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "bright-data",
+  "status": "operational",
+  "name": "Bright Data",
+  "category": "data-analytics",
+  "tagline": "Enterprise web data platform for scraping, SERP, and browser automation at scale",
+  "description": "Bright Data provides enterprise-grade web data collection APIs including Web Scraper API, SERP API, Web Unlocker, and Scraping Browser for reliable public web data extraction with proxy infrastructure, anti-bot handling, and structured datasets.",
+  "base_url": "https://api.brightdata.com",
+  "docs_url": "https://docs.brightdata.com/",
+  "signup_url": "https://brightdata.com/cp/start",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token (Bearer) or zone credentials; self-serve account signup. Common pattern: Authorization: Bearer YOUR_API_KEY on REST endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://api.brightdata.com/request\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"zone\":\"YOUR_ZONE\",\"url\":\"https://example.com\",\"format\":\"raw\"}'",
+    "response_snippet": "{\"status_code\":200,\"headers\":{},\"body\":\"...\"}"
+  },
+  "use_cases": [
+    "scrape a product page with anti-bot bypass",
+    "run a SERP query for keyword rankings",
+    "unlock blocked public pages via residential proxies",
+    "extract structured e-commerce data at scale"
+  ],
+  "sources": [
+    "https://brightdata.com/",
+    "https://docs.brightdata.com/"
+  ],
+  "researcher_confidence": "low"
+}

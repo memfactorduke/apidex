@@ -1,0 +1,49 @@
+{
+  "id": "meta-graph",
+  "status": "operational",
+  "name": "Meta Graph API",
+  "category": "social-communication",
+  "tagline": "Meta's REST API for Facebook, Instagram, WhatsApp, and Pages data",
+  "description": "The Meta Graph API is the primary way for apps to read and write data on Facebook and related Meta products. Developers use it to manage Pages, posts, ads insights, Instagram Business accounts, Messenger, and WhatsApp Business Platform resources via versioned HTTPS endpoints and OAuth access tokens.",
+  "base_url": "https://graph.facebook.com",
+  "docs_url": "https://developers.facebook.com/docs/graph-api",
+  "signup_url": "https://developers.facebook.com/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 user/page/app access tokens (often as access_token query param or Authorization: Bearer). App created in Meta for Developers; many scopes need App Review."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Platform API access is free; ads/marketing spend and WhatsApp conversation pricing are separate product costs",
+    "paid_plans": "No Graph API subscription tiers; costs may apply for Ads, WhatsApp Business Platform conversations, and other billed Meta products"
+  },
+  "rate_limits": "Platform Rate Limits (app/user/page-level); not a single global RPS. Check X-App-Usage / X-Business-Use-Case-Usage headers; limits vary by endpoint and access token type",
+  "example": {
+    "request": "curl -s \"https://graph.facebook.com/v21.0/me?fields=id,name&access_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"id\":\"1029384756102938\",\"name\":\"Jane Developer\"}"
+  },
+  "use_cases": [
+    "fetch a Facebook Page's recent posts and engagement metrics",
+    "publish or schedule a post to a managed Facebook Page",
+    "read Instagram Business account media and insights",
+    "send or receive WhatsApp Business messages via Cloud API",
+    "query ad account insights and campaign performance",
+    "get the authenticated user profile (id, name) with an access token"
+  ],
+  "sources": [
+    "https://developers.facebook.com/docs/graph-api",
+    "https://developers.facebook.com/docs/graph-api/overview",
+    "https://developers.facebook.com/docs/graph-api/get-started",
+    "https://developers.facebook.com/docs/graph-api/guides/using-graph-api",
+    "https://developers.facebook.com/docs/graph-api/overview/rate-limiting",
+    "https://developers.facebook.com/docs/facebook-login/guides/access-tokens",
+    "https://developers.facebook.com/docs/graph-api/reference",
+    "https://developers.facebook.com/docs/development/release-notes"
+  ],
+  "researcher_confidence": "high"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "waqi",
+  "status": "operational",
+  "name": "World Air Quality Index (WAQI)",
+  "category": "weather-environment",
+  "tagline": "Global real-time AQI from 11,000+ stations with a free token tier",
+  "description": "JSON API from the World Air Quality Index project (aqicn.org / waqi.info) for real-time air quality at city and station level worldwide. Covers 11,000+ stations and 1,000+ cities with pollutant breakdowns (PM2.5, PM10, NO2, CO, SO2, O3), geo/IP lookup, map bounds queries, station search, and multi-day AQI forecast. Auth is a free self-serve token; default published quota is 1,000 requests/second. Terms restrict selling data and use in paid apps without agreement.",
+  "base_url": "https://api.waqi.info",
+  "docs_url": "https://aqicn.org/json-api/doc/",
+  "signup_url": "https://aqicn.org/data-platform/token/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Free API token via query param `token=` on every request (e.g. ?token=YOUR_API_KEY). Self-serve signup by email at aqicn.org/data-platform/token/; demo token `demo` works for sample calls."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "All APIs free with a valid token; default quota 1,000 requests per second",
+    "paid_plans": "No self-serve paid plans; contact WAQI for larger quota or commercial/for-profit use agreement"
+  },
+  "rate_limits": "Default quota: 1,000 requests per second; contact for higher limits",
+  "example": {
+    "request": "curl -s \"https://api.waqi.info/feed/shanghai/?token=YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":\"ok\",\"data\":{\"aqi\":42,\"idx\":1437,\"city\":{\"name\":\"Shanghai (\u4e0a\u6d77)\",\"geo\":[31.2047372,121.4489017],\"url\":\"https://aqicn.org/city/shanghai\"},\"dominentpol\":\"pm25\",\"iaqi\":{\"pm25\":{\"v\":42},\"pm10\":{\"v\":20},\"o3\":{\"v\":15.1},\"no2\":{\"v\":1.4}},\"time\":{\"s\":\"2026-08-09 03:00:00\",\"tz\":\"+08:00\"},\"forecast\":{\"daily\":{\"pm25\":[{\"avg\":68,\"day\":\"2026-08-09\",\"max\":68,\"min\":68}]}}}}"
+  },
+  "use_cases": [
+    "get current AQI and dominant pollutant for a city by name",
+    "get air quality nearest to latitude/longitude coordinates",
+    "search air quality monitoring stations by name or region",
+    "list stations and AQI inside a map lat/lng bounding box",
+    "read PM2.5/PM10/O3/NO2 breakdown for a station",
+    "get multi-day air quality forecast for a city feed"
+  ],
+  "sources": [
+    "https://aqicn.org/api/",
+    "https://aqicn.org/json-api/doc/",
+    "https://aqicn.org/json-api/doc/api_data.js",
+    "https://aqicn.org/data-platform/token/",
+    "https://aqicn.org/json-api/demo/",
+    "https://api.waqi.info/feed/shanghai/?token=demo"
+  ],
+  "researcher_confidence": "high"
+}

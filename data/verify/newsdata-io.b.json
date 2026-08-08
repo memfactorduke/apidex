@@ -1,0 +1,52 @@
+{
+  "id": "newsdata-io",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://newsdata.io/api/1",
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://newsdata.io/documentation",
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey",
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "200 credits/day free (1 credit per article on free plan)",
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "not published precisely; free tier limited by daily credits",
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "unknown",
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://newsdata.io/api/1/latest?apikey=YOUR_API_KEY&q=technology\"",
+      "source": null
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "NewsData.io provides a REST API for accessing real-time and historical news articles from thousands of sources worldwide. Developers can search by keyword, country, language, category, and more, with JSON responses suitable for news aggregators, media monitoring, and AI applications.",
+      "source": null
+    }
+  },
+  "notes": "PLACEHOLDER - verifying against official sources"
+}

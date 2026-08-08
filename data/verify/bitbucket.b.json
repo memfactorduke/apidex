@@ -1,0 +1,52 @@
+{
+  "id": "bitbucket",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.atlassian.com/cloud/bitbucket/rest/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.atlassian.com/cloud/bitbucket/rest/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.atlassian.com/bitbucket-cloud/docs/using-api-tokens/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bitbucket.org/product/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan still includes API access; product free-tier limits remain roughly 5 users / 1 GB / 50 build min, but the API rate-limit default is not a free-only 1,000/hour cap \u2014 current docs describe a shared default of 1,000 req/hour with higher limits for larger Standard/Premium workspaces using access tokens or Forge.",
+      "source": "https://support.atlassian.com/bitbucket-cloud/docs/api-request-limits/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.atlassian.com/bitbucket-cloud/docs/api-request-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.atlassian.com/cloud/bitbucket/rest/api-group-users/#api-user-get"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.atlassian.com/cloud/bitbucket/rest/"
+    }
+  },
+  "notes": "Verified against official Atlassian docs (2026). Core URLs, OAuth/API-token auth, free plan existence, GET /2.0/user example, and default 1,000/hour rate limits check out. free_tier_limits incorrectly frames the 1,000/hour rate limit as a free-plan product limit; product free limits and API rate limits are separate."
+}

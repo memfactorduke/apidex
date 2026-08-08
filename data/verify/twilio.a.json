@@ -1,0 +1,52 @@
+{
+  "id": "twilio",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.twilio.com/docs/usage/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.twilio.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.twilio.com/docs/usage/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.twilio.com/try-twilio"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.twilio.com/docs/usage/api#rate-limiting"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.twilio.com/docs/messaging/api/message-resource"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.twilio.com/docs"
+    }
+  },
+  "notes": "Verified against Twilio official docs (2026). All claims hold: REST base URL 2010-04-01, Basic Auth (SID+token/API key), trial credit not unlimited free tier, product-specific rate limits, CORS not for browser REST, Messages.list curl example valid."
+}

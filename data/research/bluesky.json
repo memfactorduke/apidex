@@ -1,0 +1,45 @@
+{
+  "id": "bluesky",
+  "status": "operational",
+  "name": "Bluesky AT Protocol",
+  "category": "social-communication",
+  "tagline": "Decentralized social network API for posts, profiles, and feeds",
+  "description": "Public API for the Bluesky social network built on the AT Protocol (atproto). Developers can read public posts and profiles without auth, and create posts, follow users, manage lists, and access personal data using app passwords or OAuth. Serves as the main interface for building clients, bots, and analytics tools on the Bluesky network.",
+  "base_url": "https://bsky.social/xrpc",
+  "docs_url": "https://docs.bsky.app/",
+  "signup_url": "https://bsky.app/",
+  "auth": {
+    "type": "other",
+    "details": "Public reads often need no auth. Authenticated calls use session JWT (createSession with handle/app password) or OAuth 2.0; AppView/PDS XRPC endpoints accept Authorization: Bearer <accessJwt>."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free to use the public API and self-host; no published paid API plans",
+    "paid_plans": null
+  },
+  "rate_limits": "AppView roughly 3,000 req/5 min IP for most endpoints; stricter on createSession (~10/min) and write actions \u2014 check docs for current tables",
+  "example": {
+    "request": "curl -s 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bsky.app'",
+    "response_snippet": "{\"did\":\"did:plc:...\",\"handle\":\"bsky.app\",\"displayName\":\"Bluesky\",\"avatar\":\"https://...\",\"description\":\"...\",\"followersCount\":...,\"followsCount\":...,\"postsCount\":...}"
+  },
+  "use_cases": [
+    "get a Bluesky profile by handle or DID",
+    "fetch a user's recent posts and thread replies",
+    "search posts or users on the public network",
+    "create a post or reply with an authenticated session",
+    "follow or unfollow an account programmatically",
+    "read a custom feed generator or timeline"
+  ],
+  "sources": [
+    "https://docs.bsky.app/",
+    "https://docs.bsky.app/docs/api/",
+    "https://docs.bsky.app/docs/advanced-guides/rate-limits",
+    "https://atproto.com/specs/xrpc"
+  ],
+  "researcher_confidence": "medium"
+}

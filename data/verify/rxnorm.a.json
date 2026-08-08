@@ -1,0 +1,52 @@
+{
+  "id": "rxnorm",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rxnav.nlm.nih.gov/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/RxNormAPIs.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/RxNormAPIs.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/RxNormAPIs.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "20 requests/second per IP (documented soft limit for RxNav APIs)",
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/RxNormAPIs.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=lipitor"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nlm.nih.gov/research/umls/rxnorm/index.html"
+    }
+  },
+  "notes": "Rate limits ARE published: ~20 req/s per IP on RxNav REST APIs \u2014 entry incorrectly says \"not published\". Auth none, free public use, base/docs URLs, and rxcui example match official NLM/RxNav docs. CORS not stated officially."
+}

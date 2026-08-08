@@ -1,0 +1,98 @@
+{
+  "id": "medlineplus-connect",
+  "status": "operational",
+  "name": "MedlinePlus Connect",
+  "category": "health-fitness",
+  "tagline": "Patient-friendly health topic and drug info linked from clinical codes",
+  "description": "MedlinePlus Connect is a free web service from the U.S. National Library of Medicine that returns patient-friendly MedlinePlus health topic and drug information when given clinical codes such as ICD, RxNorm, or LOINC, for use in EHRs and patient portals.",
+  "base_url": "https://connect.medlineplus.gov/service",
+  "docs_url": "https://medlineplus.gov/connect/overview.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or registration required; open government service with URL parameters only"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public service; no published request caps",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://connect.medlineplus.gov/service?mainSearchCriteria.v.cs=2.16.840.1.113883.6.90&mainSearchCriteria.v.c=E11.9&knowledgeResponseType=application/json\"",
+    "response_snippet": "{\"feed\":{\"title\":{\"_value\":\"MedlinePlus Connect\"},\"entry\":[{\"title\":{\"_value\":\"Type 2 diabetes\"},\"link\":[{\"rel\":\"alternate\",\"href\":\"https://medlineplus.gov/ency/article/000313.htm\"}]}]}}"
+  },
+  "use_cases": [
+    "look up patient-friendly explanation for an ICD-10 diagnosis code",
+    "get MedlinePlus drug information from an RxNorm code",
+    "fetch consumer health content linked to a LOINC lab code",
+    "enrich EHR problem list items with lay-language topic summaries",
+    "return patient education links for a given clinical code set"
+  ],
+  "sources": [
+    "https://medlineplus.gov/connect/overview.html",
+    "https://medlineplus.gov/connect/service.html",
+    "https://medlineplus.gov/connect/technical.html"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

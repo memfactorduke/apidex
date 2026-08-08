@@ -1,0 +1,52 @@
+{
+  "id": "scryfall",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free under Scryfall data/image guidelines (Magic software, research, community content); no paywalling or bare repackaging; not \"commercial requires written permission\" as stated",
+      "source": "https://scryfall.com/docs/api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Hard limits: /cards/search, /named, /random, /collection = 2/s; /cards/manifest = 10/min; other methods = 10/s; 429 then 30s limited access",
+      "source": "https://scryfall.com/docs/api/rate-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (CORS headers for GET, HEAD, POST, OPTIONS when Origin is sent)",
+      "source": "https://scryfall.com/docs/api/http-concerns"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api/cards"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    }
+  },
+  "notes": "Main failures: rate_limits still cite soft ~10 rps/50\u2013100ms; docs hard-cap named/search/etc at 2/s. free_tier_limits invents commercial written-permission rule. cors is documented, not unknown."
+}

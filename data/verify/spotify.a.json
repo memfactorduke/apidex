@@ -1,0 +1,52 @@
+{
+  "id": "spotify",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.spotify.com/documentation/web-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.spotify.com/documentation/web-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.spotify.com/documentation/web-api/concepts/authorization"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.spotify.com/documentation/web-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.spotify.com/documentation/web-api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.spotify.com/documentation/web-api/concepts/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.spotify.com/documentation/web-api/reference/get-track"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.spotify.com/documentation/web-api"
+    }
+  },
+  "notes": "Verified against official Spotify Web API docs: base URL, OAuth2, free registration, rate-limit 429/Retry-After behavior, and Get Track example all match. CORS listed as unknown is appropriate without a public browser CORS guarantee."
+}

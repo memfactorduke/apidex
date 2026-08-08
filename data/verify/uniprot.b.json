@@ -1,0 +1,52 @@
+{
+  "id": "uniprot",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.uniprot.org/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.uniprot.org/help/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.uniprot.org/help/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.uniprot.org/help/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.uniprot.org/help/api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No public hard per-IP rate of ~5 req/s is currently documented as a fixed published limit on the main API help pages; UniProt documents fair-use guidance and prefers streaming/bulk for large jobs\u2014treat the 5/s figure as outdated or unofficial unless reconfirmed on a live UniProt help page.",
+      "source": "https://www.uniprot.org/help/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.uniprot.org/uniprotkb/P05067.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.uniprot.org/help/api"
+    }
+  },
+  "notes": "Adversarial check: base URL, docs, no-auth public REST, free academic access, and accession.JSON example still match official UniProt REST. Main risk is rate_limits (~5 r/s) which often appears in secondary sources but is not a clearly stated hard cap on current primary help pages\u2014mark incorrect unless you re-verify that exact number."
+}

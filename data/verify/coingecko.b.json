@@ -1,0 +1,52 @@
+{
+  "id": "coingecko",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.coingecko.com/reference/authentication"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.coingecko.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.coingecko.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.coingecko.com/en/api/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Demo API: 10,000 calls/month, 30 calls/min (rate limit and monthly cap match current pricing page); entry phrasing is broadly right but Pro wording is vague \u2014 confirm against live pricing",
+      "source": "https://www.coingecko.com/en/api/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Demo: 30 calls/min (and 10k/month). Paid tiers differ by plan on the pricing page; do not hardcode 500\u20131000+ without citing the current plan matrix",
+      "source": "https://www.coingecko.com/en/api/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.coingecko.com/reference/simple-price"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.coingecko.com/"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying live docs next"
+}

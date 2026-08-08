@@ -1,0 +1,42 @@
+{
+  "id": "openuv",
+  "status": "operational",
+  "name": "OpenUV",
+  "category": "weather-environment",
+  "tagline": "Real-time and forecast UV index API for outdoor health apps",
+  "description": "OpenUV provides real-time UV index, sun position, and multi-day UV forecast data by latitude/longitude. Commonly used for skin-health, outdoor recreation, and weather apps that need UV exposure guidance beyond basic weather conditions.",
+  "base_url": "https://api.openuv.io/api/v1",
+  "docs_url": "https://www.openuv.io/uvindex",
+  "signup_url": "https://www.openuv.io/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-access-token header; self-serve signup at openuv.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "50 requests/day free (trial plan)",
+    "paid_plans": "Paid plans from ~$12/month with higher daily quotas"
+  },
+  "rate_limits": "Free: 50 req/day; paid tiers increase daily quota (see pricing page)",
+  "example": {
+    "request": "curl -X GET \"https://api.openuv.io/api/v1/uv?lat=37.7749&lng=-122.4194\" -H \"x-access-token: YOUR_API_KEY\"",
+    "response_snippet": "{\"result\":{\"uv\":5.2,\"uv_time\":\"2026-08-08T18:00:00.000Z\",\"uv_max\":8.1,\"uv_max_time\":\"2026-08-08T20:00:00.000Z\",\"ozone\":310,\"safe_exposure_time\":{\"st1\":67,\"st2\":83,\"st3\":111,\"st4\":139,\"st5\":222,\"st6\":417}}}"
+  },
+  "use_cases": [
+    "get current UV index for a lat/lng",
+    "fetch multi-day UV forecast for a location",
+    "estimate safe sun exposure time by skin type",
+    "get sunrise/sunset and sun position for outdoor planning"
+  ],
+  "sources": [
+    "https://www.openuv.io/",
+    "https://www.openuv.io/uvindex",
+    "https://www.openuv.io/price"
+  ],
+  "researcher_confidence": "medium"
+}

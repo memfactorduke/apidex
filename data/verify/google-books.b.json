@@ -1,0 +1,52 @@
+{
+  "id": "google-books",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/books/docs/v1/reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/books/docs/v1/using"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/books/docs/v1/using"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/books/docs/v1/using"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Default 1,000 queries per day per project (shown in Google Cloud Console quotas for books.googleapis.com; increases requested via Console)",
+      "source": "https://support.google.com/books/partner/thread/455522095/request-for-google-books-api-quota-increase?hl=en"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default ~1,000 queries per day per project (quota metric Queries / defaultPerDayPerProject on books.googleapis.com); not a separate public RPM table\u2014view/adjust in Cloud Console",
+      "source": "https://discuss.google.dev/t/where-to-start-google-books-api/162388"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes",
+      "source": "https://www.googleapis.com/books/v1/volumes"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/books/docs/v1/using"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/books/docs/v1/getting_started"
+    }
+  },
+  "notes": "API is live (HTTP 429 quota on unauthenticated probe, not dead). Official base URI and auth model match. CORS is enabled (Access-Control-Allow-Origin reflects Origin on OPTIONS/GET). Default quota is widely reported as 1,000 QPD in Console/community (2024\u20132026), so free_tier_limits/rate_limits as unknown/not published are wrong."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "etherscan",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.etherscan.io/v2/api",
+      "source": "https://docs.etherscan.io/etherscan-v2/getting-started/v2-quickstart"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.etherscan.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.etherscan.io/etherscan-v2/getting-started/endpoint-overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://etherscan.io/apis"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free API plan: 3 calls/second, 100,000 calls/day (per Etherscan API plans page)",
+      "source": "https://etherscan.io/apis"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 3 calls/sec, 100k/day; higher tiers increase RPS and daily caps (see etherscan.io/apis)",
+      "source": "https://etherscan.io/apis"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.etherscan.io/v2/api?chainid=1&module=account&action=balance&address=0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae&tag=latest&apikey=YOUR_API_KEY\"",
+      "source": "https://docs.etherscan.io/etherscan-v2/api-endpoints/accounts"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.etherscan.io/"
+    }
+  },
+  "notes": "V1 base URL https://api.etherscan.io/api is deprecated in favor of V2 (api.etherscan.io/v2/api + chainid). Free-tier limits and rate limits are published on etherscan.io/apis, not \"unknown\"/\"not published\". CORS not documented."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "nutritionix",
+  "status": "operational",
+  "name": "Nutritionix",
+  "category": "food-drink",
+  "tagline": "Natural language and barcode nutrition data for food apps",
+  "description": "Nutritionix provides food and restaurant nutrition data via REST APIs, including natural language meal parsing, branded and common foods search, barcode lookup, and exercise calorie estimates. Developers authenticate with an app ID and API key and use the Track API for food logging and nutrition lookups in consumer and health apps.",
+  "base_url": "https://trackapi.nutritionix.com/v2",
+  "docs_url": "https://docs.nutritionix.com/docs/v2",
+  "signup_url": "https://www.nutritionix.com/business/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "App ID and API key via x-app-id and x-app-key headers; self-serve developer signup at Nutritionix business API"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 confirm on current pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://trackapi.nutritionix.com/v2/natural/nutrients -H \"x-app-id: YOUR_APP_ID\" -H \"x-app-key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"1 banana\"}'",
+    "response_snippet": "{\"foods\":[{\"food_name\":\"banana\",\"serving_qty\":1,\"serving_unit\":\"medium\",\"nf_calories\":105,\"nf_protein\":1.3}]}"
+  },
+  "use_cases": [
+    "parse natural language meal text into nutrients",
+    "look up nutrition facts by UPC barcode",
+    "search branded and common foods",
+    "estimate calories burned for an exercise"
+  ],
+  "sources": [
+    "https://www.nutritionix.com/business/api",
+    "https://docs.nutritionix.com/docs/v2"
+  ],
+  "researcher_confidence": "low"
+}

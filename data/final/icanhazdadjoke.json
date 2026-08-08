@@ -1,0 +1,100 @@
+{
+  "id": "icanhazdadjoke",
+  "status": "operational",
+  "name": "Dad Jokes",
+  "category": "fun-novelty",
+  "tagline": "Random dad jokes with search, Slack, and Discord integrations",
+  "description": "A free public API that serves dad jokes as JSON, plain text, or HTML. Developers can fetch a random joke, look up a joke by ID, or search by term with pagination. The service also offers Slack and Discord bot integrations and requires only a custom User-Agent header for identification\u2014no API key.",
+  "base_url": "https://icanhazdadjoke.com",
+  "docs_url": "https://icanhazdadjoke.com/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or OAuth. Send Accept: application/json (or text/plain) and a custom User-Agent identifying your app; optional User-Agent with contact URL is recommended."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text",
+    "html"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no published request quota",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Accept: application/json\" -H \"User-Agent: MyApp (https://example.com)\" https://icanhazdadjoke.com/",
+    "response_snippet": "{\"id\":\"R7UfaahVfFd\",\"joke\":\"My dog used to chase people on a bike a lot. It got so bad I had to take his bike away.\",\"status\":200}"
+  },
+  "use_cases": [
+    "fetch a random dad joke for a bot or app",
+    "search dad jokes by keyword with pagination",
+    "get a specific joke by ID",
+    "serve plain-text jokes for CLI or Slack slash commands",
+    "power Discord or Slack dad-joke integrations"
+  ],
+  "sources": [
+    "https://icanhazdadjoke.com/api",
+    "https://icanhazdadjoke.com/",
+    "https://github.com/iandotkelly/icanhazdadjoke"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

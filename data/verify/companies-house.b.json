@@ -1,0 +1,52 @@
+{
+  "id": "companies-house",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.company-information.service.gov.uk/api/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.company-information.service.gov.uk/api/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.company-information.service.gov.uk/get-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.company-information.service.gov.uk/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.company-information.service.gov.uk/get-started"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.company-information.service.gov.uk/developer/guides/rate-limiting"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.company-information.service.gov.uk/api/docs/company/companyNumber/get.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.company-information.service.gov.uk/"
+    }
+  },
+  "notes": "Verified against official Companies House developer hub. Base URL, auth (Basic with API key as username), free public data API, and 600/5min rate limit match current docs. CORS remains unknown without live probe."
+}

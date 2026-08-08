@@ -1,0 +1,44 @@
+{
+  "id": "nhtsa-vpic",
+  "status": "operational",
+  "name": "NHTSA VPIC Vehicle API",
+  "category": "transportation",
+  "tagline": "Free US government VIN decode and vehicle manufacturer data from NHTSA",
+  "description": "The NHTSA Product Information Catalog Vehicle Listing (vPIC) API provides free, no-auth access to official US vehicle data including VIN decoding, manufacturer details, makes, models, and plant information. Hosted at vpic.nhtsa.dot.gov, it returns JSON or XML for public use by developers, insurers, and fleets needing accurate vehicle attributes without registration.",
+  "base_url": "https://vpic.nhtsa.dot.gov/api",
+  "docs_url": "https://vpic.nhtsa.dot.gov/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public government API; call endpoints directly over HTTPS with no API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public government API; no paid tier. Usage limits not published as a fixed free quota.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/1HGCM82633A004352?format=json\"",
+    "response_snippet": "{\"Count\":1,\"Message\":\"Results returned successfully\",\"SearchCriteria\":\"VIN:1HGCM82633A004352\",\"Results\":[{\"VIN\":\"1HGCM82633A004352\",\"Make\":\"HONDA\",\"Model\":\"Accord\",\"ModelYear\":\"2003\",\"BodyClass\":\"Coupe\",\"PlantCountry\":\"UNITED STATES (USA)\",\"ErrorCode\":\"0\",\"ErrorText\":\"0 - VIN decoded clean. Check Digit (9th position) is correct\"}]}"
+  },
+  "use_cases": [
+    "decode a 17-character VIN into make, model, year, and body class",
+    "look up vehicle makes and models by manufacturer",
+    "get manufacturer details and plant information for a vehicle",
+    "validate VIN check digit and decode error codes from NHTSA",
+    "retrieve vehicle type and safety-related attributes from official US data"
+  ],
+  "sources": [
+    "https://vpic.nhtsa.dot.gov/api/",
+    "https://vpic.nhtsa.dot.gov/",
+    "https://www.nhtsa.gov/"
+  ],
+  "researcher_confidence": "medium"
+}

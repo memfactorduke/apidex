@@ -1,0 +1,41 @@
+{
+  "id": "zerobounce",
+  "status": "operational",
+  "name": "ZeroBounce",
+  "category": "social-communication",
+  "tagline": "Email validation and deliverability API for cleaning lists and verifying addresses",
+  "description": "ZeroBounce provides REST APIs for real-time and bulk email validation, email scoring, activity data, and related deliverability tools. Developers authenticate with an API key and call endpoints to check whether addresses are valid, catch-all, disposable, or toxic before sending.",
+  "base_url": "https://api.zerobounce.net/v2",
+  "docs_url": "https://www.zerobounce.net/docs/email-validation-api-quickstart/",
+  "signup_url": "https://www.zerobounce.net/members/register/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key as query parameter api_key (and often in POST body for bulk); self-serve signup in dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.zerobounce.net/v2/validate?api_key=YOUR_API_KEY&email=example@example.com\"",
+    "response_snippet": "{\"address\":\"example@example.com\",\"status\":\"valid\",\"sub_status\":\"\",\"free_email\":false,\"did_you_mean\":null,\"account\":\"example\",\"domain\":\"example.com\",\"domain_age_days\":\"9692\",\"smtp_provider\":\"example\",\"mx_found\":\"true\",\"mx_record\":\"mx.example.com\",\"firstname\":\"Example\",\"lastname\":\"User\",\"gender\":\"male\",\"country\":\"United States\",\"region\":\"Florida\",\"city\":\"West Palm Beach\",\"zipcode\":\"33401\",\"processed_at\":\"2024-01-01 12:00:00.000\"}"
+  },
+  "use_cases": [
+    "validate a single email address before signup",
+    "bulk-clean a CSV of marketing list emails",
+    "score email quality risk for a lead",
+    "detect disposable or toxic email addresses",
+    "check domain age and MX for deliverability"
+  ],
+  "sources": [
+    "https://www.zerobounce.net/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "postmark",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://postmarkapp.com/developer"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://postmarkapp.com/developer"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://postmarkapp.com/developer/user-guide/send-email-with-api"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 Postmark does not advertise a free tier; trials/credits may apply but not a free tier in the directory sense",
+      "source": "https://postmarkapp.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Postmark publishes rate limits (e.g. per-server concurrent connection and message limits); see official docs",
+      "source": "https://postmarkapp.com/developer/api/overview"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://postmarkapp.com/developer/user-guide/send-email-with-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://postmarkapp.com/developer"
+    }
+  },
+  "notes": "Partial pre-check placeholders \u2014 verifying every field against live official docs next."
+}

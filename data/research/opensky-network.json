@@ -1,0 +1,42 @@
+{
+  "id": "opensky-network",
+  "status": "operational",
+  "name": "OpenSky Network",
+  "category": "transportation",
+  "tagline": "ADS-B aircraft state vectors free for non-commercial use",
+  "description": "OpenSky Network provides free, open access to ADS-B aircraft state vectors and historical flight data for non-commercial research and applications. It aggregates real-time aircraft positions, velocities, and identities from a global network of receivers, enabling developers to track flights, analyze air traffic, and build aviation tools without commercial licensing fees.",
+  "base_url": "https://opensky-network.org/api",
+  "docs_url": "https://openskynetwork.github.io/opensky-api/",
+  "signup_url": "https://opensky-network.org/",
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for basic public endpoints. Optional account registration for higher rate limits and historical data access."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use; rate limits apply to anonymous and authenticated users",
+    "paid_plans": null
+  },
+  "rate_limits": "Anonymous: ~10 requests per 10 seconds; Authenticated: higher limits (see docs)",
+  "example": {
+    "request": "curl \"https://opensky-network.org/api/states/all?lamin=45.8389&lomin=5.9962&lamax=47.8229&lomax=10.5226\"",
+    "response_snippet": "{\"time\":1517258400,\"states\":[[\"3c6444\",\"DLH5VA  \",\"Germany\",1517258399,1517258399,8.55731,50.03867,null,false,129.26,278.55,null,null,null,null,false,0]]}"
+  },
+  "use_cases": [
+    "get live aircraft positions in a bounding box",
+    "track a specific aircraft by ICAO24 code",
+    "fetch historical flight tracks for analysis",
+    "monitor air traffic density over a region",
+    "build a flight radar style map overlay"
+  ],
+  "sources": [
+    "https://opensky-network.org/",
+    "https://openskynetwork.github.io/opensky-api/"
+  ],
+  "researcher_confidence": "medium"
+}

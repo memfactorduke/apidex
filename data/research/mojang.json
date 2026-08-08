@@ -1,0 +1,41 @@
+{
+  "id": "mojang",
+  "status": "operational",
+  "name": "Mojang API",
+  "category": "games-comics",
+  "tagline": "Minecraft account, profile, and session APIs for launchers and server tools",
+  "description": "Public Mojang/Minecraft services for account profiles, UUID/name lookup, textures, and session validation used by launchers and multiplayer tooling. Core identity and session endpoints remain free and unauthenticated for public profile data, with Microsoft account auth for full account flows.",
+  "base_url": "https://api.mojang.com",
+  "docs_url": "https://wiki.vg/Mojang_API",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Most public profile/session endpoints require no API key. Full account login uses Microsoft account OAuth; legacy Yggdrasil is largely retired."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public profile and session endpoints are free; no published paid tier for these services",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (community reports soft limits; treat as unknown officially)",
+  "example": {
+    "request": "curl -s \"https://api.mojang.com/users/profiles/minecraft/Notch\"",
+    "response_snippet": "{\"id\":\"069a79f444e94726a5befca90e38aaf5\",\"name\":\"Notch\"}"
+  },
+  "use_cases": [
+    "resolve Minecraft username to UUID",
+    "look up profile name history or textures",
+    "validate a multiplayer session join",
+    "fetch skin/cape texture URLs for a player"
+  ],
+  "sources": [
+    "https://wiki.vg/Mojang_API",
+    "https://minecraft.wiki/w/Mojang_API"
+  ],
+  "researcher_confidence": "medium"
+}

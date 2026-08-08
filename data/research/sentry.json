@@ -1,0 +1,41 @@
+{
+  "id": "sentry",
+  "status": "operational",
+  "name": "Sentry API",
+  "category": "dev-tools",
+  "tagline": "Programmatic access to Sentry error monitoring, issues, projects, and releases.",
+  "description": "REST API for Sentry's error monitoring platform. Manage organizations, projects, issues, events, releases, and alert rules. Authenticate with auth tokens. Supports SaaS (sentry.io) and self-hosted instances. Used to automate issue triage, release tracking, and monitoring integrations.",
+  "base_url": "https://sentry.io/api/0",
+  "docs_url": "https://docs.sentry.io/api/",
+  "signup_url": "https://sentry.io/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token via Authorization header (auth tokens from User Settings > Auth Tokens, or organization tokens). Scopes control access. Also supports session cookies for browser sessions."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://sentry.io/api/0/projects/\"",
+    "response_snippet": "[{\"id\":\"1\",\"slug\":\"my-project\",\"name\":\"My Project\",\"status\":\"active\"}]"
+  },
+  "use_cases": [
+    "list unresolved issues for a project",
+    "create a release and attach commits",
+    "fetch error event details by ID",
+    "update issue status or assign ownership",
+    "list projects in an organization"
+  ],
+  "sources": [
+    "https://docs.sentry.io/api/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "aerodatabox",
+  "status": "operational",
+  "name": "AeroDataBox",
+  "category": "transportation",
+  "tagline": "Flight schedules, airport data, and aviation information via RapidAPI",
+  "description": "AeroDataBox provides flight schedules, airport information, flight status, and aviation data through a REST API hosted on RapidAPI. Developers can look up airports, flights by number or route, and related aviation metadata.",
+  "base_url": "https://aerodatabox.p.rapidapi.com",
+  "docs_url": "https://rapidapi.com/aedbx-aedbx/api/aerodatabox",
+  "signup_url": "https://rapidapi.com/aedbx-aedbx/api/aerodatabox",
+  "auth": {
+    "type": "apiKey",
+    "details": "RapidAPI key via X-RapidAPI-Key header; also requires X-RapidAPI-Host: aerodatabox.p.rapidapi.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --request GET --url 'https://aerodatabox.p.rapidapi.com/airports/iata/LHR' --header 'X-RapidAPI-Key: YOUR_API_KEY' --header 'X-RapidAPI-Host: aerodatabox.p.rapidapi.com'",
+    "response_snippet": "{\"icao\":\"EGLL\",\"iata\":\"LHR\",\"name\":\"London Heathrow\",\"shortName\":\"Heathrow\",\"municipalityName\":\"London\",\"location\":{\"lat\":51.4706,\"lon\":-0.461941},\"country\":{\"code\":\"GB\",\"name\":\"United Kingdom\"}}"
+  },
+  "use_cases": [
+    "look up airport details by IATA or ICAO code",
+    "get flight status by flight number",
+    "retrieve flight schedules for a route or airport",
+    "search flights by departure and arrival airports",
+    "get airport runway and location data"
+  ],
+  "sources": [
+    "https://rapidapi.com/aedbx-aedbx/api/aerodatabox",
+    "https://aerodatabox.com"
+  ],
+  "researcher_confidence": "low"
+}

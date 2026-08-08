@@ -1,0 +1,44 @@
+{
+  "id": "aviationstack",
+  "status": "operational",
+  "name": "AviationStack",
+  "category": "transportation",
+  "tagline": "Real-time and historical flight data API for global aviation",
+  "description": "AviationStack provides REST API access to real-time flight status, airline and airport data, historical flight information, and flight schedules worldwide. Developers use it for flight tracking dashboards, travel apps, and aviation analytics with a free tier and paid plans based on monthly request volume.",
+  "base_url": "https://api.aviationstack.com/v1",
+  "docs_url": "https://aviationstack.com/documentation",
+  "signup_url": "https://aviationstack.com/signup/free",
+  "auth": {
+    "type": "apiKey",
+    "details": "API access key passed as the access_key query parameter on every request; obtained via self-serve signup at aviationstack.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "100 requests/month free (Free plan); HTTP only on free tier",
+    "paid_plans": "Basic from ~$49.99/mo (10,000 req), Professional, Business, and Enterprise with higher volumes and HTTPS"
+  },
+  "rate_limits": "Not separately published beyond monthly request quotas per plan; free tier is HTTP-only",
+  "example": {
+    "request": "curl \"https://api.aviationstack.com/v1/flights?access_key=YOUR_API_KEY&limit=1\"",
+    "response_snippet": "{\"pagination\":{\"limit\":1,\"offset\":0,\"count\":1,\"total\":10000},\"data\":[{\"flight_date\":\"2024-01-15\",\"flight_status\":\"active\",\"departure\":{\"airport\":\"John F Kennedy International\",\"iata\":\"JFK\",\"scheduled\":\"2024-01-15T12:00:00+00:00\"},\"arrival\":{\"airport\":\"Los Angeles International\",\"iata\":\"LAX\"},\"airline\":{\"name\":\"American Airlines\",\"iata\":\"AA\"},\"flight\":{\"number\":\"100\",\"iata\":\"AA100\"}}]}"
+  },
+  "use_cases": [
+    "get real-time status of a flight by flight number or route",
+    "list flights departing from or arriving at an airport",
+    "look up airport or airline details by IATA/ICAO code",
+    "retrieve historical flight data for a given date",
+    "build a flight schedule board for an airport"
+  ],
+  "sources": [
+    "https://aviationstack.com/",
+    "https://aviationstack.com/documentation",
+    "https://aviationstack.com/pricing",
+    "https://aviationstack.com/signup/free"
+  ],
+  "researcher_confidence": "medium"
+}

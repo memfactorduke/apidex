@@ -1,0 +1,52 @@
+{
+  "id": "noaa-cdo",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2"
+    }
+  },
+  "notes": "All claims match official CDO v2 docs: base URL, token header auth, free token, 5 req/s and 10k/day limits, datasets example, JSON/CSV. CORS unknown is correct (not documented)."
+}

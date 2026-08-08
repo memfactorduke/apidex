@@ -1,0 +1,52 @@
+{
+  "id": "exchangerate-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.exchangerate-api.com/docs/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.exchangerate-api.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.exchangerate-api.com/docs/standard-requests"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.exchangerate-api.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,500 requests/month free",
+      "source": "https://www.exchangerate-api.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.exchangerate-api.com/docs"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.exchangerate-api.com/docs/standard-requests"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.exchangerate-api.com/"
+    }
+  },
+  "notes": "Adversarial check: free_tier_limits overstates by adding parenthetical \"(Open Access)\" not found on official pricing; limit itself (1,500/month) matches. Base URL v6, path API key, latest/USD example, and free tier confirmed. CORS not stated in docs."
+}

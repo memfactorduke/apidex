@@ -1,0 +1,38 @@
+{
+  "id": "nansen",
+  "status": "operational",
+  "name": "Nansen",
+  "category": "crypto",
+  "tagline": "On-chain analytics and wallet intelligence API for crypto research and monitoring.",
+  "description": "Nansen provides institutional-grade on-chain data and wallet labeling APIs for tracking smart money, token flows, and portfolio activity across major blockchains. Developers use it for research, alerts, and analytics products that need labeled addresses and historical chain data.",
+  "base_url": "https://api.nansen.ai",
+  "docs_url": "https://docs.nansen.ai",
+  "signup_url": "https://app.nansen.ai",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header (Bearer or API key scheme); confirm exact header from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.nansen.ai/v1/\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "look up labeled wallet activity for a smart-money address",
+    "track token holder and flow analytics for a contract"
+  ],
+  "sources": [
+    "https://www.nansen.ai"
+  ],
+  "researcher_confidence": "low"
+}

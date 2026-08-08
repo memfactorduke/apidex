@@ -1,0 +1,52 @@
+{
+  "id": "steam-web-api",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://partner.steamgames.com/doc/webapi_overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://partner.steamgames.com/doc/webapi_overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://partner.steamgames.com/doc/webapi_overview/auth"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamcommunity.com/dev/apiterms"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamcommunity.com/dev/apiterms"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamcommunity.com/dev/apiterms"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://partner.steamgames.com/doc/webapi/ISteamUser"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://partner.steamgames.com/doc/webapi_overview"
+    }
+  },
+  "notes": "All key claims verified against official Valve docs (partner.steamgames.com and steamcommunity.com/dev/apiterms). Base URL, auth (apiKey via key= or x-webapi-key), 100k/day free tier, example GetPlayerSummaries path, and description match current docs. CORS remains unknown as expected."
+}

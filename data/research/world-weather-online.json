@@ -1,0 +1,42 @@
+{
+  "id": "world-weather-online",
+  "status": "operational",
+  "name": "World Weather Online",
+  "category": "weather-environment",
+  "tagline": "Multi-product weather, marine, ski, and historical weather API with free trial",
+  "description": "World Weather Online provides weather, marine, ski, and historical weather data APIs for developers. It offers current conditions, forecasts, historical weather, and specialized products through a REST API with free trial access.",
+  "base_url": "https://api.worldweatheronline.com",
+  "docs_url": "https://www.worldweatheronline.com/developer/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter key=YOUR_API_KEY, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free trial tier available; concrete limits unknown from research",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.worldweatheronline.com/premium/v1/weather.ashx?key=YOUR_API_KEY&q=London&format=json&num_of_days=1\"",
+    "response_snippet": "{\"data\":{\"request\":[{\"type\":\"City\",\"query\":\"London, United Kingdom\"}],\"current_condition\":[{\"temp_C\":\"15\",\"weatherDesc\":[{\"value\":\"Partly cloudy\"}]}]}}"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "get multi-day weather forecast",
+    "retrieve historical weather for a location",
+    "get marine weather conditions",
+    "get ski resort weather data"
+  ],
+  "sources": [
+    "https://www.worldweatheronline.com/developer/"
+  ],
+  "researcher_confidence": "low"
+}

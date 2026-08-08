@@ -1,0 +1,42 @@
+{
+  "id": "marvel-comics",
+  "status": "operational",
+  "name": "Marvel Comics API",
+  "category": "games-comics",
+  "tagline": "Official Marvel comics, characters, series, and events catalog with image assets",
+  "description": "The Marvel Comics API provides programmatic access to Marvel's official catalog of comics, characters, series, events, stories, and creators, including image assets and metadata for building comic-related applications and experiences.",
+  "base_url": "https://gateway.marvel.com/v1/public",
+  "docs_url": "https://developer.marvel.com/docs",
+  "signup_url": "https://developer.marvel.com/account",
+  "auth": {
+    "type": "apiKey",
+    "details": "Public and private API keys; requests require ts, apikey, and hash (MD5 of ts+privateKey+publicKey) as query parameters"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "3,000 calls/day free",
+    "paid_plans": null
+  },
+  "rate_limits": "3,000 calls/day (free tier); higher limits may require contact",
+  "example": {
+    "request": "curl \"https://gateway.marvel.com/v1/public/characters?name=Spider-Man&ts=1&apikey=YOUR_API_KEY&hash=YOUR_HASH\"",
+    "response_snippet": "{\"code\":200,\"status\":\"Ok\",\"data\":{\"results\":[{\"id\":1009610,\"name\":\"Spider-Man\",\"description\":\"...\",\"thumbnail\":{\"path\":\"http://i.annihil.us/u/prod/marvel/i/mg/...\",\"extension\":\"jpg\"}}]}"
+  },
+  "use_cases": [
+    "look up a Marvel character by name",
+    "list comics in a series",
+    "get events and crossovers",
+    "fetch character or comic cover images",
+    "search creators and their credits"
+  ],
+  "sources": [
+    "https://developer.marvel.com/",
+    "https://developer.marvel.com/docs"
+  ],
+  "researcher_confidence": "medium"
+}

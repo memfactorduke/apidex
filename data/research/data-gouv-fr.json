@@ -1,0 +1,40 @@
+{
+  "id": "data-gouv-fr",
+  "status": "operational",
+  "name": "data.gouv.fr API",
+  "category": "government-open-data",
+  "tagline": "French government open data catalog and dataset API",
+  "description": "REST API for France's national open data portal (data.gouv.fr), providing programmatic access to datasets, reuses, organizations, and related catalog metadata published by public bodies.",
+  "base_url": "https://www.data.gouv.fr/api/1",
+  "docs_url": "https://www.data.gouv.fr/fr/apidoc/",
+  "signup_url": "https://www.data.gouv.fr/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via X-API-KEY header for authenticated writes and higher limits; many read endpoints work without auth"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://www.data.gouv.fr/api/1/datasets/?page_size=1\"",
+    "response_snippet": "{\"data\":[{\"id\":\"...\",\"title\":\"...\",\"slug\":\"...\"}],\"next_page\":null,\"page\":1,\"page_size\":1,\"total\":...}"
+  },
+  "use_cases": [
+    "search French open government datasets by keyword",
+    "fetch metadata and download URLs for a dataset",
+    "list organizations publishing open data on data.gouv.fr",
+    "discover reuses (applications) built on French open datasets"
+  ],
+  "sources": [
+    "https://www.data.gouv.fr/"
+  ],
+  "researcher_confidence": "low"
+}

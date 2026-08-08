@@ -1,0 +1,99 @@
+{
+  "id": "gbif",
+  "status": "operational",
+  "name": "GBIF",
+  "category": "science-space",
+  "tagline": "Global biodiversity occurrence, species, and checklist data API",
+  "description": "GBIF (Global Biodiversity Information Facility) provides free open access to species occurrence records, taxonomic checklists, and related biodiversity data from museums, surveys, and citizen science worldwide. The REST API at api.gbif.org supports search and download of occurrences, species, datasets, and publishers for research, conservation, and applications.",
+  "base_url": "https://api.gbif.org/v1",
+  "docs_url": "https://techdocs.gbif.org/en/openapi/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Most read endpoints are public with no auth. Authenticated downloads and registry write operations use basic auth with a free GBIF.org account."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public API; no paid plans. Fair-use rate limiting applies.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (fair use; heavy users should use bulk downloads)",
+  "example": {
+    "request": "curl -s 'https://api.gbif.org/v1/species/match?name=Puma%20concolor'",
+    "response_snippet": "{\"usageKey\":2435099,\"scientificName\":\"Puma concolor (Linnaeus, 1771)\",\"canonicalName\":\"Puma concolor\",\"rank\":\"SPECIES\",\"status\":\"ACCEPTED\",\"confidence\":98,\"matchType\":\"EXACT\",\"kingdom\":\"Animalia\",\"phylum\":\"Chordata\",\"order\":\"Carnivora\",\"family\":\"Felidae\",\"genus\":\"Puma\",\"species\":\"Puma concolor\",\"class\":\"Mammalia\"}"
+  },
+  "use_cases": [
+    "match a scientific or common name to a GBIF taxon key",
+    "search species occurrence records by taxon, country, or coordinates",
+    "look up taxonomy hierarchy for a species",
+    "list datasets or publishers contributing biodiversity data",
+    "download large occurrence datasets for offline analysis"
+  ],
+  "sources": [
+    "https://techdocs.gbif.org/en/openapi/",
+    "https://www.gbif.org/developer/summary",
+    "https://api.gbif.org/v1/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

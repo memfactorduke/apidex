@@ -1,0 +1,44 @@
+{
+  "id": "crt-sh",
+  "status": "operational",
+  "name": "crt.sh",
+  "category": "security-identity",
+  "tagline": "Certificate Transparency log search for SSL/TLS certificates",
+  "description": "Public Certificate Transparency (CT) search service that indexes SSL/TLS certificates from CT logs. Developers query by domain, identity, or certificate fingerprint to discover subdomains, track certificate issuance history, and monitor for unexpected certificates\u2014commonly used for recon, inventory, and security monitoring.",
+  "base_url": "https://crt.sh",
+  "docs_url": "https://crt.sh/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public HTTP GET endpoints with query parameters."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "html"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 free public service; no published free-tier quota",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://crt.sh/?q=%.example.com&output=json\"",
+    "response_snippet": "[{\"issuer_ca_id\":16418,\"issuer_name\":\"C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3\",\"common_name\":\"www.example.com\",\"name_value\":\"www.example.com\",\"id\":1234567890,\"entry_timestamp\":\"2020-01-15T12:00:00.000\",\"not_before\":\"2020-01-15T00:00:00\",\"not_after\":\"2020-04-14T23:59:59\",\"serial_number\":\"03abc...\"}]"
+  },
+  "use_cases": [
+    "discover subdomains from certificates issued for a domain",
+    "list historical SSL/TLS certificates for a hostname",
+    "find certificates matching a wildcard or organization name",
+    "monitor new certificate issuance for a domain via CT search",
+    "look up a certificate by SHA-256 fingerprint or serial"
+  ],
+  "sources": [
+    "https://crt.sh/",
+    "https://github.com/crtsh",
+    "https://certificate.transparency.dev/"
+  ],
+  "researcher_confidence": "medium"
+}

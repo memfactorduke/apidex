@@ -1,0 +1,92 @@
+{
+  "id": "tomorrow-io",
+  "status": "operational",
+  "name": "Tomorrow.io",
+  "category": "weather-environment",
+  "tagline": "Hyperlocal weather, climate, and air quality API",
+  "description": "Tomorrow.io provides weather, climate, and air quality data via timeline and map layers APIs. Developers can query hyperlocal forecasts, historical weather, and environmental insights for applications requiring precise meteorological data.",
+  "base_url": "https://api.tomorrow.io/v4",
+  "docs_url": "https://docs.tomorrow.io/",
+  "signup_url": "https://app.tomorrow.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter or Authorization header"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.tomorrow.io/v4/weather/realtime?location=42.3478,-71.0466&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "get current weather for a location",
+    "get weather forecast timeline"
+  ],
+  "sources": [
+    "https://docs.tomorrow.io/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

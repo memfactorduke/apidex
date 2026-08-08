@@ -1,0 +1,52 @@
+{
+  "id": "pokemontcg",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pokemontcg.io/api-reference/cards/search-cards"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pokemontcg.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pokemontcg.io/getting-started/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pokemontcg.io/getting-started/authentication/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pokemontcg.io/getting-started/rate-limits/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Without API key: 1,000 req/day and max 30 req/min; with free API key (default): 20,000 req/day. Higher limits by contacting maintainer.",
+      "source": "https://docs.pokemontcg.io/getting-started/rate-limits/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes",
+      "source": "https://api.pokemontcg.io/v2/cards?pageSize=1"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pokemontcg.io/api-reference/cards/search-cards"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pokemontcg.io/"
+    }
+  },
+  "notes": "API still live (200) at api.pokemontcg.io/v2 despite pokemontcg.io branding as Scrydex. Rate-limit entry omitted unauth 1,000/day (docs: 1k/day + 30/min; key default 20k/day). CORS verified Access-Control-Allow-Origin: *, not unknown. X-Api-Key and free signup at dev.pokemontcg.io confirmed."
+}

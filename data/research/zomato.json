@@ -1,0 +1,38 @@
+{
+  "id": "zomato",
+  "status": "operational",
+  "name": "Zomato API",
+  "category": "food-drink",
+  "tagline": "Restaurant discovery and food-ordering data API",
+  "description": "Public API for restaurant search, details, reviews, and related food-service data from Zomato's marketplace.",
+  "base_url": "https://developers.zomato.com/api",
+  "docs_url": "https://developers.zomato.com/api",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via user-key header (verify current docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"user-key: YOUR_API_KEY\" \"https://developers.zomato.com/api/v2.1/search?q=pizza\"",
+    "response_snippet": "{\"results_found\":0,\"restaurants\":[]}"
+  },
+  "use_cases": [
+    "search restaurants by location",
+    "get restaurant details by id"
+  ],
+  "sources": [
+    "https://developers.zomato.com/api"
+  ],
+  "researcher_confidence": "low"
+}

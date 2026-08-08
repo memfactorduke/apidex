@@ -1,0 +1,52 @@
+{
+  "id": "circleci",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://circleci.com/docs/api/v2/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://circleci.com/docs/api/v2/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://circleci.com/docs/api-developers-guide/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://circleci.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan includes 6,000 monthly build credits, 30 concurrent job limit (varies by plan; check current pricing page for latest credit allowances and included resources).",
+      "source": "https://circleci.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "API rate limits are published: typically 15\u201350 requests/second depending on endpoint and account, with 429 responses and Retry-After; see CircleCI API usage guidelines / support docs for current limits.",
+      "source": "https://circleci.com/docs/api-developers-guide/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://circleci.com/docs/api/v2/openapi-spec/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://circleci.com/docs/api/v2/"
+    }
+  },
+  "notes": "Adversarial check found free_tier_limits and rate_limits mislabeled as unknown/not published; pricing and API docs document limits. base_url, docs, auth (Circle-Token), example /me, free tier, and description match current official sources. cors still unknown without browser probe."
+}

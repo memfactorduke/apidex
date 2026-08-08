@@ -1,0 +1,52 @@
+{
+  "id": "binance",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.binance.com/docs/binance-spot-api-docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/endpoint-security-type"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.binance.com/docs/binance-spot-api-docs"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/limits"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.binance.com/docs/binance-spot-api-docs"
+    }
+  },
+  "notes": "Entry matches current official Binance Spot docs: api.binance.com, HMAC-SHA256 + X-MBX-APIKEY, free API with weight limits (~6000/min IP), public ticker endpoint. CORS unstated in docs. Secondary github.io docs also still referenced."
+}

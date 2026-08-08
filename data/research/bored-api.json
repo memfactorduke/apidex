@@ -1,0 +1,41 @@
+{
+  "id": "bored-api",
+  "status": "operational",
+  "name": "Bored API",
+  "category": "fun-novelty",
+  "tagline": "Random activity ideas by type and group size",
+  "description": "Public API that returns random boredom-busting activity suggestions, filterable by type, participants, and cost. Simple unauthenticated GET endpoints for quick inspiration and demo apps.",
+  "base_url": "https://www.boredapi.com/api",
+  "docs_url": "https://www.boredapi.com/documentation",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; open public endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://www.boredapi.com/api/activity\"",
+    "response_snippet": "{\"activity\":\"Learn Express.js\",\"type\":\"education\",\"participants\":1,\"price\":0.1,\"link\":\"\",\"key\":\"3943506\",\"accessibility\":0.1}"
+  },
+  "use_cases": [
+    "suggest a random activity when a user is bored",
+    "filter activities by type such as education or recreational",
+    "get activities for a specific number of participants",
+    "prototype a boredom-buster feature without auth setup"
+  ],
+  "sources": [
+    "https://www.boredapi.com/",
+    "https://www.boredapi.com/documentation"
+  ],
+  "researcher_confidence": "low"
+}

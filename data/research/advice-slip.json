@@ -1,0 +1,40 @@
+{
+  "id": "advice-slip",
+  "status": "operational",
+  "name": "Advice Slip",
+  "category": "fun-novelty",
+  "tagline": "Random advice slips with search",
+  "description": "Advice Slip is a free public API that returns random advice slips and supports search by keyword. Responses are available in JSON or XML, and no authentication is required.",
+  "base_url": "https://api.adviceslip.com",
+  "docs_url": "https://api.adviceslip.com",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints accept unauthenticated GET requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://api.adviceslip.com/advice",
+    "response_snippet": "{\"slip\":{\"id\":1,\"advice\":\"Remember that spiders are more afraid of you, than you are of them.\"}}"
+  },
+  "use_cases": [
+    "get a random advice slip",
+    "look up an advice slip by id",
+    "search advice slips by keyword"
+  ],
+  "sources": [
+    "https://api.adviceslip.com"
+  ],
+  "researcher_confidence": "low"
+}

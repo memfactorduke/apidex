@@ -1,0 +1,52 @@
+{
+  "id": "spacex-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.spacexdata.com/v5 (v4 still referenced in docs; primary docs and latest launches endpoint are under /v5; verify current version on GitHub docs)",
+      "source": "https://github.com/r-spacex/SpaceX-API"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/r-spacex/SpaceX-API/blob/master/docs/README.md"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/r-spacex/SpaceX-API"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/r-spacex/SpaceX-API"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s https://api.spacexdata.com/v5/launches/latest (v4 path may still work if host is up; docs emphasize v5)",
+      "source": "https://github.com/r-spacex/SpaceX-API"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/r-spacex/SpaceX-API"
+    }
+  },
+  "notes": "Automated check reported base_url HTTP 525; docs returned 200. Need authoritative verification of live host and version paths before finalizing."
+}

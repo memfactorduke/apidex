@@ -1,0 +1,42 @@
+{
+  "id": "hipo-universities",
+  "status": "operational",
+  "name": "University Domains List",
+  "category": "education-reference",
+  "tagline": "Search universities worldwide by name or country and get domains and websites.",
+  "description": "A free public API for looking up universities by name and country. Returns matching institutions with country, domains, web pages, and alpha-two country codes. Useful for email domain validation, school pickers, and education data enrichment.",
+  "base_url": "http://universities.hipolabs.com",
+  "docs_url": "https://github.com/Hipo/university-domains-list",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public unauthenticated HTTP GET endpoints."
+  },
+  "https": false,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "fully free and open; no published request quotas",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"http://universities.hipolabs.com/search?name=middle\"",
+    "response_snippet": "[{\"name\":\"Middle East Technical University\",\"country\":\"Turkey\",\"domains\":[\"metu.edu.tr\"],\"web_pages\":[\"http://www.metu.edu.tr/\"],\"alpha_two_code\":\"TR\",\"state-province\":null}]"
+  },
+  "use_cases": [
+    "search universities by name for a school picker",
+    "filter universities by country code",
+    "look up university email domains for signup validation",
+    "enrich education records with official websites",
+    "autocomplete university names in forms"
+  ],
+  "sources": [
+    "https://github.com/Hipo/university-domains-list",
+    "http://universities.hipolabs.com"
+  ],
+  "researcher_confidence": "medium"
+}

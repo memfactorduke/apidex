@@ -1,0 +1,52 @@
+{
+  "id": "api-football",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api-football.com/documentation-v3"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api-football.com/documentation-v3"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api-football.com/documentation-v3"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api-football.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api-football.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api-football.com/pricing"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api-football.com/documentation-v3"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api-football.com/"
+    }
+  },
+  "notes": "Verified against official API-Football/API-Sports docs and pricing (2026). Base URL, docs, auth headers, free tier (~100 req/day), and /status example match current official sources; 403s appear to be bot/CDN protection rather than dead endpoints."
+}

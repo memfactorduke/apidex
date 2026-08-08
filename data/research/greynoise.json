@@ -1,0 +1,43 @@
+{
+  "id": "greynoise",
+  "status": "operational",
+  "name": "GreyNoise",
+  "category": "security-identity",
+  "tagline": "Internet noise intelligence that filters mass scanners from real attacks",
+  "description": "GreyNoise collects and analyzes internet-wide scanner and worm activity so security teams can distinguish background noise from targeted threats. Its API returns IP classification (benign, malicious, unknown), tags, CVEs, first/last-seen timestamps, and context for enrichment, SIEM workflows, and alert triage.",
+  "base_url": "https://api.greynoise.io/v3",
+  "docs_url": "https://docs.greynoise.io/",
+  "signup_url": "https://viz.greynoise.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key header (e.g. key: YOUR_API_KEY) or Authorization: Bearer YOUR_API_KEY; self-serve signup at viz.greynoise.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Community: free IP context lookups with daily quota (limits vary by plan; confirm on pricing)",
+    "paid_plans": "Enterprise/commercial plans with higher quotas, RIOT, GNQL, bulk, and historical data \u2014 see greynoise.io/pricing"
+  },
+  "rate_limits": "Plan-dependent; not fully published without account \u2014 Community has daily lookup caps",
+  "example": {
+    "request": "curl -s -H \"key: YOUR_API_KEY\" \"https://api.greynoise.io/v3/community/8.8.8.8\"",
+    "response_snippet": "{\"ip\":\"8.8.8.8\",\"noise\":false,\"riot\":true,\"classification\":\"benign\",\"name\":\"Google Public DNS\",\"link\":\"https://viz.greynoise.io/riot/8.8.8.8\",\"last_seen\":\"2024-01-15\",\"message\":\"Success\"}"
+  },
+  "use_cases": [
+    "classify an IP as internet noise vs targeted threat during alert triage",
+    "check if an IP is a known benign service (RIOT) before blocking",
+    "enrich SIEM alerts with GreyNoise tags and first/last-seen metadata",
+    "filter mass scanner traffic from firewall or IDS investigation queues",
+    "look up CVEs and tags associated with noisy scanner IPs"
+  ],
+  "sources": [
+    "https://docs.greynoise.io/",
+    "https://www.greynoise.io/",
+    "https://viz.greynoise.io/"
+  ],
+  "researcher_confidence": "medium"
+}

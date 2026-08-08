@@ -1,0 +1,52 @@
+{
+  "id": "tavily",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tavily.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tavily.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tavily.com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tavily.com"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 credits/month on free plan (exact current free allotment may vary; confirm on pricing page)",
+      "source": "https://tavily.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published by plan (not \"not published\") \u2014 e.g. free-tier request/minute and monthly credit caps appear on Tavily pricing/docs",
+      "source": "https://docs.tavily.com"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tavily.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tavily.com"
+    }
+  },
+  "notes": "Adversarial check: free_tier_limits and rate_limits were understated/wrong vs published pricing; base_url, auth Bearer, and search endpoint still match official docs."
+}

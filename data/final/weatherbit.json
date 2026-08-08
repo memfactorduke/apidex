@@ -1,0 +1,96 @@
+{
+  "id": "weatherbit",
+  "status": "operational",
+  "name": "Weatherbit",
+  "category": "weather-environment",
+  "tagline": "Global weather, air quality, and energy/agri APIs with a free developer tier.",
+  "description": "Weatherbit provides global current weather, forecasts, historical data, air quality, and agriculture/energy endpoints via a REST API. Developers authenticate with an API key and can start on a free tier with documented daily request limits.",
+  "base_url": "https://api.weatherbit.io/v2.0",
+  "docs_url": "https://www.weatherbit.io/api",
+  "signup_url": "https://www.weatherbit.io/account/create",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter key=YOUR_API_KEY (or header in some SDKs); self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.weatherbit.io/v2.0/current?city=Raleigh,NC&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[{\"city_name\":\"Raleigh\",\"temp\":22.5,\"weather\":{\"description\":\"Clear sky\"}}],\"count\":1}"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "get multi-day weather forecast by coordinates",
+    "retrieve historical weather for a date range",
+    "check air quality index for a location"
+  ],
+  "sources": [
+    "https://www.weatherbit.io/api",
+    "https://www.weatherbit.io/pricing"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

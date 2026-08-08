@@ -1,0 +1,52 @@
+{
+  "id": "resend",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/docs/api-reference/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/docs/api-reference/introduction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 emails/day and 3,000 emails/month on free plan; 1 domain; rate limits apply",
+      "source": "https://resend.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: 2 requests/second (default); higher limits on paid plans",
+      "source": "https://resend.com/docs/api-reference/introduction"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/docs/api-reference/emails/send-email"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://resend.com/docs"
+    }
+  },
+  "notes": "free_tier_limits and rate_limits are published; entry marked them unknown/not published. Auth Bearer re_ pattern and POST /emails example match docs. CORS not documented for browser use."
+}

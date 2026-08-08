@@ -1,0 +1,52 @@
+{
+  "id": "mapbox",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/help/getting-started/access-tokens/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mapbox.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mapbox.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/api/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/help/troubleshooting/cors-errors/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/api/search/geocoding/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.mapbox.com/api/"
+    }
+  },
+  "notes": "Verified against official Mapbox docs and pricing (2026). All claims hold: api.mapbox.com base, access_token auth, product-specific free tiers/rate limits, CORS yes, geocoding example path valid. Free-tier wording correctly hedges that units vary by product."
+}

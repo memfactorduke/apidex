@@ -1,0 +1,49 @@
+{
+  "id": "meteostat",
+  "status": "operational",
+  "name": "Meteostat",
+  "category": "weather-environment",
+  "tagline": "Historical weather and climate data by station or coordinates via RapidAPI",
+  "description": "Meteostat\u2019s JSON API serves historical hourly, daily, and monthly weather observations plus climate normals from thousands of stations and model-backed point queries. Hosted on RapidAPI, it returns JSON with meta and data objects for station lookup, nearby search, and time-series ranges. Free for light use (500 calls/month); paid tiers raise monthly quotas. Separate free bulk dumps and a Python library exist outside this API.",
+  "base_url": "https://meteostat.p.rapidapi.com",
+  "docs_url": "https://dev.meteostat.net/api",
+  "signup_url": "https://rapidapi.com/meteostat/api/meteostat",
+  "auth": {
+    "type": "apiKey",
+    "details": "RapidAPI key via X-RapidAPI-Key header (and x-rapidapi-host: meteostat.p.rapidapi.com). Alternative: rapidapi-key query param. Sign up on RapidAPI and subscribe to a Meteostat plan."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "500 requests per month (hard limit on Basic/free plan)",
+    "paid_plans": "Pro $9.99/mo (10,000 req/mo); Ultra $29.99/mo (35,000); Mega $99.99/mo (120,000) via RapidAPI"
+  },
+  "rate_limits": "Free: 500 req/month hard limit. Paid plans raise monthly quota only. HTTP 429 when quota exceeded. Per-request caps: hourly max 30 days; daily max 10 years. No separate per-second limit published.",
+  "example": {
+    "request": "curl --request GET --url 'https://meteostat.p.rapidapi.com/stations/meta?id=10637' --header 'x-rapidapi-host: meteostat.p.rapidapi.com' --header 'x-rapidapi-key: YOUR_API_KEY'",
+    "response_snippet": "{\"meta\":{\"exec_time\":0.003,\"generated\":\"2021-06-21 18:23:58\"},\"data\":{\"id\":\"10637\",\"name\":{\"en\":\"Frankfurt Airport\"},\"country\":\"DE\",\"region\":\"HE\",\"location\":{\"latitude\":50.05,\"longitude\":8.6,\"elevation\":111},\"timezone\":\"Europe/Berlin\",\"inventory\":{\"hourly\":{\"start\":\"1926-01-01\",\"end\":\"2021-06-20\"},\"daily\":{\"start\":\"1934-05-01\",\"end\":\"2021-06-18\"}}}}"
+  },
+  "use_cases": [
+    "get historical daily temperatures for a weather station",
+    "fetch hourly observations for a station over a date range",
+    "look up weather station metadata by Meteostat, WMO, or ICAO id",
+    "find nearby weather stations for a lat/lon",
+    "get monthly climate stats for a geographic point",
+    "retrieve long-term climate normals for a station"
+  ],
+  "sources": [
+    "https://dev.meteostat.net/api",
+    "https://dev.meteostat.net/api/stations/meta",
+    "https://dev.meteostat.net/api/stations/daily",
+    "https://dev.meteostat.net/api/stations/hourly.html",
+    "https://dev.meteostat.net/api/stations",
+    "https://rapidapi.com/meteostat/api/meteostat",
+    "https://rapidapi.com/meteostat/api/meteostat/pricing",
+    "https://dev.meteostat.net/terms.html"
+  ],
+  "researcher_confidence": "high"
+}

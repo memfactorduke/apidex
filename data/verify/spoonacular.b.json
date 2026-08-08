@@ -1,0 +1,52 @@
+{
+  "id": "spoonacular",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "150 points/day free (Food API pricing; points are endpoint-weighted, not a flat request count)",
+      "source": "https://spoonacular.com/food-api/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 150 points/day; paid plans scale higher (e.g. 1,500\u2013150,000+ points/day). Limits are published on pricing.",
+      "source": "https://spoonacular.com/food-api/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs#search-recipes-complex"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs"
+    }
+  },
+  "notes": "Main issue: free_tier_limits and rate_limits are published (not unknown/not published). Free tier is 150 points/day. base_url, docs, auth (apiKey query or x-api-key), and complexSearch example match current docs. CORS not stated officially."
+}

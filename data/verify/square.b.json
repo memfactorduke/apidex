@@ -1,0 +1,52 @@
+{
+  "id": "square",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.squareup.com/docs/build-basics/general-considerations/using-rest-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.squareup.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.squareup.com/docs/build-basics/access-tokens"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.squareup.com/docs"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://squareup.com/us/en/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.squareup.com/docs/build-basics/general-considerations/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.squareup.com/reference/square/locations-api/list-locations"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.squareup.com/docs"
+    }
+  },
+  "notes": "Verified against official Square developer docs. Base URL, OAuth/PAT auth, free API with processing fees, rate limits, and List Locations example all match current docs. CORS left unknown."
+}

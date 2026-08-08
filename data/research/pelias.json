@@ -1,0 +1,43 @@
+{
+  "id": "pelias",
+  "status": "operational",
+  "name": "Pelias",
+  "category": "geo-maps",
+  "tagline": "Open-source geocoding API for address search, reverse geocoding, and place autocomplete.",
+  "description": "Pelias is an open-source geocoding engine exposed via Geocode Earth's hosted API (api.geocode.earth). It turns free-text addresses and place names into structured geographic coordinates, supports reverse geocoding, and offers autocomplete-style search for maps and location apps.",
+  "base_url": "https://api.geocode.earth/v1",
+  "docs_url": "https://geocode.earth/docs",
+  "signup_url": "https://geocode.earth",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter or Authorization header; self-serve signup on Geocode Earth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.geocode.earth/v1/search?text=30%20West%2026th%20Street%2C%20New%20York%2C%20NY&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"geocoding\":{\"version\":\"0.2\",\"attribution\":\"https://geocode.earth/guidelines\",\"query\":{\"text\":\"30 West 26th Street, New York, NY\",\"size\":10}},\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[-73.9897,40.7441]},\"properties\":{\"id\":\"openaddresses:address:us/ny/city_of_new_york:...\",\"gid\":\"openaddresses:address:us/ny/city_of_new_york:...\",\"layer\":\"address\",\"source\":\"openaddresses\",\"name\":\"30 West 26th Street\",\"housenumber\":\"30\",\"street\":\"West 26th Street\",\"postalcode\":\"10010\",\"confidence\":0.9,\"label\":\"30 West 26th Street, New York, NY, USA\"}}]}"
+  },
+  "use_cases": [
+    "geocode a street address to lat/lon",
+    "reverse geocode coordinates to an address",
+    "autocomplete place names as a user types",
+    "find nearby places from a point",
+    "batch-normalize addresses for a dataset"
+  ],
+  "sources": [
+    "https://geocode.earth",
+    "https://geocode.earth/docs",
+    "https://github.com/pelias/pelias"
+  ],
+  "researcher_confidence": "low"
+}

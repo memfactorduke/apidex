@@ -1,0 +1,52 @@
+{
+  "id": "ipinfo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "50,000 requests/month on free plan (with limited fields); confirm exact product naming (Lite vs free) on pricing \u2014 entry's 'Basic/Lite-style' wording is imprecise",
+      "source": "https://ipinfo.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Match free_tier_limits / plan-specific monthly quotas; avoid inventing daily/minute limits unless documented",
+      "source": "https://ipinfo.io/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipinfo.io/developers"
+    }
+  },
+  "notes": "Need live verification against official docs \u2014 re-checking pricing, free tier, auth, and example endpoints."
+}

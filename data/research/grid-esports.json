@@ -1,0 +1,40 @@
+{
+  "id": "grid-esports",
+  "status": "operational",
+  "name": "GRID Esports",
+  "category": "sports",
+  "tagline": "Official-grade esports data and live telemetry for major titles and broadcasters",
+  "description": "GRID provides esports data and live telemetry APIs used by publishers, broadcasters, and developers for match stats, series schedules, player performance, and real-time game events across major competitive titles.",
+  "base_url": "https://api.grid.gg",
+  "docs_url": "https://docs.grid.gg",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication (exact header/mechanism to be confirmed from official docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.grid.gg/\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "fetch live match telemetry for a tournament series",
+    "list upcoming esports series schedules by game title",
+    "query player or team performance stats for a completed match",
+    "subscribe to real-time in-game events for broadcast overlays"
+  ],
+  "sources": [
+    "https://grid.gg"
+  ],
+  "researcher_confidence": "low"
+}

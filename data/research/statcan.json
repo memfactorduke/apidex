@@ -1,0 +1,42 @@
+{
+  "id": "statcan",
+  "status": "operational",
+  "name": "Statistics Canada Web Data Service",
+  "category": "government-open-data",
+  "tagline": "Open JSON/XML access to Canadian official statistics and data tables",
+  "description": "Statistics Canada's Web Data Service (WDS) provides free programmatic access to official Canadian socioeconomic, demographic, and statistical data tables. Developers can query cube metadata, series, and observations via REST endpoints without an API key, enabling open-data applications, research tooling, and automated statistical retrieval.",
+  "base_url": "https://www150.statcan.gc.ca/t1/wds/rest",
+  "docs_url": "https://www.statcan.gc.ca/en/developers/wds",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public REST endpoints; no API key or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free open data; no usage fees published",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://www150.statcan.gc.ca/t1/wds/rest/getCubeMetadata\" -H \"Content-Type: application/json\" -d '[{\"productId\":17100005}]'",
+    "response_snippet": "[{\"status\":\"SUCCESS\",\"object\":{\"productId\":17100005,\"cansimId\":\"17-10-0005\",\"cubeTitleEn\":\"Population estimates on July 1st, by age and sex\",\"frequencyCode\":9,\"nbSeriesCube\":...}}]"
+  },
+  "use_cases": [
+    "fetch metadata for a Statistics Canada data cube by product ID",
+    "retrieve latest statistical observations for a Canadian economic series",
+    "list available coordinates and dimensions for a data table",
+    "download time-series values for population or labour force indicators"
+  ],
+  "sources": [
+    "https://www.statcan.gc.ca/en/developers/wds",
+    "https://www150.statcan.gc.ca/t1/wds/rest"
+  ],
+  "researcher_confidence": "low"
+}

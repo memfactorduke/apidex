@@ -1,0 +1,52 @@
+{
+  "id": "census-bureau",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free with optional API key; without a key the API may refuse or tightly throttle requests (official user guide emphasizes key signup; the 500/day figure is not currently documented on primary Census developer pages). Register a free key at api.census.gov for higher/reliable access.",
+      "source": "https://www.census.gov/data/developers/guidance/api-user-guide.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Official docs do not currently state a public 500 queries/IP/day limit. An optional free API key is strongly recommended/required for reliable use; higher limits apply with a registered key. See Census API user guide for current guidance.",
+      "source": "https://www.census.gov/data/developers/guidance/api-user-guide.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Main failure mode: invented/outdated 500 queries/IP/day limit. Base URL, docs, optional key auth, free tier, and ACS-style example shape match official Census developer sources. CORS not documented. Confirm live path availability for acs1 2023 before treating example as fully production-ready."
+}

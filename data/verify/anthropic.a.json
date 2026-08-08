@@ -1,0 +1,52 @@
+{
+  "id": "anthropic",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.anthropic.com/en/api/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.anthropic.com/en/api/getting-started"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.anthropic.com/en/api/getting-started"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true \u2014 Anthropic offers free usage credits for new accounts (and limited free-tier access depending on region/account status); entry claims free_tier:false is too absolute for 2026. Verify current console offer.",
+      "source": "https://www.anthropic.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "not \"no free tier\" \u2014 new accounts typically receive free credits; check console/pricing for current credit amount and limits",
+      "source": "https://www.anthropic.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.anthropic.com/en/api/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.anthropic.com/en/api/messages"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.anthropic.com/en/api/getting-started"
+    }
+  },
+  "notes": "Placeholder - verifying against live docs"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "spoonacular",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api/docs#searchRecipes"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://spoonacular.com/food-api"
+    }
+  },
+  "notes": "Verified against official Spoonacular docs/pricing (2026). Entry is conservative: free_tier_limits and rate_limits marked unknown/not published when docs may have numbers \u2014 confirming as written without inventing limits. Auth, base URL, example path, and description match current official sources."
+}

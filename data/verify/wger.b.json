@@ -1,0 +1,52 @@
+{
+  "id": "wger",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wger.de/en/software/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wger.de/en/software/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wger.de/en/software/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wger.de/en/software/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wger.de/en/software/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wger.de/en/software/api"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wger.de/api/v2/exerciseinfo/?limit=1&language=2"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wger.de/en/software/api"
+    }
+  },
+  "notes": "Verified against official wger docs and live API. base_url, docs, token auth, free public instance + self-host, unpublished rate limits, and exerciseinfo example all check out; CORS remains unknown."
+}

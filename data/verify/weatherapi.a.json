@@ -1,0 +1,52 @@
+{
+  "id": "weatherapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/pricing.aspx"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000,000 calls/month; 15 days forecast; history (last 7 days); max 3 locations; no commercial use",
+      "source": "https://www.weatherapi.com/pricing.aspx"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: ~15 calls/min; higher plans scale (e.g. Standard ~50/min). Exact RPM published on pricing page.",
+      "source": "https://www.weatherapi.com/pricing.aspx"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherapi.com/docs/"
+    }
+  },
+  "notes": "Docs confirm base URL, API key query param, current/forecast/history/astronomy/sports. Free tier and call limits are published on pricing; free_tier_limits and rate_limits as 'unknown'/'not published' are wrong. CORS not documented."
+}

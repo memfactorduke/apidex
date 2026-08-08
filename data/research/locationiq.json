@@ -1,0 +1,40 @@
+{
+  "id": "locationiq",
+  "status": "operational",
+  "name": "LocationIQ",
+  "category": "geo-maps",
+  "tagline": "Geocoding, reverse geocoding, and maps API built on OpenStreetMap data.",
+  "description": "LocationIQ provides geocoding, reverse geocoding, autocomplete, directions, and map tiles via a REST API. Developers authenticate with an API key and can call endpoints for address lookup, coordinate conversion, and routing. It is commonly used for location search, address validation, and embedding maps in applications.",
+  "base_url": "https://us1.locationiq.com/v1",
+  "docs_url": "https://locationiq.com/docs",
+  "signup_url": "https://locationiq.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter or Authorization: Bearer header; self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://us1.locationiq.com/v1/search?key=YOUR_API_KEY&q=Empire+State+Building&format=json\"",
+    "response_snippet": "[{\"place_id\":\"...\",\"licence\":\"...\",\"lat\":\"40.7484\",\"lon\":\"-73.9857\",\"display_name\":\"Empire State Building, ...\"}]"
+  },
+  "use_cases": [
+    "geocode an address to coordinates",
+    "reverse geocode lat/lon to an address",
+    "autocomplete place search as user types",
+    "get driving directions between two points"
+  ],
+  "sources": [
+    "https://locationiq.com/docs"
+  ],
+  "researcher_confidence": "low"
+}

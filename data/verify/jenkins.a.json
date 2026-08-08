@@ -1,0 +1,52 @@
+{
+  "id": "jenkins",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jenkins.io/doc/book/using/remote-access-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jenkins.io/doc/book/using/remote-access-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jenkins.io/doc/book/using/remote-access-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jenkins.io/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jenkins.io/doc/book/using/remote-access-api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jenkins.io/doc/book/using/remote-access-api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jenkins.io/doc/book/using/remote-access-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jenkins.io/doc/book/using/remote-access-api/"
+    }
+  },
+  "notes": "Verified against official Jenkins remote-access-api docs. base_url is intentionally a self-hosted placeholder (YOUR_JENKINS_HOST); HTTP 0 is expected, not a dead SaaS endpoint. Auth, free OSS model, instance-specific limits, and /api/json example match current docs."
+}

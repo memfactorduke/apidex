@@ -1,0 +1,52 @@
+{
+  "id": "opencage",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opencagedata.com/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opencagedata.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opencagedata.com/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opencagedata.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opencagedata.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free trial: 1 request/second. Paid plans: higher limits by plan (e.g. 15\u201350 req/s depending on tier). Also daily/monthly request caps by plan.",
+      "source": "https://opencagedata.com/pricing"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opencagedata.com/api"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opencagedata.com/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opencagedata.com/api"
+    }
+  },
+  "notes": "rate_limits is the main fail: OpenCage publishes request-per-second and plan request caps on the pricing page, so 'not published' is wrong. free_tier_limits was already marked unknown/verify \u2014 acceptable. CORS left as unknown matches docs silence; not incorrect."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "wiktionary",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wiktionary.org/w/api.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Wikimedia publishes bot/request guidelines (e.g. maxlag, concurrency, and User-Agent requirements); not merely \"not published\" \u2014 see API etiquette / bot policy",
+      "source": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (MediaWiki API supports CORS with origin=* for anonymous GET; Origin header for authenticated)",
+      "source": "https://www.mediawiki.org/wiki/API:Cross-site_requests"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Request is valid MediaWiki API shape, but the sample title \"dictionary\" is missing on English Wiktionary (response shows missing page); use an existing lemma such as \"hello\" or \"word\" for a useful extracts example",
+      "source": "https://en.wiktionary.org/w/api.php"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mediawiki.org/wiki/API:Main_page"
+    }
+  },
+  "notes": "Verified against MediaWiki/Wiktionary official docs (2026). Base URL and read-only no-key access hold. CORS is supported (not unknown). Rate limits/etiquette are documented. Example curl works but demonstrates a missing page for titles=dictionary."
+}

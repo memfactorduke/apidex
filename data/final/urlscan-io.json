@@ -1,0 +1,95 @@
+{
+  "id": "urlscan-io",
+  "status": "operational",
+  "name": "urlscan.io",
+  "category": "security-identity",
+  "tagline": "Live website scanning and sandboxing for phishing and malware investigation.",
+  "description": "urlscan.io is a public API for submitting URLs to a browser sandbox, capturing screenshots, network activity, DOM, and threat indicators. Used by security teams and researchers to investigate phishing, malware, and suspicious sites with search and result APIs.",
+  "base_url": "https://urlscan.io/api/v1",
+  "docs_url": "https://urlscan.io/docs/api/",
+  "signup_url": "https://urlscan.io/user/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via API-Key header (or ?apiKey= query param on some endpoints); self-serve signup at urlscan.io. Public search may work unauthenticated with lower limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"API-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"url\":\"https://example.com\",\"visibility\":\"public\"}' https://urlscan.io/api/v1/scan/",
+    "response_snippet": "{\"message\":\"Submission successful\",\"uuid\":\"...\",\"result\":\"https://urlscan.io/result/.../\",\"api\":\"https://urlscan.io/api/v1/result/.../\",\"visibility\":\"public\",\"url\":\"https://example.com\",\"country\":\"US\"}"
+  },
+  "use_cases": [
+    "submit a URL for sandbox scanning and get a result UUID",
+    "fetch scan result JSON including network requests and screenshots",
+    "search historical urlscan results for a domain or hash",
+    "check if a URL has been scanned before for phishing investigation"
+  ],
+  "sources": [
+    "https://urlscan.io/docs/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

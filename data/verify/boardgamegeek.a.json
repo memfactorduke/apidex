@@ -1,0 +1,52 @@
+{
+  "id": "boardgamegeek",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://boardgamegeek.com/wiki/page/BGG_XML_API2"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://boardgamegeek.com/wiki/page/BGG_XML_API2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://boardgamegeek.com/wiki/page/BGG_XML_API2"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://boardgamegeek.com/wiki/page/BGG_XML_API2"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://boardgamegeek.com/wiki/page/BGG_XML_API2"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://boardgamegeek.com/wiki/page/BGG_XML_API2"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://boardgamegeek.com/wiki/page/BGG_XML_API2"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://boardgamegeek.com/wiki/page/BGG_XML_API2"
+    }
+  },
+  "notes": "Verified against BGG XML API2 wiki and live probes. base_url and docs_url match official docs; auth is none for most public reads; free with unpublished formal free-tier limits; rate limits described as not published (community guidance exists); CORS unknown; example /thing?id=&stats=1 is valid; description accurate. Automated 401/403 likely bot protection, not dead API."
+}

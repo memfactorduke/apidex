@@ -1,0 +1,52 @@
+{
+  "id": "wordsapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wordsapi.com/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wordsapi.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wordsapi.com/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/dpventures/api/wordsapi"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "2500 requests/day (HARD LIMIT) on RapidAPI BASIC free plan",
+      "source": "https://rapidapi.com/dpventures/api/wordsapi"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 2500/day hard limit; Pro: 50000/day soft; Ultra: 250000/day soft; Mega: 1000000/day soft (RapidAPI pricing)",
+      "source": "https://rapidapi.com/dpventures/api/wordsapi"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wordsapi.com/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wordsapi.com/"
+    }
+  },
+  "notes": "Main failure: free_tier_limits and rate_limits are published on RapidAPI (2500/day free). Base URL, auth headers, docs, and example path match official sources."
+}

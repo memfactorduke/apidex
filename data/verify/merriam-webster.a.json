@@ -1,0 +1,42 @@
+{
+  "id": "merriam-webster",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.dictionaryapi.com/api/v3",
+      "source": "https://dictionaryapi.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://dictionaryapi.com/",
+      "source": "https://dictionaryapi.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm"
+    },
+    "free_tier": {
+      "verdict": "confirm"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "confirm on account dashboard; 1000/day not found in public docs",
+      "source": "https://dictionaryapi.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "not published publicly; confirm on account dashboard",
+      "source": "https://dictionaryapi.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "confirm"
+    },
+    "description": {
+      "verdict": "confirm"
+    }
+  },
+  "notes": "Automated 404s on base/docs URLs need verification against live docs; free tier limits likely hallucinated."
+}

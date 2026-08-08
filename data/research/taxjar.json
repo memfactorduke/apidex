@@ -1,0 +1,42 @@
+{
+  "id": "taxjar",
+  "status": "operational",
+  "name": "TaxJar API",
+  "category": "ecommerce-payments",
+  "tagline": "Sales tax calculation and reporting API for ecommerce platforms",
+  "description": "TaxJar provides a REST API for real-time sales tax calculations, tax rate lookups, nexus management, and automated sales tax reporting. Used by ecommerce platforms and marketplaces to determine tax rates by location, calculate order tax, and file returns across US jurisdictions.",
+  "base_url": "https://api.taxjar.com/v2",
+  "docs_url": "https://developers.taxjar.com/api/reference/",
+  "signup_url": "https://app.taxjar.com/api_sign_up/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via Authorization: Bearer header; obtain from TaxJar account dashboard after signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.taxjar.com/v2/rates/90210\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"rate\": {\"zip\": \"90210\", \"state\": \"CA\", \"state_rate\": \"0.0625\", \"county\": \"LOS ANGELES\", \"county_rate\": \"0.01\", \"city\": \"BEVERLY HILLS\", \"city_rate\": \"0.0\", \"combined_rate\": \"0.0975\", \"freight_taxable\": false}}"
+  },
+  "use_cases": [
+    "calculate sales tax for an ecommerce order by address",
+    "look up combined sales tax rate by ZIP code",
+    "list nexus regions for a merchant account",
+    "create a transaction for sales tax reporting",
+    "validate a customer address for tax purposes"
+  ],
+  "sources": [
+    "https://developers.taxjar.com/api/reference/",
+    "https://www.taxjar.com/"
+  ],
+  "researcher_confidence": "low"
+}

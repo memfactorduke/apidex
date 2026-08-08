@@ -1,0 +1,52 @@
+{
+  "id": "exercisedb",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "BASIC (free): 100 requests/day; other plans: PRO 10000/day, ULTRA 50000/day, MEGA 1000000/day (RapidAPI pricing page)",
+      "source": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published via RapidAPI plan quotas (e.g. BASIC 100/day, PRO 10000/day, ULTRA 50000/day, MEGA 1000000/day); per-second/minute rates not separately published on the listing",
+      "source": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Path and headers match docs; gifUrl host in sample response is outdated vs current RapidAPI playground samples (verify against live playground). Prefer endpoints documented on RapidAPI endpoints tab (e.g. /exercises, /exercises/bodyPart/{bodyPart}).",
+      "source": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb"
+    }
+  },
+  "notes": "free_tier_limits and rate_limits are published on RapidAPI pricing (not unknown/not published). Example request shape is largely correct; response gifUrl domain may have changed. CORS not documented. overall fail due to incorrect free_tier_limits and rate_limits."
+}

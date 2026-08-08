@@ -1,0 +1,52 @@
+{
+  "id": "tmdb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/docs/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/docs/authentication-application"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/docs/faq"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "40 requests per 10 seconds per IP (v3); higher/commercial use requires contact",
+      "source": "https://developer.themoviedb.org/docs/rate-limiting"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "40 requests per 10 seconds per IP address (published for v3)",
+      "source": "https://developer.themoviedb.org/docs/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/reference/movie-details"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.themoviedb.org/docs"
+    }
+  },
+  "notes": "Rate limits are published (not \"not published\"/\"unknown\"). Base URL, docs, apiKey auth, free tier, and movie/550 example match current v3 docs. CORS not clearly documented. Adversarial hunt: no shutdown; v3 still primary."
+}

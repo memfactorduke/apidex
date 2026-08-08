@@ -1,0 +1,52 @@
+{
+  "id": "mlb-stats",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "No public docs at statsapi.mlb.com/docs/; community/unofficial docs (e.g. GitHub wikis, sportsdataverse) are the practical references",
+      "source": "https://statsapi.mlb.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2024-10-01"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1"
+    }
+  },
+  "notes": "docs_url is wrong: https://statsapi.mlb.com/docs/ does not serve official public API documentation (404/non-docs). Base URL, no-auth public JSON endpoints, and schedule example still work on statsapi.mlb.com. Rate limits and free-tier quotas remain unpublished; CORS stays unknown without browser probe. Entry fails on docs_url alone."
+}

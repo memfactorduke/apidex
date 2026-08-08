@@ -1,0 +1,40 @@
+{
+  "id": "censys",
+  "status": "operational",
+  "name": "Censys",
+  "category": "security-identity",
+  "tagline": "Internet-wide scan data for hosts, certificates, and services used in attack-surface research",
+  "description": "Censys provides internet-wide scan data covering hosts, certificates, and services for attack-surface research and security analysis. The API enables searching and retrieving detailed information about internet-connected assets.",
+  "base_url": "https://search.censys.io/api",
+  "docs_url": "https://search.censys.io/api",
+  "signup_url": "https://search.censys.io/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API ID and Secret via Basic Auth or headers, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_API_ID:YOUR_API_SECRET https://search.censys.io/api/v2/hosts/8.8.8.8",
+    "response_snippet": "{\"code\":200,\"status\":\"OK\",\"result\":{\"ip\":\"8.8.8.8\",\"services\":[...]}}"
+  },
+  "use_cases": [
+    "lookup host details by IP address",
+    "search certificates by domain",
+    "find services exposed on the internet",
+    "research attack surface for an organization"
+  ],
+  "sources": [
+    "https://search.censys.io/api"
+  ],
+  "researcher_confidence": "low"
+}

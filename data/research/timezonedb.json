@@ -1,0 +1,48 @@
+{
+  "id": "timezonedb",
+  "status": "operational",
+  "name": "TimeZoneDB",
+  "category": "geo-maps",
+  "tagline": "REST API for timezone lookup by zone name, coordinates, city, or IP",
+  "description": "TimeZoneDB is a free-to-register REST API that returns local time, GMT offset, DST status, and related timezone metadata. Free endpoints support lookup by IANA zone name or lat/lng; premium unlocks city-name and IP lookups plus higher reliability on vip.timezonedb.com. Responses are XML or JSON (XML default). Free tier is personal/non-commercial only, with a strict one-request-per-second rate limit.",
+  "base_url": "https://api.timezonedb.com/v2.1",
+  "docs_url": "https://timezonedb.com/api",
+  "signup_url": "https://timezonedb.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key passed as required query parameter `key` (e.g. ?key=YOUR_API_KEY). Free self-serve signup at timezonedb.com/register."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Unlimited queries for personal/non-commercial use; 1 request/second rate limit (additional requests blocked)",
+    "paid_plans": "Premium from $5/month or $50/year: city & IP lookup, unlimited queries, no rate limit, vip host, priority support"
+  },
+  "rate_limits": "Free: 1 request per second. Premium: no rate limit applied.",
+  "example": {
+    "request": "curl \"https://api.timezonedb.com/v2.1/get-time-zone?key=YOUR_API_KEY&format=json&by=zone&zone=America/Chicago\"",
+    "response_snippet": "{\n  \"status\": \"OK\",\n  \"message\": \"\",\n  \"countryCode\": \"US\",\n  \"countryName\": \"United States\",\n  \"zoneName\": \"America/Chicago\",\n  \"abbreviation\": \"CDT\",\n  \"gmtOffset\": -18000,\n  \"dst\": \"1\",\n  \"timestamp\": 1786199403,\n  \"formatted\": \"2026-08-08 14:30:03\"\n}"
+  },
+  "use_cases": [
+    "get current local time and offset for an IANA timezone name",
+    "resolve timezone, DST, and local time from latitude and longitude",
+    "convert a Unix timestamp between two timezones",
+    "list all supported timezones or filter by country code",
+    "look up timezone by city name or IP address (premium)"
+  ],
+  "sources": [
+    "https://timezonedb.com/api",
+    "https://timezonedb.com/references/get-time-zone",
+    "https://timezonedb.com/references/list-time-zone",
+    "https://timezonedb.com/references/convert-time-zone",
+    "https://timezonedb.com/premium",
+    "https://timezonedb.com/register",
+    "https://timezonedb.com/"
+  ],
+  "researcher_confidence": "high"
+}

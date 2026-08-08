@@ -1,0 +1,52 @@
+{
+  "id": "github",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.github.com/en/rest"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.github.com/en/get-started/learning-about-github/githubs-plans"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.github.com/en/rest/repos/repos"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api"
+    }
+  },
+  "notes": "Verified against official GitHub REST docs (2026). Base URL, Bearer auth, rate limits (5k/15k/60), free-tier-via-account model, Accept + API-Version headers, and repo example path all match current docs. CORS left as unknown is appropriate. No shutdown/migration found."
+}

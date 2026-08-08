@@ -1,0 +1,52 @@
+{
+  "id": "huggingface-inference",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://router.huggingface.co/hf-inference (legacy api-inference.huggingface.co may still work for some routes; current docs use the router)",
+      "source": "https://huggingface.co/docs/api-inference/en/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/api-inference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/api-inference/en/getting-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/api-inference/en/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl https://router.huggingface.co/hf-inference/models/gpt2 -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"inputs\": \"Hello world\"}' (or use InferenceClient; path/host may have migrated from api-inference.huggingface.co)",
+      "source": "https://huggingface.co/docs/api-inference/en/getting-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/api-inference"
+    }
+  },
+  "notes": "PLACEHOLDER - verifying against official docs"
+}

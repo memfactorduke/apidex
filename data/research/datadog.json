@@ -1,0 +1,42 @@
+{
+  "id": "datadog",
+  "status": "operational",
+  "name": "Datadog API",
+  "category": "dev-tools",
+  "tagline": "Observability platform API for metrics, logs, traces, monitors, and infrastructure data",
+  "description": "REST API for Datadog's monitoring and observability platform. Query metrics and logs, manage monitors and dashboards, submit custom metrics and events, and automate infrastructure and APM workflows across multi-site endpoints.",
+  "base_url": "https://api.datadoghq.com",
+  "docs_url": "https://docs.datadoghq.com/api/latest/",
+  "signup_url": "https://www.datadoghq.com/free-datadog-trial/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key (DD-API-KEY) required for data submission; application key (DD-APPLICATION-KEY) also required for most read/write API calls. Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.datadoghq.com/api/v1/validate\" -H \"DD-API-KEY: YOUR_API_KEY\"",
+    "response_snippet": "{\"valid\": true}"
+  },
+  "use_cases": [
+    "validate Datadog API key credentials",
+    "query timeseries metrics for a host or service",
+    "list and manage monitors and their statuses",
+    "search and retrieve application logs",
+    "submit custom metrics or events from a script",
+    "list infrastructure hosts and tags"
+  ],
+  "sources": [
+    "https://docs.datadoghq.com/api/latest/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "what3words",
+  "status": "operational",
+  "name": "What3Words",
+  "category": "geo-maps",
+  "tagline": "Convert between 3-word addresses and precise lat/long coordinates worldwide",
+  "description": "What3Words divides the world into 3m x 3m squares, each with a unique three-word address. Its public API converts 3-word addresses to coordinates (and vice versa), supports autosuggest, grid sections, and available languages\u2014useful for navigation, logistics, and location UX without street addresses.",
+  "base_url": "https://api.what3words.com/v3",
+  "docs_url": "https://developer.what3words.com/public-api/docs",
+  "signup_url": "https://accounts.what3words.com/select-plan",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter (or X-Api-Key header); free self-serve signup at developer.what3words.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan available; exact request quotas require account/pricing page confirmation",
+    "paid_plans": "Paid plans available via what3words account/select-plan"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.what3words.com/v3/convert-to-coordinates?words=filled.count.soap&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"country\":\"GB\",\"square\":{\"southwest\":{\"lng\":-0.195543,\"lat\":51.520833},\"northeast\":{\"lng\":-0.195499,\"lat\":51.52086}},\"nearestPlace\":\"Bayswater, London\",\"coordinates\":{\"lng\":-0.195521,\"lat\":51.520847},\"words\":\"filled.count.soap\",\"language\":\"en\",\"map\":\"https://w3w.co/filled.count.soap\"}"
+  },
+  "use_cases": [
+    "convert a 3-word address to lat/long coordinates",
+    "convert lat/long coordinates to a 3-word address",
+    "autosuggest partial 3-word inputs for location UX",
+    "get a grid section of 3m squares for a bounding box",
+    "list supported what3words languages"
+  ],
+  "sources": [
+    "https://developer.what3words.com/public-api/docs",
+    "https://developer.what3words.com",
+    "https://what3words.com"
+  ],
+  "researcher_confidence": "medium"
+}

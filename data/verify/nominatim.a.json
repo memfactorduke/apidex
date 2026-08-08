@@ -1,0 +1,52 @@
+{
+  "id": "nominatim",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nominatim.org/release-docs/latest/api/Overview/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nominatim.org/release-docs/latest/api/Overview/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://operations.osmfoundation.org/policies/nominatim/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://operations.osmfoundation.org/policies/nominatim/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://operations.osmfoundation.org/policies/nominatim/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://operations.osmfoundation.org/policies/nominatim/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nominatim.org/release-docs/latest/api/Search/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nominatim.org/release-docs/latest/api/Overview/"
+    }
+  },
+  "notes": "All claims match OSMF Nominatim policy and official API docs: public instance is free for light non-commercial use at max 1 req/s, no bulk, User-Agent required, no API key. CORS not stated in docs."
+}

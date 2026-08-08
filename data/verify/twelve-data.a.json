@@ -1,0 +1,52 @@
+{
+  "id": "twelve-data",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Basic free plan: 8 API credits/minute, 800 API credits/day; delayed data only; limited endpoints (e.g. no real-time WebSocket on free); exact limits shown on pricing page",
+      "source": "https://twelvedata.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per plan (credits/min and credits/day); free Basic: 8 credits/min, 800/day; higher plans have higher credit limits",
+      "source": "https://twelvedata.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://twelvedata.com/docs"
+    }
+  },
+  "notes": "Free-tier limits and rate limits are published on pricing; entry wrongly left them unknown/not published. Other core claims (base URL, docs, API-key auth, example path) match official docs."
+}

@@ -57,8 +57,9 @@ def main():
             waiting += 1
             continue
         adj = load(ROOT / "data" / "adjudicate" / f"{slug}.json")
-        verdicts = {fld: (va["verdicts"][fld]["verdict"], vb["verdicts"][fld]["verdict"])
-                    for fld in FIELDS}
+        def v_of(v, fld):
+            return v.get("verdicts", {}).get(fld, {}).get("verdict", "unverifiable")
+        verdicts = {fld: (v_of(va, fld), v_of(vb, fld)) for fld in FIELDS}
         incorrect = [fld for fld, (a, b) in verdicts.items() if "incorrect" in (a, b)]
         if incorrect and adj is None:
             conflicts.append({"slug": slug, "fields": incorrect,

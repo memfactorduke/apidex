@@ -1,0 +1,52 @@
+{
+  "id": "yahoo-finance",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?interval=1d&range=5d"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?interval=1d&range=5d"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    }
+  },
+  "notes": "Unofficial Yahoo Finance query1 endpoints still work unauthenticated for chart data; no official public API product, docs, or published rate limits. CORS not published. Entry correctly flags unofficial status and uncertainty."
+}

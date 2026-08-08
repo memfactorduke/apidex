@@ -1,0 +1,52 @@
+{
+  "id": "lastfm",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/rest"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/tos"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/tos"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/tos"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/intro"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/show/artist.getInfo"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.last.fm/api/intro"
+    }
+  },
+  "notes": "All key fields verified against official Last.fm API docs (2026). base_url, method=artist.getinfo example, apiKey auth, free non-commercial keys, ~100MB Reasonable Usage Cap, unpublished numeric rate limits with error 29, and CORS support all match current official sources."
+}

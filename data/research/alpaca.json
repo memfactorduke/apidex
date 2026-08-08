@@ -1,0 +1,42 @@
+{
+  "id": "alpaca",
+  "status": "operational",
+  "name": "Alpaca",
+  "category": "finance",
+  "tagline": "Commission-free stock trading API for algo trading and market data",
+  "description": "Alpaca provides a commission-free stock and crypto trading API with market data, paper trading, and brokerage services. Developers use REST and WebSocket endpoints for equities, options, and crypto trading, account management, and real-time market data.",
+  "base_url": "https://api.alpaca.markets/v2",
+  "docs_url": "https://docs.alpaca.markets/",
+  "signup_url": "https://app.alpaca.markets/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key and secret via APCA-API-KEY-ID and APCA-API-SECRET-KEY headers; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://paper-api.alpaca.markets/v2/account\" -H \"APCA-API-KEY-ID: YOUR_API_KEY\" -H \"APCA-API-SECRET-KEY: YOUR_API_SECRET\"",
+    "response_snippet": "{\"id\":\"...\",\"account_number\":\"...\",\"status\":\"ACTIVE\",\"currency\":\"USD\",\"cash\":\"100000\",\"portfolio_value\":\"100000\"}"
+  },
+  "use_cases": [
+    "get brokerage account equity and cash balance",
+    "place a market order for a stock",
+    "fetch real-time stock quotes",
+    "list open positions in a portfolio",
+    "stream trade updates via WebSocket"
+  ],
+  "sources": [
+    "https://docs.alpaca.markets/",
+    "https://alpaca.markets/"
+  ],
+  "researcher_confidence": "medium"
+}

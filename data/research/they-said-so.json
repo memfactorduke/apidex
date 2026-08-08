@@ -1,0 +1,41 @@
+{
+  "id": "they-said-so",
+  "status": "operational",
+  "name": "They Said So Quotes",
+  "category": "education-reference",
+  "tagline": "Famous quotes API with categories, authors, and a daily quote endpoint.",
+  "description": "They Said So provides a REST API for retrieving famous quotes by category, author, keyword, or as a quote of the day. Responses include quote text, author, tags, and metadata. Free and paid plans are offered; free access has strict daily request caps suitable for light demos and learning projects.",
+  "base_url": "https://quotes.rest",
+  "docs_url": "https://theysaidso.com/api/",
+  "signup_url": "https://theysaidso.com/api/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer YOUR_API_KEY header (or X-TheySaidSo-Api-Secret for some clients); free tier may work without a key with tighter limits. Self-serve signup on theysaidso.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://quotes.rest/qod?language=en\"",
+    "response_snippet": "{\"success\":{\"total\":1},\"contents\":{\"quotes\":[{\"quote\":\"...\",\"author\":\"...\",\"tags\":[\"inspire\"],\"date\":\"2026-01-01\",\"id\":\"...\"}],\"copyright\":\"...\"}}"
+  },
+  "use_cases": [
+    "get the quote of the day",
+    "fetch quotes by category or keyword",
+    "look up quotes by a specific author",
+    "populate an inspiration or education feature with curated quotes"
+  ],
+  "sources": [
+    "https://theysaidso.com/api/"
+  ],
+  "researcher_confidence": "low"
+}

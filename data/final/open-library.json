@@ -1,0 +1,96 @@
+{
+  "id": "open-library",
+  "status": "operational",
+  "name": "Open Library",
+  "category": "education-reference",
+  "tagline": "Internet Archive book catalog with search, editions, and cover images.",
+  "description": "Open Library is an Internet Archive project that exposes a free public API for searching books, resolving works and editions by ISBN/OLID, fetching metadata (authors, subjects, publish dates), and retrieving cover images. Developers use it for catalog lookup, book discovery, and enrichment without requiring commercial licensing for typical read-only access.",
+  "base_url": "https://openlibrary.org",
+  "docs_url": "https://openlibrary.org/developers/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Read-only catalog and cover endpoints require no authentication. Some write/account features may require login; typical public use is unauthenticated."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://openlibrary.org/search.json?q=the+lord+of+the+rings&limit=1\"",
+    "response_snippet": "{\"numFound\":...,\"docs\":[{\"key\":\"/works/OL...\",\"title\":\"The Lord of the Rings\",\"author_name\":[\"J. R. R. Tolkien\"],...}]}"
+  },
+  "use_cases": [
+    "search books by title or author",
+    "look up a book edition by ISBN",
+    "fetch work metadata and subjects",
+    "get cover image URLs for a book",
+    "resolve Open Library IDs for catalog linking"
+  ],
+  "sources": [
+    "https://openlibrary.org/developers/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

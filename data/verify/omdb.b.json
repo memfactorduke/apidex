@@ -1,0 +1,52 @@
+{
+  "id": "omdb",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.omdbapi.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.omdbapi.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.omdbapi.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.omdbapi.com/apikey.aspx"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.omdbapi.com/apikey.aspx"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.omdbapi.com/apikey.aspx"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.omdbapi.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.omdbapi.com/"
+    }
+  },
+  "notes": "Verified against official omdbapi.com (2026). Free tier 1,000/day confirmed; apikey query param and t=/i= params match docs. CORS still not stated officially so left unknown/unverifiable. No shutdown or endpoint migration found."
+}

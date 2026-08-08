@@ -1,0 +1,100 @@
+{
+  "id": "nba-stats",
+  "status": "operational",
+  "name": "NBA Stats API",
+  "category": "sports",
+  "tagline": "Official NBA statistics endpoints for box scores, player tracking, and advanced metrics.",
+  "description": "Unofficially documented but widely used JSON endpoints on stats.nba.com that power the NBA's own stats site. Developers use them for player and team statistics, advanced box scores, shot charts, and player-tracking data. The API is free to call without a formal signup key, but requires browser-like headers and is subject to unofficial rate limiting and ToS constraints.",
+  "base_url": "https://stats.nba.com/stats",
+  "docs_url": "https://github.com/swar/nba_api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key. Requests typically require browser-like headers (User-Agent, Referer, Origin, x-nba-stats-origin, x-nba-stats-token) to avoid blocks; not an official public developer product."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No published free tier or paid plans; publicly callable without key, subject to undocumented throttling and ToS",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (community reports informal throttling / IP blocks under heavy use)",
+  "example": {
+    "request": "curl -s 'https://stats.nba.com/stats/leaguedashplayerstats?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=PerGame&Period=0&PlayerExperience=&PlayerPosition=&PlusMinus=N&Rank=N&Season=2024-25&SeasonSegment=&SeasonType=Regular%20Season&ShotClockRange=&StarterBench=&TeamID=0&VsConference=&VsDivision=' -H 'User-Agent: Mozilla/5.0' -H 'Referer: https://www.nba.com/' -H 'Origin: https://www.nba.com' -H 'Accept: application/json' -H 'x-nba-stats-origin: stats' -H 'x-nba-stats-token: true'",
+    "response_snippet": "{\"resource\":\"leaguedashplayerstats\",\"parameters\":{\"Season\":\"2024-25\",\"SeasonType\":\"Regular Season\",\"PerMode\":\"PerGame\"},\"resultSets\":[{\"name\":\"LeagueDashPlayerStats\",\"headers\":[\"PLAYER_ID\",\"PLAYER_NAME\",\"TEAM_ID\",\"GP\",\"PTS\",\"REB\",\"AST\"],\"rowSet\":[[2544,\"LeBron James\",1610612747,70,24.4,7.8,8.2]]}]}"
+  },
+  "use_cases": [
+    "get per-game player stats for an NBA season",
+    "fetch a game box score with advanced metrics",
+    "pull player tracking and hustle stats",
+    "query team standings or league dashboards",
+    "get shot chart data for a player",
+    "look up player career or season totals by ID"
+  ],
+  "sources": [
+    "https://stats.nba.com",
+    "https://www.nba.com/stats",
+    "https://github.com/swar/nba_api",
+    "https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints/README.md"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

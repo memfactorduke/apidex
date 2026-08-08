@@ -1,0 +1,40 @@
+{
+  "id": "open-textbook-library",
+  "status": "operational",
+  "name": "Open Textbook Library",
+  "category": "education-reference",
+  "tagline": "Search peer-reviewed open textbooks for higher education.",
+  "description": "The Open Textbook Library provides a searchable catalog of peer-reviewed open educational resources (OER) textbooks for higher education. It offers free, openly licensed textbooks that faculty can adopt, adapt, and share. The API allows developers to programmatically search and retrieve textbook metadata, reviews, and licensing information from the University of Minnesota's Open Textbook Library collection.",
+  "base_url": "https://open.umn.edu/opentextbooks/api",
+  "docs_url": "https://open.umn.edu/opentextbooks",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public API access. All endpoints are publicly accessible without API keys or tokens."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://open.umn.edu/opentextbooks/api/v1/textbooks?search=calculus\"",
+    "response_snippet": "{\n  \"data\": [\n    {\n      \"id\": 123,\n      \"title\": \"Calculus\",\n      \"authors\": [\"Gilbert Strang\"],\n      \"subjects\": [\"Mathematics\"],\n      \"license\": \"CC BY-NC-SA\",\n      \"url\": \"https://open.umn.edu/opentextbooks/textbooks/calculus\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "search open textbooks by subject or keyword",
+    "get textbook metadata including license and authors",
+    "list peer-reviewed OER textbooks for a course",
+    "find openly licensed alternatives to commercial textbooks"
+  ],
+  "sources": [
+    "https://open.umn.edu/opentextbooks"
+  ],
+  "researcher_confidence": "low"
+}

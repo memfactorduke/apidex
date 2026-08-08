@@ -1,0 +1,39 @@
+{
+  "id": "pirate-weather",
+  "status": "operational",
+  "name": "Pirate Weather",
+  "category": "weather-environment",
+  "tagline": "Dark Sky\u2013compatible free weather API replacement",
+  "description": "Pirate Weather is a free weather API that provides a Dark Sky\u2013compatible replacement after Apple shut down the Dark Sky API. It offers current conditions, forecasts, and historical weather data via a simple REST API.",
+  "base_url": "https://api.pirateweather.net/forecast",
+  "docs_url": "https://pirateweather.net/en/latest/",
+  "signup_url": "https://pirateweather.net/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via path parameter in the URL (self-serve signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.pirateweather.net/forecast/YOUR_API_KEY/37.8267,-122.4233\"",
+    "response_snippet": "{ \"latitude\": 37.8267, \"longitude\": -122.4233, \"timezone\": \"America/Los_Angeles\", \"currently\": { \"time\": 1234567890, \"summary\": \"Clear\", \"temperature\": 65.2 } }"
+  },
+  "use_cases": [
+    "get current weather for a location",
+    "get hourly and daily weather forecasts",
+    "get historical weather data for a location"
+  ],
+  "sources": [
+    "https://pirateweather.net/"
+  ],
+  "researcher_confidence": "low"
+}

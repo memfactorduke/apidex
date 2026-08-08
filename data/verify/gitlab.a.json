@@ -1,0 +1,52 @@
+{
+  "id": "gitlab",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/api/rest/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/api/rest/authentication.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://about.gitlab.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://about.gitlab.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/security/rate_limits.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/api/projects.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitlab.com/ee/api/"
+    }
+  },
+  "notes": "All fields verified against official GitLab docs (2026). base_url, auth (PRIVATE-TOKEN/Bearer/OAuth), Free plan with API access, and example curl match docs. Rate limits correctly described as variable; cors correctly unknown."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "replicate",
+  "status": "operational",
+  "name": "Replicate",
+  "category": "ai-ml",
+  "tagline": "Run open-source and commercial AI models via a simple HTTP API",
+  "description": "Replicate is a cloud platform for running machine learning models through a REST API. Developers can generate images, run language models, transcribe audio, and more by calling model endpoints with inputs; many popular open-source models are available without self-hosting. Authentication uses a personal API token; billing is typically usage-based by model compute.",
+  "base_url": "https://api.replicate.com/v1",
+  "docs_url": "https://replicate.com/docs",
+  "signup_url": "https://replicate.com/signin",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via Authorization: Bearer YOUR_API_TOKEN header; create tokens in account settings after signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 free credit often offered on signup; confirm current amount on pricing page",
+    "paid_plans": "Pay-as-you-go by model runtime/compute; some models have per-second or per-output pricing"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X POST \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Prefer: wait\" \\\n  -d '{\"input\": {\"prompt\": \"a sunset over mountains\"}}' \\\n  https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions",
+    "response_snippet": "{\n  \"id\": \"xyz...\",\n  \"status\": \"succeeded\",\n  \"output\": [\"https://replicate.delivery/.../output.webp\"],\n  \"model\": \"black-forest-labs/flux-schnell\",\n  \"urls\": {\"get\": \"https://api.replicate.com/v1/predictions/...\"}\n}"
+  },
+  "use_cases": [
+    "generate an image from a text prompt with Flux or SDXL",
+    "run an open-source LLM inference call without self-hosting",
+    "transcribe audio with Whisper or similar hosted models",
+    "upscale or edit an image with a community model",
+    "create embeddings or run vision models via hosted endpoints"
+  ],
+  "sources": [
+    "https://replicate.com/docs",
+    "https://replicate.com/docs/get-started/python",
+    "https://replicate.com/pricing",
+    "https://api.replicate.com"
+  ],
+  "researcher_confidence": "medium"
+}

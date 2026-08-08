@@ -1,0 +1,97 @@
+{
+  "id": "tvmaze",
+  "status": "operational",
+  "name": "TVMaze",
+  "category": "entertainment",
+  "tagline": "Free TV show, episode, and cast lookup API with schedules and search.",
+  "description": "TVMaze provides a free public API for television show data: search and lookup by name or ID, episode lists and air dates, cast and crew, images, and country/network schedules. No API key is required for the public endpoints; optional paid/higher-limit access may exist for heavy use. Responses are JSON. Widely used for media apps, calendars, and show metadata enrichment.",
+  "base_url": "https://api.tvmaze.com",
+  "docs_url": "https://www.tvmaze.com/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public API requires no authentication or API key for standard endpoints. Fair-use rate limiting applies; contact TVMaze for commercial/high-volume use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use with fair-use rate limits; commercial use requires permission/arrangement.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published precisely; fair use; roughly ~20 requests per 10 seconds commonly cited (verify current docs).",
+  "example": {
+    "request": "curl -s 'https://api.tvmaze.com/singlesearch/shows?q=girls'",
+    "response_snippet": "{\n  \"id\": 139,\n  \"name\": \"Girls\",\n  \"type\": \"Scripted\",\n  \"language\": \"English\",\n  \"genres\": [\"Drama\", \"Romance\"],\n  \"status\": \"Ended\",\n  \"runtime\": 30,\n  \"premiered\": \"2012-04-15\",\n  \"network\": {\"id\": 8, \"name\": \"HBO\"},\n  \"_links\": {\"self\": {\"href\": \"https://api.tvmaze.com/shows/139\"}}\n}"
+  },
+  "use_cases": [
+    "search TV shows by name",
+    "get episode list and air dates for a show",
+    "lookup show details by TVMaze ID",
+    "get today's TV schedule for a country",
+    "fetch cast and crew for a series",
+    "resolve show metadata for media libraries"
+  ],
+  "sources": [
+    "https://www.tvmaze.com/api",
+    "https://api.tvmaze.com"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

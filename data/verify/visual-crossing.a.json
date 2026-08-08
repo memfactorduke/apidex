@@ -1,0 +1,52 @@
+{
+  "id": "visual-crossing",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.visualcrossing.com/resources/documentation/weather-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.visualcrossing.com/weather-api-pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1000 records/day free (no credit card); Timeline Weather API uses record-based counting",
+      "source": "https://www.visualcrossing.com/weather-api-pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 1000 records/day; higher limits on paid tiers (Professional/Enterprise). Exact concurrent/request rate limits not always published as fixed RPM \u2014 daily record quotas are the primary limit.",
+      "source": "https://www.visualcrossing.com/weather-api-pricing/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?unitGroup=metric&key=YOUR_API_KEY&contentType=json\"",
+      "source": "https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Timeline weather API with historical data and forecasts in one call. Auth via API key; free tier includes 1000 records/day.",
+      "source": "https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/"
+    }
+  },
+  "notes": "Entry has research placeholders (description, auth details, example curl). Base URL and docs URL are correct. Free tier exists with 1000 records/day. CORS not documented. Overall fail due to incorrect free_tier_limits, rate_limits, example placeholders, and non-descriptive description."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "nhl-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-web.nhle.com/v1/scoreboard/now"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use a currently documented path such as GET https://api-web.nhle.com/v1/score/now (or verify scoreboard/now still exists); response_snippet is illustrative/hallucinated, not a live sample",
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Zmalski/NHL-API-Reference"
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after live verification."
+}

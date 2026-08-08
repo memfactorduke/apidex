@@ -1,0 +1,96 @@
+{
+  "id": "omdb",
+  "status": "operational",
+  "name": "OMDb API",
+  "category": "entertainment",
+  "tagline": "Free and paid movie/TV metadata by title or IMDb ID",
+  "description": "The Open Movie Database (OMDb) API returns film and television metadata\u2014titles, years, plots, posters, ratings, and cast\u2014queried by title, IMDb ID, or search. Developers use it for media catalogs, recommendation apps, and enrichment of entertainment data. Requests require an API key; response format is JSON or XML.",
+  "base_url": "https://www.omdbapi.com/",
+  "docs_url": "https://www.omdbapi.com/",
+  "signup_url": "https://www.omdbapi.com/apikey.aspx",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter; free key via self-serve signup on omdbapi.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 requests/day free (Patron/paid plans higher)",
+    "paid_plans": "Paid tiers available via Patreon/site; limits scale with plan"
+  },
+  "rate_limits": "Free: 1,000 requests/day; higher on paid plans",
+  "example": {
+    "request": "curl \"https://www.omdbapi.com/?t=Inception&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{\"Title\":\"Inception\",\"Year\":\"2010\",\"Rated\":\"PG-13\",\"Released\":\"16 Jul 2010\",\"Runtime\":\"148 min\",\"Genre\":\"Action, Adventure, Sci-Fi\",\"Director\":\"Christopher Nolan\",\"imdbRating\":\"8.8\",\"imdbID\":\"tt1375666\",\"Type\":\"movie\",\"Response\":\"True\"}"
+  },
+  "use_cases": [
+    "look up a movie by title or IMDb ID",
+    "search films/TV shows by keyword",
+    "fetch poster URL and plot for a title",
+    "get ratings and release year for media enrichment"
+  ],
+  "sources": [
+    "https://www.omdbapi.com/",
+    "https://www.omdbapi.com/apikey.aspx"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

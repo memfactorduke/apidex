@@ -1,0 +1,100 @@
+{
+  "id": "sendgrid",
+  "status": "operational",
+  "name": "SendGrid",
+  "category": "social-communication",
+  "tagline": "Email delivery API for transactional and marketing messages",
+  "description": "SendGrid is Twilio\u2019s email platform API for sending transactional and marketing email at scale. Developers authenticate with API keys, use a REST API (and SMTP) to send mail, manage contacts/templates, and track delivery events via webhooks. Widely used for app notifications, password resets, and bulk campaigns.",
+  "base_url": "https://api.sendgrid.com/v3",
+  "docs_url": "https://www.twilio.com/docs/sendgrid",
+  "signup_url": "https://signup.sendgrid.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer YOUR_API_KEY header; keys created in SendGrid dashboard (Settings \u2192 API Keys)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan historically allowed limited daily email sends; verify current Twilio SendGrid pricing for exact free-tier volume.",
+    "paid_plans": "Essentials, Pro, Premier, and Marketing Campaigns plans billed by email volume; see Twilio SendGrid pricing."
+  },
+  "rate_limits": "Varies by endpoint and plan; many mail-send endpoints document rate limits in response headers (X-RateLimit-*). Check docs for per-endpoint limits.",
+  "example": {
+    "request": "curl -X POST \"https://api.sendgrid.com/v3/mail/send\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"personalizations\":[{\"to\":[{\"email\":\"recipient@example.com\"}]}],\"from\":{\"email\":\"sender@example.com\"},\"subject\":\"Hello\",\"content\":[{\"type\":\"text/plain\",\"value\":\"Hello from SendGrid\"}]}'",
+    "response_snippet": "HTTP 202 Accepted (empty body on success for mail/send); errors return JSON like {\"errors\":[{\"message\":\"...\",\"field\":null,\"help\":null}]}"
+  },
+  "use_cases": [
+    "send transactional email (password reset, receipt)",
+    "send bulk marketing campaign email",
+    "validate email address deliverability",
+    "manage dynamic email templates",
+    "track bounces, opens, and clicks via event webhook",
+    "manage contact lists and suppression groups"
+  ],
+  "sources": [
+    "https://www.twilio.com/docs/sendgrid",
+    "https://docs.sendgrid.com/",
+    "https://www.twilio.com/en-us/sendgrid/pricing",
+    "https://status.sendgrid.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

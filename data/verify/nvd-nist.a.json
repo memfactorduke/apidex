@@ -1,0 +1,52 @@
+{
+  "id": "nvd-nist",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nvd.nist.gov/developers/vulnerabilities"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nvd.nist.gov/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nvd.nist.gov/developers/request-an-api-key"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nvd.nist.gov/developers"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Without API key: 5 requests / 30 seconds. With free API key: 50 requests / 30 seconds.",
+      "source": "https://nvd.nist.gov/developers/request-an-api-key"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Without API key: 5 requests / 30 seconds. With free API key: 50 requests / 30 seconds.",
+      "source": "https://nvd.nist.gov/developers/request-an-api-key"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nvd.nist.gov/developers/vulnerabilities"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nvd.nist.gov/general"
+    }
+  },
+  "notes": "Automated curl 404 on base_url is expected (path needs /cves/2.0 etc.); docs_url works. Rate limits are published on the API key page, not 'unknown'/'not published'."
+}

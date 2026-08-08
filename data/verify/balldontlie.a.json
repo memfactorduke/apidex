@@ -1,0 +1,52 @@
+{
+  "id": "balldontlie",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.balldontlie.io/v1",
+      "source": "https://docs.balldontlie.io/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.balldontlie.io/",
+      "source": "https://www.balldontlie.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.balldontlie.io/#authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.balldontlie.io/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "ALL STAR free tier: 5 requests/minute, NBA/NFL/MLB only, limited historical data, limited per_page",
+      "source": "https://www.balldontlie.io/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per plan: free 5 req/min; GOAT 60/min; GOAT+ 600/min",
+      "source": "https://www.balldontlie.io/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.balldontlie.io/v1/players\" -H \"Authorization: YOUR_API_KEY\"",
+      "source": "https://docs.balldontlie.io/#get-all-players"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.balldontlie.io/"
+    }
+  },
+  "notes": "Auth is API key via Authorization header (not query). Free tier exists with published limits. Docs live at docs.balldontlie.io; marketing site is balldontlie.io. Example request missing required Authorization header."
+}

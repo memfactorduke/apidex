@@ -1,0 +1,52 @@
+{
+  "id": "uselessfacts",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uselessfacts.jsph.pl"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uselessfacts.jsph.pl"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uselessfacts.jsph.pl"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uselessfacts.jsph.pl"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uselessfacts.jsph.pl/api/v2/facts/random"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uselessfacts.jsph.pl"
+    }
+  },
+  "notes": "Verified against live site and GitHub repo. Base URL, no-auth public GET, EN/DE, random/daily, JSON/text all match. Limits and CORS not published (unknown/not published correct). Live API returns expected fact shape."
+}

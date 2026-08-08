@@ -1,0 +1,52 @@
+{
+  "id": "mta-bustime",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://bustime.mta.info/api/siri (SIRI REST under /api/siri; GTFS-RT may use different hosts\u2014confirm current docs)",
+      "source": "https://bustime.mta.info/wiki/Developers/Index"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bustime.mta.info/wiki/Developers/Index"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bustime.mta.info/wiki/Developers/Index"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bustime.mta.info/wiki/Developers/Register"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free with API key registration for non-commercial use; commercial use requires separate approval (per registration terms if still stated)",
+      "source": "https://bustime.mta.info/wiki/Developers/Register"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use documented path shape and MonitoringRef format from current SIRI docs; verify LineRef encoding and stop ID prefix against live wiki examples",
+      "source": "https://bustime.mta.info/wiki/Developers/SIRIStopMonitoring"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bustime.mta.info/wiki/Developers/Index"
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after full verification against official sources."
+}

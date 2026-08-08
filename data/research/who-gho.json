@@ -1,0 +1,42 @@
+{
+  "id": "who-gho",
+  "status": "operational",
+  "name": "WHO GHO OData",
+  "category": "health-fitness",
+  "tagline": "World Health Organization Global Health Observatory indicators via OData",
+  "description": "Public OData API for the World Health Organization Global Health Observatory, exposing health indicators, dimensions, and statistical data for countries and regions. Developers query indicator metadata and observation values with standard OData filter, select, and top operations\u2014no authentication required for public read access.",
+  "base_url": "https://ghoapi.azureedge.net/api",
+  "docs_url": "https://www.who.int/data/gho/info/gho-odata-api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public read access to GHO OData endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://ghoapi.azureedge.net/api/Indicator?$top=5\"",
+    "response_snippet": "{\n  \"@odata.context\": \"https://ghoapi.azureedge.net/api/$metadata#Indicator\",\n  \"value\": [\n    {\n      \"IndicatorCode\": \"WHOSIS_000001\",\n      \"IndicatorName\": \"Life expectancy at birth (years)\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "list WHO health indicators and codes",
+    "fetch life expectancy by country",
+    "query GHO observation values for an indicator",
+    "filter health statistics by year or region",
+    "explore GHO dimension metadata for dashboards"
+  ],
+  "sources": [
+    "https://www.who.int/data/gho/info/gho-odata-api",
+    "https://ghoapi.azureedge.net/api"
+  ],
+  "researcher_confidence": "medium"
+}

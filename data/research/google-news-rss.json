@@ -1,0 +1,46 @@
+{
+  "id": "google-news-rss",
+  "status": "operational",
+  "name": "Google News RSS",
+  "category": "news-media",
+  "tagline": "Unofficial free RSS feeds for Google News top stories, topics, and keyword search",
+  "description": "Google News exposes public RSS endpoints at news.google.com/rss that return aggregated headlines as standard RSS XML. There is no official Google News developer API; the old Google News Search API was discontinued years ago. These RSS URLs require no API key or account and are community-documented rather than officially supported. Feeds cover top stories, topic sections, geo locations, and keyword search (up to ~100 items per request). Google can change formats without notice.",
+  "base_url": "https://news.google.com/rss",
+  "docs_url": "https://www.newscatcherapi.com/blog-posts/google-news-rss-search-parameters-the-missing-documentaiton",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public HTTP GET to news.google.com/rss endpoints; no API key or account."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free unrestricted public RSS; no published quota. Unofficial; heavy use may get IP throttling/blocks.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (unofficial RSS; community reports soft IP throttling/CAPTCHAs under heavy load)",
+  "example": {
+    "request": "curl -sL 'https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en' -H 'User-Agent: Mozilla/5.0'",
+    "response_snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\">\n  <channel>\n    <title>\"artificial intelligence\" - Google News</title>\n    <link>https://news.google.com/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en</link>\n    <description>Google News</description>\n    <item>\n      <title>Article headline - Source Name</title>\n      <link>https://news.google.com/rss/articles/CBMi...</link>\n      <guid isPermaLink=\"false\">CBMi...</guid>\n      <pubDate>Fri, 07 Aug 2026 12:00:00 GMT</pubDate>\n      <description>&lt;a href=\"...\"&gt;Source&lt;/a&gt;&nbsp;&nbsp;&lt;font&gt;Article snippet...&lt;/font&gt;</description>\n      <source url=\"https://example.com\">Source Name</source>\n    </item>\n  </channel>\n</rss>"
+  },
+  "use_cases": [
+    "get top Google News headlines for a country/locale",
+    "search recent news articles by keyword via RSS",
+    "fetch topic headlines (e.g. TECHNOLOGY, BUSINESS, WORLD)",
+    "monitor news for a company or brand with when: date filters",
+    "pull geo-local news headlines for a city or region"
+  ],
+  "sources": [
+    "https://news.google.com/rss",
+    "https://www.newscatcherapi.com/blog-posts/google-news-rss-search-parameters-the-missing-documentaiton",
+    "https://www.wprssaggregator.com/google-news-rss-feed/",
+    "https://cloro.dev/blog/google-news-rss/",
+    "https://support.google.com/webmasters/thread/9479430/how-many-request-per-day-allow-to-call-https-news-google-com-rss-search-q-search-keyword?hl=en",
+    "https://www.scrapingbee.com/blog/best-google-news-api-alternatives/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "scryfall",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api/cards/named"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://scryfall.com/docs/api"
+    }
+  },
+  "notes": "Verified against official Scryfall API docs (2026). All claims match: base URL api.scryfall.com, no auth required, rate limit ~10 req/s with 50\u2013100ms spacing, free non-commercial with written permission for commercial use, example endpoint valid. CORS left as unknown is appropriate without browser-header proof."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "rxnorm",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxNorm.findRxcuiByString.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/RxNormAPIs.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/TermsofService.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "20 requests per second per IP address (API is free-of-charge; this is the published free-use limit)",
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/TermsofService.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "no more than 20 requests per second per IP address; excess may not be serviced until under the limit; caching 12\u201324h recommended",
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/TermsofService.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=lipitor"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxNorm.findRxcuiByString.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://lhncbc.nlm.nih.gov/RxNav/APIs/RxNormAPIs.html"
+    }
+  },
+  "notes": "Clear fail: ToS publishes 20 req/s/IP, so rate_limits \"not published\" and free_tier_limits \"unknown\" are wrong. Live REST responses send Access-Control-Allow-Origin: *, so cors is not unknown. Example curl works (rxcui 153165); response_snippet's name field is extra/stale but request path is valid. Auth none for public RxNorm data; UTS key only for proprietary/restricted sources."
+}

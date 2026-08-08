@@ -1,0 +1,43 @@
+{
+  "id": "kitsu",
+  "status": "operational",
+  "name": "Kitsu",
+  "category": "entertainment",
+  "tagline": "Anime and manga catalog API with community ratings and library tracking",
+  "description": "Kitsu provides a JSON:API for anime, manga, characters, and user libraries. It is used to search titles, fetch metadata, ratings, episodes, and user-related library data for anime and manga applications.",
+  "base_url": "https://kitsu.io/api/edge",
+  "docs_url": "https://kitsu.docs.apiary.io/",
+  "signup_url": "https://kitsu.io/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth2 password or client credentials for write/user endpoints; many public catalog endpoints work unauthenticated. Register an OAuth application in account settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop\" -H \"Accept: application/vnd.api+json\"",
+    "response_snippet": "{\"data\":[{\"id\":\"1\",\"type\":\"anime\",\"attributes\":{\"slug\":\"cowboy-bebop\",\"canonicalTitle\":\"Cowboy Bebop\",\"averageRating\":\"82.39\",\"episodeCount\":26}}],\"meta\":{\"count\":1}}"
+  },
+  "use_cases": [
+    "search anime by title",
+    "get anime metadata and ratings by ID",
+    "list episodes for an anime series",
+    "look up manga titles and details",
+    "fetch character info linked to anime or manga"
+  ],
+  "sources": [
+    "https://kitsu.io/",
+    "https://kitsu.docs.apiary.io/",
+    "https://github.com/hummingbird-me/kitsu-server"
+  ],
+  "researcher_confidence": "medium"
+}

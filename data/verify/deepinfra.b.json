@@ -1,0 +1,52 @@
+{
+  "id": "deepinfra",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deepinfra.com/api-reference/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deepinfra.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deepinfra.com/api-reference/introduction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://deepinfra.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://deepinfra.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "200 concurrent requests per model (default); increase available via dashboard",
+      "source": "https://docs.deepinfra.com/account/rate-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://api.deepinfra.com/v1/openai/chat/completions"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deepinfra.com/quickstart"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deepinfra.com/"
+    }
+  },
+  "notes": "Main errors: rate_limits claims \"not published\" but docs state 200 concurrent/model; CORS is open (*), not unknown. docs_url redirects 308 to docs.deepinfra.com. base_url /v1 is a valid prefix (OpenAI path is /v1/openai). No free tier; card/prepay required. API live."
+}

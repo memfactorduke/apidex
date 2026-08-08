@@ -1,0 +1,41 @@
+{
+  "id": "openligadb",
+  "status": "operational",
+  "name": "OpenLigaDB",
+  "category": "sports",
+  "tagline": "Free German football league data API covering Bundesliga and more",
+  "description": "OpenLigaDB provides free, unrestricted HTTP access to German open football league data including Bundesliga, 2. Bundesliga, and other competitions. Developers can query match results, standings, teams, and goals without authentication. The public REST-style API returns JSON and is commonly used for live scores, historical fixtures, and league table apps.",
+  "base_url": "https://api.openligadb.de",
+  "docs_url": "https://www.openligadb.de",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public HTTP endpoints with unrestricted access"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.openligadb.de/getmatchdata/bl1/2024\"",
+    "response_snippet": "[{\"matchID\":1234,\"matchDateTime\":\"2024-08-23T20:30:00\",\"leagueName\":\"1. Fu\u00dfball-Bundesliga\",\"team1\":{\"teamName\":\"...\"},\"team2\":{\"teamName\":\"...\"},\"matchResults\":[...]}]"
+  },
+  "use_cases": [
+    "get Bundesliga match results for a season",
+    "fetch current league table standings",
+    "look up upcoming fixtures for a team",
+    "pull goal scorers for a match"
+  ],
+  "sources": [
+    "https://www.openligadb.de",
+    "https://api.openligadb.de"
+  ],
+  "researcher_confidence": "low"
+}

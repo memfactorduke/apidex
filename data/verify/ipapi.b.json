@@ -1,0 +1,52 @@
+{
+  "id": "ipapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.co"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.co/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.co/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.co/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 requests/day without API key; higher free/paid tiers with key",
+      "source": "https://ipapi.co/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier: ~1,000 req/day (unauthenticated); rate limits documented on pricing/docs",
+      "source": "https://ipapi.co/pricing/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.co/api/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.co/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.co/api/"
+    }
+  },
+  "notes": "Free limits and rate limits are published (not unknown/not published). CORS is supported for browser use. Formats list is duplicate json only."
+}

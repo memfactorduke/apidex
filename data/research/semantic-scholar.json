@@ -1,0 +1,40 @@
+{
+  "id": "semantic-scholar",
+  "status": "operational",
+  "name": "Semantic Scholar",
+  "category": "data-analytics",
+  "tagline": "Academic paper search and citation graph API",
+  "description": "Semantic Scholar provides a free academic knowledge graph API for searching papers, authors, citations, and related research. It powers paper discovery, citation analysis, and scholarly metadata access across science and technology domains.",
+  "base_url": "https://api.semanticscholar.org",
+  "docs_url": "https://api.semanticscholar.org/api-docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via x-api-key header; unauthenticated access allowed with lower rate limits"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"x-api-key: YOUR_API_KEY\" \"https://api.semanticscholar.org/graph/v1/paper/search?query=attention+is+all+you+need&limit=1\"",
+    "response_snippet": "{\"total\":1,\"offset\":0,\"data\":[{\"paperId\":\"...\",\"title\":\"Attention Is All You Need\"}]}"
+  },
+  "use_cases": [
+    "search academic papers by keyword",
+    "fetch citation graph for a paper",
+    "look up author publication history",
+    "get paper abstracts and metadata"
+  ],
+  "sources": [
+    "https://api.semanticscholar.org/api-docs/"
+  ],
+  "researcher_confidence": "low"
+}

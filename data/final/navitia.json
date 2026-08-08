@@ -1,0 +1,95 @@
+{
+  "id": "navitia",
+  "status": "operational",
+  "name": "Navitia",
+  "category": "transportation",
+  "tagline": "Multimodal public-transport journey planner with open data and free developer access",
+  "description": "Navitia is a multimodal trip-planning API covering public transit, bike, walking, and car. Developers query coverage regions, stop areas, schedules, and door-to-door journeys. Authentication uses a self-serve API key; free tiers and paid plans are documented on the vendor site.",
+  "base_url": "https://api.navitia.io/v1",
+  "docs_url": "https://doc.navitia.io",
+  "signup_url": "https://navitia.io",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic auth (key as username, empty password) or Authorization header; self-serve signup at navitia.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u \"YOUR_API_KEY:\" \"https://api.navitia.io/v1/coverage\"",
+    "response_snippet": "{\"regions\":[{\"id\":\"fr-idf\",\"name\":\"\u00cele-de-France\",...}]}"
+  },
+  "use_cases": [
+    "plan multimodal transit journeys between two points",
+    "list transit coverage regions and networks",
+    "get next departures at a stop area",
+    "geocode places near transit for routing"
+  ],
+  "sources": [
+    "https://navitia.io",
+    "https://doc.navitia.io"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

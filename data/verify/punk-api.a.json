@@ -1,0 +1,52 @@
+{
+  "id": "punk-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.punkapi.com/v2 is offline/unreachable; project appears abandoned with no current official host",
+      "source": "https://github.com/samjbmason/punkapi"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://punkapi.com/documentation/v2 is offline; historical docs lived at punkapi.com",
+      "source": "https://github.com/samjbmason/punkapi"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/samjbmason/punkapi"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/samjbmason/punkapi"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "example curl targets dead host; endpoint shape was historically valid when API was live",
+      "source": "https://github.com/samjbmason/punkapi"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "API is no longer operational; free open beer data claims were historically true but are outdated for 2026",
+      "source": "https://github.com/samjbmason/punkapi"
+    }
+  },
+  "notes": "Automated checks: base_url and docs_url both HTTP 0. GitHub repo still exists; site/API appear dead as of verification."
+}

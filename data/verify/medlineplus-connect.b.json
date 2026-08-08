@@ -1,0 +1,52 @@
+{
+  "id": "medlineplus-connect",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medlineplus.gov/connect/service.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medlineplus.gov/connect/overview.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medlineplus.gov/connect/service.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medlineplus.gov/connect/overview.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medlineplus.gov/connect/service.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medlineplus.gov/connect/service.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medlineplus.gov/connect/service.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medlineplus.gov/connect/overview.html"
+    }
+  },
+  "notes": "Verified against official MedlinePlus Connect docs (overview, service, technical). Endpoint, no-auth model, free public service, JSON/XML formats, and ICD-10 example params match. Rate limits remain unpublished. CORS not documented."
+}

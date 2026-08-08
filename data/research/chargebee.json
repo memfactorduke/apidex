@@ -1,0 +1,41 @@
+{
+  "id": "chargebee",
+  "status": "operational",
+  "name": "Chargebee API",
+  "category": "ecommerce-payments",
+  "tagline": "Subscription billing and revenue management API for SaaS and ecommerce",
+  "description": "Chargebee provides a REST API for subscription billing, invoicing, payments, customers, and revenue operations. Developers integrate to manage plans, subscriptions, one-time charges, invoices, and payment methods for recurring revenue products.",
+  "base_url": "https://{site}.chargebee.com/api/v2",
+  "docs_url": "https://apidocs.chargebee.com/docs/api",
+  "signup_url": "https://www.chargebee.com/trial-signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic Auth (API key as username, empty password); keys created in Chargebee admin console"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://YOUR_SITE.chargebee.com/api/v2/customers -u YOUR_API_KEY:",
+    "response_snippet": "{\"list\":[{\"customer\":{\"id\":\"...\"}}]}"
+  },
+  "use_cases": [
+    "create a subscription for a customer",
+    "list invoices for a customer",
+    "update a payment method",
+    "cancel a subscription",
+    "create a one-time invoice"
+  ],
+  "sources": [
+    "https://apidocs.chargebee.com/docs/api"
+  ],
+  "researcher_confidence": "low"
+}

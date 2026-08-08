@@ -1,0 +1,44 @@
+{
+  "id": "crossref",
+  "status": "operational",
+  "name": "Crossref",
+  "category": "data-analytics",
+  "tagline": "Open DOI metadata and citation API for scholarly works",
+  "description": "Crossref provides a free REST API for querying DOI metadata across scholarly publications. Developers can look up works by DOI, search titles and authors, retrieve citations and references, and access funder and member data. Polite pool access with a contact email is recommended for better rate limits; no API key is required for basic use.",
+  "base_url": "https://api.crossref.org",
+  "docs_url": "https://api.crossref.org/swagger-ui/index.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required. Polite pool access via mailto query parameter or User-Agent with contact email is recommended for better rate limits and support."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free unlimited public access; polite pool recommended for production use",
+    "paid_plans": null
+  },
+  "rate_limits": "Public pool ~50 req/s shared; polite pool higher and more consistent when mailto/User-Agent provided; not a hard published free-tier quota",
+  "example": {
+    "request": "curl -s \"https://api.crossref.org/works/10.1037/0003-066X.59.1.29\" -H \"User-Agent: MyApp/1.0 (mailto:you@example.com)\"",
+    "response_snippet": "{\"status\":\"ok\",\"message-type\":\"work\",\"message-version\":\"1.0.0\",\"message\":{\"DOI\":\"10.1037/0003-066X.59.1.29\",\"title\":[\"...\"],\"author\":[{\"given\":\"...\",\"family\":\"...\"}],\"type\":\"journal-article\",\"published\":{\"date-parts\":[[2004]]}}}"
+  },
+  "use_cases": [
+    "resolve a DOI to full bibliographic metadata",
+    "search scholarly works by title author or keyword",
+    "get citation and reference lists for a paper",
+    "look up funder identifiers and related works",
+    "validate or enrich DOIs in a research dataset"
+  ],
+  "sources": [
+    "https://api.crossref.org/swagger-ui/index.html",
+    "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+    "https://github.com/CrossRef/rest-api-doc",
+    "https://www.crossref.org/"
+  ],
+  "researcher_confidence": "medium"
+}

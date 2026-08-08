@@ -1,0 +1,38 @@
+{
+  "id": "meteoblue",
+  "status": "operational",
+  "name": "Meteoblue",
+  "category": "weather-environment",
+  "tagline": "High-resolution weather and climate APIs for science and industry",
+  "description": "Meteoblue provides high-resolution weather forecast, historical climate, and specialized meteorology APIs used by developers, researchers, and industry for location-based weather data, agriculture, energy, and environmental applications.",
+  "base_url": "https://my.meteoblue.com/packages",
+  "docs_url": "https://docs.meteoblue.com",
+  "signup_url": "https://www.meteoblue.com/en/weather/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://my.meteoblue.com/packages/basic-day?lat=47.5&lon=7.5&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "get current weather for a location",
+    "fetch multi-day forecast"
+  ],
+  "sources": [
+    "https://www.meteoblue.com"
+  ],
+  "researcher_confidence": "low"
+}

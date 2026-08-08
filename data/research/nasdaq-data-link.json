@@ -1,0 +1,42 @@
+{
+  "id": "nasdaq-data-link",
+  "status": "operational",
+  "name": "Nasdaq Data Link",
+  "category": "finance",
+  "tagline": "Market and alternative datasets via REST from Nasdaq Data Link",
+  "description": "Nasdaq Data Link (formerly Quandl) provides a REST API for time-series and table datasets covering markets, economics, and alternative data. Developers authenticate with an API key, query named datasets, and receive JSON or CSV for analysis, backtesting, and research workflows.",
+  "base_url": "https://data.nasdaq.com/api/v3",
+  "docs_url": "https://docs.data.nasdaq.com/",
+  "signup_url": "https://data.nasdaq.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter api_key=YOUR_API_KEY or Authorization header; free self-serve signup at data.nasdaq.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier available with limited calls; exact limits vary by plan\u2014verify on account page",
+    "paid_plans": "Usage-based and subscription plans for premium datasets and higher limits"
+  },
+  "rate_limits": "not published precisely for free tier; check account dashboard",
+  "example": {
+    "request": "curl \"https://data.nasdaq.com/api/v3/datasets/WIKI/AAPL/data.json?api_key=YOUR_API_KEY&rows=3\"",
+    "response_snippet": "{\"dataset_data\":{\"column_names\":[\"Date\",\"Open\",\"High\",\"Low\",\"Close\",\"Volume\"],\"data\":[[\"2018-03-27\",173.68,175.15,166.92,168.34,38962839]]}}"
+  },
+  "use_cases": [
+    "fetch historical stock OHLCV for a ticker",
+    "pull economic indicator time series",
+    "export table datasets to CSV for analysis",
+    "backtest strategies with historical market data"
+  ],
+  "sources": [
+    "https://docs.data.nasdaq.com/",
+    "https://data.nasdaq.com/"
+  ],
+  "researcher_confidence": "low"
+}

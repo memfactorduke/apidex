@@ -1,0 +1,52 @@
+{
+  "id": "google-maps",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/maps/documentation/geocoding/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/maps/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/maps/api-security-best-practices"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/maps/billing-and-pricing/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/maps/billing-and-pricing/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/maps/documentation/geocoding/usage-and-billing"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/maps/documentation/geocoding/requests-geocoding"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.google.com/maps/documentation"
+    }
+  },
+  "notes": "Verified against official Google Maps Platform docs. base_url, docs_url, auth (apiKey), free tier + monthly credit, geocode curl example, and description all match. free_tier_limits and rate_limits as 'unknown'/'not published' are acceptable given product-specific quotas. cors remains unknown."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "world-news-api",
+  "status": "operational",
+  "name": "World News API",
+  "category": "news-media",
+  "tagline": "Global news search and extraction API with geo and sentiment filters.",
+  "description": "World News API provides search and retrieval of news articles from sources worldwide, with filters for location, language, sentiment, and entities. It offers search, top headlines, and extract endpoints for building news apps, media monitoring, and research tools.",
+  "base_url": "https://api.worldnewsapi.com",
+  "docs_url": "https://worldnewsapi.com/docs/",
+  "signup_url": "https://worldnewsapi.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api-key query parameter or header (self-serve signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.worldnewsapi.com/search-news?text=technology&api-key=YOUR_API_KEY\"",
+    "response_snippet": "{\"offset\":0,\"number\":10,\"available\":100,\"news\":[{\"id\":123,\"title\":\"Sample\",\"text\":\"...\",\"url\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "search recent news by keyword",
+    "get top headlines by country",
+    "extract full text from a news URL"
+  ],
+  "sources": [
+    "https://worldnewsapi.com/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "placekitten",
+  "status": "operational",
+  "name": "PlaceKitten",
+  "category": "fun-novelty",
+  "tagline": "Simple kitten placeholder images by width and height for UI mockups",
+  "description": "PlaceKitten serves randomly selected kitten photos sized to any width and height you request via a straightforward URL pattern. Developers use it as a drop-in image placeholder in HTML, CSS, and design prototypes without authentication or signup. Optional grayscale variants and size parameters make it a classic fun utility for mockups and demos.",
+  "base_url": "https://placekitten.com",
+  "docs_url": "https://placekitten.com",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public HTTP GET by width/height path segments."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Unlimited free public use; no published quotas",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sI \"https://placekitten.com/200/300\"",
+    "response_snippet": "HTTP/2 200\ncontent-type: image/jpeg\n..."
+  },
+  "use_cases": [
+    "placeholder kitten image for UI mockup by width and height",
+    "grayscale kitten placeholder for design prototypes",
+    "drop-in image URL for HTML/CSS demos without assets"
+  ],
+  "sources": [
+    "https://placekitten.com"
+  ],
+  "researcher_confidence": "medium"
+}

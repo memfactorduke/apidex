@@ -1,0 +1,52 @@
+{
+  "id": "giantbomb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free API key; rate limit is 200 requests per resource per hour (not simply 200 requests/hour overall)",
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "200 requests per resource per hour (documented phrasing varies; entry's '200/hour per key' is an oversimplification)",
+      "source": "https://www.giantbomb.com/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.giantbomb.com/api/"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live sources before finalizing."
+}

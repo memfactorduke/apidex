@@ -1,0 +1,52 @@
+{
+  "id": "open-food-facts",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://world.openfoodfacts.org"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://world.openfoodfacts.org"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openfoodfacts.github.io/openfoodfacts-server/api/"
+    }
+  },
+  "notes": "Docs-first verification against official Open Food Facts API docs, wiki, and site. Base URL, docs URL, no-auth read access, free/open data, and v2 product example all match. Rate-limit wording is community guidance rather than a hard published SLA; CORS left as unknown is appropriate."
+}

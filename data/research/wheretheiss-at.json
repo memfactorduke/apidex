@@ -1,0 +1,41 @@
+{
+  "id": "wheretheiss-at",
+  "status": "operational",
+  "name": "Where the ISS at",
+  "category": "science-space",
+  "tagline": "High-precision ISS orbital position and telemetry API for real-time tracking.",
+  "description": "Public REST API that returns near-real-time International Space Station position, velocity, and related orbital data. Developers query satellite coordinates by NORAD ID, with optional timestamps for historical or predicted positions. Commonly used for maps, dashboards, and educational space apps that need accurate ISS location without running orbital models locally.",
+  "base_url": "https://api.wheretheiss.at/v1",
+  "docs_url": "https://wheretheiss.at/w/developer",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints; open HTTP GET access."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.wheretheiss.at/v1/satellites/25544\"",
+    "response_snippet": "{\"name\":\"iss\",\"id\":25544,\"latitude\":-12.34,\"longitude\":45.67,\"altitude\":420.1,\"velocity\":27600.0,\"visibility\":\"daylight\",\"footprint\":4500.0,\"timestamp\":1710000000,\"daynum\":2460000.5,\"solar_lat\":-5.0,\"solar_lon\":120.0,\"units\":\"kilometers\"}"
+  },
+  "use_cases": [
+    "get current ISS latitude and longitude",
+    "track ISS position over time for a map overlay",
+    "convert ISS footprint and altitude for ground-track displays",
+    "check whether the ISS is in daylight or eclipse"
+  ],
+  "sources": [
+    "https://wheretheiss.at/w/developer",
+    "https://api.wheretheiss.at/v1/satellites/25544"
+  ],
+  "researcher_confidence": "medium"
+}

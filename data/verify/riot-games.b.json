@@ -1,0 +1,52 @@
+{
+  "id": "riot-games",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.riotgames.com/docs/lol"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.riotgames.com/docs/portal"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.riotgames.com/docs/portal"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.riotgames.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.riotgames.com/docs/portal"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.riotgames.com/docs/portal"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Summoner-by-name is deprecated/removed; use Riot ID / account-v1 and puuid-based summoner endpoints. Example: curl -H \"X-Riot-Token: YOUR_API_KEY\" \"https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/GameName/TagLine\"",
+      "source": "https://developer.riotgames.com/apis"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.riotgames.com/"
+    }
+  },
+  "notes": "Placeholder"
+}

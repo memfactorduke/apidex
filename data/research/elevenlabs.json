@@ -1,0 +1,44 @@
+{
+  "id": "elevenlabs",
+  "status": "operational",
+  "name": "ElevenLabs",
+  "category": "ai-ml",
+  "tagline": "AI voice synthesis and speech generation API for natural-sounding text-to-speech",
+  "description": "ElevenLabs provides a production-ready API for text-to-speech, speech-to-speech, voice cloning, and conversational AI. Developers authenticate with an API key and call REST endpoints under api.elevenlabs.io to generate audio, manage voices, and build voice-enabled applications.",
+  "base_url": "https://api.elevenlabs.io",
+  "docs_url": "https://elevenlabs.io/docs/api-reference",
+  "signup_url": "https://elevenlabs.io/app/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via xi-api-key header; create keys in the ElevenLabs dashboard after account signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes limited monthly character quota for TTS (check pricing page for current numbers); paid tiers scale by characters and concurrency",
+    "paid_plans": "Starter, Creator, Pro, Scale, and Business plans with higher character quotas and concurrency"
+  },
+  "rate_limits": "Plan-based concurrency and character quotas; exact published limits vary by tier",
+  "example": {
+    "request": "curl -X POST \"https://api.elevenlabs.io/v1/text-to-speech/VOICE_ID\" -H \"xi-api-key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"text\":\"Hello world\",\"model_id\":\"eleven_multilingual_v2\"}' --output speech.mp3",
+    "response_snippet": "Binary audio/mpeg stream (or JSON error with detail message on failure)"
+  },
+  "use_cases": [
+    "convert text to natural speech audio for apps",
+    "clone a voice from audio samples",
+    "stream TTS for real-time voice agents",
+    "list and manage custom voices",
+    "transcribe or process speech with speech-to-speech"
+  ],
+  "sources": [
+    "https://elevenlabs.io/docs",
+    "https://elevenlabs.io/pricing",
+    "https://api.elevenlabs.io"
+  ],
+  "researcher_confidence": "low"
+}

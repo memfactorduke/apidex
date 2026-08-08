@@ -1,0 +1,52 @@
+{
+  "id": "groq",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://console.groq.com/docs/quickstart"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://console.groq.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://console.groq.com/docs/quickstart"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://console.groq.com/docs/rate-limits"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://console.groq.com/docs/rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://console.groq.com/docs/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://console.groq.com/docs/quickstart"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://console.groq.com/docs"
+    }
+  },
+  "notes": "Adversarial check against console.groq.com docs, rate limits, pricing. base_url, OpenAI-compatible path, Bearer auth, free tier + RPM/TPM/RPD, and example curl all match. cors correctly unknown. Model names evolve; description stays generic enough."
+}

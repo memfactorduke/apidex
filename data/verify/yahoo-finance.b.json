@@ -1,0 +1,52 @@
+{
+  "id": "yahoo-finance",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://query1.finance.yahoo.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://finance.yahoo.com"
+    }
+  },
+  "notes": "Adversarial review of unofficial Yahoo Finance endpoints; verifying base URL, auth, limits, example, and docs against current public behavior."
+}

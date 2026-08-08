@@ -1,0 +1,44 @@
+{
+  "id": "geoapify",
+  "status": "operational",
+  "name": "Geoapify",
+  "category": "geo-maps",
+  "tagline": "Geocoding, places, routing, and map tiles for location-aware apps",
+  "description": "Geoapify provides a suite of location APIs including geocoding, reverse geocoding, places search, routing, isochrones, map matching, and static/vector map tiles. Developers use an API key for authentication and can start on a free tier with higher paid plans for production volume.",
+  "base_url": "https://api.geoapify.com/v1",
+  "docs_url": "https://apidocs.geoapify.com/",
+  "signup_url": "https://myprojects.geoapify.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apiKey query parameter or Authorization header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.geoapify.com/v1/geocode/search?text=38%20Upper%20Montagu%20Street%2C%20Westminster%20W1H%201LJ%2C%20United%20Kingdom&apiKey=YOUR_API_KEY\"",
+    "response_snippet": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{\"formatted\":\"38 Upper Montagu Street, London, W1H 1LJ, United Kingdom\",\"lat\":51.52022,\"lon\":-0.16206},\"geometry\":{\"type\":\"Point\",\"coordinates\":[-0.16206,51.52022]}}]}"
+  },
+  "use_cases": [
+    "geocode an address to coordinates",
+    "reverse geocode lat/lon to an address",
+    "search nearby places by category",
+    "calculate driving routes between points",
+    "generate static map images for locations"
+  ],
+  "sources": [
+    "https://www.geoapify.com/",
+    "https://apidocs.geoapify.com/"
+  ],
+  "researcher_confidence": "low"
+}

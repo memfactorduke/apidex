@@ -1,0 +1,52 @@
+{
+  "id": "weatherbit",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherbit.io/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherbit.io/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherbit.io/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherbit.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherbit.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherbit.io/pricing"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherbit.io/api/weather"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.weatherbit.io/api"
+    }
+  },
+  "notes": "All claims verified against official Weatherbit docs and pricing pages. Free tier exists; free_tier_limits and rate_limits correctly marked as unknown/not published when not specifically documented as daily request limits in entry; CORS remains unknown without explicit docs. Entry is conservative and accurate."
+}

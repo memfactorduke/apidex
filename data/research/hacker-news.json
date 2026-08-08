@@ -1,0 +1,46 @@
+{
+  "id": "hacker-news",
+  "status": "operational",
+  "name": "Hacker News API",
+  "category": "news-media",
+  "tagline": "Free, no-auth Firebase REST API for live Hacker News stories, comments, and users",
+  "description": "Official public Hacker News API hosted on Firebase Realtime Database. Provides near real-time read-only access to stories, comments, jobs, polls, users, and ranking lists (top, new, best, Ask HN, Show HN). No authentication or signup required; responses are JSON. Documented as having no rate limit, though aggressive clients should cache and back off. Separate unofficial Algolia HN Search API exists for full-text search.",
+  "base_url": "https://hacker-news.firebaseio.com/v0",
+  "docs_url": "https://github.com/HackerNews/API",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public read-only Firebase REST endpoints; append .json to paths. No API key or signup."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no paid plans. Official docs: no rate limit (be polite; aggressive use may be blocked).",
+    "paid_plans": null
+  },
+  "rate_limits": "Official docs: \"There is currently no rate limit.\" Community reports temporary blocks under excessive load; cache and back off recommended.",
+  "example": {
+    "request": "curl -s 'https://hacker-news.firebaseio.com/v0/item/8863.json'",
+    "response_snippet": "{\n  \"by\": \"dhouston\",\n  \"descendants\": 71,\n  \"id\": 8863,\n  \"kids\": [8952, 9224, 8917],\n  \"score\": 111,\n  \"time\": 1175714200,\n  \"title\": \"My YC app: Dropbox - Throw away your USB drive\",\n  \"type\": \"story\",\n  \"url\": \"http://www.getdropbox.com/u/2/screencast.html\"\n}"
+  },
+  "use_cases": [
+    "fetch current top Hacker News story IDs",
+    "get full story or comment details by item ID",
+    "list Ask HN, Show HN, or job postings",
+    "look up a HN user profile and submitted item IDs",
+    "poll max item ID or updates feed for new activity",
+    "build a live HN reader with top/new/best rankings"
+  ],
+  "sources": [
+    "https://github.com/HackerNews/API",
+    "https://hacker-news.firebaseio.com/v0/topstories.json",
+    "https://hacker-news.firebaseio.com/v0/item/8863.json",
+    "https://www.agent37.com/blog/hacker-news-api",
+    "https://cotera.co/articles/hacker-news-api-guide"
+  ],
+  "researcher_confidence": "high"
+}

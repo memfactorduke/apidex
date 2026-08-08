@@ -1,0 +1,38 @@
+{
+  "id": "arxiv-api",
+  "status": "operational",
+  "name": "arXiv API",
+  "category": "science-space",
+  "tagline": "Search and retrieve physics, math, and CS preprints",
+  "description": "Researching official arXiv API docs, auth, rate limits, and endpoints for accurate directory entry.",
+  "base_url": "https://export.arxiv.org",
+  "docs_url": "https://info.arxiv.org/help/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Researching"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Researching",
+    "paid_plans": null
+  },
+  "rate_limits": "Researching",
+  "example": {
+    "request": "curl ...",
+    "response_snippet": "..."
+  },
+  "use_cases": [
+    "search preprints",
+    "get paper metadata"
+  ],
+  "sources": [
+    "https://info.arxiv.org/help/api/"
+  ],
+  "researcher_confidence": "low"
+}

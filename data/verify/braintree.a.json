@@ -1,0 +1,52 @@
+{
+  "id": "braintree",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "REST SDK host is environment-specific: sandbox `https://api.sandbox.braintreegateway.com:443` and production `https://api.braintreegateway.com:443`. GraphQL uses `https://payments.sandbox.braintree-api.com/graphql` (sandbox) and `https://payments.braintree-api.com/graphql` (production). The entry's single production REST host is incomplete.",
+      "source": "https://developer.paypal.com/braintree/docs/reference/request"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paypal.com/braintree/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paypal.com/braintree/docs/reference/general/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.braintreepayments.com/sandbox"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.braintreepayments.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paypal.com/braintree/docs"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paypal.com/braintree/docs/guides/graphql/overview"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.paypal.com/braintree/docs"
+    }
+  },
+  "notes": "docs_url, auth, GraphQL example, sandbox free, and rate-limits-not-published checked against official docs. base_url fails: REST is env-specific with :443; GraphQL uses payments.*.braintree-api.com, not only api.braintreegateway.com. Pricing ~2.59%+$0.49 is region/plan-dependent\u2014confirm live pricing page."
+}

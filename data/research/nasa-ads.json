@@ -1,0 +1,42 @@
+{
+  "id": "nasa-ads",
+  "status": "operational",
+  "name": "NASA ADS",
+  "category": "science-space",
+  "tagline": "Search NASA Astrophysics Data System literature, citations, and bibliographic records",
+  "description": "The NASA Astrophysics Data System (ADS) API provides programmatic access to the ADS bibliographic database covering astronomy, astrophysics, physics, and related literature. Developers can search papers by query, retrieve full records, citation metrics, and related works using authenticated HTTP requests against Harvard-hosted endpoints.",
+  "base_url": "https://api.adsabs.harvard.edu/v1",
+  "docs_url": "https://ui.adsabs.harvard.edu/help/api/",
+  "signup_url": "https://ui.adsabs.harvard.edu/user/account/login",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token (API token) in Authorization header; obtain from ADS user account settings after free signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for research use with token; exact quota not always published as a simple public plan",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H 'Authorization: Bearer YOUR_API_KEY' 'https://api.adsabs.harvard.edu/v1/search/query?q=black+holes&fl=bibcode,title,author&rows=5'",
+    "response_snippet": "{\"responseHeader\":{\"status\":0,\"QTime\":12},\"response\":{\"numFound\":12345,\"start\":0,\"docs\":[{\"bibcode\":\"2020ApJ...\",\"title\":[\"Example Title\"],\"author\":[\"Smith, J.\"]}]}}"
+  },
+  "use_cases": [
+    "search astrophysics papers by keyword or author",
+    "retrieve bibliographic metadata by bibcode",
+    "get citation counts and metrics for a paper",
+    "export references for literature reviews",
+    "find related or citing works for a given paper"
+  ],
+  "sources": [
+    "https://ui.adsabs.harvard.edu/help/api/",
+    "https://api.adsabs.harvard.edu/v1"
+  ],
+  "researcher_confidence": "medium"
+}

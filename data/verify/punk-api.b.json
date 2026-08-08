@@ -1,0 +1,52 @@
+{
+  "id": "punk-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.punkapi.com/v2 is not currently reachable (HTTP 0 / connection failure); official site and docs also appear offline. No verified live base URL found as of 2026.",
+      "source": "https://punkapi.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://punkapi.com/documentation/v2 is not currently reachable. Documentation may be archived only via GitHub (https://github.com/samjbmason/punkapi).",
+      "source": "https://github.com/samjbmason/punkapi"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/samjbmason/punkapi"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/samjbmason/punkapi"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Example curl targets a non-reachable host; cannot verify live response. Historical docs described GET /v2/beers/{id}.",
+      "source": "https://github.com/samjbmason/punkapi"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Claims of a free open operational API are outdated if the service is offline; beer count and feature claims cannot be confirmed against a live API.",
+      "source": "https://punkapi.com/"
+    }
+  },
+  "notes": "Automated checks: base_url and docs_url HTTP 0. Punk API site/endpoints appear dead or unreachable in 2026; treat as non-operational unless a fork/mirror is documented."
+}

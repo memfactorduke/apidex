@@ -1,0 +1,43 @@
+{
+  "id": "harvard-art-museums",
+  "status": "operational",
+  "name": "Harvard Art Museums",
+  "category": "education-reference",
+  "tagline": "Search and retrieve Harvard Art Museums collection, objects, and exhibitions.",
+  "description": "Public REST API for the Harvard Art Museums collection, including objects, people, exhibitions, publications, galleries, and related media. Developers use it to search and retrieve collection records for research tools, museum apps, and cultural heritage projects.",
+  "base_url": "https://api.harvardartmuseums.org",
+  "docs_url": "https://github.com/harvardartmuseums/api-docs",
+  "signup_url": "https://docs.google.com/forms/d/e/1FAIpQLSfkiebrBtP0MdlKHiMrL4I97vXGNFPgAz7jOEORQPmb-v4I4w/viewform",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter. Free self-serve registration via Google Form; key emailed after approval."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use; commercial use by permission. Specific request quotas not published on public docs.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.harvardartmuseums.org/object?apikey=YOUR_API_KEY&size=1\"",
+    "response_snippet": "{\"info\":{\"totalrecordsperquery\":1,\"totalrecords\":250000,\"pages\":250000,\"page\":1,\"next\":\"...\"},\"records\":[{\"id\":299843,\"objectnumber\":\"1943.57\",\"title\":\"Self-Portrait Dedicated to Paul Gauguin\",\"dated\":\"1888\",\"culture\":\"Dutch\",\"division\":\"European and American Art\",\"primaryimageurl\":\"https://nrs.harvard.edu/...\"}]}"
+  },
+  "use_cases": [
+    "search museum objects by keyword, culture, or period",
+    "fetch a single artwork record and images by object ID",
+    "list current or past exhibitions",
+    "look up people (artists, makers) in the collection",
+    "browse gallery locations and related objects"
+  ],
+  "sources": [
+    "https://github.com/harvardartmuseums/api-docs",
+    "https://harvardartmuseums.org/collections/api",
+    "https://github.com/harvardartmuseums/api-docs/blob/master/sections/authentication.md"
+  ],
+  "researcher_confidence": "medium"
+}

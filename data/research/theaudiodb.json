@@ -1,0 +1,42 @@
+{
+  "id": "theaudiodb",
+  "status": "operational",
+  "name": "The Audio DB",
+  "category": "entertainment",
+  "tagline": "Music metadata API for artists, albums, tracks, and music videos",
+  "description": "The Audio DB (theaudiodb.com) is a community-oriented music metadata API providing structured data on artists, albums, tracks, music videos, and related media. Developers can look up discographies, biographies, artwork, and genre information for music catalog, media player, and discovery applications.",
+  "base_url": "https://www.theaudiodb.com/api/v1/json",
+  "docs_url": "https://www.theaudiodb.com/api_guide.php",
+  "signup_url": "https://www.theaudiodb.com/api_guide.php",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key as path segment in URL (e.g. /api/v1/json/{API_KEY}/search.php). Free test key 2 is commonly documented; paid/premium keys via signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free test API key (key=2) available; premium/paid plans for higher limits \u2014 exact quotas not fully confirmed",
+    "paid_plans": "Premium API access available via theaudiodb.com (details may require account)"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.theaudiodb.com/api/v1/json/2/search.php?s=coldplay\"",
+    "response_snippet": "{\"artists\":[{\"idArtist\":\"111239\",\"strArtist\":\"Coldplay\",\"strGenre\":\"Alternative Rock\",\"strCountry\":\"United Kingdom\",\"strBiographyEN\":\"...\"}]}"
+  },
+  "use_cases": [
+    "look up artist biography and metadata by name",
+    "fetch album discography for an artist",
+    "get track listing for an album",
+    "retrieve music video links for an artist",
+    "search artists by genre or style for discovery UIs"
+  ],
+  "sources": [
+    "https://www.theaudiodb.com/",
+    "https://www.theaudiodb.com/api_guide.php"
+  ],
+  "researcher_confidence": "low"
+}

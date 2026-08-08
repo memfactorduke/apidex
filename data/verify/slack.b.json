@@ -1,0 +1,52 @@
+{
+  "id": "slack",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.slack.com/web"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.slack.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.slack.com/authentication/oauth-v2"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.slack.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Tiered per-method limits (e.g. Tier 1 ~1+/min, Tier 2 ~20+/min, Tier 3 ~50+/min, Tier 4 ~100+/min, special tiers); burst allowed; Retry-After on 429. Documented at api.slack.com/docs/rate-limits.",
+      "source": "https://api.slack.com/docs/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.slack.com/methods/auth.test"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.slack.com/"
+    }
+  },
+  "notes": "Rate limits are published (tiered per method), so \"not published\" is wrong. Other fields match current official docs; free_tier_limits remain unknown for Web API usage vs workspace Free plan."
+}
