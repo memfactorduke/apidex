@@ -30,11 +30,19 @@ Use web search heavily — check the official docs, pricing page, and any status
 
 def main():
     merged = ROOT / "data" / "seeds" / "merged.jsonl"
+    seeds = [json.loads(l) for l in merged.read_text().splitlines() if l.strip()]
+    # Round-robin across categories so a mid-phase quota death still leaves
+    # every category evenly covered.
+    by_cat = {}
+    for s in seeds:
+        by_cat.setdefault(s["category"], []).append(s)
+    ordered, i = [], 0
+    while any(by_cat.values()):
+        for cat in sorted(by_cat):
+            if by_cat[cat]:
+                ordered.append(by_cat[cat].pop(0))
     jobs = []
-    for line in merged.read_text().splitlines():
-        if not line.strip():
-            continue
-        s = json.loads(line)
+    for s in ordered:
         jobs.append({
             "id": f"research-{s['slug']}",
             "prompt": PROMPT.format(name=s["name"], base_domain=s["base_domain"],
