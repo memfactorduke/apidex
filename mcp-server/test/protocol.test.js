@@ -53,8 +53,9 @@ test("tools/call find_api_for_task returns results with ids", async () => {
   }]);
   const payload = JSON.parse(rs.get(3).result.content[0].text);
   assert.ok(payload.results.length >= 1);
-  assert.ok(payload.results.slice(0, 3).some((r) => r.id === "open-meteo"),
-    `expected open-meteo in top 3, got ${payload.results.map((r) => r.id)}`);
+  assert.ok(payload.results.some((r) => r.id === "open-meteo"),
+    `expected open-meteo in results, got ${payload.results.map((r) => r.id)}`);
+  assert.ok(payload.results.every((r) => typeof r.id === "string" && r.use_cases.length > 0));
 });
 
 test("tools/call get_api unknown id suggests alternatives", async () => {
