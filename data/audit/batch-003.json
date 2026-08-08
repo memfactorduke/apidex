@@ -1,0 +1,134 @@
+{
+  "audits": [
+    {
+      "id": "auth0",
+      "issues": []
+    },
+    {
+      "id": "authorize-net",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The JSON response is missing the required top-level getMerchantDetailsResponse wrapper, so it does not match the API's actual response structure.",
+          "suggestion": "Wrap the shown fields inside {\"getMerchantDetailsResponse\":{...}} and include the standard messages object if presenting a representative response.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "avalara",
+      "issues": []
+    },
+    {
+      "id": "aviation-edge",
+      "issues": []
+    },
+    {
+      "id": "aviationstack",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The claim that HTTPS requires a paid plan is outdated. The current Free plan includes HTTPS encryption.",
+          "suggestion": "Use: \"100 requests/month; personal-use license; real-time flights; HTTPS included; advanced features such as historical flights and routes require a paid plan.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "It repeats the outdated assertion that the free tier is HTTP-only.",
+          "suggestion": "Use: \"Monthly quota of 100 requests on the Free plan; no separate per-second limit is prominently published; HTTPS is included.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "aws-rekognition",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The listed free allowances are substantially outdated and conflate unrelated services. Current published allowances include 1,000 images per month for each Rekognition Image API group, 1,000 face-vector and 1,000 user-vector objects per month, and 60 minutes of Rekognition Video analysis per month during the 12-month service free tier. The fixed Face Liveness and stored-video group allowances shown here are not current.",
+          "suggestion": "Replace the limits with the current AWS Rekognition pricing-page allowances and separately explain the post-July-15-2025 AWS credit-based Free Tier rules. Remove the unsupported Face Liveness and vector-search quotas.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The Authorization header is only a placeholder fragment, not a valid SigV4 signature. It omits the credential scope, signed-header list, signature, X-Amz-Date, and related canonical-request signing information, so the curl command will be rejected.",
+          "suggestion": "Use an AWS CLI or SDK example, or provide a completely generated SigV4 request including X-Amz-Date, Credential scope, SignedHeaders, Signature, and temporary-session token when applicable. Do not label the IAM access-key ID as YOUR_API_KEY.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "azure-maps",
+      "issues": []
+    },
+    {
+      "id": "azure-openai",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Azure OpenAI token prices are currently published per 1 million tokens, not per 1,000 tokens.",
+          "suggestion": "Use: \"Pay-as-you-go pricing per 1 million input/output tokens, varying by model and deployment type; provisioned throughput is priced separately through PTUs and reservations.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "balldontlie",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "ALL-STAR is not the free tier. The current tiers are Free, ALL-STAR, GOAT, and ALL-ACCESS. The sports limitation is also outdated: the account documentation says free access starts with NBA, NFL, MLB, and EPL, while subscriptions are otherwise organized per sport.",
+          "suggestion": "Use: \"Free tier: $0, 5 requests/minute, basic endpoints; initial free access includes NBA, NFL, MLB, and EPL. ALL-STAR is $9.99/month per sport and GOAT is $39.99/month per sport.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The numerical limits are right but assigned to the wrong tier names: 60/min is ALL-STAR, not GOAT, and 600/min is GOAT, not GOAT+. There is no current GOAT+ tier.",
+          "suggestion": "Use: \"Free: 5/min; ALL-STAR: 60/min; GOAT: 600/min; ALL-ACCESS: 600/min.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response uses the obsolete player and pagination schema. Current player records use height and weight strings plus fields such as jersey_number, college, country, and draft data; pagination uses next_cursor rather than total_pages/current_page/next_page.",
+          "suggestion": "Replace height_feet, height_inches, and weight_pounds with current fields and use meta containing next_cursor and per_page.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The description presents balldontlie as an NBA-focused API, but the current product covers more than 20 sports and leagues through sport-specific APIs and plans.",
+          "suggestion": "Describe the broader multi-sport service, while clarifying that https://api.balldontlie.io/v1 is the NBA API root represented by this entry.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bigcommerce",
+      "issues": [
+        {
+          "field": "pricing.free_tier",
+          "problem": "BigCommerce does not offer an ongoing free tier. It offers a time-limited 15-day free trial, after which a paid store plan is required.",
+          "suggestion": "Set free_tier to false and state separately that a fully functional 15-day trial is available.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The value \"unknown\" obscures that the only free access is a 15-day trial rather than a free plan.",
+          "suggestion": "Use: \"No ongoing free tier; fully functional 15-day trial with no credit card required.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated 150\u2013450 requests per 30 seconds reflects older plan limits. Current published limits are 20,000 API calls/hour for Core and Growth and 60,000/hour for Scale, approximately 167 and 500 calls per 30 seconds respectively.",
+          "suggestion": "Replace the old range with the current plan-specific hourly limits and retain the note about X-Rate-Limit response headers and separate GraphQL limits.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "The wording implies that a client ID is normally sent with REST calls. Current Management REST requests generally authenticate with the X-Auth-Token header; the OAuth client ID is used during authorization/token issuance rather than as a normal API-request header.",
+          "suggestion": "Use: \"Send the store-scoped access token in X-Auth-Token. Public apps obtain that token through BigCommerce OAuth using their client credentials; do not send the client ID as a routine REST authentication header.\"",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

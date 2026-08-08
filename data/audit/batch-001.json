@@ -1,0 +1,177 @@
+{
+  "audits": [
+    {
+      "id": "afterpay",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The placeholder says authentication is unknown, but the official documentation confirms HTTP Basic authentication and also supports OAuth bearer tokens.",
+          "suggestion": "State that Basic auth uses the Merchant ID as username and Secret Key as password; note OAuth 2.0 client-credentials bearer authentication as the alternative.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "aftership",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The embedded 2025-07 API version is outdated; the current Tracking API documentation uses 2026-07.",
+          "suggestion": "Use https://api.aftership.com/tracking/2026-07.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "The claimed alternative \"Authorization: AS-Api-Key\" is not a documented authentication method. Account API keys use the as-api-key header; OAuth integrations use as-access-token.",
+          "suggestion": "Remove the Authorization alternative and document as-api-key, with as-access-token only for OAuth applications.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "AfterShip has a free product plan, but the current pricing comparison does not include Tracking API or webhook access on the Free plan. Calling this an API free tier is misleading.",
+          "suggestion": "Set API free_tier to false, or explicitly state that the free dashboard plan excludes API and webhook access.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The plan names are stale. Current plans are Essentials, Premium, and Enterprise, and API/webhook access is listed for Premium and Enterprise rather than Essentials.",
+          "suggestion": "Use \"Premium and Enterprise for API access; Essentials does not include the Tracking API.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Official documentation publishes endpoint-specific limits, so \"not published\" is false. Examples include 20 req/s for POST /trackings, 6 req/s for GET /trackings, and 5 req/s for GET /trackings/:id.",
+          "suggestion": "Replace with the documented per-endpoint limits and mention the X-RateLimit-* response headers.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The request uses the outdated 2025-07 API version.",
+          "suggestion": "Change the URL to https://api.aftership.com/tracking/2026-07/trackings.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "airnow",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current AirNow public documentation and Data Exchange Guidelines do not state a non-commercial-only restriction or a special commercial agreement requirement.",
+          "suggestion": "Describe access as free and public after registration, subject to the AirNow Data Exchange Guidelines; remove the unsupported commercial-use distinction.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "aisstream",
+      "issues": []
+    },
+    {
+      "id": "alchemy",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Alchemy's current header-based authentication uses \"Authorization: Bearer <API_KEY>\", not an Alchemy-Auth header.",
+          "suggestion": "Document either the API key in the /v2/{API_KEY} path or Authorization: Bearer YOUR_API_KEY.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Growth is an obsolete plan name; Growth and Scale customers were transitioned to Pay As You Go in 2025.",
+          "suggestion": "Use \"Pay As You Go and Enterprise\"; the current Free plan includes 30 million CUs per month.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The comparison to a Growth plan is stale because that plan no longer exists.",
+          "suggestion": "Compare Free with Pay As You Go using current published throughput, presently advertised as about 25 RPS/500 CU/s for Free and 300 RPS/10,000 CU/s for Pay As You Go.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "alienvault-otx",
+      "issues": []
+    },
+    {
+      "id": "alpaca",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The entry uses the obsolete \"Unlimited\" market-data plan name and sets paid_plans to null. The current individual-trader paid plan is Algo Trader Plus at $99/month. Basic historical coverage extends back to 2016; its key restriction is exclusion of the latest 15 minutes, not a generally short history.",
+          "suggestion": "List Basic as free and Algo Trader Plus as $99/month; describe Basic equities data as IEX real time with history since 2016 but without the latest 15 minutes, versus full-market SIP access on the paid plan.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "Crypto trading is not commission-free; Alpaca charges tiered crypto trading fees. Commission-free treatment applies to eligible U.S.-listed securities and options.",
+          "suggestion": "Change the opening to \"commission-free stock and options trading plus fee-based crypto trading.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "alpha-vantage",
+      "issues": []
+    },
+    {
+      "id": "amazon-bedrock",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The claim that Bedrock has no simple API key is outdated. Amazon Bedrock now supports bearer API keys in addition to IAM SigV4. The SigV4 signing name for runtime requests is bedrock, although the SDK client is named bedrock-runtime.",
+          "suggestion": "Document both Authorization: Bearer BEDROCK_API_KEY and IAM SigV4; use service name bedrock when constructing a SigV4 signature.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "There is no current standalone allowance of free Bedrock model tokens or requests matching this claim. New AWS customers may use general AWS Free Tier credits, but Bedrock inference still incurs normal service charges deducted from those credits.",
+          "suggestion": "Set direct Bedrock API free_tier to false and separately mention that eligible new AWS accounts may apply general promotional credits.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The Authorization header is only a fragment and does not contain the credential scope, signed headers, timestamp, or cryptographic signature required by SigV4, so the curl command cannot authenticate. It also uses Claude 3 Haiku, now a Legacy model unavailable to new customers and scheduled for end of life on September 10, 2026.",
+          "suggestion": "Use a current active model and either a Bearer Bedrock API key or curl's --aws-sigv4 \"aws:amz:us-east-1:bedrock\" with --user \"$AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY\" and any required session-token header.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "amazon-paapi",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "PA-API 5.0 was deprecated on May 15, 2026 and its documentation is explicitly no longer maintained. It should not be listed as a current operational API.",
+          "suggestion": "Mark it deprecated/retired and replace the entry with Amazon Creators API.",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "https://webservices.amazon.com/paapi5 is the legacy PA-API endpoint, not Amazon's current product-catalog API root.",
+          "suggestion": "For the replacement Creators API, use https://creatorsapi.amazon with catalog operations under /catalog/v1/.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The PA-API documentation site is unmaintained and directs users to Creators API.",
+          "suggestion": "Use https://affiliate-program.amazon.com/creatorsapi/docs/en-us/introduction.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "The current replacement API does not use PA-API's AWS SigV4 credentials. Creators API uses OAuth 2.0 client credentials to obtain a one-hour bearer token.",
+          "suggestion": "Document OAuth 2.0 client_credentials and Authorization: Bearer ACCESS_TOKEN, plus the required x-marketplace header.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The curl example targets the retired PA-API interface and uses its obsolete SigV4 headers, PascalCase body fields, and /paapi5/searchitems path.",
+          "suggestion": "Replace it with a Creators API request to https://creatorsapi.amazon/catalog/v1/searchItems using a bearer token, x-marketplace header, and lowerCamelCase request fields such as partnerTag, partnerType, keywords, and marketplace.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "audits": [
+    {
+      "id": "17track",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "Version 2.2 remains online but is a legacy API version. The current documented API root is v2.4, which is not backward-compatible with v2.2.",
+          "suggestion": "Use https://api.17track.net/track/v2.4 and the current documentation, or explicitly label this entry as the supported legacy v2.2 interface.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response uses the old v1-style track.e event structure and is not consistent with the v2.2 gettrackinfo response schema, which uses track_info, latest_status, latest_event, and provider event structures.",
+          "suggestion": "Replace the snippet with an actual v2.2 response, or upgrade the request and response together to the official v2.4 gettrackinfo schema.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "abs-statistics",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "ABS changed the Data API root on 2024-11-29. https://api.data.abs.gov.au is the former root; the current REST root is https://data.api.abs.gov.au/rest.",
+          "suggestion": "Set base_url to https://data.api.abs.gov.au/rest.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The curl uses the retired host/path and an obsolete CPI 1.0.0 dataflow version. Old structure versions can be removed and return 404. The response snippet also reflects the older SDMX-JSON envelope rather than the current meta/data structure.",
+          "suggestion": "Rebuild the example using https://data.api.abs.gov.au/rest/data/ and a current dataflow such as CPI_Q for quarterly CPI, preferably omitting the version to select the latest; capture a fresh response from that request.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "abstract-email",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The rate limit is published rather than unknown. Abstract's current pricing page lists 3 requests/second for the free plan, although an older API error-code section still says 1 request/second.",
+          "suggestion": "Use the current plan/dashboard limit, presently 3 requests/second for the free plan, and optionally note the conflicting older documentation.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "abstract-ip-geo",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free-tier limit is known: the current free plan includes 1,000 requests.",
+          "suggestion": "Set free_tier_limits to \"1,000 requests/month\".",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The free-plan rate limit is published as 1 request/second.",
+          "suggestion": "Set rate_limits to \"Free plan: 1 request/second; paid limits vary by plan.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "abuseipdb",
+      "issues": []
+    },
+    {
+      "id": "accuweather",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Current AccuWeather documentation requires the API key in an Authorization header using Bearer authentication, not the apikey query parameter shown here. The query form is the legacy interface.",
+          "suggestion": "Use \"Authorization: Bearer YOUR_API_KEY\" and describe query-parameter authentication as legacy if it is retained at all.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The stated historical approximately 50-calls/day limit is not the current Core Weather offer. Current trials last 14 days: Core Weather allows 500 requests/day and MinuteCast allows 50 requests/day. Paid packages now start at approximately $2/month rather than being exclusively contact-sales.",
+          "suggestion": "State that the free access is a 14-day trial with 500 Core Weather requests/day or 50 MinuteCast requests/day, followed by paid packages starting around $2/month.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The curl authenticates through the legacy apikey query parameter and is inconsistent with the current documented Bearer-header interface.",
+          "suggestion": "Use: curl 'https://dataservice.accuweather.com/currentconditions/v1/349727' -H 'Authorization: Bearer YOUR_API_KEY' -H 'Accept-Encoding: gzip,deflate'",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "adsb-exchange",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The value is a placeholder and no usable API root is supplied.",
+          "suggestion": "For the personal RapidAPI product use https://adsbexchange-com1.p.rapidapi.com; for contracted direct access use the separately documented https://gateway.adsbexchange.com/api/aircraft/v2 root. Do not combine the two interfaces.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "The entry conflates RapidAPI personal access with direct enterprise/data-program access. They use different hosts and headers.",
+          "suggestion": "For RapidAPI specify X-RapidAPI-Key and X-RapidAPI-Host. For direct gateway access specify the provider-issued api-auth or currently documented direct API-key header and describe it as a separate commercial product.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "free_tier is true even though the current public personal API is a paid RapidAPI subscription advertised at $10/month for 10,000 requests. Enterprise and historical access are separate quoted products.",
+          "suggestion": "Set free_tier to false, free_tier_limits to \"no public free tier\", and paid_plans to \"$10/month for 10,000 personal-use requests via RapidAPI; contact sales for enterprise, commercial, historical, or enriched access.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The field is an unresolved placeholder.",
+          "suggestion": "Record the 10,000-request monthly plan quota and verify the current RapidAPI dashboard for any separate per-second throttling before publishing.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example",
+          "problem": "Both request and response are unresolved placeholders, so the entry contains no usable or verifiable example.",
+          "suggestion": "Add a real example for one selected product, such as a RapidAPI ICAO lookup with both required RapidAPI headers, and capture its actual ac-array response.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "advice-slip",
+      "issues": [
+        {
+          "field": "description",
+          "problem": "The official service is the Advice Slip JSON API and documents JSON/JSONP responses plus a separate RSS feed; it does not document general XML responses.",
+          "suggestion": "Replace \"Responses are available in JSON or XML\" with \"Responses are available in JSON or JSONP; a separate daily RSS feed is also available.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "adyen",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The URL is a valid Checkout test host, but the entry is presented as a root for the general Adyen platform and describes Management APIs as well. Management APIs use other hosts, while live Checkout URLs are account-prefixed.",
+          "suggestion": "Rename/scope the entry to \"Adyen Checkout API (test)\" or document the separate API-family roots and account-specific live Checkout URL format.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "\"Contact sales for rates\" overlooks Adyen's published region- and payment-method-specific transaction fees. Contacting sales is mainly needed for custom terms and the applicable minimum invoice.",
+          "suggestion": "Describe pricing as a fixed processing fee plus the published payment-method fee, with region-specific rates and a possible minimum invoice; reserve \"contact sales\" for custom pricing.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "aerodatabox",
+      "issues": []
+    }
+  ]
+}

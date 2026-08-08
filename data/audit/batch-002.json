@@ -1,0 +1,168 @@
+{
+  "audits": [
+    {
+      "id": "amtrak-statusmaps",
+      "issues": [
+        {
+          "field": "example",
+          "problem": "The documented StatusMaps feed is getTrainsData, not getTrainStatus?train_num=1. The shown endpoint and plain JSON response schema appear fabricated; the real browser feed returns an opaque/encrypted payload rather than that object.",
+          "suggestion": "Use https://maps.amtrak.com/services/MapDataService/trains/getTrainsData and explain that its unsupported payload must be decoded/decrypted and filtered client-side.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "anilist",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "AniList currently warns that the API is degraded and temporarily limited to 30 requests per minute, so the unconditional 90 requests/minute claim is not current.",
+          "suggestion": "State that the normal documented limit is 90 requests/minute but the current degraded-state limit is 30 requests/minute; update the same claim in pricing.free_tier_limits.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "anthropic",
+      "issues": [
+        {
+          "field": "example.request",
+          "problem": "claude-sonnet-4-20250514 was retired from the Claude API on June 15, 2026, so this request now fails.",
+          "suggestion": "Replace the model with the recommended active replacement, claude-sonnet-4-6, or another currently active model discovered through GET /v1/models.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "api-football",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid plans exist, so null is incorrect.",
+          "suggestion": "List the current direct plans, including Pro at $19/month for 7,500 requests/day, Ultra at $29/month for 75,000/day, and Mega at $39/month for 150,000/day, subject to billing-period discounts and changes.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published. The free plan is limited to 10 requests/minute, with higher published limits for paid plans.",
+          "suggestion": "Use: Free 10 requests/minute; Pro 300/minute and 5/second; Ultra 450/minute and 7.5/second; Mega 900/minute and 15/second. Daily quotas also apply.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "api-ninjas-exercises",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current free plan provides 3,000 calls/month, not 50,000. It is limited to evaluation/demo and non-commercial use, requires attribution, and forbids caching or storing returned data.",
+          "suggestion": "Replace with: 3,000 calls/month, 100 calls/hour, non-commercial evaluation/demo use only, attribution required, and no caching/storage.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The free plan has a published limit of 100 API calls per hour, which the entry omits.",
+          "suggestion": "State the free-plan limit of 100 calls/hour in addition to the 3,000-call monthly quota; current paid plans list no additional request-rate cap.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The current Exercises response uses an equipments array and includes safety_info; the singular equipment string shown is from an obsolete schema.",
+          "suggestion": "Use fields such as \"equipments\":[\"dumbbells\",\"incline bench\"] and \"safety_info\":\"...\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "apify",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current permanent free plan has a published allowance, so \"unknown\" is incorrect.",
+          "suggestion": "State that the free plan includes $5 of prepaid platform/Apify Store usage per month, with usage charged according to compute, storage, transfer, proxy, and Actor pricing.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid plans exist, so null is incorrect.",
+          "suggestion": "List Starter at $29/month, Scale at $199/month, Business at $999/month, and custom Enterprise pricing, noting that platform usage and Actor charges can also apply.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-api",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "\"Researching\" is an unresolved placeholder even though authentication is known.",
+          "suggestion": "Replace with: No authentication or API key is required for the public Atom query API.",
+          "confidence": "high"
+        },
+        {
+          "field": "id",
+          "problem": "This is a duplicate of the separate arxiv entry; both describe the same export.arxiv.org Atom query API.",
+          "suggestion": "Merge this record into the arxiv entry and retain one canonical directory entry.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "arxiv",
+      "issues": [
+        {
+          "field": "id",
+          "problem": "This duplicates the arxiv-api entry for the same export.arxiv.org Atom query API.",
+          "suggestion": "Keep one canonical arXiv API record and remove or alias the duplicate.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "assemblyai",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current free-trial allowance is explicitly published rather than variable: new accounts receive $50 in credits for supported speech services.",
+          "suggestion": "State: $50 in non-expiring free credits for pre-recorded STT, streaming STT, Speech Understanding, and Guardrails; LLM Gateway is excluded.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "AssemblyAI publishes service-specific limits, so \"not published\" is incorrect.",
+          "suggestion": "State at least the starting free limits: 5 concurrent pre-recorded transcriptions and 5 new streaming sessions/minute; paid accounts start at 200+ concurrent transcriptions and 100+ new streaming sessions/minute.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The current raw transcript-submission API reference marks speech_models as required, while this request supplies only audio_url.",
+          "suggestion": "Add \"speech_models\":[\"universal-3-pro\",\"universal-2\"] to the JSON payload.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "astronomyapi",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The versioned API root is missing from the URL.",
+          "suggestion": "Use https://api.astronomyapi.com/api/v2.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.type",
+          "problem": "The documented request authentication is HTTP Basic authentication using the Application ID as the username and Application Secret as the password, not a single API-key header.",
+          "suggestion": "Set the auth type to basic and describe Application ID/Application Secret credentials. The existing curl -u syntax is consistent with Basic authentication.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The provider advertises paid access for higher request rates and custom endpoints, so null incorrectly implies that no paid offering exists.",
+          "suggestion": "State that custom paid plans are available by contacting AstronomyAPI; fixed public prices are not published.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

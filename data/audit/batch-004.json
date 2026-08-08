@@ -1,0 +1,174 @@
+{
+  "audits": [
+    {
+      "id": "binance",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The statement that signed endpoints require HMAC-SHA256 is too restrictive. Binance Spot currently supports HMAC, RSA, and Ed25519 API-key signatures.",
+          "suggestion": "Say that secure endpoints require X-MBX-APIKEY plus a signature generated using the selected HMAC, RSA, or Ed25519 key type.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The entry presents this Spot API root as covering futures and other Binance products, but futures use separate hosts and documentation.",
+          "suggestion": "Rename and scope the entry to Binance Spot, or document futures and other product APIs as separate entries with their own roots.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bing-maps",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The claimed Basic-key free tier is no longer available. Bing Maps for Enterprise was retired for free Basic customers, while existing enterprise customers have only a migration window.",
+          "suggestion": "Set free_tier to false and state that legacy enterprise customers can continue until June 30, 2028; direct new integrations to Azure Maps.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "The wording implies developers can still create ordinary Bing Maps keys for new integrations, despite retirement for Basic customers.",
+          "suggestion": "Describe Bing Maps keys as credentials for eligible existing enterprise accounts and recommend Azure Maps authentication for new projects.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "Calling the service simply operational hides that it is deprecated, unavailable to free Basic customers, and scheduled for complete enterprise retirement.",
+          "suggestion": "Mark it deprecated or legacy-enterprise-only, with final retirement on June 30, 2028.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bing-news-search",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is the historical Bing Search v7 root, but the service was fully decommissioned on August 11, 2025 and has no current compatible API root.",
+          "suggestion": "Remove the entry from an active API directory or retain the URL only as a retired historical endpoint.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "Users can no longer create a Bing Search resource in Azure because the product has been retired.",
+          "suggestion": "State that new resources and credentials are unavailable; Microsoft's suggested successor is Grounding with Bing Search, which has a different interface.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The F0 and paid Bing Search v7 SKUs described here are no longer available.",
+          "suggestion": "Set free_tier to false and remove the obsolete paid-plan and quota claims.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "Although historically well-formed, this request can no longer produce a successful Bing News Search response because the API was decommissioned.",
+          "suggestion": "Remove the example or clearly label it as historical and nonfunctional.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "The API is not operational; all existing Bing Search API instances were decommissioned on August 11, 2025.",
+          "suggestion": "Set status to retired or discontinued.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "birdeye",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The parenthetical RPM figures do not match the documented package limits, and the wallet limit is stale. Current documentation lists Premium at 50 rps, Business tiers at 100\u2013150 rps, and wallet APIs at 5 rps and 75 rpm\u2014not approximately 1,000/1,500 rpm or 30 rpm.",
+          "suggestion": "Use the documented RPS values without invented RPM conversions, and state that wallet APIs are limited to 5 rps and 75 rpm across packages.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bitbucket",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "As of the audit date, app passwords are fully retired rather than merely in a 2025\u20132026 deprecation period; final removal occurred July 28, 2026.",
+          "suggestion": "State that app passwords are retired and users must migrate to scoped API tokens, OAuth 2.0, or resource access tokens.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The scaled-limit wording implies ten extra requests per hour for every paid user. The documented formula excludes the initial 100 seats: 1,000 + (paid seats - 100) \u00d7 10, capped at 10,000.",
+          "suggestion": "Use the documented formula and retain the requirements for 100 or more paid seats, Standard/Premium, and eligible access-token or Forge authentication.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "blockchair",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The value is an unfinished research placeholder and does not describe the actual authentication mechanism.",
+          "suggestion": "State that occasional/free testing requests can be made without a key and that API keys, when applicable, are supplied through the key query parameter, such as ?key=YOUR_API_KEY.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bls",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The claim that no short-window request limit is published is false. BLS publishes a limit of 50 requests per 10 seconds for both registered and unregistered access.",
+          "suggestion": "Add 50 requests per 10 seconds alongside the daily query and series-per-query limits.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bluesky",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The wording conflates the public AppView host with authenticated service hosts. Direct api.bsky.app and public.api.bsky.app endpoints do not support authentication; authenticated requests generally go to the user's PDS or Bluesky entryway.",
+          "suggestion": "Describe this base URL as unauthenticated public-read only and direct authenticated XRPC calls to the user's PDS/entryway using a session JWT or OAuth token.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The 3,000 requests per 5 minutes limit belongs to hosted PDS traffic, not the public AppView. The createSession figure is also wrong: it is 30 per 5 minutes per account and 300 per day, not approximately 10 per minute.",
+          "suggestion": "State that public AppView has generous limits without a published general numeric cap; separately list hosted-PDS overall limits and createSession's 30/5-minute and 300/day limits.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "boardgamegeek",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "Current BoardGameGeek policy requires application registration, approval, and an application bearer token for XML API use; it is no longer correctly described as an unauthenticated public API.",
+          "suggestion": "Set the type to bearer token or other and explain the application-registration and approval requirement.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The curl omits the currently required Authorization bearer-token header.",
+          "suggestion": "Use curl -H \"Authorization: Bearer YOUR_APPLICATION_TOKEN\" \"https://boardgamegeek.com/xmlapi2/thing?id=13&stats=1\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bored-api",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The service publishes a rate limit, so \"not published\" is incorrect.",
+          "suggestion": "Set the limit to 100 requests every 15 minutes.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

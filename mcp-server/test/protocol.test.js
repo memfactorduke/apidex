@@ -28,7 +28,8 @@ function rpcSession(requests) {
       }
     });
     proc.on("error", reject);
-    setTimeout(() => { proc.kill(); reject(new Error("rpc timeout")); }, 10000);
+    const timer = setTimeout(() => { proc.kill(); reject(new Error("rpc timeout")); }, 10000);
+    proc.on("exit", () => clearTimeout(timer));
     for (const r of requests) proc.stdin.write(JSON.stringify(r) + "\n");
   });
 }
@@ -56,6 +57,17 @@ test("tools/call find_api_for_task returns results with ids", async () => {
   assert.ok(payload.results.some((r) => r.id === "open-meteo"),
     `expected open-meteo in results, got ${payload.results.map((r) => r.id)}`);
   assert.ok(payload.results.every((r) => typeof r.id === "string" && r.use_cases.length > 0));
+});
+
+test("'without an API key' task wording boosts no-auth APIs to the top", async () => {
+  const rs = await rpcSession([init, initialized, {
+    jsonrpc: "2.0", id: 5, method: "tools/call",
+    params: { name: "find_api_for_task", arguments: { task: "get current weather for a city without an API key" } },
+  }]);
+  const payload = JSON.parse(rs.get(5).result.content[0].text);
+  assert.ok(payload.results.length >= 1);
+  assert.equal(payload.results[0].auth, "none",
+    `expected a no-auth API first, got ${payload.results.map((r) => `${r.id}(${r.auth})`)}`);
 });
 
 test("tools/call get_api unknown id suggests alternatives", async () => {

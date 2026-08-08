@@ -44,11 +44,11 @@ export function score(e: ApiEntry, qTokens: string[]): number {
     if (f.tag.has(t)) hit = Math.max(hit, 3);
     if (f.cat.has(t)) hit = Math.max(hit, 2);
     if (f.desc.has(t)) hit = Math.max(hit, 1);
-    if (hit === 0) {
-      // prefix match fallback: "geocod" matches "geocoding"
+    if (hit === 0 && t.length >= 4) {
+      // prefix match fallback: query token "geocod" matches indexed "geocoding"
       for (const set of [f.name, f.use, f.tag, f.desc]) {
         for (const w of set) {
-          if (w.startsWith(t) || t.startsWith(w)) { hit = Math.max(hit, 1); break; }
+          if (w.startsWith(t)) { hit = Math.max(hit, 1); break; }
         }
         if (hit) break;
       }

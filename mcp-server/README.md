@@ -58,7 +58,13 @@ Entries that failed verification or turned out defunct were dropped, not shipped
 `verification` block on every entry lists which fields were confirmed by both verifiers,
 which were corrected, and which remain unverifiable (e.g. unpublished rate limits).
 
-Dataset stats: <!-- STATS --> (see `list_categories` for live numbers).
+**Dataset stats** (2026-08-08 build): 470 APIs across 21 categories — 443 with a free tier,
+128 requiring no auth at all, 19 with CORS confirmed for browser use. During verification,
+205 entries passed both independent checks untouched; the other 265 had at least one field
+corrected by adjudication — **816 field-level corrections** in total that a single-pass
+dataset would have shipped as errors. 9 candidate APIs turned out to be dead and were
+dropped entirely. A cross-model-family audit (GPT-5.6) ran over the final dataset as an
+additional error sweep.
 
 ## Development
 

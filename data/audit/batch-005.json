@@ -1,0 +1,139 @@
+{
+  "audits": [
+    {
+      "id": "braintree",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "GraphQL does not generally authenticate with a Bearer API key. Normal merchant credentials use HTTP Basic authentication with the public key and private key. Bearer authentication is limited to authorization fingerprints or special Braintree Auth OAuth access tokens.",
+          "suggestion": "Document GraphQL merchant authentication as Basic BASE64(PUBLIC_KEY:PRIVATE_KEY); mention Bearer only for authorization fingerprints or eligible OAuth integrations.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "Authorization: Bearer YOUR_API_KEY is not a valid standard credential for this GraphQL ping request.",
+          "suggestion": "Use Authorization: Basic BASE64_ENCODED(PUBLIC_KEY:PRIVATE_KEY), or curl -u 'PUBLIC_KEY:PRIVATE_KEY', with the sandbox GraphQL endpoint.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "brave-search",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The limit is published, not unknown. The current Search plan includes $5 of recurring monthly credits.",
+          "suggestion": "Set this to $5 in free credits each month, equivalent to about 1,000 Search requests at the current $5 per 1,000-request price.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid pricing is publicly listed rather than null.",
+          "suggestion": "Record Search at $5 per 1,000 requests and Answers at $4 per 1,000 requests plus token charges; enterprise pricing is custom.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Brave publishes plan capacity, so 'not published' is incorrect.",
+          "suggestion": "Record 50 queries per second for Search and 2 queries per second for Answers, subject to plan changes.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "brawl-stars",
+      "issues": []
+    },
+    {
+      "id": "brevo",
+      "issues": []
+    },
+    {
+      "id": "brewerydb",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is not a current operational API root; the historical BreweryDB service is no longer available as described.",
+          "suggestion": "Remove the entry or replace it with a separately verified active beer-data API rather than preserving the BreweryDB identity.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "brewerydb.com/developers now redirects to an unrelated Fright Catalog website, indicating the domain has changed hands.",
+          "suggestion": "Remove this URL and mark the original documentation as unavailable or archived.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "The API-key signup and query-parameter authentication instructions are obsolete because the described service is no longer operating.",
+          "suggestion": "Remove the authentication instructions with the retired entry.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The curl targets the retired BreweryDB v2 host and should not be presented as a working example.",
+          "suggestion": "Remove the example or replace the entire entry with an active, independently verified API.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "The entry is marked operational despite the official-looking website redirecting to an unrelated business and no current BreweryDB API being available.",
+          "suggestion": "Set status to discontinued/dead and exclude it from an operational public-API directory.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "bright-data",
+      "issues": []
+    },
+    {
+      "id": "bright-sky",
+      "issues": []
+    },
+    {
+      "id": "browserstack",
+      "issues": []
+    },
+    {
+      "id": "calorieninjas",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The published free limit is not unknown: it is 10,000 API calls per month, and the free plan prohibits commercial use.",
+          "suggestion": "Set the limit to 10,000 calls/month and explicitly state that commercial use requires a paid plan.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid plans are publicly listed rather than unknown/null.",
+          "suggestion": "Record Novice at $8/month for 100,000 calls, Startup at $20/month for 500,000 calls, and Business at $49/month for 2,000,000 calls, while noting prices may change.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "CalorieNinjas says it is being shut down during 2026 and directs users to API Ninjas, so plain 'operational' omits a material deprecation.",
+          "suggestion": "Mark it deprecated/sunsetting and direct new integrations to the API Ninjas Nutrition and Recipe APIs; recheck whether the endpoint remains live before publication.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "canada-open-data",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The current canonical English CKAN API root includes the language segment '/en'; the listed root omits it and may rely on redirection or legacy routing.",
+          "suggestion": "Use https://open.canada.ca/data/en/api/3.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example uses the non-canonical language-less API path.",
+          "suggestion": "Use curl -s 'https://open.canada.ca/data/en/api/3/action/package_search?q=climate&rows=1'.",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}
