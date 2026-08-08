@@ -1,0 +1,172 @@
+{
+  "audits": [
+    {
+      "id": "wiktionary",
+      "issues": [
+        {
+          "field": "example.request",
+          "problem": "The curl command sends curl's generic User-Agent, contrary to Wikimedia's requirement for a descriptive User-Agent; such requests may receive HTTP 403.",
+          "suggestion": "Add a header such as -H \"User-Agent: PublicApiDirectoryExample/1.0 (contact@example.com)\".",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The snippet is not representative of the endpoint's real response: the page ID is fabricated and prop=extracts returns a long, unstructured page extract with language and section content, not a neatly isolated definition.",
+          "suggestion": "Use a current abbreviated response and make clear that extract is unstructured text requiring Wiktionary-specific parsing.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The entry implies that this MediaWiki endpoint provides structured dictionary definitions and translations. The Action API exposes page content, wikitext, parsing, and plain-text/HTML extracts; it does not structure Wiktionary's lexical senses and translations.",
+          "suggestion": "Describe it as access to Wiktionary page content that must be parsed, or document a separate structured-definition endpoint if that is the intended product.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "woocommerce",
+      "issues": []
+    },
+    {
+      "id": "wordnik",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The limit is published, not unknown. Wordnik's Basic plan permits 100 calls/hour and is free for nonprofit or research use but only a free trial for commercial use.",
+          "suggestion": "Set this to \"Basic: 100 calls/hour; free for nonprofit or research use and trial-only for commercial use.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Wordnik currently has published paid plans, so null is incorrect.",
+          "suggestion": "List Hobby at $10/month for 1,000 calls/hour, Pro at $59/month for 20,000 calls/hour, and Enterprise at $149/month for 45,000 calls/hour, subject to current pricing.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published and vary by plan; \"not published\" is false.",
+          "suggestion": "State the plan limits and note that per-minute and per-hour remaining quotas are returned in X-RateLimit response headers.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "wordsapi",
+      "issues": []
+    },
+    {
+      "id": "workos",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "null is inconsistent with both WorkOS's current pricing and this entry's own free-tier text. Production SSO, Directory Sync, excess AuthKit usage, Radar usage, and other features have paid pricing.",
+          "suggestion": "Populate current pricing, including AuthKit at $2,500/month per additional 1M MAUs, SSO and Directory Sync starting at $125/month per connection, and Radar at $100/month per 50,000 checks after the first 1,000.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "world-bank",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "\"Researching\" is an unresolved placeholder rather than valid authentication information.",
+          "suggestion": "Replace it with \"No API key, account, or other authentication is required for the Indicators API.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "world-news-api",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "null is incorrect because World News API has multiple paid plans, already referenced by name in the rate-limit field.",
+          "suggestion": "Populate the current paid tiers and quotas from the official pricing page, including Starter, Reporter, Journalist, and Editor as applicable.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "world-weather-online",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The host is correct, but it omits the shared versioned API path used by the documented endpoints.",
+          "suggestion": "Use https://api.worldweatheronline.com/premium/v1 as the API root, with resources such as weather.ashx appended.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing",
+          "problem": "The claim that there is no permanent free tier is outdated. World Weather Online currently advertises an always-free, noncommercial plan in addition to paid-plan trials.",
+          "suggestion": "Set free_tier to true and describe the permanent plan as personal/educational/research use with attribution. The current pricing page lists 100 requests/day, although other first-party pages show conflicting limits that should be reconciled with the signup dashboard.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Listing only a 500-requests/day trial omits the permanent free plan and does not match the current public pricing page.",
+          "suggestion": "Replace this with the current plan-specific quotas; use 100 requests/day for the permanent free plan if following the pricing page, and verify the account dashboard because other official pages conflict.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "worldtimeapi",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "WorldTimeAPI has been officially sunset and its API currently times out; it is not operational.",
+          "suggestion": "Set status to retired/dead and remove it from an active public-API directory.",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "There is no longer a functioning API root at this address.",
+          "suggestion": "Do not silently replace it. If timeapi.world is to be listed, create a separate entry because it is a different service with a different host, authentication, and pricing.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The service is no longer available, so describing it as an entirely free operational API is false.",
+          "suggestion": "Remove the active free-tier claim and mark the product discontinued.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example targets the discontinued service and is no longer a working request.",
+          "suggestion": "Remove the example or retain it only in an explicitly archived entry.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "x-twitter",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The Free, Basic, and Pro tier model is obsolete. X API v2 now uses prepaid, pay-per-usage credits, with Enterprise offered separately; the official documentation does not advertise a continuing free API tier.",
+          "suggestion": "Set free_tier to false and describe current credit-based per-resource/per-action pricing plus Enterprise access.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The statement ties limits to the obsolete product tiers and gives an outdated approximate range. Current limits are published per endpoint and separately per app or per user, with some limits substantially above 900 requests per 15 minutes.",
+          "suggestion": "Describe endpoint-specific per-app and per-user limits and direct users to the current rate-limit table and Developer Console; mention custom Enterprise limits separately.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The request looks up @X, but user ID 2244994945 belongs to the X Developers account, not @X, so the request and response are inconsistent.",
+          "suggestion": "Use /2/users/by/username/XDevelopers with response {\"data\":{\"id\":\"2244994945\",\"name\":\"X Developers\",\"username\":\"XDevelopers\"}}, or replace the response with the actual current @X account data.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The statement that developers choose Free, Basic, Pro, or Enterprise tiers is outdated.",
+          "suggestion": "Replace it with \"Developers use pay-per-use API credits, while high-volume customers can arrange Enterprise access.\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "audits": [
+    {
+      "id": "medlineplus-connect",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The claim that there are no published request caps is false. NLM publishes an acceptable-use limit of 100 requests per minute per IP address.",
+          "suggestion": "State that the service is free but limited to 100 requests/minute/IP; excess traffic is blocked for 300 seconds or until the rate falls below the limit.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "A rate limit is officially published, so \"not published\" is incorrect.",
+          "suggestion": "Use \"100 requests per minute per IP address; cache results for 12\u201324 hours where practical.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The current E11.9 response does not match this snippet. It currently returns multiple entries, with the first titled \"Diabetes Type 2\" and linked to medlineplus.gov/diabetestype2.html rather than the cited encyclopedia article.",
+          "suggestion": "Replace the snippet with a current, truncated response showing the \"Diabetes Type 2\" entry and its actual link, while indicating that additional entries can be returned.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "memegen",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "The entry omits the documented optional API-key system. Anonymous requests work, but they are watermarked and may be rate-limited or used as training data; sponsors can receive an API key.",
+          "suggestion": "Represent authentication as optional API-key authentication if supported. Document X-API-KEY and api_key, while noting that anonymous access remains available with restrictions.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "\"unknown\" misses a material documented limitation: anonymous output is watermarked and may be rate-limited.",
+          "suggestion": "Use \"Anonymous access is available, but responses are watermarked and may be rate-limited; no numeric anonymous quota is published.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value is incorrect because the project documents API keys for individuals sponsoring it at $10/month or more and invites users to request custom pricing.",
+          "suggestion": "State that $10+/month sponsorship can include an API key, with other pricing available through support.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mercado-pago",
+      "issues": []
+    },
+    {
+      "id": "merriam-webster",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The value \"...\" is not a valid API root.",
+          "suggestion": "Use \"https://www.dictionaryapi.com/api/v3/references\" as the common API prefix; individual reference IDs such as collegiate remain part of the endpoint path.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The value \"...\" is not a valid documentation URL.",
+          "suggestion": "Use \"https://dictionaryapi.com/\" for the developer portal, with its product and JSON-documentation pages linked from there.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The placeholder omits important published restrictions.",
+          "suggestion": "Use \"Free only for non-commercial applications, limited to two reference APIs and 1,000 queries per day per API key/reference; commercial or higher-volume use requires a paid agreement.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The placeholder omits the published daily quota.",
+          "suggestion": "Use \"1,000 queries per API key per day; contact Merriam-Webster for higher-volume use.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "messagebird",
+      "issues": []
+    },
+    {
+      "id": "messari",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The text uses retired Lite/Pro plan names and adds an unsupported, contradictory \"~20 rpm\" marketing figure. Messari permanently retired Lite and Pro in June 2026.",
+          "suggestion": "Describe the current unpaid/basic access as 200 requests/minute globally on permitted non-enterprise endpoints and 10 requests/day for MessariAI; remove the Lite/Pro and ~20 rpm language.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "A null value is incorrect. Messari currently sells Enterprise access and also documents credit-based or x402 pay-per-request access for supported endpoints.",
+          "suggestion": "Use \"Enterprise is the current subscription offering; contact Messari for pricing. Some endpoints also support purchased credits or x402 pay-per-request.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Although the numeric limits match the API documentation, the Lite/Pro tier labels are stale because those plans have been retired.",
+          "suggestion": "Use \"Unpaid/basic: 200 requests/minute globally on permitted endpoints; Enterprise: 600 requests/minute globally; endpoint-specific limits also apply; MessariAI free: 10/day.\"",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "met-museum",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "Several supposedly exact fields are wrong for object 436535. Its accession number is 1993.132 and its current primary image is DP-42549-001.jpg, not accession 1980.305 and DT1567.jpg.",
+          "suggestion": "Update the snippet from the live object record, including accessionNumber \"1993.132\" and primaryImage ending in \"/DP-42549-001.jpg\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "meta-graph",
+      "issues": []
+    },
+    {
+      "id": "meteoblue",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value contradicts Meteoblue's documented paid options and the entry's own statement that additional credits can be purchased.",
+          "suggestion": "List the prepaid pay-as-you-go API and Enterprise plans; current published comparisons describe prepaid packages and Enterprise pricing starting around \u20ac100/month, subject to configuration.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "A default rate limit is published, so \"not published\" is incorrect.",
+          "suggestion": "Use \"500 calls per minute unless otherwise agreed; API keys can also have configurable daily usage limits and credit limits.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "A successful basic-day request returns structured forecast and metadata data, not an empty JSON object. The snippet is therefore misleading as an example response.",
+          "suggestion": "Replace \"{}\" with a real, non-empty truncated basic-day response generated using a valid API key.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "meteostat",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free-plan quota has changed from 1,000 to 500 requests per month.",
+          "suggestion": "Use \"500 requests per month on the free Basic plan, enforced as a hard limit.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "This field repeats the obsolete 1,000-request monthly quota.",
+          "suggestion": "Use \"Free plan: 500 requests/month hard limit; HTTP 429 after quota exhaustion. Endpoint-specific date-range caps also apply.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The description repeats the obsolete claim that the hosted JSON API includes 1,000 free calls per month.",
+          "suggestion": "Change the final sentence to say \"Free for light use with 500 calls/month; paid RapidAPI plans raise the quota.\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

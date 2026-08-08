@@ -1,0 +1,98 @@
+{
+  "audits": [
+    {
+      "id": "stability-ai",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The rate limit is published, so \"not published\" is incorrect.",
+          "suggestion": "Use \"150 requests per 10 seconds; exceeding it returns HTTP 429 and triggers a 60-second timeout.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "stadia-maps",
+      "issues": []
+    },
+    {
+      "id": "statcan",
+      "issues": []
+    },
+    {
+      "id": "steam-web-api",
+      "issues": []
+    },
+    {
+      "id": "stormglass",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The example reports dailyQuota as 50, contradicting the current Free-plan limit of 10 requests per day stated elsewhere in the entry.",
+          "suggestion": "Use dailyQuota: 10 for a Free-plan example, or make clear that the response came from a different plan.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "stream-chat",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The listed Starter and Team plan names are stale. Current Chat pricing uses Build, Start, Elevate, and Enterprise; Maker is a separate eligibility-based offer.",
+          "suggestion": "Replace with \"Build (free), Start, Elevate, and Enterprise; qualifying small teams may obtain a Maker account.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Stream publishes detailed rate limits, so \"not published\" is incorrect.",
+          "suggestion": "Describe the per-endpoint, per-platform one-minute limits; for example, Query Channels is normally 10,000/minute, Send Message 1,000/minute, and a 60/minute per-user limit also applies. Limits can be dynamically adjusted.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "stripe",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The stated limits incorrectly separate reads and writes and incorrectly say test mode is higher. Stripe's global basic limit is 100 operations/second in live mode and 25 operations/second in sandbox, with a default 25/second endpoint limit and endpoint-specific exceptions.",
+          "suggestion": "Use \"Global limit: 100 operations/sec in live mode and 25 operations/sec in sandbox; endpoints normally have a 25 operations/sec default, with documented exceptions.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "stytch",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Direct backend REST calls use HTTP Basic authentication with project_id and secret; the claimed alternative \"API key headers\" is not part of the documented direct REST authentication interface.",
+          "suggestion": "Use \"Project ID and secret via HTTP Basic Auth. Frontend SDKs use the environment's public token instead.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The request targets the live api.stytch.com environment, but the example response uses test-environment identifiers such as request-id-test and user-test. A live request returns live-environment IDs.",
+          "suggestion": "Either change the request to https://test.stytch.com/v1/magic_links/email/login_or_create or change the response placeholders to live-environment identifiers.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "tavily",
+      "issues": []
+    },
+    {
+      "id": "taxjar",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "TaxJar publishes its API limits, so \"not published\" is incorrect.",
+          "suggestion": "Use \"10,000 requests per minute for Professional plans and 25,000 requests per minute for Premium plans; excess traffic can receive HTTP 429.\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

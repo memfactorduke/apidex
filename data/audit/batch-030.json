@@ -1,0 +1,179 @@
+{
+  "audits": [
+    {
+      "id": "openligadb",
+      "issues": []
+    },
+    {
+      "id": "openrouter",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published. Free-model usage is generally limited to 50 requests per day, increasing to 1,000 per day after purchasing at least $10 in credits; additional provider-specific limits can apply.",
+          "suggestion": "Replace \"not published\" with the current documented free-model limits and note that paid/provider limits vary.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "openrouteservice",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "api.openrouteservice.org was deprecated in April 2026 and is scheduled to shut down on August 24, 2026.",
+          "suggestion": "Use https://api.heigit.org/openrouteservice for core ORS endpoints. Ancillary services now have separate roots, such as https://api.heigit.org/pelias/v1 for geocoding.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The quoted 2,000-directions/day and 40/minute limits are stale following HeiGIT's quota restructuring.",
+          "suggestion": "Refresh all quotas from the HeiGIT account plans page; the current Standard plan lists Directions V2 at 10,000/day and 60/minute.",
+          "confidence": "medium"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The directions limits are stale and refer to the deprecated host.",
+          "suggestion": "Use the current endpoint-specific HeiGIT quotas, including 10,000/day and 60/minute for Directions V2, and periodically recheck the plans page.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example.request",
+          "problem": "The curl example uses the deprecated host, which is scheduled for imminent shutdown.",
+          "suggestion": "Use curl -X GET 'https://api.heigit.org/openrouteservice/v2/directions/driving-car?start=8.681495,49.41461&end=8.687872,49.420318' -H 'Authorization: YOUR_API_KEY'.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "opensky-network",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The authenticated-access description is outdated. OpenSky now uses OAuth2 client credentials; merely registering an account does not authenticate API calls, and username/password Basic authentication is no longer supported.",
+          "suggestion": "State that /states/all supports reduced anonymous access, while authenticated access requires an OAuth2 client, token exchange, and Authorization: Bearer header.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated anonymous limit of about 10 requests per 10 seconds is obsolete. OpenSky now uses endpoint-specific daily credit buckets and variable per-request costs.",
+          "suggestion": "Document the credit system: anonymous users receive 400 daily credits per endpoint bucket, standard authenticated users 4,000, active feeders 8,000, and licensed users 14,400 hourly; /states/all costs 1\u20134 credits depending on scope.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "opentdb",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The request specifies category=9, which is General Knowledge, but the response claims the category is Mythology and uses a mythology question.",
+          "suggestion": "Change the request to category=20 for the shown Mythology response, or replace the response with a General Knowledge question.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "opentripplanner",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "OpenTripPlanner is self-hosted software and has no canonical public API root. The listed IBI demo is not documented as a current supported public service and cannot be treated as the project's stable base URL.",
+          "suggestion": "Do not assign a public base URL; describe it as operator-defined, typically https://HOST/otp for a self-hosted deployment, or replace it with a separately verified deployment.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example uses the legacy /routers/default/plan REST API. OTP 2.8 removed the REST API, so this is not a valid example for the current supported release line.",
+          "suggestion": "Provide a GraphQL request compatible with current OTP 2.9, or explicitly label the example as requiring an older OTP release with the legacy REST API enabled.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response timestamps are inconsistent with the requested date: 1754647200000 corresponds to August 2025, not August 8, 2026.",
+          "suggestion": "Regenerate the response from a real deployment and ensure all timestamps match the request date.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "\"Operational\" incorrectly implies that the listed public demo endpoint is a maintained service. The project is maintained, but the directory's specific hosted endpoint is not verified as operational.",
+          "suggestion": "Classify it as maintained self-hosted software rather than an operational public API, unless a live supported deployment is verified.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The description presents REST and GraphQL as current peer interfaces, although REST was removed in OTP 2.8 and current OTP exposes GraphQL APIs.",
+          "suggestion": "Describe GraphQL as the current interface and mention REST only as a legacy interface available in older releases.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "openuv",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The stated 30-request daily free quota and paid plans starting around $12 appear stale. Current plan information and actively maintained integrations consistently identify a 50-request/day free quota, with a different paid-tier structure.",
+          "suggestion": "Set the free limit to 50 requests/day and refresh paid tier names and prices directly from the authenticated OpenUV console before publishing a starting price.",
+          "confidence": "medium"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The free daily quota is listed as 30 requests/day, which conflicts with the current 50-request/day quota.",
+          "suggestion": "Use 50 requests/day for the free plan, subject to confirmation in the account console.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "openweathermap",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The approximately 1,000-calls/day figure conflates the separately subscribed One Call API allowance with the standard free Current Weather and Forecast APIs used by the example.",
+          "suggestion": "For Current Weather and the standard free collection, state 60 calls/minute and 1,000,000 calls/month. Mention 1,000 free calls/day only when describing One Call 3.0/4.0.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "osv-dev",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The literal placeholder \"...\" is not a valid limit claim.",
+          "suggestion": "State that OSV.dev is a free public service with no current API request limit; HTTP/1.1 responses are capped at 32 MiB, while HTTP/2 responses have no documented size cap.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The literal placeholder \"...\" omits the API's documented policy.",
+          "suggestion": "Use \"Currently no API rate limit is documented.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "GHSA-35jh-r3h4-6jhm is currently titled \"Command Injection in lodash,\" not \"Prototype Pollution in lodash.\"",
+          "suggestion": "Change that advisory's summary to \"Command Injection in lodash,\" and avoid implying it is necessarily the only vulnerability returned for lodash 4.17.20.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The literal placeholder \"...\" leaves the directory entry without an actual description.",
+          "suggestion": "Describe OSV.dev as a public vulnerability database and API for querying vulnerabilities by package version, commit, or OSV identifier across open-source ecosystems.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "overpass",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The entry conflates the fair-use query guideline with execution slots. There are not approximately 10,000 slots; the main instance's guidance is fewer than 10,000 queries and under 1 GB downloaded per day, while per-client slots are dynamic and usually only a small number.",
+          "suggestion": "State the main instance's fair-use guideline of under 10,000 queries/day and under 1 GB/day, with dynamic slot-based throttling visible through /api/status and possible HTTP 429 responses.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

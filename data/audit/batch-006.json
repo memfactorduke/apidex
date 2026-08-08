@@ -1,0 +1,172 @@
+{
+  "audits": [
+    {
+      "id": "carmd",
+      "issues": [
+        {
+          "field": "name",
+          "problem": "The active developer product is branded CarScan API; this entry appears to use the legacy CarMD identity.",
+          "suggestion": "Rename to \"CarScan API (formerly CarMD)\" and re-verify any legacy CarMD references.",
+          "confidence": "medium"
+        },
+        {
+          "field": "base_url",
+          "problem": "Current documentation uses the CarScan host, not api.carmd.com.",
+          "suggestion": "Use \"https://dev-api.carscan.com/v3.0\" after confirming the production hostname in a registered account.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The listed URL is a legacy API host rather than the current documentation page.",
+          "suggestion": "Use \"https://dev-api.carscan.com/member/docs\" or the current CarScan developer documentation URL.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "The API requires two credentials in headers: an Authorization Key and a Partner Token. The entry describes only one API key.",
+          "suggestion": "Document both \"Authorization\" and \"Partner-Token\" headers using the exact formatting shown in the current account portal.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "Current CarScan material advertises free limited API use, so free_tier=false is not accurate.",
+          "suggestion": "Set free_tier to true and verify the current endpoint-specific allowance from a registered account.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example",
+          "problem": "The request uses the stale host, omits the Partner-Token credential, and calls /diag with code=P0420. The documented diagnostics interface requires vin, mileage, and dtc parameters.",
+          "suggestion": "Use the current CarScan host, both authentication headers, and a request such as /diag?vin=...&mileage=51000&dtc=P0420.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cat-facts",
+      "issues": []
+    },
+    {
+      "id": "cdc-wonder",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "CDC WONDER uses XML exchanged through an HTTP form POST, not SOAP.",
+          "suggestion": "Change the wording to \"unauthenticated HTTP POST requests carrying an XML document in the request_xml form field.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The literal ellipsis inside <request-parameters> does not provide a valid, executable WONDER query.",
+          "suggestion": "Replace it with a complete dataset-specific request XML containing real parameter elements.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "Calling the interface a SOAP/XML API incorrectly identifies the protocol as SOAP.",
+          "suggestion": "Describe it as an XML-over-HTTP web-service API.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "census-bureau",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The optional-key and 500 unauthenticated queries/day policy is obsolete. Since May 2026, an API key is required for all Census Data API queries.",
+          "suggestion": "State that a free API key is required on every data query through the key query parameter.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The value is an unresolved placeholder rather than the current policy.",
+          "suggestion": "Use \"Free API key required for every query; up to 50 variables per query; no paid API plan.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The value is an unresolved placeholder, and the former 500 unauthenticated queries/day rule no longer describes current access.",
+          "suggestion": "State the published 50-variable-per-query limit and avoid asserting a fixed request/day quota unless Census publishes a new one.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "censys",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The current Platform API root is versioned under /v3; the listed value is only the origin.",
+          "suggestion": "Use \"https://api.platform.censys.io/v3\" or the more specific documented roots such as \"https://api.platform.censys.io/v3/global/\".",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "The entry conflates the legacy Search API's API-ID/secret Basic Auth with the current Platform API. The current Platform API uses a Personal Access Token as a Bearer token.",
+          "suggestion": "Describe authentication as a PAT sent in \"Authorization: Bearer YOUR_PAT\"; do not mention API ID/secret Basic Auth for this base URL.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "chargebee",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Chargebee publishes plan-specific API limits, so \"not published\" is false.",
+          "suggestion": "Use the current defaults: test sites 150 requests/minute; live Starter 150/minute, Performance 1,000/minute, Enterprise default 3,500/minute, with concurrent-request controls and possible custom limits.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cheapshark",
+      "issues": [
+        {
+          "field": "example.request",
+          "problem": "CheapShark documentation requires a descriptive User-Agent, but the example omits it.",
+          "suggestion": "Add a header such as \"-H 'User-Agent: MyApp/1.0 (contact@example.com)'\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "chembl",
+      "issues": []
+    },
+    {
+      "id": "chess-com",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The official policy is more specific than \"not published\": serial access is unlimited, while parallel requests may receive HTTP 429 and suspicious activity may be blocked.",
+          "suggestion": "Use \"Serial requests are unlimited; parallel requests may be rate-limited with 429, and abnormal activity may be blocked.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The snippet does not match the profile returned for hikaru and includes incorrect stable or semi-stable values, including the joined timestamp and verified status.",
+          "suggestion": "Refresh the response from the live endpoint or use a clearly schematic structural excerpt instead of fabricated account values.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "chicago-open-data",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The claimed approximate 1,000 requests/hour figure is not the current Socrata policy. Current documentation gives no fixed unauthenticated quota and says token-bearing requests are ordinarily not throttled unless abusive or malicious.",
+          "suggestion": "Remove the numeric estimate and state that unauthenticated requests use a lower shared IP-based pool, while app-token requests currently have no fixed throttle except abuse controls.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "Because the URL is double-quoted, a shell expands $limit as a variable, usually changing the query to ?=5 instead of sending the SoQL $limit parameter.",
+          "suggestion": "Single-quote the URL or escape the dollar sign, for example: curl -H \"X-App-Token: YOUR_API_KEY\" 'https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=5'.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

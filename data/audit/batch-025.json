@@ -1,0 +1,142 @@
+{
+  "audits": [
+    {
+      "id": "mistral-ai",
+      "issues": []
+    },
+    {
+      "id": "mlb-stats",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The active API root is versioned; /api alone is only a prefix and is not the documented v1 root.",
+          "suggestion": "Use https://statsapi.mlb.com/api/v1.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response does not match the requested date. October 1, 2024 had four MLB Wild Card games, not 15, and gamePk 775294 was World Series Game 2 on October 26.",
+          "suggestion": "Replace the snippet with a response captured from the stated schedule request, showing the four October 1 postseason games and their actual gamePk values.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mojang",
+      "issues": [
+        {
+          "field": "description",
+          "problem": "The entry presents profiles, textures, and session validation as one API rooted at api.mojang.com, but session/profile-texture operations also use separate services such as sessionserver.mojang.com and newer endpoints use api.minecraftservices.com.",
+          "suggestion": "Narrow the description to the UUID/name endpoints hosted at api.mojang.com, or explicitly list the additional Minecraft Services and Session Server roots.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mollie",
+      "issues": []
+    },
+    {
+      "id": "moralis",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free-plan allowance is misstated as 40,000 CU per month. Moralis currently advertises 40,000 Compute Units per day, with 40 RPS throughput.",
+          "suggestion": "Set this to \"Free plan: 40,000 Compute Units per day and 40 RPS; attribution required.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mozilla-observatory",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "A public scan limit is documented: only one new scan per host per minute; requests during the cooldown return a cached result.",
+          "suggestion": "Set this to \"One new scan per host per minute; cached results may be returned during the cooldown.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The description says the current Observatory analyzes TLS configuration. The former multi-tool Mozilla Observatory was sunset in 2024, and the current MDN HTTP Observatory does not provide specific TLS or certificate analysis.",
+          "suggestion": "Describe it as an HTTP security-header and related web-hardening scanner; remove the TLS-configuration claim.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mta-bustime",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "Current MTA SIRI documentation points to the API at bustime-classic.mta.info, not bustime.mta.info. GTFS-Realtime feeds use yet another host.",
+          "suggestion": "Use https://bustime-classic.mta.info/api for SIRI and document the separate https://gtfsrt.prod.obanyc.com roots if GTFS-Realtime is included.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example uses the wrong SIRI host and prefixes MonitoringRef with MTA_, while current documentation specifies the GTFS stop_id itself and demonstrates unprefixed numeric IDs.",
+          "suggestion": "Use a documented form such as curl \"https://bustime-classic.mta.info/api/siri/stop-monitoring.json?key=YOUR_API_KEY&MonitoringRef=401000&LineRef=MTA%20NYCT_M15\".",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current developer page says the API is free for anyone; the asserted non-commercial-only restriction and separate commercial approval requirement are not supported there.",
+          "suggestion": "State that access is free with registration, and only add a commercial-use restriction if the current linked MTA license terms explicitly impose one.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "musicbrainz",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The sample artist data is stale. MusicBrainz currently records Nirvana's life span as beginning in 1987 and ending on 1994-04-05, not 1988 through an undated 1994.",
+          "suggestion": "Use \"life-span\":{\"begin\":\"1987\",\"end\":\"1994-04-05\",\"ended\":true}.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "nansen",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Nansen's current v1 API requires the API key in the lowercase apikey header; Bearer authentication is not the documented alternative.",
+          "suggestion": "Set the details to \"API key via the apikey: YOUR_API_KEY header.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value is incorrect. Nansen offers a paid Pro API plan plus purchasable usage credits.",
+          "suggestion": "Describe the current Pro subscription and flexi-credit pricing, using Nansen's current pricing page for exact amounts.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The cited Free limit of 5 RPM / 500 RPD is outdated. Current documentation states 20 requests per second and 300 requests per minute.",
+          "suggestion": "Set this to \"20 requests per second and 300 requests per minute per API key,\" subject to future plan changes.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "POST /api/v1/profiler/address-portfolio is not a current documented endpoint, and the body does not match the current profiler schema.",
+          "suggestion": "Use POST https://api.nansen.ai/api/v1/profiler/address/current-balance with header apikey and a body such as {\"address\":\"0x28c6c06298d514db089934071355e5743bf21d60\",\"chain\":\"ethereum\"}.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "nasa-ads",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "ADS publishes a standard limit of 5,000 regular requests per day for most request types, with endpoint-specific limits also exposed in response headers.",
+          "suggestion": "Set this to \"Typically 5,000 regular requests per day; inspect X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset headers for the endpoint/token.\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

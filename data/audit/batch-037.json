@@ -1,0 +1,240 @@
+{
+  "audits": [
+    {
+      "id": "sourcegraph",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is a real, still-working GraphQL endpoint, but Sourcegraph now classifies that GraphQL surface as a legacy/internal interface without compatibility guarantees rather than the current supported external API root.",
+          "suggestion": "Either rename the entry to \"Sourcegraph GraphQL API\" and clearly label it legacy/unsupported for stable integrations, or use the versioned external API operations exposed by each instance's /api-reference OpenAPI documentation.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "The claim is overbroad. Current Sourcegraph pricing places full API and CLI access in its Enterprise offering; free public-code search is a narrower service and should not be presented as a general free API tier.",
+          "suggestion": "Scope the free claim specifically to public-code search on Sourcegraph.com, or set free_tier to false for the full Sourcegraph platform API and document trial/enterprise terms separately.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "spaceflight-news",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "The supplied URL currently opens a placeholder README page saying that folder is not being used, rather than the API reference.",
+          "suggestion": "Use https://api.spaceflightnewsapi.net/v4/docs/ as the direct API documentation URL, while noting that its schema loader should be monitored because it has recently returned a schema-not-found error.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The example is internally impossible: count is 0 while results contains one object. It is also an OpenAPI placeholder rather than a representative live response.",
+          "suggestion": "Use a real response with count greater than zero when results is nonempty, or use {\"count\":0,\"next\":null,\"previous\":null,\"results\":[]} for an empty response.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "spacex-api",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The literal placeholder \"string or null\" is not an API root.",
+          "suggestion": "Use https://api.spacexdata.com/v4 as the general API root; launch-specific v5 endpoints also exist under https://api.spacexdata.com/v5.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The literal placeholder \"string or null\" is not a documentation URL.",
+          "suggestion": "Use https://github.com/r-spacex/SpaceX-API/tree/master/docs and disclose that the community project repository was archived in June 2026.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The literal placeholder \"string or null\" is unfinished directory data.",
+          "suggestion": "Replace it with a factual statement such as \"No fee or authentication required; no SLA or guaranteed quota published.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The literal placeholder \"string or null\" is unfinished directory data.",
+          "suggestion": "Use null or \"not published\" unless a current documented limit can be verified.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The literal placeholder \"string or null\" is not a usable example.",
+          "suggestion": "Use a real request such as curl \"https://api.spacexdata.com/v5/launches/latest\".",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The literal placeholder \"string or null\" is not a response example.",
+          "suggestion": "Insert a valid abbreviated JSON object from the selected endpoint, including fields such as id, name, date_utc, and flight_number.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The literal placeholder omits the important product identity and maintenance status.",
+          "suggestion": "Describe it as the unofficial, community-maintained r/SpaceX REST API, unaffiliated with SpaceX, whose source repository is now archived even though the hosted API currently remains operational.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "spoonacular",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current direct free plan provides 50 points per day, not 150 points per day.",
+          "suggestion": "Set this to \"50 points/day; endpoint-weighted; calls stop when exhausted; backlink required; no SLA.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid plans are publicly listed, so null is incorrect/incomplete.",
+          "suggestion": "Record Cook at $29/month with 1,500 points/day, Culinarian at $79/month with 4,500 points/day, Chef at $149/month with 10,000 points/day, and custom Enterprise pricing starting at $300.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The entry conflates daily point quotas with request-rate limits and includes obsolete point ranges. Spoonacular separately publishes request-rate limits.",
+          "suggestion": "Use \"Free: 60 requests/minute and 50 points/day; Cook: 5 requests/second and 1,500 points/day; Culinarian: 10 requests/second and 4,500 points/day; Chef: 20 requests/second and 10,000 points/day.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "sportmonks",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free-tier limits are published rather than unknown.",
+          "suggestion": "State that the no-expiry free football plan covers the Danish Superliga and Scottish Premiership and provides approximately 2,000 API calls per entity per hour.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid plans are publicly listed, so null is incorrect/incomplete.",
+          "suggestion": "Record Starter from \u20ac29/month for 5 leagues, Growth from \u20ac99/month for 30 leagues, Pro from \u20ac249/month for 120 leagues, and custom Enterprise access, with a 14-day trial on paid plans.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Sportmonks publishes plan-specific limits, so \"not published\" is false.",
+          "suggestion": "Use \"Starter: 2,000; Growth: 2,500; Pro: 3,000; Enterprise: 5,000 API calls per entity per hour; add-ons can increase limits.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "sportradar",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "api.sportradar.us is the legacy host; current official documentation and examples use api.sportradar.com.",
+          "suggestion": "Use https://api.sportradar.com.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "The current authentication header is x-api-key, not Authorization. Query-string API keys are being deprecated and are scheduled to stop working on November 13, 2026.",
+          "suggestion": "Use \"API key in the x-api-key request header; obtain trial or licensed product access through the Sportradar developer account.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example uses the legacy .us host and puts the credential in the query string instead of the current x-api-key header interface.",
+          "suggestion": "Use curl -s \"https://api.sportradar.com/nba/trial/v8/en/games/2024/REG/schedule.json\" -H \"accept: application/json\" -H \"x-api-key: YOUR_API_KEY\".",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response conflates Sportradar's Global Basketball identifiers with the league-specific NBA v8 schema. NBA v8 uses GUIDs for league and season IDs, not sr:league and sr:season identifiers.",
+          "suggestion": "Use an NBA v8 sample with league.id \"4353138d-4c22-4396-95d8-5f587d2df25c\" and a GUID season ID; reserve sr: identifiers for fields such as game.sr_id or for Global Basketball feeds.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "sportsdataio",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free access restrictions are known and material: the standard API Free Trial primarily returns scrambled but structurally accurate data with a small daily call allowance. The separate Discovery Lab free tier provides last-season data.",
+          "suggestion": "Describe the Free Trial as scrambled integration-test data with a small daily limit and no SLA, and distinguish it from Discovery Lab's free last-season dataset.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The NFL ScoresByWeek endpoint expects the SportsDataIO season key format, such as 2024REG, rather than bare 2024.",
+          "suggestion": "Use curl \"https://api.sportsdata.io/v3/nfl/scores/json/ScoresByWeek/2024REG/1?key=YOUR_API_KEY\" or send the key in the Ocp-Apim-Subscription-Key header.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "ScoresByWeek returns an array of score objects, but the snippet is shown as a single top-level object.",
+          "suggestion": "Wrap the abbreviated score object in an array, for example [{\"GameKey\":\"...\",\"Season\":2024,\"Week\":1}].",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "spotify",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The entry omits major current Development Mode restrictions. The app owner must have Spotify Premium, only five allowlisted authenticated users may use the app, and extended-quota applications are generally limited to organizations.",
+          "suggestion": "State that there is no separate per-call API fee, but Development Mode requires an active Premium subscription for the owner, is limited to five allowlisted users, and is subject to per-developer quota buckets and rolling rate limits.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "YOUR_API_KEY is misleading because Spotify does not accept a static API key in this header; it requires an OAuth access token.",
+          "suggestion": "Use Authorization: Bearer YOUR_ACCESS_TOKEN.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "square",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The Square-Version header is not strictly required. Each application has a pinned default API version, and the header optionally overrides it.",
+          "suggestion": "Change the wording to \"Square-Version is recommended for explicit version pinning but may be omitted to use the application's configured default version.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The cited approximately 2.6% + 10\u00a2 online processing fee is outdated/incorrect for the current standard US online API rate.",
+          "suggestion": "Use \"API and SDK access is free; standard US online payment processing is currently 2.9% + 30\u00a2 per transaction, with other payment methods, countries, and custom-volume agreements priced differently.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ssllabs",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The current v3 protocol documentation does not state that a custom application-identifying User-Agent is mandatory. Supplying one is harmless, but presenting it as an authentication or hard protocol requirement is unsupported.",
+          "suggestion": "Keep auth type none and say no API key is required; optionally recommend an identifying User-Agent without calling it mandatory.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The entry omits the API's important usage-license restriction: it is intended principally for operators testing their own infrastructure, and commercial use generally requires explicit Qualys permission.",
+          "suggestion": "Add the non-commercial/authorized-scanning restriction and direct commercial integrators to obtain permission from Qualys.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The fixed claims of 25 concurrent assessments, one new assessment per second, and roughly 400 per hour are not in the current v3 documentation. Limits are dynamically communicated by the API.",
+          "suggestion": "State that clients must query /info and honor maxAssessments, currentAssessments, and newAssessmentCoolOff, plus X-Max-Assessments and X-Current-Assessments response headers; excess initiation receives HTTP 429.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

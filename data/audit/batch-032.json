@@ -1,0 +1,123 @@
+{
+  "audits": [
+    {
+      "id": "phishtank",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The claim that developers can obtain a key through free self-service signup is not currently true; PhishTank's registration page says new-user registration is temporarily disabled.",
+          "suggestion": "State that keys are optional and existing keys receive higher limits, but new registrations are currently unavailable.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "PhishTank requires a descriptive User-Agent, while this curl command supplies only curl's generic default and may be rate-limited or redirected to security checks.",
+          "suggestion": "Add a header such as -H \"User-Agent: phishtank/your-app\" and preferably encode the URL with --data-urlencode.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pinterest",
+      "issues": []
+    },
+    {
+      "id": "pirate-weather",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The free plan is currently 10,000 calls per month, not 20,000. A $2 monthly donation raises the allowance to 20,000.",
+          "suggestion": "Set free_tier_limits to \"10,000 API calls/month\" and mention the $2/month supporter allowance of 20,000 calls.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "It incorrectly labels 20,000 monthly calls as the free quota.",
+          "suggestion": "Use \"10,000 calls/month free; 20,000 calls/month with the $2 monthly supporter option; quota values are exposed in Ratelimit-* response headers.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "plaid",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "Plaid's free access and paid plans are published, so an unknown free limit and null paid plans are inaccurate. Sandbox is free, and current Trial plans for eligible new US/Canada teams allow up to 10 Production Items; Plaid also offers Pay-as-you-go, Growth, and Custom plans.",
+          "suggestion": "Document free Sandbox access, the applicable Trial or legacy Limited Production restrictions, and the Pay-as-you-go, Growth, and Custom paid plans.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Plaid publishes endpoint-specific default rate limits; \"not published\" is false. For example, production /accounts/get is documented at 15 requests/minute per Item and 15,000 requests/minute per client.",
+          "suggestion": "Replace with a reference to Plaid's endpoint-specific production and Sandbox rate-limit table rather than claiming limits are unpublished.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The request sends an access-sandbox-* token to production.plaid.com. Sandbox access tokens are not valid against the Production environment.",
+          "suggestion": "Either change the host to https://sandbox.plaid.com or use a genuine Production access token with https://production.plaid.com.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "podcast-index",
+      "issues": [
+        {
+          "field": "example.request",
+          "problem": "YOUR_AUTH_HASH cannot be a static placeholder alongside a dynamically generated X-Auth-Date. Authorization must be the SHA-1 hex digest of API key + API secret + the exact same timestamp used in X-Auth-Date. The required identifying User-Agent is also absent.",
+          "suggestion": "Capture the timestamp once, compute SHA-1(apiKey + apiSecret + timestamp), then send that timestamp and digest together with X-Auth-Key and a descriptive User-Agent header.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pokeapi",
+      "issues": []
+    },
+    {
+      "id": "pokemontcg",
+      "issues": []
+    },
+    {
+      "id": "polygon-io",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current free Stocks Basic plan provides end-of-day data and two years of history, not generally described delayed data. Access characteristics also vary by asset class.",
+          "suggestion": "For stocks, use \"5 API calls/minute, end-of-day data, and 2 years of historical data\" and avoid generalizing those entitlements to every asset class.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "positionstack",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The free allowance and paid plans are publicly specified, so \"unknown\" and null are inaccurate. The free personal-use plan currently includes 100 requests per month, and paid plans start with Basic at $9.99/month for 100,000 requests.",
+          "suggestion": "Set free_tier_limits to \"100 requests/month; personal use\" and list the Basic, Professional, Business, and custom paid options.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "postmark",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The free-plan statement is correct, but paid_plans is incorrectly null. Postmark has paid subscriptions beginning with Basic at $15/month for 10,000 emails, plus higher-volume plans and overages.",
+          "suggestion": "Keep the 100-email free tier and populate paid_plans with the current paid subscription structure.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Postmark does not document a universal 10-messages/second limit per server for its email API. The 10-connection recommendation applies to SMTP connections, while a 10-requests/second limit applies to the separate Status API. The email API instead returns HTTP 429 when acceptable usage is exceeded.",
+          "suggestion": "Use \"No fixed numeric email-API rate is publicly documented; excessive request rates return HTTP 429. Batch sending supports up to 500 messages per request.\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

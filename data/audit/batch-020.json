@@ -1,0 +1,158 @@
+{
+  "audits": [
+    {
+      "id": "ipinfo",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is the maintained legacy/Custom API host, not the root for IPinfo's current Lite, Core, Plus, and Max APIs.",
+          "suggestion": "Use https://api.ipinfo.io. For the current free API, use endpoints under /lite.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "50,000 requests/month describes the legacy free API. The current recommended IPinfo Lite plan allows unlimited authenticated API requests, with country-level geolocation and basic ASN data.",
+          "suggestion": "Set to \"IPinfo Lite: unlimited authenticated requests; country-level geolocation and basic ASN data. Legacy Free API: 50,000 requests/month.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The listed self-serve tiers are outdated; the current lineup uses Max rather than Business.",
+          "suggestion": "Use \"Core, Plus, Max, and Enterprise; see https://ipinfo.io/pricing\".",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The entry presents the legacy 50,000-request quota as the general free limit, omitting the unlimited current Lite plan.",
+          "suggestion": "Use \"IPinfo Lite: unlimited authenticated requests; legacy free API: 50,000 requests/month; paid quotas vary by plan.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The curl and response use IPinfo's legacy endpoint and schema, while the entry is presented as the current general IPinfo API.",
+          "suggestion": "Either label the example explicitly as legacy or use curl \"https://api.ipinfo.io/lite/8.8.8.8?token=YOUR_API_KEY\" and provide a Lite-schema response.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ipqualityscore",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The standard current free allowance is publicly stated as 1,000 lookups per month, rather than an unspecified limit that varies.",
+          "suggestion": "Set to \"1,000 free lookups/month\" and note that feature availability can depend on the lookup product.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The Proxy Detection API returns the ISP field as uppercase \"ISP\"; the snippet uses lowercase \"isp\", which is inconsistent with the documented interface.",
+          "suggestion": "Change \"isp\":\"GOOGLE\" to \"ISP\":\"GOOGLE\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "iqair-airvisual",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current Community plan permits 10,000 calls/month, not 5,000.",
+          "suggestion": "Set to \"Community Plan: 5 calls/minute, 500/day, and 10,000/month.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated 5,000-call quota is wrong, and the claim that paid per-minute limits are not publicly detailed is false.",
+          "suggestion": "Use \"Community: 5/minute, 500/day, 10,000/month; Startup: 100/minute, 100,000/day, 1,000,000/month; Enterprise: 1,000/minute, 1,000,000/day, 10,000,000/month.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "jenkins",
+      "issues": []
+    },
+    {
+      "id": "jikan",
+      "issues": []
+    },
+    {
+      "id": "jina-ai",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "The authoritative interactive documentation for the shown Search Foundation endpoint is hosted at api.jina.ai/docs.",
+          "suggestion": "Use https://api.jina.ai/docs for this API entry.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free allowance is published rather than unknown. New users currently receive 10 million free tokens.",
+          "suggestion": "Set to \"New users receive 10 million free tokens; usage and product-specific rate limits apply.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Jina publishes rate limits, so \"not published\" is incorrect. Limits also differ by product and tier.",
+          "suggestion": "Record product-specific limits. The current Search Foundation OpenAPI lists the Free tier at 500 RPM, 1 million TPM, and 5 concurrent requests; Reader and Search endpoints have separate limits.",
+          "confidence": "medium"
+        },
+        {
+          "field": "description",
+          "problem": "The entry implies Reader and web Search are served from api.jina.ai, but those products use separate roots: r.jina.ai and s.jina.ai. DeepSearch also has its own host.",
+          "suggestion": "Limit this entry to the Search Foundation APIs on api.jina.ai, or explicitly list r.jina.ai, s.jina.ai, and deepsearch.jina.ai as separate product endpoints.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "jokeapi",
+      "issues": []
+    },
+    {
+      "id": "jolpica-f1",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published in the project's documentation.",
+          "suggestion": "Set to \"4 requests/second burst limit and 500 requests/hour sustained limit.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "Jolpica requires clients to send a custom identifying User-Agent, but the curl example relies only on curl's generic default User-Agent.",
+          "suggestion": "Use curl -s -H \"User-Agent: YourAppName/1.0\" \"https://api.jolpi.ca/ergast/f1/current/driverStandings.json\".",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The current endpoint now returns the 2026 season, while the fixed response snippet says 2025.",
+          "suggestion": "Refresh the snippet to the current response or avoid hard-coding the season for a /current endpoint.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "kaggle",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The entry conflates Kaggle's current API token with its legacy username/key credentials. Current tokens use OAuth/Bearer-style authentication; username plus key in kaggle.json is explicitly the legacy option.",
+          "suggestion": "Describe current authentication as OAuth or an API token sent as a Bearer token. Mention username/key Basic Auth and kaggle.json only as legacy authentication generated through \"Create Legacy API Key.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The Basic Auth example works only with legacy username/key credentials, but it labels the password as the general current API key and the auth instructions direct users toward the newer token flow.",
+          "suggestion": "Prefer curl -H \"Authorization: Bearer YOUR_API_TOKEN\" \"https://www.kaggle.com/api/v1/datasets/list?search=titanic\", or explicitly label the existing curl as requiring a legacy API key.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "kanye-rest",
+      "issues": []
+    }
+  ]
+}

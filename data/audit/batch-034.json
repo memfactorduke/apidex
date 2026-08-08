@@ -1,0 +1,149 @@
+{
+  "audits": [
+    {
+      "id": "recurly",
+      "issues": [
+        {
+          "field": "example.request",
+          "problem": "The v2021-02-25 API requires a versioned Accept header; this curl can fail with HTTP 406 without it.",
+          "suggestion": "Use curl -u YOUR_API_KEY: -H \"Accept: application/vnd.recurly.v2021-02-25+json\" https://v3.recurly.com/sites",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Recurly publishes API rate limits, so \"not published\" is incorrect.",
+          "suggestion": "State 400 requests/minute for sandbox sites and 1,000 requests/minute for production sites, measured over a rolling five-minute window; all sandbox requests count, while only production GET requests count.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "reddit",
+      "issues": [
+        {
+          "field": "example.request",
+          "problem": "The User-Agent value does not follow Reddit's current required format, which includes platform, unique application ID, version, and a Reddit username for contact.",
+          "suggestion": "Use a header such as \"User-Agent: linux:com.example.yourapp:v1.0 (by /u/YOUR_USERNAME)\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "regulations-gov",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The entry omits the published Regulations.gov commenting limits and makes the limits sound wholly unspecified.",
+          "suggestion": "State the api.data.gov default of 1,000 requests/hour for ordinary keys and the Comment API limits of 50 requests/minute and 500 requests/hour; approved GET-key increases may differ.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "replicate",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current documentation describes limited free use of select models, not a defined signup-credit allowance. The signup-credit claim is unsupported and potentially stale.",
+          "suggestion": "Use \"Select models can be run free for limited usage; Replicate eventually requires billing setup, and no fixed free-credit amount is promised.\"",
+          "confidence": "medium"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Replicate publishes default API rate limits, so \"not published\" is incorrect.",
+          "suggestion": "State 600 prediction-creation requests/minute and 3,000 requests/minute for other endpoints. Accounts with low or granted credit and no payment method can receive stricter limits.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "resend",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The current default is 5 requests/second per team, not approximately 2 requests/second.",
+          "suggestion": "Use \"All accounts start at 5 requests/second per team; higher limits can be requested. Daily and monthly email quotas apply separately.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "riot-games",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The entry conflates Riot's development and personal keys. Automatically issued development keys deactivate every 24 hours; personal keys require product registration and are a separate key type. Personal keys also are not offered for VALORANT.",
+          "suggestion": "Distinguish development keys (automatic, reset every 24 hours), personal keys (registered private-use products), and production keys (approved public products); note VALORANT's separate approval restrictions.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "It incorrectly describes expiring \"personal development keys.\" Personal keys and 24-hour development keys are distinct products.",
+          "suggestion": "State that development keys are free and deactivate every 24 hours; personal keys require product registration for private use; production keys require approval for public applications.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The personal-key limits are currently published and are not merely historical or generally app-specific.",
+          "suggestion": "State 20 requests/second and 100 requests/2 minutes for personal keys, per region. The documented starting production limits are 500 requests/10 seconds and 30,000 requests/10 minutes, also per region, with method and service limits potentially applying.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ron-swanson-quotes",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "The endpoint remains reachable, but the owner archived the repository in January 2026 and explicitly ended active maintenance. Labeling it only \"operational\" hides its deprecated lifecycle status.",
+          "suggestion": "Mark it \"deprecated\" or \"unmaintained but currently operational,\" and avoid recommending it for production dependencies.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "rubygems",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The official RubyGems.org API documents API-key authentication through the Authorization header, not OAuth or endpoint-dependent API-key query parameters.",
+          "suggestion": "Use \"API key in the Authorization header for authenticated/write endpoints; public read endpoints require no authentication. Some MFA-protected operations also require an OTP header.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "RubyGems.org publishes rate limits, so \"not published\" is incorrect.",
+          "suggestion": "State the general limits of 10 requests/second for the API and website and 15 requests/second for the Dependency API, with additional endpoint-specific throttles for sensitive and write operations.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "rxnorm",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Most endpoints require no authentication, but the proprietary-information endpoint is an explicit exception and can require a valid UMLS UTS API key for restricted sources.",
+          "suggestion": "Keep auth type \"none\" for ordinary public endpoints but document the proprietary endpoint's optional UMLS Bearer-token requirement.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The value is an unfinished placeholder rather than an actual limit.",
+          "suggestion": "Use \"Free of charge; online usage is limited to 20 requests/second per IP address. No paid plan is offered.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The value is an unfinished placeholder despite an officially published limit.",
+          "suggestion": "Use \"Maximum 20 requests/second per IP address; excessive requests may receive HTTP 429. NLM recommends caching results for 12\u201324 hours.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "sample-apis-coffee",
+      "issues": []
+    }
+  ]
+}

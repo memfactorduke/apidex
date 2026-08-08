@@ -1,0 +1,122 @@
+{
+  "audits": [
+    {
+      "id": "nasa-open-data",
+      "issues": [
+        {
+          "field": "description",
+          "problem": "The entry implies that Earthdata GIBS and the NASA Image and Video Library use the api.nasa.gov API-key gateway. They are separate NASA APIs with different base URLs and do not use this gateway's api_key interface.",
+          "suggestion": "Limit this entry to APIs actually served through api.nasa.gov, or clearly identify GIBS and the Image and Video Library as separate services with their own base URLs and authentication rules.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "nasdaq-data-link",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Current Nasdaq Data Link documentation specifies the api_key query parameter; it does not document a generic Authorization header for these v3 dataset requests.",
+          "suggestion": "Use \"API key via the api_key query parameter\" unless a specific officially documented header scheme is identified.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The claim that exact free limits are unavailable is false. Nasdaq publishes limits for authenticated users without premium subscriptions.",
+          "suggestion": "State 300 calls per 10 seconds, 2,000 calls per 10 minutes, 50,000 calls per day, and concurrency of one for authenticated non-premium users.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Nasdaq publishes precise limits, contrary to this field.",
+          "suggestion": "Use the published non-premium limits of 300 calls/10 seconds, 2,000 calls/10 minutes, and 50,000 calls/day with concurrency one; premium subscribers receive 5,000 calls/10 minutes and 720,000 calls/day.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "WIKI/AAPL is from the discontinued WIKI end-of-day equities database and returns HTTP 410 Gone, so the example is not operational.",
+          "suggestion": "Replace it with a currently available free dataset and regenerate the response snippet from that live dataset.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "navitia",
+      "issues": []
+    },
+    {
+      "id": "nba-stats",
+      "issues": []
+    },
+    {
+      "id": "ncbi-eutils",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The stated limits of 10 concurrent requests and 100 UIDs per multi-UID request are not NCBI's current general E-utilities limits. NCBI limits request start rate to 3 requests/second without a key or 10 requests/second with one; concurrency is not capped this way. UID handling varies by utility, and current guidance generally recommends POST for lists over roughly 200 rather than a universal 100-UID cap.",
+          "suggestion": "Retain the 3 requests/second and 10 requests/second limits, remove the 10-concurrent and 100-UID assertions, and describe utility-specific batching or POST/history guidance separately.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "new-relic",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The limits conflate three different rules. NerdGraph guarantees 25 concurrent requests per user and currently states that request rate itself is not limited. REST API v2 is limited to 1,000 calls per minute, while 3,000 per minute is the separate NRQL API-query limit per account.",
+          "suggestion": "Use \"NerdGraph: 25 concurrent requests per user, no general requests-per-minute limit; REST API v2: 1,000 calls/minute; NRQL API queries: 3,000/account/minute.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "newsapi",
+      "issues": []
+    },
+    {
+      "id": "newscatcher",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The documented NewsCatcher News API v3 base URL includes the /api path.",
+          "suggestion": "Use https://v3-api.newscatcherapi.com/api.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The current official documentation is hosted under www.newscatcherapi.com/docs; the listed standalone docs.newscatcherapi.com address is stale or unavailable.",
+          "suggestion": "Use https://www.newscatcherapi.com/docs/news-api/api-reference/overview or the current documentation home at https://www.newscatcherapi.com/docs.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing",
+          "problem": "free_tier=true conflicts with the entry's own statement that there is no permanent free tier. Current News API documentation describes sales-assisted access and trial keys, but does not substantiate the claimed 14-day, 50-requests/day trial limits. The public $0 self-service offering belongs to NewsCatcher's separate Web Search API product.",
+          "suggestion": "Set free_tier to false for the News API, describe trial availability as sales-assisted with limits determined by the assigned subscription, and do not import Web Search API pricing into this entry.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The claimed trial limit of 1 request/second and 50 requests/day is not supported by current News API documentation. Current limits are subscription-specific concurrency and monthly call quotas exposed through /api/subscription.",
+          "suggestion": "Use \"Plan-dependent concurrent-call and monthly-call quotas; inspect GET /api/subscription for the assigned limits.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "newsdata-io",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The free-plan consumption claim is wrong: one credit returns up to 10 articles, not one credit per article. The current paid plan is named Basic, not Starter.",
+          "suggestion": "Use \"Free: 200 credits/day, up to 10 articles per credit\" and list Basic, Professional, and Corporate as the paid plans.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "nhl-api",
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "audits": [
+    {
+      "id": "coursera",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The documented enterprise API is hosted at api.coursera.com, not api.coursera.org, and uses the /ent/api prefix.",
+          "suggestion": "Use https://api.coursera.com/ent/api.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The request uses the wrong host and omits the required /ent prefix. Its sample program object also includes slug, which is not part of the current documented BusinessProgram schema.",
+          "suggestion": "Use curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://api.coursera.com/ent/api/businesses.v1/YOUR_ORG_ID/programs\" and model program fields on the documented id, name, tagline, and url schema.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "covalent",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "GoldRush ended its permanent free tier in 2025. Current general access starts with a 14-day trial containing 25,000 credits, so describing a continuing Premium free tier is outdated.",
+          "suggestion": "Set free_tier to false and describe the 14-day, 25,000-credit free trial. Current self-serve paid tiers include Vibe Coding at $10/month and Professional at $250/month.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Current plan throughput is publicly documented, contrary to the entry.",
+          "suggestion": "State 4 RPS for the free trial and Vibe Coding plan, 50 RPS for Professional, and custom limits for Inner Circle.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "crates-io",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Authenticated Cargo registry operations send the API token directly as the Authorization header value, not as a Bearer token.",
+          "suggestion": "Say that write operations use Authorization: YOUR_CRATES_IO_TOKEN, normally handled by Cargo credential providers.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The crates.io data-access policy publishes a maximum API rate of one request per second.",
+          "suggestion": "Set this to 1 request/second and mention that bulk users should prefer database dumps or the registry index where appropriate.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "crates.io requires API clients to supply a descriptive User-Agent identifying the application and providing contact information; the bare curl example does not comply with that policy and may be rejected.",
+          "suggestion": "Use curl -sS -H \"User-Agent: MyTool/1.0 (contact: you@example.com)\" \"https://crates.io/api/v1/crates/serde\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "crawlbase",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Crawlbase currently publishes a Crawling API limit of 20 requests per second per token, so 'not published' is incorrect.",
+          "suggestion": "Set this to 20 requests/second per token, noting that plan concurrency and certain specialized endpoints may have separate limits.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "Without format=json, the endpoint returns the target response body directly and places metadata in headers. The shown JSON wrapper is therefore inconsistent with the request, and pc_status is an obsolete field name; current responses use cb_status.",
+          "suggestion": "Add &format=json to the request and show a response containing original_status, cb_status, url, and body.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cricapi",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free-tier limit is currently published rather than unknown.",
+          "suggestion": "Set it to 100 API hits per day on the Lifetime Free plan.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "crossref",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Crossref now publishes explicit REST API limits, so the claim that no authoritative limits are published is outdated.",
+          "suggestion": "State that single-record requests are limited to 5 RPS in the public pool and 10 RPS in the polite pool; list requests are limited to 1 RPS public and 3 RPS polite. Also observe the concurrency and rate-limit response headers.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "crt-sh",
+      "issues": []
+    },
+    {
+      "id": "cryptocompare",
+      "issues": [
+        {
+          "field": "name",
+          "problem": "CryptoCompare/CCData is now branded as CoinDesk Data. The entry presents the former brand as though it were still the current product name.",
+          "suggestion": "Rename it to CoinDesk Data (formerly CryptoCompare/CCData), while identifying min-api.cryptocompare.com as the legacy Min API interface.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The vague ongoing free-tier claim is outdated. CoinDesk Data announced retirement of its free API tier effective May 21, 2026; current Personal access is subscription-based and described using capped lifetime calls rather than a recurring free quota.",
+          "suggestion": "Remove the recurring free-tier claim and record the exact current Personal subscription and lifetime-call allowance shown during signup, with Start-Up and Enterprise pricing listed as contact-based.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "A free self-serve API key by itself no longer guarantees data access; accounts without an applicable API subscription stopped receiving data after May 21, 2026.",
+          "suggestion": "Retain API-key authentication but state that an active CoinDesk Data API subscription or entitled Personal plan is required.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "currencyapi",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The paid-plan names and prices are stale and internally contradictory. Current published monthly plans are Small $9.99, Medium $39.99, and Large $79.99, not Basic $10, Pro $30, and Business $99.99 or a starting price of $11.99.",
+          "suggestion": "Use the current Small, Medium, and Large plan names and their displayed billing-cycle prices, noting that annual billing can differ.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "A per-minute limit is publicly specified for the free plan.",
+          "suggestion": "State 300 requests/month and 10 requests/minute for Free; current paid plans advertise no per-minute rate limit while retaining monthly quotas.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "currents-api",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current free Developer plan provides 1,000 requests per day, not 600.",
+          "suggestion": "Set the free-tier limit to 1,000 requests/day.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated 600-request daily limit is outdated.",
+          "suggestion": "Set the free-plan quota to 1,000 requests/day; paid plans use their published monthly quotas.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

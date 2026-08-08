@@ -1,0 +1,183 @@
+{
+  "audits": [
+    {
+      "id": "foursquare-places",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The current places-api.foursquare.com interface requires a Bearer service key. Saying the Authorization header may contain a raw key conflates it with the legacy v3 interface.",
+          "suggestion": "Use: \"Service API key via Authorization: Bearer YOUR_API_KEY.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The stated approximately 10,000-call sandbox and $20/month Pro pricing are outdated. Since June 1, 2026, the published Pro schedule starts with 0\u2013500 calls free, followed by usage-based CPM pricing; Premium calls have separate pricing.",
+          "suggestion": "Replace with the current usage-based schedule, including 500 free Pro calls and the applicable Pro/Premium CPM tiers.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value incorrectly suggests no paid offering even though Foursquare publishes paid Pro, Premium, Ask, and enterprise pricing.",
+          "suggestion": "Populate this field with the current usage-based and enterprise offerings.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "frankfurter",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is the legacy v1 hostname. The current canonical public API uses api.frankfurter.dev, with the current interface under /v2.",
+          "suggestion": "Use \"https://api.frankfurter.dev/v2\", or explicitly label this entry as legacy v1 and use \"https://api.frankfurter.dev/v1\".",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The curl uses the superseded v1 interface while the documentation URL now redirects to the v2 documentation. V2 uses /v2/rates and quotes rather than the old latest endpoint and to parameter.",
+          "suggestion": "Use: curl -s \"https://api.frankfurter.dev/v2/rates?base=USD&quotes=EUR,GBP\"",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "Describing Frankfurter solely as backed by European Central Bank data is outdated for v2, which aggregates rates from many central-bank providers.",
+          "suggestion": "Describe the current API as aggregating daily currency data from multiple central banks; mention ECB-only behavior only if documenting legacy v1.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "fred",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current official documentation confirms rate limiting but does not publish a fixed 120-requests-per-minute entitlement. Calling 120 RPM a published limit is unsupported by the current first-party documentation.",
+          "suggestion": "State that the API is free with a key and is rate-limited, with no fixed numeric limit currently published; clients should handle HTTP 429 responses.",
+          "confidence": "medium"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The fixed 120 requests/minute value is not stated in the current official FRED API documentation and may be adjusted by the operator.",
+          "suggestion": "Use \"Rate limited; fixed numeric limit not currently published. Handle HTTP 429 and contact FRED if higher throughput is required.\"",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "free-dictionary-api",
+      "issues": []
+    },
+    {
+      "id": "freetogame",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The limit is not unknown: the official documentation says the API is free for personal and commercial use, requires attribution, and asks clients to avoid more than 10 requests per second.",
+          "suggestion": "Use: \"Free for personal and commercial use with linked attribution to FreeToGame; avoid exceeding 10 requests/second.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The official documentation publishes a 10-requests-per-second usage guideline, so \"not published\" is incorrect.",
+          "suggestion": "Use: \"Avoid more than 10 requests per second.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The request filters for platform=browser, but the shown result says platform=\"PC (Windows)\", making the response inconsistent with the request.",
+          "suggestion": "Use a browser-game result whose platform is \"Web Browser\" or \"Browser (Web)\", or remove the platform value from the illustrative snippet.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "fueleconomy",
+      "issues": []
+    },
+    {
+      "id": "gbif",
+      "issues": []
+    },
+    {
+      "id": "gdelt",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The approximately one-request-per-five-seconds limit is a community convention, not an official GDELT free-tier quota, and should not be presented as part of the service's pricing limits.",
+          "suggestion": "State that the public API is free and that no official numeric quota is published.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The entry elevates a community-client delay to an apparent API limit. GDELT does not officially document a universal one-request-per-five-seconds rule.",
+          "suggestion": "Use: \"No official numeric rate limit published; throttle conservatively and back off on errors.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "geoapify",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The /v1 root does not cover the whole suite described in the entry: several current APIs, including Places and Place Details, use /v2 paths.",
+          "suggestion": "Use \"https://api.geoapify.com\" as the common host root and preserve the appropriate /v1 or /v2 version in each endpoint path.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free-tier limit is published rather than unknown: the current Free plan includes 3,000 credits per day.",
+          "suggestion": "Use: \"3,000 credits/day; credit cost varies by API and result volume.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Geoapify has multiple published paid plans, so null is incorrect.",
+          "suggestion": "Populate the current paid credit plans, beginning with API 10 at 10,000 credits/day, plus higher-volume and custom options.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published by plan. The current Free plan lists up to 5 requests per second.",
+          "suggestion": "Use: \"Free plan: up to 5 requests/second; higher plans publish higher guaranteed rates, with API-specific variations.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "geonames",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "GeoNames does not issue an API key for the free service. Requests are identified by the user's GeoNames account username supplied in the username query parameter.",
+          "suggestion": "Represent authentication as a required account username/query parameter rather than an API key.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The published free daily allowance is 10,000 credits, not 20,000. The 1,000-credit hourly limit is correct.",
+          "suggestion": "Use: \"1,000 credits/hour and 10,000 credits/day; most requests cost one credit.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "GeoNames offers published Premium Web Services plans, so null is incorrect.",
+          "suggestion": "Populate or link the current Best Price and Best Availability commercial plans.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The daily free limit is overstated as 20,000 credits; the official limit is 10,000.",
+          "suggestion": "Use: \"Free: 1,000 credits/hour and 10,000 credits/day; commercial plans provide separate limits.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The placeholder username=YOUR_API_KEY incorrectly tells users to supply an API key rather than their GeoNames username.",
+          "suggestion": "Use: curl \"https://secure.geonames.org/searchJSON?q=London&maxRows=1&username=YOUR_USERNAME\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

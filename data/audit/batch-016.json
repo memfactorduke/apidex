@@ -1,0 +1,197 @@
+{
+  "audits": [
+    {
+      "id": "giantbomb",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "The API is not operational. Giant Bomb says its game, character, company, release, and other wiki APIs are currently unavailable following its separation from Fandom.",
+          "suggestion": "Set status to \"unavailable\" or remove the entry until Giant Bomb relaunches the API. See the [official API notice](https://giantbomb.com/api).",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "This URL now leads to an informational webpage, not a functioning REST API root.",
+          "suggestion": "Do not publish a base URL until Giant Bomb documents and launches the replacement API.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The old documentation URL no longer provides usable API documentation.",
+          "suggestion": "Remove this docs URL; the current /api page is only a service-unavailability notice.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "The listed authentication mechanisms are presented as currently usable even though the API interface is unavailable; the alternative header forms are not supported by current published documentation.",
+          "suggestion": "Remove or mark authentication as unavailable pending replacement API documentation.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "There is no currently accessible free API tier because the API endpoints are unavailable.",
+          "suggestion": "Set free_tier to false or null while the service is unavailable.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The historical /api/game endpoint is currently unavailable, so this curl request will not perform the described lookup.",
+          "suggestion": "Remove the example until a replacement endpoint is published.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The description says Giant Bomb currently provides a REST API for its encyclopedia data, which is no longer true.",
+          "suggestion": "Describe the API as historically available and currently being rebuilt.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "giphy",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free beta-key limit is published, not unknown: 100 API calls per hour.",
+          "suggestion": "Set this to \"100 API calls per hour for beta keys; production access requires approval and paid custom pricing.\" See the [official GIPHY documentation](https://developers.giphy.com/docs/api/).",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The claim that rate limits are not published is false. GIPHY publishes a 100-calls-per-hour limit for beta keys.",
+          "suggestion": "Use \"Beta keys: 100 API calls/hour; production limits are assigned through an approved production key.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response is internally inconsistent: pagination.total_count is 0 while data contains one result.",
+          "suggestion": "Use a total_count of at least 1 when returning one data item.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The GitHub App installation wording conflates two rules. Non-Enterprise installations start at 5,000 requests/hour and can scale with repositories and users to a maximum of 12,500; installations on GitHub Enterprise Cloud organizations receive 15,000 requests/hour.",
+          "suggestion": "Replace the installation portion with the separate 5,000-to-12,500 scaling rule and fixed 15,000 Enterprise Cloud rule documented in [GitHub's rate-limit documentation](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api).",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "gitlab",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The entry omits an important GitLab.com restriction: project and group access tokens require Premium or Ultimate, even though personal access tokens remain available on Free.",
+          "suggestion": "Add that project/group access tokens are Premium or Ultimate features on GitLab.com but are available in all tiers on self-managed GitLab. See the [GitLab authentication documentation](https://docs.gitlab.com/api/rest/authentication/).",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response snippet is not valid JSON because the bare string property marker \"...\" has no colon or value.",
+          "suggestion": "Remove the trailing \",\\\"...\\\"\" or replace it with a valid placeholder property such as \"_omitted\":true.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "gnews",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Per-second limits are clearly published: the Free plan allows 1 request/second and paid plans allow 10 requests/second.",
+          "suggestion": "Set this to \"Daily quota varies by plan; Free: 100 requests/day and 1 request/second; paid plans: 10 requests/second.\" See [GNews error-handling documentation](https://docs.gnews.io/error-handling).",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "google-books",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Google does not publish a Books API pay-as-you-go overage price or separate paid API plan. Enabling Cloud billing does not by itself establish that Books requests above the quota are billable.",
+          "suggestion": "Set paid_plans to null and describe the service as quota-limited; direct users to the Cloud Console or Google support for quota changes.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response snippet is invalid JSON because the top-level object is missing its final closing brace.",
+          "suggestion": "Append a final \"}\" after the items array.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "google-cloud-vision",
+      "issues": []
+    },
+    {
+      "id": "google-fact-check",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The sample response is unrelated to the request: a search for \"climate change\" is shown returning an Elvis Presley body-identification claim.",
+          "suggestion": "Use a climate-related ClaimReview response or change the query to terms matching the Elvis claim.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "google-gemini",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The statement that OAuth and service-account authentication are available only through Vertex AI is false. The Gemini Developer API itself supports OAuth, and its current authorization-key system binds keys to Google Cloud service accounts.",
+          "suggestion": "State that Gemini Developer API supports API keys and OAuth; distinguish it from Vertex AI without denying OAuth/service-account-backed authentication. See the [official OAuth guide](https://ai.google.dev/gemini-api/docs/oauth).",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The quoted Gemini 2.5 Flash limits are stale and are no longer a dependable public default. Google now directs users to AI Studio for their active project-specific limits.",
+          "suggestion": "Remove the numeric example and say that model- and project-specific RPM, TPM, and RPD limits are shown in Google AI Studio.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The curl uses gemini-2.0-flash, which was shut down on June 1, 2026, so the example no longer works.",
+          "suggestion": "Replace the model with a current supported model such as gemini-3.5-flash and verify its generateContent interface. See the [official deprecation schedule](https://ai.google.dev/gemini-api/docs/deprecations).",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "google-maps",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "Google Maps Platform is a suite without one universal API root. This URL covers legacy-style Maps web-service endpoints such as Geocoding, but newer products use other hosts, such as routes.googleapis.com and places.googleapis.com.",
+          "suggestion": "Either scope the entry to the legacy Geocoding-style API represented by this base URL or represent the platform as multiple product-specific API roots.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The reference to a free monthly credit is outdated. The $200 monthly credit was replaced on March 1, 2025 by per-SKU monthly free-usage caps.",
+          "suggestion": "Use \"Pay as you go after each SKU's monthly free-usage cap; caps vary by Essentials, Pro, and Enterprise SKU.\" See the [official pricing-change FAQ](https://developers.google.com/maps/billing-and-pricing/faq).",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The claim that limits are not published is false. Google publishes product-specific limits, including 3,000 QPM for Geocoding and Compute Routes, 3,000 EPM for Compute Route Matrix, and other limits for each service.",
+          "suggestion": "Replace this with product-specific published quotas or direct users to the [Google Maps Platform usage-limit table](https://developers.google.com/maps/faq).",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The description's reference to a monthly free credit is outdated.",
+          "suggestion": "Replace it with per-SKU monthly free-usage caps, which replaced the $200 credit in March 2025.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "audits": [
+    {
+      "id": "thecocktaildb",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The entry says premium keys are Patreon-supported, while the current API page directs users to a one-time PayPal Premium purchase. The site's FAQ still mentions Patreon, so the entry also contradicts its own free-tier note.",
+          "suggestion": "Describe the current offer as a $10 lifetime Premium upgrade through the site's PayPal link, while noting that a legacy FAQ still mentions Patreon.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "themealdb",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The entry mixes a roughly $10 lifetime purchase with Patreon/subscription language. The current API guide advertises a \u00a310 lifetime PayPal upgrade, although the site's older FAQ still mentions Patreon.",
+          "suggestion": "Use \"\u00a310 lifetime upgrade through the current PayPal link\" and, if useful, note that the legacy FAQ still references Patreon.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "thenewsapi",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The limit is not unknown. The current Free plan publishes 100 requests per day and a maximum of 3 articles per news request.",
+          "suggestion": "Set to \"100 requests/day; up to 3 articles per news request.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid plans are available, so null is incorrect.",
+          "suggestion": "List Basic, Standard, and Pro plans, currently advertised at approximately $19, $49, and $79 per month respectively, with lower effective monthly prices when billed annually.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "thesportsdb",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current documentation does publish the free request quota: 30 requests per minute. It also publishes per-endpoint result caps.",
+          "suggestion": "State \"30 requests/minute, with endpoint-specific limits on returned records; public app-store releases require a paid subscription.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The claim that rate limits are not published in detail is outdated.",
+          "suggestion": "Use \"Free: 30 requests/minute; Premium: 100/minute; Business: 120/minute; excess requests return HTTP 429.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The example's Arsenal values do not match the live response: strTeamShort is \"ARS\", not \"Arsenal\", and strAlternate contains \"Arsenal Football Club, AFC, Arsenal FC\" rather than only \"Arsenal FC\".",
+          "suggestion": "Replace those values with the current response values or use neutral placeholders.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "they-said-so",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current documentation supports a public unauthenticated allowance of 10 calls/hour but does not document a free authenticated key that raises limits. Increased limits are tied to paid subscriptions.",
+          "suggestion": "Use \"Public endpoints: 10 calls/hour without authentication; higher limits require a paid plan.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid plans exist, so null is incorrect.",
+          "suggestion": "List Premium at $9.99/month for 2,500 calls/day, Ultra at $24.99/month for 8,000/day, and Enterprise at $74.99/month with unlimited calls, subject to rechecking before publication.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response structure is wrong: current examples place copyright at the top level as an object with year and url, not inside contents as a string.",
+          "suggestion": "Use a response shaped like {\"success\":{\"total\":1},\"contents\":{\"quotes\":[...]},\"copyright\":{\"year\":2026,\"url\":\"https://theysaidso.com\"}}.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "thispersondoesnotexist",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "The original service is no longer operational at this domain. The domain currently displays a for-sale page.",
+          "suggestion": "Set status to \"dead\" or remove the entry.",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "This URL is now a domain-sale website, not an API root.",
+          "suggestion": "Remove the API entry unless a documented successor service can be identified.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The URL does not provide API documentation; it leads to the same domain-sale page.",
+          "suggestion": "Set to null or remove the entry.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "There is no current API service or free tier at this domain.",
+          "suggestion": "Set false or remove the entry entirely.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The curl command now downloads HTML for the domain-sale page rather than a generated JPEG.",
+          "suggestion": "Remove the example and entry unless replaced with a verified successor API.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "It describes the historical image generator as a currently available service and implies API integration despite there being no current documented API.",
+          "suggestion": "Mark it as discontinued/historical or remove it from the public-API directory.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "tiingo",
+      "issues": []
+    },
+    {
+      "id": "timezonedb",
+      "issues": []
+    },
+    {
+      "id": "tmdb",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The limit is not wholly unknown: TMDB documents free API use for non-commercial purposes subject to attribution.",
+          "suggestion": "Use \"Free for non-commercial use with required TMDB attribution; commercial use requires a separate license.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Null omits TMDB's commercial licensing option.",
+          "suggestion": "Use \"Commercial licensing is available by contacting TMDB sales; public fixed pricing is not published.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "TMDB does publish approximate current rate-limit guidance.",
+          "suggestion": "Use \"Legacy 40-per-10-second limiting is disabled, but TMDB retains a soft upper limit around 40 requests/second and clients must honor HTTP 429 responses; this may change.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "together-ai",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The listed api.together.xyz hostname is the old API hostname. Current official documentation uses https://api.together.ai/v1.",
+          "suggestion": "Set base_url to \"https://api.together.ai/v1\".",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "Together AI no longer offers signup trial credits or a free API tier. Platform access currently requires purchasing at least $5 in prepaid credits.",
+          "suggestion": "Set free_tier to false and free_tier_limits to \"No free trial; minimum $5 credit purchase required for API access.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The request uses the old hostname and meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo, which was removed from serverless service on March 6, 2026.",
+          "suggestion": "Use https://api.together.ai/v1/chat/completions and a currently listed model such as meta-llama/Llama-3.3-70B-Instruct-Turbo.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

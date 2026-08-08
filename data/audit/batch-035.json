@@ -1,0 +1,159 @@
+{
+  "audits": [
+    {
+      "id": "sauce-labs",
+      "issues": [
+        {
+          "field": "pricing.free_tier",
+          "problem": "The entry marks this as a free tier, but Sauce Labs currently offers a time-limited 28-day trial rather than a permanent general-purpose free plan. Free accounts are separately available only to qualifying open-source projects.",
+          "suggestion": "Set free_tier to false and describe the 28-day trial, currently including 60 Automated and Live Testing minutes. Mention qualifying open-source accounts separately.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "scrapingbee",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Authentication through the api_key query parameter is deprecated. It remains available only for backward compatibility and may be removed.",
+          "suggestion": "Describe Authorization: Bearer YOUR_API_KEY as the supported authentication method and mention the query parameter only as deprecated compatibility behavior.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The claim that a credit card is required for the 1,000-credit trial is false. ScrapingBee currently advertises signup with no credit card required.",
+          "suggestion": "Use: \"1,000 free trial API credits after signup; no credit card required; no ongoing free plan.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The listed concurrency limits are stale. Current published plan limits are Freelance 50, Startup 100, Business 200, and Business+ 400 concurrent requests.",
+          "suggestion": "Replace the concurrency figures with 50, 100, 200, and 400 respectively, while noting that plans may change.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The request still works only through ScrapingBee's deprecated query-string authentication mechanism.",
+          "suggestion": "Use: curl \"https://app.scrapingbee.com/api/v1?url=https%3A%2F%2Fhttpbin.org%2Fhtml\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "scryfall",
+      "issues": []
+    },
+    {
+      "id": "securitytrails",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The documented query-string parameter is apikey, not api_key.",
+          "suggestion": "Use the APIKEY header as recommended, or apikey as the discouraged query-string fallback.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The domain-details response uses a singular endpoint string, not an endpoints array. example.com also has current DNS records, so current_dns should not be represented as an empty object.",
+          "suggestion": "Use a schema-compatible abbreviated response such as {\"hostname\":\"example.com\",\"endpoint\":\"/v1/domain/example.com\",\"current_dns\":{\"a\":{\"first_seen\":\"...\",\"values\":[...]}}}.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "semantic-scholar",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The unauthenticated limit is not approximately 100 requests per five minutes. Semantic Scholar currently documents a shared pool of 1,000 requests per second for all unauthenticated users, subject to additional throttling. An API key receives an introductory individual limit of 1 request per second.",
+          "suggestion": "Describe unauthenticated access as a shared 1,000-RPS pool and authenticated introductory access as 1 RPS per key.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated unauthenticated limit is obsolete, and the description incorrectly characterizes API-key access as merely a higher shared-pool allowance.",
+          "suggestion": "Use: \"Unauthenticated: 1,000 RPS shared across all unauthenticated users, with possible additional throttling. API key: introductory individual limit of 1 RPS across endpoints; higher limits may be granted after review.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The limit=1 parameter limits the length of data; it does not make total equal to 1. total is an estimated count of all matching papers and this broad query has multiple matches.",
+          "suggestion": "Replace total with a noncommittal placeholder representing the API's estimated match count, or omit it from the abbreviated snippet while keeping one item in data.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "sendgrid",
+      "issues": [
+        {
+          "field": "pricing.free_tier",
+          "problem": "Twilio retired SendGrid's permanent Free Email API and Free Marketing Campaigns plans in 2025. New accounts receive a time-limited free trial, not an ongoing free tier.",
+          "suggestion": "Set free_tier to false.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The description relies on the historical permanent free plan and omits the current trial terms.",
+          "suggestion": "Use: \"60-day free trial with up to 100 emails per day; a paid plan is required afterward.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "sentry",
+      "issues": []
+    },
+    {
+      "id": "serpapi",
+      "issues": []
+    },
+    {
+      "id": "shipengine",
+      "issues": [
+        {
+          "field": "name",
+          "problem": "ShipEngine was officially rebranded as ShipStation API on February 28, 2025. This is the standalone API formerly called ShipEngine, and it is distinct from the legacy ShipStation V1 and companion V2 APIs.",
+          "suggestion": "Use \"ShipStation API (formerly ShipEngine)\" to avoid conflating the three ShipStation API products.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "Current documentation requires the API-Key header and does not document X-ShipEngine-API-Key as an authentication-header alias.",
+          "suggestion": "Remove the X-ShipEngine-API-Key alternative and specify only API-Key: YOUR_API_KEY.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The description presents the free offering mainly as trial credits with varying request quotas. A permanent $0 plan currently exists, with feature restrictions rather than a simple request-credit allowance.",
+          "suggestion": "Describe the $0 plan as providing sandbox access and essential API operations using ShipStation-provided carrier accounts, with no API usage charge; bringing your own carrier accounts and unrestricted features requires Advanced. Distinguish this from the 30-day sandbox-only trial when no payment method is supplied.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published: production accounts default to 200 requests per minute and sandbox accounts to 20 requests per minute.",
+          "suggestion": "Replace \"not published\" with \"200 requests/minute by default; sandbox 20 requests/minute; higher limits may be requested.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The current carrier response schema uses nickname and friendly_name; the shown name field is not part of the documented carrier object.",
+          "suggestion": "Remove name and align the abbreviated object with the current schema, for example carrier_id, carrier_code, account_number, nickname, friendly_name, primary, and services.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "shippo",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Shippo publishes per-endpoint, per-method rate limits, so \"not published\" is incorrect.",
+          "suggestion": "Reference the published per-minute table. Most core resources allow 500 live/50 test POSTs, 4,000 live/400 test single-object GETs, and 50 live/10 test list GETs; Tracking allows 750 live/50 test POSTs and 500 live/50 test GETs.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

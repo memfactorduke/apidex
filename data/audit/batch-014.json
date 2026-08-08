@@ -1,0 +1,166 @@
+{
+  "audits": [
+    {
+      "id": "fatsecret",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free Basic edition's limit is published, not unknown.",
+          "suggestion": "Set to \"5,000 API calls/day; US-only data; attribution required.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The entry says the limit is unpublished, but FatSecret publishes a 5,000-calls-per-day limit for Basic.",
+          "suggestion": "Set to \"Basic: 5,000 API calls/day; Premier tiers: unlimited API calls.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The Bearer credential is an OAuth access token obtained with the client credentials, not the API key itself.",
+          "suggestion": "Replace YOUR_API_KEY with YOUR_ACCESS_TOKEN and mention the token request to https://oauth.fatsecret.com/connect/token.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "fhir-r4-examples",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "This URL is an obsolete page about internally generated PHP code documentation, not the current REST/FHIR API documentation.",
+          "suggestion": "Use https://www.open-emr.org/wiki/index.php/OpenEMR_8.2.0_API or the linked rel-820 FHIR documentation.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The Authorization header requires an OAuth access token, while YOUR_API_KEY incorrectly implies a static API key.",
+          "suggestion": "Use \"Authorization: Bearer YOUR_ACCESS_TOKEN\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "financial-modeling-prep",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The snippet largely uses the legacy quote schema. The current stable endpoint documents changePercentage, not changesPercentage, and its documented field set differs from this legacy-style response.",
+          "suggestion": "Regenerate the snippet from /stable/quote and use changePercentage with the current stable response fields.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "fingerprint",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The entry mixes the deprecated v3 Server API authentication with the current v4 interface. V4 uses Authorization: Bearer SECRET_API_KEY; the old Auth-API-Key header and api_key query parameter belong to v3.",
+          "suggestion": "Describe current v4 server authentication as \"secret API key via Authorization: Bearer\" and document public client keys separately.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current Free plan allows up to 1,000 web/iOS API calls per month, not 20,000.",
+          "suggestion": "Set to \"1,000 web/iOS API calls per month; up to 500,000 Android calls per month; 14-day Pro Plus trial included.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Fingerprint publishes a 5-requests-per-second API rate limit for Free and Pro Plus, so \"not published\" is incorrect.",
+          "suggestion": "Set to \"5 requests/second for Free and Pro Plus; custom for Enterprise.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The curl and nested products response use the deprecated v3 GET /events/{request_id} interface. Current v4 uses /v4/events/{event_id}, Bearer authentication, snake_case names, and a flatter response.",
+          "suggestion": "Use \"curl -s https://api.fpjs.io/v4/events/EVENT_ID -H 'Authorization: Bearer YOUR_SECRET_API_KEY'\" and replace the response with the current v4 schema.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "finnhub",
+      "issues": []
+    },
+    {
+      "id": "firecrawl",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current Free plan provides 1,000 credits every month; the entry's approximately 500-credit and possibly non-renewing description is outdated.",
+          "suggestion": "Set to \"1,000 credits/month, 2 concurrent browsers, and Free-plan endpoint rate limits.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Firecrawl now publishes exact per-plan, per-endpoint request-per-minute and concurrency limits.",
+          "suggestion": "Replace this with the published table; for example, Free currently allows 10 RPM for scrape/map/search, 2 RPM for crawl/agent, and 2 concurrent browsers.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The current lineup also includes a Scale plan, which the stated tier list omits.",
+          "suggestion": "List Hobby, Standard, Growth, Scale, and Enterprise, using the current pricing page for prices and credits.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "fireworks-ai",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "Fireworks offers new users $1 in introductory credits, but does not provide an ongoing free tier for inference.",
+          "suggestion": "Set free_tier to false and describe the $1 new-user credit as a trial credit.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published. Accounts without a payment method or credits are limited to 10 RPM, while active funded accounts have an account-wide ceiling of 6,000 RPM, alongside serverless token limits.",
+          "suggestion": "Replace \"not published\" with the documented account and serverless quota behavior.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The selected llama-v3p1-8b-instruct model is currently marked as not supporting serverless inference, so this direct chat-completions request will not work unless the user creates an on-demand deployment.",
+          "suggestion": "Use a currently supported serverless model such as accounts/fireworks/models/deepseek-v3p1, or address a user-created deployment instead.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "fixer",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The quoted approximately $10\u201380 range and implication that HTTPS is a paid-only feature are outdated. The current public plans are Basic $14.99/month, Professional $59.99/month, Professional Plus $99.99/month, and Custom; SSL is listed on the Free plan.",
+          "suggestion": "Update the tier names, prices, and features from the current pricing page and remove HTTPS from the paid-only benefits.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The timestamp and date are internally inconsistent: Unix timestamp 1519296206 is from February 2018, not 2024-01-15.",
+          "suggestion": "Use a timestamp matching 2024-01-15, or change the date and rates to a genuine response generated at timestamp 1519296206.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "flightaware-aeroapi",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The Personal tier has no monthly minimum and includes up to $5 of AeroAPI usage free each month, so marking free_tier false misses the available recurring free allowance.",
+          "suggestion": "Set free_tier to true with limits such as \"$5 of per-query usage free per month on Personal ($10 for eligible ADS-B feeders); charges apply after the allowance; 10 result sets/minute.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "football-data-org",
+      "issues": []
+    }
+  ]
+}

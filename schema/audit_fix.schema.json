@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "base_url", "docs_url", "auth_type", "auth_details", "free_tier", "free_tier_limits", "paid_plans", "rate_limits", "cors", "example_request", "example_response_snippet", "description", "status", "resolution_notes"],
+  "properties": {
+    "id": { "type": "string" },
+    "base_url": { "type": ["string", "null"] },
+    "docs_url": { "type": ["string", "null"] },
+    "auth_type": { "type": ["string", "null"], "enum": ["none", "apiKey", "oauth2", "basic", "jwt", "other", null] },
+    "auth_details": { "type": ["string", "null"], "maxLength": 300 },
+    "free_tier": { "type": ["boolean", "null"] },
+    "free_tier_limits": { "type": ["string", "null"], "maxLength": 300 },
+    "paid_plans": { "type": ["string", "null"], "maxLength": 300 },
+    "rate_limits": { "type": ["string", "null"], "maxLength": 300 },
+    "cors": { "type": ["string", "null"], "enum": ["yes", "no", "unknown", null] },
+    "example_request": { "type": ["string", "null"], "maxLength": 600 },
+    "example_response_snippet": { "type": ["string", "null"], "maxLength": 800 },
+    "description": { "type": ["string", "null"], "maxLength": 600 },
+    "status": { "type": ["string", "null"], "enum": ["operational", "degraded", "defunct", null] },
+    "resolution_notes": { "type": "string", "maxLength": 700 }
+  }
+}

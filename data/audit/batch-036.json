@@ -1,0 +1,222 @@
+{
+  "audits": [
+    {
+      "id": "shodan",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The raw REST API documents the API key in the `key` query parameter. The claim that some clients accept it in HTTP headers may mislead users into sending an unsupported header; client libraries generally insert the query parameter themselves.",
+          "suggestion": "State that the REST API uses the `key` query parameter. Describe library-specific constructors separately without implying that the server accepts a header.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "This is internally inconsistent with the stated limit of zero query credits and no core REST access. In particular, the example host-information endpoint requires at least a paid Shodan Membership.",
+          "suggestion": "Set `free_tier` to false if it means usable access to the core Shodan API. If limited utility endpoints count, explicitly distinguish them from the paid host/search API and from the separate free InternetDB API.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The summary omits Shodan's current Freelancer, Small Business, and Corporate API subscriptions and could imply that Membership includes higher-tier capabilities such as streaming.",
+          "suggestion": "List Membership, Freelancer, Small Business, Corporate, and Enterprise, with credits and streaming availability described per plan.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "shopify",
+      "issues": [
+        {
+          "field": "example.request",
+          "problem": "API version `2025-01` is retired as of August 2026. Shopify will fall the request forward rather than honoring that version, and the REST Products resource is legacy and unavailable as an acceptable interface for public apps.",
+          "suggestion": "Use a supported version such as `2026-07`. Prefer a POST to `/admin/api/2026-07/graphql.json` with a `products(first: 1)` query; retain the REST example only if it is explicitly labeled for eligible legacy/custom-app use.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "Saying developers can generally use REST or GraphQL omits the current platform restriction: REST Admin is legacy, and new public apps have been required to use GraphQL exclusively since April 2025. Public apps were required to migrate product operations to GraphQL even earlier.",
+          "suggestion": "Describe GraphQL Admin API as the primary/current interface and REST Admin as a legacy interface available only in limited existing or custom-app scenarios.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "simbad",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "`sim-script` is one specific Script-interface endpoint, not the common API root, while the example uses the different `sim-id` endpoint. The entry therefore mixes two interfaces under an endpoint-specific base URL.",
+          "suggestion": "Use `https://simbad.cds.unistra.fr/simbad` as the common base for the URL interfaces, or make this explicitly a Script API entry and use `https://simbad.cds.unistra.fr/simbad/sim-script` consistently. For structured database queries, document the TAP service at `/simbad/sim-tap` separately.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "slack",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The literal placeholder `string` is not an API root.",
+          "suggestion": "Use `https://slack.com/api` for the Slack Web API.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The literal placeholder `string` is not a documentation URL.",
+          "suggestion": "Use `https://docs.slack.dev/apis/web-api/`.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "The auth type is incorrectly `none`. Slack Web API calls normally use OAuth-issued bot or user tokens as Bearer tokens. A signing secret verifies inbound Slack requests and is not an alternative credential for outbound Web API calls; referring generally to legacy tokens is also outdated.",
+          "suggestion": "Set the type to `oauth2` and specify `Authorization: Bearer xoxb-...` or the applicable user token. Document signing secrets separately for inbound request verification.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The literal placeholder `string` contains no pricing information.",
+          "suggestion": "State that Web API access is available to apps installed on Free workspaces without a separate per-request fee, while workspace retention and feature availability depend on the Slack plan.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "`null` incorrectly implies that Slack has no paid plans relevant to feature availability.",
+          "suggestion": "Reference Slack Pro, Business+, and Enterprise plans, noting that API rate-limit tiers are generally method-based rather than purchased as per-call quotas.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The literal placeholder `string` omits Slack's published method-tier limits.",
+          "suggestion": "Describe per-method, per-workspace, per-app tiers: Tier 1 at 1+ per minute, Tier 2 at 20+, Tier 3 at 50+, Tier 4 at 100+, plus special limits such as roughly one posted message per second per channel. Mention the special restrictions on `conversations.history` and `conversations.replies` for affected non-Marketplace apps.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "Both example fields are literal placeholders and do not form a request or response.",
+          "suggestion": "Use an authenticated call such as `curl -sS https://slack.com/api/auth.test -H \"Authorization: Bearer YOUR_BOT_TOKEN\"` with a response such as `{\"ok\":true,\"team\":\"Example\",\"user\":\"example-bot\"}`.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The literal placeholder `string` does not describe the API.",
+          "suggestion": "Describe Slack's Web API, Events API, interactivity, webhooks, and OAuth-based app integrations without conflating outbound API authentication with inbound request signing.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "smithsonian",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "API keys are registered through api.data.gov, not through a Smithsonian-hosted self-service developer portal. The Smithsonian developer page links users to that federal key service.",
+          "suggestion": "Say: `API key required; register at https://api.data.gov/signup/ and pass it as api_key (or the supported X-Api-Key header).`",
+          "confidence": "medium"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "`not published` overlooks the published api.data.gov gateway defaults used by this API: normally 1,000 requests per hour per API key, with much lower DEMO_KEY limits, unless the agency has configured an override.",
+          "suggestion": "State the api.data.gov default of 1,000 requests per hour; DEMO_KEY is limited to 30 requests per IP per hour and 50 per IP per day. Advise checking `X-RateLimit-*` response headers for the effective limit.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "snipcart",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The wording implies multiple transaction-fee and subscription tiers, but Snipcart's currently published standard pricing is a single formula: 2% of sales, replaced by a $20 monthly fee when monthly sales are below $1,000, plus payment-gateway fees.",
+          "suggestion": "Replace with the currently published 2% transaction fee or $20 monthly minimum formula, and mention custom pricing only if Snipcart explicitly offers it.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "snyk",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The entry conflates two authentication schemes. Personal API tokens and service-account tokens use `Authorization: token ...`; `Authorization: Bearer ...` is for OAuth access tokens issued to Snyk Apps, not an interchangeable spelling for a personal token.",
+          "suggestion": "Specify `Authorization: token YOUR_API_TOKEN` for personal and service-account API tokens. Document `Bearer` separately and only for Snyk Apps OAuth access tokens.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "Free and Team personal tokens do not currently grant access to the Snyk API. Snyk's documentation says API use requires Enterprise, so the claimed free API tier and Team API availability conflate CLI/IDE scanning entitlements with direct API access.",
+          "suggestion": "Set API `free_tier` to false and state that direct API access is an Enterprise-plan feature; describe Free/Team test and project limits only for the CLI, IDE, and supported integrations.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Numeric limits are published. The REST API's general limit is 1,620 requests per minute per API key; V1 defaults to 2,000 per minute, with lower endpoint-specific limits.",
+          "suggestion": "Replace `not published` with the applicable REST limit of 1,620 requests per minute and note documented endpoint-specific exceptions. If retaining V1 coverage, mention its separate 2,000-per-minute default.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "socrata",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is the endpoint root for one Chicago data portal, not a general Socrata API root. Socrata SODA APIs are hosted on each publisher's portal domain.",
+          "suggestion": "Use the template `https://{portal-domain}/resource`, retaining `https://data.cityofchicago.org/resource` only as an explicitly labeled example instance.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "An app token is optional application identification for public reads, not authentication by itself, so `apiKey` is the wrong primary auth classification. The stated `app_token` query parameter is also not the current SODA 2.x form; `X-App-Token` is preferred and older 2.x query usage is `$$app_token`. Protected operations use OAuth or credentials separately.",
+          "suggestion": "Set the public-read auth type to `none`; document optional `X-App-Token` for higher/dedicated throttling and OAuth 2.0 for protected datasets or write operations.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "Because the URL is double-quoted, the shell expands `$limit` as an environment variable. The request will normally become `?=1` instead of sending the SoQL `$limit` parameter.",
+          "suggestion": "Use single quotes around the URL or escape the dollar sign, for example: `curl 'https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=1'`.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "solar-system-opendata",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "The API stopped being unauthenticated in September 2025. A free bearer token is now mandatory for API calls.",
+          "suggestion": "Set the type to `apiKey` or `other` and specify `Authorization: Bearer YOUR_TOKEN`; obtain the free token from `https://api.le-systeme-solaire.net/generatekey.html`.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The request omits the now-required Bearer token. It also uses the English alias `earth`, which the service documents as redirecting to the canonical French ID; curl without `-L` will not follow that redirect to the JSON response.",
+          "suggestion": "Use `curl -sS \"https://api.le-systeme-solaire.net/rest/bodies/terre\" -H \"Authorization: Bearer YOUR_TOKEN\"`, or add `-L` when using `/earth`.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The final sentence incorrectly says no authentication is required.",
+          "suggestion": "State that access remains free but requires a free Bearer token.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "sonarcloud",
+      "issues": [
+        {
+          "field": "name",
+          "problem": "The service's current official name is SonarQube Cloud; SonarCloud is the former product name and remains mainly in legacy domains and paths.",
+          "suggestion": "Rename the entry to `SonarQube Cloud`, optionally noting `formerly SonarCloud`.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The entry reflects the old public-only free model. The current Free plan supports private projects up to 50,000 lines of code and up to five organization members, while the separate free OSS plan supports unlimited public repositories but no private projects. Therefore the statement that private projects require payment is false.",
+          "suggestion": "Describe the current Free, Team, Enterprise, and OSS plans separately: Free includes up to 50k private LOC; OSS is free for unlimited public repositories; paid Team and Enterprise plans raise limits and add features.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

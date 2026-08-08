@@ -1,0 +1,147 @@
+{
+  "audits": [
+    {
+      "id": "google-news-rss",
+      "issues": []
+    },
+    {
+      "id": "grafana-cloud",
+      "issues": [
+        {
+          "field": "example",
+          "problem": "GET https://grafana.com/api/orgs without an organization slug is not a documented stable Grafana Cloud API operation, and the shown bare array is not a documented response shape.",
+          "suggestion": "Use a documented operation such as curl -H \"Authorization: Bearer YOUR_ACCESS_POLICY_TOKEN\" \"https://grafana.com/api/orgs/YOUR_ORG_SLUG/instances\" and show its object response containing an items array.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "graphhopper",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Official documentation requires the API key as the key query parameter; it does not document Authorization-header authentication.",
+          "suggestion": "State: \"API key via the key=YOUR_API_KEY query parameter on every request.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current Free plan allowance is 500 credits per day, not 500 credits per month.",
+          "suggestion": "Use \"500 credits/day on the Free plan; endpoint credit costs vary, and Free is restricted to supported profiles and non-commercial use.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The current Routing API uses profile=car, while the example supplies the obsolete vehicle=car parameter and may fail because the required profile is missing.",
+          "suggestion": "Use curl \"https://graphhopper.com/api/1/route?point=51.131,12.414&point=48.224,3.867&profile=car&key=YOUR_API_KEY\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "greynoise",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "GreyNoise's official v3 documentation specifies the key header. Authorization: Bearer is not documented as an alternative authentication mechanism.",
+          "suggestion": "State only: \"API key via the key: YOUR_API_KEY header.\"",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "grid-esports",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "https://api.grid.gg is not the documented API root for GRID Open Access. Current APIs use the api-op.grid.gg host and separate GraphQL paths.",
+          "suggestion": "Use https://api-op.grid.gg as the family root, while documenting concrete endpoints such as https://api-op.grid.gg/central-data/graphql and https://api-op.grid.gg/live-data-feed/series-state/graphql.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "Current GRID documentation specifies an x-api-key header, not an Authorization Bearer header.",
+          "suggestion": "Set the details to \"API key via the x-api-key: YOUR_API_KEY header.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The entry says no free tier, but GRID currently offers free Open Access to qualifying independent developers, students, researchers, fans, and pre-revenue startups. Commercial data products are paid and generally quote-based.",
+          "suggestion": "Set free_tier to true, describe Open Access as application-based and limited to qualifying non-commercial users, and describe commercial plans as contact-sales/custom pricing.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "A GET request to the host root with a Bearer token is not a valid example of GRID's GraphQL interface. It needs POST, x-api-key, JSON content type, a concrete GraphQL endpoint, and a query body; {} is not a representative response.",
+          "suggestion": "Use a POST to https://api-op.grid.gg/central-data/graphql with headers \"x-api-key: YOUR_API_KEY\" and \"Content-Type: application/json\" plus a JSON GraphQL query body.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "groq",
+      "issues": [
+        {
+          "field": "description",
+          "problem": "The description claims embeddings support, but the current official Groq API reference does not expose an embeddings endpoint. It also names Mixtral and Gemma as typical current models even though those model families are absent from the current catalog.",
+          "suggestion": "Remove embeddings and retired model examples. Describe the currently documented Chat, Responses, audio, model, batch, file, and related APIs, and direct readers to the live models endpoint for available model IDs.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "guardian",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Official Guardian Open Platform documentation specifies the api-key query parameter; it does not document Authorization: Bearer as an alternative.",
+          "suggestion": "State: \"API key via the api-key query parameter.\"",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The value is an unfinished placeholder. The current Developer tier is free for non-commercial use and permits up to 1 call per second and 500 calls per day.",
+          "suggestion": "Use \"Developer tier: up to 1 request/second and 500 requests/day; non-commercial use only.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value omits the current Commercial tier, whose price and quotas are customized according to usage.",
+          "suggestion": "Use \"Commercial access: custom throttle, quota, and usage-based pricing; request a commercial key.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The value is an unfinished placeholder rather than the published limits.",
+          "suggestion": "Use \"Developer: 1 call/second and 500 calls/day; Commercial: custom throttle and quota limits.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "gutendex",
+      "issues": []
+    },
+    {
+      "id": "hacker-news",
+      "issues": []
+    },
+    {
+      "id": "harvard-art-museums",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The claim that no request quota is published is false. The official API documentation asks clients to limit usage to 2,500 calls per day. It also states that the API is for non-commercial use only rather than advertising a commercial-use tier.",
+          "suggestion": "Use \"Free, non-commercial use only; limit requests to 2,500 per day. Contact the museum before any use outside the published terms.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The official documentation publishes a limit of 2,500 API calls per day, so \"not published\" is incorrect.",
+          "suggestion": "Use \"2,500 API calls per day.\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

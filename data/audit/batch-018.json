@@ -1,0 +1,123 @@
+{
+  "audits": [
+    {
+      "id": "haveibeenpwned",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Authentication is overstated: an API key is required for email/domain search and paste searches, but general breach-catalogue endpoints such as /breaches and /breach/{name} are unauthenticated.",
+          "suggestion": "State that hibp-api-key is required for email-address, paste, protected-domain, and stealer-log searches; breach metadata and Pwned Passwords endpoints are unauthenticated.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "false contradicts the entry's own scope and current HIBP offerings. Pwned Passwords and several breach endpoints are free, and HIBP currently advertises limited free breach monitoring.",
+          "suggestion": "Set free_tier to true and distinguish free Pwned Passwords/breach-metadata/limited-monitoring access from paid direct email and paste searches.",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "This root is correct for HIBP API v3 but not for the Pwned Passwords API described in the entry, which uses a separate host.",
+          "suggestion": "Either scope this entry to API v3 or list/split Pwned Passwords with base URL https://api.pwnedpasswords.com.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hearthstonejson",
+      "issues": []
+    },
+    {
+      "id": "here",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is the Geocoding and Search host, not a complete versioned API root for the broad collection of HERE services described. HERE routing, traffic, maps, and other APIs use different hosts.",
+          "suggestion": "For a Geocoding and Search entry use https://geocode.search.hereapi.com/v1 and narrow the name/description; otherwise document that HERE has service-specific roots rather than one base URL.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The approximately 250,000 free transactions per month figure is from HERE's former freemium model and is obsolete. Current Base Plan thresholds are service-specific and generally require payment information.",
+          "suggestion": "Use the current Base Plan's per-service thresholds; Geocoding and Search currently has approximately 30,000 free transactions per month, then usage-based pricing.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hex-pm",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "X-Hex-Api-Key is not a documented Hex.pm authentication header. Current direct API-key examples send the raw key in Authorization; newer clients may exchange credentials for short-lived OAuth tokens.",
+          "suggestion": "Document Authorization: YOUR_HEX_API_KEY for direct API-key use and remove the X-Hex-Api-Key claim unless independently tested and documented.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "hipo-universities",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The current maintained dataset identifies this institution's country as \"Turkiye\", not \"Turkey\".",
+          "suggestion": "Change the country value in the response snippet to \"Turkiye\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "huggingface-inference",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current free allowance is known and is credit-based rather than an unspecified request quota.",
+          "suggestion": "State that free users currently receive $0.10 in monthly Inference Providers credits, subject to change, with additional use requiring purchased credits/pay-as-you-go billing.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hunter",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The listed self-serve plan names are outdated: Business has been replaced by Scale, and Hunter now separately offers annual Data Platform plans aimed at API and bulk usage.",
+          "suggestion": "List Starter, Growth, and Scale for the all-in-one product; also mention configurable annual Data Platform plans and Enterprise arrangements where applicable.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published per endpoint, so \"not published\" is false. For example, Domain Search and Email Finder publish 15 requests/second and 500/minute, while Email Verifier publishes 10/second and 300/minute.",
+          "suggestion": "Replace with endpoint-specific published limits and direct users to each endpoint's documentation.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "hypixel",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The current official v2 specification documents only the API-Key request header, not the legacy key query parameter.",
+          "suggestion": "Document authentication as API-Key: YOUR_API_KEY and remove the query-parameter option.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The approximately 120 requests/minute figure is obsolete. Hypixel moved dashboard applications to five-minute windows; the announced base limit was 300 requests per five minutes, with application-specific limits and additional throttles.",
+          "suggestion": "State that limits are application-dependent and enforced over five-minute intervals; use the developer dashboard and RateLimit response headers as authoritative, with 300 requests per five minutes as the documented base allocation.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "icanhazdadjoke",
+      "issues": []
+    },
+    {
+      "id": "igdb",
+      "issues": []
+    }
+  ]
+}

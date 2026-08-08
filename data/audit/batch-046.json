@@ -1,0 +1,183 @@
+{
+  "audits": [
+    {
+      "id": "xai",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "xAI now publishes tier- and model-specific limits in requests per second and tokens per minute, so \"not published\" is incorrect.",
+          "suggestion": "Reference the current xAI rate-limit table and note that limits vary by model and cumulative-spend tier.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "yahoo-finance",
+      "issues": []
+    },
+    {
+      "id": "yelp-fusion",
+      "issues": [
+        {
+          "field": "name",
+          "problem": "Yelp Fusion has been renamed Yelp Places API. Using only the former name makes the entry stale.",
+          "suggestion": "Use \"Yelp Places API (formerly Yelp Fusion)\".",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "Current Yelp Places access is a 30-day trial, not an ongoing free tier.",
+          "suggestion": "Set free_tier to false and describe the current 30-day trial with 5,000 included API calls.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value is incorrect. Yelp publishes Base, Enhanced, and Premium monthly plans with usage charges.",
+          "suggestion": "List the current three paid plans or link to Yelp's current Places API pricing page.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "yesno-api",
+      "issues": []
+    },
+    {
+      "id": "ygoprodeck",
+      "issues": []
+    },
+    {
+      "id": "yomomma-api",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "api.yomomma.info appears to be an abandoned legacy host, with no current authoritative documentation or credible recent operational evidence.",
+          "suggestion": "Remove this entry unless the host can be live-tested successfully and tied to an active maintainer; do not substitute a different Yo Momma API without creating a separate entry.",
+          "confidence": "medium"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The supplied GitHub repository could not be verified and does not match the currently indexed Yo Momma API project, suggesting that unrelated or nonexistent documentation was attached to the legacy endpoint.",
+          "suggestion": "Use only a repository demonstrably maintained by the operator of the listed deployment, or remove the documentation link and entry.",
+          "confidence": "medium"
+        },
+        {
+          "field": "status",
+          "problem": "Marking this API operational is unsupported given the legacy host and lack of current live or maintainer evidence.",
+          "suggestion": "Mark it inactive/dead or remove it pending a successful live probe.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "you-com",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "api.ydc-index.io is not the current canonical API host. Current You.com documentation uses api.you.com; older examples used ydc-index.io without the api subdomain.",
+          "suggestion": "Use https://api.you.com as the base URL.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The request targets the incorrect api.ydc-index.io hostname.",
+          "suggestion": "Use curl -G 'https://api.you.com/v1/search' -H 'X-API-Key: YOUR_API_KEY' --data-urlencode 'query=latest AI news'.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The current search response does not return a top-level results array. Results are grouped under an object such as results.web and results.news.",
+          "suggestion": "Show the current nested shape, for example {\"results\":{\"web\":[{\"url\":\"...\",\"title\":\"...\",\"description\":\"...\",\"snippets\":[\"...\"]}],\"news\":[]}}.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value is incorrect because You.com offers published pay-as-you-go API pricing, including Web Search pricing per 1,000 calls.",
+          "suggestion": "Record the current pay-as-you-go pricing and complimentary-credit offer from You.com's pricing page.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The blanket statement \"not published\" is inaccurate. The free search profile is published as 100 queries per day, while authenticated tier limits are exposed through X-RateLimit headers.",
+          "suggestion": "State the 100-query daily free limit and explain that paid-tier limits are subscription-dependent and returned in response headers.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "zenquotes",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value is incorrect because ZenQuotes offers premium API-key subscriptions.",
+          "suggestion": "Record that premium subscriptions are available, or link to the current subscription page.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "ZenQuotes publishes a default free limit of 5 requests per 30 seconds per IP, so \"not published\" is incorrect.",
+          "suggestion": "Use \"5 requests per 30 seconds per IP by default; API key or registered IP required for higher/unlimited access.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "zenrows",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The Universal Scraper API documentation requires apikey as a query parameter. The statement that scraper authentication is also supported as a header in some SDKs is unsupported and appears to conflate it with other ZenRows endpoints that accept X-API-Key.",
+          "suggestion": "State only that Universal Scraper API authentication uses the required apikey query parameter.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current trial is expressed as a $1 shared usage allowance, equivalent to 1,000 basic results but fewer requests when advanced features are enabled; calling it simply 1,000 API credits is outdated and misleading.",
+          "suggestion": "Use \"$1 trial allowance, equivalent to up to 1,000 basic results; JavaScript rendering and premium proxies consume the allowance faster.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value is incorrect because ZenRows has multiple published paid plans, starting with a Developer plan.",
+          "suggestion": "List or link the current paid plans; current API documentation states pricing starts at $69 per month.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "ZenRows publishes plan-specific concurrency and response-size limits, so \"not published\" is incorrect.",
+          "suggestion": "Record the plan-dependent concurrency limits, including 5 concurrent requests for the trial, and note that exceeding concurrency returns HTTP 429.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The Universal Scraper API returns the target site's body directly by default, not a JSON object with an html property. For the listed httpbin.io target, the response would be httpbin's own JSON structure.",
+          "suggestion": "Show representative raw target content, or enable an appropriate structured-output feature and show its documented response format.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "zerobounce",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "ZeroBounce currently grants up to 100 free validation credits every month to eligible freemium accounts, not merely 100 credits once at signup.",
+          "suggestion": "Use \"100 free credits per month for eligible freemium accounts; purchasing credits ends freemium replenishment.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The null value is incorrect because ZeroBounce sells pay-as-you-go credits and subscription products.",
+          "suggestion": "Record the current paid options or link to ZeroBounce pricing; current pay-as-you-go pricing begins with a minimum credit purchase.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "ZeroBounce publishes detailed endpoint-specific limits, so \"not published\" is incorrect.",
+          "suggestion": "For /v2/validate, state the published validation burst limit and temporary-block behavior; separately document the lower batch endpoint limit where relevant.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "audits": [
+    {
+      "id": "cve-program",
+      "issues": []
+    },
+    {
+      "id": "dailymed",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is the DailyMed website root, not the documented API root.",
+          "suggestion": "Use https://dailymed.nlm.nih.gov/dailymed/services/v2 as the current versioned API root.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "The value \"Researching\" is an unfinished placeholder.",
+          "suggestion": "State that the v2 web services are unauthenticated, read-only GET endpoints.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The claimed official prohibition on parallel requests and high-load rate limiting is not present in the official DailyMed API documentation located during review.",
+          "suggestion": "Use \"not published\" unless a DailyMed-specific policy source can be supplied.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "This repeats unsupported concurrency and throttling guidance as though it were an official free-tier condition.",
+          "suggestion": "Use \"Free public API with no published numeric quota\" and omit the parallel-request claim.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "data-gouv-fr",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "With page_size=1 and no filters, the catalog has many matching datasets, so next_page will not be null on page 1.",
+          "suggestion": "Show next_page as a pagination URL or replace it with a non-literal placeholder.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "data-gov-uk",
+      "issues": []
+    },
+    {
+      "id": "data-gov",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is the former CKAN API, which Data.gov now identifies as a read-only legacy endpoint replaced by Catalog API v4.",
+          "suggestion": "Use https://api.gsa.gov/technology/datagov/v4/ for new and current integrations.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The generic CKAN documentation describes the legacy interface rather than Data.gov's current Catalog API.",
+          "suggestion": "Use https://resources.data.gov/catalog-api/.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "The current Catalog API requires an api.data.gov key on every request; unauthenticated access is not the current authentication model.",
+          "suggestion": "Set type to apiKey and specify the X-Api-Key header. DEMO_KEY may be used for limited exploration.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The claim of no published quota is obsolete for the current API.",
+          "suggestion": "State that personal keys allow 1,000 requests per hour; DEMO_KEY allows 30 requests per IP per hour and 50 per IP per day.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Current limits are published, rather than unknown.",
+          "suggestion": "Use \"Personal key: 1,000 requests/hour; DEMO_KEY: 30 requests/IP/hour and 50 requests/IP/day.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The curl demonstrates the legacy CKAN package_search interface, not the replacement Catalog API.",
+          "suggestion": "Use curl -H \"X-Api-Key: DEMO_KEY\" \"https://api.gsa.gov/technology/datagov/v4/search?q=climate&per_page=5\" and update the response snippet to the v4 schema.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "It presents the CKAN interface as Data.gov's current API and describes only federal datasets, while the replacement catalog covers federal, state, local, and tribal metadata.",
+          "suggestion": "Describe Catalog API v4 as the current API and identify CKAN only as the retained read-only legacy interface.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "data-world",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The statement that anyone can create a token after a free community signup is obsolete. The data.world Open Data Community and its member accounts were retired on July 13, 2026; the remaining API serves the enterprise product.",
+          "suggestion": "Describe Bearer-token access as provisioned for data.world Enterprise customers, or remove the entry if the directory is limited to publicly self-service APIs.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "The former free Open Data Community was discontinued on July 13, 2026, so it is no longer a current public API free tier.",
+          "suggestion": "Set free_tier to false for the continuing Enterprise API unless data.world publishes a new generally available free API plan.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "A null value is incorrect for the continuing data.world Enterprise product, which is commercially licensed.",
+          "suggestion": "Use \"Contact sales\" or the current enterprise-plan terms.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The current /v0/search resource-search endpoint is POST, requires application/json, and expects the search text in a JSON body; GET with ?q=climate is not its documented interface. The shown response also reflects the former community-style search model.",
+          "suggestion": "Use POST https://api.data.world/v0/search with Authorization and Content-Type headers and a body such as {\"query\":\"climate\"}; regenerate the response snippet from the current enterprise schema.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "Calling this public-directory entry operational obscures that the public Open Data Community it describes was retired, although the enterprise platform continues.",
+          "suggestion": "Mark the public/community offering retired, or recast the entry explicitly as the enterprise-only data.world API.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "It describes an active community for publishing and discovering open datasets, but that community and its datasets were discontinued in July 2026. This conflates the retired community product with the continuing Enterprise Data Catalog.",
+          "suggestion": "Rewrite it solely around the enterprise catalog and governance API, or retire the entry.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "datadog",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free-plan limits are published, so \"unknown\" is inaccurate.",
+          "suggestion": "For Infrastructure Monitoring, state up to 5 hosts with 1-day metric retention, while noting that other Datadog products have separate allotments.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Datadog has numerous published paid plans, so null is incorrect.",
+          "suggestion": "Record the applicable paid offerings; for example, Infrastructure Pro starts at $15 per host per month when billed annually, with other products priced separately.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Datadog publishes its rate-limit policy and several concrete limits.",
+          "suggestion": "State that limits vary by endpoint and are exposed through X-RateLimit-* headers; metrics and log submission are not API-rate-limited, while event submission is limited to 250,000 events per minute per organization.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "datamuse",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current free allowance is explicitly published rather than unknown.",
+          "suggestion": "State \"Up to 100,000 requests per day without a key until January 1, 2027; thereafter an API key is required with a 100,000-request daily limit per key.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Datamuse publishes a 100,000-request daily threshold and warns that requests beyond it may be rate-limited without notice.",
+          "suggestion": "Use the published 100,000 requests/day threshold and mention the January 1, 2027 authentication change.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "dbpedia",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The public endpoint has documented operational limits, so \"unknown\" is inaccurate.",
+          "suggestion": "Record the documented 10,000-row result cap, 120-second query limit, 50 parallel connections per IP, and 100 requests per second per IP with an initial burst of 120.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "DBpedia explicitly publishes request, connection, query-time, and result-size limits.",
+          "suggestion": "Use \"100 requests/second/IP with burst 120; 50 parallel connections/IP; 10,000 rows; 120-second query execution limit.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "deck-of-cards",
+      "issues": []
+    }
+  ]
+}

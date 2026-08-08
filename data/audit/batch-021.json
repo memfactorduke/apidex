@@ -1,0 +1,191 @@
+{
+  "audits": [
+    {
+      "id": "kitsu",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The canonical Kitsu domain has moved to kitsu.app; kitsu.io is the legacy domain and may only work through redirection.",
+          "suggestion": "Use https://kitsu.app/api/edge and update the example to the same domain.",
+          "confidence": "medium"
+        },
+        {
+          "field": "auth.details",
+          "problem": "Kitsu documents the OAuth2 password and refresh-token grants. Client-credentials authentication is not documented, and self-service application registration is explicitly not implemented.",
+          "suggestion": "State that authenticated access uses the password grant at /api/oauth/token followed by a Bearer token; remove the client-credentials and account-settings registration claims.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "curl interprets square brackets as URL globbing even inside quotes, so filter[text] can produce a bad-range error.",
+          "suggestion": "Use curl -s 'https://kitsu.app/api/edge/anime?filter%5Btext%5D=cowboy%20bebop' -H 'Accept: application/vnd.api+json', or add --globoff.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "klarna",
+      "issues": []
+    },
+    {
+      "id": "kraken",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "https://api.kraken.com is only the host, while the documented Spot REST base is https://api.kraken.com/0. It also does not cover the derivatives APIs claimed in the description; Kraken Futures uses separate futures.kraken.com roots.",
+          "suggestion": "Set the base URL to https://api.kraken.com/0 and scope the entry to Spot REST, or separately document Futures roots such as https://futures.kraken.com/derivatives/api/v3.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "lastfm",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "artist.getInfo returns the artist play count under stats.playcount, not stats.plays.",
+          "suggestion": "Replace \"plays\":\"1599101\" with \"playcount\":\"1599101\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "launch-library-2",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The value is an unfilled schema placeholder rather than an API URL.",
+          "suggestion": "Use https://ll.thespacedevs.com/2.3.0 for the current supported production API version.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The value is an unfilled schema placeholder.",
+          "suggestion": "Use the current Launch Library 2 documentation at https://ll.thespacedevs.com/ or the official overview at https://thespacedevs.com/llapi.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "Unauthenticated access is available, but higher-limit API keys are offered to project supporters; the claim that a token follows a free signup is unsupported.",
+          "suggestion": "State that no authentication is needed for the public allowance and that higher-rate API keys are available through The Space Devs' Patreon/supporter program.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The value is an unfilled schema placeholder despite a published limit.",
+          "suggestion": "Set it to 15 unauthenticated calls per hour; the development endpoint has stale/limited data but no rate limit.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "null omits the publicly offered supporter access for higher rate limits.",
+          "suggestion": "Mention that higher-rate API keys are available through The Space Devs' Patreon tiers; verify the selected tier's current allowance before publishing exact numbers.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The value is an unfilled schema placeholder.",
+          "suggestion": "Use 15 calls per hour for unauthenticated production requests and note that authenticated supporter limits vary by tier.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "Both the request and response are unfilled schema placeholders.",
+          "suggestion": "Use a real example such as curl -s 'https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=1', with a response shaped like {\"count\":...,\"next\":...,\"previous\":null,\"results\":[...]}.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The value is an unfilled schema placeholder.",
+          "suggestion": "Describe it as The Space Devs' API for launches, events, agencies, astronauts, stations, spacecraft, and related spaceflight data.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "launchdarkly",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "LaunchDarkly's REST API expects the token itself in the Authorization header. The documented REST examples do not prefix it with Bearer; doing so can make authentication fail.",
+          "suggestion": "Use Authorization: YOUR_API_KEY and remove the claimed Bearer alternative.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "lemon-squeezy",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The current documented limit is 300 API calls per minute, not 120. The documentation identifies X-Ratelimit-Limit and X-Ratelimit-Remaining headers but does not promise Retry-After.",
+          "suggestion": "Set this to 300 calls per minute; successful responses include X-Ratelimit-Limit and X-Ratelimit-Remaining, and excess requests return 429.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The phrase \"plus payment processing\" double-counts the standard fee: Lemon Squeezy describes its base 5% + $0.50 platform fee as covering payment processing and other merchant-of-record costs, with specific surcharges in some cases.",
+          "suggestion": "State that the standard platform fee is 5% + $0.50 per transaction, with possible international, PayPal, subscription, affiliate, and other surcharges; custom pricing is available.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The documented User object does not have a status attribute. It instead includes fields such as color, avatar_url, has_custom_avatar, createdAt, and updatedAt.",
+          "suggestion": "Remove \"status\":\"active\" and use attributes from the documented User schema.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "lichess",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The claimed typical allowance of 20\u201330 requests per second conflicts with Lichess's published guidance to make only one request at a time and, after a 429, wait a full minute.",
+          "suggestion": "State that fixed limits are intentionally unpublished; send one request at a time and pause for one minute after any 429 response.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "lingua-robot",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "The provider website is currently returning an error and is not the effective subscription/reference surface for this RapidAPI-hosted interface.",
+          "suggestion": "Use the current RapidAPI listing, https://rapidapi.com/rokish/api/lingua-robot, as the documentation and subscription URL unless the provider site becomes reliable again.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing",
+          "problem": "Pricing is not unknown: RapidAPI currently publishes a Basic free plan with 2,500 requests per day and paid Pro, Ultra, and Mega plans.",
+          "suggestion": "Set the free limit to 2,500 requests/day and record the currently published $10, $49, and $99 monthly tiers, including their overage and bandwidth charges.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published through the plan quotas rather than being wholly unpublished.",
+          "suggestion": "Record the plan-based daily request allowances: 2,500/day on Basic, 25,000/day on Pro, 250,000/day on Ultra, and 2,500,000/day on Mega, subject to rechecking RapidAPI pricing.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "linkedin",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The entry treats the legacy /v2 path as the universal LinkedIn API root. Current versioned product APIs generally use https://api.linkedin.com/rest with a LinkedIn-Version header, while certain endpoints such as OIDC /v2/userinfo remain exceptions.",
+          "suggestion": "Use https://api.linkedin.com/rest for current versioned APIs and explicitly document https://api.linkedin.com/v2/userinfo as a legacy-path OIDC exception rather than one universal base.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "LinkedIn's OIDC UserInfo examples use a BCP 47 locale such as en-US, not en_US.",
+          "suggestion": "Change \"locale\":\"en_US\" to \"locale\":\"en-US\".",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

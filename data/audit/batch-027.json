@@ -1,0 +1,178 @@
+{
+  "audits": [
+    {
+      "id": "nhl-edge",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The sample is not a genuine response for the stated date and game. Game ID 2025020123 denotes an early 2025-26 season sequence and is inconsistent with a Toronto-Boston game allegedly played on 2026-04-10.",
+          "suggestion": "Replace it with a response captured from the endpoint, or use a clearly labeled schema-only example without invented game IDs, dates, teams, or scores.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "nhtsa-vpic",
+      "issues": []
+    },
+    {
+      "id": "noaa-cdo",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This uses NOAA's legacy ncdc.noaa.gov hostname rather than the current documented API root.",
+          "suggestion": "https://www.ncei.noaa.gov/cdo-web/api/v2",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "This uses the legacy NCDC hostname.",
+          "suggestion": "https://www.ncei.noaa.gov/cdo-web/webservices/v2",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example calls the legacy NCDC hostname instead of NOAA's currently documented NCEI endpoint.",
+          "suggestion": "curl -H \"token: YOUR_API_KEY\" \"https://www.ncei.noaa.gov/cdo-web/api/v2/datasets\"",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "CDO Web Services v2 documentation states that all API responses are JSON; the claim that this REST API returns JSON or CSV conflates it with other CDO download interfaces.",
+          "suggestion": "State that CDO Web Services v2 returns JSON.",
+          "confidence": "high"
+        },
+        {
+          "field": "duplicate_entry",
+          "problem": "This and noaa-ncei describe the same CDO v2 API, authentication, limits, and endpoints rather than distinct products.",
+          "suggestion": "Keep one canonical CDO/NCEI entry and remove or merge the duplicate.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "noaa-ncei",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "Despite using the current NCEI documentation URL, the base URL still uses NOAA's legacy ncdc.noaa.gov hostname.",
+          "suggestion": "https://www.ncei.noaa.gov/cdo-web/api/v2",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example calls the legacy NCDC hostname instead of the current documented NCEI endpoint.",
+          "suggestion": "curl -s -H \"token: YOUR_API_KEY\" \"https://www.ncei.noaa.gov/cdo-web/api/v2/datasets\"",
+          "confidence": "high"
+        },
+        {
+          "field": "duplicate_entry",
+          "problem": "This is the same CDO v2 API already listed as noaa-cdo, not a separate NCEI API product.",
+          "suggestion": "Merge it with noaa-cdo and retain one canonical entry.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "nominatim",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The public-instance policy does not restrict use categorically to non-commercial applications. It warns commercial applications about reliability and withdrawal risk but permits compliant moderate use.",
+          "suggestion": "Describe it as free for policy-compliant light use, including moderate end-user-triggered use, with no SLA; commercial applications should not depend on continued availability.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The statement that bulk geocoding is forbidden is too broad. Systematic queries are forbidden, but the current policy conditionally permits smaller one-time bulk jobs and imposes stricter limits on long-running scripts.",
+          "suggestion": "State that bulk use is discouraged; small one-time jobs may be allowed under the policy, while systematic queries are forbidden and scripts lasting over a day or running regularly are limited to 4 requests per minute.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "Calling the public instance strictly non-commercial misstates the current usage policy.",
+          "suggestion": "Replace \"light, non-commercial use\" with \"light, policy-compliant use with no SLA; commercial users should plan for an alternative provider or self-hosting.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "npi-registry",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The example invents the identity associated with NPI 1679576722. That NPI belongs to David Wiebe, an orthopaedic-surgery physician, not John Doe.",
+          "suggestion": "Use the real current CMS response for that NPI, or use a different verified NPI and redact only sensitive address details without changing the provider identity.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "npm",
+      "issues": []
+    },
+    {
+      "id": "numbers-api",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "The original Numbers API is no longer reliably operational at this domain. Current checks time out, and recent domain evidence indicates numbersapi.com has been repurposed as an unrelated gambling site.",
+          "suggestion": "Mark the entry dead/retired and remove it from an operational public-API directory unless the original operator provides a verified replacement endpoint.",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "https://numbersapi.com is no longer a trustworthy current API root. The historical API was HTTP-only, and the domain now appears repurposed.",
+          "suggestion": "Do not replace it with the insecure historical HTTP URL; remove the entry pending a verified successor.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The HTTPS curl request does not currently provide the documented Numbers API response.",
+          "suggestion": "Remove the example with the entry, or replace it only after identifying and testing an official successor endpoint.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "Claims of unlimited free API use are no longer valid when the original service is unavailable or the domain is no longer serving that API.",
+          "suggestion": "Remove the pricing claims and retire the entry.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "nutritionix",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "docs.nutritionix.com is not the currently discoverable Track API v2 documentation location.",
+          "suggestion": "Use https://developer.nutritionix.com/docs/v2 after confirming it through the current Nutritionix developer portal.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Setting paid_plans to null is misleading. Nutritionix is a commercial API with paid or custom-quoted production access and premium features.",
+          "suggestion": "Set paid_plans to a statement such as \"Paid production and premium access available by custom quote/contacting Nutritionix sales\" and verify the current free-development quota in an authenticated account.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "nvd-nist",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "NVD API 2.0 does not accept the API key as a query parameter; it requires an apiKey request header. Query-string keys were a 1.0 behavior.",
+          "suggestion": "Optional API key via the \"apiKey: YOUR_API_KEY\" request header; unauthenticated requests remain available at the lower limit.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The cveId parameter is deprecated in the current NVD CVE API in favor of cveIds, although it may still work for compatibility.",
+          "suggestion": "curl \"https://services.nvd.nist.gov/rest/json/cves/2.0?cveIds=CVE-2021-44228\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

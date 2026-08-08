@@ -1,0 +1,263 @@
+{
+  "audits": [
+    {
+      "id": "cohere",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Current Cohere documentation specifies Bearer authentication; it does not document X-Api-Key as an alternative.",
+          "suggestion": "State: API key via Authorization: Bearer YOUR_API_KEY.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The entry incorrectly describes a production free tier. Trial keys are free and limited to 1,000 calls/month; production keys are paid, although some newer models impose trial-like limits.",
+          "suggestion": "Use: Free trial key: 1,000 API calls/month; production usage is metered and model-specific.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The token-per-minute figures are not in Cohere's current published table, and 2,000 for Embed is inputs/minute, not tokens/minute. Current limits are also model-specific.",
+          "suggestion": "Use the current table: Chat trial 20 requests/minute and generally 500 requests/minute for applicable production models; Embed 2,000 inputs/minute; Rerank 10 trial or 1,000 production requests/minute. Some newer models require contacting sales.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example uses command-r-plus, an alias deprecated on September 15, 2025.",
+          "suggestion": "Replace it with a currently supported model such as command-a-plus-05-2026, while retaining the valid /v2/chat request structure.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "Classification is presented as a current primary API capability, but Cohere's v1 Classify endpoint is deprecated.",
+          "suggestion": "Remove classification from the current capability list or explicitly label the Classify endpoint deprecated.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "coinbase-commerce",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "The legacy Coinbase Commerce product is no longer operational as a current merchant API. Coinbase required migration by March 31, 2026, after which the Commerce portal became inaccessible and new charges could no longer be created.",
+          "suggestion": "Remove this entry or mark it retired and replace it with Coinbase Business Checkouts API.",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "api.commerce.coinbase.com is the legacy Charge API host, not the current Coinbase merchant-payment API root.",
+          "suggestion": "For the replacement product use https://business.coinbase.com/api/v1, with checkout endpoints under /checkouts.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The supplied documentation URL now returns a 404 page.",
+          "suggestion": "Use https://docs.cdp.coinbase.com/api-reference/business-api/rest-api/checkouts/introduction for the current Checkouts API, or link the Commerce migration guide if retaining a retired entry.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "X-CC-Api-Key describes the retired Commerce Charge API. The current Coinbase Business Checkouts API uses a short-lived JWT Bearer token generated from a CDP API key.",
+          "suggestion": "Use Authorization: Bearer YOUR_JWT_TOKEN and document CDP API-key JWT generation.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "Calling this a free tier is misleading. Coinbase Commerce charged a 1% transaction fee, and Coinbase Business also uses transaction-based pricing rather than a conventional free API tier.",
+          "suggestion": "Set free_tier to false and document the current transaction fee, separately noting that sandbox testing does not process real funds.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The curl is a historically valid legacy GET /charges request, but it is not a usable example for the current merchant API.",
+          "suggestion": "Replace it with a Coinbase Business request such as GET https://business.coinbase.com/api/v1/checkouts using an Authorization: Bearer JWT header.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The description conflates legacy Commerce capabilities with Coinbase Business. Legacy Commerce did not offer the current invoicing suite, while the new product uses checkouts rather than Commerce charges or payment intents.",
+          "suggestion": "Rewrite the entry specifically around Coinbase Business Checkouts and keep invoicing identified as a separate Coinbase Business API.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "coinbase",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The value is a placeholder, and Coinbase does not have one universal API root covering all the products described.",
+          "suggestion": "Scope the entry to one product. For Coinbase Advanced Trade, use https://api.coinbase.com/api/v3/brokerage; create separate entries for Exchange, Coinbase App, CDP, and Coinbase Business APIs.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "X-Api-Key is not the authentication interface for the Coinbase products described. Advanced Trade private endpoints use a Bearer JWT generated from a CDP API key; Exchange uses CB-ACCESS-* signed headers; public market endpoints may require no authentication.",
+          "suggestion": "Replace the auth details after selecting a specific Coinbase API, or split the products into separate entries with their actual authentication schemes.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "A generic free-tier claim cannot accurately cover public market-data endpoints, authenticated trading APIs, and other Coinbase products; trading and payment activity may incur fees even where API access has no subscription charge.",
+          "suggestion": "Scope pricing to the selected product and distinguish free API access from transaction or trading fees.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The value is an unresolved placeholder.",
+          "suggestion": "Populate the documented limits for the specific Coinbase product selected; do not assign one generic limit to all Coinbase APIs.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "Both the request and response are unresolved placeholders.",
+          "suggestion": "Add a real example for the selected product, such as an unauthenticated Advanced Trade public-product request or an authenticated Bearer-JWT brokerage request.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The entry conflates Advanced Trade, Exchange, Coinbase App, OAuth, and broader CDP functionality, which have different roots, credentials, availability, and interfaces.",
+          "suggestion": "Split this into product-specific directory entries rather than publishing a generic Coinbase entry.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "coingecko",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The entry mentions Pro authentication without stating that Pro keys must use a different API host. A Pro key is not intended for the listed Demo base URL.",
+          "suggestion": "State that Demo uses https://api.coingecko.com/api/v3 with x-cg-demo-api-key, while paid Pro access uses https://pro-api.coingecko.com/api/v3 with x-cg-pro-api-key.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The 30-calls-per-minute Demo limit is stale. CoinGecko's current pricing matrix lists 10,000 monthly credits and 100 requests/minute for Demo.",
+          "suggestion": "Use: Demo API: 10,000 call credits/month and 100 requests/minute, with attribution required.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated 30 requests/minute Demo rate is outdated.",
+          "suggestion": "Change the Demo rate to 100 requests/minute and retain plan-specific paid limits from the current pricing matrix.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "coinmarketcap",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The Basic-plan figures are stale. CoinMarketCap's current public pricing matrix lists 15,000 monthly credits and 50 requests/minute, not 10,000 and 30. The stated approximately 333/day limit should not be inferred from a monthly allowance.",
+          "suggestion": "Use the current Basic figures: 15,000 call credits/month and 50 requests/minute; omit a daily cap unless CoinMarketCap explicitly publishes one.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The tier names are outdated or incomplete. The current public matrix includes Builder and Growth rather than the listed Standard tier.",
+          "suggestion": "Use the current lineup: Builder, Startup, Growth, Professional, and Enterprise.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "collegefootballdata",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "The /api/docs/ URL is obsolete; the current canonical Swagger documentation is served from the API root.",
+          "suggestion": "Use https://api.collegefootballdata.com/ as the documentation URL.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The free limit is published, and paid tiers exist, so unknown and null are incorrect. The free tier currently allows 1,000 calls/month, with an academic tier and multiple paid monthly tiers offering larger quotas and additional features.",
+          "suggestion": "Set free_tier_limits to 1,000 calls/month and populate the current Academic and Tier 1 through Tier 6 offerings from the API tiers page.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Although a separate per-minute throttle may not be published, plan-level request quotas are explicitly published, so not published is incomplete and misleading.",
+          "suggestion": "State the monthly quota: Free 1,000 calls/month, Academic 3,000, and plan-specific paid quotas; separately say that no general RPM limit is published if that remains true.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "comicvine",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "Exact limits are publicly stated, and a material usage restriction is omitted. Comic Vine officially supports 200 requests per resource per hour and permits API use only for non-commercial purposes.",
+          "suggestion": "Use: Free for non-commercial use only; 200 requests per resource per hour, with additional velocity detection.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The claim that exact limits are not clearly published is false.",
+          "suggestion": "Use: 200 requests per resource per hour, plus unspecified velocity detection that may temporarily block aggressive request bursts.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "companies-house",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The wording incorrectly suggests that the Companies House Streaming API may be paid. The public-data and streaming APIs are free; separately sold bulk products and the legacy XML gateway are different services.",
+          "suggestion": "Set paid_plans to null for this API and, if useful, mention separate paid Companies House bulk/XML products without presenting them as API tiers.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The response data does not match company 00000006. That company is MARINE AND GENERAL MUTUAL LIFE ASSURANCE SOCIETY, is dissolved, was incorporated on 1862-10-25, and is a private unlimited company without share capital.",
+          "suggestion": "Replace the snippet with values returned for 00000006, including company_name MARINE AND GENERAL MUTUAL LIFE ASSURANCE SOCIETY, company_status dissolved, date_of_creation 1862-10-25, and type private-unlimited-nsc; alternatively use a different company number matching the existing snippet.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "congress-gov",
+      "issues": []
+    },
+    {
+      "id": "contextualweb-news",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "The API appears to have been delisted from RapidAPI. The provider's current RapidAPI profile says it has published no APIs, so operational is not supportable.",
+          "suggestion": "Mark the entry retired/dead and remove it unless a working current subscription and authenticated request can be demonstrated.",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "The hostname belongs to the old delisted RapidAPI product and is not a verifiable current API root.",
+          "suggestion": "Remove the base URL with the retired entry, or replace it only after locating and testing an officially published successor endpoint.",
+          "confidence": "high"
+        },
+        {
+          "field": "docs_url",
+          "problem": "The URL now resolves to a generic/empty RapidAPI page rather than usable current API documentation.",
+          "suggestion": "Remove the entry or supply documentation for a verified successor product.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The claimed free and paid plans cannot be current because the provider no longer publishes this API on RapidAPI.",
+          "suggestion": "Delete the stale pricing claims and retire the entry unless current marketplace plans can be directly verified.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The curl reflects the old ContextualWeb RapidAPI interface but cannot serve as a current working example for a delisted API.",
+          "suggestion": "Remove it with the retired entry or replace it with an authenticated example from a verified successor API.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "audits": [
+    {
+      "id": "twelve-data",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The Basic plan is not accurately characterized as offering only delayed data. Current pricing lists real-time US equities and ETFs, forex, and cryptocurrency data, with access otherwise limited by market coverage and trial symbols.",
+          "suggestion": "Describe the Basic plan as 8 API credits/minute and 800/day with real-time access for specified markets, limited market coverage, and global trial symbols.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The cited Ultra figure of approximately 1,440 API credits per minute is outdated; current published pricing shows a higher starting allocation.",
+          "suggestion": "Refresh all paid-plan figures from the live pricing table or omit volatile examples and link users to pricing.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "twilio",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "Twilio no longer describes its trial as approximately $15 of shared credit. The current trial lasts 30 days and supplies product-specific free units, such as 100 SMS messages, 75 voice minutes, and 3,000 emails.",
+          "suggestion": "Replace the $15-credit claim with the current 30-day, product-specific free-unit model and note its recipient, geography, and template restrictions.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "udemy",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "This is an unresolved research placeholder rather than an authentication description.",
+          "suggestion": "For legacy Affiliate API credentials, specify HTTP Basic authentication using the client ID as username and client secret as password.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "Udemy marks the Affiliate API deprecated and says new access through Udemy was discontinued on January 1, 2025. Existing approved clients may retain access, but describing it simply as operational hides this material restriction.",
+          "suggestion": "Mark it deprecated or legacy/restricted and state that new direct Affiliate API access is discontinued while existing approved credentials may continue working.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "Calling this a current free tier for approved Affiliate Program members is misleading because new direct access to this legacy API is no longer generally issued; the affiliate program now operates through Impact.",
+          "suggestion": "State that there is no new self-serve API tier and that legacy access is limited to existing approved clients; distinguish Impact's affiliate APIs from Udemy's legacy course-catalog API.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "uk-parliament",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This URL is specifically the Members API root, but the entry describes a family that also includes bills, committees, votes, and other independently hosted APIs. There is no single shared API root for that whole family.",
+          "suggestion": "Either rename and narrow the entry to UK Parliament Members API or represent each parliamentary service with its own base URL.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The sample contains stale and incorrect Rishi Sunak data. His Parliament member ID is 4483, not 4212, and his current constituency is Richmond and Northallerton, represented since July 2024, not Richmond (Yorks) since 2015.",
+          "suggestion": "Replace the snippet with a current live response showing member ID 4483 and the Richmond and Northallerton membership beginning in 2024.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "un-data",
+      "issues": []
+    },
+    {
+      "id": "uniprot",
+      "issues": []
+    },
+    {
+      "id": "untappd",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The statement that some read endpoints accept client_id alone is incorrect. Untappd documents either an OAuth access_token or both client_id and client_secret for these calls; the static credential pair is not itself an OAuth client-credentials grant.",
+          "suggestion": "State that user-authorized operations use OAuth 2.0 access tokens, while supported public-data calls require either an access token or both client_id and client_secret.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The example identifies Pliny the Elder with bid 1, but its Untappd beer ID is 4499. Its current style is also represented as \"IPA - Imperial / Double,\" not \"Imperial IPA.\"",
+          "suggestion": "Use bid 4499 and the real current API fields, or replace the response with a verified redacted response that does not invent identifiers.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "urlscan-io",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free-tier limits are published, so \"unknown\" is incorrect. The current free plan lists daily allowances including 50 private scans, 1,000 unlisted scans, 5,000 public scans, and 1,000 search requests.",
+          "suggestion": "Populate the current published free-plan quotas and note that separate minute, hour, and daily controls may also apply.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate-limit behavior is publicly documented. Limits are separated by action and by minute, hour, and day, are available through the quota endpoint, and are returned in X-Rate-Limit headers.",
+          "suggestion": "Replace \"not published\" with the documented per-action quota model and direct users to /user/quotas/ and the response headers for their exact limits.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "usaspending",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The sample's USAID identifiers are incorrect for the current endpoint. The live response uses agency_id 801 and toptier_code \"072,\" not agency_id 1 and code \"001.\"",
+          "suggestion": "Refresh the snippet from the current endpoint or avoid embedding mutable agency identifiers unless they have been verified.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "usda-fooddata-central",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The DEMO_KEY limit is reversed. Current official documentation gives DEMO_KEY only 30 requests/hour per IP and 50/day; the normal default for a personal API key is 1,000 requests/hour.",
+          "suggestion": "Set DEMO_KEY to 30/hour and 50/day, and personal keys to the documented default of 1,000 requests/hour.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated rate limits incorrectly assign 1,000 requests/hour to DEMO_KEY and claim that the personal-key limit is unclear.",
+          "suggestion": "Use \"Personal key: default 1,000 requests/hour; DEMO_KEY: 30/hour and 50/day per IP; higher limits available by contacting FoodData Central.\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

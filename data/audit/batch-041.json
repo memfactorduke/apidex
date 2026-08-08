@@ -1,0 +1,192 @@
+{
+  "audits": [
+    {
+      "id": "tomorrow-io",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The documented REST header is `apikey`, not `Authorization`.",
+          "suggestion": "Use `apikey: YOUR_API_KEY`, or the `apikey` query parameter. See [authentication documentation](https://docs.tomorrow.io/reference/api-authentication).",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free-tier limits are published, so `unknown` is incorrect.",
+          "suggestion": "Use `500 requests/day, 25 requests/hour, and 3 requests/second`. See [Tomorrow.io free-plan limits](https://support.tomorrow.io/hc/en-us/articles/20273728362644-Free-API-Plan-Rate-Limits).",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published, contrary to the entry.",
+          "suggestion": "State the free-plan limits above and note that other plans have account-specific limits.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "tomtom",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "TomTom provides recurring free monthly requests per API, not merely unspecified trial credits.",
+          "suggestion": "Describe product-specific monthly allowances; Geocoding currently includes 20,000 free requests/month, while the legacy Search API includes 2,500. See [current TomTom pricing](https://docs.tomtom.com/pricing).",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "trackingmore",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Current V4 documentation uses `Tracking-Api-Key`; the claimed Bearer alternative is unsupported and appears to conflate another authentication scheme.",
+          "suggestion": "Remove the Bearer statement and use only `Tracking-Api-Key: YOUR_API_KEY`. See [TrackingMore's version comparison](https://support.trackingmore.com/en/article/differences-among-3-versions-of-trackingmore-api-1ip0fmh/).",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "The current Free plan has zero tracking credits and does not include API keys; API access begins with paid/trial plans.",
+          "suggestion": "Set API free-tier availability to false and describe the time-limited free trial separately. See [current TrackingMore pricing](https://www.trackingmore.com/pricing).",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The listed per-endpoint values do not match current V4 plan limits and appear mixed from older API versions.",
+          "suggestion": "Use the current plan-based limits: Basic 6 requests/second, Pro 10 requests/second, and Enterprise custom, while checking endpoint documentation for exceptions.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "tradier",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "Production API access does not require a funded account. Tradier states that API access is free for every brokerage account holder, and its current setup guide issues production and sandbox tokens after account setup.",
+          "suggestion": "Say `API access is free for Tradier Brokerage account holders; trading, subscriptions, and regulatory fees may apply`. See [Tradier's API overview](https://production.tradier.com/businesses/fintechs) and [getting-started guide](https://docs.tradier.com/docs/getting-started).",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Tradier publishes a complete rate-limit table.",
+          "suggestion": "Use: production Standard and Market Data 120 requests/minute; production Trading 60/minute; sandbox 60/minute for all three categories, per access token. See [rate-limit documentation](https://docs.tradier.com/docs/rate-limiting).",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "trakt",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "Apiary is no longer the current documentation home.",
+          "suggestion": "Use `https://docs.trakt.tv/`, the current official documentation site.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The claim that VIP users receive higher API request-rate limits is not present in the current limits and conflicts with the published common limits.",
+          "suggestion": "Remove `VIP higher`; retain 1,000 GET requests per 5 minutes for authenticated users and applications, plus 1 authenticated write per second. See [current Trakt rate limits](https://docs.trakt.tv/docs/rate-limiting).",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "transitland",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The documented REST API root includes `/rest`; `/api/v2` is only a common prefix for several distinct products.",
+          "suggestion": "Use `https://transit.land/api/v2/rest`. See [Transitland REST documentation](https://www.transit.land/documentation/rest-api).",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "Transitland explicitly does not use the `Authorization` header.",
+          "suggestion": "Use the `apikey` query parameter or an `apikey` header. See [Transitland API configuration](https://www.transit.land/documentation).",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current free REST allowance is 10,000 queries/month, not 1,000 requests/day.",
+          "suggestion": "Use `REST API: 10,000 queries/month`; the same free plan also includes 1,000 routing queries/month and 100,000 vector tiles/month. See [current plans](https://www.transit.land/plans-pricing/).",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated daily quota is incorrect and omits the monthly product-specific quotas.",
+          "suggestion": "Replace it with the current monthly allowances and identify the Professional REST allowance as 200,000 requests/month.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "travis-ci",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "`Travis-API-Version: 3` selects the API version; it is not an authentication alternative.",
+          "suggestion": "State that authentication uses `Authorization: token YOUR_API_TOKEN`, while `Travis-API-Version: 3` is a separate required/recommended version header. See [Travis authentication documentation](https://developer.travis-ci.com/authentication).",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "Travis CI no longer advertises a generally available free hosted plan; current public plans start at $15/month, and its billing documentation says Free Trial Plans are unavailable.",
+          "suggestion": "Set the general hosted free tier to false or qualify that free OSS credits/partner queues may be available under special conditions. See [current Travis CI pricing](https://www.travis-ci.com/pricing/).",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "tripadvisor",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid access is not exclusively contact-sales partner pricing. The Content API has self-service pay-as-you-go billing, with volume pricing shown during checkout or under My Plans.",
+          "suggestion": "Use `Self-service pay-as-you-go per-call pricing; contact sales for usage above 500,000 calls/month or negotiated arrangements`. See the [current FAQ](https://tripadvisor-content-api.readme.io/reference/faq).",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The request filters results to `restaurants`, but the snippet depicts the geographic entity Paris itself, so it is not consistent with the request.",
+          "suggestion": "Either change `category=restaurants` to `category=geos`, or replace the response with an actual Paris restaurant result. See the [Location Search interface](https://tripadvisor-content-api.readme.io/reference/searchforlocations).",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "tumblr",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Tumblr publishes default rate limits, so `not published` is incorrect.",
+          "suggestion": "Use `1,000 API calls/hour and 5,000 calls/day per consumer key`, while noting additional IP- and action-specific limits. See [Tumblr Developer Resources](https://help.tumblr.com/knowledge-base/developer-resources/).",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "tvmaze",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free API is not restricted to non-commercial use. Its CC BY-SA license permits use for any purpose when attribution and ShareAlike requirements are followed.",
+          "suggestion": "Use `Free under CC BY-SA with attribution and ShareAlike; paid plans provide alternative licensing, higher limits, and SLAs`. See [TVMaze API licensing](https://www.tvmaze.com/api).",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid plans are currently published, so `null` is inaccurate.",
+          "suggestion": "Use `Startup $250/month, Small Business $500/month, Enterprise custom`, subject to current billing terms. See [TVMaze API plans](https://www.tvmaze.com/api/plans).",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The free limit is published precisely rather than merely being commonly cited.",
+          "suggestion": "Use `at least 20 calls every 10 seconds per IP address`; clients should back off on HTTP 429. See [TVMaze rate limiting](https://www.tvmaze.com/api#rate-limiting).",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

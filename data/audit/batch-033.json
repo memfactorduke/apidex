@@ -1,0 +1,179 @@
+{
+  "audits": [
+    {
+      "id": "printful",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Printful publishes a general limit of 120 API calls per minute, with lower limits for some resource-intensive endpoints.",
+          "suggestion": "Set to \"120 requests per minute generally; lower endpoint-specific limits may apply.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The current store-information endpoints are /stores and /stores/{id}; /store is not the documented endpoint. The shown response also does not match the current /stores response shape.",
+          "suggestion": "Use \"curl -sS -H \\\"Authorization: Bearer YOUR_API_KEY\\\" https://api.printful.com/stores\" and show result as an array with paging, or call /stores/{id} for one store.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pubchem",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The value \"...\" is incorrect. PubChem explicitly asks clients not to exceed 5 requests per second and may throttle excessive traffic.",
+          "suggestion": "Set to \"Maximum 5 requests per second; automated throttling and 503 responses may apply.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "PUG-REST returns MolecularWeight as a JSON string, not a number.",
+          "suggestion": "Change MolecularWeight to \"180.16\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pusher",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "Current Channels Sandbox limits are published, not unknown.",
+          "suggestion": "Set to \"200,000 messages per day and 100 concurrent connections.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Pusher has published paid Channels plans, so null is inaccurate.",
+          "suggestion": "Record the current self-serve plans, starting with Startup at $49/month, Pro at $99/month, and Business at $299/month, plus higher tiers.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "A successful event trigger without the info parameter returns an empty JSON object; HTTP status 200 is not returned as a status field in the body.",
+          "suggestion": "Use \"{}\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pypi",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "PyPI does publish its current policy: the JSON, RSS, and Index APIs presently have no edge rate limit, although irresponsible consumers may be blocked and XML-RPC may be limited.",
+          "suggestion": "Set to \"Currently no edge rate limiting for JSON, RSS, or Index APIs; respect caching/ETag guidance and identify requests with User-Agent.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The request retrieves the latest requests metadata, but the shown version 2.32.3 is stale; the current response reports 2.34.2.",
+          "suggestion": "Update the version to 2.34.2 or omit volatile version-specific values from the snippet.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "quotable",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "The official hosted API has been repeatedly unreachable, with unresolved outage and DNS reports through 2026; a July 2026 check also found no HTTP response.",
+          "suggestion": "Mark as unavailable, discontinued, or unreliable rather than operational, unless a fresh live probe proves recovery.",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "Although this was the canonical host, api.quotable.io is not currently a functioning public API root.",
+          "suggestion": "Do not list a hosted base URL unless service is restored; present the GitHub project as self-hostable instead.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The project documentation publishes a limit of 180 requests per minute per IP.",
+          "suggestion": "Set to \"180 requests per minute per IP when the hosted service is available.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The claim that no quota is published conflicts with the documented 180-requests-per-minute limit.",
+          "suggestion": "Set to \"Free/open-source; hosted service documents 180 requests per minute per IP, but is currently unavailable.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "radar",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Radar expects the API key itself in the Authorization header. Its current examples do not use the Bearer scheme.",
+          "suggestion": "Use \"Publishable or secret API key sent directly as Authorization: prj_test_pk_..., prj_live_pk_..., prj_test_sk_..., or prj_live_sk_...; secret keys are server-side only.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "Radar documentation publishes a free allowance of up to 100,000 API requests per month rather than an unknown limit.",
+          "suggestion": "Set to \"Up to 100,000 API requests per month; other product-specific limits may also apply.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Radar offers paid Enterprise access, so null incorrectly implies no paid option.",
+          "suggestion": "Set to \"Paid Enterprise/custom pricing available.\"",
+          "confidence": "medium"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Radar publishes endpoint-specific default rate limits; they are not wholly unpublished.",
+          "suggestion": "State that limits vary by endpoint, commonly from 1 to 150 requests per second, and record the relevant endpoint-specific value where possible.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "randomuser",
+      "issues": []
+    },
+    {
+      "id": "rawg",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The 20,000-request allowance is correct but omits material current conditions: the public pricing page limits the Free plan to personal/non-commercial projects and requires backlinks to RAWG where its data is used.",
+          "suggestion": "Set to \"Up to 20,000 requests/month for personal and hobby/non-commercial projects; attribution and active backlinks are required.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "RAWG publishes paid plans, so null is inaccurate.",
+          "suggestion": "Set to \"Business: $149/month for up to 50,000 requests/month and commercial use; Enterprise: custom pricing, up to 1,000,000 requests/month.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "razorpay",
+      "issues": [
+        {
+          "field": "pricing.free_tier",
+          "problem": "Free test mode is a sandbox, not a free production tier. Successful live payments incur transaction/platform fees.",
+          "suggestion": "Set free_tier to false, or explicitly model this as \"free sandbox/test mode only; live usage is transaction-priced.\"",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "rcsb-pdb",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "RCSB explicitly states that all APIs are rate-limited and recommends starting with only a handful of requests per second, even though it does not publish one universal numeric ceiling.",
+          "suggestion": "Set to \"Rate limited; begin with a handful of requests per second, handle HTTP 429, and use retry with exponential backoff; exact thresholds vary or are unpublished.\"",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

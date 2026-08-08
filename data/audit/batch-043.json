@@ -1,0 +1,134 @@
+{
+  "audits": [
+    {
+      "id": "uselessfacts",
+      "issues": []
+    },
+    {
+      "id": "usgs-earthquake",
+      "issues": []
+    },
+    {
+      "id": "usgs-water",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "USGS does publish numeric usage guidance for this legacy service: approximately 5\u201310 small requests per second at a steady rate, with brief bursts of 40\u201350 requests per second acceptable.",
+          "suggestion": "Replace with the published 5\u201310 requests/second steady-use guidance and 40\u201350 requests/second brief-burst guidance; note that excessive use may be blocked.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "The service is operational but officially scheduled for decommissioning in early 2027, which is material lifecycle information missing from the entry.",
+          "suggestion": "Mark it operational but deprecated, warn of the early-2027 shutdown, and direct new integrations toward https://api.waterdata.usgs.gov and the official migration guide.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "vatlayer",
+      "issues": []
+    },
+    {
+      "id": "vesselfinder",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The authentication mechanism is officially documented, despite the entry saying it was not verified. VesselFinder uses the required userkey query parameter.",
+          "suggestion": "Set details to: \"API key supplied through the required userkey query parameter.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "A null value omits documented commercial pricing. VesselFinder has credit-based methods and fixed-fee subscription methods; its published credit packs currently include 10,000 credits for EUR 330, 20,000 for EUR 625, and 50,000 for EUR 1,470.",
+          "suggestion": "Describe the published credit packs and note that VesselsList and LiveData use separately quoted fixed subscriptions.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The TIMESTAMP value uses ISO-8601 form (2026-01-01T12:00:00Z), while the documented VesselsList response format uses values such as \"2017-08-11 11:17:37 UTC\".",
+          "suggestion": "Use VesselFinder's documented timestamp format or replace the value with a clearly marked format-neutral placeholder.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "virustotal",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The requested hash is the standard EICAR test file, but the snippet claims zero malicious detections. EICAR is detected by many engines, so this is materially misleading. The current object is also generally classified as text rather than reliably returning \"DOS EXE\".",
+          "suggestion": "Use a live EICAR report with nonzero malicious detections, or make the analysis counts explicitly dynamic placeholders rather than presenting false values.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "visual-crossing",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is only the host, not the documented Timeline API base URL.",
+          "suggestion": "Use https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "The placeholder says authentication is still being researched, although the method is established and already used by the example.",
+          "suggestion": "State that the account API key is passed in the key query parameter.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The statement that one record equals one day of weather for one location is not generally correct. A standard 15-day forecast for one location counts as one query result, while historical records are commonly counted per returned record.",
+          "suggestion": "State that the free allowance is 1,000 query-cost records per day and that actual cost is returned in queryCost; explain that forecast and historical requests are counted differently.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Paid pricing is documented, so null is incorrect. Visual Crossing offers metered usage above the daily free allowance and Professional, Corporate, and Enterprise options.",
+          "suggestion": "Describe the metered rate, currently $0.0001 per additional query-cost record, and mention the higher-tier plans.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The request omits dates and therefore returns the current approximately 15-day forecast, but the snippet starts on 2026-03-08, five months before the entry's current date.",
+          "suggestion": "Use a current forecast date or add explicit March 2026 dates to the request path so the response and request correspond.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "vonage",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "https://rest.nexmo.com is a valid root for classic APIs such as SMS, but not for the broad set of Vonage products claimed by this entry. Messages, Voice, Verify, and Video use other hosts and paths, so the entry conflates multiple API products under one root.",
+          "suggestion": "Rename and scope this entry to \"Vonage SMS API,\" or split Vonage products into separate entries with their actual roots.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.type",
+          "problem": "There is no single apiKey authentication type for the broad Vonage product suite. Classic APIs commonly use an API key and secret with Basic authentication, while several application APIs use JWT; some newer APIs support both.",
+          "suggestion": "If retaining a broad Vonage entry, use an authentication type such as \"varies\" and document it per product. If scoped to the SMS API, describe API-key-and-secret Basic authentication.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "voyage-ai",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "A null value omits Voyage AI's documented usage-based pricing after the free token allowance.",
+          "suggestion": "Describe model-specific per-token pricing after the free allowance; for example, voyage-4 is currently priced at $0.06 per million tokens, with other models priced separately.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "waqi",
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "audits": [
+    {
+      "id": "listen-notes",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The limit is published, not unknown. The current FREE plan includes 300 requests per month.",
+          "suggestion": "Set to \"300 requests/month; service is suspended until the next month after the quota is exceeded.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published for at least the search endpoint. The FREE plan's GET /search limit is 2 requests/second and 20 requests/minute.",
+          "suggestion": "Describe limits as endpoint- and plan-specific; include the published FREE search limit of 2 req/s and 20 req/min.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "loc-gov",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Current LOC limits are published. The loc.gov JSON/YAML API permits 20 requests per minute and may block clients for one hour when exceeded.",
+          "suggestion": "Set to \"JSON/YAML API: 20 requests/minute; one-hour block when exceeded. Other LOC services have separate limits.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "locationiq",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Official LocationIQ examples require the access token in the key query parameter; they do not document Authorization: Bearer as an interchangeable authentication method.",
+          "suggestion": "Use \"Access token via the required key query parameter; self-serve signup.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The paid-tier examples are outdated. Current published self-service rates are 15 req/s for Maps Lite, 20 for Developer, 22 for Startup, 30 for Growth Plus, and 40 for Business Plus.",
+          "suggestion": "Retain the Free limit of 2 req/s and 60 req/min, and replace the paid examples with the current tier-specific limits.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "lorem-picsum",
+      "issues": []
+    },
+    {
+      "id": "mailchimp",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The documented constraint is 10 simultaneous connections per user, not a soft limit of roughly 10 requests/second per API key. Mailchimp also says this limit cannot currently be raised per customer, contradicting the claim that paid plans receive higher limits.",
+          "suggestion": "Set to \"10 simultaneously processing Marketing API requests per user; excess requests return 429. No per-customer increase is currently available.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "GET / does not return an empty object. The API Root returns account information and links to available resources.",
+          "suggestion": "Replace \"{}\" with a representative API Root response containing fields such as account_id, account_name, and _links.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mailgun",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "Mailgun currently has a forever-free plan with 100 emails per day, one custom sending domain, REST API and SMTP access, two API keys, and limited retention. The entry incorrectly says there is no forever-free production plan.",
+          "suggestion": "Set free_tier to true and free_tier_limits to \"100 emails/day; 1 custom sending domain; 2 API keys; 1 day of log retention; additional feature limits apply.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The statement \"No forever-free production tier\" is false under current Mailgun pricing.",
+          "suggestion": "Replace it with a reference to the current free plan capped at 100 emails per day.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mapbox",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Mapbox's current REST examples and endpoint specifications require access_token as a query parameter; Authorization: Bearer is not documented as a general interchangeable authentication method for these APIs.",
+          "suggestion": "State that a Mapbox access token is supplied through the access_token query parameter, and document any endpoint-specific alternative separately.",
+          "confidence": "medium"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The example assigns coordinates.accuracy=\"rooftop\" to a feature whose feature_type is \"place\". Mapbox defines coordinate accuracy values such as rooftop for address-type results, not city/place results.",
+          "suggestion": "Remove the accuracy property from this Los Angeles place result, or change the example to an address-type geocoding result where rooftop accuracy is valid.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mapquest",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current offer is not an unspecified recurring free allowance. MapQuestGO provides 50,000 free starter transactions for a limited time, then charges $0.0045 per transaction.",
+          "suggestion": "Set to \"50,000 free starter transactions for a limited time; then $0.0045 per transaction under MapQuestGO.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "marinetraffic",
+      "issues": [
+        {
+          "field": "example.request",
+          "problem": "The example uses version 5 of Single Vessel Positions, while the current documentation says to use version 6. It also uses the older colon-delimited parameter form rather than the current documented path-plus-query interface.",
+          "suggestion": "Use \"curl 'https://services.marinetraffic.com/api/exportvessel/YOUR_API_KEY?v=6&timespan=10&mmsi=241486000&protocol=jsono'\".",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "A limit is published: each key has a contract-specific successful-call frequency and is technically capped at 100 total requests per minute.",
+          "suggestion": "Set to \"Contract-specific successful-call allowance; hard technical maximum of 100 total requests/minute per API key.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "marketaux",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The required query parameter is api_token, not token.",
+          "suggestion": "Use \"API token via api_token=YOUR_API_TOKEN query parameter; self-serve signup.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The free plan is measured as 100 requests per day, with one API use counting as one request. The claim that credits may differ from request count is unsupported and misleading.",
+          "suggestion": "Set to \"100 requests/day; up to 3 articles per news request.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The listed tier names are wrong. Current self-service plans are Basic, Standard, Pro, and Pro 50K, plus custom plans\u2014not Starter, Professional, and Business.",
+          "suggestion": "Replace with the current Basic, Standard, Pro, and Pro 50K tiers and their published daily request allowances.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The entry describes daily API credits, but MarketAux publishes daily request quotas: 100 Free, 2,500 Basic, 10,000 Standard, 25,000 Pro, and 50,000 Pro 50K.",
+          "suggestion": "Describe these as daily request quotas rather than variable-value credits.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

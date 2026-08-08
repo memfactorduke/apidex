@@ -1,0 +1,148 @@
+{
+  "audits": [
+    {
+      "id": "marketstack",
+      "issues": []
+    },
+    {
+      "id": "marvel-comics",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "The official Marvel Comics developer API was sunset and is no longer reliably available, so \"operational\" is incorrect.",
+          "suggestion": "Set status to \"discontinued\" and archive or remove the directory entry.",
+          "confidence": "high"
+        },
+        {
+          "field": "base_url",
+          "problem": "This is the legacy API root of the discontinued service, not a current usable API root.",
+          "suggestion": "Do not present a current base URL; retain this URL only as historical metadata if discontinued APIs are cataloged.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The free allowance and paid-plan claims are no longer applicable because new access to the API has been discontinued.",
+          "suggestion": "Set free_tier to false or null and state that the service was discontinued.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The 3,000-calls-per-day limit describes the former service and is no longer a current usable quota.",
+          "suggestion": "Set to null or \"not applicable; service discontinued.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The request is no longer usable against a dependable official service, and the response snippet is also missing the final closing brace for the top-level JSON object.",
+          "suggestion": "Remove the live example or label it historical; if retained, append the missing closing brace.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "massive",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The Stocks Basic free plan provides end-of-day data, not 15-minute-delayed stock data. Delayed data is associated with a paid Stocks Starter plan.",
+          "suggestion": "Use \"5 API calls/minute; end-of-day US stocks; 2 years of historical data\" and separately describe the other asset-class free plans.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated paid-plan limits of 100, 500, and 1,000 calls per minute are outdated. Current individual Stocks Starter, Developer, and Advanced plans advertise unlimited API calls, while Basic remains 5 calls/minute.",
+          "suggestion": "Use \"Stocks Basic: 5 API calls/minute; paid individual Stocks plans: unlimited API calls, subject to plan terms and fair-use controls.\" Verify other asset classes separately.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mastodon",
+      "issues": [
+        {
+          "field": "example",
+          "problem": "The Bearer value is labeled YOUR_API_KEY even though Mastodon authenticates API calls with an OAuth access token, not an API key.",
+          "suggestion": "Change the header to \"Authorization: Bearer YOUR_ACCESS_TOKEN\".",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "matrix",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "Matrix has no universal matrix.org API root, and matrix.org currently advertises https://matrix-client.matrix.org as its client API base through .well-known discovery.",
+          "suggestion": "Use \"https://{discovered-homeserver-base}/_matrix/client/v3\" generically, or \"https://matrix-client.matrix.org/_matrix/client/v3\" specifically for matrix.org.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The example bypasses Matrix homeserver discovery and uses the outdated matrix.org host. It also labels the Bearer credential as an API key rather than an access token.",
+          "suggestion": "Use \"curl -s -H \\\"Authorization: Bearer YOUR_ACCESS_TOKEN\\\" \\\"https://matrix-client.matrix.org/_matrix/client/v3/account/whoami\\\"\" for matrix.org, or substitute the discovered homeserver base.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "maven-central",
+      "issues": []
+    },
+    {
+      "id": "maxmind-geoip",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The entry conflates paid GeoIP web services at geoip.maxmind.com with the separate free GeoLite web service at geolite.info. GeoIP is pay-per-query apart from a limited trial; GeoLite provides 1,000 free queries/day.",
+          "suggestion": "For this GeoIP2 base URL, set free_tier to false and list current per-query prices: Country $0.0001, City Plus $0.0003, and Insights $0.002. Mention the $5 trial separately. If an ongoing free tier is desired, create a GeoLite entry using https://geolite.info/geoip/v2.1.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The placeholder \"...\" supplies no valid limit and obscures the distinction between products. Paid GeoIP web services do not advertise a routine query quota, although MaxMind may temporarily rate-limit excessive erroneous requests; GeoLite is limited to 1,000 queries/day.",
+          "suggestion": "Use \"GeoIP: no published routine query-rate quota; excessive error traffic may be rate-limited. GeoLite: 1,000 queries/day.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mbta-v3",
+      "issues": [
+        {
+          "field": "example",
+          "problem": "curl interprets the unescaped square brackets in filter[stop] and page[limit] as URL-globbing syntax and exits with a bad-range error.",
+          "suggestion": "Percent-encode the brackets as filter%5Bstop%5D and page%5Blimit%5D, or add curl's --globoff option.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mediastack",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The claim that the free tier is HTTP-only is outdated. The current Free plan includes HTTPS encryption.",
+          "suggestion": "Use \"100 requests/month; delayed news data; HTTPS included; no historical data or commercial use.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mediawiki",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The Wikimedia-specific statement is outdated: Wikimedia introduced published request limits in 2026. Current limits include 10 requests/minute for unidentified clients, 200/minute for identified unauthenticated clients and many authenticated users, and 2,000/minute for established authenticated editors, with specified exemptions.",
+          "suggestion": "State the current Wikimedia limits while retaining that independently hosted MediaWiki installations can configure different limits.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "Current Wikimedia API policy requires an identifying User-Agent with contact information; the example relies on curl's generic default User-Agent and may be throttled or blocked.",
+          "suggestion": "Add a header such as \"-H \\\"User-Agent: ExampleApp/1.0 (contact@example.com)\\\"\".",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

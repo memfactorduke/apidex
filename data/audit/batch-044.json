@@ -1,0 +1,160 @@
+{
+  "audits": [
+    {
+      "id": "weatherapi",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The current Free plan provides 100,000 calls per month, not 1,000,000. It currently includes a 3-day forecast and one day of history, and commercial use is allowed subject to the free-plan attribution terms; \u201cno commercial use\u201d is incorrect.",
+          "suggestion": "Use: \"100,000 calls/month; 3-day forecast; past 1 day of historical weather; limited alerts, AQI, and sports; commercial use permitted with required attribution under the terms.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The cited approximately 15 calls/minute for Free and 50/minute for Standard are not present in the current public pricing table and appear stale.",
+          "suggestion": "Remove those specific RPM figures unless they can be confirmed from the current account dashboard or provider documentation; retain the published monthly plan quotas and state that burst limits are plan-dependent.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "weatherbit",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Current first-party endpoint documentation specifies the key as a required query parameter. The claim that it can be supplied through a header in some SDKs is unsupported and may conflate SDK abstraction with an HTTP authentication method.",
+          "suggestion": "Use: \"API key via the required key query parameter; self-serve signup.\"",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The limit is published, so \"unknown\" is incorrect. The always-free plan currently allows 50 requests per day and is limited to non-commercial use.",
+          "suggestion": "Use: \"50 requests/day; 1 request/second; current weather and 7-day daily forecasts; non-commercial use.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published. The Free plan is currently limited to 50 requests/day and 1 request/second, with higher plan-specific limits.",
+          "suggestion": "Use the plan table values, including Free: 50 requests/day and 1 request/second.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "webzio",
+      "issues": []
+    },
+    {
+      "id": "wger",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Wger now publishes endpoint-specific limits, so \"not published\" is incorrect. Authentication is limited to 10 requests/minute, registration to 5/minute, ingredient list endpoints to 120/minute, ingredient detail endpoints to 300/minute, and bulk ingredient synchronization to 600/minute; other endpoints are documented as unthrottled.",
+          "suggestion": "Replace with the currently documented endpoint-specific limits and note that exceeding them returns HTTP 429 with Retry-After.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "what3words",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The Free plan is much more restricted than stated: it only provides Autosuggest and Available Languages. Coordinate conversion, reverse conversion, and grid endpoints require a Business plan.",
+          "suggestion": "Use: \"Free plan: Autosuggest up to 10 requests/second and Available Languages up to 200 requests/second; conversion and grid functions require a Business plan.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published. Free Autosuggest is 10 requests/second, Free Available Languages is 200 requests/second, and the listed Business-plan functions are generally limited to 200 requests/second.",
+          "suggestion": "Replace \"not published\" with the current per-function plan limits.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The curl uses a real endpoint and correct parameters, but convert-to-coordinates is unavailable on the advertised Free plan and returns HTTP 402 for a Free-plan key.",
+          "suggestion": "Either label this example \"Business plan required\" or replace it with a Free-plan Autosuggest example.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "wheretheiss-at",
+      "issues": []
+    },
+    {
+      "id": "who-gho",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This is the legacy GHO OData root. WHO announced its deprecation for the end of 2025 and says the World Health Data Hub OData interface replaces it, so it should not be presented as the unqualified current API root.",
+          "suggestion": "Re-research and migrate the entry to WHO's World Health Data Hub OData interface; retain ghoapi.azureedge.net only if the entry is explicitly labeled as the deprecated legacy API.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "\"Operational\" alone conceals that WHO has officially designated this interface for deprecation and replacement.",
+          "suggestion": "Mark it deprecated/legacy, or add an explicit deprecation warning if the directory's status schema has no deprecated value.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The URL is double-quoted, so a shell expands $top as a shell variable. The resulting request will normally lose the OData $top parameter.",
+          "suggestion": "Use single quotes: curl -s 'https://ghoapi.azureedge.net/api/Indicator?$top=5', or escape the dollar sign as \\$top.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "wikidata",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "This is outdated. Wikimedia introduced published cross-API limits in 2026: unidentified requests are limited to 10 requests/minute, compliant User-Agent-only clients to 200/minute, newer authenticated users to 200/minute, and established authenticated users to 2,000/minute, subject to caveats and additional action limits.",
+          "suggestion": "Replace the no-fixed-quota statement with the current identity-based per-minute limits and the recommendation of no more than three concurrent requests.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "wikimedia-rest",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "For automated clients, a descriptive User-Agent is a Wikimedia access requirement, not merely a recommendation; generic agents such as curl may be blocked.",
+          "suggestion": "Use: \"No API key for public reads, but automated requests must send a descriptive User-Agent with contact information.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated 200 requests/second hard limit and 100 requests/second recommendation are obsolete. Wikimedia's 2026 limits are generally 10 requests/minute for unidentified traffic and 200 requests/minute for unauthenticated clients with a compliant User-Agent.",
+          "suggestion": "Use the current identity-based per-minute limits and note the three-request concurrency recommendation.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The curl omits the required descriptive User-Agent and may be blocked as generic curl traffic. The response snippet \"{}\" is also not representative: the summary endpoint returns a populated page-summary object.",
+          "suggestion": "Add -H \"User-Agent: MyApp/1.0 (https://example.com; contact@example.com)\" and provide a response containing fields such as title, extract, content_urls, and thumbnail where available.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "wikipedia",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The claim that no fixed anonymous-read quota is published is outdated. Wikimedia introduced published limits in 2026, including 10 requests/minute for unidentified clients and 200/minute for compliant User-Agent-only clients.",
+          "suggestion": "Use the current identity-based per-minute limits and note the recommendation of no more than three concurrent requests.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The snippet says the Earth page is missing and assigns it the synthetic page key -1. Earth exists, so the real request returns a normal positive page ID and an extract.",
+          "suggestion": "Replace it with an actual successful response shape, or add formatversion=2 and show query.pages as an array containing Earth and its extract.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "audits": [
+    {
+      "id": "deepgram",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Deepgram publishes model-, service-, plan-, and region-specific concurrency limits, so \"not published\" is incorrect.",
+          "suggestion": "Replace with the applicable published limits or state that limits vary; for example, Pay As You Go Nova-3 allows up to 50 concurrent pre-recorded requests and 150 streaming requests per project.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "deepinfra",
+      "issues": []
+    },
+    {
+      "id": "deepl",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Authentication through an auth_key form field is obsolete. DeepL ended query-parameter and request-body authentication in January 2026; such requests now fail.",
+          "suggestion": "State that the key must be sent in the Authorization: DeepL-Auth-Key YOUR_API_KEY header.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "This presents DeepL API Pro as the current purchasable paid plan even though that legacy plan can no longer be purchased.",
+          "suggestion": "List DeepL API Growth as the current self-serve paid plan and Enterprise API as the custom option; mention Pro only as a legacy plan for existing subscribers.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "defillama",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "https://api.llama.fi is the core TVL/protocol API root, but it is not the root for all products claimed in the description. Yields, stablecoins, coins, and bridges use separate hosts, so the entry conflates several APIs under one base URL.",
+          "suggestion": "Limit the description to endpoints hosted at api.llama.fi or enumerate the additional roots, including https://yields.llama.fi, https://stablecoins.llama.fi, https://coins.llama.fi, and https://bridges.llama.fi.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "diffbot",
+      "issues": []
+    },
+    {
+      "id": "discogs",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The claim that commercial use requires approval is not current. Discogs' API terms say commercial use is generally permitted, although Discogs may prohibit a particular commercial use at its discretion.",
+          "suggestion": "State that the API has no published paid access tier and commercial use is generally permitted subject to the API Terms of Use and Discogs' restrictions.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "discord",
+      "issues": []
+    },
+    {
+      "id": "discourse",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The hosted plan names are stale: Discourse currently advertises Pro, Business, and Enterprise, not Standard, Business, and Enterprise.",
+          "suggestion": "Use \"Pro ($100/month), Business ($500/month), and Enterprise (custom), plus a hosted Free plan\" and direct readers to the current pricing page.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "disease-sh",
+      "issues": []
+    },
+    {
+      "id": "docker-hub",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "A Docker personal access token is not itself the Bearer token expected by the Hub API. The PAT is supplied with the username to POST /v2/auth/token, which returns a short-lived JWT access token for the Bearer header. POST /v2/users/login is deprecated.",
+          "suggestion": "Describe the current flow: exchange identifier plus password/PAT/OAT at POST https://hub.docker.com/v2/auth/token, then send the returned access_token as Authorization: Bearer ACCESS_TOKEN.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example labels YOUR_API_KEY as a PAT and sends it directly as a Bearer token, which is inconsistent with Docker Hub's authentication flow and can fail. The public tags endpoint also does not require authentication.",
+          "suggestion": "Either remove the Authorization header for this public library/nginx request or use a JWT obtained from POST /v2/auth/token.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The entry conflates Docker Hub REST API usage with registry image-pull quotas. Pull limits are currently 100 per six hours for unauthenticated users and 200 per six hours for authenticated Personal users; paid Pro, Team, and Business accounts have unlimited pulls subject to fair use.",
+          "suggestion": "Separate registry pull limits from Hub REST API throttling and use the current exact pull limits.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The description conflates the Docker Hub API with the Docker Registry HTTP API. Image manifest retrieval and actual image pulls and pushes use registry-1.docker.io and its registry authentication flow, not the hub.docker.com/v2 Hub API root.",
+          "suggestion": "Describe this entry as the Hub account, namespace, repository, tag, organization, and access-management API; document Registry V2 separately for manifests, blobs, pulls, and pushes.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

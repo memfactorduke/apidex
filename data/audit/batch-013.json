@@ -1,0 +1,162 @@
+{
+  "audits": [
+    {
+      "id": "ergast-f1",
+      "issues": [
+        {
+          "field": "example",
+          "problem": "The curl omits the custom identifying User-Agent required by Jolpica's current documentation, and the response snippet retains Ergast's legacy xmlns value even though Jolpica returns an empty xmlns string.",
+          "suggestion": "Add a header such as -H 'User-Agent: APIDirectoryExample/1.0' and change MRData.xmlns to \"\" in the response snippet.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "espn-api",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The value stops at the generic /apis prefix rather than the root of the endpoint family demonstrated by this entry.",
+          "suggestion": "Use https://site.api.espn.com/apis/site/v2 as the base URL for these site-v2 sports endpoints.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "etherscan",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "It is null even though Etherscan offers paid Standard, Advanced, Professional, and higher/custom API plans; the rate_limits field itself mentions these tiers.",
+          "suggestion": "Populate paid_plans with the currently offered paid API tiers and link pricing to https://etherscan.io/apis.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eu-data-portal",
+      "issues": [
+        {
+          "field": "name",
+          "problem": "\u201cEU Open Data Portal\u201d is a retired product name. The current data.europa.eu service replaced both the EU Open Data Portal and the former European Data Portal.",
+          "suggestion": "Rename the entry to \u201cdata.europa.eu Search API\u201d or \u201cEuropean Data Portal Search API.\u201d",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "GET /datasets with query and limit parameters is not the public catalogue-search interface. The current native search operation is POST /search with a JSON body; /datasets is used for dataset-management operations. The empty-object response is consequently not representative.",
+          "suggestion": "Use: curl -s -X POST 'https://data.europa.eu/api/hub/search/search' -H 'Content-Type: application/json' -d '{\"q\":\"climate\",\"filters\":[\"dataset\"],\"limit\":1}' and replace the response with an actual search result.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "europeana",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The wskey query parameter is now deprecated. Europeana's preferred API-key mechanism is the X-Api-Key header.",
+          "suggestion": "State that X-Api-Key is preferred and that wskey is a deprecated compatibility mechanism.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example teaches the deprecated practice of placing the key in the URL.",
+          "suggestion": "Use: curl -H 'X-Api-Key: YOUR_API_KEY' 'https://api.europeana.eu/record/v2/search.json?query=Mona%20Lisa&rows=2'.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eurostat",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The hard-coded GDP value 14823456.7 does not match the current revised 2022 EU27_2020 value returned for this query.",
+          "suggestion": "Regenerate the response snippet from the live query; current Eurostat publications put the revised 2022 EU GDP at approximately 16,170,154 million euro.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "event-registry",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Current REST documentation requires apiKey as a URL parameter or JSON request-body property; it does not document API-key authentication via a header.",
+          "suggestion": "Remove \u201cor header\u201d and document apiKey in the query string for GET requests or in the JSON body for POST requests.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The 2,000-token allowance is not a recurring monthly allowance. It is a one-time free testing allocation, described elsewhere by the provider as 2,000 free searches with no recurring monthly renewal.",
+          "suggestion": "Use \u201c2,000 free tokens/searches total for testing; not renewed monthly; recent data is limited to the last 30 days.\u201d",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "It is null even though Event Registry/NewsAPI.ai offers multiple paid token plans and custom plans.",
+          "suggestion": "Populate this field from the current NewsAPI.ai plans page.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "A rate limit is published: no more than five simultaneous requests per user.",
+          "suggestion": "Set this to \u201cMaximum 5 simultaneous requests; excess concurrent requests return HTTP 429.\u201d",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "exa",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "It is null even though Exa has published pay-as-you-go endpoint pricing and Enterprise/custom plans.",
+          "suggestion": "Populate paid_plans with Exa's current pay-as-you-go pricing and Enterprise option.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "exchangerate-api",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The phrase \u201c1,500 requests/month free (Open Access)\u201d conflates two distinct offerings. The keyed Free API plan has 1,500 requests/month, while the separate Open Access endpoint requires no key, requires attribution, and has different unpublished throttling.",
+          "suggestion": "Use \u201cKeyed Free API plan: 1,500 requests/month.\u201d If desired, document https://open.er-api.com/v6 separately as the unauthenticated Open Access product.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "It says the free tier has daily request limits, but the keyed Free plan has a monthly 1,500-request quota. Once-per-day refers to the data update frequency, not a daily request quota.",
+          "suggestion": "Replace that sentence with \u201cThe keyed Free plan allows 1,500 requests per month and updates rates once per day.\u201d",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "exercisedb",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The listed 100-requests/day BASIC quota appears stale; current 2026 integrations report the RapidAPI free plan at about 10 requests/day. The paid quota figures may also be from an older plan revision.",
+          "suggestion": "Refresh every quota from the live RapidAPI pricing tab; use approximately 10 requests/day for BASIC only after confirming the currently displayed plan.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "It is null even though the entry itself lists PRO, ULTRA, and MEGA paid tiers.",
+          "suggestion": "Populate paid_plans from the current RapidAPI listing.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "This repeats the apparently stale RapidAPI plan quotas as current rate limits.",
+          "suggestion": "Replace these figures with the quotas currently shown to new subscribers on RapidAPI and note that existing subscribers can remain on older plan versions.",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

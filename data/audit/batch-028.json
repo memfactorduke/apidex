@@ -1,0 +1,128 @@
+{
+  "audits": [
+    {
+      "id": "nws-weather-gov",
+      "issues": []
+    },
+    {
+      "id": "nyc-open-data",
+      "issues": [
+        {
+          "field": "auth.type",
+          "problem": "Public SODA reads require no authentication. A Socrata app token identifies the application for throttling and is explicitly not necessarily an authentication credential, so classifying the API as apiKey is misleading.",
+          "suggestion": "Use type \"none\" and explain that an optional X-App-Token can provide a separate application request pool.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The historical approximately 1,000-requests-per-hour anonymous figure is not a documented current limit. Socrata currently leaves the anonymous threshold unspecified and says token-bearing requests are generally unthrottled unless abusive or malicious.",
+          "suggestion": "Remove the historical number and state that anonymous requests have an unpublished lower limit while app-token requests are subject to abuse controls.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "Because the URL is double-quoted, the shell expands $limit as an environment variable, usually turning the query into ?=5 instead of sending the SODA $limit parameter.",
+          "suggestion": "Use single quotes around the URL or escape the dollar sign, for example: curl -H \"X-App-Token: YOUR_API_KEY\" 'https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=5'.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "nytimes",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The documented interface uses the api-key query parameter. The claim that some endpoints accept X-Api-Key is not supported by the NYT API specifications and may be a conflation with other API gateways.",
+          "suggestion": "State only that the key is supplied through the api-key query parameter unless a specific NYT endpoint with documented header support is identified.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The statement \"not published\" is incorrect; the NYT developer FAQ publishes default call limits.",
+          "suggestion": "Use the currently documented limits, commonly 500 requests per day and 5 requests per minute per API, and recheck the developer dashboard for endpoint-specific overrides.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "\"unknown\" omits the published request ceilings and the material limitation that ordinary developer access is intended for non-commercial use; commercial redistribution or higher-volume use requires an agreement with NYT.",
+          "suggestion": "Record the current developer quota and note the non-commercial-use/licensing restriction; verify any monthly aggregate quota directly in the current developer portal.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "official-joke-api",
+      "issues": []
+    },
+    {
+      "id": "okta",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "Okta publishes concrete Integrator Free Plan limits, so \"unknown\" obscures material restrictions. The plan is capped at 10 active users and 5 Workflows and may deactivate after 180 consecutive days without a user sign-in unless an app is submitted to the OIN.",
+          "suggestion": "Replace \"unknown\" with the current Integrator Free Plan limits and inactivity condition.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "A null value incorrectly suggests that Okta has no paid offerings. Okta sells paid Workforce Identity and Customer Identity products.",
+          "suggestion": "State that paid commercial plans are available, with pricing and API capacity varying by product, licenses, and add-ons; link or refer users to current Okta pricing or sales.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "omdb",
+      "issues": []
+    },
+    {
+      "id": "open-brewery-db",
+      "issues": [
+        {
+          "field": "description",
+          "problem": "The description advertises autocomplete as a normal capability, but Open Brewery DB has deprecated its autocomplete endpoint and announced its removal from v1 by the end of 2026.",
+          "suggestion": "Remove autocomplete from the advertised capabilities or explicitly mark it deprecated and direct users to the supported brewery search endpoint.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "open-exchange-rates",
+      "issues": []
+    },
+    {
+      "id": "open-food-facts",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The value is the website origin rather than the current recommended API root. Open Food Facts now recommends API v3, currently v3.6, for new integrations; v2 is deprecated.",
+          "suggestion": "Use https://world.openfoodfacts.org/api/v3.6 for new integrations, or explicitly identify the existing value as an origin rather than a versioned API base.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The listed approximately 100 product requests per minute and 2 facet requests per minute are stale. Current official documentation states 15 product-read requests per minute per IP and 10 search requests per minute per IP.",
+          "suggestion": "Replace the value with the currently published 15 product reads/minute/IP and 10 searches/minute/IP, plus the documented global abuse limits and bulk-download guidance.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example uses API v2, which is now officially deprecated, although still supported for backward compatibility.",
+          "suggestion": "For a new directory example, use the current v3.6 product endpoint and update the response snippet to its schema; retain v2 only if clearly labeled deprecated.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "open-library",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The claim that limits are not published is false. Open Library publishes a default limit of 1 request per second and 3 requests per second for identified requests carrying an application User-Agent and contact information.",
+          "suggestion": "Set the rate limit to 1 request/second anonymously and 3 requests/second when properly identified, and mention the low-volume and no-bulk-backend usage guidelines.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

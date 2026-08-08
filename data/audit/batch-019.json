@@ -1,0 +1,178 @@
+{
+  "audits": [
+    {
+      "id": "imgflip",
+      "issues": []
+    },
+    {
+      "id": "inaturalist",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "Authentication does not grant a documented higher-rate tier, and \"Authorization: JWT\" is not a documented authorization scheme. Authenticated access is primarily for writes and permitted private data.",
+          "suggestion": "Use a JWT obtained through the iNaturalist OAuth/token flow and send it as \"Authorization: Bearer YOUR_JWT\"; do not claim that authentication increases rate limits.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The entry says no useful numeric guidance is published and claims authenticated requests receive higher limits. Official guidance instead asks all clients to stay near 1 request/second and roughly 10,000 requests/day; no authenticated higher tier is documented.",
+          "suggestion": "Set to \"Approximately 1 request/second and 10,000 requests/day; excess traffic may receive HTTP 429, and media downloads have separate limits. Authentication does not provide a documented higher quota.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "infura",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The free-tier limits and paid plans are publicly documented, so \"unknown\" and null are inaccurate/incomplete.",
+          "suggestion": "Core Free includes 3,000,000 credits/day. Current paid tiers include Developer at $50/month, Team at $225/month, and custom Enterprise pricing; verify prices periodically.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Infura publishes throughput limits, contrary to \"not published.\"",
+          "suggestion": "Use \"Core: 500 credits/second; Developer: 4,000 credits/second; Team: 40,000 credits/second, plus daily credit quotas.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "interactive-brokers",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "The auth classification conflates two different access modes. The localhost Client Portal Gateway base URL uses an interactive IBKR username/password and 2FA browser session, not OAuth 2.0 bearer authentication.",
+          "suggestion": "For this base URL, classify auth as session/other and explain that the local Gateway must be running and authenticated through the browser. If documenting OAuth instead, use the remote IBKR endpoint and its separate OAuth workflow.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "Calling this a free tier is misleading: Client Portal API access requires an opened, funded IBKR Pro brokerage account; it is not a standalone free API plan.",
+          "suggestion": "Set free_tier to false, or state explicitly that there is no separate API fee but access requires an eligible funded IBKR Pro account, with commissions and market-data charges applying.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "IBKR publishes concrete pacing limits, contrary to the entry.",
+          "suggestion": "State the 10 requests/second global limit and endpoint-specific limits; GET /portfolio/accounts is limited to 1 request per 5 seconds.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The localhost Gateway normally has a self-signed certificate, so this curl will usually fail certificate verification. \"Cookie: YOUR_SESSION\" is also not a valid cookie pair and is unnecessary for ordinary HTTP requests after Gateway authentication.",
+          "suggestion": "Use \"curl --insecure 'https://localhost:5000/v1/api/portfolio/accounts'\" after launching and authenticating the Client Portal Gateway. If a cookie is actually required for a documented flow, format it as \"api=SESSION_TOKEN\".",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "intercom",
+      "issues": []
+    },
+    {
+      "id": "invoice-ninja",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "X-API-SECRET is not generally required; it is optional and assessed only on /api/v1/login. X-API-COMPANY-KEY belongs to specialized shop/client-facing flows and is not the normal company-context header for token-authenticated REST calls.",
+          "suggestion": "State that normal API requests require X-API-TOKEN and X-Requested-With: XMLHttpRequest. Mention X-API-SECRET only as an optional /login protection mechanism and omit X-API-COMPANY-KEY from general authentication guidance.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The hosted Free plan does not include REST API access; current hosted pricing lists API access for Pro and Enterprise. The entry therefore presents a non-existent hosted free API tier.",
+          "suggestion": "Set hosted API free_tier to false and note that hosted REST API access starts with Ninja Pro. Separately explain that a self-hosted deployment exposes its own API.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "Invoice Ninja's current self-hosted code is source-available under the Elastic License, not open source as claimed. Removing client-facing branding also requires a paid white-label license.",
+          "suggestion": "Replace \"self-host is free under open source\" with \"self-hosted source is available under the Elastic License; a white-label license currently costs $40/year.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ip-api",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "The paid API key is supplied as a GET query parameter, not \"via path or query parameter.\" The paid service also uses the separate Pro host.",
+          "suggestion": "State that the free http://ip-api.com endpoint needs no key, while Pro requests use the pro.ip-api.com endpoint with the API key supplied as a GET parameter such as ?key=YOUR_API_KEY.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ip2location",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "Current free and paid limits are published; \"unknown\" and null omit material, readily available terms.",
+          "suggestion": "Free registered plan: 50,000 IP-geolocation queries/month, 11 attributes, and required attribution. Keyless access permits 1,000 queries/day with attribution. Current paid plans start with Starter at $49/month, followed by Plus and Security tiers.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Published usage quotas exist, so \"not published\" is incorrect even though no separate requests-per-second ceiling is stated.",
+          "suggestion": "List 1,000 queries/day for keyless access and 50,000/month for the registered Free plan; say that no separate public per-second limit was found.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ipapi",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "Paid authentication is documented as a token in the query string, not as a path-based API key. The entry also implies a keyed free tier that is not documented.",
+          "suggestion": "State that the public evaluation endpoint is unauthenticated and paid subscriptions receive a token that is added to the query string.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The 1,000-lookups/day offering is a trial/evaluation service, not an unrestricted production free tier. The provider says it is unsuitable for production and may apply additional heuristic restrictions.",
+          "suggestion": "Describe it as an unauthenticated free trial of up to 1,000 lookups per 24 hours for testing and development, subject to heuristics and not intended for production. Paid plans currently start at $15/month.",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "An empty object is not a representative successful response from this endpoint and does not demonstrate the API's real response interface.",
+          "suggestion": "Replace the response snippet with a representative object containing fields such as ip, version, city, region, country_code, postal, latitude, longitude, timezone, asn, and org.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ipgeolocation-io",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The current API is versioned under /v3; the entry omits the current versioned root while its example uses the obsolete unversioned interface.",
+          "suggestion": "Use \"https://api.ipgeolocation.io/v3\" as the current API base.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "Current documentation supports apiKey as a query parameter, or configured Request Origin authentication for browser calls on paid plans. It does not document an API-key header.",
+          "suggestion": "State that server-side requests use the apiKey query parameter; paid browser integrations may instead use an allowlisted Request Origin.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The free-plan limit is correct but omits the material restriction that free use is non-commercial.",
+          "suggestion": "Use \"1,000 credits/day for life, no credit card, non-commercial use only, with no free-plan overages.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example",
+          "problem": "The curl uses the old /ipgeo path. The current endpoint is /v3/ipgeo, whose response uses nested objects such as location and asn rather than the shown legacy flat schema.",
+          "suggestion": "Use \"curl 'https://api.ipgeolocation.io/v3/ipgeo?apiKey=YOUR_API_KEY&ip=8.8.8.8'\" and provide a v3 response snippet with ip at the root and geographic fields inside location.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

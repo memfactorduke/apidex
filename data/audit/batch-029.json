@@ -1,0 +1,116 @@
+{
+  "audits": [
+    {
+      "id": "open-meteo",
+      "issues": []
+    },
+    {
+      "id": "open-notify",
+      "issues": []
+    },
+    {
+      "id": "open-textbook-library",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "The URL points to the library's discovery page rather than its published API documentation.",
+          "suggestion": "Use https://open.umn.edu/opentextbooks/api-docs/index.html",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "openai",
+      "issues": []
+    },
+    {
+      "id": "openalex",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "docs.openalex.org is the deprecated documentation site; current API documentation is hosted at developers.openalex.org.",
+          "suggestion": "Use https://developers.openalex.org/",
+          "confidence": "high"
+        },
+        {
+          "field": "auth",
+          "problem": "The entry describes authentication as unnecessary, but OpenAlex now requires a free API key for normal API use; only a few unauthenticated demo calls may work.",
+          "suggestion": "Set type to apiKey and document the api_key query parameter. Keys are obtained from openalex.org/settings/api.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The old polite-pool and roughly 100,000-calls-per-day model has been replaced by endpoint-based usage pricing. Free keys receive $1 of usage per day; singleton lookups are free, while lists, searches, and content downloads have different costs.",
+          "suggestion": "Describe the $1/day free allowance and endpoint-based paid usage instead of the old request-count tiers.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated 1/10 requests-per-second polite-pool limits and Premium 1M/day tier are obsolete. Current documentation specifies a maximum of 100 requests per second plus a credit-based daily allowance.",
+          "suggestion": "Use 100 requests/second and the key's daily credit allowance; describe higher usage as prepaid or paid usage rather than the old Premium limits.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "openaq",
+      "issues": [
+        {
+          "field": "example.response_snippet",
+          "problem": "The v3 location schema has a singular country object, not a countries array.",
+          "suggestion": "Replace \"countries\":[...] with \"country\":{\"id\":...,\"code\":\"...\",\"name\":\"...\"}; optionally include other required v3 fields such as owner, provider, coordinates, instruments, and sensors.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "opencage",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "OpenCage explicitly offers a free trial for testing, not an ongoing free tier. The trial allows 2,500 requests/day at 1 request/second, and paid plans exist despite paid_plans being null.",
+          "suggestion": "Set free_tier to false or label it clearly as a testing-only free trial; set free_tier_limits to 2,500 requests/day and 1 request/second, and note paid subscriptions starting at $50/month.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "opendota",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "The entry implies that a free API key is available. Current OpenDota material says the free tier requires no key, while obtaining an API key requires a linked payment method and enables metered premium usage.",
+          "suggestion": "State that unauthenticated free access is supported; API keys are optional paid credentials accepted through api_key or a Bearer Authorization header.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The claimed free-key allowance of 50,000 requests/month is obsolete. Current implementation uses an unauthenticated daily cap, while keyed calls are metered and billed.",
+          "suggestion": "Describe the free tier as keyless with the current daily cap, and the API-key tier as paid usage rather than a free 50,000-request plan.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Only the unauthenticated 60 requests/minute figure remains current. Current source config uses a daily free limit and 300 requests/minute with a paid API key, not 50,000 free keyed requests/month.",
+          "suggestion": "Use 60 requests/minute plus the current daily unauthenticated limit, and 300 requests/minute with a paid API key; verify the deployed daily cap from current response headers or the API page.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "openfda",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The unauthenticated per-minute limit is outdated: current openFDA documentation gives 240 requests/minute without a key, not 40. The 1,000/day unauthenticated and 240/minute, 120,000/day keyed limits are otherwise correct.",
+          "suggestion": "Use: without key, 240 requests/minute and 1,000/day; with key, 240 requests/minute and 120,000/day.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "openfec",
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "audits": [
+    {
+      "id": "chuck-norris-jokes",
+      "issues": []
+    },
+    {
+      "id": "circleci",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "CircleCI API v2 does not support project API tokens; the current developer guide says only Personal API Tokens are supported for v2.",
+          "suggestion": "State that API v2 requires a Personal API Token, preferably sent as Authorization: Bearer <token> or alternatively in the Circle-Token header.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "claimbuster",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "This is the ClaimBuster landing page, not the API documentation URL.",
+          "suggestion": "Use https://idir.uta.edu/claimbuster/api/ and verify that it has returned to service before publishing.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "A successful scoring request should return a non-empty result containing the text and check-worthiness score; an empty object is not representative of the endpoint.",
+          "suggestion": "Replace {} with a response captured from a successful authenticated request, including the returned result and score fields.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "Both the ClaimBuster API documentation and sample endpoint returned HTTP 502 during this audit, so operational status is not currently established.",
+          "suggestion": "Mark the status unknown or degraded until a live authenticated request succeeds, then recheck periodically.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "clarifai",
+      "issues": [
+        {
+          "field": "pricing.free_tier",
+          "problem": "Clarifai retired its freemium Community plan in February 2026 and migrated users to pay-as-you-go. A one-time, expiring welcome credit is not a recurring free tier.",
+          "suggestion": "Set free_tier to false and describe any currently available promotional welcome credit separately.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The stated Community-plan free operations are obsolete.",
+          "suggestion": "Replace with the current pay-as-you-go terms, noting only a one-time promotional credit if it is still offered.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The request uses the old unscoped public-model path and calls the credential an API key. Since the June 2025 authentication change, access to Clarifai-owned public models requires a PAT and the owning user/app must be specified in the path.",
+          "suggestion": "Use a currently available model with a path such as https://api.clarifai.com/v2/users/clarifai/apps/main/models/{model_id}/outputs and send Authorization: Key YOUR_PAT, then verify it against the post-deprecation service.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The current Clarifai rate-limit documentation publishes a default limit of 15 requests per second for all users, rather than merely saying limits vary by plan.",
+          "suggestion": "State the documented default of 15 requests per second and note that custom limits require contacting Clarifai.",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "Clarifai's official site says platform credit purchases ended June 18, 2026 and identifies July 13, 2026 as a final deprecation date. That makes an unqualified operational status unsafe after that date.",
+          "suggestion": "Mark the entry deprecated or pending verification unless a new account can still obtain credentials and complete a paid API request successfully.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "clash-of-clans",
+      "issues": []
+    },
+    {
+      "id": "clerk",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The pricing description uses stale terminology and allowances. Clerk now measures Monthly Retained Users, not MAU, and the current Hobby and Pro allowances include 50,000 MRU per application rather than Pro including only 10,000 MAU.",
+          "suggestion": "Use: Hobby includes up to 50,000 MRU per app; Pro starts at $25/month when billed monthly, includes 50,000 MRU, and charges published overages above that amount.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated production limit of 100 requests per 10 seconds is obsolete. Clerk increased the general production Backend API limit to 1,000 requests per 10 seconds; development remains 100 per 10 seconds, with lower endpoint-specific limits in some cases.",
+          "suggestion": "State 1,000 requests per 10 seconds for production and 100 per 10 seconds for development, while retaining the endpoint-specific exceptions.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The shown object conflates Clerk's SDK pagination wrapper with the raw REST response and also uses the wrong total-count casing. The raw GET /v1/users response is not {\"data\":[],\"total_count\":0}; the SDK exposes data and totalCount after wrapping the Backend API result.",
+          "suggestion": "Show the actual raw REST response for GET /v1/users, or explicitly label an SDK example and use {\"data\":[],\"totalCount\":0}.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "clinicaltrials-gov",
+      "issues": []
+    },
+    {
+      "id": "cloudflare-doh",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "Calling use unlimited is too absolute. Cloudflare says typical users should not encounter rate limiting, but high-rate, scanning, proxied, or abusive traffic may be limited.",
+          "suggestion": "Use: Free public resolver with no published normal-use quota; unusual high-rate or abusive traffic may be rate-limited.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cloudflare-workers-ai",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Workers AI limits are substantially more published than this entry claims. Cloudflare documents task-specific limits, including 300 requests per minute for ordinary text generation, plus Cloudflare API limits of 1,200 requests per five minutes per user or account token and 200 requests per second per IP.",
+          "suggestion": "List the applicable Cloudflare API limits and link users to the Workers AI task/model limit table; for this text-generation example, state the documented 300 requests per minute unless the model has an explicit exception.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The Whisper example price is stale: current Workers AI pricing lists @cf/openai/whisper at $0.0005 per audio minute, not $0.00045.",
+          "suggestion": "Update the Whisper figure to $0.0005 per audio minute or omit volatile per-model examples and direct users to the live pricing table.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "codecov",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The current Codecov REST API v2 root includes /api/v2; https://api.codecov.io alone is only the host, not the versioned API root used by the documented endpoints.",
+          "suggestion": "Use https://api.codecov.io/api/v2.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "The current Codecov documentation shows access tokens as Bearer credentials. The stated Authorization: token YOUR_API_KEY scheme conflicts with both the official guide and this entry's own working example.",
+          "suggestion": "Use Authorization: bearer YOUR_ACCESS_TOKEN and call the credential a Codecov access token.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

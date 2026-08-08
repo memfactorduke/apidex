@@ -1,0 +1,134 @@
+{
+  "audits": [
+    {
+      "id": "oxford-dictionaries",
+      "issues": []
+    },
+    {
+      "id": "packagist",
+      "issues": []
+    },
+    {
+      "id": "paddle",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Paddle publishes explicit limits, so \"not published\" is incorrect. Most API operations are limited to 240 requests per minute per IP; pricing-preview endpoints allow 1,000 per minute, and additional per-subscription limits apply to immediate-charge updates.",
+          "suggestion": "Set to \"240 requests/minute per IP for most operations; 1,000 requests/minute for pricing-preview endpoints; immediate-charge subscription updates are limited to 20/hour and 100/24 hours per subscription.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pagerduty",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "\"From-Token\" is not the PagerDuty header. Certain operations made with an account-level API key require a From header containing a valid PagerDuty user's email address.",
+          "suggestion": "Replace that sentence with: \"For certain requests using an account-level API key, include From: user@example.com. This is generally unnecessary for user-level keys.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The stated 900 requests per minute is outdated. PagerDuty raised the standard REST API limit to 960 requests per minute, with the accounting scope depending on credential type.",
+          "suggestion": "Use \"Generally 960 requests/minute per account API key, per user for user API keys, or per applicable OAuth app/user/account context; endpoint-specific exceptions may apply.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "pandascore",
+      "issues": []
+    },
+    {
+      "id": "paypal",
+      "issues": []
+    },
+    {
+      "id": "pelias",
+      "issues": [
+        {
+          "field": "name",
+          "problem": "The entry conflates the open-source Pelias geocoder with Geocode Earth's separate hosted commercial service. Pelias itself has no universal hosted base URL, API key, or pricing plan.",
+          "suggestion": "Rename the entry to \"Geocode Earth Geocoding API\" and state that the service is powered by Pelias. A separate Pelias entry should describe self-hosting without vendor-specific pricing or authentication.",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "Geocode Earth's current documentation specifies the api_key query parameter; it does not document an Authorization-header alternative.",
+          "suggestion": "Use \"API key via the api_key query parameter; self-serve signup through Geocode Earth.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "Geocode Earth offers a two-week free trial, not a permanent free tier. Paid service currently begins with the Lite plan.",
+          "suggestion": "Set free_tier to false and describe the no-credit-card two-week trial separately. Current published paid pricing starts at $100/month for 150,000 requests.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published and plan-dependent, so \"not published\" is incorrect. Current public plans specify per-second limits, while trials also have daily limits and all plans have monthly allowances.",
+          "suggestion": "State the applicable plan limits, such as up to 10 requests/second on Lite and Basic and 20 requests/second on Advanced, with trial daily and plan monthly limits also applying.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "perigon",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "The listed api.goperigon.com hostname is obsolete in current Perigon documentation. The documented API root is api.perigon.io/v1.",
+          "suggestion": "Set base_url to \"https://api.perigon.io/v1\".",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "The authentication method is already documented and should not be left as needing verification. Perigon accepts apiKey in the query string, Authorization: Bearer, or x-api-key.",
+          "suggestion": "Use \"API key via apiKey query parameter, Authorization: Bearer header, or x-api-key header; header authentication is recommended.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The example uses the obsolete api.goperigon.com hostname rather than Perigon's current documented endpoint.",
+          "suggestion": "Use \"curl 'https://api.perigon.io/v1/articles/all?apiKey=YOUR_API_KEY&q=technology'\" or send the key in an Authorization or x-api-key header.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "perplexity",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "Perplexity publishes detailed, tier-based rate limits, so \"not published\" is incorrect.",
+          "suggestion": "Describe the current tiered limits. For example, Sonar starts at 50 requests/minute for Tier 0 and scales to 4,000 requests/minute at higher tiers; Sonar Deep Research has lower limits, and the Search API has a separate 50-requests/second limit.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "perspective-api",
+      "issues": [
+        {
+          "field": "status",
+          "problem": "Perspective API is still serving requests in 2026, but it has been formally sunsetted and is scheduled to cease service after 2026. Calling it simply operational omits a material retirement warning.",
+          "suggestion": "Mark it as \"deprecated\" or \"sunsetting\" and note that service ends after 2026.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The claim that users can contact Perspective for higher quotas is no longer current. Perspective stopped accepting new quota-increase requests after February 2026 as part of the shutdown transition.",
+          "suggestion": "Set paid_plans to null and note that no new quota-increase requests are accepted after February 2026.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Although the stated default 1 QPS limit is plausible, the claim that higher limits remain available through a quota request is outdated.",
+          "suggestion": "Use \"Default 1 QPS for existing access; no new quota-increase requests accepted after February 2026; API scheduled to stop operating after 2026.\"",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

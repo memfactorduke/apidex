@@ -1,0 +1,167 @@
+{
+  "audits": [
+    {
+      "id": "dog-ceo",
+      "issues": []
+    },
+    {
+      "id": "dune-analytics",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The limit is not unknown. Dune currently documents 2,500 credits per month on the Free plan, with API operations consuming credits according to execution and export usage.",
+          "suggestion": "State that the Free plan includes 2,500 credits per month and refer users to Dune's current credit-consumption rules.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Setting paid_plans to null is incorrect because Dune publishes Analyst, Plus, and Enterprise plans.",
+          "suggestion": "List the current Analyst, Plus, and Enterprise plans or direct users to the live pricing page for their current prices and credit allowances.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Dune publishes API request limits, so \"not published\" is false.",
+          "suggestion": "Use approximately 40 requests/minute on Free, 200 requests/minute on Plus, and custom limits on Enterprise, noting that limits may change by plan.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "duolingo",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "The Duolingo homepage is not API documentation. Duolingo does not provide official public documentation for this reverse-engineered interface.",
+          "suggestion": "Set docs_url to null or link to clearly labeled community-maintained documentation while explicitly warning that it is unofficial and unsupported.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier",
+          "problem": "Duolingo has no official developer API product or developer free tier. Treating an undocumented application endpoint as a free API tier is misleading.",
+          "suggestion": "Set free_tier to false or null and state that no official developer pricing or access program exists.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The undocumented users endpoint may require a logged-in Duolingo session or JWT. The bare curl request is therefore not a dependable working example and could fail with an authorization response.",
+          "suggestion": "Either include the required session/JWT authentication and label the example unsupported, or remove the curl example rather than presenting it as a public unauthenticated call.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "easypost",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The entry leaves current production pricing unresolved even though EasyPost now publishes it. Wallet-carrier access is free for up to 3,000 labels, excluding postage, with per-label charges afterward; bringing your own carrier accounts has separate fees.",
+          "suggestion": "State: free access with EasyPost Wallet Carriers for up to 3,000 labels, postage excluded; BYOCA is currently $20/month plus applicable per-label fees; enterprise pricing is custom.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "EasyPost now publishes rate-limiting guidance, so \"not published\" is false. Its documentation specifically identifies a five-requests-per-second limit across Index endpoints and describes HTTP 429 handling.",
+          "suggestion": "Document the five requests/second Index-endpoint limit, note that other endpoint or carrier-specific limits can apply, and advise retry/backoff on HTTP 429.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ebay",
+      "issues": [
+        {
+          "field": "base_url",
+          "problem": "This base URL works for Browse and many other Buy APIs, but it is not universal for the entire suite described by the entry. In particular, the production guest Order API uses the apix.ebay.com host.",
+          "suggestion": "Either rename and scope the entry to eBay Browse API, or document separate roots for each Buy API, including https://apix.ebay.com/buy/order/v2 where required.",
+          "confidence": "medium"
+        },
+        {
+          "field": "pricing",
+          "problem": "The wording obscures a material access restriction: many Buy APIs are limited-release in production and require eBay Partner Network approval, application review, and contracts. Approval is not guaranteed. eBay does not present ordinary paid API plans for buying higher limits; its Application Growth Check is a free review process.",
+          "suggestion": "State that sandbox access is generally free, Browse commonly has a 5,000-call/day default limit, and production access to restricted Buy APIs requires approval. Set paid_plans to null unless a documented paid offering is identified.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The Authorization header calls its bearer credential YOUR_API_KEY, but the endpoint requires an OAuth application access token, not the raw eBay application key/client ID.",
+          "suggestion": "Change the placeholder to YOUR_OAUTH_ACCESS_TOKEN, for example: Authorization: Bearer YOUR_OAUTH_ACCESS_TOKEN.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "edamam-recipe",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "The current Recipe Search API does not have the claimed free tier. Its published plans currently begin with a paid Enterprise Basic plan and time-limited trials; paid_plans therefore must not be null.",
+          "suggestion": "Set free_tier to false. Record the current plans, such as Enterprise Basic at $9/month with 10,000 calls/month and a 10-day trial, Enterprise Core, Enterprise Plus, and custom Enterprise Unlimited pricing.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Edamam publishes plan-specific throttles, so \"not published\" is false.",
+          "suggestion": "Record the current plan limits, including 10 calls/minute for Enterprise Basic, 100/minute for Core, 300/minute for Plus, and custom/unlimited terms for Enterprise Unlimited.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eia",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "EIA publishes throttle guidance, so \"not published\" is false.",
+          "suggestion": "State that clients should generally remain below approximately 5 requests/second burst and 9,000 requests/hour sustained, with some routes potentially having lower limits.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.request",
+          "problem": "The curl command is syntactically broken because curl interprets data[0] as URL-globbing syntax and reports a bad-range error.",
+          "suggestion": "Add --globoff/-g or percent-encode the brackets, for example data%5B0%5D=value.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "elevenlabs",
+      "issues": [
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "The entry describes the current plans as character quotas, but ElevenLabs now uses a shared credit system. The Free plan currently includes 10,000 credits per month, and TTS credit consumption varies by model.",
+          "suggestion": "State that Free includes 10,000 credits/month shared across products; TTS generally costs about 0.5 to 1 credit per character depending on the model, and commercial licensing requires a paid plan.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "ensembl",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The hourly figure is missing a zero. The current server exposes an hourly limit of 55,000 requests, not 5,500.",
+          "suggestion": "Use 15 requests/second with a 55,000-requests/hour limit per IP, and recommend bulk or POST interfaces for large jobs.",
+          "confidence": "high"
+        },
+        {
+          "field": "example.response_snippet",
+          "problem": "The BRCA2 lookup snippet is stale: the current Ensembl response reports end=32400268 on GRCh38, not 32400266.",
+          "suggestion": "Update the BRCA2 end coordinate to 32400268 or make the snippet explicitly illustrative and omit release-sensitive coordinates.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "eodhd",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "Setting paid_plans to null is incorrect because EODHD publishes multiple paid subscription plans.",
+          "suggestion": "Populate current paid offerings from the pricing page, including EOD Historical Data\u2014All World, EOD+Intraday\u2014All World Extended, Fundamentals Data Feed, All-in-One, and separate commercial plans.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "audits": [
+    {
+      "id": "tcgdex",
+      "issues": []
+    },
+    {
+      "id": "telegram-bot",
+      "issues": [
+        {
+          "field": "pricing.paid_plans",
+          "problem": "The eligibility requirements are presented as settled, but Telegram's current Bot API manual says paid broadcasts require at least 10,000 Stars and does not mention a monthly-active-user threshold; Telegram's separate Bots FAQ still says 100,000 Stars and 100,000 monthly active users.",
+          "suggestion": "Flag the official-documentation conflict and verify eligibility in @BotFather; do not state the 100,000/100,000 requirements as unqualified fact.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "tenor",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "Google states that Tenor stopped accepting new API clients in January 2026, so new developers can no longer simply create a key and enable the API as described.",
+          "suggestion": "State that API-key access is limited to existing clients and that new client registrations are closed.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "A limit is published: Tenor API keys have a default limit of 1 request per second.",
+          "suggestion": "Set to \"Default 1 request per second per API key; requests above the threshold fail.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "status",
+          "problem": "Calling the API merely operational obscures that it is unavailable to new API clients.",
+          "suggestion": "Use a status such as \"operational for existing clients; closed to new clients since January 2026.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "terraform-cloud",
+      "issues": []
+    },
+    {
+      "id": "tfl-unified",
+      "issues": [
+        {
+          "field": "auth",
+          "problem": "The entry says an App ID and key are required, but TfL explicitly says app_id is no longer required. Anonymous access is also permitted at a lower quota, making API-key authentication optional rather than universally required.",
+          "suggestion": "Describe authentication as optional: anonymous requests receive the lower quota; registered users append only app_key as a query parameter for the subscribed quota. Remove app_id and legacy header guidance unless separately verified.",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.free_tier_limits",
+          "problem": "TfL open data is not limited to mostly non-commercial use; it may be reused in commercial and non-commercial products subject to the applicable open-data terms and attribution requirements.",
+          "suggestion": "Set to \"Free for commercial and non-commercial use subject to TfL open-data terms, licensing, and attribution requirements.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "The current quotas are published rather than merely historical: 50 requests per minute anonymously and 500 requests per minute with the general subscription key.",
+          "suggestion": "Set to \"50 requests/minute anonymously; 500 requests/minute with the standard registered subscription; higher quotas by request.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "the-graph",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The supported alternatives are an API key in the URL path or an Authorization: Bearer header, not an ordinary query parameter as stated.",
+          "suggestion": "Set to \"API key in the endpoint path, or Authorization: Bearer YOUR_API_KEY with the key omitted from the path.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "The limits are not unknown. The Free Plan includes 100,000 queries per month, and additional Growth Plan queries are usage-priced; current public pricing advertises $2 per additional 100,000 queries.",
+          "suggestion": "Set free_tier_limits to \"100,000 queries/month\" and paid_plans to \"Growth Plan usage pricing; currently advertised at $2 per additional 100,000 queries, payable by card or GRT.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "the-odds-api",
+      "issues": [
+        {
+          "field": "rate_limits",
+          "problem": "The provider publishes a request-rate limit of 30 requests per second for paid usage plans.",
+          "suggestion": "State \"30 requests/second on paid usage plans; 429 responses may still occur during bursts. Free-plan request-rate limit is not clearly published.\"",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "the-trivia-api",
+      "issues": [
+        {
+          "field": "docs_url",
+          "problem": "https://the-trivia-api.com/docs/v2/ returns 404; the current documentation is under /docs/.",
+          "suggestion": "Use https://the-trivia-api.com/docs/",
+          "confidence": "high"
+        },
+        {
+          "field": "auth.details",
+          "problem": "The placeholder does not describe the known interface. Basic question requests are publicly accessible without an account or key, while an x-api-key is used for subscription features.",
+          "suggestion": "Set to \"No key is required for basic public question requests; subscribed features use an API key in the x-api-key header.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing",
+          "problem": "Free access is licensed only for non-commercial use, and paid commercial subscriptions exist, contradicting paid_plans: null.",
+          "suggestion": "State that the public tier is free for non-commercial use under CC BY-NC 4.0 and list commercial/premium subscriptions under paid_plans.",
+          "confidence": "high"
+        },
+        {
+          "field": "description",
+          "problem": "The description is an unfinished research placeholder rather than a description of the API.",
+          "suggestion": "Replace it with a factual description of the trivia-question API, including its categories, difficulty filters, and optional subscription features.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "theaudiodb",
+      "issues": [
+        {
+          "field": "pricing",
+          "problem": "Current pricing and limits are publicly documented, contrary to the claims that quotas are unconfirmed and paid details may require an account. The service lists Free, \u20ac8/month Single Developer, and \u20ac20/month Small Business plans.",
+          "suggestion": "Record the published plans and explain that the free V1 API has restricted methods/results, while premium unlocks additional V1 methods and V2 access.",
+          "confidence": "high"
+        },
+        {
+          "field": "rate_limits",
+          "problem": "Rate limits are published: 30 requests/minute for Free, 100/minute for Premium, and 120/minute for Business.",
+          "suggestion": "Use the published per-minute limits and note that exceeding them returns HTTP 429.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "thecatapi",
+      "issues": [
+        {
+          "field": "auth.details",
+          "problem": "The authentication description is an unfinished placeholder.",
+          "suggestion": "Set to \"API key sent in the x-api-key request header; obtain a key through The Cat API signup.\"",
+          "confidence": "high"
+        },
+        {
+          "field": "pricing.paid_plans",
+          "problem": "paid_plans is null even though the provider advertises a $99/month Startup plan with 100,000 monthly requests and a custom Enterprise plan.",
+          "suggestion": "List the $99/month Startup plan and custom-priced Enterprise plan.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}
