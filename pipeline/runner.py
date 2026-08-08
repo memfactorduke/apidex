@@ -34,6 +34,23 @@ def log(msg):
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
 
 
+def decode_envelope(stdout):
+    """Find the result envelope (object with a 'text' key) in stdout, which may
+    contain multiple concatenated JSON documents or stray non-JSON lines."""
+    dec = json.JSONDecoder()
+    i = stdout.find("{")
+    while i != -1:
+        try:
+            obj, end = dec.raw_decode(stdout, i)
+        except ValueError:
+            i = stdout.find("{", i + 1)
+            continue
+        if isinstance(obj, dict) and "text" in obj:
+            return obj
+        i = stdout.find("{", end)
+    raise ValueError("no envelope with 'text' key in stdout")
+
+
 def wait_if_paused():
     while True:
         with pause_lock:
@@ -82,25 +99,26 @@ def run_job(job, usage_log):
         except subprocess.TimeoutExpired:
             log(f"{job['id']}: timeout (attempt {attempts})")
             continue
-        blob = r.stdout + "\n" + r.stderr
+        # Rate-limit detection ONLY on failure output (stderr / failed stdout).
+        # Successful output legitimately talks about API rate limits — never
+        # scan it for limit patterns.
         if r.returncode != 0 or not r.stdout.strip():
-            if LIMIT_RE.search(blob):
+            err_blob = r.stderr + ("" if r.stdout.strip() else "\n" + r.stdout)
+            if r.returncode != 0:
+                err_blob += "\n" + r.stdout[-500:]
+            if LIMIT_RE.search(err_blob):
                 if not trigger_pause():
                     return "quota_exhausted"
                 attempts -= 1  # limit waits don't consume attempts
                 continue
-            log(f"{job['id']}: error rc={r.returncode} (attempt {attempts}): {blob.strip()[:200]}")
+            log(f"{job['id']}: error rc={r.returncode} (attempt {attempts}): {err_blob.strip()[:200]}")
             time.sleep(10)
             continue
         try:
-            envelope = json.loads(r.stdout[r.stdout.index("{"):])
-            inner = json.loads(envelope["text"])
+            envelope = decode_envelope(r.stdout)
+            # text may carry trailing junk after the schema-constrained JSON
+            inner, _ = json.JSONDecoder().raw_decode(envelope["text"].strip())
         except (ValueError, KeyError) as e:
-            if LIMIT_RE.search(blob):
-                if not trigger_pause():
-                    return "quota_exhausted"
-                attempts -= 1
-                continue
             log(f"{job['id']}: parse failure (attempt {attempts}): {e}")
             continue
         note_success()

@@ -1,0 +1,56 @@
+{
+  "generated": "PLACEHOLDER — replaced by pipeline/build_dataset.py",
+  "count": 2,
+  "apis": [
+    {
+      "id": "open-meteo",
+      "name": "Open-Meteo",
+      "category": "weather-environment",
+      "tagline": "Free weather forecast API with no API key required",
+      "description": "Open-source weather API offering forecasts, historical data, and climate projections for any coordinate. No signup or API key needed for non-commercial use.",
+      "status": "operational",
+      "base_url": "https://api.open-meteo.com/v1",
+      "docs_url": "https://open-meteo.com/en/docs",
+      "signup_url": null,
+      "auth": { "type": "none", "details": "No authentication for non-commercial use" },
+      "https": true,
+      "cors": "yes",
+      "formats": ["json"],
+      "pricing": { "free_tier": true, "free_tier_limits": "10,000 calls/day non-commercial", "paid_plans": "Commercial plans from EUR 29/mo" },
+      "rate_limits": "10,000 calls/day free tier",
+      "example": {
+        "request": "curl 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m'",
+        "response_snippet": "{\"latitude\":52.52,\"current\":{\"temperature_2m\":18.3}}"
+      },
+      "use_cases": ["get current weather for a city", "fetch 7-day forecast for coordinates", "historical weather data"],
+      "sources": ["https://open-meteo.com/en/docs"],
+      "researcher_confidence": "high",
+      "verification": { "mode": "double-confirmed", "last_checked": "2026-08-08", "confirmed_by_both": ["base_url", "docs_url"], "corrected": [], "unverifiable": [] }
+    },
+    {
+      "id": "alpha-vantage",
+      "name": "Alpha Vantage",
+      "category": "finance",
+      "tagline": "Stock, forex, and crypto market data with a free API key",
+      "description": "Market data API covering equities, foreign exchange, and cryptocurrencies with intraday and historical time series. Free API key with rate-limited tier.",
+      "status": "operational",
+      "base_url": "https://www.alphavantage.co/query",
+      "docs_url": "https://www.alphavantage.co/documentation/",
+      "signup_url": "https://www.alphavantage.co/support/#api-key",
+      "auth": { "type": "apiKey", "details": "API key via 'apikey' query parameter, free self-serve signup" },
+      "https": true,
+      "cors": "unknown",
+      "formats": ["json", "csv"],
+      "pricing": { "free_tier": true, "free_tier_limits": "25 requests/day free", "paid_plans": "Premium from $49.99/mo" },
+      "rate_limits": "25 req/day (free), 75+ req/min (premium)",
+      "example": {
+        "request": "curl 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=YOUR_API_KEY'",
+        "response_snippet": "{\"Global Quote\":{\"01. symbol\":\"IBM\",\"05. price\":\"239.5000\"}}"
+      },
+      "use_cases": ["get stock price quotes", "historical stock time series", "forex exchange rates"],
+      "sources": ["https://www.alphavantage.co/documentation/"],
+      "researcher_confidence": "high",
+      "verification": { "mode": "double-confirmed", "last_checked": "2026-08-08", "confirmed_by_both": ["base_url"], "corrected": [], "unverifiable": ["rate_limits"] }
+    }
+  ]
+}

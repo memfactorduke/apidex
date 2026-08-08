@@ -1,0 +1,24 @@
+{
+  "name": "apidex",
+  "version": "0.1.0",
+  "description": "MCP server: a verified directory of public APIs, queryable by coding agents. Every entry cross-checked by independent verification passes.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "apidex": "dist/index.js" },
+  "files": ["dist", "data", "README.md"],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "test": "npm run build && node --test",
+    "start": "node dist/index.js"
+  },
+  "keywords": ["mcp", "modelcontextprotocol", "api", "directory", "public-apis", "claude", "codex", "agent"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^24.0.0"
+  },
+  "engines": { "node": ">=18" }
+}
