@@ -1,0 +1,52 @@
+{
+  "id": "deepl",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs/getting-started/auth"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.deepl.com/pro-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.deepl.com/pro-api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs/api-reference/translate"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs"
+    }
+  },
+  "notes": "Verified against official DeepL docs (2026). Base URL, auth, free tier 500k chars, Free vs Pro hosts, and example curl all match. Rate limits not published; CORS unknown is correct."
+}

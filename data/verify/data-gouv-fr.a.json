@@ -1,0 +1,52 @@
+{
+  "id": "data-gouv-fr",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gouv.fr/api/1/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://doc.data.gouv.fr/api/reference/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://doc.data.gouv.fr/api/reference/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gouv.fr/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://doc.data.gouv.fr/api/reference/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gouv.fr/api/1/datasets/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://doc.data.gouv.fr/api/reference/"
+    }
+  },
+  "notes": "Verified against official data.gouv.fr docs and live API (2026). base_url and example work; docs moved to doc.data.gouv.fr (apidoc redirects). Auth is optional X-API-KEY. Free public catalog; no published free-tier/rate-limit numbers; CORS not documented."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "afterpay",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://global-api.afterpay.com (or region-specific hosts such as https://api.us.afterpay.com / https://api.eu.afterpay.com per docs; entry\u2019s generic https://api.afterpay.com is not the documented production base)",
+      "source": "https://developers.afterpay.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.afterpay.com"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "basic (HTTP Basic Auth with Merchant ID as username and Secret Key as password)",
+      "source": "https://developers.afterpay.com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Documented calls use region/global hosts and Basic Auth, e.g. curl -u MERCHANT_ID:SECRET_KEY https://global-api.afterpay.com/v2/configuration \u2014 not unauthenticated GET https://api.afterpay.com/",
+      "source": "https://developers.afterpay.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.afterpay.com"
+    }
+  },
+  "notes": "Entry\u2019s base URL and example path look invented; auth is Basic not \u201cother/unknown\u201d. Docs live at developers.afterpay.com; merchant API is not a free public tier. Rate limits and CORS not clearly published for browser use."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "azure-maps",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/azure-maps-authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/azure-maps/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/azure-maps/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/azure-maps-qps-rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/how-to-manage-cors"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/rest/api/maps/search/get-search-address"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/about-azure-maps"
+    }
+  },
+  "notes": "Verified against official Microsoft Learn and Azure pricing pages. Search Address API still at /search/address/json with api-version=1.0; free monthly allotments exist; QPS limits are documented (so rate_limits \"not published\" is wrong \u2014 correcting)."
+}

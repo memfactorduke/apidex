@@ -1,0 +1,52 @@
+{
+  "id": "deepl",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs/getting-started/auth"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs/getting-started/auth"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "DeepL API Free (500k chars/month) and API Pro can no longer be purchased. Current free plan is DeepL API Developer: 1,000,000 characters total (not monthly; does not reset). Free keys still use https://api-free.deepl.com; paid use api.deepl.com. Paid plans are Growth (included chars + overage) and Enterprise.",
+      "source": "https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs/resources/usage-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "no \u2014 DeepL API does not allow browser CORS; client-side requests fail with HTTP 403 \u201cblocked by CORS policy\u201d; use a backend or proxy",
+      "source": "https://developers.deepl.com/docs/best-practices/cors-requests"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.deepl.com/docs"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Neural MT for text/documents is accurate, as are API key auth and REST translate/usage/languages. Replace \u201cchoose Free or Pro plans\u201d with current purchasable plans: Developer (free, 1M chars total), Growth, and Enterprise. Free/Pro are legacy and no longer for sale; free vs paid still use different hosts (api-free.deepl.com vs api.deepl.com).",
+      "source": "https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans"
+    }
+  },
+  "notes": "Auth details also wrong: auth_key query/body deprecated Nov 1 2025; only Authorization: DeepL-Auth-Key remains. Docs still mention Free/Pro hosts. API is operational. Overall fail on free_tier_limits, cors, description."
+}

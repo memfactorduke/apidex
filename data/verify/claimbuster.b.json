@@ -1,0 +1,52 @@
+{
+  "id": "claimbuster",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20251113182533/https://idir.uta.edu/claimbuster/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20251211171625/https://idir.uta.edu/claimbuster/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20251113182533/https://idir.uta.edu/claimbuster/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20251211171625/https://idir.uta.edu/claimbuster/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20251113182533/https://idir.uta.edu/claimbuster/api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20251113182533/https://idir.uta.edu/claimbuster/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20251113182533/https://idir.uta.edu/claimbuster/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://web.archive.org/web/20251211171625/https://idir.uta.edu/claimbuster/"
+    }
+  },
+  "notes": "API appears dead as of 2026-08-08: base_url paths return HTTP 404; docs_url 302s to idir.claimbuster.org (nginx default page only). Historical official docs (Wayback Nov\u2013Dec 2025) confirm path, x-api-key auth, free key registration, and GET /score/text/<text>. No published rate/free-tier numeric limits or CORS policy found. overall=fail because the live API is offline."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "coinbase-commerce",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/charges/list-charges"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.cdp.coinbase.com/commerce-onchain/docs/welcome",
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/introduction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.coinbase.com/legal/merchant/terms-of-service"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/charges/list-charges"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/introduction"
+    }
+  },
+  "notes": "docs_url 404s; correct docs live under api-reference/commerce-api. base_url and X-CC-Api-Key auth still match official REST docs. Free tier true via no monthly platform fee; free_tier_limits/cors/rate limits not published. Example list-charges curl is consistent."
+}

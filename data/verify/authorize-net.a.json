@@ -1,0 +1,52 @@
+{
+  "id": "authorize-net",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/api/reference/index.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/api/reference/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/api/reference/index.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/api/reference/index.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/api/reference/index.html"
+    }
+  },
+  "notes": "Verified against official Authorize.Net developer docs. Base URL, auth (merchantAuthentication in body), sandbox example, and free sandbox/paid production pricing claims all hold. Rate limits and CORS remain unpublished/unknown."
+}

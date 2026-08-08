@@ -1,0 +1,52 @@
+{
+  "id": "data-gov-uk",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ckan.publishing.service.gov.uk/api/3/action/status_show"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ckan.org/en/2.9/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ckan.org/en/2.9/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov.uk/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov.uk/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ckan.org/en/2.9/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov.uk/"
+    }
+  },
+  "notes": "Verified against live status_show, CKAN 2.9 API docs, and data.gov.uk portal. Catalog reads need no key; write needs Authorization. No published paid API plans or rate limits found. CORS left unknown. Example package_search path matches Action API."
+}

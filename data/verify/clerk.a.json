@@ -1,0 +1,52 @@
+{
+  "id": "clerk",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs/reference/backend-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs/backend-requests/making-requests"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs/backend-requests/resources/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs/reference/backend-api/tag/Users#operation/GetUserList"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs"
+    }
+  },
+  "notes": "Verified against Clerk official docs and pricing (2026). Base URL api.clerk.com/v1, Bearer secret keys, free tier with MAU limits, rate limits documented. Entry conservative on free_tier_limits/rate_limits as unknown/not published \u2014 acceptable."
+}

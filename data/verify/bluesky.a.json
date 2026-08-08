@@ -1,0 +1,52 @@
+{
+  "id": "bluesky",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Prefer https://public.api.bsky.app/xrpc for public AppView reads; https://bsky.social/xrpc is a host PDS (auth/session), not the sole public API base",
+      "source": "https://docs.bsky.app/docs/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.bsky.app/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.bsky.app/docs/advanced-guides/api-directory"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.bsky.app/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.bsky.app/docs/advanced-guides/rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.bsky.app/docs/advanced-guides/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.bsky.app/docs/api/app-bsky-actor-get-profile"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.bsky.app/"
+    }
+  },
+  "notes": "Draft before verification \u2014 will replace with live docs checks."
+}

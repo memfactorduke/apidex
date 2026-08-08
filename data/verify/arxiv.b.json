@@ -1,0 +1,52 @@
+{
+  "id": "arxiv",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://export.arxiv.org/api/query",
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/tou.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/tou.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/tou.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    }
+  },
+  "notes": "base_url uses http while docs and example use https; automated check returned 400 on http base_url. Rate limits and no-auth confirmed from ToU."
+}

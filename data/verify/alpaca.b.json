@@ -1,0 +1,52 @@
+{
+  "id": "alpaca",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Trading API base is https://api.alpaca.markets (live) or https://paper-api.alpaca.markets (paper); REST paths are under /v2 (e.g. https://api.alpaca.markets/v2/...). Market data uses separate hosts (e.g. data.alpaca.markets).",
+      "source": "https://docs.alpaca.markets/docs/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.alpaca.markets/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.alpaca.markets/docs/getting-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.alpaca.markets/docs/about-market-data-api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not fully \u201cunknown\u201d: free Basic market data is documented (e.g. IEX equities, limited historical coverage, SIP only with Unlimited). Trading/brokerage free-tier numeric caps are less clearly published as a single free-tier string.",
+      "source": "https://docs.alpaca.markets/docs/about-market-data-api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: 200 requests/minute per API key for Trading API (HTTP 429 when exceeded). Market Data has separate subscription-based limits.",
+      "source": "https://docs.alpaca.markets/docs/about-trading-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.alpaca.markets/docs/getting-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.alpaca.markets/"
+    }
+  },
+  "notes": "Main failure: rate_limits is wrong (200/min is documented). base_url packs /v2 into the host root while docs separate live/paper hosts and data hosts. free_tier_limits is partly knowable for market data. CORS not established from docs."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "claimbuster",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://idir.uta.edu/claimbuster/api/v2 returns 404; site redirects to https://idir.claimbuster.org which is an unconfigured nginx default (API appears offline)",
+      "source": "https://idir.uta.edu/claimbuster/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://idir.uta.edu/claimbuster/ redirects to https://idir.claimbuster.org (nginx default page); no live docs at former path",
+      "source": "https://idir.uta.edu/claimbuster/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Documented path /api/v2/score/text/... returns 404 on current host; API appears offline so example is not operational",
+      "source": "https://idir.uta.edu/claimbuster/api/v2/score/text/test"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vldb.org/pvldb/vol10/p1945-li.pdf"
+    }
+  },
+  "notes": "Official URL redirects to idir.claimbuster.org (bare nginx). API v2 paths 404. Historical papers/code confirm UTA ML check-worthiness scoring and x-api-key usage, but public API is not currently operational."
+}

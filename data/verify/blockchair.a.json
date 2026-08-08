@@ -1,0 +1,52 @@
+{
+  "id": "blockchair",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blockchair.com/api/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blockchair.com/api/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blockchair.com/api/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blockchair.com/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 1,000 requests/day (soft limit), limited endpoints; no premium features. See pricing for details.",
+      "source": "https://blockchair.com/api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: ~1,000 requests/day (soft). Paid plans have higher daily limits and RPM caps. Exact numbers on pricing/docs.",
+      "source": "https://blockchair.com/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use a concrete endpoint, e.g. curl 'https://api.blockchair.com/bitcoin/stats' or with key: curl 'https://api.blockchair.com/bitcoin/stats?key=YOUR_KEY'",
+      "source": "https://blockchair.com/api/docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Entry is mostly placeholders. base_url and docs_url work (docs may 401 for bots). Auth is API key. Free tier exists with ~1k req/day. Placeholder free_tier_limits, rate_limits, and bare root curl example are incorrect/incomplete for a directory entry."
+}

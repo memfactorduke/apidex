@@ -1,0 +1,52 @@
+{
+  "id": "azure-maps",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/rest/api/maps/search/get-search-address"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/azure-maps-authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/azure-maps/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Gen2 S0 free monthly allotment still applies (e.g. 5,000 free Render Tile transactions and other service-specific free quantities; not a single unlimited free tier). Prefer current Azure Maps pricing page Gen2 free quantities rather than \"unknown\".",
+      "source": "https://azure.microsoft.com/en-us/pricing/details/azure-maps/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per-service QPS limits (e.g. Search ~500 QPS, Routing ~50 QPS, Render ~500 QPS depending on API; see Azure Maps QPS rate limits docs).",
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/azure-maps-qps-rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/rest/api/maps/search/get-search-address"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/azure-maps/"
+    }
+  },
+  "notes": "Docs and auth base claims hold. Free tier and QPS limits are published on official pricing/QPS pages, so \"unknown\"/\"not published\" are wrong. CORS remains unknown without explicit docs."
+}

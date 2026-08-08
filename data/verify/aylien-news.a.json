@@ -1,0 +1,52 @@
+{
+  "id": "aylien-news",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.aylien.com/v6 (or current Melwater/Aylien path \u2014 verify at https://docs.aylien.com/ after redirect)",
+      "source": "https://aylien.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.aylien.com/ may redirect or be under Meltwater; check current product site",
+      "source": "https://aylien.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aylien.com/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Headers/path may be outdated (v6 API uses different auth/endpoints)",
+      "source": "https://docs.aylien.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aylien.com/"
+    }
+  },
+  "notes": "Automated curl returned HTTP 0 for base_url and docs_url \u2014 likely bot detection or DNS/network; need live docs verification. Aylien was acquired by Meltwater; product may have rebranded or changed endpoints."
+}

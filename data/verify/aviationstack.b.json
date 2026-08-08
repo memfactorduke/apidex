@@ -1,0 +1,52 @@
+{
+  "id": "aviationstack",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aviationstack.com/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aviationstack.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aviationstack.com/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aviationstack.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aviationstack.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aviationstack.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aviationstack.com/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aviationstack.com/"
+    }
+  },
+  "notes": "Verified against aviationstack.com docs and pricing (2026). Base URL, access_key auth, free tier (100 req/mo, HTTP-only), and /v1/flights example match official docs. CORS not documented. Paid plan names/pricing may vary; no hard contradiction found on core free-tier claims."
+}

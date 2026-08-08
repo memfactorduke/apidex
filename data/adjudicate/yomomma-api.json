@@ -1,0 +1,15 @@
+{
+  "id": "yomomma-api",
+  "resolution_notes": "base_url: original https://yomomma.info is dead (HTTP 0); Verifier B's https://api.yomomma.info is the documented API host per GitHub R3l3ssl3ss/yomomma-api README and live curl. docs_url: site dead; use GitHub README as primary docs. example: curl must hit api.yomomma.info; response is {\"joke\":\"...\"}. status remains operational if api host responds.",
+  "base_url": "https://api.yomomma.info",
+  "docs_url": "https://github.com/R3l3ssl3ss/yomomma-api",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s https://api.yomomma.info",
+  "example_response_snippet": "{\"joke\":\"Yo momma so fat, when she sat on an iPhone, it turned into an iPad!\"}",
+  "description": null,
+  "status": null
+}

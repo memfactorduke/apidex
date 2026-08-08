@@ -1,0 +1,96 @@
+{
+  "id": "assemblyai",
+  "status": "operational",
+  "name": "AssemblyAI",
+  "category": "ai-ml",
+  "tagline": "Speech-to-text and audio intelligence API for transcription and analysis",
+  "description": "AssemblyAI provides a cloud speech-to-text and audio intelligence API for asynchronous and real-time transcription, speaker diarization, summarization, sentiment analysis, and related speech models. Developers authenticate with an API key and submit audio URLs or streams for processing, then poll or stream results via REST and WebSocket endpoints under api.assemblyai.com.",
+  "base_url": "https://api.assemblyai.com/v2",
+  "docs_url": "https://www.assemblyai.com/docs",
+  "signup_url": "https://www.assemblyai.com/dashboard/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header (raw key, not Bearer); self-serve signup at dashboard"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier with credits for new accounts; exact free credit amount and ongoing free limits vary \u2014 verify on pricing page",
+    "paid_plans": "Pay-as-you-go speech models billed per hour of audio; see pricing page for current rates"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.assemblyai.com/v2/transcript -H \"Authorization: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"audio_url\": \"https://assembly.ai/wildfires.mp3\"}'",
+    "response_snippet": "{\"id\": \"transcript_id\", \"status\": \"queued\", \"audio_url\": \"https://assembly.ai/wildfires.mp3\", \"text\": null}"
+  },
+  "use_cases": [
+    "transcribe an audio file or podcast to text",
+    "get real-time speech-to-text from a live audio stream",
+    "run speaker diarization on a meeting recording",
+    "summarize or extract insights from long audio",
+    "detect sentiment or topics in spoken content"
+  ],
+  "sources": [
+    "https://www.assemblyai.com/docs",
+    "https://www.assemblyai.com/pricing"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

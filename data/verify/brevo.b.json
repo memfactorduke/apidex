@@ -1,0 +1,52 @@
+{
+  "id": "brevo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.brevo.com/docs/how-it-works"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.brevo.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.brevo.com/docs/api-key-authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.brevo.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.brevo.com/hc/en-us/articles/208580669-FAQs-What-are-the-limits-of-the-Free-plan"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per-endpoint tables for General/Advanced/Extended tiers (RPH and RPS). e.g. General: POST /v3/smtp/email 3,600,000 RPH / 1,000 RPS; contacts 36,000 RPH / 10 RPS; default other endpoints 100 RPH. General available to Free through Enterprise.",
+      "source": "https://developers.brevo.com/docs/api-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes \u2014 live API responses include Access-Control-Allow-Origin: *, Allow-Methods PUT/POST/GET/DELETE/PATCH/OPTIONS, Allow-Headers: *",
+      "source": "https://api.brevo.com/v3/account"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.brevo.com/docs/api-key-authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.brevo.com/"
+    }
+  },
+  "notes": "Main fail: rate_limits falsely claims no public table \u2014 docs publish full endpoint tables. cors is not unknown (ACA-Origin *). Paid plan names in entry (Business) don't match current Free/Starter/Standard/Professional/Enterprise; not a scored field. Free plan is exactly 300 emails/day, not merely ~300."
+}

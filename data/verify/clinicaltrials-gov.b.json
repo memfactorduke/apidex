@@ -1,0 +1,52 @@
+{
+  "id": "clinicaltrials-gov",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/about-api/api-design"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    }
+  },
+  "notes": "Verified against official ClinicalTrials.gov data-api docs (2026). base_url, docs_url, no-auth, free public access, JSON format, and example path/params match. rate_limits correctly listed as not published in docs. CORS left unknown as docs do not document it."
+}

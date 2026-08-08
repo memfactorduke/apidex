@@ -1,0 +1,15 @@
+{
+  "id": "arxiv-api",
+  "resolution_notes": "free_tier_limits: Verifiers correct \u2014 no formal free-tier quota; free use subject to polite rate limits (TOU + user manual). rate_limits: Confirmed at https://info.arxiv.org/help/api/tou.html \u2014 \u22641 request/3s and single connection for legacy APIs; user manual also urges 3s delay between sequential calls. example: Placeholders invalid; official sample is search_query=all:electron&start=0&max_results=1 returning Atom XML (user-manual Examples). description: Original is researcher meta-text, not a product blurb; replaced with accurate Atom/metadata summary from docs. status operational; base_url/docs/auth/free_tier confirmed.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "No formal free-tier quota; free use subject to fair-use rate limits (\u22641 request every 3 seconds, single connection). No paid plans.",
+  "rate_limits": "\u22641 request every 3 seconds; single concurrent connection per source. Avoid bursts; use OAI-PMH/bulk for large harvests. max_results capped at 30000 (slices \u22642000).",
+  "cors": null,
+  "example_request": "curl \"https://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=1\"",
+  "example_response_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\" xmlns:opensearch=\"http://a9.com/-/spec/opensearch/1.1/\" xmlns:arxiv=\"http://arxiv.org/schemas/atom\">\n  <title>ArXiv Query: search_query=all:electron&amp;id_list=&amp;start=0&amp;max_results=1</title>\n  <opensearch:totalResults>1000</opensearch:totalResults>\n  <entry>\n    <id>http://arxiv.org/abs/hep-ex/0307015</id>\n    <title>Multi-Electron Production at High Transverse Momenta in ep Collisions at HERA</title>\n    <summary>Multi-electron production is studied at high electron transverse momentum...</summary>\n  </entry>\n</feed>",
+  "description": "Search and retrieve metadata for arXiv preprints (physics, math, CS, and other fields) via an Atom 1.0 API; no authentication required.",
+  "status": null
+}

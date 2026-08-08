@@ -1,0 +1,52 @@
+{
+  "id": "alienvault-otx",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/"
+    }
+  },
+  "notes": "Verified against live OTX docs/API pages. base_url, docs_url, X-OTX-API-KEY auth, free community access, and /user/me example match official sources. free_tier_limits and rate_limits remain unpublished (entry correctly says unknown/not published). cors unknown is appropriate. No shutdown or migration notices found."
+}

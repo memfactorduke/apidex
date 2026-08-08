@@ -1,0 +1,52 @@
+{
+  "id": "coinbase-commerce",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/charges/list-charges"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.cdp.coinbase.com/commerce-onchain/docs/welcome (path returns 404; use https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/introduction or https://docs.cloud.coinbase.com/commerce/docs/welcome)",
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/introduction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.coinbase.com/legal/merchant/payment-terms"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/introduction"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/charges/list-charges"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cdp.coinbase.com/api-reference/commerce-api/rest-api/introduction"
+    }
+  },
+  "notes": "docs_url path 404s; Commerce API still documented under CDP with base https://api.commerce.coinbase.com and X-CC-Api-Key. Merchant fees apply (not free service), free_tier true as no paid API plan. Rate limits not published. base_url 503 is likely bot/edge, not dead API."
+}

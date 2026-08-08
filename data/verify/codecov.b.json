@@ -1,0 +1,52 @@
+{
+  "id": "codecov",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.codecov.com/reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.codecov.com/reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.codecov.com/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://about.codecov.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Path should use /api/v2/{service}/{owner}/repos/{repo}/ \u2014 entry path is plausible but response_snippet is invented (real responses use different field shapes, e.g. totals.coverage). Verify exact path against OpenAPI at docs.codecov.com/reference.",
+      "source": "https://docs.codecov.com/reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.codecov.com"
+    }
+  },
+  "notes": "Adversarial recheck needed \u2014 preliminary pass incomplete. Re-verify with live docs before final."
+}

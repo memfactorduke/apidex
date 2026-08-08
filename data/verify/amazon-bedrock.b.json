@@ -1,0 +1,52 @@
+{
+  "id": "amazon-bedrock",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/general/latest/gr/bedrock.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true \u2014 AWS Free Tier includes Bedrock model invocation credits for eligible accounts (check current Free Tier page; historically new accounts get limited free usage of select models).",
+      "source": "https://aws.amazon.com/bedrock/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not unknown \u2014 Free Tier limits are published on AWS Free Tier / Bedrock pricing (e.g. limited free requests/tokens for select models for new accounts; exact amounts change over time).",
+      "source": "https://aws.amazon.com/bedrock/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per model/region as quotas (TPM/RPM) in Service Quotas and Bedrock docs \u2014 not \"not published\".",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/quotas.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html"
+    }
+  },
+  "notes": "Preliminary \u2014 need live web verification of free tier, quotas, endpoints, and example model IDs before finalizing."
+}

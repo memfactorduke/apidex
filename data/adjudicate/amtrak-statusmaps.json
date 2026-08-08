@@ -1,0 +1,15 @@
+{
+  "id": "amtrak-statusmaps",
+  "resolution_notes": "docs_url: Verifier A is correct \u2014 www.amtrak.com is the consumer site, not API docs; no official developer portal exists. Prefer maps.amtrak.com as the service root (or null if no docs). example: Both verifiers flag the getTrainStatus path as outdated/unreliable reverse-engineering; amtraker and community sources use different StatusMaps/MapDataService paths that change and face anti-bot. Provide a conservative corrected example only if a live path can be confirmed, else a historical/community-noted form. status remains operational if maps.amtrak.com responds (HTTP 301).",
+  "base_url": null,
+  "docs_url": "https://maps.amtrak.com/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

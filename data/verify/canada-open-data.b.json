@@ -1,0 +1,52 @@
+{
+  "id": "canada-open-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://open.canada.ca/data/api/3 (or https://open.canada.ca/data/api/action for Action API)",
+      "source": "https://open.canada.ca/en/open-data"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca/en/open-data"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca/en/open-data"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca/en/open-data"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s 'https://open.canada.ca/data/api/3/action/package_search?q=climate&rows=1'",
+      "source": "https://open.canada.ca/data/api/3/action/package_search"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca/en/open-data"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live sources now."
+}

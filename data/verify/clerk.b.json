@@ -1,0 +1,52 @@
+{
+  "id": "clerk",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs/reference/backend-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs/backend-requests/making-requests"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan includes 10,000 monthly active users (MAU); see pricing for other included limits",
+      "source": "https://clerk.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Backend API is rate limited; production typically 100 req/10s (some endpoints higher); development lower. Documented at https://clerk.com/docs/backend-requests/resources/rate-limits",
+      "source": "https://clerk.com/docs/backend-requests/resources/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs/reference/backend-api/tag/Users#operation/GetUserList"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clerk.com/docs"
+    }
+  },
+  "notes": "Entry mostly solid; free tier is published (not \"unknown\") and rate limits are documented (not \"not published\"). Base URL api.clerk.com/v1 and Bearer sk_ auth match current Backend API docs."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "aisstream",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aisstream.io/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aisstream.io/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aisstream.io/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aisstream.io/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aisstream.io/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aisstream.io/documentation"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aisstream.io/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aisstream.io/documentation"
+    }
+  },
+  "notes": "Verified against official aisstream.io docs and site. WebSocket base URL is correct (HTTP 0 expected for wss://). Free tier exists; specific free-tier numeric limits and published rate limits remain under-documented as the entry states."
+}

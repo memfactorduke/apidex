@@ -1,0 +1,52 @@
+{
+  "id": "bright-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.brightdata.com/api-reference/authentication"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.brightdata.com/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.brightdata.com/api-reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "5,000 free credits/month (~$7.50) shared across Web Unlocker API, SERP API, Web Scraper API, and Scraper Studio; no credit card required. Unfunded free-tier accounts capped at 1,000 req/min (SERP/Unlocker/Proxy). Proxies and Browser API excluded from monthly free credits (separate one-time trial credits).",
+      "source": "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier (unfunded): 1,000 requests/min across SERP API, Web Unlocker API, and Proxy products (removed once funds added). Web Scraper API documents concurrent-job limits (e.g. up to 5,000 concurrent jobs; Discovery batch up to 100). Paid/general RPM is often zone/account-specific rather than a single public global number.",
+      "source": "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.brightdata.com/scraping-automation/web-unlocker/send-your-first-request"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.brightdata.com/introduction"
+    }
+  },
+  "notes": "Main failure: free_tier=false is false\u2014official docs advertise a recurring free tier (5k credits/mo). free_tier_limits and rate_limits are published there and on scraper docs, not unknown/unpublished. Base URL, Bearer API key auth, /request example, and product description match current docs. CORS not documented for the REST API."
+}

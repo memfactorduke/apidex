@@ -1,0 +1,15 @@
+{
+  "id": "nvd-nist",
+  "resolution_notes": "Disputed fields free_tier_limits and rate_limits: Verifier A is correct. Official NVD docs (https://nvd.nist.gov/developers/request-an-api-key) state rolling window limits of 5 requests per 30 seconds without an API key and 50 requests per 30 seconds with a free API key. Original \"unknown\" / \"not published\" are wrong; Verifier B incorrectly confirmed them. All other fields keep original (null).",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Without API key: 5 requests / 30 seconds. With free API key: 50 requests / 30 seconds.",
+  "rate_limits": "Without API key: 5 requests / 30 seconds. With free API key: 50 requests / 30 seconds.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

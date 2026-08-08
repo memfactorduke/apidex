@@ -1,0 +1,15 @@
+{
+  "id": "mlb-stats",
+  "resolution_notes": "docs_url: Verifier B is correct \u2014 https://statsapi.mlb.com/docs/ is not usable public documentation. Live checks return HTTP 200 with empty body and Content-Length: 0; HTML-oriented fetches fail with encoding/empty content. No official MLB developer docs for Stats API were found; practical references remain community/unofficial (e.g. GitHub wikis, sportsdataverse). Therefore docs_url must not stay as the empty /docs/ path. Final value null (no official docs URL). base_url and live schedule endpoints remain operational (confirmed via statsapi.mlb.com/api/v1/schedule).",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

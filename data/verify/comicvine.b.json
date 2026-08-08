@@ -1,0 +1,52 @@
+{
+  "id": "comicvine",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://comicvine.gamespot.com/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://comicvine.gamespot.com/api/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://comicvine.gamespot.com/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://comicvine.gamespot.com/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://comicvine.gamespot.com/api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://comicvine.gamespot.com/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://comicvine.gamespot.com/api/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://comicvine.gamespot.com/api/"
+    }
+  },
+  "notes": "Verified against comicvine.gamespot.com (2026). base_url, docs, apiKey query auth, free tier, and example path shape match official docs. Rate/free limits still not clearly published. CORS not stated. formats had a duplicate 'json' in the entry (cosmetic, outside verdict schema)."
+}

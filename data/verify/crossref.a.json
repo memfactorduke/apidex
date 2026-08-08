@@ -1,0 +1,52 @@
+{
+  "id": "crossref",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.crossref.org/swagger-ui/index.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.crossref.org/swagger-ui/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/CrossRef/rest-api-doc"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free public access with no hard published free-tier quota; polite pool (mailto/User-Agent) recommended for better and more consistent rate limits",
+      "source": "https://github.com/CrossRef/rest-api-doc"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Public/polite pool rate guidance is not a fixed published ~50 req/s free-tier quota; polite pool is higher/more consistent when contact is provided",
+      "source": "https://github.com/CrossRef/rest-api-doc"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.crossref.org/swagger-ui/index.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/"
+    }
+  },
+  "notes": "Prior response was incomplete; verifying against live official Crossref docs before finalizing."
+}

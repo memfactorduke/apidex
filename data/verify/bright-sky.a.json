@@ -1,0 +1,52 @@
+{
+  "id": "bright-sky",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://brightsky.dev/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://brightsky.dev/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://brightsky.dev/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://brightsky.dev/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://brightsky.dev/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://brightsky.dev/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.brightsky.dev/current_weather?lat=52.52&lon=13.41\" is valid path/params, but docs use /weather and /current_weather; response shape is plausible. Confirming request against live docs.",
+      "source": "https://brightsky.dev/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://brightsky.dev/"
+    }
+  },
+  "notes": "Placeholder - verifying now"
+}

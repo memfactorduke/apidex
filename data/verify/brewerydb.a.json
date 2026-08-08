@@ -1,0 +1,52 @@
+{
+  "id": "brewerydb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "API appears offline/dead; historical endpoint was https://api.brewerydb.com/v2 but it no longer responds (HTTP 0). No current official replacement confirmed on brewerydb.com.",
+      "source": "https://www.brewerydb.com/developers"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.brewerydb.com/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.brewerydb.com/developers"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Endpoint pattern historically matched /v2/beer/random?key=KEY but live API is unreachable; example cannot be validated against a working service.",
+      "source": "https://www.brewerydb.com/developers"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.brewerydb.com/developers"
+    }
+  },
+  "notes": "base_url dead (HTTP 0); docs site still up. Ownership/packaging may have changed; pricing and limits not published on current public pages."
+}

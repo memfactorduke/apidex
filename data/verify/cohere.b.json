@@ -1,0 +1,52 @@
+{
+  "id": "cohere",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cohere.com/reference/about"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cohere.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cohere.com/docs/rate-limits"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cohere.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Trial key: 1000 API calls/month. Production key free rate limits: e.g. Chat/Embed 500 RPM (varies by endpoint; Trial is much lower, e.g. 20 RPM chat). See docs.cohere.com/docs/rate-limits and cohere.com/pricing.",
+      "source": "https://docs.cohere.com/docs/rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: Trial vs Production keys; per-endpoint RPM/TPM (e.g. Chat production 500 RPM / 2M TPM; Embed 500 RPM / 2000 TPM; Rerank 1000 RPM). See https://docs.cohere.com/docs/rate-limits",
+      "source": "https://docs.cohere.com/docs/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cohere.com/reference/chat"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cohere.com"
+    }
+  },
+  "notes": "Rate limits and free-tier limits are published (not 'unknown'/'not published'). Base URL api.cohere.com, Bearer auth, v2/chat, and free Trial tier confirmed. CORS not documented."
+}

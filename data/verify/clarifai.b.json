@@ -1,0 +1,52 @@
+{
+  "id": "clarifai",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.clarifai.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.clarifai.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.clarifai.com/product-updates/changelog"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.clarifai.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Community plan: limited free operations (e.g. model predictions, storage); see current pricing for exact quotas",
+      "source": "https://www.clarifai.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published per plan in docs/pricing",
+      "source": "https://docs.clarifai.com"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Example model id and/or path may be outdated; verify against current Predict API docs",
+      "source": "https://docs.clarifai.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.clarifai.com"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live docs"
+}

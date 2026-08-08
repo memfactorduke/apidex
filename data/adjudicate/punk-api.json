@@ -1,0 +1,15 @@
+{
+  "id": "punk-api",
+  "resolution_notes": "base_url: KEEP https://api.punkapi.com/v2 \u2014 official historical v2 base (apis.io); DNS NXDOMAIN 2026 so status=defunct, not a wrong path. https://apis.io/providers/punkapi/ docs_url: REPLACE dead punkapi.com/documentation/v2 (NXDOMAIN) with https://github.com/sammdec/punkapi (archived 2023-06-28). example: KEEP historical GET /v2/beers/{id} curl/snippet \u2014 valid when live; no official live host. description: REWRITE to past/defunct. status: defunct.",
+  "base_url": null,
+  "docs_url": "https://github.com/sammdec/punkapi",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Punk API was a free, no-auth REST API of BrewDog DIY Dog beer recipes (325 beers with ingredients, methods, food pairings). Supported filtering, pagination, and random beer as JSON. Official hosts api.punkapi.com and punkapi.com no longer resolve (decommissioned ~2023); MIT source remains at github.com/sammdec/punkapi for self-hosting.",
+  "status": "defunct"
+}

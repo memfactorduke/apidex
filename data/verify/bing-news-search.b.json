@@ -1,0 +1,52 @@
+{
+  "id": "bing-news-search",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/search-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "F0 free tier: 1,000 transactions per month (Bing Search v7); S1 and other paid SKUs have separate quotas \u2014 do not treat F0/S1 as interchangeable free quotas.",
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/search-api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per SKU (e.g. F0: 3 transactions per second; S1: 250 TPS). Not \u201cnot published.\u201d",
+      "source": "https://learn.microsoft.com/en-us/azure/cognitive-services/bing-web-search/bing-web-search-quota-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/reference/endpoints"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Bing Search APIs (including News Search) are being retired from Azure Cognitive Services; Microsoft has announced deprecation/migration away from the classic Bing Search product path. Calling it a current Azure Cognitive Services API without noting retirement status is misleading.",
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview"
+    }
+  },
+  "notes": "Adversarial check found published rate limits and retirement/deprecation signals; free_tier_limits is too vague vs documented F0 quota. Verify retirement status on learn.microsoft.com before treating the API as fully operational."
+}

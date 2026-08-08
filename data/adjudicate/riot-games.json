@@ -1,0 +1,15 @@
+{
+  "id": "riot-games",
+  "resolution_notes": "example: both verifiers correct that summoner-by-name is gone \u2014 use account-v1 by-riot-id or summoner by-puuid; free_tier_limits/rate_limits: keep original sense but hedge numbers as app-specific (portal) rather than hard-coded.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Personal development keys: free with short-term expiration (typically 24h renewal) and low rate limits; production keys free after application approval with higher limits. Exact rate numbers are app-specific and shown in the developer portal.",
+  "rate_limits": "Personal keys typically have app-specific limits shown in the developer portal (commonly ~20 req/1s and ~100 req/2min historically, but not guaranteed); production apps get higher limits after approval.",
+  "cors": null,
+  "example_request": "curl -H \"X-Riot-Token: YOUR_API_KEY\" \"https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/GameName/TagLine\"",
+  "example_response_snippet": "{\n  \"puuid\": \"puuid-here\",\n  \"gameName\": \"GameName\",\n  \"tagLine\": \"TagLine\"\n}",
+  "description": null,
+  "status": null
+}

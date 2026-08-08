@@ -1,0 +1,52 @@
+{
+  "id": "canada-open-data",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca/data/en/api/3"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca/en/open-data"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca/data/en/api/3"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca/data/en/api/3/action/package_search?q=climate&rows=1"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open.canada.ca"
+    }
+  },
+  "notes": "Verified against open.canada.ca docs and live CKAN Action API; public read endpoints require no auth."
+}

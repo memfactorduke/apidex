@@ -1,0 +1,52 @@
+{
+  "id": "astronomyapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.astronomyapi.com/api/v2",
+      "source": "https://docs.astronomyapi.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.astronomyapi.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.astronomyapi.com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://astronomyapi.com"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 100 requests/day, 10 requests/minute",
+      "source": "https://astronomyapi.com"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 100/day, 10/min; paid plans have higher limits",
+      "source": "https://astronomyapi.com"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Basic auth with Application ID:Application Secret base64-encoded, not a single API key string",
+      "source": "https://docs.astronomyapi.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.astronomyapi.com"
+    }
+  },
+  "notes": "Auth is Basic with Application ID + Secret (not a bare API key string). Free tier and rate limits are published. Base URL in entry is root host; full API path is /api/v2."
+}

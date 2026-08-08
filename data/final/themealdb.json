@@ -1,0 +1,97 @@
+{
+  "id": "themealdb",
+  "status": "operational",
+  "name": "TheMealDB",
+  "category": "food-drink",
+  "tagline": "Free recipe and meal database API for meals, ingredients, and categories",
+  "description": "TheMealDB is a free open recipe database with a REST API for searching meals by name, ingredient, category, or area; looking up full recipes with instructions and images; listing categories and random meals. Popular with developers for demos and food apps. Free test key is available; premium paid keys unlock higher limits.",
+  "base_url": "https://www.themealdb.com/api/json/v1",
+  "docs_url": "https://www.themealdb.com/api.php",
+  "signup_url": "https://www.themealdb.com/api.php",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key in URL path as /api/json/v1/{API_KEY}/... Free test key is 1. Premium keys available via Patreon/subscription."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free test key \"1\" for development/education; free full-list capped at ~100 items. Premium (~$10 lifetime) unlocks V2 endpoints, full listing, and production key.",
+    "paid_plans": "Premium API key via TheMealDB Patreon/subscription"
+  },
+  "rate_limits": "No published rate limits; FAQ states unlimited usage.",
+  "example": {
+    "request": "curl \"https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata\"",
+    "response_snippet": "{\"meals\":[{\"idMeal\":\"52771\",\"strMeal\":\"Spicy Arrabiata Penne\",\"strCategory\":\"Vegetarian\",\"strArea\":\"Italian\",\"strInstructions\":\"Bring a large pot of water to a boil...\",\"strMealThumb\":\"https://www.themealdb.com/images/media/meals/...\",\"strIngredient1\":\"penne rigate\",\"strMeasure1\":\"1 pound\"}]}"
+  },
+  "use_cases": [
+    "search recipes by meal name",
+    "look up full recipe with ingredients and instructions",
+    "filter meals by main ingredient",
+    "list meal categories or random meal ideas",
+    "get meals by cuisine/area"
+  ],
+  "sources": [
+    "https://www.themealdb.com/api.php",
+    "https://www.themealdb.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "alienvault-otx",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://otx.alienvault.com/"
+    }
+  },
+  "notes": "Verified against official OTX site/API docs. Base URL, docs, API-key auth (X-OTX-API-KEY), free community access, and /user/me example match. Rate limits and free-tier quotas not published; CORS unknown is appropriate."
+}

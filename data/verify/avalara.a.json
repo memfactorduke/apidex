@@ -1,0 +1,52 @@
+{
+  "id": "avalara",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/api-reference/avatax/rest/v2/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/api-reference/avatax/rest/v2/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/avatax/dev-guide/getting-started-with-avatax/authentication-in-avatax/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/avatax/dev-guide/getting-started-with-avatax/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/avatax/dev-guide/getting-started-with-avatax/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/avatax/dev-guide/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/api-reference/avatax/rest/v2/methods/Transactions/CreateTransaction/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/avatax/dev-guide/"
+    }
+  },
+  "notes": "Verified against official Avalara developer docs (2026). Base URL, auth (Basic + OAuth), sandbox, CreateTransaction path, free sandbox, and quote-driven production pricing match docs; no single public rate-limit number found."
+}

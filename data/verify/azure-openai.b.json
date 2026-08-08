@@ -1,0 +1,52 @@
+{
+  "id": "azure-openai",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/reference"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Request body must include \"messages\" array AND model is via deployment name in path (correct); api-version 2024-10-21 may still work but verify current GA version. Main issue: path and structure largely match docs \u2014 need deeper check on api-version and required fields.",
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
+    }
+  },
+  "notes": "Placeholder - need full verification"
+}

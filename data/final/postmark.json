@@ -1,0 +1,98 @@
+{
+  "id": "postmark",
+  "status": "operational",
+  "name": "Postmark",
+  "category": "social-communication",
+  "tagline": "Transactional email API for reliable delivery and tracking",
+  "description": "Postmark is a transactional email delivery API for sending, tracking, and managing application email. Developers use server API tokens to send messages, manage templates, bounce handling, and inbound processing with JSON over HTTPS.",
+  "base_url": "https://api.postmarkapp.com",
+  "docs_url": "https://postmarkapp.com/developer",
+  "signup_url": "https://account.postmarkapp.com/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Server API token via X-Postmark-Server-Token header (or account token for account-level endpoints); self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "100 emails/month on Free Developer plan",
+    "paid_plans": null
+  },
+  "rate_limits": "10 messages/second per server (burst); concurrent connection limits also documented",
+  "example": {
+    "request": "curl \"https://api.postmarkapp.com/email\" -X POST -H \"Accept: application/json\" -H \"Content-Type: application/json\" -H \"X-Postmark-Server-Token: YOUR_API_KEY\" -d '{\"From\":\"sender@example.com\",\"To\":\"receiver@example.com\",\"Subject\":\"Hello\",\"TextBody\":\"Hello from Postmark\"}'",
+    "response_snippet": "{\"To\":\"receiver@example.com\",\"SubmittedAt\":\"2026-01-01T12:00:00.0000000Z\",\"MessageID\":\"00000000-0000-0000-0000-000000000000\",\"ErrorCode\":0,\"Message\":\"OK\"}"
+  },
+  "use_cases": [
+    "send transactional email from an app",
+    "send templated email with variables",
+    "check delivery and bounce status for a message",
+    "process inbound email via webhook",
+    "list and manage email templates"
+  ],
+  "sources": [
+    "https://postmarkapp.com/developer"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

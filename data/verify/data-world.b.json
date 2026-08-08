@@ -1,0 +1,52 @@
+{
+  "id": "data-world",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.data.world/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.data.world/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.data.world/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.world/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.data.world/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "GET /v0/search?q=... (not /v0/datasets/search); e.g. curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.data.world/v0/search?q=climate\"",
+      "source": "https://docs.data.world/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.data.world/api/"
+    }
+  },
+  "notes": "Example path is wrong: catalog search is GET /v0/search, not /v0/datasets/search. Base URL, Bearer API token auth, free tier existence, and general platform description check out on official docs. Free-tier limits and CORS remain unpublished/unknown."
+}

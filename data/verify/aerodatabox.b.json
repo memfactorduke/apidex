@@ -1,0 +1,52 @@
+{
+  "id": "aerodatabox",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://doc.aerodatabox.com/docs/openapi-rapidapi-v1.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/aedbx-aedbx/api/aerodatabox"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://doc.aerodatabox.com/rapidapi.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aerodatabox.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Basic free plan: 600 API units/month; 1 request/second (RapidAPI also: 1000 requests/hour). Units \u2260 requests \u2014 endpoint cost varies by Tier.",
+      "source": "https://aerodatabox.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published by plan: free Basic 1 req/s (+ 1000 req/hour on RapidAPI); Pro 1 req/s; Ultra 2 req/s; Mega 3 req/s (higher on direct/API.Market plans).",
+      "source": "https://aerodatabox.com/pricing/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes",
+      "source": "https://aerodatabox.p.rapidapi.com (live OPTIONS preflight returns Access-Control-Allow-Origin reflecting request Origin via RapidAPI gateway)"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://doc.aerodatabox.com/docs/openapi-rapidapi-v1.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aerodatabox.com/api"
+    }
+  },
+  "notes": "API is live (RapidAPI host returns 401 without key). Main errors: free_tier_limits and rate_limits are published on aerodatabox.com/pricing (not unknown/unpublished); CORS is enabled via RapidAPI gateway. Docs also at doc.aerodatabox.com/rapidapi.html."
+}

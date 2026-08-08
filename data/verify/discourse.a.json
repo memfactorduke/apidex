@@ -1,0 +1,52 @@
+{
+  "id": "discourse",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discourse.org/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discourse.org/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://meta.discourse.org/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.discourse.org/"
+    }
+  },
+  "notes": "Verified against docs.discourse.org, meta.discourse.org, and discourse.org/pricing. base_url is a site-specific template (not a single host); docs 200; curl to meta.discourse.org/latest.json works for public JSON. Auth headers Api-Key/Api-Username match docs. Free tier = self-hosted OSS; hosted billed separately. Rate limits per-instance. CORS unknown. No field contradicted by sources."
+}

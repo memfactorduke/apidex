@@ -1,0 +1,52 @@
+{
+  "id": "birdeye",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.birdeye.so/reference/birdeye-api-getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.birdeye.so/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.birdeye.so/docs/authentication-api-keys"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.birdeye.so/docs/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Standard (free) still exists, but current docs list lower/differing CU and access details than the entry's fixed 30k CUs/1 rps claim \u2014 verify exact package table on https://docs.birdeye.so/docs/pricing and https://birdeye.so/data-api/pricing",
+      "source": "https://docs.birdeye.so/docs/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Per-tier rps figures need re-check against current rate-limit and pricing pages; do not treat the entry's Standard 1 / Lite-Starter 15 / Premium 50 / Business 100 rps table as authoritative without re-confirming",
+      "source": "https://docs.birdeye.so/docs/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.birdeye.so/reference/get-defi-price"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.birdeye.so/"
+    }
+  },
+  "notes": "Docs-first pass incomplete in this draft; re-open official pricing/rate-limit pages and re-score free_tier_limits and rate_limits strictly before finalizing."
+}

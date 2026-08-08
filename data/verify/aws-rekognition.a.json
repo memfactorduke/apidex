@@ -1,0 +1,52 @@
+{
+  "id": "aws-rekognition",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/general/latest/gr/rekognition.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/rekognition/latest/dg/API_Reference.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aws.amazon.com/rekognition/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier includes 5,000 images/month for Image APIs (DetectLabels, DetectFaces, DetectModerationLabels, DetectText, CompareFaces, etc.) and 1,000 minutes/month for video storage analysis for first 12 months for new AWS customers; see current AWS Free Tier / Rekognition pricing for exact entitlements",
+      "source": "https://aws.amazon.com/rekognition/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "AWS publishes service quotas (transactions per second) per API and region in Service Quotas / Rekognition quotas documentation \u2014 not 'not published'",
+      "source": "https://docs.aws.amazon.com/rekognition/latest/dg/limits.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DetectLabels.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html"
+    }
+  },
+  "notes": "Entry is largely accurate; free_tier_limits are published (not unknown) and rate limits/service quotas are documented. base_url pattern is correct regional endpoint form; HTTP 0 is expected without SigV4."
+}

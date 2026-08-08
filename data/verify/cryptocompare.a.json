@@ -1,0 +1,52 @@
+{
+  "id": "cryptocompare",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cryptocompare.com/coins/guides/how-to-use-our-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cryptocompare.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cryptocompare.com/pricing/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    }
+  },
+  "notes": "docs_url 401 likely auth/bot wall; URL still official. Auth Apikey header + api_key query confirmed. Free tier exists; quotas plan-dependent. CORS unknown."
+}

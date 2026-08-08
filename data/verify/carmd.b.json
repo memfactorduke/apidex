@@ -1,0 +1,52 @@
+{
+  "id": "carmd",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.carmd.com/v3.0/",
+      "source": "https://api.carmd.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.carmd.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey (partnerID + Authorization headers, not self-serve)",
+      "source": "https://api.carmd.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.carmd.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.carmd.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Requires partner-token Authorization AND partner-id headers; /diag needs year/make/model/mileage + dtc (not code= alone)",
+      "source": "https://api.carmd.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.carmd.com/"
+    }
+  },
+  "notes": "API appears live via official docs at api.carmd.com; automated HTTP 0 is likely bot-block. Auth is dual-header (partner-id + Authorization), not single key; signup is contact-sales not self-serve. Example curl is wrong on path params and headers."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "bigcommerce",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com/docs/rest-management"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com/docs/start/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Quota and rate limits are published (e.g. X-Rate-Limit headers; typically ~150\u2013450 requests per 30 seconds depending on plan; GraphQL has separate complexity limits)",
+      "source": "https://developer.bigcommerce.com/docs/start/best-practices/api-rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com/docs/rest-catalog/products#get-all-products"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com/docs"
+    }
+  },
+  "notes": "Rate limits are documented; entry claimed not published. Auth is OAuth/API accounts with X-Auth-Token. base_url v3 store-scoped pattern is correct. CORS remains unknown without browser tests."
+}

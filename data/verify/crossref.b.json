@@ -1,0 +1,52 @@
+{
+  "id": "crossref",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.crossref.org/swagger-ui/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/CrossRef/rest-api-doc"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free public REST API with no hard published free-tier quota; polite pool (mailto/User-Agent) recommended for production\u2014not \"unlimited\" as a guaranteed SLA",
+      "source": "https://github.com/CrossRef/rest-api-doc#etiquette"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No hard published free-tier quota. Docs emphasize polite pool via mailto/User-Agent for better/more consistent performance; public pool is shared. The \"~50 req/s shared\" figure is not authoritatively stated as a current published public-pool limit on official docs",
+      "source": "https://github.com/CrossRef/rest-api-doc#etiquette"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.crossref.org/works/10.1037/0003-066X.59.1.29"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/"
+    }
+  },
+  "notes": "Main issues: free_tier_limits overclaims \"unlimited\"; rate_limits cites ~50 req/s without solid official backing. Auth none + base_url + example path confirmed. CORS not documented."
+}

@@ -1,0 +1,102 @@
+{
+  "id": "bitbucket",
+  "status": "operational",
+  "name": "Bitbucket Cloud API",
+  "category": "dev-tools",
+  "tagline": "Git hosting, PRs, and CI/CD automation via Atlassian Bitbucket Cloud REST 2.0",
+  "description": "Bitbucket Cloud REST API (v2.0) lets developers manage repositories, pull requests, pipelines, issues, and workspaces programmatically. Hosted at api.bitbucket.org; uses OAuth 2.0, API tokens, or access tokens. Free tier available with plan-based rate limits.",
+  "base_url": "https://api.bitbucket.org/2.0",
+  "docs_url": "https://developer.atlassian.com/cloud/bitbucket/rest/",
+  "signup_url": "https://bitbucket.org/account/signup/",
+  "auth": {
+    "type": "other",
+    "details": "API tokens (Basic auth with Atlassian email + token), OAuth 2.0, workspace/project/repo access tokens; app passwords deprecated/retired 2025\u20132026"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes API access; default API rate limit 1,000 req/hour (shared across plans, not free-only). Product free: ~5 users, 1 GB storage, 50 build min/mo; higher rate limits for larger Standard/Premium workspaces with access tokens or Forge",
+    "paid_plans": "Standard ~$3.65/user/mo; Premium ~$7.25/user/mo; scaled rate limits up to 10,000 req/hour for large Standard/Premium workspaces"
+  },
+  "rate_limits": "Default 1,000 requests/hour; Standard/Premium with 100+ paid users and access tokens/Forge: +10 req/hour per paid user, capped at 10,000/hour",
+  "example": {
+    "request": "curl -s -u \"YOUR_EMAIL:YOUR_API_KEY\" \"https://api.bitbucket.org/2.0/user\"",
+    "response_snippet": "{\"type\": \"user\", \"username\": \"example\", \"display_name\": \"Example User\", \"uuid\": \"{...}\", \"links\": {\"self\": {\"href\": \"https://api.bitbucket.org/2.0/user\"}, \"avatar\": {\"href\": \"...\"}}}"
+  },
+  "use_cases": [
+    "list repositories in a workspace",
+    "create or update a pull request",
+    "trigger or check Bitbucket Pipelines build status",
+    "get commit history for a repository",
+    "manage repository webhooks",
+    "fetch current authenticated user profile"
+  ],
+  "sources": [
+    "https://developer.atlassian.com/cloud/bitbucket/rest/",
+    "https://support.atlassian.com/bitbucket-cloud/docs/api-request-limits/",
+    "https://developer.atlassian.com/cloud/bitbucket/changelog/",
+    "https://bitbucket.org/product"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

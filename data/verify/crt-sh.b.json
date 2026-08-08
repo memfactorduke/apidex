@@ -1,0 +1,52 @@
+{
+  "id": "crt-sh",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crt.sh/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crt.sh/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crt.sh/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crt.sh/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crt.sh/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crt.sh/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crt.sh/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crt.sh/"
+    }
+  },
+  "notes": "Entry largely accurate: public CT search at https://crt.sh, no auth, free, undocumented quotas. Automated docs_url HTTP 0 is a false positive\u2014site returns content. No published rate limits or free-tier quotas found."
+}

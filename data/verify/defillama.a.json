@@ -1,0 +1,52 @@
+{
+  "id": "defillama",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.llama.fi (TVL/core) and https://coins.llama.fi, https://stablecoins.llama.fi, https://yields.llama.fi, https://bridges.llama.fi, https://api.llama.fi for various product APIs \u2014 primary documented base remains https://api.llama.fi for TVL; automated 404 on bare root is expected (no index route), not a dead API",
+      "source": "https://defillama.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.llama.fi/protocols"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    }
+  },
+  "notes": "Root api.llama.fi returns 404 (no index); /protocols works. docs_url 403 is bot-block, page is real. Pro/API keys exist for some endpoints; free public TVL needs no auth. Rate limits/free-tier caps not published. CORS unknown."
+}

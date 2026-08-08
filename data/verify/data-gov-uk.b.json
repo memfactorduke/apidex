@@ -1,0 +1,52 @@
+{
+  "id": "data-gov-uk",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.gov.uk/api/action",
+      "source": "https://guidance.data.gov.uk/get_data/api_documentation/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://guidance.data.gov.uk/get_data/api_documentation/",
+      "source": "https://www.api.gov.uk/gds/data-gov-uk/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guidance.data.gov.uk/get_data/api_documentation/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guidance.data.gov.uk/get_data/api_documentation/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guidance.data.gov.uk/get_data/api_documentation/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "none (officially: no rate limits)",
+      "source": "https://guidance.data.gov.uk/get_data/api_documentation/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://ckan.publishing.service.gov.uk/api/3/action/package_search?q=transport&rows=1"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://guidance.data.gov.uk/get_data/api_documentation/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Public catalog API base is https://data.gov.uk/api/action/ (official docs); that host redirects to ckan.publishing.service.gov.uk. Official docs state you do not need an API key and there are no rate limits\u2014not merely that keys are typically unneeded.",
+      "source": "https://guidance.data.gov.uk/get_data/api_documentation/"
+    }
+  },
+  "notes": "Live checks 2026-08-08: package_search works on both hosts (data.gov.uk \u2192 www \u2192 ckan.publishing.service.gov.uk). status_show returns 403. Official catalogue documents Endpoint https://data.gov.uk/api/action/. CORS is Access-Control-Allow-Origin: *. Directory still available per Mar 2026 NDL relaunch blog."
+}

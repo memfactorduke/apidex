@@ -1,0 +1,52 @@
+{
+  "id": "chicago-open-data",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.cityofchicago.org/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/foundry/data.cityofchicago.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.cityofchicago.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=5"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.cityofchicago.org/"
+    }
+  },
+  "notes": "Verified against current Socrata/Chicago official docs. Base URL, auth (optional app token), free public access, and crime dataset example align with live portal. Rate-limit numbers are Socrata-typical and entry correctly hedges exact Chicago quotas. CORS left as unknown is appropriate without browser testing."
+}

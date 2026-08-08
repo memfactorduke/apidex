@@ -1,0 +1,52 @@
+{
+  "id": "aws-rekognition",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/general/latest/gr/rekognition.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DetectLabels.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aws.amazon.com/rekognition/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "For 12 months after account signup: 1,000 images/month for Image APIs (DetectLabels, DetectModerationLabels, DetectText, DetectFaces, RecognizeCelebrities, CompareFaces), 1,000 face metadata storage months, 1,000 face vector searches/month for Face Liveness; Video (stored) free tier also available \u2014 see current pricing page for exact video limits. Free tier is time-limited (12 months), not forever.",
+      "source": "https://aws.amazon.com/rekognition/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "AWS publishes default service quotas (throttling limits) for Rekognition; limits vary by API and region and can be viewed/requested in Service Quotas. Not 'not published' \u2014 e.g. DetectLabels and many image APIs have documented default TPS/transaction quotas per account/region.",
+      "source": "https://docs.aws.amazon.com/rekognition/latest/dg/limits.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DetectLabels.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html"
+    }
+  },
+  "notes": "Entry is mostly accurate. free_tier_limits is published (not 'unknown'); rate limits/quotas are published in AWS docs. base_url shape is correct regional AWS pattern; HTTP 0 from bare curl is expected without SigV4. docs_url live."
+}

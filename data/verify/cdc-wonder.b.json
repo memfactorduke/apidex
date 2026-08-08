@@ -1,0 +1,52 @@
+{
+  "id": "cdc-wonder",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wonder.cdc.gov/wonder/help/WONDER-API.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wonder.cdc.gov/wonder/help/WONDER-API.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wonder.cdc.gov/wonder/help/WONDER-API.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wonder.cdc.gov/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wonder.cdc.gov/wonder/help/WONDER-API.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wonder.cdc.gov/wonder/help/WONDER-API.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wonder.cdc.gov/wonder/help/WONDER-API.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://wonder.cdc.gov/wonder/help/WONDER-API.html"
+    }
+  },
+  "notes": "HTTP 403 on automated curls is consistent with CDC bot/WAF protection; docs and endpoint patterns remain valid on official CDC WONDER pages. Auth is none for public datasets; free public access; no fixed published req/day quota beyond fair-use/automation restrictions."
+}

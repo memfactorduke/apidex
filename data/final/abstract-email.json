@@ -1,0 +1,98 @@
+{
+  "id": "abstract-email",
+  "status": "operational",
+  "name": "Abstract Email Validation",
+  "category": "social-communication",
+  "tagline": "Validate and verify email addresses for deliverability and risk.",
+  "description": "AbstractAPI's Email Validation API checks whether an email address is valid, deliverable, and low-risk. It returns quality scores, disposable/free provider flags, MX/SMTP checks, and autocorrect suggestions so apps can reduce bounces and fake signups without sending mail.",
+  "base_url": "https://emailvalidation.abstractapi.com/v1",
+  "docs_url": "https://www.abstractapi.com/api/email-validation",
+  "signup_url": "https://app.abstractapi.com/users/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter `api_key` (self-serve dashboard signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 100 requests/month",
+    "paid_plans": "Paid tiers by monthly validation volume; see abstractapi.com pricing."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://emailvalidation.abstractapi.com/v1/?api_key=YOUR_API_KEY&email=johnsmith@gmail.com\"",
+    "response_snippet": "{\"email\":\"johnsmith@gmail.com\",\"autocorrect\":\"\",\"deliverability\":\"DELIVERABLE\",\"quality_score\":0.95,\"is_valid_format\":{\"value\":true,\"text\":\"TRUE\"},\"is_free_email\":{\"value\":true,\"text\":\"TRUE\"},\"is_disposable_email\":{\"value\":false,\"text\":\"FALSE\"},\"is_mx_found\":{\"value\":true,\"text\":\"TRUE\"},\"is_smtp_valid\":{\"value\":true,\"text\":\"TRUE\"}}"
+  },
+  "use_cases": [
+    "validate email on user signup before creating account",
+    "detect disposable or free email addresses",
+    "score email deliverability risk for CRM imports",
+    "suggest autocorrect for common email typos",
+    "filter fake emails from form submissions"
+  ],
+  "sources": [
+    "https://docs.abstractapi.com/email-validation",
+    "https://www.abstractapi.com/email-verification-validation-api",
+    "https://www.abstractapi.com/api/email-validation"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "azure-openai",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/managed-identity"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
+    }
+  },
+  "notes": "Verified against official Microsoft Learn and Azure pricing docs. Base URL, auth (api-key and Entra ID), no free tier, per-deployment quotas, and chat completions path/api-version pattern all match current docs."
+}

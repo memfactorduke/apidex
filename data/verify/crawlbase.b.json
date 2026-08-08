@@ -1,0 +1,52 @@
+{
+  "id": "crawlbase",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.crawlbase.com/?token=TOKEN&url=URL (or equivalent path-based endpoints per docs)",
+      "source": "https://crawlbase.com/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crawlbase.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crawlbase.com/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crawlbase.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crawlbase.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crawlbase.com/docs"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crawlbase.com/docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crawlbase.com"
+    }
+  },
+  "notes": "Verified against current official Crawlbase docs and pricing pages. Base URL alone is incomplete without required query parameters; free tier exists with trial credits; rate limits and CORS are not clearly published."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "chicago-open-data",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/foundry/data.cityofchicago.org/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/foundry/data.cityofchicago.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.cityofchicago.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.cityofchicago.org/"
+    }
+  },
+  "notes": "Verified against Socrata/Chicago official docs. Rate limit 'typically ~1000/hour' is soft/typical Socrata guidance, not a hard published Chicago quota."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "apify",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.apify.com/api/v2"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.apify.com/api/v2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.apify.com/api/v2#authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apify.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apify.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.apify.com/api/v2#rate-limiting"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.apify.com/api/v2#/reference/users/user-object-and-list/get-user"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.apify.com/api/v2"
+    }
+  },
+  "notes": "Verified against official docs 2026; all major claims hold. free_tier_limits and rate_limits left as unknown/not published which matches docs not publishing fixed global limits on pricing page in a simple form."
+}

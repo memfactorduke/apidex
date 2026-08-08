@@ -1,0 +1,52 @@
+{
+  "id": "discogs",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discogs.com/developers/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discogs.com/developers/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discogs.com/developers/#page:authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discogs.com/developers/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discogs.com/developers/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discogs.com/developers/#page:home,header:home-rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discogs.com/developers/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.discogs.com/developers/"
+    }
+  },
+  "notes": "Verified against official Discogs developer docs. base_url and auth match; rate limits (60/25) documented; free non-commercial with approval for commercial; example release path and token + User-Agent headers are correct. docs_url returned 403 to automated curl (bot detection) but is the official docs home."
+}

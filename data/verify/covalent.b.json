@@ -1,0 +1,52 @@
+{
+  "id": "covalent",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.covalenthq.com/v1",
+      "source": "https://www.covalenthq.com/docs/api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.covalenthq.com/docs/api/",
+      "source": "https://www.covalenthq.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.covalenthq.com/docs/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.covalenthq.com/platform/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.covalenthq.com/docs/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use Authorization Bearer header or key query param per current docs; verify path against GoldRush/Covalent API docs",
+      "source": "https://www.covalenthq.com/docs/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.covalenthq.com/"
+    }
+  },
+  "notes": "Automated 404s on base_url/docs_url; need official source verification before trusting."
+}

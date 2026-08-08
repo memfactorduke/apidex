@@ -1,0 +1,15 @@
+{
+  "id": "deepinfra",
+  "resolution_notes": "rate_limits: Verifier B is correct. Official docs at https://docs.deepinfra.com/account/rate-limits state a default of 200 concurrent requests per model, with increases available via the dashboard. cors: Verifier B is correct. Live OPTIONS/response from the API includes Access-Control-Allow-Origin: * (yes). Verified against docs.deepinfra.com rate-limits page and API endpoint headers.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "200 concurrent requests per model (default); increase available via dashboard",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

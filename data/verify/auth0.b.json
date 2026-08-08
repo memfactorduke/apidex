@@ -1,0 +1,52 @@
+{
+  "id": "auth0",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://auth0.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://auth0.com/docs"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey",
+      "source": "https://auth0.com/docs/secure/tokens/access-tokens/get-management-api-access-tokens-for-production"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://auth0.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://auth0.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://auth0.com/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_MGMT_API_TOKEN\" \"https://YOUR_DOMAIN.auth0.com/api/v2/users?per_page=10\"",
+      "source": "https://auth0.com/docs/api/management/v2"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://auth0.com/docs"
+    }
+  },
+  "notes": "Auth type should reflect Management API bearer tokens more accurately; example uses misleading YOUR_API_KEY label."
+}

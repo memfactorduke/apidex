@@ -1,0 +1,52 @@
+{
+  "id": "amazon-paapi",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webservices.amazon.com/paapi5/documentation/common-request-headers.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webservices.amazon.com/paapi5/documentation/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webservices.amazon.com/paapi5/documentation/register-for-pa-api.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webservices.amazon.com/paapi5/documentation/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webservices.amazon.com/paapi5/documentation/troubleshooting/api-rates.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webservices.amazon.com/paapi5/documentation/troubleshooting/api-rates.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webservices.amazon.com/paapi5/documentation/search-items.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://webservices.amazon.com/paapi5/documentation/"
+    }
+  },
+  "notes": "Verified against official PA-API 5.0 docs. Base URL and docs are live. Auth is SigV4 + Partner Tag. Free access via Associates (no per-request API fees). Rate limits are account-based and scale with revenue. CORS unknown. Example request shape matches SearchItems docs."
+}

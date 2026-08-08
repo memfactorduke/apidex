@@ -1,0 +1,52 @@
+{
+  "id": "cloudflare-doh",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/make-api-requests/dns-json/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/"
+    }
+  },
+  "notes": "Verified against Cloudflare official DoH docs: endpoint, JSON API, no auth, free public resolver. Rate limits and CORS not formally published (entry correctly marks fair use / unknown)."
+}

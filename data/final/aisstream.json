@@ -1,0 +1,95 @@
+{
+  "id": "aisstream",
+  "status": "operational",
+  "name": "AISStream",
+  "category": "transportation",
+  "tagline": "Real-time AIS vessel tracking over free WebSocket",
+  "description": "Real-time Automatic Identification System (AIS) ship tracking via WebSocket. Free API key signup for live vessel positions, static data, and message subscriptions filtered by bounding box or MMSI.",
+  "base_url": "wss://stream.aisstream.io/v0/stream",
+  "docs_url": "https://aisstream.io/documentation",
+  "signup_url": "https://aisstream.io/apikeys",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key in WebSocket subscription message JSON field \"APIKey\" after connect; free self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier available (limits not fully verified from pricing page)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "wscat -c wss://stream.aisstream.io/v0/stream -x '{\"APIKey\":\"YOUR_API_KEY\",\"BoundingBoxes\":[[[-90,-180],[90,180]]]}'",
+    "response_snippet": "{\"MessageType\":\"PositionReport\",\"MetaData\":{\"MMSI\":123456789,\"ShipName\":\"EXAMPLE\",\"latitude\":37.8,\"longitude\":-122.4,\"time_utc\":\"2024-01-01 12:00:00.000000000 +0000 UTC\"},\"Message\":{\"PositionReport\":{\"UserID\":123456789,\"Latitude\":37.8,\"Longitude\":-122.4,\"Sog\":12.5,\"Cog\":180.0}}}"
+  },
+  "use_cases": [
+    "stream live vessel positions in a geographic bounding box",
+    "track a specific ship by MMSI over WebSocket",
+    "build a real-time maritime traffic map dashboard",
+    "filter AIS message types for position and static vessel data"
+  ],
+  "sources": [
+    "https://aisstream.io/",
+    "https://aisstream.io/documentation"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

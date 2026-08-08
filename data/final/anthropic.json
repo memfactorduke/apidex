@@ -1,0 +1,100 @@
+{
+  "id": "anthropic",
+  "status": "operational",
+  "name": "Anthropic Claude API",
+  "category": "ai-ml",
+  "tagline": "Official Claude API for text generation, vision, tools, and agentic workflows.",
+  "description": "Anthropic's Messages API for Claude models. Developers send prompts via HTTPS and receive completions with optional streaming, tool use, vision, and computer use. Auth is API-key based; usage is billed per token with tiered rate limits after account setup.",
+  "base_url": "https://api.anthropic.com",
+  "docs_url": "https://docs.anthropic.com/en/api/getting-started",
+  "signup_url": "https://console.anthropic.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-api-key header plus anthropic-version header (e.g. 2023-06-01). Keys from console.anthropic.com; self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Pay-as-you-go per input/output tokens by model; see pricing page for current rates."
+  },
+  "rate_limits": "Tiered by usage tier (e.g. requests/min and tokens/min); exact numbers vary by tier and model \u2014 see docs.",
+  "example": {
+    "request": "curl https://api.anthropic.com/v1/messages -H \"x-api-key: YOUR_API_KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"claude-sonnet-4-20250514\",\"max_tokens\":1024,\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "response_snippet": "{\"id\":\"msg_...\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"Hello! How can I help you today?\"}],\"model\":\"claude-sonnet-4-20250514\",\"stop_reason\":\"end_turn\",\"usage\":{\"input_tokens\":10,\"output_tokens\":12}}"
+  },
+  "use_cases": [
+    "generate code or text completions with Claude",
+    "run tool-using agents that call external functions",
+    "analyze images with multimodal Claude models",
+    "stream long assistant responses token-by-token",
+    "summarize or extract structured data from documents"
+  ],
+  "sources": [
+    "https://docs.anthropic.com/",
+    "https://docs.anthropic.com/en/api/getting-started",
+    "https://www.anthropic.com/pricing",
+    "https://status.anthropic.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

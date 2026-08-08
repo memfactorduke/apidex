@@ -1,0 +1,52 @@
+{
+  "id": "censys",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.platform.censys.io",
+      "source": "https://docs.censys.com/reference/get-started"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.censys.com/reference/get-started",
+      "source": "https://docs.censys.com/reference/get-started"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Personal Access Token (Bearer) for Platform API; Legacy Search API used API ID+Secret Basic Auth",
+      "source": "https://docs.censys.com/reference/get-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://censys.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Community: 250 queries/month (Search/Platform free tier); exact limits vary by product",
+      "source": "https://censys.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Documented per product/plan (e.g. Community rate limits published; not \"not published\")",
+      "source": "https://docs.censys.com/reference/get-started"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Legacy Search API path; current Platform API uses different base URL and Bearer token auth",
+      "source": "https://docs.censys.com/reference/get-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://censys.com"
+    }
+  },
+  "notes": "search.censys.io API is legacy; Censys migrated to Platform API at api.platform.censys.io. Auth is PAT Bearer, not only API ID/Secret. Free tier exists with published limits."
+}

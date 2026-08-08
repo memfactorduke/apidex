@@ -1,0 +1,100 @@
+{
+  "id": "avalara",
+  "status": "operational",
+  "name": "Avalara AvaTax API",
+  "category": "ecommerce-payments",
+  "tagline": "Sales tax calculation, compliance, and reporting for e-commerce and finance apps.",
+  "description": "Avalara AvaTax is a cloud tax-calculation API used to determine sales, use, and other transaction taxes in real time. Developers send transaction line items, customer and ship-to locations, and product tax codes; AvaTax returns calculated tax amounts, jurisdictions, and liability details. The platform also supports tax document management, exemption certificates, and filing workflows. Common integrations include checkout tax quotes, order commit for audit trails, refunds/voids, and nexus-aware compliance for multi-state sellers.",
+  "base_url": "https://rest.avatax.com/api/v2",
+  "docs_url": "https://developer.avalara.com/api-reference/avatax/rest/v2/",
+  "signup_url": "https://www.avalara.com/us/en/try-avatax.html",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with account number as username and license key as password, or OAuth2 bearer tokens for some flows. Sandbox: https://sandbox-rest.avatax.com/api/v2."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free developer sandbox available; production pricing is usage-based and quote-driven (transaction volume). Exact free production request quotas not publicly listed as a self-serve free tier.",
+    "paid_plans": "Usage-based / enterprise pricing by transaction volume; contact Avalara sales. Free developer account and sandbox for integration testing."
+  },
+  "rate_limits": "not published as a single public number; production limits depend on account plan and may be enforced per account. Check developer portal / account settings.",
+  "example": {
+    "request": "curl -u \"YOUR_ACCOUNT_ID:YOUR_LICENSE_KEY\" -H \"Content-Type: application/json\" -X POST \"https://rest.avatax.com/api/v2/transactions/create\" -d '{\"type\":\"SalesOrder\",\"companyCode\":\"DEFAULT\",\"date\":\"2026-08-08\",\"customerCode\":\"ABC\",\"addresses\":{\"singleLocation\":{\"line1\":\"2000 Main Street\",\"city\":\"Irvine\",\"region\":\"CA\",\"country\":\"US\",\"postalCode\":\"92614\"}},\"lines\":[{\"number\":\"1\",\"quantity\":1,\"amount\":100,\"taxCode\":\"P0000000\",\"itemCode\":\"Y0001\",\"description\":\"Yarn\"}]}'",
+    "response_snippet": "{\"id\":0,\"code\":\"...\",\"status\":\"Saved\",\"type\":\"SalesOrder\",\"companyId\":...,\"date\":\"2026-08-08\",\"totalAmount\":100,\"totalExempt\":0,\"totalTax\":7.75,\"totalTaxable\":100,\"totalTaxCalculated\":7.75,\"currencyCode\":\"USD\",\"lines\":[{\"lineNumber\":\"1\",\"lineAmount\":100,\"tax\":7.75,\"taxableAmount\":100,\"taxCalculated\":7.75}],\"summary\":[{\"country\":\"US\",\"region\":\"CA\",\"jurisType\":\"State\",\"jurisName\":\"CALIFORNIA\",\"taxName\":\"CA STATE TAX\",\"rate\":0.0625,\"tax\":6.25}]}"
+  },
+  "use_cases": [
+    "calculate sales tax for a checkout cart by ship-to address",
+    "commit a sales invoice transaction for audit and reporting",
+    "void or refund a previously recorded tax transaction",
+    "resolve tax codes for product categories",
+    "look up tax rates for a US address or ZIP",
+    "validate company nexus and tax configuration before go-live"
+  ],
+  "sources": [
+    "https://developer.avalara.com/api-reference/avatax/rest/v2/",
+    "https://developer.avalara.com/avatax/dev-guide/",
+    "https://www.avalara.com/",
+    "https://developer.avalara.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

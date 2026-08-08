@@ -1,0 +1,52 @@
+{
+  "id": "bing-news-search",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/how-to/get-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/search-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/search-api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/overview"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/reference/endpoints"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/overview"
+    }
+  },
+  "notes": "Verified against official Microsoft Learn Bing News Search docs and Azure Search API pricing. Entry is accurate for base URL, auth (Ocp-Apim-Subscription-Key), endpoints, and free-tier wording; rate limits correctly listed as not published. CORS left unknown is appropriate."
+}

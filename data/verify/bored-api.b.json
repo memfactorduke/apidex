@@ -1,0 +1,52 @@
+{
+  "id": "bored-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://bored-api.appbrewery.com/random (legacy https://www.boredapi.com/api appears offline/dead; community/rehost endpoints exist)",
+      "source": "https://www.boredapi.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://bored-api.appbrewery.com/ (or project GitHub; original https://www.boredapi.com/documentation unreachable)",
+      "source": "https://www.boredapi.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bored-api.appbrewery.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bored-api.appbrewery.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://bored-api.appbrewery.com/random\" (original path /api/activity on boredapi.com is dead)",
+      "source": "https://bored-api.appbrewery.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Original Bored API at boredapi.com is no longer operational; public unauthenticated activity endpoints may still exist via third-party rehosts with different base URLs/paths.",
+      "source": "https://www.boredapi.com/"
+    }
+  },
+  "notes": "Automated checks: base_url and docs_url HTTP 0. Original boredapi.com appears dead/unreachable as of 2026. Entry URLs, example curl, and operational status are wrong; free/unauth model still matches rehosts where available."
+}

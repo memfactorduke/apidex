@@ -1,0 +1,52 @@
+{
+  "id": "authorize-net",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/api/reference/index.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/api/reference/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/api/reference/index.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.authorize.net/api/reference/features/error-codes.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Sandbox host is correct (apitest.authorize.net), but the request body should use createTransactionRequest or another documented request; getMerchantDetailsRequest is valid. More critically: production base_url uses api.authorize.net while example correctly uses apitest \u2014 both are documented. However Content-Type application/json with the xml/v1 path is the documented dual-format endpoint.",
+      "source": "https://developer.authorize.net/api/reference/index.html"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Authorize.Net is a Visa subsidiary payment gateway; REST-style and XML APIs claim needs verification \u2014 the primary API is a single endpoint accepting JSON or XML (not classic REST). Accept.js, Payment Gateway API, and Transaction Reporting API are real product names.",
+      "source": "https://developer.authorize.net/"
+    }
+  },
+  "notes": "Need live verification against official docs before finalizing."
+}

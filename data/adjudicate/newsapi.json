@@ -1,0 +1,15 @@
+{
+  "id": "newsapi",
+  "resolution_notes": "free_tier_limits: Verifier B correct \u2014 pricing page (https://newsapi.org/pricing) lists Developer: 100 req/day, development/testing only, 24h article delay, search up to a month old, CORS localhost-only. Original omitted month search window (and CORS detail). Final value includes those official limits. cors: Verifier B correct as \"no\" \u2014 free Developer plan is \"CORS enabled for localhost\" only; Business/Advanced enable CORS for all origins. Directory cors is binary; free-tier/default is not general browser CORS, so \"no\" not \"unknown\". Evidence: https://newsapi.org/pricing.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Developer: 100 req/day, development/testing only (not for production); 24h article delay; search up to 1 month old; CORS localhost only",
+  "rate_limits": null,
+  "cors": "no",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

@@ -1,0 +1,52 @@
+{
+  "id": "astronomyapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.astronomyapi.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.astronomyapi.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.astronomyapi.com/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://astronomyapi.com"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan exists with published limits (e.g. request quotas / feature caps on pricing); not \"unknown\" if docs list them \u2014 verify exact numbers on pricing page",
+      "source": "https://astronomyapi.com"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published on docs/pricing (not \"not published\")",
+      "source": "https://docs.astronomyapi.com"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Basic auth uses Application ID + Application Secret as username:password, not a single API key string",
+      "source": "https://docs.astronomyapi.com/docs/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.astronomyapi.com"
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after live verification"
+}

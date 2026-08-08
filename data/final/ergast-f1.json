@@ -1,0 +1,98 @@
+{
+  "id": "ergast-f1",
+  "status": "operational",
+  "name": "Ergast F1",
+  "category": "sports",
+  "tagline": "Classic Formula 1 historical race results and standings API",
+  "description": "Classic ergast.com is shut down. Historical Formula 1 race results, qualifying, drivers, constructors, circuits, and championship standings are available via the community Jolpica Ergast-compatible HTTP API (api.jolpi.ca), which preserves the original Ergast URL paths and JSON/XML response shape.",
+  "base_url": "https://api.jolpi.ca/ergast/f1",
+  "docs_url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public API access"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Soft limit ~500 requests/hour; hard limit 4 requests/sec per IP (jolpica-f1 / api.jolpi.ca)",
+    "paid_plans": null
+  },
+  "rate_limits": "Soft limit ~500 req/hour; hard limit 4 req/sec per IP (jolpica-f1 host)",
+  "example": {
+    "request": "curl -s 'https://api.jolpi.ca/ergast/f1/2024/1/results.json'",
+    "response_snippet": "{\"MRData\":{\"xmlns\":\"http://ergast.com/mrd/1.5\",\"series\":\"f1\",\"url\":\"http://api.jolpi.ca/ergast/f1/2024/1/results.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"RaceTable\":{\"season\":\"2024\",\"round\":\"1\",\"Races\":[{\"season\":\"2024\",\"round\":\"1\",\"raceName\":\"Bahrain Grand Prix\",\"Results\":[{\"number\":\"1\",\"position\":\"1\",\"positionText\":\"1\",\"points\":\"26\",\"Driver\":{\"driverId\":\"max_verstappen\",\"givenName\":\"Max\",\"familyName\":\"Verstappen\"},\"Constructor\":{\"constructorId\":\"red_bull\",\"name\":\"Red Bull\"}}]}]}}}"
+  },
+  "use_cases": [
+    "get Formula 1 race results for a season or round",
+    "fetch driver or constructor championship standings",
+    "list F1 circuits, drivers, or constructors by season",
+    "get qualifying results for a specific Grand Prix",
+    "look up lap times or pit stops for a race"
+  ],
+  "sources": [
+    "https://ergast.com/mrd/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

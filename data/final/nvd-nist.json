@@ -1,0 +1,95 @@
+{
+  "id": "nvd-nist",
+  "status": "operational",
+  "name": "NVD (NIST)",
+  "category": "security-identity",
+  "tagline": "US government CVE/CPE vulnerability catalog and API for scanners and SBOMs",
+  "description": "The National Vulnerability Database (NVD) is NIST\u2019s authoritative US government repository of standards-based vulnerability management data. It provides REST APIs for CVEs, CPEs, and related vulnerability metadata used by security scanners, SBOM tools, and vulnerability management systems.",
+  "base_url": "https://services.nvd.nist.gov/rest/json",
+  "docs_url": "https://nvd.nist.gov/developers",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via apiKey query parameter or header; higher rate limits with key from self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Without API key: 5 requests / 30 seconds. With free API key: 50 requests / 30 seconds.",
+    "paid_plans": null
+  },
+  "rate_limits": "Without API key: 5 requests / 30 seconds. With free API key: 50 requests / 30 seconds.",
+  "example": {
+    "request": "curl \"https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44228\"",
+    "response_snippet": "{\"resultsPerPage\":1,\"startIndex\":0,\"totalResults\":1,\"format\":\"NVD_CVE\",\"version\":\"2.0\",\"vulnerabilities\":[{\"cve\":{\"id\":\"CVE-2021-44228\",\"sourceIdentifier\":\"...\",\"published\":\"...\",\"vulnStatus\":\"Analyzed\"}}]}"
+  },
+  "use_cases": [
+    "look up CVE details by CVE ID",
+    "search recent CVEs by keyword or CPE",
+    "fetch CPE product dictionary matches",
+    "monitor new NVD vulnerability publications for a product"
+  ],
+  "sources": [
+    "https://nvd.nist.gov/developers"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

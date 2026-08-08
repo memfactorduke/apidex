@@ -1,0 +1,52 @@
+{
+  "id": "arxiv-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/tou.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No formal free-tier quota; polite-use rate limit applies (1 request every 3 seconds recommended). No paid plans.",
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "arXiv asks that clients make no more than 1 request every 3 seconds (and avoid large bursts). Do not use concurrent connections; be a good citizen.",
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=1\"",
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Search and retrieve metadata for arXiv preprints (physics, math, CS, and other fields) via Atom API; no auth required.",
+      "source": "https://info.arxiv.org/help/api/"
+    }
+  },
+  "notes": "Entry has placeholder 'Researching' text for description, auth details, free_tier_limits, rate_limits, and example. Core URLs and no-auth/free status check out. CORS not documented. Formats XML (Atom) is correct."
+}

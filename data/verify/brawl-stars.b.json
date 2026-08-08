@@ -1,0 +1,52 @@
+{
+  "id": "brawl-stars",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.brawlstars.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.brawlstars.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.brawlstars.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.brawlstars.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.brawlstars.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.brawlstars.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Player tags in paths must be URL-encoded (e.g. %23 for #). Official docs use patterns like /players/{playerTag}; the sample tag %232PP is minimal/placeholder but encoding is correct. Verify exact path against current OpenAPI. Response fields may be outdated (powerPlayPoints etc.).",
+      "source": "https://developer.brawlstars.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.brawlstars.com/"
+    }
+  },
+  "notes": "Placeholder - need real verification"
+}

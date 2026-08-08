@@ -1,0 +1,52 @@
+{
+  "id": "clinicaltrials-gov",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/about-api/api-migration"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/about-api/api-migration"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/about-api/api-migration"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free public access with no paid plans. Rate limit is 50 requests per minute per IP (docs state this is temporary and may change).",
+      "source": "https://clinicaltrials.gov/data-api/about-api/api-migration"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "50 requests per minute per IP address (temporary; may change).",
+      "source": "https://clinicaltrials.gov/data-api/about-api/api-migration"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltrials.gov/data-api/api"
+    }
+  },
+  "notes": "Verified against ClinicalTrials.gov Data API docs (2026). Base URL, docs URL, no-auth public GET, free access, and example shape match official docs. Rate limits are published as 50 req/min/IP (not \"not published\"); free_tier_limits text that defers to unpublished limits is therefore wrong. CORS not documented."
+}

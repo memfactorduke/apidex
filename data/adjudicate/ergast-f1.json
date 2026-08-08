@@ -1,0 +1,15 @@
+{
+  "id": "ergast-f1",
+  "resolution_notes": "base_url: Verifier B correct \u2014 classic ergast.com is shut down; current Ergast-compatible host is https://api.jolpi.ca/ergast/f1 (jolpica-f1 docs/README). docs_url: Verifier B correct \u2014 primary current docs at https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md (ergast.com/mrd is historical). free_tier_limits: Verifier B correct \u2014 soft ~500 req/hour, hard 4 req/sec per IP on jolpi.ca (jolpica-f1 rate-limit docs). rate_limits: same evidence as free_tier_limits. example: Verifier B correct \u2014 working host is api.jolpi.ca; response shape remains Ergast MRData JSON. description: Verifier B correct \u2014 must state classic ergast.com is offline and data is served by Jolpica\u2019s compatible API. status: operational via jolpi.ca (not defunct).",
+  "base_url": "https://api.jolpi.ca/ergast/f1",
+  "docs_url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Soft limit ~500 requests/hour; hard limit 4 requests/sec per IP (jolpica-f1 / api.jolpi.ca)",
+  "rate_limits": "Soft limit ~500 req/hour; hard limit 4 req/sec per IP (jolpica-f1 host)",
+  "cors": null,
+  "example_request": "curl -s 'https://api.jolpi.ca/ergast/f1/2024/1/results.json'",
+  "example_response_snippet": "{\"MRData\":{\"xmlns\":\"http://ergast.com/mrd/1.5\",\"series\":\"f1\",\"url\":\"http://api.jolpi.ca/ergast/f1/2024/1/results.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"RaceTable\":{\"season\":\"2024\",\"round\":\"1\",\"Races\":[{\"season\":\"2024\",\"round\":\"1\",\"raceName\":\"Bahrain Grand Prix\",\"Results\":[{\"number\":\"1\",\"position\":\"1\",\"positionText\":\"1\",\"points\":\"26\",\"Driver\":{\"driverId\":\"max_verstappen\",\"givenName\":\"Max\",\"familyName\":\"Verstappen\"},\"Constructor\":{\"constructorId\":\"red_bull\",\"name\":\"Red Bull\"}}]}]}}}",
+  "description": "Classic ergast.com is shut down. Historical Formula 1 race results, qualifying, drivers, constructors, circuits, and championship standings are available via the community Jolpica Ergast-compatible HTTP API (api.jolpi.ca), which preserves the original Ergast URL paths and JSON/XML response shape.",
+  "status": null
+}

@@ -1,0 +1,52 @@
+{
+  "id": "defillama",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://defillama.com/docs/api"
+    }
+  },
+  "notes": "Verified against official docs and live endpoints. base_url api.llama.fi works (protocols returns 200); docs_url defillama.com/docs/api loads. Auth is none for free public endpoints; pro keys for some. Free tier exists; limits/rate limits not clearly published. Example curl is valid. CORS unknown. Automated 404/403 look like bot-detection, not dead API."
+}

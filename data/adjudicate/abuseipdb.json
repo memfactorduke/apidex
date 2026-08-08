@@ -1,0 +1,15 @@
+{
+  "id": "abuseipdb",
+  "resolution_notes": "free_tier_limits: Verifier A is correct \u2014 free Standard plan has 1,000 check requests/day (and related free-tier caps). Original \"unknown\" is wrong; pricing page publishes daily check quotas. Evidence: https://www.abuseipdb.com/pricing. rate_limits: Original \"not published\" is wrong; daily quotas by plan are published on pricing, and API docs cover rate-limit headers/behavior. Use published free-tier quota language rather than \"not published\". Evidence: https://www.abuseipdb.com/pricing and https://docs.abuseipdb.com/. All other fields keep original (null).",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1,000 check requests/day on free Standard plan; higher on paid tiers (see pricing)",
+  "rate_limits": "Daily check quotas by plan (free: 1,000/day); additional rate limiting may apply \u2014 see pricing and API docs",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null
+}

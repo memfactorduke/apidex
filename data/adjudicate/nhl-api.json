@@ -1,0 +1,15 @@
+{
+  "id": "nhl-api",
+  "resolution_notes": "cors: CORRECTED to no. Live HEAD with Origin https://example.com returns no Access-Control-Allow-Origin; with Origin https://www.nhl.com returns Access-Control-Allow-Origin: https://www.nhl.com only (third-party browser origins blocked). Confirmed via curl 2026-08-08 and Vite discussion https://github.com/vitejs/vite/discussions/15185. example: request path /v1/scoreboard/now is valid (docs + live 200); original response_snippet was illustrative/hallucinated (fake 2025 date/scores). Replaced with live sample from https://api-web.nhle.com/v1/scoreboard/now (focusedDate/gamesByDate shape). Docs: https://github.com/Zmalski/NHL-API-Reference.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": "no",
+  "example_request": "curl -s \"https://api-web.nhle.com/v1/scoreboard/now\"",
+  "example_response_snippet": "{\"focusedDate\":\"2026-09-29\",\"focusedDateCount\":11,\"gamesByDate\":[{\"date\":\"2026-09-24\",\"games\":[{\"id\":2026010040,\"season\":20262027,\"gameType\":1,\"venue\":{\"default\":\"Xfinity Mobile Arena\"},\"startTimeUTC\":\"2026-09-24T23:00:00Z\",\"gameState\":\"FUT\",\"awayTeam\":{\"id\":6,\"abbrev\":\"BOS\"},\"homeTeam\":{\"id\":4,\"abbrev\":\"PHI\"}}]}]}",
+  "description": null,
+  "status": null
+}

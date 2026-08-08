@@ -1,0 +1,52 @@
+{
+  "id": "arxiv-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No separate free-tier quota beyond rate limits; free unrestricted use subject to fair-use rate limits (1 request / 3s, burst max 1 connection). Placeholder \"Researching\" is not a real limit.",
+      "source": "https://info.arxiv.org/help/api/user-manual.html#31-call-arxiv-api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No more than 1 request every 3 seconds, and no more than 1 connection at a time (from a single IP/source). Larger bulk needs should use bulk data/OAI-PMH or the arXiv bulk access options rather than hammering the API.",
+      "source": "https://info.arxiv.org/help/api/user-manual.html#31-call-arxiv-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Entry has placeholder curl/response (\"curl ...\", \"...\") \u2014 not a valid request. Working form: GET https://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=1 (Atom XML; no auth headers).",
+      "source": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Description is researcher meta-text (\"Researching official arXiv API docs...\"), not a product description. Accurate description would cover searching/retrieving arXiv preprint metadata via Atom API (no auth).",
+      "source": null
+    }
+  },
+  "notes": "Placeholders \"Researching\" and fake example fail verification. base_url/docs/auth/free tier match official docs. Rate limit is ~1 req/3s, 1 concurrent connection. CORS not documented. Formats correctly include Atom/XML."
+}

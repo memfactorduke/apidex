@@ -1,0 +1,52 @@
+{
+  "id": "bing-maps",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bingmaps/rest-services/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bingmaps/rest-services/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.microsoft.com/en-us/maps/bing-maps/product"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Basic keys: 125,000 billable transactions/year for public websites; 125,000/year or 50,000 in any 24 hours for Windows/mobile apps (verify current portal/terms)",
+      "source": "https://learn.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/understanding-bing-maps-transactions"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bingmaps/rest-services/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bingmaps/rest-services/locations/find-a-location-by-query"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/bingmaps/rest-services/"
+    }
+  },
+  "notes": "Entry is largely accurate against Microsoft Learn. Free-tier wording is cautious/hedged; docs still document ~125k/yr Basic limits. Confirm free-tier numbers on current Bing Maps portal terms if publishing."
+}

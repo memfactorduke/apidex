@@ -1,0 +1,52 @@
+{
+  "id": "bigcommerce",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com/docs/rest-management"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com/docs"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey (store-scoped X-Auth-Token / OAuth access token; not accurately represented as generic \"other\")",
+      "source": "https://developer.bigcommerce.com/docs/start/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: X-Rate-Limit headers; typical quota ~150\u2013450 requests per 30s window depending on plan; GraphQL Storefront has separate limits",
+      "source": "https://developer.bigcommerce.com/docs/start/best-practices/api-rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com/docs/rest-catalog/products#get-all-products"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bigcommerce.com/docs"
+    }
+  },
+  "notes": "Rate limits ARE published (not \"not published\"). Auth is store API token via X-Auth-Token; entry's type \"other\" is weak but details mostly right. Base URL and product list example match v3 Catalog docs."
+}

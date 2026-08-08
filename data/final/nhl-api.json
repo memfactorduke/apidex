@@ -1,0 +1,102 @@
+{
+  "id": "nhl-api",
+  "status": "operational",
+  "name": "NHL API",
+  "category": "sports",
+  "tagline": "Official NHL web API for schedules, scores, standings, and team/player data",
+  "description": "Unofficial but widely used NHL web API at api-web.nhle.com providing live scores, schedules, standings, team rosters, and player statistics without authentication. Used by developers to build sports apps, dashboards, and fantasy tools. No official public documentation or pricing from the NHL; community-documented endpoints. Free to use with no published rate limits.",
+  "base_url": "https://api-web.nhle.com",
+  "docs_url": "https://github.com/Zmalski/NHL-API-Reference",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints accessible without API keys or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No signup or paid plans; unrestricted public access with no published free-tier caps",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api-web.nhle.com/v1/scoreboard/now\"",
+    "response_snippet": "{\"focusedDate\":\"2026-09-29\",\"focusedDateCount\":11,\"gamesByDate\":[{\"date\":\"2026-09-24\",\"games\":[{\"id\":2026010040,\"season\":20262027,\"gameType\":1,\"venue\":{\"default\":\"Xfinity Mobile Arena\"},\"startTimeUTC\":\"2026-09-24T23:00:00Z\",\"gameState\":\"FUT\",\"awayTeam\":{\"id\":6,\"abbrev\":\"BOS\"},\"homeTeam\":{\"id\":4,\"abbrev\":\"PHI\"}}]}]}"
+  },
+  "use_cases": [
+    "get today's NHL scoreboard and live game scores",
+    "fetch current NHL standings by conference or division",
+    "look up a team's roster and player stats for a season",
+    "get the schedule for a specific NHL team or date",
+    "retrieve boxscore and play-by-play for a completed game",
+    "find player career stats and game logs by player ID"
+  ],
+  "sources": [
+    "https://api-web.nhle.com/v1/scoreboard/now",
+    "https://api-web.nhle.com/v1/standings/now",
+    "https://github.com/Zmalski/NHL-API-Reference",
+    "https://gitlab.com/dword4/nhlapi",
+    "https://www.nhl.com"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "abstract-ip-geo",
+  "status": "operational",
+  "name": "Abstract IP Geolocation",
+  "category": "geo-maps",
+  "tagline": "Locate any IP address with city, country, and ISP data via AbstractAPI.",
+  "description": "AbstractAPI IP Geolocation returns location and network metadata for an IP address, including city, region, country, coordinates, timezone, and ISP. Developers call a simple REST endpoint with an API key to enrich logs, personalize content, or flag risk by geography.",
+  "base_url": "https://ipgeolocation.abstractapi.com/v1",
+  "docs_url": "https://docs.abstractapi.com/ip-geolocation",
+  "signup_url": "https://app.abstractapi.com/users/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter; self-serve signup at AbstractAPI."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://ipgeolocation.abstractapi.com/v1/?api_key=YOUR_API_KEY&ip_address=8.8.8.8\"",
+    "response_snippet": "{\"ip_address\":\"8.8.8.8\",\"city\":\"Mountain View\",\"region\":\"California\",\"country\":\"United States\",\"latitude\":37.4056,\"longitude\":-122.0775}"
+  },
+  "use_cases": [
+    "get city and country for a visitor IP",
+    "detect timezone from client IP",
+    "enrich server logs with ISP and location",
+    "block or flag traffic by country code"
+  ],
+  "sources": [
+    "https://www.abstractapi.com/ip-geolocation-api",
+    "https://docs.abstractapi.com/ip-geolocation"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-08",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

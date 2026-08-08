@@ -1,0 +1,52 @@
+{
+  "id": "cloudflare-workers-ai",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/get-started/rest-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/get-started/rest-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free allocation is 10,000 Neurons/day on Free and Workers Paid; overage on Workers Paid is $0.011 per 1,000 Neurons after the daily free allocation. Confirm current neuron prices per model on the pricing page \u2014 unit examples may drift.",
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/platform/limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/get-started/rest-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live docs."
+}

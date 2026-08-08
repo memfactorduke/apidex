@@ -1,0 +1,15 @@
+{
+  "id": "authorize-net",
+  "resolution_notes": "example: CONFIRMED correct after docs check \u2014 sandbox host apitest.authorize.net, getMerchantDetailsRequest, and JSON-on-xml/v1 endpoint are documented; Verifier B\u2019s notes do not invalidate the example. description: CORRECTED \u2014 primary surface is one dual-format (JSON/XML) endpoint, not classic REST; kept Accept.js / Payment Gateway / Transaction Reporting and Visa gateway framing with that precision. Evidence: developer.authorize.net API reference.",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Authorize.Net is a Visa payment gateway whose primary API is a single endpoint (xml/v1/request.api) that accepts JSON or XML for card/eCheck authorization, capture, refund, and customer payment profiles. Developers also use Accept.js for client-side tokenization and the Transaction Reporting API for settled batches and statements. Auth is API Login ID plus Transaction Key in the request body; production (api.authorize.net) and sandbox (apitest.authorize.net) are available.",
+  "status": null
+}

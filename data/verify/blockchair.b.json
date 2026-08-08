@@ -1,0 +1,52 @@
+{
+  "id": "blockchair",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blockchair.com/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://blockchair.com/api",
+      "source": "https://blockchair.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blockchair.com/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blockchair.com/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "30 requests/min without key; higher with free plan key",
+      "source": "https://blockchair.com/api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "30 RPM without key; plan-dependent with key",
+      "source": "https://blockchair.com/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl https://api.blockchair.com/bitcoin/stats",
+      "source": "https://blockchair.com/api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Blockchain data API for multi-chain stats, blocks, transactions, addresses",
+      "source": "https://blockchair.com/api"
+    }
+  },
+  "notes": "docs_url 401; use blockchair.com/api; placeholder fields fail"
+}

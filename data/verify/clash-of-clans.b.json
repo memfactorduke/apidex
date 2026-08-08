@@ -1,0 +1,52 @@
+{
+  "id": "clash-of-clans",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.clashofclans.com/api-docs/json/swagger.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.clashofclans.com/#/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.clashofclans.com/#/getting-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.clashofclans.com/#/getting-started"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.clashofclans.com/#/getting-started"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.clashofclans.com/#/getting-started"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.clashofclans.com/api-docs/json/swagger.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.clashofclans.com/#/documentation"
+    }
+  },
+  "notes": "All checkable claims match current official Supercell Clash of Clans developer portal (2026). base_url, Bearer JWT auth, IP-restricted free keys, no published fixed quotas, and /v1 clan path are consistent with swagger and getting-started. cors remains unknown (no official CORS policy found). No shutdown or paid-tier contradiction found."
+}

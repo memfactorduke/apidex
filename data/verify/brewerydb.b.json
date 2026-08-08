@@ -1,0 +1,52 @@
+{
+  "id": "brewerydb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Service appears defunct; no live API at https://api.brewerydb.com/v2 (connection failure). Historical base was that URL under BreweryDB/Untappd ownership, but it is not operational as of verification.",
+      "source": "https://www.brewerydb.com"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.brewerydb.com/developers may still resolve, but developer docs/API product are no longer a supported public API offering after ownership/product changes; treat as non-operational docs for an API that no longer serves traffic.",
+      "source": "https://www.brewerydb.com/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.brewerydb.com/developers"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl to https://api.brewerydb.com/v2/beer/random?key=YOUR_API_KEY does not work against a live service (base URL dead).",
+      "source": "https://api.brewerydb.com/v2"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Describes BreweryDB as providing a comprehensive REST API in present tense; API endpoint is unreachable and the public developer API is not operational. Description should note the service/API is defunct or no longer available rather than present-tense operational guidance.",
+      "source": "https://www.brewerydb.com"
+    }
+  },
+  "notes": "Automated check: base_url HTTP 0 (dead), docs_url HTTP 200. Adversarial verification finds the API host dead; entry status operational is wrong. Auth/key pattern was historically correct for v2 but is moot if API is offline. Free-tier/rate-limit claims already hedge with unknown/not published."
+}

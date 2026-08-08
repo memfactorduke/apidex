@@ -1,0 +1,52 @@
+{
+  "id": "aviation-edge",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://aviation-edge.com/v2/public/",
+      "source": "https://aviation-edge.com/docs/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://aviation-edge.com/docs/",
+      "source": "https://aviation-edge.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://aviation-edge.com/v2/public/flights?key=YOUR_API_KEY&flightIata=AA100\" (path/params may need verification against live docs)",
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Automated 404s on base_url and docs_url need careful re-check; may be bot-detection. Entry already notes low confidence on free tier limits."
+}

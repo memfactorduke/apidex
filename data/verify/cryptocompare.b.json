@@ -1,0 +1,52 @@
+{
+  "id": "cryptocompare",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cryptocompare.com/coins/guides/how-to-use-our-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cryptocompare.com/coins/guides/how-to-use-our-api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cryptocompare.com/coins/guides/how-to-use-our-api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://min-api.cryptocompare.com/documentation"
+    }
+  },
+  "notes": "Base/docs 401s are auth walls, not dead URLs. Auth header Apikey, free tier, plan-dependent limits match official guides. CORS not documented. Example path/params consistent with current price endpoint."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "data-gov",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://catalog.data.gov/api/3/action",
+      "source": "https://catalog.data.gov/api/3"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.ckan.org/en/2.9/api/",
+      "source": "https://catalog.data.gov/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ckan.org/en/2.9/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://catalog.data.gov/api/3/action/package_search?q=climate&rows=5"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov/"
+    }
+  },
+  "notes": "Automated 404s on base/docs URLs may be path issues; example endpoint works. Official catalog is CKAN-based at catalog.data.gov; public read is unauthenticated."
+}

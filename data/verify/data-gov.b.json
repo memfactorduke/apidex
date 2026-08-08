@@ -1,0 +1,52 @@
+{
+  "id": "data-gov",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://catalog.data.gov/api/3/action",
+      "source": "https://catalog.data.gov/api/3/action/status_show"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.ckan.org/en/latest/api/",
+      "source": "https://www.data.gov/developers/apis"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ckan.org/en/latest/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://catalog.data.gov/api/3/action/package_search"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gov/"
+    }
+  },
+  "notes": "Entry base/docs URLs hit 404; live API is under /api/3/action. Docs are CKAN API docs, not the 404 catalog root."
+}

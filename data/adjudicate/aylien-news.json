@@ -1,0 +1,15 @@
+{
+  "id": "aylien-news",
+  "resolution_notes": "base_url: ORIGINAL incorrect. Last official v6 endpoint base is https://api.aylien.com/v6/news (archived Quantexa docs 2025-06-19 list GET https://api.aylien.com/v6/news/stories; Postman legacy baseUrl https://api.aylien.com/news is outdated). Live check 2026-08-08: api.aylien.com NXDOMAIN. Verifier B path preferred over A. Evidence: web.archive.org/web/20250619155620/https://docs.aylien.com/newsapi/v6/ | docs_url: ORIGINAL dead. docs.aylien.com NXDOMAIN; last hub was docs.aylien.com \u2192 /newsapi/v6. Current public product notice only: https://www.quantexa.com/qni-customer-notice/ (Quantexa acquired Aylien 2023; public signup/docs withdrawn). Meltwater path from verifiers is wrong (separate product). | example: ORIGINAL legacy v1-style X-AYLIEN-NewsAPI-Application-ID/Key + /news/stories outdated. v6 docs require OAuth bearer (POST /v1/oauth/token) + AppId header against /v6/news/stories; response still {stories, next_page_cursor}. | status: defunct \u2014 api/docs/app.aylien.com NXDOMAIN; aylien.com has NS only (no A/AAAA); GitHub AYLIEN/apis OpenAPI 404; public API unreachable.",
+  "base_url": "https://api.aylien.com/v6/news",
+  "docs_url": "https://www.quantexa.com/qni-customer-notice/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST \"https://api.aylien.com/v1/oauth/token\" -u \"YOUR_EMAIL:YOUR_PASSWORD\" -d \"grant_type=password\" && curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"AppId: YOUR_APP_ID\" \"https://api.aylien.com/v6/news/stories?language=(en)&per_page=1\"",
+  "example_response_snippet": "{\"stories\":[{\"title\":\"...\",\"body\":\"...\",\"source\":{\"name\":\"...\"}}],\"next_page_cursor\":\"...\"}",
+  "description": null,
+  "status": "defunct"
+}

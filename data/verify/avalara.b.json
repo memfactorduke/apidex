@@ -1,0 +1,52 @@
+{
+  "id": "avalara",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/api-reference/avatax/rest/v2/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/api-reference/avatax/rest/v2/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/avatax/dev-guide/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.avalara.com/us/en/try-avatax.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/avatax/dev-guide/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/api-reference/avatax/rest/v2/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.avalara.com/avatax/dev-guide/"
+    }
+  },
+  "notes": "Verified against official Avalara developer docs. Base URL, docs, Basic Auth, sandbox, and CreateTransaction example path match current REST v2 documentation. Free sandbox is real; production pricing remains sales/quote-driven without a public self-serve free quota. CORS remains unknown. No shutdown or deprecation of rest.avatax.com/api/v2 found."
+}

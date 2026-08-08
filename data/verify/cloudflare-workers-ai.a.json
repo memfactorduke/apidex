@@ -1,0 +1,52 @@
+{
+  "id": "cloudflare-workers-ai",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/get-started/rest-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/get-started/rest-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/platform/limits/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/get-started/rest-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.cloudflare.com/workers-ai/"
+    }
+  },
+  "notes": "Verified against official Cloudflare Workers AI docs (2026). base_url, REST path, Bearer API token auth, free Neurons allocation, and curl example match current docs. cors \"unknown\" is appropriate for a server-side Cloudflare API."
+}
