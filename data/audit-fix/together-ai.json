@@ -1,0 +1,17 @@
+{
+  "id": "together-ai",
+  "base_url": "https://api.together.ai/v1",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": false,
+  "free_tier_limits": "No free trial; minimum $5 credit purchase required for API access.",
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST \"https://api.together.ai/v1/chat/completions\" \\\n  -H \"Authorization: Bearer $TOGETHER_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}], \"max_tokens\": 64}'",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Auditor correct. Official docs quickstart uses https://api.together.ai/v1 (docs.together.ai curl: api.together.ai/v1/chat/completions). pricing: Auditor correct. Official billing docs (docs.together.ai/docs/billing-credits): \"Together AI does not currently offer free trials. Access requires a minimum $5 credit purchase.\" example.request: Auditor correct. Official deprecations (docs.together.ai/docs/deprecations) removed meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo from serverless on 2026-03-06; hostname should be api.together.ai; use a current model such as meta-llama/Llama-3.3-70B-Instruct-Turbo."
+}

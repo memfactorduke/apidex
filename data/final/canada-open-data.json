@@ -5,7 +5,7 @@
   "category": "government-open-data",
   "tagline": "Government of Canada open data and information via CKAN and public REST APIs.",
   "description": "Public APIs for searching, browsing, and downloading Government of Canada open datasets and related open information. Built primarily on CKAN Action API endpoints with portal search, package metadata, and resource access for developers and agents.",
-  "base_url": "https://open.canada.ca/data/api/3",
+  "base_url": "https://open.canada.ca/data/en/api/3",
   "docs_url": "https://open.canada.ca/en/open-data",
   "signup_url": null,
   "auth": {
@@ -24,7 +24,7 @@
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl -s 'https://open.canada.ca/data/api/3/action/package_search?q=climate&rows=1'",
+    "request": "curl -s 'https://open.canada.ca/data/en/api/3/action/package_search?q=climate&rows=1'",
     "response_snippet": "{\"help\": \"...\", \"success\": true, \"result\": {\"count\": 123, \"results\": [{\"id\": \"...\", \"name\": \"...\", \"title\": \"...\"}]}}"
   },
   "use_cases": [
@@ -92,6 +92,16 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

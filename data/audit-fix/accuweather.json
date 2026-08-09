@@ -1,0 +1,17 @@
+{
+  "id": "accuweather",
+  "base_url": "https://dataservice.accuweather.com",
+  "docs_url": "https://developer.accuweather.com/apis",
+  "auth_type": "apiKey",
+  "auth_details": "API key as apikey query parameter; self-serve signup at developer.accuweather.com",
+  "free_tier": true,
+  "free_tier_limits": "Limited free developer key (historically ~50 calls/day; confirm at signup)",
+  "paid_plans": "Contact sales for commercial/enterprise packages",
+  "rate_limits": "Varies by subscription tier; free/trial keys heavily limited",
+  "cors": "unknown",
+  "example_request": "curl \"https://dataservice.accuweather.com/currentconditions/v1/349727?apikey=YOUR_API_KEY\"",
+  "example_response_snippet": "[{\"LocalObservationDateTime\":\"2024-01-15T14:30:00-05:00\",\"WeatherText\":\"Partly cloudy\",\"Temperature\":{\"Metric\":{\"Value\":12.8,\"Unit\":\"C\"},\"Imperial\":{\"Value\":55.0,\"Unit\":\"F\"}}}]",
+  "description": "AccuWeather enterprise weather APIs: current conditions, forecasts, alerts, location, lifestyle indices. Free limited keys for evaluation; production typically paid.",
+  "status": "operational",
+  "resolution_notes": "Pending live verification of auth, pricing, example."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "eia",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Generally keep burst under ~5 req/s and sustained under ~9,000 req/hour; some routes may have lower limits. Exact firewall rules not published (cybersecurity).",
+  "cors": null,
+  "example_request": "curl -g \"https://api.eia.gov/v2/electricity/rto/region-data/data/?api_key=YOUR_API_KEY&frequency=hourly&data[0]=value&length=1\"",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: auditor right. Official FAQ (https://www.eia.gov/opendata/faqs.php#Throttles) states general guidance of ~5/sec burst and ~9,000/hour sustained, with some routes slower; exact firewall rules withheld. Original \"not published\" is false. example.request: auditor right. Official docs use data[0]=value in URLs (https://www.eia.gov/opendata/documentation.php), but unescaped brackets are curl glob syntax and break the command; fixed with -g/--globoff (percent-encoding data%5B0%5D also valid)."
+}

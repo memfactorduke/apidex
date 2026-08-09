@@ -1,0 +1,17 @@
+{
+  "id": "github",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Authenticated (PAT/OAuth/App user-to-server): 5,000 req/hour primary (15,000 if via GHEC-owned app on your behalf). GitHub App installation: 5,000 req/hour minimum; non-Enterprise Cloud installations scale with repos/users (max 12,500/hour); Enterprise Cloud org installations: 15,000 req/hour. Unauthenticated: 60 req/hour per IP. Secondary limits and GraphQL point costs also apply.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: auditor correct. Official docs (https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api) state App installation tokens start at 5,000/hour; non-GHEC installations scale with repos/users up to 12,500/hour; GHEC org installations get a fixed 15,000/hour\u2014not \u201cup to 15,000 scaling with seats.\u201d Original conflated the two rules."
+}

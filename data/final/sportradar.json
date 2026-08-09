@@ -5,12 +5,12 @@
   "category": "sports",
   "tagline": "Enterprise sports data APIs for live scores, stats, odds, and betting content across leagues worldwide",
   "description": "Sportradar provides enterprise-grade sports data APIs covering live scores, play-by-play, statistics, odds, and media content for major leagues and sports worldwide. Access is typically via API keys through partner or trial onboarding rather than fully open self-serve signup; confirm current trial and commercial terms on developer.sportradar.com.",
-  "base_url": "https://api.sportradar.us",
+  "base_url": "https://api.sportradar.com",
   "docs_url": "https://developer.sportradar.com/",
   "signup_url": "https://developer.sportradar.com/",
   "auth": {
     "type": "apiKey",
-    "details": "API key via query parameter api_key or Authorization header; trial and commercial access through Sportradar developer portal (not fully anonymous self-serve)."
+    "details": "API key in the x-api-key request header; obtain trial or licensed product access through the Sportradar developer account."
   },
   "https": true,
   "cors": "unknown",
@@ -25,8 +25,8 @@
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl -s \"https://api.sportradar.us/nba/trial/v8/en/games/2024/REG/schedule.json?api_key=YOUR_API_KEY\"",
-    "response_snippet": "{\n  \"league\": { \"id\": \"sr:league:132\", \"name\": \"NBA\", \"alias\": \"NBA\" },\n  \"season\": { \"id\": \"sr:season:...\", \"year\": 2024, \"type\": \"REG\" },\n  \"games\": [ { \"id\": \"...\", \"status\": \"closed\", \"home\": { \"name\": \"...\" }, \"away\": { \"name\": \"...\" } } ]\n}"
+    "request": "curl -s \"https://api.sportradar.com/nba/trial/v8/en/games/2024/REG/schedule.json\" -H \"accept: application/json\" -H \"x-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\n  \"league\": { \"id\": \"4353138d-4c22-4396-95d8-5f587d2df25c\", \"name\": \"NBA\", \"alias\": \"NBA\" },\n  \"season\": { \"id\": \"...guid...\", \"year\": 2024, \"type\": \"REG\" },\n  \"games\": [ { \"id\": \"...\", \"status\": \"closed\", \"home\": { \"name\": \"...\" }, \"away\": { \"name\": \"...\" } } ]\n}"
   },
   "use_cases": [
     "get NBA regular-season game schedule for a year",
@@ -94,6 +94,26 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

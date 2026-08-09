@@ -1,0 +1,17 @@
+{
+  "id": "thesportsdb",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "30 requests/minute, with endpoint-specific limits on returned records; public app-store releases require a paid subscription.",
+  "paid_plans": null,
+  "rate_limits": "Free: 30 requests/minute; Premium: 100/minute; Business: 120/minute; excess requests return HTTP 429.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": "{\"teams\":[{\"idTeam\":\"133604\",\"strTeam\":\"Arsenal\",\"strTeamShort\":\"ARS\",\"strAlternate\":\"Arsenal Football Club, AFC, Arsenal FC\",\"strLeague\":\"English Premier League\",\"strStadium\":\"Emirates Stadium\",\"strBadge\":\"https://...\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Auditor correct. Official docs (https://www.thesportsdb.com/api.php) publish free quota of 30 requests/minute, per-endpoint result caps, and paid subscription for public app-store releases. rate_limits: Auditor correct. Same page publishes Free 30/min, Premium 100/min, Business 120/min; excess returns HTTP 429. example_response_snippet: Auditor correct. Live call to searchteams.php?t=Arsenal with demo key 123 returns strTeamShort \"ARS\" and strAlternate \"Arsenal Football Club, AFC, Arsenal FC\" (not the entry's \"Arsenal\" / \"Arsenal FC\")."
+}

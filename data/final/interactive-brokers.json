@@ -9,8 +9,8 @@
   "docs_url": "https://www.interactivebrokers.com/campus/ibkr-api-page/ibkr-api-home/",
   "signup_url": "https://www.interactivebrokers.com/en/trading/ib-api.php",
   "auth": {
-    "type": "oauth2",
-    "details": "OAuth 2.0 / session-based auth via Client Portal Web API; also TWS/Gateway socket auth for native API. Account required."
+    "type": "other",
+    "details": "Local Client Portal Gateway uses browser login (username/password + 2FA) to establish a session; requests go to the local Gateway after authentication. Separate OAuth 2.0 applies to remote Client Portal Web API for third-party apps. Account required."
   },
   "https": true,
   "cors": "unknown",
@@ -18,13 +18,13 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
-    "free_tier_limits": "API access included with IBKR brokerage accounts; market data and commissions billed separately per IBKR schedule",
-    "paid_plans": "No separate API SaaS fee; brokerage commissions + optional market data subscriptions apply"
+    "free_tier": false,
+    "free_tier_limits": "No standalone free API plan; access requires an eligible IBKR brokerage account (typically IBKR Pro). No separate API SaaS fee; market data and commissions billed per IBKR schedule.",
+    "paid_plans": "No separate API SaaS fee; brokerage commissions + optional market data subscriptions apply. Access requires an opened IBKR account."
   },
-  "rate_limits": "not published as a simple public free-tier quota; Gateway/CPAPI enforce session and pacing limits (varies by endpoint)",
+  "rate_limits": "Client Portal Web API: ~10 requests/second global pacing; many endpoints have stricter limits (e.g. GET /portfolio/accounts often 1 req/5s). Exact limits vary by endpoint in IBKR docs.",
   "example": {
-    "request": "curl -s 'https://localhost:5000/v1/api/portfolio/accounts' -H 'Cookie: YOUR_SESSION'",
+    "request": "curl --insecure -s 'https://localhost:5000/v1/api/portfolio/accounts'",
     "response_snippet": "[{\"id\":\"U1234567\",\"accountId\":\"U1234567\",\"accountVan\":\"U1234567\",\"accountTitle\":\"...\",\"accountAlias\":null,\"currency\":\"USD\"}]"
   },
   "use_cases": [
@@ -95,6 +95,21 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -4,7 +4,7 @@
   "name": "Mozilla Observatory",
   "category": "security-identity",
   "tagline": "HTTP security header and best-practice scanning for websites",
-  "description": "Mozilla Observatory analyzes websites for security best practices, focusing on HTTP security headers, TLS configuration, and related hardening signals. Developers use its API to scan sites, retrieve grade/score results, and track security posture over time.",
+  "description": "Mozilla Observatory (MDN HTTP Observatory) analyzes websites for HTTP security best practices and related web-hardening signals, focusing on security headers and configuration checks. Developers use its API to scan sites, retrieve grade/score results, and track security posture over time. It does not provide TLS/certificate analysis (that capability was part of the former multi-tool Observatory sunset in 2024).",
   "base_url": "https://observatory-api.mdn.mozilla.net/api/v2",
   "docs_url": "https://github.com/mdn/mdn-http-observatory/blob/main/src/api/v2/README.md",
   "signup_url": null,
@@ -22,7 +22,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "One new scan per host per minute; cached results may be returned during the cooldown.",
   "example": {
     "request": "curl -s -X POST \"https://observatory-api.mdn.mozilla.net/api/v2/scan?host=example.com\"",
     "response_snippet": "{\"id\":...,\"details_url\":\"https://developer.mozilla.org/en-US/observatory/analyze?host=example.com\",\"algorithm_version\":4,\"scanned_at\":\"...\",\"error\":null,\"grade\":\"B\",\"score\":70,\"status_code\":200,\"tests_failed\":2,\"tests_passed\":8,\"tests_quantity\":10}"
@@ -94,6 +94,25 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

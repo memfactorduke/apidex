@@ -1,0 +1,17 @@
+{
+  "id": "birdeye",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Account-level (rps, with documented sustained rpm where listed): Standard 1 rps; Lite/Starter 15 rps; Premium 50 rps / 1000 rpm; Business 100 rps / 1500 rpm (higher Business tiers 150 rps per pricing); Growth AutoScale 150 rps / 9000 rpm; Enterprise custom. Wallet APIs (all packages, beta): 5 rps and 75 rpm. Some heavy endpoints have lower per-API caps.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: partial\u2014auditor wrong that Premium/Business rpm figures are invented (rate-limiting docs list Premium 50 rps/1000 rpm and Business 100 rps/1500 rpm: https://docs.birdeye.so/docs/rate-limiting); auditor right that wallet ~30 rpm is stale vs newer package notes (5 rps / 75 rpm: https://docs.birdeye.so/docs/data-accessibility-by-packages) and Business should reflect 100\u2013150 rps (https://docs.birdeye.so/docs/pricing). Corrected string keeps official rps/rpm and updates wallet + Business range."
+}

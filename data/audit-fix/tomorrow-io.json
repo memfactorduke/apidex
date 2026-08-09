@@ -1,0 +1,17 @@
+{
+  "id": "tomorrow-io",
+  "base_url": "https://api.tomorrow.io/v4",
+  "docs_url": "https://docs.tomorrow.io/",
+  "auth_type": "apiKey",
+  "auth_details": "API key via apikey query parameter or Authorization header",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "paid_plans": null,
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl \"https://api.tomorrow.io/v4/weather/realtime?location=42.3478,-71.0466&apikey=YOUR_API_KEY\"",
+  "example_response_snippet": "{}",
+  "description": "Tomorrow.io provides weather, climate, and air quality data via timeline and map layers APIs. Developers can query hyperlocal forecasts, historical weather, and environmental insights for applications requiring precise meteorological data.",
+  "status": "operational",
+  "resolution_notes": "Settlement pending live verification of auth header form and free/rate limit docs against official Tomorrow.io sources."
+}

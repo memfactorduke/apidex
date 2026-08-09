@@ -1,0 +1,17 @@
+{
+  "id": "usda-fooddata-central",
+  "base_url": "https://api.nal.usda.gov/fdc/v1",
+  "docs_url": "https://fdc.nal.usda.gov/api-guide",
+  "auth_type": "apiKey",
+  "auth_details": "API key via api_key query parameter or X-Api-Key header; free self-serve signup",
+  "free_tier": true,
+  "free_tier_limits": "DEMO_KEY: 1,000 requests/hour per IP; personal free API keys: rate limits not clearly stated in official docs",
+  "paid_plans": null,
+  "rate_limits": "DEMO_KEY: 1,000 requests/hour per IP; personal free API keys: not clearly documented as 1,000/hour",
+  "cors": "unknown",
+  "example_request": "curl \"https://api.nal.usda.gov/fdc/v1/foods/search?query=cheddar%20cheese&api_key=YOUR_API_KEY\"",
+  "example_response_snippet": "{\"totalHits\": 50, \"currentPage\": 1, \"totalPages\": 1, \"foods\": [{\"fdcId\": 173410, \"description\": \"Cheese, cheddar\", \"dataType\": \"SR Legacy\", \"foodNutrients\": [...]}]}",
+  "description": "USDA FoodData Central provides comprehensive food composition data including nutrients, portions, and branded products. Free API with key-based access for developers building nutrition apps, food databases, and dietary analysis tools.",
+  "status": "operational",
+  "resolution_notes": "Pending verification of rate limits against official docs"
+}

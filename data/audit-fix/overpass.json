@@ -1,0 +1,17 @@
+{
+  "id": "overpass",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Main public instance fair-use: under ~10,000 queries/day and under ~1 GB download/day. Dynamic per-client slot throttling (often a small number, e.g. Rate limit: 2 on /api/status); cool-down after each query; HTTP 429 when no slot available. Timeout/maxsize also limit long queries.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: auditor correct. Entry wrongly treated \u201c~10,000\u201d as slots; official fair-use is <~10k queries/day and <~1 GB/day (https://wiki.openstreetmap.org/wiki/Overpass_API ; https://dev.overpass-api.de/overpass-doc/en/preface/commons.html). Slots are a separate, small dynamic per-client limit shown on /api/status (live sample Rate limit: 2); denied requests return HTTP 429."
+}

@@ -5,7 +5,7 @@
   "category": "social-communication",
   "tagline": "Open protocol and Client-Server API for decentralized real-time messaging",
   "description": "Matrix is an open standard for decentralized, real-time communication. Developers use the Client-Server API (typically against a homeserver such as matrix.org) to send and receive messages, manage rooms, and build chat clients, bots, and bridges without a single central provider.",
-  "base_url": "https://matrix.org/_matrix/client/v3",
+  "base_url": "https://matrix-client.matrix.org/_matrix/client/v3",
   "docs_url": "https://spec.matrix.org/latest/client-server-api/",
   "signup_url": "https://matrix.org/docs/guides/getting-involved",
   "auth": {
@@ -24,7 +24,7 @@
   },
   "rate_limits": "not published globally; homeserver-dependent (matrix.org and other hosts apply their own limits)",
   "example": {
-    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://matrix.org/_matrix/client/v3/account/whoami\"",
+    "request": "curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://matrix-client.matrix.org/_matrix/client/v3/account/whoami\"",
     "response_snippet": "{\"user_id\":\"@alice:matrix.org\",\"device_id\":\"DEVICEID\",\"is_guest\":false}"
   },
   "use_cases": [
@@ -94,6 +94,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

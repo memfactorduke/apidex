@@ -4,13 +4,13 @@
   "name": "AccuWeather",
   "category": "weather-environment",
   "tagline": "Enterprise-grade forecasts, severe weather alerts, and lifestyle indices via API",
-  "description": "AccuWeather provides enterprise-grade weather data APIs including current conditions, forecasts, severe weather alerts, location services, and lifestyle indices. Developers can obtain free limited API keys for evaluation; production use typically requires a paid plan with higher call volumes and commercial licensing.",
+  "description": "AccuWeather enterprise weather APIs: current conditions, forecasts, alerts, location, lifestyle indices. Free limited keys for evaluation; production typically paid.",
   "base_url": "https://dataservice.accuweather.com",
   "docs_url": "https://developer.accuweather.com/apis",
   "signup_url": "https://developer.accuweather.com/",
   "auth": {
     "type": "apiKey",
-    "details": "API key passed as apikey query parameter on every request; self-serve signup at developer.accuweather.com"
+    "details": "API key as apikey query parameter; self-serve signup at developer.accuweather.com"
   },
   "https": true,
   "cors": "unknown",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Limited free developer key (historically ~50 calls/day on Standard trial; confirm current limits at signup)",
-    "paid_plans": "Contact sales for commercial/enterprise packages with higher volume"
+    "free_tier_limits": "Limited free developer key (historically ~50 calls/day; confirm at signup)",
+    "paid_plans": "Contact sales for commercial/enterprise packages"
   },
-  "rate_limits": "Varies by subscription tier; free/trial keys are heavily limited (see portal after signup)",
+  "rate_limits": "Varies by subscription tier; free/trial keys heavily limited",
   "example": {
     "request": "curl \"https://dataservice.accuweather.com/currentconditions/v1/349727?apikey=YOUR_API_KEY\"",
     "response_snippet": "[{\"LocalObservationDateTime\":\"2024-01-15T14:30:00-05:00\",\"WeatherText\":\"Partly cloudy\",\"Temperature\":{\"Metric\":{\"Value\":12.8,\"Unit\":\"C\"},\"Imperial\":{\"Value\":55.0,\"Unit\":\"F\"}}}]"
@@ -94,6 +94,26 @@
     "corrected": [],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

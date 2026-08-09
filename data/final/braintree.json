@@ -10,7 +10,7 @@
   "signup_url": "https://www.braintreepayments.com/sandbox",
   "auth": {
     "type": "other",
-    "details": "Server SDKs: public key, private key, and merchant ID (Basic auth style). GraphQL: Bearer access token. Sandbox and production use separate credentials and hosts."
+    "details": "Server SDKs & GraphQL: public+private API keys via HTTP Basic (Base64 of PUBLIC_KEY:PRIVATE_KEY). Bearer only for tokenization keys, client-token auth fingerprints, or Braintree Auth OAuth access tokens (beta). Sandbox/prod use separate credentials and hosts."
   },
   "https": true,
   "cors": "unknown",
@@ -26,7 +26,7 @@
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl -X POST https://payments.sandbox.braintree-api.com/graphql -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Braintree-Version: 2024-08-01\" -H \"Content-Type: application/json\" -d '{\"query\":\"query { ping }\"}'",
+    "request": "curl -X POST https://payments.sandbox.braintree-api.com/graphql -H 'Authorization: Basic BASE64_ENCODED(PUBLIC_KEY:PRIVATE_KEY)' -H 'Braintree-Version: 2019-01-01' -H 'Content-Type: application/json' -d '{\"query\": \"query { ping }\"}'",
     "response_snippet": "{\"data\":{\"ping\":\"pong\"}}"
   },
   "use_cases": [
@@ -99,6 +99,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

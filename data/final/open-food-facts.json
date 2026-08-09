@@ -22,10 +22,10 @@
     "free_tier_limits": "Fully free and open; no paid plans. Rate limiting applies (see rate_limits).",
     "paid_plans": null
   },
-  "rate_limits": "Product queries ~100 req/min; search ~10 req/min; facet ~2 req/min. User-Agent identification required. Bulk use needs coordination with Open Food Facts.",
+  "rate_limits": "15 req/min/IP for product reads (GET /api/v*/product); 10 req/min/IP for search (GET /api/v*/search or /cgi/search.pl). Custom User-Agent required. Global abuse limits may return HTTP 503. Bulk use: download CSV/JSONL exports or host a local instance.",
   "example": {
-    "request": "curl -s \"https://world.openfoodfacts.org/api/v2/product/3017620422003.json\" -H \"User-Agent: YourApp/1.0 (contact@example.com)\"",
-    "response_snippet": "{\"code\":\"3017620422003\",\"status\":1,\"status_verbose\":\"product found\",\"product\":{\"product_name\":\"Nutella\",\"brands\":\"Ferrero\",\"nutriscore_grade\":\"e\",\"ingredients_text\":\"...\",\"nutriments\":{\"energy-kcal_100g\":539}}}"
+    "request": "curl -s \"https://world.openfoodfacts.org/api/v3.6/product/3017620422003\" -H \"User-Agent: YourApp/1.0 (contact@example.com)\"",
+    "response_snippet": "{\"code\":\"3017620422003\",\"status\":\"success\",\"product\":{\"code\":\"3017620422003\",\"product_name\":\"Nutella\",\"brands\":\"Ferrero\",\"nutriscore_grade\":\"e\",\"ingredients_text\":\"...\",\"nutriments\":{\"energy-kcal_100g\":539}}}"
   },
   "use_cases": [
     "look up a food product by barcode for ingredients and nutrition",
@@ -94,6 +94,17 @@
     "corrected": [
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

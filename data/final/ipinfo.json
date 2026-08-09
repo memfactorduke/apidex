@@ -5,7 +5,7 @@
   "category": "geo-maps",
   "tagline": "IP address geolocation, ASN, company, and privacy data API",
   "description": "IPinfo provides IP intelligence APIs for geolocation (city, region, country, coordinates), ASN/network ownership, company data, privacy/VPN/proxy detection, and related IP metadata. Developers query by IP address (or use a tokenized client IP lookup) and receive structured JSON. Plans range from a free tier with limited fields and request volume to paid tiers with higher limits and richer datasets.",
-  "base_url": "https://ipinfo.io",
+  "base_url": "https://api.ipinfo.io",
   "docs_url": "https://ipinfo.io/developers",
   "signup_url": "https://ipinfo.io/signup",
   "auth": {
@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "50,000 requests/month free; limited data fields vs paid plans",
-    "paid_plans": "Paid plans for higher volume and full datasets (Core, Plus, Business, Enterprise) \u2014 see pricing page"
+    "free_tier_limits": "IPinfo Lite: unlimited authenticated requests; country-level geolocation and basic ASN data. Legacy Free API: 50,000 requests/month.",
+    "paid_plans": "Core, Plus, Max, and Enterprise; see https://ipinfo.io/pricing"
   },
-  "rate_limits": "Free: 50,000 requests/month; paid plans higher monthly quotas \u2014 see https://ipinfo.io/pricing",
+  "rate_limits": "IPinfo Lite: unlimited authenticated requests; legacy free API: 50,000 requests/month; paid quotas vary by plan.",
   "example": {
-    "request": "curl \"https://ipinfo.io/8.8.8.8?token=YOUR_API_KEY\"",
-    "response_snippet": "{\"ip\": \"8.8.8.8\", \"hostname\": \"dns.google\", \"city\": \"Mountain View\", \"region\": \"California\", \"country\": \"US\", \"loc\": \"37.4056,-122.0775\", \"org\": \"AS15169 Google LLC\", \"postal\": \"94043\", \"timezone\": \"America/Los_Angeles\"}"
+    "request": "curl \"https://api.ipinfo.io/lite/8.8.8.8?token=YOUR_API_KEY\"",
+    "response_snippet": "{\"ip\":\"8.8.8.8\",\"asn\":\"AS15169\",\"as_name\":\"Google LLC\",\"as_domain\":\"google.com\",\"country_code\":\"US\",\"country\":\"United States\",\"continent_code\":\"NA\",\"continent\":\"North America\"}"
   },
   "use_cases": [
     "geolocate a user IP to country/city for localization",
@@ -93,6 +93,20 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -5,7 +5,7 @@
   "category": "ai-ml",
   "tagline": "Open-source model inference and fine-tuning API with serverless endpoints",
   "description": "Together AI provides a unified API for running and fine-tuning open-source large language models, image models, and embeddings. Developers call chat completions, completions, embeddings, and image generation endpoints against hosted models (Llama, Mixtral, Qwen, FLUX, and others) with OpenAI-compatible request shapes and pay-as-you-go pricing.",
-  "base_url": "https://api.together.xyz/v1",
+  "base_url": "https://api.together.ai/v1",
   "docs_url": "https://docs.together.ai/",
   "signup_url": "https://api.together.xyz/signup",
   "auth": {
@@ -18,13 +18,13 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
-    "free_tier_limits": "New accounts typically receive free trial credits on signup (amount varies; confirm in dashboard); no unlimited free request tier. Pay-as-you-go after credits.",
+    "free_tier": false,
+    "free_tier_limits": "No free trial; minimum $5 credit purchase required for API access.",
     "paid_plans": "Pay-as-you-go per million tokens / per image by model; dedicated endpoints and enterprise plans available. See together.ai/pricing."
   },
   "rate_limits": "not published as a single global limit; tiered by account and model (check dashboard / rate-limit headers). Default serverless limits apply per model family.",
   "example": {
-    "request": "curl https://api.together.xyz/v1/chat/completions \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\": \"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}], \"max_tokens\": 64}'",
+    "request": "curl -X POST \"https://api.together.ai/v1/chat/completions\" \\\n  -H \"Authorization: Bearer $TOGETHER_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}], \"max_tokens\": 64}'",
     "response_snippet": "{\"id\": \"chatcmpl-...\", \"object\": \"chat.completion\", \"choices\": [{\"index\": 0, \"message\": {\"role\": \"assistant\", \"content\": \"Hello! How can I help you today?\"}, \"finish_reason\": \"stop\"}], \"usage\": {\"prompt_tokens\": 12, \"completion_tokens\": 10, \"total_tokens\": 22}}"
   },
   "use_cases": [
@@ -94,6 +94,18 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "free_tier",
+        "free_tier_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

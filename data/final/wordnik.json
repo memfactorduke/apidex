@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "Basic: 100 calls/hour; free for nonprofit or research use and trial-only for commercial use.",
+    "paid_plans": "Hobby $10/mo (1,000 calls/hour); Pro $59/mo (20,000 calls/hour); Enterprise $149/mo (45,000 calls/hour)."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Plan-based: Basic 100/hour; Hobby 1,000/hour; Pro 20,000/hour; Enterprise 45,000/hour. Remaining quotas returned in X-RateLimit response headers.",
   "example": {
     "request": "curl \"https://api.wordnik.com/v4/word.json/example/definitions?api_key=YOUR_API_KEY\"",
     "response_snippet": "[{\"text\":\"a thing characteristic of its kind or illustrating a general rule\",\"partOfSpeech\":\"noun\",\"sourceDictionary\":\"...\"}]"
@@ -91,6 +91,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

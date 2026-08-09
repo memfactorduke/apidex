@@ -10,7 +10,7 @@
   "signup_url": "https://developer.squareup.com/apps",
   "auth": {
     "type": "oauth2",
-    "details": "Bearer access token in Authorization header (OAuth 2.0 or personal access token). Sandbox uses sandbox tokens against connect.squareupsandbox.com. Square-Version header required for API versioning."
+    "details": "Bearer access token in Authorization header (OAuth 2.0 or personal access token). Sandbox uses sandbox tokens against connect.squareupsandbox.com. Square-Version header is recommended to pin the API version; if omitted, the application's configured default version is used."
   },
   "https": true,
   "cors": "unknown",
@@ -19,7 +19,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "API access free; payment processing fees apply (e.g. ~2.6% + 10\u00a2 online typical); no free transaction fee tier for card processing",
+    "free_tier_limits": "API and SDK access is free; standard US online payment processing is currently 2.9% + 30\u00a2 per transaction (other methods, countries, and volume agreements differ); no free transaction-fee tier for card processing",
     "paid_plans": "Transaction-based processing fees; volume discounts available; no separate API subscription for standard use"
   },
   "rate_limits": "not published in full; some endpoints document per-endpoint limits; 429 with Retry-After on exceed",
@@ -94,6 +94,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

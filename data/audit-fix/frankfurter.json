@@ -1,0 +1,17 @@
+{
+  "id": "frankfurter",
+  "base_url": "https://api.frankfurter.dev/v2",
+  "docs_url": "https://www.frankfurter.app/docs/",
+  "auth_type": "none",
+  "auth_details": "No authentication required. Public endpoints are open; no API key or signup needed.",
+  "free_tier": true,
+  "free_tier_limits": "Unlimited free use; no published request caps on the free public service",
+  "paid_plans": null,
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -s \"https://api.frankfurter.dev/v2/rates?base=USD&quotes=EUR,GBP\"",
+  "example_response_snippet": "{\"amount\":1.0,\"base\":\"USD\",\"date\":\"2024-01-15\",\"rates\":{\"EUR\":0.91,\"GBP\":0.79}}",
+  "description": "Frankfurter is a free, open-source currency exchange rates API that aggregates daily foreign exchange data from multiple central banks. It provides current and historical rates for major currencies without authentication. Developers can convert amounts, fetch latest rates, and query time-series data for finance apps, pricing tools, and multi-currency ecommerce workflows.",
+  "status": "operational",
+  "resolution_notes": "base_url: auditor correct \u2014 official docs/API use api.frankfurter.dev (v2). example.request: auditor correct \u2014 v2 uses /v2/rates with base/quotes. description: auditor correct \u2014 v2 aggregates multiple central banks, not ECB-only."
+}

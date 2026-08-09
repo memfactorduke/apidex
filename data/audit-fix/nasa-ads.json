@@ -1,0 +1,17 @@
+{
+  "id": "nasa-ads",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Typically 5,000 regular requests per day; inspect X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset headers for the endpoint/token.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: auditor correct. Official ADS policy states all users (including API) share the same limit\u2014currently 5000 regular requests/day for most request types (https://ui.adsabs.harvard.edu/help/policies/rate-limits). Official adsabs-dev-api docs confirm per-endpoint limits via X-RateLimit-Limit / Remaining / Reset (example Limit: 5000 daily) (https://github.com/adsabs/adsabs-dev-api). Original claim that no fixed public number is published is wrong."
+}

@@ -4,7 +4,7 @@
   "name": "Mojang API",
   "category": "games-comics",
   "tagline": "Minecraft account, profile, and session APIs for launchers and server tools",
-  "description": "Public Mojang/Minecraft services for account profiles, UUID/name lookup, textures, and session validation used by launchers and multiplayer tooling. Core identity and session endpoints remain free and unauthenticated for public profile data, with Microsoft account auth for full account flows.",
+  "description": "Public Mojang/Minecraft identity services for UUID and username lookup primarily at api.mojang.com; related session validation and skin/texture profile data are served from sessionserver.mojang.com, and newer account/services flows use api.minecraftservices.com.",
   "base_url": "https://api.mojang.com",
   "docs_url": "https://wiki.vg/Mojang_API",
   "signup_url": null,
@@ -98,6 +98,15 @@
       "description",
       "status"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
+    "free_tier_limits": "100 API calls per hour for beta keys; production access requires approval and paid custom pricing.",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Beta keys: 100 API calls/hour; production limits are assigned through an approved production key.",
   "example": {
     "request": "curl \"https://api.giphy.com/v1/gifs/search?api_key=YOUR_API_KEY&q=cats&limit=1\"",
-    "response_snippet": "{\"data\":[{\"type\":\"gif\",\"id\":\"...\",\"url\":\"https://giphy.com/gifs/...\",\"images\":{\"original\":{\"url\":\"https://media.giphy.com/...\"}}}],\"meta\":{\"status\":200,\"msg\":\"OK\"},\"pagination\":{\"total_count\":0,\"count\":1,\"offset\":0}}"
+    "response_snippet": "{\"data\":[{\"type\":\"gif\",\"id\":\"...\",\"url\":\"https://giphy.com/gifs/...\",\"images\":{\"original\":{\"url\":\"https://media.giphy.com/...\"}}}],\"meta\":{\"status\":200,\"msg\":\"OK\"},\"pagination\":{\"total_count\":1,\"count\":1,\"offset\":0}}"
   },
   "use_cases": [
     "search GIFs by keyword for chat or messaging features",
@@ -92,6 +92,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

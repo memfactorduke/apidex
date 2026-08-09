@@ -22,7 +22,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Currently no edge rate limiting for JSON, RSS, or Index APIs; respect caching/ETag guidance and identify requests with User-Agent.",
   "example": {
     "request": "curl -s https://pypi.org/pypi/requests/json",
     "response_snippet": "{ \"info\": { \"name\": \"requests\", \"version\": \"2.32.3\", \"summary\": \"Python HTTP for Humans.\", \"author\": \"...\" }, \"releases\": { ... }, \"urls\": [ ... ] }"
@@ -91,6 +91,25 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

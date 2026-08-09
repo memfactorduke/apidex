@@ -1,0 +1,17 @@
+{
+  "id": "crawlbase",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Default 20 concurrent requests per token (~20 req/s derived); concurrency scales with plan. Exceeding returns HTTP 429.",
+  "cors": null,
+  "example_request": "curl \"https://api.crawlbase.com/?token=YOUR_API_KEY&url=https%3A%2F%2Fhttpbin.org%2Fip&format=json\"",
+  "example_response_snippet": "{\"original_status\":200,\"cb_status\":200,\"url\":\"https://httpbin.org/ip\",\"body\":\"...\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Auditor correct. Docs publish default 20 concurrent (~20 RPS derived) per token (https://crawlbase.com/docs/rate-limits); Crawling API proxy mode also states 20 req/s (https://crawlbase.com/docs/crawling-api). Original 'not published' is wrong. example: Auditor correct. Without format=json the body is the raw target content and metadata is in headers; JSON envelope needs format=json and uses cb_status (formerly pc_status), not pc_status (https://crawlbase.com/docs/crawling-api)."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "chargebee",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Plan defaults (req/min): test sites 150; live Starter 150, Performance 1,000, Enterprise default 3,500 (custom Enterprise no fixed upper limit). Concurrent: 50 GET / 100 POST simultaneous; higher limits via support. HTTP 429 when exceeded.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: auditor correct; original \"not published\" is false. Official docs publish plan defaults and concurrency: https://apidocs.chargebee.com/docs/api/error-handling and https://www.chargebee.com/docs/billing/2.0/kb/platform/what-are-the-chargebee-api-limits (test 150/min; live Starter 150, Performance 1000, Enterprise default 3500; concurrent 50 GET/100 POST; custom higher limits available)."
+}

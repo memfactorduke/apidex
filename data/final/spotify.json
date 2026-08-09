@@ -19,12 +19,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free app registration; commercial/extended use subject to Spotify Developer Terms and quota (confirm on dashboard)",
+    "free_tier_limits": "No separate per-call API fee. Free app registration with Development Mode defaults: app owner must have an active Spotify Premium subscription; max 5 allowlisted authenticated users; subject to per-developer quota and 429/Retry-After rate limits. Extended quota mode is available via application (often organization-oriented); commercial use per Spotify Developer Terms.",
     "paid_plans": null
   },
   "rate_limits": "not published as fixed global numbers; 429 with Retry-After when exceeded; per-app quotas may apply",
   "example": {
-    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl\"",
+    "request": "curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl\"",
     "response_snippet": "{\"id\":\"11dFghVXANMlKmJXsNCbNl\",\"name\":\"Cut To The Feeling\",\"type\":\"track\",\"uri\":\"spotify:track:11dFghVXANMlKmJXsNCbNl\",\"artists\":[{\"name\":\"Carly Rae Jepsen\"}],\"album\":{\"name\":\"Cut To The Feeling\"},\"duration_ms\":207959}"
   },
   "use_cases": [
@@ -95,6 +95,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

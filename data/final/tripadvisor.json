@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "First 5,000 API calls free every month after signup (credit card required for overage billing)",
-    "paid_plans": "Contact TripAdvisor for partner pricing; not publicly listed."
+    "paid_plans": "Self-service pay-as-you-go per-call pricing; contact sales for usage above 500,000 calls/month or negotiated arrangements"
   },
   "rate_limits": "Search APIs: 10,000 calls/day; Location details/photos/reviews: set by daily budget; 50 QPS (24h rolling window)",
   "example": {
@@ -93,6 +93,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -1,0 +1,17 @@
+{
+  "id": "canada-open-data",
+  "base_url": "https://open.canada.ca/data/en/api/3",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s 'https://open.canada.ca/data/en/api/3/action/package_search?q=climate&rows=1'",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: auditor correct \u2014 official Open Government docs and live CKAN paths use the language segment; https://open.canada.ca/data/en/api/3 is the canonical English Action API root (docs: https://open.canada.ca/en/blog/announcing-open-data-api-version-3 and portal API usage under https://open.canada.ca/data/en/). Language-less https://open.canada.ca/data/api/3 may redirect but is not the documented canonical form. example.request: auditor correct \u2014 example should match the same canonical path: https://open.canada.ca/data/en/api/3/action/package_search. Verified live against open.canada.ca."
+}

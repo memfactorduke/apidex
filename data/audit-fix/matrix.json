@@ -1,0 +1,17 @@
+{
+  "id": "matrix",
+  "base_url": "https://matrix-client.matrix.org/_matrix/client/v3",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://matrix-client.matrix.org/_matrix/client/v3/account/whoami\"",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: auditor correct. Official Client-Server API is per-homeserver; matrix.org\u2019s .well-known client discovery returns base_url https://matrix-client.matrix.org (https://matrix.org/.well-known/matrix/client). Spec docs use {homeserver}/_matrix/client/v3, not a universal matrix.org/_matrix root (https://spec.matrix.org/latest/client-server-api/). example: auditor correct. Use discovered client base and access token wording, not API key / matrix.org host (same .well-known + whoami path in CS API)."
+}

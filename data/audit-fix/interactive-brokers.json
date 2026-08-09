@@ -1,0 +1,17 @@
+{
+  "id": "interactive-brokers",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "other",
+  "auth_details": "Local Client Portal Gateway uses browser login (username/password + 2FA) to establish a session; requests go to the local Gateway after authentication. Separate OAuth 2.0 applies to remote Client Portal Web API for third-party apps. Account required.",
+  "free_tier": false,
+  "free_tier_limits": "No standalone free API plan; access requires an eligible IBKR brokerage account (typically IBKR Pro). No separate API SaaS fee; market data and commissions billed per IBKR schedule.",
+  "paid_plans": "No separate API SaaS fee; brokerage commissions + optional market data subscriptions apply. Access requires an opened IBKR account.",
+  "rate_limits": "Client Portal Web API: ~10 requests/second global pacing; many endpoints have stricter limits (e.g. GET /portfolio/accounts often 1 req/5s). Exact limits vary by endpoint in IBKR docs.",
+  "cors": null,
+  "example_request": "curl --insecure -s 'https://localhost:5000/v1/api/portfolio/accounts'",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth: auditor correct \u2014 localhost Gateway is browser/session auth, not OAuth bearer for this base_url (https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/#authentication). pricing: auditor correct \u2014 free_tier=false; API has no SaaS fee but requires IBKR account, not a free public tier (same CPAPI docs + IBKR account requirements). rate_limits: auditor correct that concrete pacing is published \u2014 10 req/s global and endpoint-specific (e.g. portfolio/accounts) per IBKR CPAPI docs (https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/#rate-limiting / endpoint notes). example: auditor correct \u2014 self-signed cert needs --insecure; generic Cookie header unnecessary after Gateway browser auth (https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/)."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ip2location",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "Registered Free plan: 50K IP Geolocation API queries/month, 11 IP attributes, attribution required. Keyless (no API key): 1,000 queries/day with attribution.",
+  "paid_plans": "Starter $49/mo (150K geo queries); Plus $249/mo (300K); Security $499/mo (600K). Paid plans do not require attribution; overage available on commercial tiers.",
+  "rate_limits": "Keyless: 1,000 queries/day (resets 00:00 UTC). Registered Free: 50,000 queries/month. No separate public per-second/RPS ceiling found on official pricing/docs.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "pricing: auditor correct. Official https://www.ip2location.io/pricing shows Free $0 (50K geo/mo, 11 attrs, attribution required), keyless 1,000/day with attribution, paid Starter $49 / Plus $249 / Security $499. Original free_tier true stands; free_tier_limits/paid_plans were incomplete. rate_limits: auditor correct \u2014 published quotas on pricing (keyless vs Free plan table) and docs https://www.ip2location.io/ip2location-documentation (keyless 1,000/day); no separate public RPS limit stated; original \u201cnot published\u201d wrong for usage quotas."
+}

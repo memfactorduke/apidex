@@ -1,0 +1,17 @@
+{
+  "id": "arxiv",
+  "base_url": "https://export.arxiv.org/api/query",
+  "docs_url": "https://info.arxiv.org/help/api/user-manual.html",
+  "auth_type": "none",
+  "auth_details": "No authentication or API key required. Public unauthenticated HTTP GET. Terms of Use require polite rate limiting and a single concurrent connection for legacy APIs.",
+  "free_tier": true,
+  "free_tier_limits": "Fully free; no paid plans. Rate-limited only (legacy APIs: \u22641 request every 3 seconds, one connection).",
+  "paid_plans": null,
+  "rate_limits": "Legacy APIs (arXiv API, OAI-PMH, RSS): no more than one request every three seconds; limit to a single connection at a time (Terms of Use). max_results capped at 30,000 per query (slices of at most 2,000). Limits may change.",
+  "cors": "unknown",
+  "example_request": "curl -s 'https://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=1'",
+  "example_response_snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n  <title>ArXiv Query: search_query=all:electron&amp;id_list=&amp;start=0&amp;max_results=1</title>\n  <id>http://arxiv.org/api/cHxbiOdZm... </id>\n  <updated>2024-...</updated>\n  <opensearch:totalResults xmlns:opensearch=\"http://a9.com/-/spec/opensearch/1.1/\">...</opensearch:totalResults>\n  <entry>\n    <id>http://arxiv.org/abs/...</id>\n    <title>...</title>\n    <summary>...</summary>\n    <author><name>...</name></author>\n    <link title=\"pdf\" href=\"http://arxiv.org/pdf/...\" rel=\"related\" type=\"application/pdf\"/>\n  </entry>\n</feed>",
+  "description": "arXiv provides a free public HTTP API for programmatic access to metadata and search across the arXiv e-print repository. Queries return Atom XML with titles, authors, abstracts, categories, DOIs, and PDF/HTML links. No API key is required; usage is governed by Terms of Use rate limits (legacy APIs: one request every three seconds, single connection). Suitable for research tooling, literature search, and citation workflows; bulk dumps should use dedicated bulk-data channels instead of hammering the API.",
+  "status": "operational",
+  "resolution_notes": "id: auditor partially right on directory hygiene (duplicate naming risk) but wrong on needing a different id for this entry. Official product remains the single public Atom query API at export.arxiv.org (docs: https://info.arxiv.org/help/api/user-manual.html); task requires canonical id \"arxiv\". Other fields undisputed \u2192 null."
+}

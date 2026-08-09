@@ -1,0 +1,17 @@
+{
+  "id": "aftership",
+  "base_url": "https://api.aftership.com/tracking/2026-07",
+  "docs_url": "https://www.aftership.com/docs/tracking/quickstart/api-quick-start",
+  "auth_type": "apiKey",
+  "auth_details": "API key via as-api-key header. Self-serve signup; key from account settings. Optional as-store-id for multi-store. OAuth apps use as-access-token.",
+  "free_tier": false,
+  "free_tier_limits": "Free plan is dashboard-only; Tracking API and webhooks not included on Free.",
+  "paid_plans": "Premium and Enterprise include Tracking API/webhook access; Essentials does not.",
+  "rate_limits": "Per-endpoint (e.g. POST /trackings 20/s, GET /trackings 6/s, GET /trackings/:id 5/s); X-RateLimit-* headers.",
+  "cors": "unknown",
+  "example_request": "curl --request GET --url https://api.aftership.com/tracking/2026-07/trackings --header 'Content-Type: application/json' --header 'as-api-key: YOUR_API_KEY'",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url/example.request: auditor right \u2014 docs use 2026-07. auth: auditor right \u2014 as-api-key (OAuth: as-access-token); Authorization: AS-Api-Key not documented. free_tier/paid_plans: auditor right \u2014 Free/Essentials lack API; Premium+Enterprise have it. rate_limits: auditor right \u2014 endpoint limits + X-RateLimit headers published. Evidence: aftership.com/docs/tracking, pricing page."
+}

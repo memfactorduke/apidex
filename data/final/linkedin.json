@@ -5,7 +5,7 @@
   "category": "social-communication",
   "tagline": "Professional network API for profiles, org pages, posts, and ads",
   "description": "LinkedIn provides REST APIs for developers to access professional network data: member profiles, company/organization pages, content sharing, messaging, and advertising. Most products require OAuth 2.0 and LinkedIn Developer application approval; consumer-facing open endpoints are limited. Marketing, Community Management, and Talent/Learning products have separate product access and rate limits.",
-  "base_url": "https://api.linkedin.com/v2",
+  "base_url": "https://api.linkedin.com/rest",
   "docs_url": "https://learn.microsoft.com/en-us/linkedin/",
   "signup_url": "https://www.linkedin.com/developers/",
   "auth": {
@@ -25,7 +25,7 @@
   "rate_limits": "not published as a single global limit; application and member daily limits apply per product (e.g. throttle headers; see product-specific docs)",
   "example": {
     "request": "curl -X GET 'https://api.linkedin.com/v2/userinfo' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
-    "response_snippet": "{\"sub\":\"abc123\",\"name\":\"Jane Doe\",\"given_name\":\"Jane\",\"family_name\":\"Doe\",\"picture\":\"https://media.licdn.com/...\",\"email\":\"jane@example.com\",\"email_verified\":true,\"locale\":\"en_US\"}"
+    "response_snippet": "{\"sub\":\"abc123\",\"name\":\"Jane Doe\",\"given_name\":\"Jane\",\"family_name\":\"Doe\",\"picture\":\"https://media.licdn.com/...\",\"email\":\"jane@example.com\",\"email_verified\":true,\"locale\":\"en-US\"}"
   },
   "use_cases": [
     "sign users in with LinkedIn OpenID Connect and fetch basic profile",
@@ -92,6 +92,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

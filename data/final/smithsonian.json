@@ -10,7 +10,7 @@
   "signup_url": null,
   "auth": {
     "type": "apiKey",
-    "details": "API key required; obtain via self-serve registration on the Smithsonian Open Access developer portal."
+    "details": "API key required; register at https://api.data.gov/signup/ and pass it as api_key (or the supported X-Api-Key header)."
   },
   "https": true,
   "cors": "unknown",
@@ -22,7 +22,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "api.data.gov default: 1,000 requests/hour per API key (agency override possible). DEMO_KEY: 30 req/IP/hour and 50/IP/day. Check X-RateLimit-* response headers for effective limits.",
   "example": {
     "request": "curl \"https://api.si.edu/openaccess/api/v1.0/search?q=butterfly&api_key=YOUR_API_KEY\"",
     "response_snippet": "{\"response\":{\"rows\":[{\"id\":\"...\",\"title\":\"...\",\"content\":{...}}],\"rowCount\":...,\"start\":0}}"
@@ -91,6 +91,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
+    "free_tier_limits": "1,000 requests/month",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Free plan: 1 request/second; paid limits vary by plan",
   "example": {
     "request": "curl \"https://ipgeolocation.abstractapi.com/v1/?api_key=YOUR_API_KEY&ip_address=8.8.8.8\"",
     "response_snippet": "{\"ip_address\":\"8.8.8.8\",\"city\":\"Mountain View\",\"region\":\"California\",\"country\":\"United States\",\"latitude\":37.4056,\"longitude\":-122.0775}"
@@ -90,6 +90,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

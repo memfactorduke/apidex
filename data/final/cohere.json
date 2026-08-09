@@ -4,13 +4,13 @@
   "name": "Cohere",
   "category": "ai-ml",
   "tagline": "Enterprise-grade large language models and embeddings via API",
-  "description": "Cohere provides a REST API for text generation, chat, embeddings, reranking, and classification using its Command and Embed model families. Developers authenticate with an API key and call production endpoints for RAG, semantic search, and generative applications.",
+  "description": "Cohere provides a REST API for text generation, chat, embeddings, and reranking using its Command and Embed model families. Developers authenticate with an API key and call production endpoints for RAG, semantic search, and generative applications. (The v1 Classify endpoint is deprecated.)",
   "base_url": "https://api.cohere.com",
   "docs_url": "https://docs.cohere.com",
   "signup_url": "https://dashboard.cohere.com/welcome/register",
   "auth": {
     "type": "apiKey",
-    "details": "API key via Authorization: Bearer header (or X-Api-Key), self-serve from dashboard"
+    "details": "API key via Authorization: Bearer YOUR_API_KEY; self-serve from dashboard"
   },
   "https": true,
   "cors": "unknown",
@@ -19,12 +19,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Trial key: 1000 API calls/month. Production free tier rate limits vary by endpoint (e.g. Chat 500 RPM / 2M TPM).",
+    "free_tier_limits": "Trial key: 1,000 API calls/month; production usage is metered and model-specific (not a free production tier).",
     "paid_plans": null
   },
-  "rate_limits": "Published by key type (Trial vs Production) and endpoint: Chat ~500 RPM / 2M TPM production; Embed ~500 RPM / 2000 TPM; Rerank ~1000 RPM. See docs.cohere.com/docs/rate-limits.",
+  "rate_limits": "Published by key type and endpoint (docs.cohere.com/docs/rate-limits): Chat trial ~20 RPM, production typically ~500 RPM for applicable models; Embed ~2,000 inputs/minute; Rerank trial ~10 RPM, production ~1,000 RPM. Some newer models require contacting sales; limits are model-specific.",
   "example": {
-    "request": "curl https://api.cohere.com/v2/chat -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"command-r-plus\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "request": "curl https://api.cohere.com/v2/chat -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"command-a-03-2025\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
     "response_snippet": "{\"id\":\"...\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"Hello! How can I help you today?\"}]}}"
   },
   "use_cases": [
@@ -91,6 +91,19 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "rate_limits",
+        "example_request",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

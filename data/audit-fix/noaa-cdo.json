@@ -1,0 +1,17 @@
+{
+  "id": "noaa-cdo",
+  "base_url": "https://www.ncei.noaa.gov/cdo-web/api/v2",
+  "docs_url": "https://www.ncei.noaa.gov/cdo-web/webservices/v2",
+  "auth_type": "apiKey",
+  "auth_details": "Token via token header (not Authorization). Self-serve request at ncdc.noaa.gov/cdo-web/token; emailed after approval.",
+  "free_tier": true,
+  "free_tier_limits": "Free with token; 5 requests/second and 10,000 requests/day (published service limits)",
+  "paid_plans": null,
+  "rate_limits": "5 requests/second; 10,000 requests/day per token",
+  "cors": "unknown",
+  "example_request": "curl -H \"token: YOUR_API_KEY\" \"https://www.ncei.noaa.gov/cdo-web/api/v2/datasets\"",
+  "example_response_snippet": "{\"metadata\":{\"resultset\":{\"offset\":1,\"count\":11,\"limit\":25}},\"results\":[{\"uid\":\"gov.noaa.ncdc:C00861\",\"mindate\":\"1763-01-01\",\"maxdate\":\"2024-12-31\",\"name\":\"Daily Summaries\",\"datacoverage\":1,\"id\":\"GHCND\"}]}",
+  "description": "NOAA Climate Data Online (CDO) provides web services for accessing historical weather and climate data from the National Centers for Environmental Information (NCEI). Developers can query stations, datasets, data types, locations, and daily/monthly/annual observations worldwide via a token-authenticated REST API returning JSON.",
+  "status": "operational",
+  "resolution_notes": "base_url/docs_url/example: auditor right \u2014 NCEI hostname is current (https://www.ncei.noaa.gov/cdo-web/webservices/v2). description: auditor right \u2014 v2 returns JSON only. duplicate_entry: outside schema; both hostnames often redirect; keep one canonical NCEI entry."
+}

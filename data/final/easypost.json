@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free test mode (no real labels); production free tier and usage fees not fully confirmed as of research \u2014 see pricing page for current plan details",
-    "paid_plans": "Pay-as-you-go and higher tiers; label and carrier fees vary by carrier and volume"
+    "free_tier_limits": "Free access with EasyPost Wallet Carriers for up to 3,000 labels (postage excluded); after that, per-label fees apply. Bring Your Own Carrier Account (BYOCA) is $20/month plus applicable per-label fees; enterprise pricing is custom.",
+    "paid_plans": "Pay-as-you-go with per-label fees after free tier; BYOCA $20/month + per-label fees; higher/enterprise tiers custom. Carrier postage and label fees vary by carrier and volume."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Index endpoints limited to 5 requests/second; other endpoint or carrier-specific limits may apply. Handle HTTP 429 with retry/backoff.",
   "example": {
     "request": "curl -s -X GET https://api.easypost.com/v2/addresses -u YOUR_API_KEY:",
     "response_snippet": "{\"addresses\":[{\"id\":\"adr_...\",\"object\":\"Address\",\"created_at\":\"2024-01-01T00:00:00Z\",\"name\":\"...\",\"street1\":\"...\",\"city\":\"...\",\"state\":\"...\",\"zip\":\"...\",\"country\":\"US\",\"verifications\":{}}],\"has_more\":false}"
@@ -93,6 +93,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

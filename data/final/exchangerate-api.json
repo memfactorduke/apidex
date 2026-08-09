@@ -4,7 +4,7 @@
   "name": "ExchangeRate-API",
   "category": "finance",
   "tagline": "Currency exchange rates API with free and paid plans for 160+ currencies.",
-  "description": "ExchangeRate-API provides real-time and historical foreign exchange rates for 160+ currencies. Developers authenticate with an API key and can fetch latest rates, pair conversion, and supported currency lists via REST endpoints. Free tier available with daily request limits; paid plans increase volume and unlock additional features.",
+  "description": "ExchangeRate-API provides foreign exchange rates for 160+ currencies. Developers authenticate with an API key and can fetch latest rates, pair conversion, and supported currency lists via REST endpoints. The keyed Free plan allows 1,500 requests per month and updates rates once per day; paid plans increase volume and unlock additional features.",
   "base_url": "https://v6.exchangerate-api.com/v6",
   "docs_url": "https://www.exchangerate-api.com/docs",
   "signup_url": "https://app.exchangerate-api.com/sign-up",
@@ -19,7 +19,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "1,500 requests/month free (Open Access)",
+    "free_tier_limits": "Keyed Free API plan: 1,500 requests/month.",
     "paid_plans": "Paid plans available for higher volume and historical data"
   },
   "rate_limits": "not published",
@@ -91,6 +91,16 @@
     "corrected": [
       "free_tier_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

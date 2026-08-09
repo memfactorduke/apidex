@@ -4,9 +4,9 @@
   "name": "NOAA Climate Data Online",
   "category": "government-open-data",
   "tagline": "Historical weather and climate observations from NOAA's National Centers for Environmental Information",
-  "description": "NOAA Climate Data Online (CDO) provides web services for accessing historical weather and climate data from the National Centers for Environmental Information (NCEI). Developers can query stations, datasets, data types, locations, and daily/monthly/annual observations worldwide via a token-authenticated REST API returning JSON or CSV.",
-  "base_url": "https://www.ncdc.noaa.gov/cdo-web/api/v2",
-  "docs_url": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+  "description": "NOAA Climate Data Online (CDO) provides web services for accessing historical weather and climate data from the National Centers for Environmental Information (NCEI). Developers can query stations, datasets, data types, locations, and daily/monthly/annual observations worldwide via a token-authenticated REST API returning JSON.",
+  "base_url": "https://www.ncei.noaa.gov/cdo-web/api/v2",
+  "docs_url": "https://www.ncei.noaa.gov/cdo-web/webservices/v2",
   "signup_url": "https://www.ncdc.noaa.gov/cdo-web/token",
   "auth": {
     "type": "apiKey",
@@ -25,7 +25,7 @@
   },
   "rate_limits": "5 requests/second; 10,000 requests/day per token",
   "example": {
-    "request": "curl -H \"token: YOUR_API_KEY\" \"https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets\"",
+    "request": "curl -H \"token: YOUR_API_KEY\" \"https://www.ncei.noaa.gov/cdo-web/api/v2/datasets\"",
     "response_snippet": "{\"metadata\":{\"resultset\":{\"offset\":1,\"count\":11,\"limit\":25}},\"results\":[{\"uid\":\"gov.noaa.ncdc:C00861\",\"mindate\":\"1763-01-01\",\"maxdate\":\"2024-12-31\",\"name\":\"Daily Summaries\",\"datacoverage\":1,\"id\":\"GHCND\"}]}"
   },
   "use_cases": [
@@ -93,6 +93,25 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

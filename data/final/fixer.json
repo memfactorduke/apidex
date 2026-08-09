@@ -20,12 +20,12 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "100 requests/month free; EUR base currency only; conversion, time-series, and fluctuation endpoints require paid plans",
-    "paid_plans": "Paid plans from ~$10\u201380+/month with higher monthly quotas, USD base, HTTPS, time-series, conversion, and more currencies"
+    "paid_plans": "Basic $14.99/mo (10k calls), Professional $59.99/mo (100k), Professional Plus $99.99/mo (500k), Enterprise custom; yearly discounts available. SSL/HTTPS is on Free and all paid plans\u2014not paid-only."
   },
   "rate_limits": "Monthly request quotas by plan; free ~100/month. Per-second/minute limits not prominently published",
   "example": {
     "request": "curl \"https://data.fixer.io/api/latest?access_key=YOUR_API_KEY\"",
-    "response_snippet": "{\"success\":true,\"timestamp\":1519296206,\"base\":\"EUR\",\"date\":\"2024-01-15\",\"rates\":{\"USD\":1.085,\"GBP\":0.854,\"JPY\":157.2}}"
+    "response_snippet": "{\"success\":true,\"timestamp\":1705320000,\"base\":\"EUR\",\"date\":\"2024-01-15\",\"rates\":{\"USD\":1.085,\"GBP\":0.854,\"JPY\":157.2}}"
   },
   "use_cases": [
     "get latest FX rates for major currencies",
@@ -96,6 +96,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -1,0 +1,17 @@
+{
+  "id": "invoice-ninja",
+  "base_url": "https://invoicing.co/api/v1",
+  "docs_url": "https://api-docs.invoicing.co/",
+  "auth_type": "apiKey",
+  "auth_details": "API token via X-API-TOKEN header; X-API-SECRET and X-Requested-With often required. Token from Settings \u2192 Account Management \u2192 API Tokens. Company context via X-API-COMPANY-KEY or token binding.",
+  "free_tier": true,
+  "free_tier_limits": "Hosted Free: 1 user, limited features (no client portal branding etc.); self-host free. API rate limits not published as free-tier request quotas.",
+  "paid_plans": "Pro and Enterprise hosted plans; see invoiceninja.com/pricing for current tiers.",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -X GET \"https://invoicing.co/api/v1/clients\" -H \"X-API-TOKEN: YOUR_API_KEY\" -H \"X-Requested-With: XMLHttpRequest\" -H \"Content-Type: application/json\"",
+  "example_response_snippet": "{\"data\":[{\"id\":\"AbC12d\",\"name\":\"Acme Corp\",\"balance\":1200.5,\"paid_to_date\":500,\"currency_id\":\"1\",\"created_at\":1700000000}],\"meta\":{\"pagination\":{\"total\":1,\"count\":1,\"per_page\":20,\"current_page\":1,\"total_pages\":1}}}",
+  "description": "Invoice Ninja provides a REST API for self-hosted and hosted invoicing: create clients and invoices, track payments and expenses, manage products and recurring billing. Authentication uses an API token (X-API-TOKEN) plus company context headers. Hosted plans start free; self-host is free under open source.",
+  "status": "operational",
+  "resolution_notes": "Pending live verification of auth, pricing, and license disputes."
+}

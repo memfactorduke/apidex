@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "600 req/day free (Starter plan)",
+    "free_tier_limits": "1,000 requests/day free (Developer plan)",
     "paid_plans": "Paid plans available with higher limits; see pricing page for current tiers"
   },
-  "rate_limits": "600 requests/day on free tier; higher on paid plans",
+  "rate_limits": "1,000 requests/day on free tier; higher monthly quotas on paid plans",
   "example": {
     "request": "curl \"https://api.currentsapi.services/v1/latest-news?language=en&apiKey=YOUR_API_KEY\"",
     "response_snippet": "{\"status\":\"ok\",\"news\":[{\"id\":\"...\",\"title\":\"...\",\"description\":\"...\",\"url\":\"...\",\"author\":\"...\",\"image\":\"...\",\"language\":\"en\",\"category\":[\"general\"],\"published\":\"2024-01-01 12:00:00 +0000\"}]}"
@@ -94,6 +94,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

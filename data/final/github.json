@@ -22,7 +22,7 @@
     "free_tier_limits": "API access included with free GitHub accounts; primary cost is rate limits (see rate_limits), not per-request fees",
     "paid_plans": "Paid GitHub plans (Pro, Team, Enterprise) raise some product limits; API itself has no separate per-call pricing on github.com"
   },
-  "rate_limits": "Authenticated (PAT/OAuth/App user-to-server): 5,000 req/hour primary; GitHub App installation: up to 15,000 req/hour (scales with seats for Enterprise). Unauthenticated: 60 req/hour per IP. Secondary limits and GraphQL point costs also apply.",
+  "rate_limits": "Authenticated (PAT/OAuth/App user-to-server): 5,000 req/hour primary (15,000 if via GHEC-owned app on your behalf). GitHub App installation: 5,000 req/hour minimum; non-Enterprise Cloud installations scale with repos/users (max 12,500/hour); Enterprise Cloud org installations: 15,000 req/hour. Unauthenticated: 60 req/hour per IP. Secondary limits and GraphQL point costs also apply.",
   "example": {
     "request": "curl -s -H \"Accept: application/vnd.github+json\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"X-GitHub-Api-Version: 2022-11-28\" https://api.github.com/repos/octocat/Hello-World",
     "response_snippet": "{\"id\":1296269,\"node_id\":\"MDEwOlJlcG9zaXRvcnkxMjk2MjY5\",\"name\":\"Hello-World\",\"full_name\":\"octocat/Hello-World\",\"private\":false,\"owner\":{\"login\":\"octocat\",\"id\":1,\"type\":\"User\"},\"html_url\":\"https://github.com/octocat/Hello-World\",\"description\":\"My first repository on GitHub!\",\"fork\":false,\"stargazers_count\":2500,\"watchers_count\":2500,\"language\":null,\"default_branch\":\"master\"}"
@@ -99,6 +99,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

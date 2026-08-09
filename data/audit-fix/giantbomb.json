@@ -1,0 +1,17 @@
+{
+  "id": "giantbomb",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": false,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Giant Bomb historically offered a free REST encyclopedia API (games, platforms, characters, companies, franchises, and related metadata). After independence from Fandom it rebuilt its stack from scratch; the official API page states wiki data was retained but access mechanisms are not currently available and will change. Games/characters/companies and related APIs are listed as not available while the wiki is rebuilt.",
+  "status": "defunct",
+  "resolution_notes": "status: auditor right \u2014 official https://giantbomb.com/api lists Games/Characters/Companies/etc. APIs as not available post-Fandom rebuild (\u2192defunct). base_url: auditor right \u2014 /api is a notice page, not a live REST root. docs_url: auditor right \u2014 /api/documentation is not usable docs; same notice. auth: auditor right \u2014 prior api_key/headers not currently usable; no current auth docs. free_tier: auditor right \u2014 no accessible free tier while endpoints offline (false). example.request: auditor right \u2014 /api/game unavailable. description: auditor right \u2014 present-tense \u201cprovides\u201d false; rewrote as historical + rebuild. Evidence: https://giantbomb.com/api"
+}

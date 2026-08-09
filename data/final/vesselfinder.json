@@ -10,7 +10,7 @@
   "signup_url": null,
   "auth": {
     "type": "apiKey",
-    "details": "API key authentication; exact header or query parameter not fully verified without account access"
+    "details": "API key supplied through the required userkey query parameter."
   },
   "https": true,
   "cors": "unknown",
@@ -20,12 +20,12 @@
   "pricing": {
     "free_tier": false,
     "free_tier_limits": "unknown",
-    "paid_plans": null
+    "paid_plans": "Credit packs: 10,000 credits EUR 330; 20,000 EUR 625; 50,000 EUR 1,470 (12-month validity, excl. VAT). VesselsList and LiveData use separately quoted fixed subscriptions."
   },
   "rate_limits": "not published",
   "example": {
     "request": "curl \"https://api.vesselfinder.com/vesselslist?userkey=YOUR_API_KEY&format=json\"",
-    "response_snippet": "[{\"AIS\":{\"MMSI\":123456789,\"NAME\":\"EXAMPLE SHIP\",\"IMO\":0,\"CALLSIGN\":\"\",\"TIMESTAMP\":\"2026-01-01T12:00:00Z\",\"LATITUDE\":0.0,\"LONGITUDE\":0.0,\"COURSE\":0.0,\"SPEED\":0.0,\"HEADING\":0,\"NAVSTAT\":0,\"TYPE\":70,\"A\":0,\"B\":0,\"C\":0,\"D\":0,\"DRAUGHT\":0.0,\"DESTINATION\":\"\",\"ETA_AIS\":\"00-00 00:00\"}}]"
+    "response_snippet": "[{\"AIS\":{\"MMSI\":123456789,\"NAME\":\"EXAMPLE SHIP\",\"IMO\":0,\"CALLSIGN\":\"\",\"TIMESTAMP\":\"2017-08-11 11:17:37 UTC\",\"LATITUDE\":0.0,\"LONGITUDE\":0.0,\"COURSE\":0.0,\"SPEED\":0.0,\"HEADING\":0,\"NAVSTAT\":0,\"TYPE\":70,\"A\":0,\"B\":0,\"C\":0,\"D\":0,\"DRAUGHT\":0.0,\"DESTINATION\":\"\",\"ETA_AIS\":\"00-00 00:00\"}}]"
   },
   "use_cases": [
     "get live AIS position for a vessel by MMSI",
@@ -90,6 +90,17 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "paid_plans",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

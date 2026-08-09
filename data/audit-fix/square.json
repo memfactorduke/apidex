@@ -1,0 +1,17 @@
+{
+  "id": "square",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "Bearer access token in Authorization header (OAuth 2.0 or personal access token). Sandbox uses sandbox tokens against connect.squareupsandbox.com. Square-Version header is recommended to pin the API version; if omitted, the application's configured default version is used.",
+  "free_tier": null,
+  "free_tier_limits": "API and SDK access is free; standard US online payment processing is currently 2.9% + 30\u00a2 per transaction (other methods, countries, and volume agreements differ); no free transaction-fee tier for card processing",
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth.details: Auditor correct. Official docs state Square-Version is optional and overrides the app's default API version when set (https://developer.squareup.com/docs/build-basics/versioning-overview). free_tier_limits: Auditor correct on US online rate. Square Pricing lists online/eCommerce API card processing at 2.9% + 30\u00a2 (not ~2.6% + 10\u00a2) (https://squareup.com/us/en/pricing, https://squareup.com/us/en/payments/online-card-payment-processing)."
+}

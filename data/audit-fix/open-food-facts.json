@@ -1,0 +1,17 @@
+{
+  "id": "open-food-facts",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "15 req/min/IP for product reads (GET /api/v*/product); 10 req/min/IP for search (GET /api/v*/search or /cgi/search.pl). Custom User-Agent required. Global abuse limits may return HTTP 503. Bulk use: download CSV/JSONL exports or host a local instance.",
+  "cors": null,
+  "example_request": "curl -s \"https://world.openfoodfacts.org/api/v3.6/product/3017620422003\" -H \"User-Agent: YourApp/1.0 (contact@example.com)\"",
+  "example_response_snippet": "{\"code\":\"3017620422003\",\"status\":\"success\",\"product\":{\"code\":\"3017620422003\",\"product_name\":\"Nutella\",\"brands\":\"Ferrero\",\"nutriscore_grade\":\"e\",\"ingredients_text\":\"...\",\"nutriments\":{\"energy-kcal_100g\":539}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ORIGINAL stands. Official docs list Production as https://world.openfoodfacts.org (API Deployments); versioned paths like /api/v3.6/product/... hang off that origin. Auditor confuses origin with versioned path \u2014 https://openfoodfacts.github.io/openfoodfacts-server/api/. rate_limits: AUDITOR right. Docs: 15 req/min/IP product reads, 10 req/min/IP search; no ~100/min or facet ~2/min; bulk via CSV/JSONL. Same URL. example.request: AUDITOR right. v3 (v3.6) is Current/recommended; v2 Deprecated. Staging example uses /api/v3.6/product/{barcode}. Same URL. Response snippet updated toward v3 status:\"success\" shape; field names may still match product payload."
+}

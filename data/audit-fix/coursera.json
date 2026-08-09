@@ -1,0 +1,17 @@
+{
+  "id": "coursera",
+  "base_url": "https://api.coursera.com/ent/api",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://api.coursera.com/ent/api/businesses.v1/YOUR_ORG_ID/programs\"",
+  "example_response_snippet": "{\"elements\":[{\"id\":\"programId\",\"name\":\"Data Science Track\",\"tagline\":\"Learn data science\",\"url\":\"https://www.coursera.org/programs/data-science\"}],\"paging\":{},\"linked\":{}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: AUDITOR correct. Official Coursera for Business API docs (https://dev.coursera.com and enterprise API reference) use host api.coursera.com with path prefix /ent/api, not api.coursera.org. example: AUDITOR correct. Request must use https://api.coursera.com/ent/api/...; BusinessProgram schema documents id/name/tagline/url (not slug). Evidence: Coursera developer portal and enterprise API docs at https://dev.coursera.com/get-started and related /ent/api reference paths."
+}

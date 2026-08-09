@@ -4,9 +4,9 @@
   "name": "SpaceX API",
   "category": "science-space",
   "tagline": "Community-maintained SpaceX launch, rocket, and vehicle data",
-  "description": "string or null",
-  "base_url": "string or null",
-  "docs_url": "string or null",
+  "description": "Unofficial community r/SpaceX REST API (unaffiliated with SpaceX). Source repo archived; hosted API still operational.",
+  "base_url": "https://api.spacexdata.com/v4",
+  "docs_url": "https://github.com/r-spacex/SpaceX-API/tree/master/docs",
   "signup_url": null,
   "auth": {
     "type": "none",
@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "string or null",
+    "free_tier_limits": "No fee or authentication required; no SLA or guaranteed quota published.",
     "paid_plans": null
   },
-  "rate_limits": "string or null",
+  "rate_limits": "not published",
   "example": {
-    "request": "string or null",
-    "response_snippet": "string or null"
+    "request": "curl \"https://api.spacexdata.com/v5/launches/latest\"",
+    "response_snippet": "{\"id\":\"...\",\"name\":\"...\",\"date_utc\":\"...\",\"flight_number\":...}"
   },
   "use_cases": [
     "get latest SpaceX launch details",
@@ -99,6 +99,25 @@
       "description",
       "status"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

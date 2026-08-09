@@ -1,0 +1,17 @@
+{
+  "id": "kitsu",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "OAuth2 password grant at POST /api/oauth/token (refresh_token supported); then Authorization: Bearer. Client-credentials and self-service app registration are not implemented (docs supply a shared client_id). Many public catalog GETs work unauthenticated.",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s 'https://kitsu.io/api/edge/anime?filter%5Btext%5D=cowboy%20bebop' -H 'Accept: application/vnd.api+json'",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: original stands. Official docs still list https://kitsu.io/api/edge (https://kitsu.docs.apiary.io/, https://hummingbird-me.github.io/api-docs/); live GET to kitsu.io/api/edge returns 200 with no forced redirect. kitsu.app also serves the API, but docs have not moved the base path. auth_details: auditor right. Docs document password + refresh_token only; App Registration explicitly \u201cnot yet been implemented\u201d; client credentials noted not implemented (https://hummingbird-me.github.io/api-docs/). example_request: auditor right. curl without --globoff fails with \u201cbad range in URL\u201d on filter[text]; percent-encode brackets (%5B/%5D) as docs note (same URL)."
+}

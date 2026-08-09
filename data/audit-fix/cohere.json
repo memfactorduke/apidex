@@ -1,0 +1,17 @@
+{
+  "id": "cohere",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "API key via Authorization: Bearer YOUR_API_KEY; self-serve from dashboard",
+  "free_tier": null,
+  "free_tier_limits": "Trial key: 1,000 API calls/month; production usage is metered and model-specific (not a free production tier).",
+  "paid_plans": null,
+  "rate_limits": "Published by key type and endpoint (docs.cohere.com/docs/rate-limits): Chat trial ~20 RPM, production typically ~500 RPM for applicable models; Embed ~2,000 inputs/minute; Rerank trial ~10 RPM, production ~1,000 RPM. Some newer models require contacting sales; limits are model-specific.",
+  "cors": null,
+  "example_request": "curl https://api.cohere.com/v2/chat -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"command-a-03-2025\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+  "example_response_snippet": null,
+  "description": "Cohere provides a REST API for text generation, chat, embeddings, and reranking using its Command and Embed model families. Developers authenticate with an API key and call production endpoints for RAG, semantic search, and generative applications. (The v1 Classify endpoint is deprecated.)",
+  "status": null,
+  "resolution_notes": "auth.details: AUDITOR RIGHT \u2014 Bearer only in docs (https://docs.cohere.com/docs/rate-limits auth patterns; https://docs.cohere.com/reference/chat). X-Api-Key not documented. free_tier_limits: AUDITOR RIGHT \u2014 Trial=1k calls/mo free; production metered (https://docs.cohere.com/docs/rate-limits; https://cohere.com/pricing). rate_limits: AUDITOR RIGHT \u2014 Chat trial 20/prod ~500 RPM; Embed 2k inputs/min not TPM; Rerank 10 trial/1k prod (https://docs.cohere.com/docs/rate-limits). example.request: AUDITOR RIGHT on deprecation of command-r-plus (https://docs.cohere.com/docs/deprecations); used command-a-03-2025 as current Command A default (https://docs.cohere.com/docs/models). description: AUDITOR RIGHT \u2014 Classify deprecated (https://docs.cohere.com/docs/deprecations); removed from primary list."
+}

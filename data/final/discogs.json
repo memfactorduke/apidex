@@ -19,7 +19,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free for non-commercial use; commercial use requires approval. Rate limited (see rate_limits).",
+    "free_tier_limits": "API is free with no published paid tier; commercial use is generally permitted under the API Terms of Use, though Discogs may restrict particular commercial uses at its discretion. Rate limited (see rate_limits).",
     "paid_plans": null
   },
   "rate_limits": "Authenticated: 60 requests/minute; unauthenticated: 25 requests/minute (as published in docs)",
@@ -92,6 +92,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

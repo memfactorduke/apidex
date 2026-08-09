@@ -10,7 +10,7 @@
   "signup_url": "https://www.bingmapsportal.com/",
   "auth": {
     "type": "apiKey",
-    "details": "Bing Maps key via query parameter key=YOUR_API_KEY (or header options in some SDKs); create keys at Bing Maps Dev Center"
+    "details": "Bing Maps key (query param key=) for eligible paid Enterprise accounts only; free Basic keys no longer work. New projects should use Azure Maps auth (Azure subscription + Azure Maps account keys)."
   },
   "https": true,
   "cors": "unknown",
@@ -19,9 +19,9 @@
     "xml"
   ],
   "pricing": {
-    "free_tier": true,
-    "free_tier_limits": "Basic keys: 125,000 billable transactions/year for public websites; 125,000/year or 50,000 in any 24 hours for Windows/mobile apps (verify current portal/terms)",
-    "paid_plans": "Enterprise/licensed plans via Microsoft for higher volume"
+    "free_tier": false,
+    "free_tier_limits": "Free Basic accounts and keys retired after 2025-06-30; no public free Bing Maps for Enterprise tier for new use.",
+    "paid_plans": "Paid Bing Maps for Enterprise licenses only, usable until 2028-06-30 final retirement; Microsoft directs migrations to Azure Maps."
   },
   "rate_limits": "not published",
   "example": {
@@ -95,6 +95,18 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -21,10 +21,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free with rate limits (exact limits not clearly published)",
+    "free_tier_limits": "Free for non-commercial use only; 200 requests per resource per hour, with additional velocity detection",
     "paid_plans": null
   },
-  "rate_limits": "Rate limited; exact limits not clearly published in public docs",
+  "rate_limits": "200 requests per resource per hour, plus unspecified velocity detection that may temporarily block aggressive request bursts",
   "example": {
     "request": "curl \"https://comicvine.gamespot.com/api/character/4005-1699/?api_key=YOUR_API_KEY&format=json\"",
     "response_snippet": "{\"error\":\"OK\",\"limit\":1,\"offset\":0,\"number_of_page_results\":1,\"number_of_total_results\":1,\"status_code\":1,\"results\":{\"id\":1699,\"name\":\"Batman\",\"real_name\":\"Bruce Wayne\",\"...\"}}"
@@ -95,6 +95,16 @@
     "corrected": [],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

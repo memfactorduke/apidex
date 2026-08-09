@@ -1,0 +1,17 @@
+{
+  "id": "sourcegraph",
+  "base_url": "https://sourcegraph.com/api",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": false,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: auditor right. Official API overview (https://sourcegraph.com/docs/api) and Feb 2026 changelog (https://sourcegraph.com/changelog/sourcegraph-api) classify GraphQL at /.api/graphql as a debug/internal surface with no compatibility guarantees; supported external API is versioned under /api/ (OpenAPI at /api-reference). free_tier: auditor right. Pricing (https://sourcegraph.com/pricing) lists Full MCP/API/CLI and GraphQL+REST under Enterprise from $16K\u2014not a general free API tier. Public-code stream search on sourcegraph.com can still be unauthenticated (stream docs), but that is narrower than a free platform API tier."
+}

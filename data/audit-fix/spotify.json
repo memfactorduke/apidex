@@ -1,0 +1,17 @@
+{
+  "id": "spotify",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "No separate per-call API fee. Free app registration with Development Mode defaults: app owner must have an active Spotify Premium subscription; max 5 allowlisted authenticated users; subject to per-developer quota and 429/Retry-After rate limits. Extended quota mode is available via application (often organization-oriented); commercial use per Spotify Developer Terms.",
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl\"",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: auditor correct. Official Development Mode docs (https://developer.spotify.com/documentation/web-api/concepts/quota-modes) state Development Mode apps are limited to 5 allowlisted users and the app owner must have Spotify Premium; extended quota is a separate application path with additional terms. No fixed public per-call price. example_request: auditor correct. Spotify Web API uses OAuth 2.0 Bearer access tokens, not static API keys (https://developer.spotify.com/documentation/web-api/concepts/authorization; Authorization Code/Client Credentials flows). Placeholder YOUR_API_KEY was misleading; YOUR_ACCESS_TOKEN matches docs."
+}

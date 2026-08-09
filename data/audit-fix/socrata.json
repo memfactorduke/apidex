@@ -1,0 +1,17 @@
+{
+  "id": "socrata",
+  "base_url": "https://{portal-domain}/resource",
+  "docs_url": null,
+  "auth_type": "none",
+  "auth_details": "Optional X-App-Token (header preferred; $$app_token query) for higher throttling; OAuth/credentials for protected/write ops. Public reads need no auth.",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl 'https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=1'",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: auditor right \u2014 SODA roots are per-portal (dev.socrata.com docs; Chicago is one host). auth: auditor right \u2014 public reads need no key; app token optional for throttling (X-App-Token / $$app_token); OAuth/credentials for protected/write (dev.socrata.com/docs/app-tokens.html, authentication). example.request: auditor right \u2014 double-quoted $limit expands in shell; use single quotes (SoQL $limit still valid)."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "marinetraffic",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Contract-specific successful-call allowance; hard technical maximum of 100 total requests/minute per API key.",
+  "cors": null,
+  "example_request": "curl \"https://services.marinetraffic.com/api/exportvessel/YOUR_API_KEY?v=6&timespan=10&mmsi=241486000&protocol=jsono\"",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "example.request: auditor correct. Official Single Vessel Positions is GET /exportvessel/{api_key} with query params; v required, latest version 6 (not path v:5 colon form). Evidence: https://servicedocs.marinetraffic.com/tag/AIS-API/ (operation exportvessel). rate_limits: auditor correct. Docs: contract-specific successful-call frequency; each key also hard-capped at 100 total (success+fail) requests/min. Evidence: same URL, Single Vessel Positions Notes. Original \u201cnot published\u201d wrong. API still operational (not defunct)."
+}

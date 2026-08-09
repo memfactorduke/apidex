@@ -10,7 +10,7 @@
   "signup_url": "https://radar.com/signup",
   "auth": {
     "type": "apiKey",
-    "details": "Publishable and secret API keys sent via Authorization: Bearer or Authorization: prj_live_pk_... header patterns; secret keys for server-side only."
+    "details": "Publishable or secret API key sent directly as Authorization: prj_test_pk_..., prj_live_pk_..., prj_test_sk_..., or prj_live_sk_...; secret keys are server-side only."
   },
   "https": true,
   "cors": "unknown",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "Up to 100,000 API requests per month; other product-specific limits may also apply.",
+    "paid_plans": "Paid Enterprise/custom pricing available."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Endpoint-specific defaults commonly 1\u2013150 requests/sec (e.g. geocode often 10 rps; track 1 rps per device); contact CSM to increase.",
   "example": {
     "request": "curl \"https://api.radar.io/v1/geocode/forward?query=20+W+34th+St,+New+York,+NY\" -H \"Authorization: prj_test_pk_YOUR_API_KEY\"",
     "response_snippet": "{\"meta\":{\"code\":200},\"addresses\":[{\"latitude\":40.7484,\"longitude\":-73.9857,\"formattedAddress\":\"20 W 34th St, New York, NY\"}]}"
@@ -92,6 +92,18 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

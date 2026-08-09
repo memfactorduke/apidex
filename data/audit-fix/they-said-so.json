@@ -1,0 +1,17 @@
+{
+  "id": "they-said-so",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "Public endpoints: 10 calls/hour without authentication; higher limits require a paid plan.",
+  "paid_plans": "Premium $9.99/mo (2,500 calls/day), Ultra $24.99/mo (8,000/day), Enterprise $74.99/mo (unlimited). Confirm on pricing page before publish.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": "{\"success\":{\"total\":1},\"contents\":{\"quotes\":[{\"quote\":\"...\",\"author\":\"...\",\"tags\":[\"inspire\"],\"date\":\"...\",\"id\":\"...\"}]},\"copyright\":{\"year\":2026,\"url\":\"https://theysaidso.com\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: auditor right \u2014 docs/pricing show 10/hr public unauth; higher limits via paid plans, no documented free key that raises limits (https://theysaidso.com/api/ https://theysaidso.com/api/pricing). paid_plans: auditor right \u2014 Premium $9.99/mo 2.5k/day, Ultra $24.99/mo 8k/day, Enterprise $74.99/mo unlimited (https://theysaidso.com/api/pricing). response_snippet: auditor right \u2014 copyright is top-level {year,url}, not contents string (https://theysaidso.com/api/ https://quotes.rest/qod.json)."
+}

@@ -5,12 +5,12 @@
   "category": "data-analytics",
   "tagline": "Open data platform for government and city datasets via SODA API",
   "description": "Socrata (now part of Tyler Technologies) provides SODA (Socrata Open Data API) for querying city, state, and government open datasets. Developers access tabular data via REST endpoints with SoQL filtering, used widely for municipal open data portals.",
-  "base_url": "https://data.cityofchicago.org/resource",
+  "base_url": "https://{portal-domain}/resource",
   "docs_url": "https://dev.socrata.com/",
   "signup_url": null,
   "auth": {
-    "type": "apiKey",
-    "details": "App token via X-App-Token header or app_token query param; optional for low volume"
+    "type": "none",
+    "details": "Optional X-App-Token (header preferred; $$app_token query) for higher throttling; OAuth/credentials for protected/write ops. Public reads need no auth."
   },
   "https": true,
   "cors": "unknown",
@@ -26,7 +26,7 @@
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl \"https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=1\"",
+    "request": "curl 'https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=1'",
     "response_snippet": "[{...}]"
   },
   "use_cases": [
@@ -99,6 +99,18 @@
       "description",
       "status"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "auth_type",
+        "auth_details",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

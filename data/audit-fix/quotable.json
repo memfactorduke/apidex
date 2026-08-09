@@ -1,0 +1,17 @@
+{
+  "id": "quotable",
+  "base_url": "https://api.quotable.io",
+  "docs_url": "https://github.com/lukePeavey/quotable",
+  "auth_type": "none",
+  "auth_details": "No authentication required. Public endpoints are open; no API key or signup.",
+  "free_tier": true,
+  "free_tier_limits": "Free/open-source; hosted service documents 180 requests per minute per IP, but is currently unavailable.",
+  "paid_plans": null,
+  "rate_limits": "180 requests per minute per IP when the hosted service is available.",
+  "cors": "unknown",
+  "example_request": "curl -s \"https://api.quotable.io/random\"",
+  "example_response_snippet": "{\"_id\":\"\u2026\",\"content\":\"\u2026\",\"author\":\"\u2026\",\"tags\":[\"\u2026\"],\"authorSlug\":\"\u2026\",\"length\":42,\"dateAdded\":\"\u2026\",\"dateModified\":\"\u2026\"}",
+  "description": "Quotable is an open-source REST API for random and filtered inspirational quotes. Developers can fetch random quotes, list authors, filter by tags, and search quote text without authentication. It is commonly used for demos, daily quote features, and lightweight content enrichment.",
+  "status": "defunct",
+  "resolution_notes": "status: auditor right \u2014 live curl to https://api.quotable.io/random fails (SSL cert expired, http_code=000); long-running outage reports e.g. https://github.com/lukePeavey/quotable/issues/253 and community notes of service down. base_url: partial \u2014 docs still list https://api.quotable.io as the official host (https://github.com/lukePeavey/quotable README API Servers) and DNS resolves, but the hosted endpoint is not usable; schema has no alternate field so base_url corrected value remains the documented host with status defunct. rate_limits: auditor right \u2014 README Rate Limit section states 180 requests per minute per IP (https://github.com/lukePeavey/quotable#rate-limit). free_tier_limits: auditor right \u2014 same 180/min doc contradicts \u201cno published quota\u201d; corrected to free/open-source with documented 180/min, noting hosted unavailability."
+}

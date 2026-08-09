@@ -20,9 +20,9 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "Free plan includes limited monthly searches/verifications (check pricing for current credits); API access on paid plans with higher limits.",
-    "paid_plans": "Starter, Growth, Business, and Enterprise tiers with monthly credit allowances; see hunter.io/pricing."
+    "paid_plans": "Starter, Growth, Scale, and Enterprise for the all-in-one product; separate annual Data Platform plans for API/bulk credit usage; see hunter.io/pricing."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Endpoint-specific (per API key or IP): Domain Search and Email Finder 15 req/s and 500/min; Email Verifier 10 req/s and 300/min; Discover 5 req/s (see endpoint docs for others).",
   "example": {
     "request": "curl \"https://api.hunter.io/v2/domain-search?domain=stripe.com&api_key=YOUR_API_KEY\"",
     "response_snippet": "{\"data\":{\"domain\":\"stripe.com\",\"disposable\":false,\"webmail\":false,\"accept_all\":true,\"pattern\":\"{first}.{last}\",\"organization\":\"Stripe\",\"emails\":[{\"value\":\"...@stripe.com\",\"type\":\"personal\",\"confidence\":92}]},\"meta\":{\"results\":50,\"limit\":10}}"
@@ -93,6 +93,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

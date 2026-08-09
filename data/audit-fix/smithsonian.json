@@ -1,0 +1,17 @@
+{
+  "id": "smithsonian",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "API key required; register at https://api.data.gov/signup/ and pass it as api_key (or the supported X-Api-Key header).",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "api.data.gov default: 1,000 requests/hour per API key (agency override possible). DEMO_KEY: 30 req/IP/hour and 50/IP/day. Check X-RateLimit-* response headers for effective limits.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth.details: auditor correct. SI Open Access docs say register for a key via the public API hosted on api.data.gov (https://www.si.edu/openaccess/devtools; https://www.si.edu/openaccess/faq); SI\u2019s own client README points to https://api.data.gov/signup/ (https://github.com/Smithsonian/smithsonian-openaccess). Pass via api_key query param or X-Api-Key (https://api.data.gov/docs/developer-manual/). rate_limits: auditor correct. SI does not publish a separate override; api.data.gov defaults apply: 1,000 req/hour per key; DEMO_KEY 30/IP/hour and 50/IP/day; use X-RateLimit-* headers (https://api.data.gov/docs/developer-manual/)."
+}

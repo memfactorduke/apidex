@@ -19,8 +19,8 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Basic (free): 10,000 credits/month (~333/day), 30 requests/minute; no monthly fee. Confirm on pricing page if tiers change.",
-    "paid_plans": "Startup, Standard, Professional, Enterprise tiers with higher credits and call rates"
+    "free_tier_limits": "Basic (free): 15,000 call credits/month, 50 requests/minute; no monthly fee. Confirm on pricing page if tiers change.",
+    "paid_plans": "Builder, Startup, Growth, Professional, Enterprise tiers with higher credits and call rates"
   },
   "rate_limits": "Plan-based monthly credits and per-minute request limits; exact numbers vary by tier \u2014 see pricing/docs",
   "example": {
@@ -94,6 +94,16 @@
     "corrected": [
       "free_tier_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -5,12 +5,12 @@
   "category": "sports",
   "tagline": "Official-grade esports data and live telemetry for major titles and broadcasters",
   "description": "GRID provides esports data and live telemetry APIs used by publishers, broadcasters, and developers for match stats, series schedules, player performance, and real-time game events across major competitive titles.",
-  "base_url": "https://api.grid.gg",
+  "base_url": "https://api-op.grid.gg",
   "docs_url": "https://docs.grid.gg",
   "signup_url": null,
   "auth": {
     "type": "apiKey",
-    "details": "API key authentication (exact header/mechanism to be confirmed from official docs)"
+    "details": "API key via the x-api-key: YOUR_API_KEY header (HTTP/GraphQL). WebSocket uses ?key= query param."
   },
   "https": true,
   "cors": "unknown",
@@ -18,14 +18,14 @@
     "json"
   ],
   "pricing": {
-    "free_tier": false,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier": true,
+    "free_tier_limits": "Application-based free Open Access for pre-revenue startups, students, independent developers, researchers, and fans; limited API calls; CS2/Dota 2 historical (not full commercial live feeds).",
+    "paid_plans": "Commercial (betting/fantasy/media/other): contact sales for custom quote; no public list prices. Professional team portals free with premium add-ons."
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.grid.gg/\"",
-    "response_snippet": "{}"
+    "request": "curl -X POST \"https://api-op.grid.gg/central-data/graphql\" -H \"Content-Type: application/json\" -H \"x-api-key: YOUR_API_KEY\" -d '{\"query\":\"{ teams(filter: {name: {contains: \\\"Team\\\"}}) { edges { node { id name } } } }\"}'",
+    "response_snippet": "{\"data\":{\"teams\":{\"edges\":[{\"node\":{\"id\":\"...\",\"name\":\"Team Liquid\"}}]}}}"
   },
   "use_cases": [
     "fetch live match telemetry for a tournament series",
@@ -88,6 +88,21 @@
       "docs_url",
       "auth_type"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

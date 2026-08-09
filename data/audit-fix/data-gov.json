@@ -1,0 +1,17 @@
+{
+  "id": "data-gov",
+  "base_url": "https://api.gsa.gov/technology/datagov/v4/",
+  "docs_url": "https://resources.data.gov/catalog-api/",
+  "auth_type": "apiKey",
+  "auth_details": "Requires X-Api-Key header (api.data.gov key). DEMO_KEY allowed for limited exploration.",
+  "free_tier": true,
+  "free_tier_limits": "Personal keys: 1,000 requests/hour; DEMO_KEY: 30 requests/IP/hour and 50 requests/IP/day.",
+  "paid_plans": null,
+  "rate_limits": "Personal key: 1,000 requests/hour; DEMO_KEY: 30 requests/IP/hour and 50 requests/IP/day.",
+  "cors": null,
+  "example_request": "curl -H \"X-Api-Key: DEMO_KEY\" \"https://api.gsa.gov/technology/datagov/v4/search?q=climate&per_page=5\"",
+  "example_response_snippet": "{\"data\":[{\"id\":\"...\",\"type\":\"dataset\",\"attributes\":{\"title\":\"...\",\"description\":\"...\"}}],\"links\":{\"self\":\"...\",\"next\":\"...\"},\"meta\":{\"total\":12345}}",
+  "description": "data.gov Catalog API v4 is the current GSA API for searching open-data catalog metadata across federal, state, local, and tribal sources. The older CKAN API at catalog.data.gov remains available as a read-only legacy interface; new integrations should use v4 with an api.data.gov key.",
+  "status": null,
+  "resolution_notes": "Awaiting live verification of official sources for each disputed field."
+}

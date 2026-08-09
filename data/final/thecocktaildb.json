@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "Free test key \"1\" for development/educational use; production/public app-store use requires Premium (~$10/\u00a310 one-off via PayPal). Free list capped at 100 items; Premium unlocks multi-ingredient filter, popular/latest, full DB listing, image APIs. (Current docs use PayPal Premium, not Patreon.)",
-    "paid_plans": "Patreon-supported premium API key for higher access and premium features."
+    "paid_plans": "Premium API key via one-time PayPal purchase (~$10 lifetime) for production/app-store use and premium features (multi-ingredient filter, popular/latest, full DB listing, image APIs). FAQ still mentions legacy Patreon support + email for a production key."
   },
   "rate_limits": "Official FAQ: no limits / unlimited usage (no numeric req/min published).",
   "example": {
@@ -93,6 +93,15 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

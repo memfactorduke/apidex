@@ -4,8 +4,8 @@
   "name": "Frankfurter",
   "category": "ecommerce-payments",
   "tagline": "Free open currency exchange rates API with no API key required",
-  "description": "Frankfurter is a free, open-source currency exchange rates API backed by European Central Bank data. It provides current and historical foreign exchange rates for major currencies without authentication. Developers can convert amounts, fetch latest rates, and query time-series data for finance apps, pricing tools, and multi-currency ecommerce workflows.",
-  "base_url": "https://api.frankfurter.app",
+  "description": "Frankfurter is a free, open-source currency exchange rates API that aggregates daily foreign exchange data from multiple central banks. It provides current and historical rates for major currencies without authentication. Developers can convert amounts, fetch latest rates, and query time-series data for finance apps, pricing tools, and multi-currency ecommerce workflows.",
+  "base_url": "https://api.frankfurter.dev/v2",
   "docs_url": "https://www.frankfurter.app/docs/",
   "signup_url": null,
   "auth": {
@@ -13,7 +13,7 @@
     "details": "No authentication required. Public endpoints are open; no API key or signup needed."
   },
   "https": true,
-  "cors": "yes",
+  "cors": "unknown",
   "formats": [
     "json"
   ],
@@ -24,7 +24,7 @@
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl -s \"https://api.frankfurter.app/latest?from=USD&to=EUR,GBP\"",
+    "request": "curl -s \"https://api.frankfurter.dev/v2/rates?base=USD&quotes=EUR,GBP\"",
     "response_snippet": "{\"amount\":1.0,\"base\":\"USD\",\"date\":\"2024-01-15\",\"rates\":{\"EUR\":0.91,\"GBP\":0.79}}"
   },
   "use_cases": [
@@ -93,6 +93,25 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

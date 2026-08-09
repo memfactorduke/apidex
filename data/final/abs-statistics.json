@@ -4,8 +4,8 @@
   "name": "Australian Bureau of Statistics API",
   "category": "government-open-data",
   "tagline": "ABS SDMX-JSON open data for Australian statistics and census",
-  "description": "Official Australian Bureau of Statistics (ABS.Stat) web services expose economic, demographic, labour, and census datasets via SDMX-JSON (and related) REST endpoints at api.data.abs.gov.au. Developers query dataflows, structure, and observations without an API key for public open data use cases.",
-  "base_url": "https://api.data.abs.gov.au",
+  "description": "Official Australian Bureau of Statistics (ABS.Stat) web services expose economic, demographic, labour, and census datasets via SDMX-JSON (and related) REST endpoints at data.api.abs.gov.au. Developers query dataflows, structure, and observations without an API key for public open data use cases.",
+  "base_url": "https://data.api.abs.gov.au/rest",
   "docs_url": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis",
   "signup_url": null,
   "auth": {
@@ -26,8 +26,8 @@
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl -s \"https://api.data.abs.gov.au/data/ABS,CPI,1.0.0/1.50.10001.10.Q?startPeriod=2020-Q1&endPeriod=2020-Q4&format=jsondata\"",
-    "response_snippet": "{\"header\":{\"id\":\"...\",\"prepared\":\"...\",\"sender\":{\"id\":\"ABS\"}},\"dataSets\":[{\"action\":\"Information\",\"series\":{\"0:0:0:0:0\":{\"observations\":{\"0\":[116.6],\"1\":[114.4]}}}}],\"structure\":{\"dimensions\":{\"series\":[...],\"observation\":[{\"id\":\"TIME_PERIOD\",\"values\":[{\"id\":\"2020-Q1\"},{\"id\":\"2020-Q2\"}]}]}}"
+    "request": "curl -s \"https://data.api.abs.gov.au/rest/data/CPI_Q/1.50.10001.10.Q?startPeriod=2020-Q1&endPeriod=2020-Q4&format=jsondata\"",
+    "response_snippet": "{\"meta\":{\"schema\":\"https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/data-message/tools/schemas/2.0.0/sdmx-json-data-schema.json\",\"id\":\"...\",\"prepared\":\"...\",\"contentLanguages\":[\"en\"],\"sender\":{\"id\":\"ABS\"}},\"data\":{\"dataSets\":[{\"action\":\"Information\",\"series\":{\"0:0:0:0:0\":{\"observations\":{\"0\":[116.6],\"1\":[114.4]}}}}],\"structures\":[{\"dimensions\":{\"series\":[...],\"observation\":[{\"id\":\"TIME_PERIOD\",\"values\":[{\"id\":\"2020-Q1\"},{\"id\":\"2020-Q2\"}]}]}}]}"
   },
   "use_cases": [
     "fetch CPI or inflation time series by region and period",
@@ -95,6 +95,25 @@
     "corrected": [],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

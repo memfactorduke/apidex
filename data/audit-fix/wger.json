@@ -1,0 +1,17 @@
+{
+  "id": "wger",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Endpoint-specific (per IP anon / per user auth): auth 10/min; registration 5/min; ingredient list 120/min, detail 300/min, bulk sync 600/min; others unthrottled. Over limit \u2192 HTTP 429 + Retry-After.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: auditor correct; original \"not published\" is wrong. Official docs (https://wger.readthedocs.io/en/latest/api/api.html \u00a7 Rate limiting) publish: login/2FA auth 10/min; /api/v2/userprofile/ registration 5/min; ingredient list 120/min; ingredient detail 300/min; ingredient-sync bulk 600/min; exceed \u2192 HTTP 429 with Retry-After; all other endpoints unthrottled."
+}

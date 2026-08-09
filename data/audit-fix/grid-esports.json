@@ -1,0 +1,17 @@
+{
+  "id": "grid-esports",
+  "base_url": "https://api-op.grid.gg",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "API key via the x-api-key: YOUR_API_KEY header (HTTP/GraphQL). WebSocket uses ?key= query param.",
+  "free_tier": true,
+  "free_tier_limits": "Application-based free Open Access for pre-revenue startups, students, independent developers, researchers, and fans; limited API calls; CS2/Dota 2 historical (not full commercial live feeds).",
+  "paid_plans": "Commercial (betting/fantasy/media/other): contact sales for custom quote; no public list prices. Professional team portals free with premium add-ons.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST \"https://api-op.grid.gg/central-data/graphql\" -H \"Content-Type: application/json\" -H \"x-api-key: YOUR_API_KEY\" -d '{\"query\":\"{ teams(filter: {name: {contains: \\\"Team\\\"}}) { edges { node { id name } } } }\"}'",
+  "example_response_snippet": "{\"data\":{\"teams\":{\"edges\":[{\"node\":{\"id\":\"...\",\"name\":\"Team Liquid\"}}]}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: auditor right for public OA\u2014docs use https://api-op.grid.gg paths (central-data/graphql, live-data-feed/series-state/graphql); Full Access still https://api.grid.gg (https://docs.grid.gg/public/documentation/api-documentation/in-game-data/series-state). auth: auditor right\u2014x-api-key not Bearer (https://docs.grid.gg/public/documentation/api-reference/getting-started/authentication). pricing: auditor right\u2014free Open Access for qualifying non-commercial; commercial contact-sales (https://grid.gg/open-access/, https://grid.gg/get-access/). example: auditor right\u2014POST GraphQL + x-api-key (https://blog.grid.gg/consuming-an-esports-graphql-api-using-javascript-2c99aa9b6fb8)."
+}

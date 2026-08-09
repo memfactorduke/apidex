@@ -20,9 +20,9 @@
     "other"
   ],
   "pricing": {
-    "free_tier": true,
-    "free_tier_limits": "unknown \u2014 verify on pricing page",
-    "paid_plans": null
+    "free_tier": false,
+    "free_tier_limits": "Free trial for testing only (not ongoing free tier): 2,500 requests/day, 1 req/s; no credit card required. Inactive trials deleted after 3 months.",
+    "paid_plans": "Subscriptions from $50/mo (X-Small: 10k req/day, 15 req/s); Small $125, Medium $500, Large $1000; Enterprise from $2000/mo. Also one-time plans."
   },
   "rate_limits": "Free trial: 1 req/s. Paid plans: higher by tier (e.g. 15\u201350 req/s) plus daily/monthly caps by plan.",
   "example": {
@@ -93,6 +93,17 @@
     "corrected": [
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -5,12 +5,12 @@
   "category": "geo-maps",
   "tagline": "IP-to-location, timezone, and security intelligence API",
   "description": "ipgeolocation.io provides IP geolocation, timezone, astronomy, and related lookup APIs for developers. It maps IP addresses to geographic, network, and security attributes via a documented REST API with API-key authentication and a free tier.",
-  "base_url": "https://api.ipgeolocation.io",
+  "base_url": "https://api.ipgeolocation.io/v3",
   "docs_url": "https://ipgeolocation.io/documentation",
   "signup_url": "https://app.ipgeolocation.io/signup",
   "auth": {
     "type": "apiKey",
-    "details": "API key via query parameter or header (see official docs)"
+    "details": "Server-side: apiKey query parameter; paid browser integrations may use allowlisted Request Origin (no documented API-key header)"
   },
   "https": true,
   "cors": "unknown",
@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "1,000 requests/day (Free plan); paid plans have higher daily quotas",
+    "free_tier_limits": "1,000 credits/day for life, no credit card, non-commercial use only, no free-plan overages",
     "paid_plans": null
   },
   "rate_limits": "Free: 1,000 requests/day; paid tiers publish higher daily quotas on pricing",
   "example": {
-    "request": "curl \"https://api.ipgeolocation.io/ipgeo?apiKey=YOUR_API_KEY&ip=8.8.8.8\"",
-    "response_snippet": "{\"ip\":\"8.8.8.8\",\"continent_code\":\"NA\",\"continent_name\":\"North America\",\"country_code2\":\"US\",\"country_code3\":\"USA\",\"country_name\":\"United States\",\"city\":\"Mountain View\",\"zipcode\":\"94043\",\"latitude\":\"37.42240\",\"longitude\":\"-122.08421\",\"isp\":\"Google LLC\"}"
+    "request": "curl \"https://api.ipgeolocation.io/v3/ipgeo?apiKey=YOUR_API_KEY&ip=8.8.8.8\"",
+    "response_snippet": "{\"ip\":\"8.8.8.8\",\"location\":{\"continent_code\":\"NA\",\"continent_name\":\"North America\",\"country_code2\":\"US\",\"country_code3\":\"USA\",\"country_name\":\"United States\",\"city\":\"Mountain View\",\"zipcode\":\"94043\",\"latitude\":\"37.42240\",\"longitude\":\"-122.08421\"},\"asn\":{\"as_number\":\"AS15169\",\"organization\":\"Google LLC\"}}"
   },
   "use_cases": [
     "geolocate a client IP address",
@@ -91,6 +91,21 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

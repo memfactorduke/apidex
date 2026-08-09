@@ -4,7 +4,7 @@
   "name": "Meteostat",
   "category": "weather-environment",
   "tagline": "Historical weather and climate data by station or coordinates via RapidAPI",
-  "description": "Meteostat's JSON API serves historical hourly, daily, and monthly weather observations plus climate normals from thousands of stations and model-backed point queries. Hosted on RapidAPI, it returns JSON with meta and data objects for station lookup, nearby search, and time-series ranges. Free for light use (1000 calls/month); paid tiers raise monthly quotas. Separate free bulk dumps and a Python library exist outside this API.",
+  "description": "Meteostat's JSON API serves historical hourly, daily, and monthly weather observations plus climate normals from thousands of stations and model-backed point queries. Hosted on RapidAPI, it returns JSON with meta and data objects for station lookup, nearby search, and time-series ranges. Free for light use with 500 calls/month; paid RapidAPI plans raise the quota. Separate free bulk dumps and a Python library exist outside this API.",
   "base_url": "https://meteostat.p.rapidapi.com",
   "docs_url": "https://dev.meteostat.net/api",
   "signup_url": "https://rapidapi.com/meteostat/api/meteostat",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "1000 requests per month (hard limit on Basic/free plan)",
+    "free_tier_limits": "500 requests per month on the free Basic plan, enforced as a hard limit",
     "paid_plans": "Pro $9.99/mo (10,000 req/mo); Ultra $29.99/mo (35,000); Mega $99.99/mo (120,000) via RapidAPI"
   },
-  "rate_limits": "Free: 1000 req/month hard limit. Paid plans raise monthly quota only. HTTP 429 when quota exceeded. Per-request caps: hourly max 30 days; daily max 10 years. No separate per-second limit published.",
+  "rate_limits": "Free plan: 500 requests/month hard limit; HTTP 429 after quota exhaustion. Paid plans raise monthly quota only. Endpoint-specific date-range caps also apply (e.g. daily max 10 years per request). No separate per-second limit published.",
   "example": {
     "request": "curl --request GET --url 'https://meteostat.p.rapidapi.com/stations/meta?id=10637' --header 'x-rapidapi-host: meteostat.p.rapidapi.com' --header 'x-rapidapi-key: YOUR_API_KEY'",
     "response_snippet": "{\"meta\":{\"exec_time\":0.003,\"generated\":\"2021-06-21 18:23:58\"},\"data\":{\"id\":\"10637\",\"name\":{\"en\":\"Frankfurt Airport\"},\"country\":\"DE\",\"region\":\"HE\",\"location\":{\"latitude\":50.05,\"longitude\":8.6,\"elevation\":111},\"timezone\":\"Europe/Berlin\",\"inventory\":{\"hourly\":{\"start\":\"1926-01-01\",\"end\":\"2021-06-20\"},\"daily\":{\"start\":\"1934-05-01\",\"end\":\"2021-06-18\"}}}}"
@@ -99,6 +99,17 @@
       "rate_limits",
       "description"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

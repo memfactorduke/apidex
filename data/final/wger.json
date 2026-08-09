@@ -22,7 +22,7 @@
     "free_tier_limits": "Public instance free with rate limits; self-hostable",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Endpoint-specific (per IP anon / per user auth): auth 10/min; registration 5/min; ingredient list 120/min, detail 300/min, bulk sync 600/min; others unthrottled. Over limit \u2192 HTTP 429 + Retry-After.",
   "example": {
     "request": "curl -s 'https://wger.de/api/v2/exerciseinfo/?limit=1&language=2'",
     "response_snippet": "{\"count\": ..., \"results\": [{\"id\": 1, \"name\": \"...\", \"description\": \"...\"}]}"
@@ -90,6 +90,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

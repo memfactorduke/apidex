@@ -5,7 +5,7 @@
   "category": "dev-tools",
   "tagline": "GraphQL API for code search, navigation, and repository intelligence across large codebases.",
   "description": "Sourcegraph exposes a GraphQL API (and supporting REST/batch endpoints) for searching code, browsing repositories, resolving symbols, managing batch changes, and integrating with self-hosted or Sourcegraph.com instances. Developers typically authenticate with an access token and query the GraphQL schema for search results, file contents, and code intelligence data used by IDE extensions, bots, and automation.",
-  "base_url": "https://sourcegraph.com/.api/graphql",
+  "base_url": "https://sourcegraph.com/api",
   "docs_url": "https://sourcegraph.com/docs/api",
   "signup_url": "https://sourcegraph.com/sign-up",
   "auth": {
@@ -19,7 +19,7 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
+    "free_tier": false,
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
@@ -92,6 +92,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "free_tier"
+      ],
+      "upheld_original": false
+    }
   }
 }

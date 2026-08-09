@@ -1,0 +1,17 @@
+{
+  "id": "giphy",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "100 API calls per hour for beta keys; production access requires approval and paid custom pricing.",
+  "paid_plans": null,
+  "rate_limits": "Beta keys: 100 API calls/hour; production limits are assigned through an approved production key.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": "{\"data\":[{\"type\":\"gif\",\"id\":\"...\",\"url\":\"https://giphy.com/gifs/...\",\"images\":{\"original\":{\"url\":\"https://media.giphy.com/...\"}}}],\"meta\":{\"status\":200,\"msg\":\"OK\"},\"pagination\":{\"total_count\":1,\"count\":1,\"offset\":0}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: auditor correct \u2014 official GIPHY docs publish beta-key limit of 100 API calls/hour (https://developers.giphy.com/docs/api/ and dashboard/rate-limit pages). rate_limits: auditor correct \u2014 same published beta limit; production keys get assigned limits after approval (https://developers.giphy.com/docs/api/). example.response_snippet: auditor correct \u2014 original had pagination.total_count:0 with one data item; corrected total_count to 1 for internal consistency with GIPHY pagination shape (https://developers.giphy.com/docs/api/schema/#pagination-object)."
+}

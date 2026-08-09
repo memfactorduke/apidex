@@ -20,9 +20,9 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "100 emails/month on Free Developer plan",
-    "paid_plans": null
+    "paid_plans": "Basic $15/mo (10k emails; overages $1.80/1k); Pro $16.50/mo (10k; $1.30/1k); Platform $18/mo (10k; $1.20/1k); custom high-volume available"
   },
-  "rate_limits": "10 messages/second per server (burst); concurrent connection limits also documented",
+  "rate_limits": "No fixed numeric email-API rate is publicly documented; excessive request rates return HTTP 429. Batch sending supports up to 500 messages per request.",
   "example": {
     "request": "curl \"https://api.postmarkapp.com/email\" -X POST -H \"Accept: application/json\" -H \"Content-Type: application/json\" -H \"X-Postmark-Server-Token: YOUR_API_KEY\" -d '{\"From\":\"sender@example.com\",\"To\":\"receiver@example.com\",\"Subject\":\"Hello\",\"TextBody\":\"Hello from Postmark\"}'",
     "response_snippet": "{\"To\":\"receiver@example.com\",\"SubmittedAt\":\"2026-01-01T12:00:00.0000000Z\",\"MessageID\":\"00000000-0000-0000-0000-000000000000\",\"ErrorCode\":0,\"Message\":\"OK\"}"
@@ -93,6 +93,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

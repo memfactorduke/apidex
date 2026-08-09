@@ -22,7 +22,7 @@
     "free_tier_limits": "API Starter (Free): 30 labels/month free, then 7\u00a2/label; no monthly platform fee. Standalone fees: tracking 2\u00a2/track, rating 1\u00a2/rate, US address validation 2\u00a2, non-US 8\u00a2 (see pricing/api).",
     "paid_plans": "Pay-as-you-go and higher volume plans with discounted platform fees per label; enterprise options available."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Per-minute by endpoint (official docs). Most core resources: POST/PUT 500 live/50 test; GET single 4,000/400; GET list 50/10. Tracking: POST 750/50, GET 500/50. Batch lower (e.g. POST 50/10). Exceeding returns 429.",
   "example": {
     "request": "curl -X POST https://api.goshippo.com/tracks/ -H \"Authorization: ShippoToken YOUR_API_KEY\" -d carrier=\"usps\" -d tracking_number=\"9205590164917312751089\"",
     "response_snippet": "{\"carrier\":\"usps\",\"tracking_number\":\"9205590164917312751089\",\"tracking_status\":{\"status\":\"DELIVERED\",\"status_details\":\"Your shipment has been delivered at the destination mailbox.\",\"status_date\":\"2023-07-23T13:03:00Z\"},\"tracking_history\":[{\"status\":\"TRANSIT\",\"status_details\":\"Your shipment has been accepted.\"}]}"
@@ -96,6 +96,15 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

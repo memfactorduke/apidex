@@ -18,11 +18,11 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
+    "free_tier": false,
     "free_tier_limits": "unknown",
-    "paid_plans": null
+    "paid_plans": "Enterprise Basic $9/mo (10k calls/mo, 10-day trial); Enterprise Core $99/mo (500k calls/mo, no trial); Enterprise Plus $399/mo (1M calls/mo, 10-day trial); Enterprise Unlimited custom (contact sales)"
   },
-  "rate_limits": "not published",
+  "rate_limits": "Plan throttles: Enterprise Basic 10 calls/min; Enterprise Core 100/min; Enterprise Plus 300/min; Enterprise Unlimited custom/unlimited. Monthly quotas match plan call allowances.",
   "example": {
     "request": "curl \"https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=YOUR_APP_ID&app_key=YOUR_API_KEY\"",
     "response_snippet": "{\"from\":1,\"to\":20,\"count\":10000,\"hits\":[{\"recipe\":{\"uri\":\"...\",\"label\":\"Chicken Vesuvio\",\"image\":\"...\",\"source\":\"Serious Eats\",\"url\":\"...\",\"ingredientLines\":[\"...\"],\"calories\":4050.0}}]}"
@@ -91,6 +91,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -1,0 +1,17 @@
+{
+  "id": "medlineplus-connect",
+  "base_url": "https://connect.medlineplus.gov/service",
+  "docs_url": "https://medlineplus.gov/connect/overview.html",
+  "auth_type": "none",
+  "auth_details": "No API key or registration required; open government service with URL parameters only",
+  "free_tier": true,
+  "free_tier_limits": "Fully free public service; no published request caps",
+  "paid_plans": null,
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl \"https://connect.medlineplus.gov/service?mainSearchCriteria.v.cs=2.16.840.1.113883.6.90&mainSearchCriteria.v.c=E11.9&knowledgeResponseType=application/json\"",
+  "example_response_snippet": "{\"feed\":{\"title\":{\"_value\":\"MedlinePlus Connect\"},\"entry\":[{\"title\":{\"_value\":\"Type 2 diabetes\"},\"link\":[{\"rel\":\"alternate\",\"href\":\"https://medlineplus.gov/ency/article/000313.htm\"}]}]}}",
+  "description": "MedlinePlus Connect is a free web service from the U.S. National Library of Medicine that returns patient-friendly MedlinePlus health topic and drug information when given clinical codes such as ICD, RxNorm, or LOINC, for use in EHRs and patient portals.",
+  "status": "operational",
+  "resolution_notes": "Pending live verification of rate limits and current E11.9 response against official NLM docs."
+}

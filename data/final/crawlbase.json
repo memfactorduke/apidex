@@ -23,10 +23,10 @@
     "free_tier_limits": "Up to 20,000 free requests (no credit card); usable for normal or JS requests. Crawling API free starter; Smart AI Proxy free plan separately lists 5,000 credits.",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Default 20 concurrent requests per token (~20 req/s derived); concurrency scales with plan. Exceeding returns HTTP 429.",
   "example": {
-    "request": "curl \"https://api.crawlbase.com/?token=YOUR_API_KEY&url=https%3A%2F%2Fhttpbin.org%2Fip\"",
-    "response_snippet": "{\"original_status\":200,\"pc_status\":200,\"body\":\"...\"}"
+    "request": "curl \"https://api.crawlbase.com/?token=YOUR_API_KEY&url=https%3A%2F%2Fhttpbin.org%2Fip&format=json\"",
+    "response_snippet": "{\"original_status\":200,\"cb_status\":200,\"url\":\"https://httpbin.org/ip\",\"body\":\"...\"}"
   },
   "use_cases": [
     "scrape HTML of a URL through residential proxies",
@@ -90,6 +90,17 @@
     "corrected": [
       "free_tier_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

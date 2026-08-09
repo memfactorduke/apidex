@@ -1,0 +1,17 @@
+{
+  "id": "merriam-webster",
+  "base_url": "https://www.dictionaryapi.com/api/v3/references",
+  "docs_url": "https://dictionaryapi.com/",
+  "auth_type": "apiKey",
+  "auth_details": "API key as query parameter `key`; free self-serve registration at dictionaryapi.com",
+  "free_tier": true,
+  "free_tier_limits": "Free only for non-commercial applications, limited to two reference APIs and 1,000 queries per day per API key/reference; commercial or higher-volume use requires a paid agreement.",
+  "paid_plans": "Commercial/higher-volume plans available via Merriam-Webster sales",
+  "rate_limits": "1,000 queries per API key per day; contact Merriam-Webster for higher-volume use.",
+  "cors": "unknown",
+  "example_request": "curl \"https://www.dictionaryapi.com/api/v3/references/collegiate/json/hello?key=YOUR_API_KEY\"",
+  "example_response_snippet": "[{\"meta\":{\"id\":\"hello\",\"uuid\":\"...\",\"src\":\"collegiate\",\"section\":\"alpha\",\"stems\":[\"hello\"],\"offensive\":false},\"hwi\":{\"hw\":\"hel*lo\",\"prs\":[{\"mw\":\"h\u0259-\u02c8l\u014d\",\"sound\":{\"audio\":\"hello01\"}}]},\"fl\":\"interjection\",\"shortdef\":[\"used as a greeting or to begin a phone conversation\"]}]",
+  "description": "Merriam-Webster's Dictionary API provides programmatic access to trusted English dictionary and thesaurus content, including definitions, pronunciations, etymologies, synonyms, antonyms, and example sentences. Developers get free API keys for the Collegiate Dictionary, Thesaurus, and other reference products, making it a standard choice for language tools, writing apps, and educational products.",
+  "status": "operational",
+  "resolution_notes": "All four disputes confirmed via live official docs. base_url: auditor correct \u2014 https://dictionaryapi.com/products shows paths under https://www.dictionaryapi.com/api/v3/references/{dict}/json/{word}. docs_url: auditor correct \u2014 official portal is https://dictionaryapi.com/. free_tier_limits & rate_limits: auditor correct \u2014 https://dictionaryapi.com/products states free non-commercial use, two APIs, 1000 queries/day per key; commercial via sales."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "stability-ai",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "150 requests per 10 seconds; exceeding it returns HTTP 429 and triggers a 60-second timeout.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: auditor correct. Official REST API docs state the API is rate-limited to 150 requests every 10 seconds; exceeding yields HTTP 429 and a 60-second timeout (https://platform.stability.ai/docs/api-reference). Same text appears on the platform FAQ (https://platform.stability.ai/faq). Original \"not published\" is wrong."
+}

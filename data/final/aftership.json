@@ -5,12 +5,12 @@
   "category": "transportation",
   "tagline": "Unified package tracking across 1,000+ carriers worldwide.",
   "description": "AfterShip provides a Tracking API and related logistics APIs for real-time multi-carrier package tracking, delivery status webhooks, estimated delivery dates, and shipment analytics. Developers authenticate with an API key and can create trackers, retrieve checkpoint timelines, and monitor delivery exceptions across more than 1,000 global carriers from a single integration.",
-  "base_url": "https://api.aftership.com/tracking/2025-07",
+  "base_url": "https://api.aftership.com/tracking/2026-07",
   "docs_url": "https://www.aftership.com/docs/tracking/quickstart/api-quick-start",
   "signup_url": "https://www.aftership.com/pricing",
   "auth": {
     "type": "apiKey",
-    "details": "API key via as-api-key header (or Authorization: AS-Api-Key). Self-serve signup at aftership.com; key from account settings. Optional as-store-id for multi-store."
+    "details": "API key via as-api-key header. Self-serve signup; key from account settings. Optional as-store-id for multi-store. OAuth apps use as-access-token."
   },
   "https": true,
   "cors": "unknown",
@@ -18,13 +18,13 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
-    "free_tier_limits": "unknown \u2014 free plan exists; concrete request/tracker quotas not confirmed on public pricing page without account",
-    "paid_plans": "Essentials, Pro, Premier, Enterprise \u2014 usage-based tracking quotas; contact sales for Enterprise"
+    "free_tier": false,
+    "free_tier_limits": "Free plan is dashboard-only; Tracking API and webhooks not included on Free.",
+    "paid_plans": "Premium and Enterprise include Tracking API/webhook access; Essentials does not."
   },
-  "rate_limits": "not published in public docs as fixed global numbers; plan-dependent (check dashboard/rate-limit headers)",
+  "rate_limits": "Per-endpoint (e.g. POST /trackings 20/s, GET /trackings 6/s, GET /trackings/:id 5/s); X-RateLimit-* headers.",
   "example": {
-    "request": "curl --request GET --url https://api.aftership.com/tracking/2025-07/trackings --header 'Content-Type: application/json' --header 'as-api-key: YOUR_API_KEY'",
+    "request": "curl --request GET --url https://api.aftership.com/tracking/2026-07/trackings --header 'Content-Type: application/json' --header 'as-api-key: YOUR_API_KEY'",
     "response_snippet": "{\"meta\":{\"code\":200},\"data\":{\"trackings\":[{\"id\":\"...\",\"tracking_number\":\"1Z999...\",\"slug\":\"ups\",\"tag\":\"InTransit\",\"checkpoints\":[{\"message\":\"Package in transit\",\"tag\":\"InTransit\"}]}]}}"
   },
   "use_cases": [
@@ -94,6 +94,24 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

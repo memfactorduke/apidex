@@ -23,7 +23,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": "unknown"
   },
-  "rate_limits": "not published",
+  "rate_limits": "150 requests per 10 seconds; exceeding it returns HTTP 429 and triggers a 60-second timeout.",
   "example": {
     "request": "curl -s -X POST \"https://api.stability.ai/v2beta/stable-image/generate/core\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: image/*\" -F \"prompt=a lighthouse on a cliff\" -F \"output_format=png\" --output lighthouse.png",
     "response_snippet": "Binary image bytes (PNG/JPEG/WebP) when Accept: image/*; or JSON with base64 when Accept: application/json"
@@ -93,6 +93,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

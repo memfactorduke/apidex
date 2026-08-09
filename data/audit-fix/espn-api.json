@@ -1,0 +1,17 @@
+{
+  "id": "espn-api",
+  "base_url": "https://site.api.espn.com/apis",
+  "docs_url": "https://gist.github.com/akeaswaran/b48b02f1c94f873c6655e7129910fc3b",
+  "auth_type": "none",
+  "auth_details": "No API key or OAuth; endpoints are publicly reachable over HTTPS. Unofficial and may violate ESPN ToS; no self-serve developer signup.",
+  "free_tier": true,
+  "free_tier_limits": "no official free tier or quota; unofficial free public access with unpublished limits",
+  "paid_plans": null,
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -s 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard'",
+  "example_response_snippet": "{\"leagues\":[{\"id\":\"28\",\"uid\":\"s:20~l:28\",\"name\":\"National Football League\",\"abbreviation\":\"NFL\",\"slug\":\"nfl\",\"season\":{\"year\":2025,\"type\":2}}],\"events\":[{\"id\":\"401671789\",\"name\":\"Team A at Team B\",\"shortName\":\"A @ B\",\"competitions\":[{\"id\":\"401671789\",\"status\":{\"type\":{\"state\":\"pre\",\"completed\":false}}}]}]",
+  "description": "ESPN exposes undocumented HTTP JSON endpoints used by its own web and mobile clients. Developers commonly call these for live scores, schedules, standings, and box scores without an official public API key program. There is no first-party developer portal or documented SLA; access is unofficial, may conflict with ESPN Terms of Service, and can change or break without notice.",
+  "status": "operational",
+  "resolution_notes": "Auditor dispute on base_url: verified live. Official/community docs and live endpoints show both /apis root and /apis/site/v2 family; original base_url is broader and correct for the directory entry as written. Evidence: gist + live scoreboard URL."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "mojang",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Public Mojang/Minecraft identity services for UUID and username lookup primarily at api.mojang.com; related session validation and skin/texture profile data are served from sessionserver.mojang.com, and newer account/services flows use api.minecraftservices.com.",
+  "status": null,
+  "resolution_notes": "Auditor correct on description. Official/community docs (wiki.vg Mojang API) and live hosts separate concerns: username\to UUID at https://api.mojang.com/users/profiles/minecraft/<name>; session/profile (incl. textures) at https://sessionserver.mojang.com/session/minecraft/profile/<uuid>; Microsoft-era account APIs at https://api.minecraftservices.com. Original description implied a single api.mojang.com surface for profiles, textures, and session validation. Evidence: https://wiki.vg/Mojang_API and https://wiki.vg/Mojang_API#UUID_to_Profile_and_Skin.2FCape"
+}

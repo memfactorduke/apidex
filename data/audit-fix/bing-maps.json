@@ -1,0 +1,17 @@
+{
+  "id": "bing-maps",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "Bing Maps key (query param key=) for eligible paid Enterprise accounts only; free Basic keys no longer work. New projects should use Azure Maps auth (Azure subscription + Azure Maps account keys).",
+  "free_tier": false,
+  "free_tier_limits": "Free Basic accounts and keys retired after 2025-06-30; no public free Bing Maps for Enterprise tier for new use.",
+  "paid_plans": "Paid Bing Maps for Enterprise licenses only, usable until 2028-06-30 final retirement; Microsoft directs migrations to Azure Maps.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "pricing (auditor right): Official Learn and Bing Maps blog state Bing Maps for Enterprise is deprecated and retired for all free (Basic) customers; Basic keys stopped working after 2025-06-30 (https://learn.microsoft.com/en-us/bingmaps/rest-services/; https://blogs.bing.com/maps/2025-06/Bing-Maps-for-Enterprise-Basic-Account-shutdown-June-30,2025). free_tier=false; free Basic 125k limits no longer apply. paid_plans: enterprise license holders may continue until 2028-06-30 then must move to Azure Maps (https://blogs.bing.com/maps/2025-01/What-are-my-options-regarding-Bing-Maps-for-Enterprise-Retirement). auth.details (auditor right): same docs \u2014 keys remain valid only for eligible Enterprise accounts; new integrations should use Azure Maps (https://learn.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key). status (auditor partly right, not defunct): product is deprecated/legacy-enterprise-only with full retirement 2028-06-30, but REST endpoints still serve paid Enterprise customers today, so status is not \"defunct\" under schema rules (https://learn.microsoft.com/en-us/bingmaps/rest-services/)."
+}

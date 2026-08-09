@@ -1,0 +1,17 @@
+{
+  "id": "foursquare-places",
+  "base_url": "https://places-api.foursquare.com",
+  "docs_url": "https://docs.foursquare.com/fsq-developers-places/reference/places-api-overview",
+  "auth_type": "apiKey",
+  "auth_details": "API key via Authorization header (Bearer or raw key); self-serve developer signup",
+  "free_tier": true,
+  "free_tier_limits": "Free/Sandbox: ~10,000 Place Search calls (tier/quota; confirm in console). Pro ~$20/mo with monthly Place Search + Place Details allowances; Enterprise custom. Verify current numbers on pricing.",
+  "paid_plans": null,
+  "rate_limits": "Per-endpoint and plan quotas (not a single global RPM). Free/Sandbox call-budget limited; see rate-limits docs and developer console.",
+  "cors": "unknown",
+  "example_request": "curl -X GET \"https://places-api.foursquare.com/places/search?query=coffee&ll=40.7,-74.0\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\" -H \"X-Places-Api-Version: 2025-06-17\"",
+  "example_response_snippet": "{ \"results\": [ { \"fsq_place_id\": \"...\", \"name\": \"...\", \"location\": { \"address\": \"...\" } } ] }",
+  "description": "Foursquare Places API provides venue search, place details, categories, tips, photos, and geolocation data across millions of points of interest worldwide. Developers use it for location-based discovery, local business info, and place enrichment in consumer and enterprise apps.",
+  "status": "operational",
+  "resolution_notes": "Pending live verification of auth format, free tier, and paid plans against official Foursquare docs."
+}

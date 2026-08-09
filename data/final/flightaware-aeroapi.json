@@ -18,8 +18,8 @@
     "json"
   ],
   "pricing": {
-    "free_tier": false,
-    "free_tier_limits": "unknown",
+    "free_tier": true,
+    "free_tier_limits": "$5 of per-query usage free per month on Personal ($10 for eligible ADS-B feeders); charges apply after allowance; 10 result sets/minute.",
     "paid_plans": null
   },
   "rate_limits": "Plan-based request quotas (see pricing/account); not a single public global limit",
@@ -89,6 +89,16 @@
       "docs_url",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier",
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

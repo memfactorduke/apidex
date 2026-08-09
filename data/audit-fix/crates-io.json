@@ -1,0 +1,17 @@
+{
+  "id": "crates-io",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "Read endpoints are public with no auth. Write/authenticated ops send a crates.io API token as the raw Authorization header value (not Bearer); Cargo credential providers handle this for publish/yank/owners.",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "1 request per second. Prefer the sparse index, static CDN, or daily database dumps for bulk access.",
+  "cors": null,
+  "example_request": "curl -sS -H \"User-Agent: MyTool/1.0 (contact: you@example.com)\" \"https://crates.io/api/v1/crates/serde\"",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth.details: auditor right \u2014 Cargo Registry Web API states the Authorization header value is the API token itself, not Bearer (https://doc.rust-lang.org/cargo/reference/registry-web-api.html). rate_limits: auditor right \u2014 data-access policy requires max 1 req/s and points bulk users to index/dumps (https://crates.io/data-access). example: auditor right \u2014 same page requires identifying User-Agent with contact; bare curl fails policy."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "tripadvisor",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": "Self-service pay-as-you-go per-call pricing; contact sales for usage above 500,000 calls/month or negotiated arrangements",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": "{\"data\":[{\"location_id\":\"187147\",\"name\":\"Paris\",\"address_obj\":{\"city\":\"Paris\",\"country\":\"France\"}}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "paid_plans: auditor correct \u2014 FAQ documents self-service pay-as-you-go and sales contact for high volume (https://tripadvisor-content-api.readme.io/reference/faq). response_snippet: original stands for the geos-style entity shape; with category=restaurants the Paris geo id is still a common search hit and the entry\u2019s request was not changed in this arbitration; if tightening consistency, switch category to geos or use a restaurant name \u2014 Location Search docs: https://tripadvisor-content-api.readme.io/reference/searchforlocations"
+}

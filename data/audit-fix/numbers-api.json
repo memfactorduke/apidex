@@ -1,0 +1,17 @@
+{
+  "id": "numbers-api",
+  "base_url": "https://numbersapi.com",
+  "docs_url": "https://numbersapi.com",
+  "auth_type": "none",
+  "auth_details": "No authentication required. Public endpoints accept unauthenticated GET requests; optional JSON via Accept header or query param.",
+  "free_tier": true,
+  "free_tier_limits": "unlimited free public use (no published quota); no paid plans",
+  "paid_plans": null,
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -s \"https://numbersapi.com/42?json\"",
+  "example_response_snippet": "{\"text\":\"42 is the answer to the Ultimate Question of Life, the Universe, and Everything.\",\"number\":42,\"found\":true,\"type\":\"trivia\"}",
+  "description": "A free, no-authentication HTTP API that returns interesting trivia, mathematical properties, historical dates, and year facts for any integer. Long-running staple of developer demos and educational apps; supports plain text and JSON responses with optional fragments and default fallbacks when no fact is known.",
+  "status": "operational",
+  "resolution_notes": "Live verification in progress for disputed fields (status, base_url, example.request, pricing)."
+}

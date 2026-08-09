@@ -19,8 +19,8 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "100 requests/day; up to 3 articles per news request.",
+    "paid_plans": "Basic $19/mo ($16/mo annual), Standard $49/mo ($41/mo annual), Pro $79/mo ($66/mo annual); custom plans available."
   },
   "rate_limits": "not published",
   "example": {
@@ -91,6 +91,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

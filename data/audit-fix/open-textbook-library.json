@@ -1,0 +1,17 @@
+{
+  "id": "open-textbook-library",
+  "base_url": "https://open.umn.edu/opentextbooks",
+  "docs_url": "https://open.umn.edu/opentextbooks/discovery",
+  "auth_type": "none",
+  "auth_details": "No authentication required for public API access. All endpoints are publicly accessible without API keys or tokens.",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "paid_plans": null,
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -s \"https://open.umn.edu/opentextbooks/textbooks.json?q=calculus\"",
+  "example_response_snippet": "{\n  \"data\": [\n    {\n      \"id\": 10,\n      \"title\": \"Calculus\",\n      \"edition_statement\": \"Third Edition\",\n      \"copyright_year\": 1991,\n      \"license\": \"Attribution-NonCommercial-ShareAlike\",\n      \"language\": \"eng\"\n    }\n  ]\n}",
+  "description": "The Open Textbook Library (University of Minnesota / Open Education Network) is a catalog of peer-reviewed open educational resource textbooks for higher education. It documents a public read-only JSON API: append .json to textbook and subject resource URLs (and related paths) for programmatic metadata access; OpenAPI docs are published at /opentextbooks/api-docs. CSV and MARC downloads are also provided.",
+  "status": "operational",
+  "resolution_notes": "Pending live verification of docs_url dispute."
+}

@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
+    "free_tier_limits": "Free for personal and commercial use with linked attribution to FreeToGame; avoid exceeding 10 requests/second.",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Avoid more than 10 requests per second.",
   "example": {
     "request": "curl \"https://www.freetogame.com/api/games?platform=browser&category=mmorpg\"",
-    "response_snippet": "[{\"id\":1,\"title\":\"...\",\"thumbnail\":\"...\",\"short_description\":\"...\",\"game_url\":\"...\",\"genre\":\"MMORPG\",\"platform\":\"PC (Windows)\",\"publisher\":\"...\",\"developer\":\"...\",\"release_date\":\"...\",\"freetogame_profile_url\":\"...\"}]"
+    "response_snippet": "[{\"id\":1,\"title\":\"...\",\"thumbnail\":\"...\",\"short_description\":\"...\",\"game_url\":\"...\",\"genre\":\"...\",\"platform\":\"Web Browser\",\"publisher\":\"...\",\"developer\":\"...\",\"release_date\":\"...\",\"freetogame_profile_url\":\"...\"}]"
   },
   "use_cases": [
     "list free-to-play games by platform",
@@ -92,6 +92,17 @@
     "corrected": [],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

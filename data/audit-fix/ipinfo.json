@@ -1,0 +1,17 @@
+{
+  "id": "ipinfo",
+  "base_url": "https://api.ipinfo.io",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "IPinfo Lite: unlimited authenticated requests; country-level geolocation and basic ASN data. Legacy Free API: 50,000 requests/month.",
+  "paid_plans": "Core, Plus, Max, and Enterprise; see https://ipinfo.io/pricing",
+  "rate_limits": "IPinfo Lite: unlimited authenticated requests; legacy free API: 50,000 requests/month; paid quotas vary by plan.",
+  "cors": null,
+  "example_request": "curl \"https://api.ipinfo.io/lite/8.8.8.8?token=YOUR_API_KEY\"",
+  "example_response_snippet": "{\"ip\":\"8.8.8.8\",\"asn\":\"AS15169\",\"as_name\":\"Google LLC\",\"as_domain\":\"google.com\",\"country_code\":\"US\",\"country\":\"United States\",\"continent_code\":\"NA\",\"continent\":\"North America\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: auditor correct \u2014 https://ipinfo.io/developers and https://api.ipinfo.io document Lite/Core/Plus/Max on api.ipinfo.io; ipinfo.io remains the maintained legacy/Custom API host. free_tier_limits: auditor correct \u2014 Lite is unlimited authenticated country/ASN; 50k/month is the legacy free API (https://ipinfo.io/pricing, https://ipinfo.io/developers/lite-api). paid_plans: auditor correct \u2014 current lineup is Core, Plus, Max, Enterprise not Business (https://ipinfo.io/pricing). rate_limits: auditor correct \u2014 same Lite vs legacy split (pricing + Lite docs). example: auditor correct \u2014 general entry should use api.ipinfo.io/lite (or label legacy); Lite response schema differs from city-level legacy (https://ipinfo.io/developers/lite-api)."
+}

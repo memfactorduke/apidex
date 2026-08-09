@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "Danish Superliga & Scottish Premiership; ~2,000 API calls per entity per hour (no-expiry free football plan)",
+    "paid_plans": "Starter from \u20ac29/mo (5 leagues); Growth from \u20ac99/mo (30 leagues); Pro from \u20ac249/mo (120 leagues); Enterprise custom; 14-day trial on paid plans"
   },
-  "rate_limits": "not published",
+  "rate_limits": "Starter: 2,000; Growth: 2,500; Pro: 3,000; Enterprise: 5,000 API calls per entity per hour (add-ons can increase)",
   "example": {
     "request": "curl \"https://api.sportmonks.com/v3/football/leagues?api_token=YOUR_API_KEY\"",
     "response_snippet": "{\"data\":[]}"
@@ -95,6 +95,17 @@
       "description",
       "status"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

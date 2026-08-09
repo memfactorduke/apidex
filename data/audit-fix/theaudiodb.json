@@ -1,0 +1,17 @@
+{
+  "id": "theaudiodb",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": true,
+  "free_tier_limits": "Free Music API (\u20ac0): public free test key; restricted methods/result counts on many V1 endpoints vs premium. Free rate limit 30 req/min. Premium unlocks fuller V1 methods and V2 API access.",
+  "paid_plans": "Single Developer \u20ac8/month (premium V1 methods, higher limits, MusicBrainz lookups, music videos). Small Business \u20ac20/month (120 req/min, social links, dedicated support, private key). Lifetime options also listed on pricing page.",
+  "rate_limits": "Free: 30 requests/minute; Premium: 100/minute; Business: 120/minute. Exceeding the limit returns HTTP 429; wait about one minute before retrying.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "pricing: auditor correct. Official pricing (https://www.theaudiodb.com/pricing) lists Free \u20ac0, Single Developer \u20ac8/mo, Small Business \u20ac20/mo; free_music_api docs (https://www.theaudiodb.com/free_music_api) state free API has restricted methods while premium unlocks all V1 methods + V2. rate_limits: auditor correct. Same free_music_api Rate Limit section: Free 30/min, Premium 100/min, Business 120/min, HTTP 429 on breach. Original 'not published' / unconfirmed quotas claims are wrong."
+}

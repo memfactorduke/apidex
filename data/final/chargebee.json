@@ -22,7 +22,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Plan defaults (req/min): test sites 150; live Starter 150, Performance 1,000, Enterprise default 3,500 (custom Enterprise no fixed upper limit). Concurrent: 50 GET / 100 POST simultaneous; higher limits via support. HTTP 429 when exceeded.",
   "example": {
     "request": "curl https://YOUR_SITE.chargebee.com/api/v2/customers -u YOUR_API_KEY:",
     "response_snippet": "{\"list\":[{\"customer\":{\"id\":\"...\"}}]}"
@@ -91,6 +91,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

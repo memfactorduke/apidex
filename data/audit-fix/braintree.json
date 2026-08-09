@@ -1,0 +1,17 @@
+{
+  "id": "braintree",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "Server SDKs & GraphQL: public+private API keys via HTTP Basic (Base64 of PUBLIC_KEY:PRIVATE_KEY). Bearer only for tokenization keys, client-token auth fingerprints, or Braintree Auth OAuth access tokens (beta). Sandbox/prod use separate credentials and hosts.",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST https://payments.sandbox.braintree-api.com/graphql -H 'Authorization: Basic BASE64_ENCODED(PUBLIC_KEY:PRIVATE_KEY)' -H 'Braintree-Version: 2019-01-01' -H 'Content-Type: application/json' -d '{\"query\": \"query { ping }\"}'",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth.details: auditor correct. Official GraphQL guide documents merchant API keys as Authorization: Basic base64(PUBLIC_KEY:PRIVATE_KEY); Bearer is only for tokenization keys, client-token authorization fingerprints, or Braintree Auth OAuth (beta)\u2014not generic GraphQL API keys. https://developer.paypal.com/braintree/graphql/guides/making_api_calls/ example.request: auditor correct. Official first-request ping curl uses Basic BASE64_ENCODED(PUBLIC_KEY:PRIVATE_KEY), not Bearer YOUR_API_KEY. Same URL plus transactions guide examples: https://developer.paypal.com/braintree/graphql/guides/transactions/"
+}

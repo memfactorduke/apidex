@@ -10,7 +10,7 @@
   "signup_url": "https://dashboard.fingerprint.com/signup",
   "auth": {
     "type": "apiKey",
-    "details": "API key via Authorization header or query param; public key for client, secret for server"
+    "details": "secret API key via Authorization: Bearer; public client key for browser/mobile SDKs (v4)"
   },
   "https": true,
   "cors": "unknown",
@@ -19,12 +19,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "20,000 free API calls per month (Free plan; verify current pricing/dashboard)",
+    "free_tier_limits": "1,000 web/iOS API calls per month; up to 500,000 Android calls per month; 14-day Pro Plus trial included",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "5 requests/second for Free and Pro Plus; custom for Enterprise",
   "example": {
-    "request": "curl -s 'https://api.fpjs.io/events/REQUEST_ID' -H 'Auth-API-Key: YOUR_SECRET_API_KEY'",
+    "request": "curl -s https://api.fpjs.io/v4/events/EVENT_ID -H 'Authorization: Bearer YOUR_SECRET_API_KEY'",
     "response_snippet": "{\"products\":{\"identification\":{\"data\":{\"visitorId\":\"...\",\"requestId\":\"...\",\"browserDetails\":{...},\"incognito\":false,\"ip\":\"...\",\"timestamp\":...}}}}"
   },
   "use_cases": [
@@ -89,6 +89,22 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

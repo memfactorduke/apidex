@@ -1,0 +1,17 @@
+{
+  "id": "mta-bustime",
+  "base_url": "https://bustime-classic.mta.info/api",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "Free with API key registration; available to anyone who registers",
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl \"https://bustime-classic.mta.info/api/siri/stop-monitoring.json?key=YOUR_API_KEY&MonitoringRef=401000&LineRef=MTA%20NYCT_M15\"",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: auditor right \u2014 official SIRI docs at bustime-classic.mta.info/wiki/Developers (and OneBusAway API) use https://bustime-classic.mta.info/api; bustime.mta.info now hosts the OneBusAway-based Bus Time app, not the classic SIRI API root. example.request: auditor right \u2014 same docs use bustime-classic.mta.info and MonitoringRef as the unprefixed GTFS stop_id (e.g. 401000), not MTA_401000. free_tier_limits: auditor right \u2014 developer pages state free access with registration for anyone; no non-commercial-only / separate commercial approval stated on current portal terms. Evidence: https://bustime-classic.mta.info/wiki/Developers/Index , https://bustime-classic.mta.info/wiki/Developers/SIRIStopMonitoring , https://bustime-classic.mta.info/wiki/Developers/OneBusAwayRESTfulAPI , https://new.mta.info/developers"
+}

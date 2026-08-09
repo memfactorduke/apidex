@@ -1,0 +1,17 @@
+{
+  "id": "you-com",
+  "base_url": "https://api.you.com",
+  "docs_url": "https://documentation.you.com/api-reference",
+  "auth_type": "apiKey",
+  "auth_details": "API key via X-API-Key header (self-serve signup on You.com platform); exact header name and key issuance flow confirmed in official docs.",
+  "free_tier": true,
+  "free_tier_limits": "100 queries/day on free search profile (per published docs); confirm current quotas on pricing/docs before production.",
+  "paid_plans": "Pay-as-you-go / published Web Search pricing per 1,000 calls plus complimentary credits on pricing page \u2014 verify current $ amounts on official pricing.",
+  "rate_limits": "Free search profile: 100 queries/day; paid/auth tiers subscription-dependent; limits also exposed via X-RateLimit response headers.",
+  "cors": "unknown",
+  "example_request": "curl -G 'https://api.you.com/v1/search' -H 'X-API-Key: YOUR_API_KEY' --data-urlencode 'query=latest AI news'",
+  "example_response_snippet": "{\"results\":{\"web\":[{\"url\":\"https://...\",\"title\":\"...\",\"description\":\"...\",\"snippets\":[\"...\"]}],\"news\":[]}}",
+  "description": "You.com Search API provides AI-powered web search for developers and agents. It returns ranked results, snippets, and source citations suitable for grounding LLM answers, research workflows, and retrieval-augmented generation. Typical use is server-side with an API key; confirm current endpoints, auth headers, free-tier quotas, and rate limits in the official docs and pricing pages before production use.",
+  "status": "operational",
+  "resolution_notes": "PRELIMINARY from auditor; live-verifying all disputed fields against official docs now."
+}

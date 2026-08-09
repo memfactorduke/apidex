@@ -1,0 +1,17 @@
+{
+  "id": "x-twitter",
+  "base_url": "https://api.x.com/2",
+  "docs_url": "https://docs.x.com/x-api/introduction",
+  "auth_type": "oauth2",
+  "auth_details": "OAuth 2.0 (user context) or OAuth 2.0 App-Only Bearer Token; also OAuth 1.0a. Create a Project/App in the X Developer Portal; use Authorization: Bearer YOUR_BEARER_TOKEN or OAuth signed requests.",
+  "free_tier": true,
+  "free_tier_limits": "Free tier exists with very low write/read caps (e.g. limited posts/month and read requests); exact published numbers change \u2014 verify on developer.x.com pricing. Pay-as-you-go Basic/Pro for higher volume.",
+  "paid_plans": "Basic, Pro, and Enterprise tiers via developer.x.com; pricing and included request quotas vary by product (posts, search, etc.).",
+  "rate_limits": "Per-endpoint and per-app/user limits vary by product tier; published in X API rate-limit docs (e.g. many v2 read endpoints ~15\u2013900 req/15 min depending on endpoint and auth).",
+  "cors": "unknown",
+  "example_request": "curl \"https://api.x.com/2/users/by/username/X\" -H \"Authorization: Bearer $BEARER_TOKEN\"",
+  "example_response_snippet": "{\"data\":{\"id\":\"2244994945\",\"name\":\"X\",\"username\":\"X\"}}",
+  "description": "X API (formerly Twitter API) provides programmatic access to posts, user profiles, timelines, search, direct messages, media, and engagement data on X. Developers authenticate with OAuth 2.0 or Bearer tokens, call REST endpoints under api.x.com, and choose Free, Basic, Pro, or Enterprise tiers depending on volume and features.",
+  "status": "operational",
+  "resolution_notes": "Settling auditor disputes with live official sources."
+}

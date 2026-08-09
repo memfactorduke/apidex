@@ -5,12 +5,12 @@
   "category": "security-identity",
   "tagline": "Industry-standard breach and paste search for compromised emails and passwords.",
   "description": "Have I Been Pwned provides APIs to check whether email addresses, domains, or passwords appear in known data breaches and paste dumps. Developers use the authenticated breach/paste endpoints and the k-anonymity Pwned Passwords range API for secure password checks without sending full passwords.",
-  "base_url": "https://haveibeenpwned.com/api/v3",
+  "base_url": "https://api.pwnedpasswords.com",
   "docs_url": "https://haveibeenpwned.com/API/v3",
   "signup_url": "https://haveibeenpwned.com/API/Key",
   "auth": {
     "type": "apiKey",
-    "details": "API key via hibp-api-key header for breach/paste endpoints; Pwned Passwords range API typically needs no key."
+    "details": "hibp-api-key required for email/paste/protected-domain/stealer-log searches; breach catalogue and Pwned Passwords range endpoints unauthenticated."
   },
   "https": true,
   "cors": "unknown",
@@ -18,8 +18,8 @@
     "json"
   ],
   "pricing": {
-    "free_tier": false,
-    "free_tier_limits": "No free tier for breach/paste APIs (paid subscription only). Pwned Passwords range API is free and unauthenticated.",
+    "free_tier": true,
+    "free_tier_limits": "Pwned Passwords range API free/unauthenticated; breach catalogue (/breaches, /breach/{name}) free; paid subscription required for email/paste/domain search. Limited free breach monitoring advertised separately.",
     "paid_plans": null
   },
   "rate_limits": "Paid HIBP API keys rate-limited (~10 req/min standard); 429 with Retry-After. Pwned Passwords range has separate/high-volume guidance.",
@@ -93,6 +93,18 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

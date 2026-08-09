@@ -1,0 +1,17 @@
+{
+  "id": "ssllabs",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "No API key required; public free API. An identifying User-Agent is recommended for client tools but is not documented as a hard protocol requirement.",
+  "free_tier": null,
+  "free_tier_limits": "Free public API intended mainly for operators testing their own infrastructure; commercial use generally requires explicit Qualys permission. Usage also governed by dynamic rate limits and fair-use guidelines (no paid public API tier).",
+  "paid_plans": null,
+  "rate_limits": "Limits are dynamic: query GET /info for maxAssessments, currentAssessments, and newAssessmentCoolOff; honor response headers X-Max-Assessments and X-Current-Assessments. Excess new assessments receive HTTP 429. Prefer low concurrency and moderate polling (e.g. ~5s then ~10s).",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth.details: auditor correct. Official v3 docs (https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md) require no API key and never state a custom identifying User-Agent is mandatory; original overstated that. pricing.free_tier_limits: auditor correct. Same docs Terms and Conditions: APIs free for operators testing own infrastructure; commercial use generally not allowed without explicit Qualys permission (https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md#terms-and-conditions; https://www.ssllabs.com/about/terms.html). rate_limits: auditor correct. Docs do not hardcode 25 concurrent / 1 per second / ~400 per hour; they define dynamic maxAssessments, currentAssessments, newAssessmentCoolOff via /info plus X-Max-Assessments and X-Current-Assessments headers, with HTTP 429 on excess (https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md#access-rate-and-rate-limiting). status: not disputed; API remains documented and operational (v3 still listed; v4 also exists)."
+}

@@ -5,8 +5,8 @@
   "category": "education-reference",
   "tagline": "Authoritative English dictionary and thesaurus API for definitions, synonyms, and word data",
   "description": "Merriam-Webster's Dictionary API provides programmatic access to trusted English dictionary and thesaurus content, including definitions, pronunciations, etymologies, synonyms, antonyms, and example sentences. Developers get free API keys for the Collegiate Dictionary, Thesaurus, and other reference products, making it a standard choice for language tools, writing apps, and educational products.",
-  "base_url": "...",
-  "docs_url": "...",
+  "base_url": "https://www.dictionaryapi.com/api/v3/references",
+  "docs_url": "https://dictionaryapi.com/",
   "signup_url": "https://dictionaryapi.com/register/index",
   "auth": {
     "type": "apiKey",
@@ -20,10 +20,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "...",
+    "free_tier_limits": "Free only for non-commercial applications, limited to two reference APIs and 1,000 queries per day per API key/reference; commercial or higher-volume use requires a paid agreement.",
     "paid_plans": "Commercial/higher-volume plans available via Merriam-Webster sales"
   },
-  "rate_limits": "...",
+  "rate_limits": "1,000 queries per API key per day; contact Merriam-Webster for higher-volume use.",
   "example": {
     "request": "curl \"https://www.dictionaryapi.com/api/v3/references/collegiate/json/hello?key=YOUR_API_KEY\"",
     "response_snippet": "[{\"meta\":{\"id\":\"hello\",\"uuid\":\"...\",\"src\":\"collegiate\",\"section\":\"alpha\",\"stems\":[\"hello\"],\"offensive\":false},\"hwi\":{\"hw\":\"hel*lo\",\"prs\":[{\"mw\":\"h\u0259-\u02c8l\u014d\",\"sound\":{\"audio\":\"hello01\"}}]},\"fl\":\"interjection\",\"shortdef\":[\"used as a greeting or to begin a phone conversation\"]}]"
@@ -96,6 +96,26 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -1,0 +1,17 @@
+{
+  "id": "fingerprint",
+  "base_url": "https://api.fpjs.io",
+  "docs_url": "https://dev.fingerprint.com/docs",
+  "auth_type": "apiKey",
+  "auth_details": "secret API key via Authorization: Bearer; public client key for browser/mobile SDKs (v4)",
+  "free_tier": true,
+  "free_tier_limits": "1,000 web/iOS API calls per month; up to 500,000 Android calls per month; 14-day Pro Plus trial included",
+  "paid_plans": null,
+  "rate_limits": "5 requests/second for Free and Pro Plus; custom for Enterprise",
+  "cors": null,
+  "example_request": "curl -s https://api.fpjs.io/v4/events/EVENT_ID -H 'Authorization: Bearer YOUR_SECRET_API_KEY'",
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth.details: auditor correct \u2014 v4 uses Authorization: Bearer (https://dev.fingerprint.com/docs/server-api). free_tier_limits: auditor correct \u2014 Free is 1k web/iOS (https://fingerprint.com/pricing/). rate_limits: auditor correct \u2014 5 rps Free/Pro Plus (https://dev.fingerprint.com/docs/api-limits). example: auditor correct on v4 path+Bearer; response left null pending schema verify."
+}

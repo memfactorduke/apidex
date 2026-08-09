@@ -1,0 +1,17 @@
+{
+  "id": "postmark",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": "Basic $15/mo (10k emails; overages $1.80/1k); Pro $16.50/mo (10k; $1.30/1k); Platform $18/mo (10k; $1.20/1k); custom high-volume available",
+  "rate_limits": "No fixed numeric email-API rate is publicly documented; excessive request rates return HTTP 429. Batch sending supports up to 500 messages per request.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "pricing: auditor right \u2014 paid_plans was wrongly null; official pricing lists Free (100/mo), Basic $15, Pro $16.50, Platform $18 (all paid start at 10k emails) https://postmarkapp.com/pricing. rate_limits: auditor right \u2014 no public 10 msg/s email-API cap; docs only define HTTP 429 for excessive use https://postmarkapp.com/developer/api/overview; migration guide states no hard req/s limit https://postmarkapp.com/migration-guides/sendgrid; SMTP recommends 10 concurrent connections/IP (not msg/s) https://postmarkapp.com/support/article/do-we-have-rate-limits-for-smtp; Status API (separate) is 10 req/s https://status.postmarkapp.com/api; batch max 500 https://postmarkapp.com/developer/api/email-api"
+}

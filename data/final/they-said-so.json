@@ -20,13 +20,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "10 requests/hour unauthenticated; free API key raises limits \u2014 verify pricing page",
-    "paid_plans": null
+    "free_tier_limits": "Public endpoints: 10 calls/hour without authentication; higher limits require a paid plan.",
+    "paid_plans": "Premium $9.99/mo (2,500 calls/day), Ultra $24.99/mo (8,000/day), Enterprise $74.99/mo (unlimited). Confirm on pricing page before publish."
   },
   "rate_limits": "Free unauthenticated ~10 req/hour; higher on free key and paid plans (see pricing)",
   "example": {
     "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://quotes.rest/qod?language=en\"",
-    "response_snippet": "{\"success\":{\"total\":1},\"contents\":{\"quotes\":[{\"quote\":\"...\",\"author\":\"...\",\"tags\":[\"inspire\"],\"date\":\"2026-01-01\",\"id\":\"...\"}],\"copyright\":\"...\"}}"
+    "response_snippet": "{\"success\":{\"total\":1},\"contents\":{\"quotes\":[{\"quote\":\"...\",\"author\":\"...\",\"tags\":[\"inspire\"],\"date\":\"...\",\"id\":\"...\"}]},\"copyright\":{\"year\":2026,\"url\":\"https://theysaidso.com\"}}"
   },
   "use_cases": [
     "get the quote of the day",
@@ -93,6 +93,17 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

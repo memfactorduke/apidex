@@ -19,8 +19,8 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "20,000 requests/month free",
-    "paid_plans": null
+    "free_tier_limits": "Up to 20,000 requests/month for personal and hobby/non-commercial projects; attribution and active backlinks are required.",
+    "paid_plans": "Business: $149/month for up to 50,000 requests/month and commercial use; Enterprise: custom pricing, up to 1,000,000 requests/month."
   },
   "rate_limits": "not published beyond free tier monthly quota",
   "example": {
@@ -94,6 +94,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

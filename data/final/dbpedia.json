@@ -21,10 +21,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
+    "free_tier_limits": "10,000-row result cap; 120s query execution limit; 50 parallel connections/IP; 100 req/s/IP with initial burst of 120",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "100 requests/second/IP with burst 120; 50 parallel connections/IP; 10,000 rows; 120-second query execution limit",
   "example": {
     "request": "curl -G 'https://dbpedia.org/sparql' --data-urlencode 'query=SELECT ?label WHERE { dbr:Berlin rdfs:label ?label . FILTER (lang(?label) = \"en\") } LIMIT 1' -H 'Accept: application/sparql-results+json'",
     "response_snippet": "{\"head\":{\"vars\":[\"label\"]},\"results\":{\"bindings\":[{\"label\":{\"type\":\"literal\",\"xml:lang\":\"en\",\"value\":\"Berlin\"}}]}}"
@@ -95,6 +95,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

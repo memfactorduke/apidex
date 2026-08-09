@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free demo key 123 with limited data and rate limits; paid Premium plans for higher limits and full access (exact free quotas not clearly published on main API page)",
+    "free_tier_limits": "30 requests/minute, with endpoint-specific limits on returned records; public app-store releases require a paid subscription.",
     "paid_plans": "Premium membership tiers available via thesportsdb.com (check site for current pricing)"
   },
-  "rate_limits": "not published in detail on main docs; free demo key is rate-limited",
+  "rate_limits": "Free: 30 requests/minute; Premium: 100/minute; Business: 120/minute; excess requests return HTTP 429.",
   "example": {
     "request": "curl \"https://www.thesportsdb.com/api/v1/json/YOUR_API_KEY/searchteams.php?t=Arsenal\"",
-    "response_snippet": "{\"teams\":[{\"idTeam\":\"133604\",\"strTeam\":\"Arsenal\",\"strTeamShort\":\"Arsenal\",\"strAlternate\":\"Arsenal FC\",\"strLeague\":\"English Premier League\",\"strStadium\":\"Emirates Stadium\",\"strBadge\":\"https://...\"}]}"
+    "response_snippet": "{\"teams\":[{\"idTeam\":\"133604\",\"strTeam\":\"Arsenal\",\"strTeamShort\":\"ARS\",\"strAlternate\":\"Arsenal Football Club, AFC, Arsenal FC\",\"strLeague\":\"English Premier League\",\"strStadium\":\"Emirates Stadium\",\"strBadge\":\"https://...\"}]}"
   },
   "use_cases": [
     "search for a sports team by name and get badge/logo URL",
@@ -92,6 +92,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

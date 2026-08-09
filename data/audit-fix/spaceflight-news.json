@@ -1,0 +1,17 @@
+{
+  "id": "spaceflight-news",
+  "base_url": "https://api.spaceflightnewsapi.net/v4",
+  "docs_url": "https://www.spaceflightnewsapi.net/docs/",
+  "auth_type": "none",
+  "auth_details": "No authentication required for public read endpoints. Requests are made without API keys or OAuth.",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "paid_plans": null,
+  "rate_limits": "not published",
+  "cors": null,
+  "example_request": "curl \"https://api.spaceflightnewsapi.net/v4/articles/?limit=1\"",
+  "example_response_snippet": "{\n  \"count\": 0,\n  \"next\": null,\n  \"previous\": null,\n  \"results\": [\n    {\n      \"id\": 0,\n      \"title\": \"string\",\n      \"url\": \"string\",\n      \"image_url\": \"string\",\n      \"news_site\": \"string\",\n      \"summary\": \"string\",\n      \"published_at\": \"string\",\n      \"updated_at\": \"string\"\n    }\n  ]\n}",
+  "description": "The Spaceflight News API (SNAPI) is a free, public REST API that aggregates spaceflight news articles, blogs, and reports from major space-related publishers. It provides paginated JSON endpoints for articles, blogs, reports, and related metadata, and is commonly used by space apps, dashboards, and educational projects. No authentication is required for standard access.",
+  "status": "operational",
+  "resolution_notes": ""
+}

@@ -5,7 +5,7 @@
   "category": "transportation",
   "tagline": "NYC real-time bus arrivals and vehicle locations via SIRI and GTFS-RT",
   "description": "MTA Bus Time provides real-time New York City bus arrival predictions, vehicle locations, and stop/route data through SIRI (Service Interface for Real Time Information) REST endpoints and GTFS-Realtime feeds. Developers register for an API key and query stop monitoring, vehicle monitoring, and related discovery services for MTA bus routes across the five boroughs.",
-  "base_url": "https://bustime.mta.info/api",
+  "base_url": "https://bustime-classic.mta.info/api",
   "docs_url": "https://bustime.mta.info/wiki/Developers/Index",
   "signup_url": "https://bustime.mta.info/wiki/Developers/Register",
   "auth": {
@@ -20,12 +20,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free with API key registration for non-commercial use; commercial use requires separate approval (per registration terms)",
+    "free_tier_limits": "Free with API key registration; available to anyone who registers",
     "paid_plans": null
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl \"https://bustime.mta.info/api/siri/stop-monitoring.json?key=YOUR_API_KEY&MonitoringRef=MTA_401000&LineRef=MTA%20NYCT_M15\"",
+    "request": "curl \"https://bustime-classic.mta.info/api/siri/stop-monitoring.json?key=YOUR_API_KEY&MonitoringRef=401000&LineRef=MTA%20NYCT_M15\"",
     "response_snippet": "{\"Siri\":{\"ServiceDelivery\":{\"ResponseTimestamp\":\"2026-01-15T12:00:00-05:00\",\"StopMonitoringDelivery\":[{\"MonitoredStopVisit\":[{\"MonitoredVehicleJourney\":{\"LineRef\":\"MTA NYCT_M15\",\"PublishedLineName\":\"M15\",\"DestinationName\":\"East Harlem\",\"MonitoredCall\":{\"ExpectedArrivalTime\":\"2026-01-15T12:08:00-05:00\",\"StopPointName\":\"1 AV/E 14 ST\"}}]}]}}}"
   },
   "use_cases": [
@@ -93,6 +93,17 @@
     "corrected": [
       "free_tier_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "free_tier_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

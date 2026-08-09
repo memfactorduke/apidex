@@ -10,7 +10,7 @@
   "signup_url": "https://data.nasdaq.com/sign-up",
   "auth": {
     "type": "apiKey",
-    "details": "API key via query parameter api_key=YOUR_API_KEY or Authorization header; free self-serve signup at data.nasdaq.com"
+    "details": "API key via the api_key query parameter (api_key=YOUR_API_KEY); free self-serve signup at data.nasdaq.com"
   },
   "https": true,
   "cors": "unknown",
@@ -20,13 +20,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free tier available with limited calls; exact limits vary by plan\u2014verify on account page",
+    "free_tier_limits": "Authenticated non-premium: 300 calls/10s, 2,000 calls/10 min, 50,000 calls/day; concurrency 1 (one in-flight + one queued). Anonymous: 20 calls/10 min and 50/day.",
     "paid_plans": "Usage-based and subscription plans for premium datasets and higher limits"
   },
-  "rate_limits": "not published precisely for free tier; check account dashboard",
+  "rate_limits": "Non-premium authenticated: 300/10s, 2,000/10 min, 50,000/day, concurrency 1. Premium (tables sub): 5,000/10 min, 720,000/day. Anonymous: 20/10 min, 50/day. Bulk export: 60/hour.",
   "example": {
-    "request": "curl \"https://data.nasdaq.com/api/v3/datasets/WIKI/AAPL/data.json?api_key=YOUR_API_KEY&rows=3\"",
-    "response_snippet": "{\"dataset_data\":{\"column_names\":[\"Date\",\"Open\",\"High\",\"Low\",\"Close\",\"Volume\"],\"data\":[[\"2018-03-27\",173.68,175.15,166.92,168.34,38962839]]}}"
+    "request": "curl \"https://data.nasdaq.com/api/v3/datatables/CFTC/F_L_ALL.json?qopts.per_page=1&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"datatable\":{\"data\":[[...]],\"columns\":[{\"name\":\"...\",\"type\":\"...\"}]},\"meta\":{\"next_cursor_id\":null}} (tables JSON shape; live rows require a free API key\u2014endpoint returns QEPx04 without key, not 410)"
   },
   "use_cases": [
     "fetch historical stock OHLCV for a ticker",
@@ -92,6 +92,19 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "rate_limits",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

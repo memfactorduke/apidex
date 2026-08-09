@@ -1,0 +1,17 @@
+{
+  "id": "messari",
+  "base_url": "https://api.messari.io",
+  "docs_url": "https://docs.messari.io",
+  "auth_type": "apiKey",
+  "auth_details": "API key authentication; exact header/query scheme verified from official docs when available.",
+  "free_tier": true,
+  "free_tier_limits": "Unpaid/Lite/Pro: 200 req/min (non-enterprise-gated endpoints). MessariAI Free: 10 req/day. Marketing may claim ~20 rpm free.",
+  "paid_plans": null,
+  "rate_limits": "Unpaid/Lite/Pro: 200 req/min; Enterprise: 600 req/min (global). Service-level limits per endpoint. MessariAI Free: 10/day; Enterprise AI: 600/min.",
+  "cors": "unknown",
+  "example_request": "curl -s \"https://api.messari.io/metrics/v2/assets\" -H \"x-messari-api-key: YOUR_API_KEY\"",
+  "example_response_snippet": "{\"data\":[{\"id\":\"...\",\"symbol\":\"BTC\",\"name\":\"Bitcoin\",...}],\"metadata\":{...}}",
+  "description": "Messari provides a developer API for cryptocurrency market data, asset profiles, quantitative metrics, news, and research. Developers use it to pull token fundamentals, price/market stats, and project intelligence into apps, dashboards, and agents. Access is typically API-key authenticated against Messari's documented API base URL.",
+  "status": "operational",
+  "resolution_notes": ""
+}

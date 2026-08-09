@@ -4,13 +4,13 @@
   "name": "data.gov",
   "category": "data-analytics",
   "tagline": "US federal open data catalog API for discovering and accessing government datasets",
-  "description": "data.gov is the United States government's open data catalog, providing a CKAN-based API to search, discover, and retrieve metadata for federal datasets across agencies. Developers can query packages, organizations, and resources programmatically without authentication for most catalog operations.",
-  "base_url": "https://catalog.data.gov/api/3/action",
-  "docs_url": "https://docs.ckan.org/en/latest/api/",
+  "description": "data.gov Catalog API v4 is the current GSA API for searching open-data catalog metadata across federal, state, local, and tribal sources. The older CKAN API at catalog.data.gov remains available as a read-only legacy interface; new integrations should use v4 with an api.data.gov key.",
+  "base_url": "https://api.gsa.gov/technology/datagov/v4/",
+  "docs_url": "https://resources.data.gov/catalog-api/",
   "signup_url": null,
   "auth": {
-    "type": "none",
-    "details": "Most catalog endpoints require no authentication. Some write or agency-specific operations may require API keys; public read access is unauthenticated."
+    "type": "apiKey",
+    "details": "Requires X-Api-Key header (api.data.gov key). DEMO_KEY allowed for limited exploration."
   },
   "https": true,
   "cors": "unknown",
@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free public access; no published request quota for catalog API",
+    "free_tier_limits": "Personal keys: 1,000 requests/hour; DEMO_KEY: 30 requests/IP/hour and 50 requests/IP/day.",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Personal key: 1,000 requests/hour; DEMO_KEY: 30 requests/IP/hour and 50 requests/IP/day.",
   "example": {
-    "request": "curl \"https://catalog.data.gov/api/3/action/package_search?q=climate&rows=5\"",
-    "response_snippet": "{\"help\": \"https://catalog.data.gov/api/3/action/help_show?name=package_search\", \"success\": true, \"result\": {\"count\": 12345, \"results\": [{\"id\": \"...\", \"name\": \"...\", \"title\": \"...\"}]}}"
+    "request": "curl -H \"X-Api-Key: DEMO_KEY\" \"https://api.gsa.gov/technology/datagov/v4/search?q=climate&per_page=5\"",
+    "response_snippet": "{\"data\":[{\"id\":\"...\",\"type\":\"dataset\",\"attributes\":{\"title\":\"...\",\"description\":\"...\"}}],\"links\":{\"self\":\"...\",\"next\":\"...\"},\"meta\":{\"total\":12345}}"
   },
   "use_cases": [
     "search federal open datasets by keyword",
@@ -94,6 +94,24 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

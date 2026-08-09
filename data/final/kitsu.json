@@ -10,7 +10,7 @@
   "signup_url": "https://kitsu.io/",
   "auth": {
     "type": "oauth2",
-    "details": "OAuth2 password or client credentials for write/user endpoints; many public catalog endpoints work unauthenticated. Register an OAuth application in account settings."
+    "details": "OAuth2 password grant at POST /api/oauth/token (refresh_token supported); then Authorization: Bearer. Client-credentials and self-service app registration are not implemented (docs supply a shared client_id). Many public catalog GETs work unauthenticated."
   },
   "https": true,
   "cors": "unknown",
@@ -24,7 +24,7 @@
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl -s \"https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop\" -H \"Accept: application/vnd.api+json\"",
+    "request": "curl -s 'https://kitsu.io/api/edge/anime?filter%5Btext%5D=cowboy%20bebop' -H 'Accept: application/vnd.api+json'",
     "response_snippet": "{\"data\":[{\"id\":\"1\",\"type\":\"anime\",\"attributes\":{\"slug\":\"cowboy-bebop\",\"canonicalTitle\":\"Cowboy Bebop\",\"averageRating\":\"82.39\",\"episodeCount\":26}}],\"meta\":{\"count\":1}}"
   },
   "use_cases": [
@@ -92,6 +92,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

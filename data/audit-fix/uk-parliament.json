@@ -1,0 +1,17 @@
+{
+  "id": "uk-parliament",
+  "base_url": "https://members-api.parliament.uk/api",
+  "docs_url": "https://developer.parliament.uk/",
+  "auth_type": "none",
+  "auth_details": "Public open-data endpoints require no API key or signup; call HTTPS endpoints directly. Confirm per-service docs if any restricted routes exist.",
+  "free_tier": true,
+  "free_tier_limits": "Free open data; no paid plans published",
+  "paid_plans": null,
+  "rate_limits": "not published (rate limiting mentioned generically; no public numeric limits)",
+  "cors": "unknown",
+  "example_request": "curl -s \"https://members-api.parliament.uk/api/Members/Search?Name=Sunak&take=1\" -H \"Accept: application/json\"",
+  "example_response_snippet": "{\"items\":[{\"value\":{\"id\":4212,\"nameDisplayAs\":\"Rishi Sunak\",\"nameListAs\":\"Sunak, Rishi\",\"nameFullTitle\":\"Rishi Sunak\",\"nameAddressAs\":\"Rishi Sunak\",\"latestParty\":{\"id\":4,\"name\":\"Conservative\",\"abbreviation\":\"Con\"},\"gender\":\"Male\",\"latestHouseMembership\":{\"membershipFrom\":\"Richmond (Yorks)\",\"membershipFromId\":388,\"membershipStartDate\":\"2015-05-07T00:00:00\",\"membershipEndDate\":null,\"membershipStatus\":{\"statusIsActive\":true}}}}],\"totalResults\":1}",
+  "description": "A family of free open-data APIs from the UK Parliament for Members, interests, Commons votes, committees, bills, statutory instruments, and related parliamentary information. The official developer hub at developer.parliament.uk lists the supported public endpoints; many modern services use subdomain APIs (e.g. members-api, bills-api) with OpenAPI specs and no authentication for public read access.",
+  "status": "operational",
+  "resolution_notes": ""
+}

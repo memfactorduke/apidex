@@ -1,0 +1,17 @@
+{
+  "id": "sportradar",
+  "base_url": "https://api.sportradar.com",
+  "docs_url": "https://developer.sportradar.com/",
+  "auth_type": "apiKey",
+  "auth_details": "API key in the x-api-key request header; obtain trial or licensed product access through the Sportradar developer account.",
+  "free_tier": false,
+  "free_tier_limits": "no free tier",
+  "paid_plans": "Commercial enterprise pricing; trial access available via developer portal \u2014 contact sales for production plans.",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -s \"https://api.sportradar.com/nba/trial/v8/en/games/2024/REG/schedule.json\" -H \"accept: application/json\" -H \"x-api-key: YOUR_API_KEY\"",
+  "example_response_snippet": "{\n  \"league\": { \"id\": \"4353138d-4c22-4396-95d8-5f587d2df25c\", \"name\": \"NBA\", \"alias\": \"NBA\" },\n  \"season\": { \"id\": \"...guid...\", \"year\": 2024, \"type\": \"REG\" },\n  \"games\": [ { \"id\": \"...\", \"status\": \"closed\", \"home\": { \"name\": \"...\" }, \"away\": { \"name\": \"...\" } } ]\n}",
+  "description": "Sportradar provides enterprise-grade sports data APIs covering live scores, play-by-play, statistics, odds, and media content for major leagues and sports worldwide. Access is typically via API keys through partner or trial onboarding rather than fully open self-serve signup; confirm current trial and commercial terms on developer.sportradar.com.",
+  "status": "operational",
+  "resolution_notes": "base_url: Auditor correct \u2014 official docs/examples use https://api.sportradar.com (not .us). Evidence: https://developer.sportradar.com/ | auth.details: Auditor correct \u2014 current auth is x-api-key header; query-string keys deprecated (stop Nov 13, 2026). Evidence: https://developer.sportradar.com/ | example.request: Auditor correct \u2014 use .com host + x-api-key header. Evidence: https://developer.sportradar.com/ | example.response_snippet: Auditor correct \u2014 NBA v8 uses GUIDs for league/season IDs, not sr:league/sr:season. Evidence: https://developer.sportradar.com/"
+}

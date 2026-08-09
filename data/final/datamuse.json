@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
+    "free_tier_limits": "Up to 100,000 requests per day without a key until January 1, 2027; thereafter an API key is required with a 100,000-request daily limit per key.",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "100,000 requests/day; beyond that, requests may be rate-limited without notice. From January 1, 2027, an API key is required and the same daily limit applies per key.",
   "example": {
     "request": "curl \"https://api.datamuse.com/words?rel_rhy=forgetful&max=5\"",
     "response_snippet": "[{\"word\":\"regretful\",\"score\":441,\"numSyllables\":3},{\"word\":\"fretful\",\"score\":337,\"numSyllables\":2}]"
@@ -91,6 +91,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

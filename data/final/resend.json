@@ -22,7 +22,7 @@
     "free_tier_limits": "Free plan: 3,000 emails/month and 100 emails/day; 1 custom domain (confirm against current pricing).",
     "paid_plans": null
   },
-  "rate_limits": "Default ~2 requests/second for most endpoints; higher on paid plans; separate daily/monthly send quotas (confirm against current rate-limit docs).",
+  "rate_limits": "Default maximum 10 requests/second per team (shared across all API keys); increasable for trusted senders on request. Daily/monthly email quotas apply separately.",
   "example": {
     "request": "curl -X POST 'https://api.resend.com/emails' -H 'Authorization: Bearer YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"from\":\"Acme <onboarding@resend.dev>\",\"to\":[\"delivered@resend.dev\"],\"subject\":\"Hello\",\"html\":\"<p>Hi</p>\"}'",
     "response_snippet": "{\"id\":\"49a3999c-0ce1-4ea6-ab68-afcd6dc2e794\"}"
@@ -92,6 +92,15 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

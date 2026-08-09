@@ -1,0 +1,17 @@
+{
+  "id": "nasdaq-data-link",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "API key via the api_key query parameter (api_key=YOUR_API_KEY); free self-serve signup at data.nasdaq.com",
+  "free_tier": null,
+  "free_tier_limits": "Authenticated non-premium: 300 calls/10s, 2,000 calls/10 min, 50,000 calls/day; concurrency 1 (one in-flight + one queued). Anonymous: 20 calls/10 min and 50/day.",
+  "paid_plans": null,
+  "rate_limits": "Non-premium authenticated: 300/10s, 2,000/10 min, 50,000/day, concurrency 1. Premium (tables sub): 5,000/10 min, 720,000/day. Anonymous: 20/10 min, 50/day. Bulk export: 60/hour.",
+  "cors": null,
+  "example_request": "curl \"https://data.nasdaq.com/api/v3/datatables/CFTC/F_L_ALL.json?qopts.per_page=1&api_key=YOUR_API_KEY\"",
+  "example_response_snippet": "{\"datatable\":{\"data\":[[...]],\"columns\":[{\"name\":\"...\",\"type\":\"...\"}]},\"meta\":{\"next_cursor_id\":null}} (tables JSON shape; live rows require a free API key\u2014endpoint returns QEPx04 without key, not 410)",
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth.details: auditor right\u2014current docs document only api_key query param, not Authorization (https://docs.data.nasdaq.com/docs/api-and-analysis-tools-for-tables-data). free_tier_limits+rate_limits: auditor right\u2014exact published limits at https://docs.data.nasdaq.com/docs/rate-limits-1. example.request: auditor right\u2014WIKI EOD discontinued/unavailable (https://data.nasdaq.com/databases/WIKIP); replaced with free CFTC tables product (https://docs.data.nasdaq.com/docs/data-organization); live probe returned QEPx04 (key required), not Gone."
+}

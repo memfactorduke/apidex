@@ -1,0 +1,17 @@
+{
+  "id": "freetogame",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "Free for personal and commercial use with linked attribution to FreeToGame; avoid exceeding 10 requests/second.",
+  "paid_plans": null,
+  "rate_limits": "Avoid more than 10 requests per second.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": "[{\"id\":1,\"title\":\"...\",\"thumbnail\":\"...\",\"short_description\":\"...\",\"game_url\":\"...\",\"genre\":\"...\",\"platform\":\"Web Browser\",\"publisher\":\"...\",\"developer\":\"...\",\"release_date\":\"...\",\"freetogame_profile_url\":\"...\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: auditor correct \u2014 official API docs state free personal/commercial use with attribution and a 10 req/s guideline (https://www.freetogame.com/api-doc). rate_limits: auditor correct \u2014 same docs publish \"avoid more than 10 requests per second\" (https://www.freetogame.com/api-doc). example.response_snippet: auditor correct \u2014 sample used platform=browser but showed platform \"PC (Windows)\"; corrected snippet uses \"Web Browser\" to match the filter."
+}

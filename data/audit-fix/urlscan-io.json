@@ -1,0 +1,17 @@
+{
+  "id": "urlscan-io",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "Free plan daily quotas (via UI or API): 50 private scans, 1,000 unlisted scans, 5,000 public scans, 1,000 search requests, 1,000 result requests; per-minute/hour caps also apply (see /user/quotas/).",
+  "paid_plans": "API Only Automate from $5,000/yr; Professional $1,250/mo ($12,500/yr); Enterprise $2,500/mo ($25,000/yr); Ultimate $5,000/mo ($50,000/yr). 30-day commercial trials available.",
+  "rate_limits": "Per-action quotas with separate minute, hour, and day windows; HTTP 429 when exceeded; exact limits via GET https://urlscan.io/user/quotas/ (or /api/v1/quotas) and X-Rate-Limit-* response headers. Fixed-window resets at full minute/hour and midnight UTC; only HTTP 200 counts.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "pricing.free_tier_limits: AUDITOR RIGHT that \"unknown\" was wrong\u2014free quotas are published. Pricing page (https://urlscan.io/pricing/) lists Free at $0 with Daily API & Platform Quotas; auditor\u2019s 50 private / 1k unlisted / 5k public / 1k search matches typical Free-plan figures cited in secondary sources and plan tables. Live /user/quotas/ for unauthenticated sessions shows lower anonymous caps (e.g. 25 private, 500 unlisted, 2500 public, 500 search/day)\u2014registered Free is higher. Also populate paid_plans from same page. rate_limits: AUDITOR RIGHT\u2014\"not published\" is false. Official docs https://urlscan.io/docs/api/ and https://docs.urlscan.io/pages/api-rate-limits document per-action minute/hour/day limits, /user/quotas/ (and /api/v1/quotas), and X-Rate-Limit-* headers; 429 on exceed."
+}

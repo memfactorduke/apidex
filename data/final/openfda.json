@@ -22,7 +22,7 @@
     "free_tier_limits": "Free public API; higher limits with free API key (see rate_limits)",
     "paid_plans": null
   },
-  "rate_limits": "Without key: 40 req/min, 1,000/day. With key: 240 req/min, 120,000/day (verify against current docs)",
+  "rate_limits": "Without key: 240 req/min, 1,000/day (per IP). With key: 240 req/min, 120,000/day (per key).",
   "example": {
     "request": "curl \"https://api.fda.gov/drug/event.json?search=patient.drug.openfda.brand_name:lipitor&limit=1\"",
     "response_snippet": "{\"meta\":{\"disclaimer\":\"Do not rely on openFDA to make decisions regarding medical care...\",\"results\":{\"skip\":0,\"limit\":1,\"total\":...}},\"results\":[{\"safetyreportid\":\"...\",\"patient\":{...}}]}"
@@ -94,6 +94,15 @@
     "corrected": [],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

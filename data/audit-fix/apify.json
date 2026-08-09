@@ -1,0 +1,17 @@
+{
+  "id": "apify",
+  "base_url": "https://api.apify.com/v2",
+  "docs_url": "https://docs.apify.com/api/v2",
+  "auth_type": "apiKey",
+  "auth_details": "API token via Authorization: Bearer YOUR_API_TOKEN or token query parameter; self-serve signup",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "paid_plans": null,
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.apify.com/v2/users/me\"",
+  "example_response_snippet": "{\"data\":{\"id\":\"...\",\"username\":\"...\"}}",
+  "description": "Apify is a cloud platform for running web scraping and automation Actors. It provides REST APIs to start runs, store datasets, manage key-value stores, and integrate scrapers into applications.",
+  "status": "operational",
+  "resolution_notes": "Awaiting live verification of free-tier limits and paid plans."
+}

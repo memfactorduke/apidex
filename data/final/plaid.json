@@ -19,12 +19,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "Sandbox always free (simulated data). US/Canada Trial (new teams on/after 2026-04-15): free production data, max 10 Items, bundled core products.",
+    "paid_plans": "Pay-as-you-go (no minimum/commitment, usage-based, up to ~$6k/mo); Growth; Custom/Scale (sales). Exact rates via Production access application."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Endpoint-specific published limits. e.g. Production /accounts/get: 15 req/min per Item, 15,000/min per client (Sandbox: 100/min Item, 5,000/min client). See docs rate-limit table.",
   "example": {
-    "request": "curl -X POST https://production.plaid.com/accounts/get -H 'Content-Type: application/json' -d '{\"client_id\":\"YOUR_CLIENT_ID\",\"secret\":\"YOUR_API_KEY\",\"access_token\":\"access-sandbox-xxx\"}'",
+    "request": "curl -X POST https://sandbox.plaid.com/accounts/get -H 'Content-Type: application/json' -d '{\"client_id\":\"YOUR_CLIENT_ID\",\"secret\":\"YOUR_SANDBOX_SECRET\",\"access_token\":\"access-sandbox-xxx\"}'",
     "response_snippet": "{\"accounts\":[{\"account_id\":\"...\",\"balances\":{\"available\":100,\"current\":110},\"name\":\"Checking\"}],\"item\":{\"item_id\":\"...\"}}"
   },
   "use_cases": [
@@ -91,6 +91,19 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

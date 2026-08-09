@@ -1,0 +1,17 @@
+{
+  "id": "easypost",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "Free access with EasyPost Wallet Carriers for up to 3,000 labels (postage excluded); after that, per-label fees apply. Bring Your Own Carrier Account (BYOCA) is $20/month plus applicable per-label fees; enterprise pricing is custom.",
+  "paid_plans": "Pay-as-you-go with per-label fees after free tier; BYOCA $20/month + per-label fees; higher/enterprise tiers custom. Carrier postage and label fees vary by carrier and volume.",
+  "rate_limits": "Index endpoints limited to 5 requests/second; other endpoint or carrier-specific limits may apply. Handle HTTP 429 with retry/backoff.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "pricing.free_tier_limits: AUDITOR RIGHT. Official pricing (https://www.easypost.com/pricing) states free Wallet Carrier access for up to 3,000 labels (postage excluded) then per-label charges; BYOCA is $20/month plus per-label fees; enterprise is custom. Original \"not fully confirmed\" is stale. rate_limits: AUDITOR RIGHT. EasyPost docs (https://docs.easypost.com/docs/errors \u2014 rate limiting / Index endpoints) publish a 5 requests/second limit on Index endpoints and HTTP 429 handling; \"not published\" is false."
+}

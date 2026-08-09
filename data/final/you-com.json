@@ -5,7 +5,7 @@
   "category": "data-analytics",
   "tagline": "AI-native web search API for real-time results and citations",
   "description": "You.com Search API provides AI-powered web search for developers and agents. It returns ranked results, snippets, and source citations suitable for grounding LLM answers, research workflows, and retrieval-augmented generation. Typical use is server-side with an API key; confirm current endpoints, auth headers, free-tier quotas, and rate limits in the official docs and pricing pages before production use.",
-  "base_url": "https://api.ydc-index.io",
+  "base_url": "https://api.you.com",
   "docs_url": "https://documentation.you.com/api-reference",
   "signup_url": "https://you.com/platform",
   "auth": {
@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "100 queries/day on free search profile (per published docs); confirm current quotas on pricing/docs before production.",
+    "paid_plans": "Pay-as-you-go / published Web Search pricing per 1,000 calls plus complimentary credits on pricing page \u2014 verify current $ amounts on official pricing."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Free search profile: 100 queries/day; paid/auth tiers subscription-dependent; limits also exposed via X-RateLimit response headers.",
   "example": {
-    "request": "curl -s \"https://api.ydc-index.io/v1/search?query=latest%20AI%20news\" -H \"X-API-Key: YOUR_API_KEY\"",
-    "response_snippet": "{\"results\":[{\"title\":\"...\",\"url\":\"https://...\",\"snippets\":[\"...\"]}],\"metadata\":{\"query\":\"latest AI news\"}}"
+    "request": "curl -G 'https://api.you.com/v1/search' -H 'X-API-Key: YOUR_API_KEY' --data-urlencode 'query=latest AI news'",
+    "response_snippet": "{\"results\":{\"web\":[{\"url\":\"https://...\",\"title\":\"...\",\"description\":\"...\",\"snippets\":[\"...\"]}],\"news\":[]}}"
   },
   "use_cases": [
     "run web search for a coding agent answer with citations",
@@ -94,6 +94,26 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

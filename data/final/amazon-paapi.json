@@ -24,7 +24,7 @@
   },
   "rate_limits": "Account-based; starts low and scales with revenue (commonly cited: 1 TPD initially, increases with shipped-item revenue). Exact current formula in official docs / account dashboard.",
   "example": {
-    "request": "curl -X POST 'https://webservices.amazon.com/paapi5/searchitems' -H 'Content-Type: application/json; charset=utf-8' -H 'X-Amz-Target: com.amazon.paapi5.v1.ProductAdvertisingAPIv1.SearchItems' -H 'Content-Encoding: amz-1.0' --aws-sigv4 'aws:amz:us-east-1:ProductAdvertisingAPI' --user 'YOUR_ACCESS_KEY:YOUR_SECRET_KEY' -d '{\"PartnerTag\":\"YOUR_PARTNER_TAG\",\"PartnerType\":\"Associates\",\"Keywords\":\" mechan\",\"SearchIndex\":\"All\",\"ItemCount\":1,\"Resources\":[\"ItemInfo.Title\",\"Offers.Listings.Price\"]}'",
+    "request": "curl -X POST 'https://webservices.amazon.com/paapi5/searchitems' -H 'Content-Type: application/json; charset=utf-8' -H 'X-Amz-Target: com.amazon.paapi5.v1.ProductAdvertisingAPIv1.SearchItems' -H 'Content-Encoding: amz-1.0' --aws-sigv4 'aws:amz:us-east-1:ProductAdvertisingAPI' --user 'YOUR_ACCESS_KEY:YOUR_SECRET_KEY' -d '{\"PartnerTag\":\"YOUR_PARTNER_TAG\",\"PartnerType\":\"Associates\",\"Keywords\":\" headphones\",\"SearchIndex\":\"All\",\"ItemCount\":1,\"Resources\":[\"ItemInfo.Title\",\"Offers.Listings.Price\"]}'",
     "response_snippet": "{\"SearchResult\":{\"Items\":[{\"ASIN\":\"B08N5WRWNW\",\"DetailPageURL\":\"https://www.amazon.com/dp/B08N5WRWNW?tag=YOUR_PARTNER_TAG\",\"ItemInfo\":{\"Title\":{\"DisplayValue\":\"Example Product\"}},\"Offers\":{\"Listings\":[{\"Price\":{\"DisplayAmount\":\"$29.99\",\"Amount\":29.99,\"Currency\":\"USD\"}}]}}],\"TotalResultCount\":1}}"
   },
   "use_cases": [
@@ -93,6 +93,26 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

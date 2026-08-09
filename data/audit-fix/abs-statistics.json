@@ -1,0 +1,17 @@
+{
+  "id": "abs-statistics",
+  "base_url": "https://data.api.abs.gov.au/rest",
+  "docs_url": "https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis",
+  "auth_type": "none",
+  "auth_details": "No authentication required for public ABS.Stat open data endpoints; requests are unauthenticated HTTPS GETs.",
+  "free_tier": true,
+  "free_tier_limits": "Public open data; no charge for standard API use (fair-use / capacity limits may apply)",
+  "paid_plans": null,
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl -s \"https://data.api.abs.gov.au/rest/data/CPI_Q/1.50.10001.10.Q?startPeriod=2020-Q1&endPeriod=2020-Q4&format=jsondata\"",
+  "example_response_snippet": "{\"meta\":{\"schema\":\"https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/data-message/tools/schemas/2.0.0/sdmx-json-data-schema.json\",\"id\":\"...\",\"prepared\":\"...\",\"contentLanguages\":[\"en\"],\"sender\":{\"id\":\"ABS\"}},\"data\":{\"dataSets\":[{\"action\":\"Information\",\"series\":{\"0:0:0:0:0\":{\"observations\":{\"0\":[116.6],\"1\":[114.4]}}}}],\"structures\":[{\"dimensions\":{\"series\":[...],\"observation\":[{\"id\":\"TIME_PERIOD\",\"values\":[{\"id\":\"2020-Q1\"},{\"id\":\"2020-Q2\"}]}]}}]}",
+  "description": "Official Australian Bureau of Statistics (ABS.Stat) web services expose economic, demographic, labour, and census datasets via SDMX-JSON (and related) REST endpoints at data.api.abs.gov.au. Developers query dataflows, structure, and observations without an API key for public open data use cases.",
+  "status": "operational",
+  "resolution_notes": "base_url: Auditor correct \u2014 official docs (abs.gov.au APIs page, 2024-11-29 change) and live probes show current REST root is https://data.api.abs.gov.au/rest; old api.data.abs.gov.au is retired. example: Auditor correct \u2014 rebuilt with current host/path and CPI_Q dataflow (version omitted for latest); response uses current SDMX-JSON meta/data envelope. Evidence: https://www.abs.gov.au/about/data-services/application-programming-interfaces-apis and https://data.api.abs.gov.au/rest"
+}

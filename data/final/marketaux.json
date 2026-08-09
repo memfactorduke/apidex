@@ -10,7 +10,7 @@
   "signup_url": "https://www.marketaux.com/register",
   "auth": {
     "type": "apiKey",
-    "details": "API key via token query parameter (token=YOUR_API_KEY), self-serve signup"
+    "details": "API token via api_token=YOUR_API_TOKEN query parameter; self-serve signup."
   },
   "https": true,
   "cors": "unknown",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "100 API credits/day (Basic/free plan); credits may differ from request count depending on endpoint usage",
-    "paid_plans": "Starter, Professional, Business tiers with higher limits \u2014 see marketaux.com/pricing"
+    "free_tier_limits": "100 requests/day; up to 3 articles per news request.",
+    "paid_plans": "Basic (2,500 req/day), Standard (10,000), Pro (25,000), Pro 50K (50,000); custom plans available \u2014 see marketaux.com/pricing"
   },
-  "rate_limits": "100 API credits/day on free tier; higher daily credit limits on paid plans (see marketaux.com/pricing)",
+  "rate_limits": "Daily request quotas: Free 100, Basic 2,500, Standard 10,000, Pro 25,000, Pro 50K 50,000.",
   "example": {
     "request": "curl \"https://api.marketaux.com/v1/news/all?symbols=AAPL&filter_entities=true&language=en&api_token=YOUR_API_KEY\"",
     "response_snippet": "{\"meta\":{\"found\":1000000,\"returned\":3,\"limit\":3,\"page\":1},\"data\":[{\"uuid\":\"...\",\"title\":\"Apple announces...\",\"description\":\"...\",\"snippet\":\"...\",\"url\":\"https://...\",\"image_url\":\"https://...\",\"language\":\"en\",\"published_at\":\"2024-01-15T10:30:00.000000Z\",\"source\":\"...\",\"relevance_score\":null,\"entities\":[{\"symbol\":\"AAPL\",\"name\":\"Apple Inc\",\"exchange\":null,\"exchange_long\":null,\"country\":\"us\",\"type\":\"equity\",\"industry\":\"Technology\",\"match_score\":26.5,\"sentiment_score\":0.65,\"highlights\":[...]}]}]}"
@@ -96,6 +96,18 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

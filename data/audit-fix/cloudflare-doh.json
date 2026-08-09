@@ -1,0 +1,17 @@
+{
+  "id": "cloudflare-doh",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": "Free public resolver with no published normal-use quota; unusual high-rate or abusive traffic may be rate-limited.",
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "Auditor correct on pricing.free_tier_limits. Official 1.1.1.1 / DoH docs present it as free public use without a published normal quota, but Cloudflare documents that abusive, high-rate, or non-typical traffic can be rate-limited\u2014so \"unlimited\" is too absolute. Evidence: https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/ and related 1.1.1.1 privacy/terms pages noting fair-use / anti-abuse limits."
+}

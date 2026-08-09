@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown \u2014 verify on pricing page",
-    "paid_plans": null
+    "free_tier_limits": "Registered Free plan: 50K IP Geolocation API queries/month, 11 IP attributes, attribution required. Keyless (no API key): 1,000 queries/day with attribution.",
+    "paid_plans": "Starter $49/mo (150K geo queries); Plus $249/mo (300K); Security $499/mo (600K). Paid plans do not require attribution; overage available on commercial tiers."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Keyless: 1,000 queries/day (resets 00:00 UTC). Registered Free: 50,000 queries/month. No separate public per-second/RPS ceiling found on official pricing/docs.",
   "example": {
     "request": "curl \"https://api.ip2location.io/?key=YOUR_API_KEY&ip=8.8.8.8\"",
     "response_snippet": "{\"ip\":\"8.8.8.8\",\"country_code\":\"US\",\"country_name\":\"United States of America\",\"region_name\":\"California\",\"city_name\":\"Mountain View\",\"latitude\":37.405992,\"longitude\":-122.078515,\"zip_code\":\"94043\",\"time_zone\":\"-07:00\",\"asn\":\"15169\",\"as\":\"Google LLC\",\"is_proxy\":false}"
@@ -90,6 +90,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

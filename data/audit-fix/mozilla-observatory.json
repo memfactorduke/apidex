@@ -1,0 +1,17 @@
+{
+  "id": "mozilla-observatory",
+  "base_url": "https://observatory-api.mdn.mozilla.net/api/v2",
+  "docs_url": "https://github.com/mdn/mdn-http-observatory/blob/main/src/api/v2/README.md",
+  "auth_type": "none",
+  "auth_details": "No authentication required for public scan and result endpoints.",
+  "free_tier": true,
+  "free_tier_limits": "unknown",
+  "paid_plans": null,
+  "rate_limits": "One new scan per host per minute; cached results may be returned during the cooldown.",
+  "cors": "unknown",
+  "example_request": "curl -s -X POST \"https://observatory-api.mdn.mozilla.net/api/v2/scan?host=example.com\"",
+  "example_response_snippet": "{\"id\":...,\"details_url\":\"https://developer.mozilla.org/en-US/observatory/analyze?host=example.com\",\"algorithm_version\":4,\"scanned_at\":\"...\",\"error\":null,\"grade\":\"B\",\"score\":70,\"status_code\":200,\"tests_failed\":2,\"tests_passed\":8,\"tests_quantity\":10}",
+  "description": "Mozilla Observatory (MDN HTTP Observatory) analyzes websites for HTTP security best practices and related web-hardening signals, focusing on security headers and configuration checks. Developers use its API to scan sites, retrieve grade/score results, and track security posture over time. It does not provide TLS/certificate analysis (that capability was part of the former multi-tool Observatory sunset in 2024).",
+  "status": "operational",
+  "resolution_notes": "rate_limits: auditor correct \u2014 official API docs document one scan per host per minute with cached results during cooldown (https://github.com/mdn/mdn-http-observatory/blob/main/src/api/v2/README.md). description: auditor correct \u2014 current MDN HTTP Observatory is header/hardening focused; TLS analysis was part of the sunset multi-tool Observatory (https://developer.mozilla.org/en-US/observatory, https://github.com/mdn/mdn-http-observatory)."
+}

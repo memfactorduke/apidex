@@ -1,0 +1,17 @@
+{
+  "id": "haveibeenpwned",
+  "base_url": "https://api.pwnedpasswords.com",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": "hibp-api-key required for email/paste/protected-domain/stealer-log searches; breach catalogue and Pwned Passwords range endpoints unauthenticated.",
+  "free_tier": true,
+  "free_tier_limits": "Pwned Passwords range API free/unauthenticated; breach catalogue (/breaches, /breach/{name}) free; paid subscription required for email/paste/domain search. Limited free breach monitoring advertised separately.",
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth.details: auditor correct \u2014 https://haveibeenpwned.com/API/v3 documents unauthenticated /breaches and /breach/{name}. free_tier: auditor correct \u2014 free Pwned Passwords + breach metadata; paid for email/paste search. base_url: auditor correct \u2014 Pwned Passwords uses https://api.pwnedpasswords.com; entry should scope v3 or split hosts."
+}

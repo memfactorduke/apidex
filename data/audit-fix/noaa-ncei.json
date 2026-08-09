@@ -1,0 +1,17 @@
+{
+  "id": "noaa-ncei",
+  "base_url": "https://www.ncdc.noaa.gov/cdo-web/api/v2",
+  "docs_url": "https://www.ncei.noaa.gov/cdo-web/webservices/v2",
+  "auth_type": "apiKey",
+  "auth_details": "Token via token header (not Authorization). Request a free token at the CDO token signup page; include as header token: YOUR_API_KEY on each request.",
+  "free_tier": true,
+  "free_tier_limits": "Free with required token; published fair-use limits are 5 requests/second and 10,000 requests/day per token (same as rate_limits). No paid CDO v2 plans documented.",
+  "paid_plans": null,
+  "rate_limits": "5 requests per second and 10,000 requests per day per token (published CDO web service limits).",
+  "cors": "unknown",
+  "example_request": "curl -s -H \"token: YOUR_API_KEY\" \"https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets\"",
+  "example_response_snippet": "{\n  \"metadata\": { \"resultset\": { \"offset\": 1, \"count\": 11, \"limit\": 25 } },\n  \"results\": [\n    {\n      \"uid\": \"gov.noaa.ncdc:C00861\",\n      \"mindate\": \"1763-01-01\",\n      \"maxdate\": \"2024-12-31\",\n      \"name\": \"Daily Summaries\",\n      \"datacoverage\": 1,\n      \"id\": \"GHCND\"\n    }\n  ]\n}",
+  "description": "NOAA National Centers for Environmental Information (NCEI) Climate Data Online (CDO) web services provide programmatic access to historical climate and weather station archives for the United States and global datasets. Developers can query stations, datasets (e.g. GHCND, GSOM, GSOY), data types, locations, and daily/monthly/annual observations. Access is free with a required token; rate limits apply for fair use.",
+  "status": "operational",
+  "resolution_notes": "Pending live verification of auditor disputes on base_url, example.request, and duplicate_entry."
+}

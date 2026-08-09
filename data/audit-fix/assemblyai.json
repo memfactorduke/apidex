@@ -1,0 +1,17 @@
+{
+  "id": "assemblyai",
+  "base_url": "https://api.assemblyai.com/v2",
+  "docs_url": "https://www.assemblyai.com/docs",
+  "auth_type": "apiKey",
+  "auth_details": "API key via Authorization header (raw key, not Bearer); self-serve signup at dashboard",
+  "free_tier": true,
+  "free_tier_limits": "Free tier with credits for new accounts; exact free credit amount and ongoing free limits vary \u2014 verify on pricing page",
+  "paid_plans": "Pay-as-you-go speech models billed per hour of audio; see pricing page for current rates",
+  "rate_limits": "not published",
+  "cors": "unknown",
+  "example_request": "curl https://api.assemblyai.com/v2/transcript -H \"Authorization: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"audio_url\": \"https://assembly.ai/wildfires.mp3\"}'",
+  "example_response_snippet": "{\"id\": \"transcript_id\", \"status\": \"queued\", \"audio_url\": \"https://assembly.ai/wildfires.mp3\", \"text\": null}",
+  "description": "AssemblyAI provides a cloud speech-to-text and audio intelligence API for asynchronous and real-time transcription, speaker diarization, summarization, sentiment analysis, and related speech models. Developers authenticate with an API key and submit audio URLs or streams for processing, then poll or stream results via REST and WebSocket endpoints under api.assemblyai.com.",
+  "status": "operational",
+  "resolution_notes": "Pending live verification of free tier, rate limits, and speech_models requirement against official AssemblyAI docs."
+}

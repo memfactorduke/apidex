@@ -24,7 +24,7 @@
   "rate_limits": "Default: /search 10 QPS, /contents 100 QPS, /answer 10 QPS; higher via Enterprise (exa.ai/docs/reference/rate-limits)",
   "example": {
     "request": "curl -X POST https://api.exa.ai/search -H \"x-api-key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\": \"latest AI research\"}'",
-    "response_snippet": "{\"results\": [{\"title\": \"Example\", \"url\": \"https://example.com\"}]}"
+    "response_snippet": "{\"results\": [{\"title\": \"Example\", \"url\": \"https://example.com\"}]"
   },
   "use_cases": [
     "find relevant web pages for a research query",
@@ -89,6 +89,24 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

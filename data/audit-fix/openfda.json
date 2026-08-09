@@ -1,0 +1,17 @@
+{
+  "id": "openfda",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Without key: 240 req/min, 1,000/day (per IP). With key: 240 req/min, 120,000/day (per key).",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: auditor correct. Official openFDA authentication docs (https://open.fda.gov/apis/authentication/) state no-key limits are 240 req/min and 1,000/day per IP (not 40/min); keyed limits remain 240/min and 120,000/day per key. Original unauthenticated per-minute figure was stale."
+}

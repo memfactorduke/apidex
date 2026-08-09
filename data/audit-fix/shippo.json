@@ -1,0 +1,17 @@
+{
+  "id": "shippo",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": "Per-minute by endpoint (official docs). Most core resources: POST/PUT 500 live/50 test; GET single 4,000/400; GET list 50/10. Tracking: POST 750/50, GET 500/50. Batch lower (e.g. POST 50/10). Exceeding returns 429.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Auditor correct; original 'not published' is wrong. Shippo publishes a full per-endpoint, per-method, live/test per-minute table at https://docs.goshippo.com/api-concepts/rate-limits (live-verified). Core resources (Address, Parcel, Shipment, Rate, Transaction, etc.): POST/PUT 500/50, GET single 4000/400, GET list 50/10; Tracking: POST 750/50, GET 500/50; Batch lower. 429 on exceed."
+}

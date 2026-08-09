@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown \u2014 verify on pricing page",
-    "paid_plans": null
+    "free_tier_limits": "Free plan daily quotas (via UI or API): 50 private scans, 1,000 unlisted scans, 5,000 public scans, 1,000 search requests, 1,000 result requests; per-minute/hour caps also apply (see /user/quotas/).",
+    "paid_plans": "API Only Automate from $5,000/yr; Professional $1,250/mo ($12,500/yr); Enterprise $2,500/mo ($25,000/yr); Ultimate $5,000/mo ($50,000/yr). 30-day commercial trials available."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Per-action quotas with separate minute, hour, and day windows; HTTP 429 when exceeded; exact limits via GET https://urlscan.io/user/quotas/ (or /api/v1/quotas) and X-Rate-Limit-* response headers. Fixed-window resets at full minute/hour and midnight UTC; only HTTP 200 counts.",
   "example": {
     "request": "curl -H \"API-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"url\":\"https://example.com\",\"visibility\":\"public\"}' https://urlscan.io/api/v1/scan/",
     "response_snippet": "{\"message\":\"Submission successful\",\"uuid\":\"...\",\"result\":\"https://urlscan.io/result/.../\",\"api\":\"https://urlscan.io/api/v1/result/.../\",\"visibility\":\"public\",\"url\":\"https://example.com\",\"country\":\"US\"}"
@@ -90,6 +90,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

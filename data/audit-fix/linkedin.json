@@ -1,0 +1,17 @@
+{
+  "id": "linkedin",
+  "base_url": "https://api.linkedin.com/rest",
+  "docs_url": null,
+  "auth_type": null,
+  "auth_details": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "paid_plans": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": "{\"sub\":\"abc123\",\"name\":\"Jane Doe\",\"given_name\":\"Jane\",\"family_name\":\"Doe\",\"picture\":\"https://media.licdn.com/...\",\"email\":\"jane@example.com\",\"email_verified\":true,\"locale\":\"en-US\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Auditor correct. Official LinkedIn versioned APIs use https://api.linkedin.com/rest with LinkedIn-Version header (https://learn.microsoft.com/en-us/linkedin/marketing/versioning; https://learn.microsoft.com/en-us/linkedin/shared/api-guide/concepts/protocol-version). /v2 remains for some legacy paths including OIDC userinfo (https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/sign-in-with-linkedin-v2). example.response_snippet: Auditor correct. LinkedIn OIDC UserInfo uses BCP 47 locale en-US, not en_US (https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/sign-in-with-linkedin-v2#api-request-to-retreive-member-details)."
+}
