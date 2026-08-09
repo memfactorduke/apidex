@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "Self-hosted open source: free (unlimited API on your instance). Hosted Discourse plans billed separately; API access included with site hosting\u2014no published per-request free API tier.",
-    "paid_plans": "Discourse hosting plans (Standard/Business/Enterprise) include site + API; pricing at discourse.org/pricing. Self-hosted is free software."
+    "paid_plans": "Hosted: Free, Pro ($100/month), Business ($500/month), Enterprise (custom); pricing at discourse.org/pricing. Self-hosted is free open-source software. API/webhook access is included on Pro+ (and Free has limits per the plan grid)."
   },
   "rate_limits": "Per-site; default Discourse rate limits apply (e.g. admin can configure). Not a single global published number\u2014depends on instance settings and user trust level.",
   "example": {
@@ -94,6 +94,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

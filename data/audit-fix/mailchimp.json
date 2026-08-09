@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "10 simultaneously processing Marketing API requests per user; excess requests return 429. No per-customer increase is currently available.",
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\n  \"account_id\": \"...\",\n  \"account_name\": \"...\",\n  \"email\": \"...\",\n  \"role\": \"owner\",\n  \"contact\": { ... },\n  \"pro_enabled\": false,\n  \"total_subscribers\": 0,\n  \"_links\": [ ... ]\n}",
   "description": null,
   "status": null,
-  "resolution_notes": "Settling rate_limits and example.response_snippet against current official Mailchimp docs."
+  "resolution_notes": "rate_limits: auditor correct \u2014 official Marketing API docs state 10 simultaneous connections per user (not ~10 req/s), 429 on excess, and limit cannot be raised per customer (https://mailchimp.com/developer/marketing/docs/fundamentals/#throttling). example.response_snippet: auditor correct \u2014 GET API Root returns account info + _links, not {} (https://mailchimp.com/developer/marketing/api/root/ and https://mailchimp.com/developer/marketing/api/root/get-account-info/). Free tier/auth/base_url not disputed."
 }

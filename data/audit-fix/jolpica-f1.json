@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "4 requests/second burst limit and 500 requests/hour sustained limit",
   "cors": null,
-  "example_request": null,
-  "example_response_snippet": null,
+  "example_request": "curl -s -H \"User-Agent: YourAppName/1.0\" \"https://api.jolpi.ca/ergast/f1/current/driverStandings.json\"",
+  "example_response_snippet": "{\"MRData\":{\"xmlns\":\"\",\"series\":\"f1\",\"url\":\"http://api.jolpi.ca/ergast/f1/current/driverStandings.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"StandingsTable\":{\"season\":\"2026\",\"StandingsLists\":[{\"season\":\"2026\",\"round\":\"...\",\"DriverStandings\":[{\"position\":\"1\",\"positionText\":\"1\",\"points\":\"...\",\"wins\":\"...\",\"Driver\":{\"driverId\":\"...\",\"code\":\"...\",\"givenName\":\"...\",\"familyName\":\"...\"}}]}]}}}",
   "description": null,
   "status": null,
-  "resolution_notes": "Researching Jolpica F1 official docs and live endpoints to settle rate_limits, User-Agent requirement, and current-season response snippet."
+  "resolution_notes": "rate_limits: auditor correct \u2014 docs publish throttling at https://github.com/jolpica/jolpica-f1 (README/docs: 4 req/s burst, 500 req/hour). example.request: auditor correct \u2014 same docs require a custom identifying User-Agent; bare curl defaults are insufficient. example.response_snippet: auditor correct \u2014 live GET https://api.jolpi.ca/ergast/f1/current/driverStandings.json returns season 2026 (not 2025); snippet updated to 2026. Status remains operational; other fields undisputed (null)."
 }

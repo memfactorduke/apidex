@@ -4,14 +4,14 @@
   "docs_url": null,
   "auth_type": null,
   "auth_details": null,
-  "free_tier": null,
+  "free_tier": false,
   "free_tier_limits": null,
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
-  "description": null,
-  "status": null,
-  "resolution_notes": "pending live verification"
+  "description": "Historical StyleGAN face generator formerly at thispersondoesnotexist.com (Philip Wang / NVIDIA StyleGAN). The original domain is now listed for sale and no longer serves AI face images or a public API. Successor/clone sites exist under different domains; this entry is discontinued.",
+  "status": "defunct",
+  "resolution_notes": "status: auditor correct \u2014 live https://thispersondoesnotexist.com returns a \u201cDomain For Sale\u201d page (owner lucidrains@gmail.com), not the generator; set defunct. base_url: auditor correct \u2014 root is a domain-sale site (Content-Type text/html, ~4.5KB HTML), not an API; set null. docs_url: auditor correct \u2014 same sale page, no API docs; set null. free_tier: auditor correct \u2014 no live service/tier at this domain; set false. example_request: auditor correct \u2014 curl now downloads sale-page HTML, not JPEG (verified 2026-08-09 live probe); set null. description: auditor correct \u2014 entry must not present the historical generator as available; rewritten as discontinued. Evidence: https://thispersondoesnotexist.com/"
 }

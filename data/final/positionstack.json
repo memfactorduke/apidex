@@ -19,8 +19,8 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "100 requests/month; personal use",
+    "paid_plans": "Basic $9.99/mo (100k req), Professional $49.99/mo (500k), Business $99.99/mo (1M); custom enterprise available"
   },
   "rate_limits": "not published",
   "example": {
@@ -89,6 +89,26 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

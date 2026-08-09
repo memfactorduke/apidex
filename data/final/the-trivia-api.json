@@ -4,13 +4,13 @@
   "name": "Trivia API (The Trivia API)",
   "category": "fun-novelty",
   "tagline": "Modern trivia questions API with tags, regions, and free public access",
-  "description": "Researching official docs, endpoints, auth, pricing, and examples for The Trivia API.",
+  "description": "Public trivia questions API with categories, difficulty filters, tags, and region options. Basic question endpoints work without a key; subscriptions unlock higher limits and commercial use via x-api-key.",
   "base_url": "https://the-trivia-api.com/v2",
-  "docs_url": "https://the-trivia-api.com/docs/v2/",
+  "docs_url": "https://the-trivia-api.com/docs/",
   "signup_url": null,
   "auth": {
     "type": "none",
-    "details": "Researching authentication requirements"
+    "details": "No key is required for basic public question requests; subscribed features use an API key in the x-api-key header."
   },
   "https": true,
   "cors": "unknown",
@@ -19,8 +19,8 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free public access without an API key; higher rate limits with a free API key (exact free-key quotas not clearly published on docs)",
-    "paid_plans": null
+    "free_tier_limits": "Free public access for non-commercial use (CC BY-NC 4.0); higher limits with a free/subscription API key.",
+    "paid_plans": "Commercial/premium subscriptions available for commercial use and higher rate limits (see site pricing)."
   },
   "rate_limits": "Rate limits exist and are higher with an API key; exact numeric limits not clearly published on public docs",
   "example": {
@@ -91,6 +91,21 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

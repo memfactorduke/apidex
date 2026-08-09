@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
-  "free_tier": null,
+  "auth_details": "API key via Tracking-Api-Key header (self-serve key generation in admin for plans that include API access).",
+  "free_tier": false,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Plan-based (pricing): Basic 6 req/s, Pro 10 req/s, Enterprise custom. Endpoint defaults (support): create 3/s; batch/get/update/delete/retrack/detect/couriers mostly 10/s. 429 \u2192 wait ~120s.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "auth.details: Auditor right\u2014V4 uses only Tracking-Api-Key; no official Bearer. https://support.trackingmore.com/en/article/differences-among-3-versions-of-trackingmore-api-1ip0fmh/ and docs snippets require Tracking-Api-Key header. free_tier: Auditor right\u2014pricing Free is $0 with 0 credits and no Tracking API keys/API&Webhook (API from Basic trial/paid). https://www.trackingmore.com/pricing rate_limits: Auditor right on plan caps (Basic 6/s, Pro 10/s, Enterprise custom on pricing); original endpoint list wrong on batch 1/s and detect 3/s (support table: create 3/s, most others 10/s). https://www.trackingmore.com/pricing ; https://support.trackingmore.com/en/article/trackingmore-api-request-rate-limit-c0ye70/"
 }

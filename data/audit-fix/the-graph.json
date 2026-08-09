@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key in the endpoint path, or Authorization: Bearer YOUR_API_KEY with the key omitted from the path.",
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
+  "free_tier_limits": "100,000 queries/month",
+  "paid_plans": "Growth Plan usage pricing; currently advertised at $2 per additional 100,000 queries, payable by card or GRT.",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling auth and pricing disputes against official docs."
+  "resolution_notes": "auth.details: auditor correct. Official Querying Subgraphs docs (https://thegraph.com/docs/en/subgraphs/querying/from-an-application/) document two methods only: (1) API key in path as /api/[api-key]/subgraphs/id/[subgraph-id], or (2) Authorization: Bearer header with /api/subgraphs/id/[subgraph-id]. No ordinary query-parameter form is documented. pricing: auditor correct. Billing page (https://thegraph.com/docs/en/subgraphs/billing/) and plan comparison (https://thegraph.com/studio/apikeys/) show Free Plan includes 100,000 queries/month; Growth Plan is usage-based at $2 per additional 100,000 queries, payable by card or GRT. Original free_tier_limits/paid_plans \"unknown\" was wrong."
 }

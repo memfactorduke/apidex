@@ -4,7 +4,7 @@
   "name": "OSV",
   "category": "security-identity",
   "tagline": "Google-backed open-source vulnerability database with package-level queries across ecosystems",
-  "description": "...",
+  "description": "Public vulnerability database and API for querying vulnerabilities by package version, commit, or OSV identifier across open-source ecosystems.",
   "base_url": "https://api.osv.dev/v1",
   "docs_url": "https://google.github.io/osv.dev/",
   "signup_url": null,
@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "...",
+    "free_tier_limits": "Free public service with no documented API request limit. HTTP/1.1 responses capped at 32 MiB; HTTP/2 responses have no documented size cap.",
     "paid_plans": null
   },
-  "rate_limits": "...",
+  "rate_limits": "Currently no API rate limit is documented.",
   "example": {
     "request": "curl -X POST https://api.osv.dev/v1/query -H 'Content-Type: application/json' -d '{\"package\": {\"name\": \"lodash\", \"ecosystem\": \"npm\"}, \"version\": \"4.17.20\"}'",
-    "response_snippet": "{\"vulns\": [{\"id\": \"GHSA-35jh-r3h4-6jhm\", \"summary\": \"Prototype Pollution in lodash\", \"details\": \"...\", \"affected\": [{\"package\": {\"name\": \"lodash\", \"ecosystem\": \"npm\"}, \"ranges\": [...]}]}]}"
+    "response_snippet": "{\"vulns\": [{\"id\": \"GHSA-35jh-r3h4-6jhm\", \"summary\": \"Command Injection in lodash\", \"details\": \"...\", \"affected\": [{\"package\": {\"name\": \"lodash\", \"ecosystem\": \"npm\"}, \"ranges\": [...]}]}]}"
   },
   "use_cases": [
     "check if a package version has known vulnerabilities",
@@ -95,6 +95,18 @@
       "rate_limits",
       "description"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

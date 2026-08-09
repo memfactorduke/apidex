@@ -23,7 +23,7 @@
     "free_tier_limits": "Fully free; no paid plans. Rate limits apply (see rate_limits).",
     "paid_plans": null
   },
-  "rate_limits": "Not published as fixed numbers; docs warn to throttle and avoid hammering. Typical guidance: ~20-30 req/s for some endpoints; excess may return 429.",
+  "rate_limits": "Fixed numeric limits are intentionally unpublished. Docs advise throttling and not hammering the API; send requests sequentially (one at a time) and, after any 429, wait a full minute before retrying.",
   "example": {
     "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://lichess.org/api/account",
     "response_snippet": "{\"id\":\"user\",\"username\":\"User\",\"perfs\":{\"blitz\":{\"games\":100,\"rating\":1500}},\"createdAt\":1234567890000,\"seenAt\":1234567890000,\"playTime\":{\"total\":3600},\"url\":\"https://lichess.org/@/User\"}"
@@ -93,6 +93,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

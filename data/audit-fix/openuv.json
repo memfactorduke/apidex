@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "free_tier_limits": "50 requests/day free (Personal/Free Forever plan; no card required)",
+  "paid_plans": "Start-Up plan $15 USD/month for up to 15,000 requests/day (Stripe); Unlimited plan via support@openuv.io",
+  "rate_limits": "Free: 50 req/day; Start-Up: 15,000 req/day ($15/month); Unlimited via support",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "placeholder"
+  "resolution_notes": "pricing: auditor correct. Official openuv.io homepage (pricing section in live site JS bundle main.bc3691e0.chunk.js) states Free Forever up to 50/reqs per day and Start-Up at $15 USD/month for up to 15000/reqs per day\u2014not 30/day or ~$12. Corroborated by Home Assistant docs (50/day Limited plan) and quota-error text citing 15000 reqs/day. Evidence: https://www.openuv.io/ and https://www.home-assistant.io/integrations/openuv/. rate_limits: auditor correct for same evidence; free daily quota is 50, not 30."
 }

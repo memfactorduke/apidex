@@ -5,7 +5,7 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "30-day free trial with product-specific free units (not a ~$15 dollar balance): e.g. 100 SMS, 100 WhatsApp, 75 voice minutes, 3,000 emails. Restrictions: verified recipients only (up to 5), sign-up country only, pre-defined templates. No unlimited free production quota \u2014 pay-as-you-go after upgrade.",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of Twilio trial pricing against official docs."
+  "resolution_notes": "pricing.free_tier_limits: auditor correct. Official Twilio docs no longer describe a shared ~$15 trial credit; they document a 30-day trial with product-specific free units (100 SMS, 100 WhatsApp, 75 voice minutes, 3,000 emails) instead of a dollar balance, plus verified-recipient (max 5), geographic (sign-up country), and pre-defined template restrictions. Evidence: https://www.twilio.com/docs/usage/trials and https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
 }

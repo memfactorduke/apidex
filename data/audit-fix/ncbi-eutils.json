@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Without API key: \u22643 req/s. With free API key: \u226410 req/s (higher by request to eutilities@ncbi.nlm.nih.gov). Limit is request start rate, not concurrency. Multi-UID: use HTTP POST above ~200 UIDs; PubMed/PMC EPost max 10,000. Prefer History for large sets. Abusive IPs may be blocked.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying rate_limits against current NCBI official docs."
+  "resolution_notes": "rate_limits: auditor correct. Official policy is 3 rps without key / 10 rps with key (https://www.ncbi.nlm.nih.gov/books/NBK25497/). NCBI Insights states concurrency is not capped that way\u2014you may run more concurrent requests if start rate stays within the limit (https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/). No universal 100-UID cap: docs recommend POST for lists over ~200 UIDs; PubMed/PMC EPost max is 10,000 (https://www.ncbi.nlm.nih.gov/books/NBK25499/)."
 }

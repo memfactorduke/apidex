@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Default 1 request/second for non-identified clients; 3 requests/second when identified via User-Agent with app name and contact email/phone. APIs are for low-volume, real-time human-facing use\u2014not bulk harvest or high-traffic backends; use monthly data dumps for bulk access. Violations may bring aggressive limiting or blocking.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying Open Library rate limits against official docs now."
+  "resolution_notes": "rate_limits: Auditor correct. Official docs at https://openlibrary.org/developers/api (Rate Limits section, page last edited May 5, 2026) publish default 1 rps for non-identified requests and 3 rps for identified requests with User-Agent plus contact email; usage guidelines also forbid bulk/high-traffic backend use and point to data dumps. Original 'not published' is false."
 }

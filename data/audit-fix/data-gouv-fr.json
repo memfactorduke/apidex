@@ -10,8 +10,8 @@
   "rate_limits": null,
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"data\":[{\"id\":\"...\",\"title\":\"...\",\"slug\":\"...\"}],\"next_page\":\"https://www.data.gouv.fr/api/1/datasets/?page_size=1&page=2\",\"page\":1,\"page_size\":1,\"total\":...}",
   "description": null,
   "status": null,
-  "resolution_notes": "Settling example.response_snippet dispute with live API check and official docs."
+  "resolution_notes": "example.response_snippet: auditor correct. Live GET https://www.data.gouv.fr/api/1/datasets/?page_size=1 returns next_page as a URL (e.g. .../datasets/?page_size=1&page=2), page=1, page_size=1, total\u224873849 \u2014 not next_page:null. Official pagination docs (https://guides.data.gouv.fr/api-de-data.gouv.fr/prise-en-main#pagination) state next_page is null only when there is no following page; with page_size=1 over a large catalog it is set."
 }

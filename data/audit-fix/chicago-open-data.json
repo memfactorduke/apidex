@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Without app token: lower shared IP-based throttling. With app token: ordinarily not throttled except for abuse/malicious traffic controls (no fixed published hourly quota). Exact Chicago-specific numbers not always published.",
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -H \"X-App-Token: YOUR_API_KEY\" 'https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=5'",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying rate limits and example request against current official Socrata/Chicago docs."
+  "resolution_notes": "rate_limits: auditor correct. Socrata docs state unauthenticated requests use a lower shared pool and token-bearing requests are ordinarily not throttled except abuse controls; no fixed ~1,000/hour unauthenticated quota in current policy (https://dev.socrata.com/docs/app-tokens.html). example.request: auditor correct. Double-quoted URL lets shells expand $limit; single-quote or escape $ (same docs / SoQL $limit usage)."
 }

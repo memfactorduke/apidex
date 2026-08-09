@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "Free API key required on every Census Data API data query as query param key=YOUR_API_KEY. Signup free at api.census.gov/data/key_signup.html (approved email domains). No unauthenticated access.",
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free API key required for every query; up to 50 variables per query; no paid API plan.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Up to 50 variables per query. Official docs publish no fixed requests-per-day quota; API key required for all data queries (former 500/day unauth limit is obsolete).",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "auth.details: AUDITOR RIGHT. Official Query Limits (May 2026) state an API key must be used with all data queries: https://www.census.gov/data/developers/guidance/api-user-guide.Query_Limits.html ; confirmed https://www.census.gov/library/video/2026/adrm/requesting-a-census-data-api-key.html and PDF guide https://www2.census.gov/data/api-documentation/api-user-guide.pdf . free_tier_limits: AUDITOR RIGHT (placeholder); free key + 50-var limit + no paid plan per same sources and API Key page https://www.census.gov/data/developers/guidance/api-user-guide.API_Key.html . rate_limits: AUDITOR RIGHT; only published limit is 50 variables/query; no new day quota published."
 }

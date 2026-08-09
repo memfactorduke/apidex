@@ -1,17 +1,17 @@
 {
   "id": "world-weather-online",
-  "base_url": null,
+  "base_url": "https://api.worldweatheronline.com/premium/v1",
   "docs_url": null,
   "auth_type": null,
   "auth_details": null,
-  "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier": true,
+  "free_tier_limits": "Permanent free plan (personal/educational/research, noncommercial, attribution required): 100 requests/day per pricing page; 14-day paid trials also offered (other first-party pages historically showed 500/day \u2014 reconcile in account dashboard)",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Free: 100 requests/day (pricing page); paid plans publish plan-specific daily caps; trial quotas may differ by product \u2014 confirm in developer dashboard",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settlement in progress: checking official World Weather Online docs and pricing against the three disputes."
+  "resolution_notes": "base_url: AUDITOR correct \u2014 docs use path /premium/v1/*.ashx (e.g. weather.ashx); root should include /premium/v1. Evidence: https://www.worldweatheronline.com/developer/api/docs/local-city-town-weather-api.aspx and live example host api.worldweatheronline.com. pricing: AUDITOR correct \u2014 permanent Free plan advertised for personal/educational/research with attribution; not trial-only. Evidence: https://www.worldweatheronline.com/developer/api/pricing.aspx (100 req/day free). rate_limits: AUDITOR correct \u2014 public pricing shows Free 100/day; original 500/day trial-only framing is incomplete/outdated. Evidence: same pricing page; reconcile dashboard if other product pages conflict."
 }

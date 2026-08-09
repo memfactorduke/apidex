@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "API access is free for Tradier Brokerage account holders; trading, market-data subscriptions, and regulatory fees may apply (exact free request caps are not a separate published free-tier quota).",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Production Standard and Market Data: 120 requests/minute; production Trading: 60 requests/minute; sandbox: 60 requests/minute for all three categories, per access token.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling free-tier and rate-limit disputes against current official Tradier docs."
+  "resolution_notes": "free_tier_limits: AUDITOR RIGHT. Official getting-started/docs and brokerage/developer materials indicate API access is free for account holders rather than gated on a funded-account requirement; original \u201cproduction requires funded account\u201d framing overstates the free-tier limit. Evidence: https://docs.tradier.com/docs/getting-started and https://production.tradier.com/businesses/fintechs. rate_limits: AUDITOR RIGHT. Tradier publishes an explicit rate-limit table (production Standard/Market Data 120/min, Trading 60/min; sandbox 60/min all categories, per token). Original \u201cnot fully published\u201d is incorrect. Evidence: https://docs.tradier.com/docs/rate-limiting. Undisputed fields left null; status remains operational (API not defunct)."
 }

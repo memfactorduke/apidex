@@ -9,9 +9,9 @@
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
-  "example_response_snippet": null,
-  "description": null,
+  "example_request": "curl -X POST \"https://YOUR_SHOP.myshopify.com/admin/api/2026-07/graphql.json\" -H \"Content-Type: application/json\" -H \"X-Shopify-Access-Token: YOUR_API_KEY\" -d '{\"query\":\"{ products(first: 1) { edges { node { id title } } } }\"}'",
+  "example_response_snippet": "{\"data\":{\"products\":{\"edges\":[{\"node\":{\"id\":\"gid://shopify/Product/632910392\",\"title\":\"Hiking backpack\"}}]}},\"extensions\":{\"cost\":{\"requestedQueryCost\":3,\"actualQueryCost\":3}}}",
+  "description": "Shopify Admin API lets apps and integrations manage a merchant's store: products, inventory, orders, customers, fulfillments, discounts, and more. GraphQL Admin is the primary/current interface; REST Admin is legacy (as of Oct 1, 2024). Since April 1, 2025, new public App Store apps must use GraphQL exclusively. REST remains for some existing/custom-app cases. OAuth for public apps; access tokens for custom apps. Shop-specific HTTPS endpoints.",
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "example.request: AUDITOR RIGHT. Version 2025-01 is retired (stable table starts at 2025-07; as of Aug 2026, 2025-07 already past its July 16 2026 cutoff). Shopify falls forward retired versions. Prefer 2026-07 (current latest). REST Product resource deprecated since 2024-04; new public apps GraphQL-only since Apr 1 2025. Evidence: https://shopify.dev/docs/api/usage/versioning https://shopify.dev/docs/api/admin-graphql/latest https://shopify.dev/docs/api/admin-rest/latest/resources/product \u2014 description: AUDITOR RIGHT. Official docs: REST legacy Oct 1 2024; new public apps GraphQL-only Apr 1 2025. Evidence: https://shopify.dev/docs/api/admin-rest https://www.shopify.com/partners/blog/all-in-on-graphql \u2014 response_snippet updated to match GraphQL example (not separately disputed but required for consistency)."
 }

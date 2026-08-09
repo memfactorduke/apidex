@@ -4,8 +4,8 @@
   "docs_url": null,
   "auth_type": null,
   "auth_details": null,
-  "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier": false,
+  "free_tier_limits": "No permanent free plan. Free 28-day trial: 60 Automated and Live Testing minutes, real devices, Sauce Connect, Error Reporting, 2 VMs in parallel (no credit card). Separate free accounts for qualifying open-source projects (opensource.saucelabs.com).",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of free_tier dispute against official Sauce Labs pricing/docs."
+  "resolution_notes": "Auditor correct on free_tier. Official sign-up (https://saucelabs.com/sign-up) is a free 28-day trial with 60 Automated and Live Testing minutes\u2014not a permanent free plan. Pricing (https://saucelabs.com/pricing) states free accounts only for qualifying open-source initiatives (https://opensource.saucelabs.com/). Original free_tier:true overstates; set free_tier false and document trial + OSS path."
 }

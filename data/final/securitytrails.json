@@ -10,7 +10,7 @@
   "signup_url": "https://securitytrails.com/app/signup",
   "auth": {
     "type": "apiKey",
-    "details": "API key via APIKEY header (or api_key query param on some endpoints); self-serve signup."
+    "details": "API key via APIKEY header (or apikey as discouraged query-string fallback); self-serve signup."
   },
   "https": true,
   "cors": "unknown",
@@ -25,7 +25,7 @@
   "rate_limits": "not published",
   "example": {
     "request": "curl -s \"https://api.securitytrails.com/v1/domain/example.com\" -H \"APIKEY: YOUR_API_KEY\"",
-    "response_snippet": "{\"hostname\":\"example.com\",\"endpoints\":[],\"current_dns\":{}}"
+    "response_snippet": "{\"hostname\":\"example.com\",\"endpoint\":\"/v1/domain/example.com\",\"current_dns\":{\"a\":{\"first_seen\":\"...\",\"values\":[...]}}}"
   },
   "use_cases": [
     "look up current DNS for a domain",
@@ -93,6 +93,25 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

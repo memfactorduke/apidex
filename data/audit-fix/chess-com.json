@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Serial requests are unlimited; parallel requests may be rate-limited with 429, and abnormal activity may be blocked.",
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"@id\":\"https://api.chess.com/pub/player/hikaru\",\"url\":\"https://www.chess.com/member/hikaru\",\"username\":\"hikaru\",\"player_id\":15448422,\"title\":\"GM\",\"status\":\"premium\",\"name\":\"Hikaru Nakamura\",\"avatar\":\"https://images.chesscomfiles.com/...\",\"country\":\"https://api.chess.com/pub/country/US\",\"joined\":1178554800,\"last_online\":1710000000,\"followers\":1200000,\"is_streamer\":true,\"verified\":true,\"league\":\"Legend\"}",
   "description": null,
   "status": null,
-  "resolution_notes": "Settling rate_limits and example.response_snippet against official Chess.com docs and the live pub API."
+  "resolution_notes": "rate_limits: auditor right \u2014 official docs state serial unlimited, parallel may 429, abnormal activity blocked (https://www.chess.com/news/view/published-data-api). example.response_snippet: auditor right that values can be wrong/outdated; refresh live for accurate snippet."
 }

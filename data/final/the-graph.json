@@ -10,7 +10,7 @@
   "signup_url": "https://thegraph.com/studio/",
   "auth": {
     "type": "apiKey",
-    "details": "API key in path or query for Gateway queries (e.g. https://gateway.thegraph.com/api/[api-key]/subgraphs/id/[subgraph-id]); keys created in Subgraph Studio"
+    "details": "API key in the endpoint path, or Authorization: Bearer YOUR_API_KEY with the key omitted from the path."
   },
   "https": true,
   "cors": "unknown",
@@ -20,8 +20,8 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": "unknown"
+    "free_tier_limits": "100,000 queries/month",
+    "paid_plans": "Growth Plan usage pricing; currently advertised at $2 per additional 100,000 queries, payable by card or GRT."
   },
   "rate_limits": "not published",
   "example": {
@@ -93,6 +93,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

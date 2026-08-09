@@ -4,13 +4,13 @@
   "name": "Binance",
   "category": "crypto",
   "tagline": "Global cryptocurrency exchange APIs for market data, trading, and account management.",
-  "description": "Binance provides REST and WebSocket APIs for spot, futures, and related crypto markets, covering market data, order placement, account balances, and more. Developers typically use API keys with HMAC-SHA256 signatures for private endpoints; many public market-data endpoints require no auth. Rate limits and endpoint availability are published in the official API documentation and change by product (spot vs futures).",
+  "description": "Binance Spot REST and WebSocket APIs for market data, order placement, account balances, and related spot trading. Developers use API keys with HMAC-SHA256, RSA, or Ed25519 signatures for private endpoints; many public market-data endpoints require no auth. Futures and other products use separate hosts and docs (e.g. fapi.binance.com). Rate limits and endpoint weights are published in the official Spot API documentation.",
   "base_url": "https://api.binance.com",
   "docs_url": "https://developers.binance.com/docs/binance-spot-api-docs",
   "signup_url": "https://www.binance.com/en/my/settings/api-management",
   "auth": {
     "type": "apiKey",
-    "details": "API key via X-MBX-APIKEY header; signed endpoints require HMAC-SHA256 signature of query string with secret. Self-serve key creation in account settings; public market data often needs no key."
+    "details": "API key via X-MBX-APIKEY header; signed endpoints require a signature of the query string using the selected key type (HMAC-SHA256, RSA, or Ed25519). Self-serve key creation in account settings; public market data often needs no key."
   },
   "https": true,
   "cors": "unknown",
@@ -92,6 +92,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

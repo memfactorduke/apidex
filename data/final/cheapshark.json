@@ -24,7 +24,7 @@
   },
   "rate_limits": "Rate limited (HTTP 429 when exceeded); exact numeric limits not published. Docs require a descriptive User-Agent; excessive catalog scraping can lead to permanent blocks.",
   "example": {
-    "request": "curl -s 'https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15&pageSize=5'",
+    "request": "curl -s -H 'User-Agent: MyApp/1.0 (contact@example.com)' 'https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15&pageSize=5'",
     "response_snippet": "[{\"internalName\":\"GAMETITLE\",\"title\":\"Game Title\",\"metacriticLink\":\"/game/pc/game-title\",\"dealID\":\"...\",\"storeID\":\"1\",\"gameID\":\"123\",\"salePrice\":\"9.99\",\"normalPrice\":\"59.99\",\"isOnSale\":\"1\",\"savings\":\"83.33\",\"metacriticScore\":\"85\",\"steamRatingText\":\"Very Positive\",\"steamRatingPercent\":\"90\",\"steamRatingCount\":\"10000\",\"steamAppID\":\"12345\",\"releaseDate\":1609459200,\"lastChange\":1700000000,\"dealRating\":\"9.5\",\"thumb\":\"https://...\"}]"
   },
   "use_cases": [
@@ -94,6 +94,15 @@
       "rate_limits",
       "description"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

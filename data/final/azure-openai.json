@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": false,
     "free_tier_limits": "no free tier",
-    "paid_plans": "Pay-as-you-go per 1K tokens by model; also PTUs and provisioned capacity"
+    "paid_plans": "Pay-as-you-go pricing per 1 million input/output tokens, varying by model and deployment type; provisioned throughput is priced separately through PTUs and reservations."
   },
   "rate_limits": "Per-deployment TPM/RPM quotas vary by model and region; not a single global limit",
   "example": {
@@ -91,6 +91,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

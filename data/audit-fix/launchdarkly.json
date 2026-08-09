@@ -3,7 +3,7 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API access token via Authorization: YOUR_API_KEY header (token only \u2014 do not use Bearer). Create personal or service tokens in Account/Organization settings; project-scoped tokens available.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "auth.details: auditor correct. Official docs state the Authorization header value must be the access token itself, not a Bearer scheme. REST guide curl examples use Authorization: EXAMPLE-API-ACCESS-TOKEN with no Bearer prefix (https://launchdarkly.com/docs/api ; https://launchdarkly.com/docs/guides/api/rest-api)."
 }

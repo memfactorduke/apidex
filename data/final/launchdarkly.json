@@ -10,7 +10,7 @@
   "signup_url": "https://app.launchdarkly.com/signup",
   "auth": {
     "type": "apiKey",
-    "details": "API access token via Authorization: YOUR_API_KEY header (or Authorization: Bearer YOUR_API_KEY). Create personal or service tokens in Account settings; project-scoped tokens available."
+    "details": "API access token via Authorization: YOUR_API_KEY header (token only \u2014 do not use Bearer). Create personal or service tokens in Account/Organization settings; project-scoped tokens available."
   },
   "https": true,
   "cors": "unknown",
@@ -93,6 +93,15 @@
     "corrected": [
       "docs_url"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details"
+      ],
+      "upheld_original": false
+    }
   }
 }

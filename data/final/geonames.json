@@ -9,8 +9,8 @@
   "docs_url": "https://www.geonames.org/export/web-services.html",
   "signup_url": "https://www.geonames.org/login",
   "auth": {
-    "type": "apiKey",
-    "details": "Username query parameter (username=YOUR_USERNAME); free account required; enable free web services in account settings"
+    "type": "other",
+    "details": "Username query parameter (username=YOUR_USERNAME); free GeoNames account required; enable free web services on the account page. No separate API key is issued."
   },
   "https": true,
   "cors": "unknown",
@@ -20,12 +20,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "1000 credits/hour, 20000 credits/day (most requests = 1 credit)",
-    "paid_plans": null
+    "free_tier_limits": "1000 credits/hour and 10000 credits/day (most requests = 1 credit)",
+    "paid_plans": "Premium Web Services: Best Availability (from 250\u20ac/yr) and Best Price (from 40\u20ac/yr); credit packs valid 1 year. Details: https://www.geonames.org/commercial-webservices.html"
   },
-  "rate_limits": "Free: 1000 credits/hour and 20000 credits/day; commercial accounts have higher published limits",
+  "rate_limits": "Free: 1000 credits/hour and 10000 credits/day; commercial Premium plans have higher published limits",
   "example": {
-    "request": "curl \"https://secure.geonames.org/searchJSON?q=London&maxRows=1&username=YOUR_API_KEY\"",
+    "request": "curl \"https://secure.geonames.org/searchJSON?q=London&maxRows=1&username=YOUR_USERNAME\"",
     "response_snippet": "{\"totalResultsCount\":1,\"geonames\":[{\"name\":\"London\",\"countryName\":\"United Kingdom\",\"lat\":\"51.50853\",\"lng\":\"-0.12574\"}]}"
   },
   "use_cases": [
@@ -92,6 +92,20 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_type",
+        "auth_details",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -25,8 +25,8 @@
   },
   "rate_limits": "Soft limit ~500 req/hour; hard limit 4 req/sec per IP (jolpica-f1 host)",
   "example": {
-    "request": "curl -s 'https://api.jolpi.ca/ergast/f1/2024/1/results.json'",
-    "response_snippet": "{\"MRData\":{\"xmlns\":\"http://ergast.com/mrd/1.5\",\"series\":\"f1\",\"url\":\"http://api.jolpi.ca/ergast/f1/2024/1/results.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"RaceTable\":{\"season\":\"2024\",\"round\":\"1\",\"Races\":[{\"season\":\"2024\",\"round\":\"1\",\"raceName\":\"Bahrain Grand Prix\",\"Results\":[{\"number\":\"1\",\"position\":\"1\",\"positionText\":\"1\",\"points\":\"26\",\"Driver\":{\"driverId\":\"max_verstappen\",\"givenName\":\"Max\",\"familyName\":\"Verstappen\"},\"Constructor\":{\"constructorId\":\"red_bull\",\"name\":\"Red Bull\"}}]}]}}}"
+    "request": "curl -s -H 'User-Agent: APIDirectoryExample/1.0' 'https://api.jolpi.ca/ergast/f1/2024/1/results.json'",
+    "response_snippet": "{\"MRData\":{\"xmlns\":\"\",\"series\":\"f1\",\"url\":\"http://api.jolpi.ca/ergast/f1/2024/1/results.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"RaceTable\":{\"season\":\"2024\",\"round\":\"1\",\"Races\":[{\"season\":\"2024\",\"round\":\"1\",\"raceName\":\"Bahrain Grand Prix\",\"Results\":[{\"number\":\"1\",\"position\":\"1\",\"positionText\":\"1\",\"points\":\"26\",\"Driver\":{\"driverId\":\"max_verstappen\",\"givenName\":\"Max\",\"familyName\":\"Verstappen\"},\"Constructor\":{\"constructorId\":\"red_bull\",\"name\":\"Red Bull\"}}]}]}}}"
   },
   "use_cases": [
     "get Formula 1 race results for a season or round",
@@ -93,6 +93,16 @@
       "example_response_snippet",
       "description"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

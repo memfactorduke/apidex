@@ -22,7 +22,7 @@
     "free_tier_limits": "No free production tier. Paid plans only (Starter from $39/mo without API; Professional from $99/mo with API). 30-day free trial available; developer sandbox is for testing only (not free production access).",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "10000 requests/min Professional; 25000 requests/min Premium; excess may get HTTP 429",
   "example": {
     "request": "curl -X GET \"https://api.taxjar.com/v2/rates/90210\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
     "response_snippet": "{\"rate\": {\"zip\": \"90210\", \"state\": \"CA\", \"state_rate\": \"0.0625\", \"county\": \"LOS ANGELES\", \"county_rate\": \"0.01\", \"city\": \"BEVERLY HILLS\", \"city_rate\": \"0.0\", \"combined_rate\": \"0.0975\", \"freight_taxable\": false}}"
@@ -94,6 +94,15 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

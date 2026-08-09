@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Free models (:free): 20 RPM / 50 RPD if <10 credits purchased all-time; 20 RPM / 1,000 RPD after \u226510 credits. Account-wide, not per model. Provider-specific and Cloudflare DDoS limits also apply; paid variants have no platform request cap.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "rate_limits: Auditor correct; original 'not published' is wrong. Official docs publish free-model limits (20 RPM; 50 RPD if <10 credits all-time, 1,000 RPD after \u226510 credits) plus provider/DDoS notes. Evidence: https://openrouter.ai/docs/api_reference/limits and https://openrouter.ai/docs/guides/routing/model-variants/free"
 }

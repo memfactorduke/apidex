@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free, non-commercial use only; limit requests to 2,500 per day. Contact the museum before any use outside the published terms.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "2,500 API calls per day.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of free_tier_limits and rate_limits against official Harvard Art Museums API docs."
+  "resolution_notes": "pricing.free_tier_limits: auditor correct. Official Terms of Use state the API is for non-commercial use only and ask clients to limit calls to 2500/day (https://github.com/harvardartmuseums/api-docs). Original wrongly claimed quotas were unpublished. rate_limits: auditor correct. Same Terms of Use explicitly publish 'limiting the number of API calls to 2500 per day' (https://github.com/harvardartmuseums/api-docs#terms-of-use); original 'not published' is wrong."
 }

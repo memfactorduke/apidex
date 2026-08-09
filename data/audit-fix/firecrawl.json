@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "free_tier_limits": "1,000 credits/month, 2 concurrent browsers; Free-plan endpoint rate limits apply (e.g. scrape/map/search ~10 RPM, crawl/agent ~2 RPM\u2014confirm on docs).",
+  "paid_plans": "Hobby, Standard, Growth, Scale, and Enterprise tiers billed by credits/month with higher concurrency and features; see firecrawl.dev/pricing for current prices and credits.",
+  "rate_limits": "Published per-plan, per-endpoint RPM and concurrency: Free is 10 RPM (scrape/map/search), 2 RPM (crawl/agent), 2 concurrent browsers; higher tiers raise limits\u2014see docs.firecrawl.dev/rate-limits and pricing.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Fetching official Firecrawl pricing and rate-limit docs to settle free tier, plan list, and published limits."
+  "resolution_notes": "free_tier_limits: Auditor correct\u2014official pricing shows Free with 1,000 credits/month (not ~500 non-renewing). Evidence: https://www.firecrawl.dev/pricing and https://docs.firecrawl.dev. rate_limits: Auditor correct\u2014Firecrawl publishes plan/endpoint RPM + concurrency (Free: 10 RPM scrape/map/search, 2 RPM crawl/agent, 2 concurrent browsers). Evidence: https://docs.firecrawl.dev/rate-limits (or rate-limits section in docs). paid_plans: Auditor correct\u2014lineup includes Scale in addition to Hobby/Standard/Growth/Enterprise. Evidence: https://www.firecrawl.dev/pricing."
 }

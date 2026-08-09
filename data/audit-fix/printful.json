@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "120 requests per minute generally; lower endpoint-specific limits may apply",
   "cors": null,
-  "example_request": null,
-  "example_response_snippet": null,
+  "example_request": "curl -sS -H \"Authorization: Bearer YOUR_API_KEY\" https://api.printful.com/stores",
+  "example_response_snippet": "{\"code\":200,\"result\":[{\"id\":12345,\"name\":\"My Store\",\"type\":\"native\",\"website\":\"https://example.com\"}],\"paging\":{\"total\":1,\"offset\":0,\"limit\":20}}",
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of rate_limits and example.request against official Printful docs."
+  "resolution_notes": "rate_limits: auditor right. Official docs (https://developers.printful.com/docs/) state \"Printful API has a general rate limit of 120 API calls per minute\" and that resource-intensive endpoints (e.g. mockup generator) have lower limits; v2 docs also note 120/60s default. example.request: auditor right. Store Information API documents GET /stores (getStores) and GET /stores/{id}, not /store; response is a result array with paging. Evidence: https://developers.printful.com/docs/ (#tag/Store-Information-API/operation/getStores)."
 }

@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key via API-Key request header only (v2 OpenAPI); free self-serve keys from developer.hypixel.net",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Application-dependent limits enforced over 5-minute intervals; use RateLimit-Limit/Remaining/Reset response headers and the developer dashboard as authoritative (official docs do not publish a fixed base quota such as 120/min)",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "auth.details: AUDITOR RIGHT. Official v2 docs at https://api.hypixel.net/ document Authentication only as Security Scheme Type API Key with Header parameter name API-Key; no key query parameter is specified. rate_limits: AUDITOR MOSTLY RIGHT. Official Limits section states keys are limited per 5-minute intervals and limits depend on application type; RateLimit-* headers assist management (https://api.hypixel.net/). The ~120 req/min figure is not in current official docs. Community wiki cites ~300/5min default (https://hypixel-skyblock.fandom.com/wiki/SkyBlock_API) but official docs do not publish that fixed base number, so state application-dependent 5-minute windows + dashboard/headers rather than asserting 300."
 }

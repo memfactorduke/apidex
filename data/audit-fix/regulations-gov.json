@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "api.data.gov default: 1,000 requests/hour for ordinary keys; Comment (POST) API: 50 requests/minute and 500 requests/hour; GSA may grant indefinite GET-key increases case-by-case; POST key increases not available",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of Regulations.gov / api.data.gov rate limits against official docs."
+  "resolution_notes": "rate_limits: auditor right. Official GSA FAQ (https://open.gsa.gov/api/regulationsgov/) points to api.data.gov rate limits and states Commenting API is 50 req/min and 500 req/hour; also notes GET-key increases may be granted case-by-case. api.data.gov docs (https://api.data.gov/docs/rate-limits/ / developer manual) publish the default 1,000 req/hour. Original text was too vague and omitted published Comment API limits."
 }

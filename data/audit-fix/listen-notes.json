@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "300 requests/month; service is suspended until the next month after the quota is exceeded.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Plan- and endpoint-specific. FREE GET /search: 2 req/s and 20 req/min; PRO medium, ENTERPRISE high (other endpoint numbers not fully published).",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling pricing and rate-limit disputes against current official Listen Notes sources."
+  "resolution_notes": "free_tier_limits: auditor correct \u2014 FREE is 300 requests/month; overage suspends until next month (https://www.listennotes.com/api/pricing/; billing FAQ https://www.listennotes.com/api/billing-faq/). rate_limits: auditor correct \u2014 not \u201cnot published\u201d; FREE GET /search is 2 req/s and 20 req/min on pricing page; FAQ confirms plan/endpoint-specific limits (https://www.listennotes.com/api/pricing/; https://www.listennotes.com/api/faq/#faq17)."
 }

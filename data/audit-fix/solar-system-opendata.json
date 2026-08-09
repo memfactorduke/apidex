@@ -2,16 +2,16 @@
   "id": "solar-system-opendata",
   "base_url": null,
   "docs_url": null,
-  "auth_type": null,
-  "auth_details": null,
+  "auth_type": "apiKey",
+  "auth_details": "Free Bearer token required. Obtain at https://api.le-systeme-solaire.net/generatekey.html (active email). Send header: Authorization: Bearer <API_KEY_GUID>.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -sS \"https://api.le-systeme-solaire.net/rest/bodies/terre\" -H \"Authorization: Bearer YOUR_TOKEN\"",
   "example_response_snippet": null,
-  "description": null,
+  "description": "Solar System OpenData (Le Syst\u00e8me solaire) is a free public REST API that serves physical and orbital data for solar system bodies: planets, moons, asteroids, comets, and dwarf planets. Data includes mass, density, gravity, escape velocity, mean radius, semi-major axis, and related properties. Access remains free but requires a free Bearer token (generatekey.html); JSON over HTTPS.",
   "status": null,
-  "resolution_notes": "placeholder"
+  "resolution_notes": "auth: AUDITOR RIGHT. Official docs (https://api.le-systeme-solaire.net/en/) changelog 09-04-2025 v2.0.0: mandatory free bearer token; Authentification section requires Authorization: Bearer _UUID_ from generatekey.html. Live curl without token returns HTTP 401. GitHub README same. example.request: AUDITOR RIGHT. Unauthenticated example fails 401; use terre (canonical FR id)\u2014EN aliases 301-redirect per 2018 notes; curl needs -L for /earth. description: AUDITOR RIGHT. Final sentence must state free Bearer token required, not no auth."
 }

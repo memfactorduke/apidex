@@ -5,11 +5,11 @@
   "category": "health-fitness",
   "tagline": "Researching DailyMed API \u2014 official NLM SPL docs, endpoints, and limits.",
   "description": "US NLM DailyMed web services for Structured Product Labeling (SPL) \u2014 drug package inserts, labels, and related metadata via REST (JSON/XML/ZIP).",
-  "base_url": "https://dailymed.nlm.nih.gov",
+  "base_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2",
   "docs_url": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm",
   "auth": {
     "type": "none",
-    "details": "Researching"
+    "details": "v2 web services are unauthenticated read-only GET endpoints; no API key or login required."
   },
   "https": true,
   "cors": "unknown",
@@ -18,9 +18,9 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free public API (no auth); no published numeric free-tier quota. Rate limiting may apply under high load; avoid parallel requests and paginate large result sets (page/pagesize)."
+    "free_tier_limits": "Free public API with no published numeric quota."
   },
-  "rate_limits": "No public numeric quota. Official guidance: do not send simultaneous/parallel requests; use sequential requests and pagination for large queries; rate limiting may apply under high load.",
+  "rate_limits": "Not published.",
   "example": {
     "request": "curl \"https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=aspirin\"",
     "response_snippet": "{\"data\":[{\"setid\":\"...\",\"title\":\"...\",\"published_date\":\"...\"}],\"metadata\":{\"total_elements\":...,\"total_pages\":...,\"current_page\":1,\"elements_per_page\":100}}"
@@ -89,6 +89,18 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "auth_details",
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

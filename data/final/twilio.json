@@ -20,7 +20,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Trial credit (~$15) for new accounts; trial numbers and restrictions apply until upgraded. No unlimited free production quota \u2014 pay-as-you-go after credit.",
+    "free_tier_limits": "30-day free trial with product-specific free units (not a ~$15 dollar balance): e.g. 100 SMS, 100 WhatsApp, 75 voice minutes, 3,000 emails. Restrictions: verified recipients only (up to 5), sign-up country only, pre-defined templates. No unlimited free production quota \u2014 pay-as-you-go after upgrade.",
     "paid_plans": "Pay-as-you-go SMS/voice/etc. by country and channel; volume discounts and committed-use plans available."
   },
   "rate_limits": "Not a single global limit; product-specific concurrent and request limits (e.g. messaging throughput varies by number type/country). See Twilio rate limits docs.",
@@ -97,6 +97,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

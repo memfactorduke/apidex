@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key must be sent as Authorization: DeepL-Auth-Key YOUR_API_KEY header. Free keys use api-free.deepl.com; paid keys use api.deepl.com. Self-serve signup. Legacy auth_key query/body auth ended 2026-01-15 and now fails.",
   "free_tier": null,
   "free_tier_limits": null,
-  "paid_plans": null,
+  "paid_plans": "DeepL API Growth is the current self-serve paid plan (fixed monthly/yearly price with included characters + usage overage). Enterprise API is custom via sales. DeepL API Pro is legacy and can no longer be purchased.",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "auth.details: auditor right. Official auth docs require Authorization: DeepL-Auth-Key only (https://developers.deepl.com/docs/getting-started/auth); legacy auth_key query/body deprecation ended 2026-01-15 and such requests fail 403 (https://developers.deepl.com/docs/resources/breaking-changes-change-notices/november-2025-deprecation-of-legacy-auth-methods). paid_plans: auditor right. Official plans page states \u201cThe DeepL API Pro plan can no longer be purchased\u201d and positions Developer (free), Growth (self-serve paid), and Enterprise (custom) as current (https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans)."
 }

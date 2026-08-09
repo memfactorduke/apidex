@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Rate limited; begin with a handful of requests per second, handle HTTP 429, and use retry with exponential backoff; exact thresholds vary or are unpublished.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling rate_limits dispute against live RCSB docs."
+  "resolution_notes": "rate_limits: auditor correct. Official Web APIs Overview (https://www.rcsb.org/docs/programmatic-access/web-apis-overview) states all RCSB PDB APIs are rate-limited, recommends starting with a handful of requests per second, returns HTTP 429 on excess, and advises short waits/exponential backoff; no universal numeric ceiling is published on that page. Original 'not published' understated this guidance."
 }

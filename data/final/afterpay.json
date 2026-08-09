@@ -10,7 +10,7 @@
   "signup_url": null,
   "auth": {
     "type": "basic",
-    "details": "unknown \u2014 needs official docs verification"
+    "details": "HTTP Basic: Merchant ID as username, Secret Key as password (base64-encoded pair). Alternative: OAuth 2.0 client-credentials \u2014 POST grant_type=client_credentials to merchant-auth.afterpay.com/v2/oauth2/token, then Authorization: Bearer <access_token>."
   },
   "https": true,
   "cors": "unknown",
@@ -88,6 +88,15 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details"
+      ],
+      "upheld_original": false
+    }
   }
 }

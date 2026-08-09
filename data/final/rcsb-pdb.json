@@ -25,7 +25,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Rate limited; begin with a handful of requests per second, handle HTTP 429, and use retry with exponential backoff; exact thresholds vary or are unpublished.",
   "example": {
     "request": "curl -s 'https://data.rcsb.org/rest/v1/core/entry/4HHB'",
     "response_snippet": "{ \"rcsb_id\": \"4HHB\", \"struct\": { \"title\": \"THE CRYSTAL STRUCTURE OF HUMAN DEOXYHAEMOGLOBIN AT 1.74 ANGSTROMS RESOLUTION\" } }"
@@ -95,6 +95,15 @@
     "corrected": [],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "public.api.bsky.app is unauthenticated public-read only (AppView). Authenticated XRPC (createSession, writes, private data) go to the user's PDS or Bluesky entryway (bsky.social) with session JWT (app password) or OAuth; Authorization: Bearer <accessJwt>.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Public AppView (api.bsky.app / public.api.bsky.app): generous limits, no published general numeric cap\u2014contact Bluesky if hit. Hosted PDS (by IP): 3,000 req/5 min overall; createSession 30/5 min and 300/day per account; stricter on some writes\u2014see docs.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling two disputes against current official Bluesky docs; researching auth host split and rate-limit tables now."
+  "resolution_notes": "auth.details: auditor right. Official docs: direct AppView hosts (api.bsky.app / public.api.bsky.app) do not support auth; public reads hit public.api.bsky.app; authenticated app.bsky.* traffic goes via user PDS/entryway. https://docs.bsky.app/docs/advanced-guides/rate-limits https://docs.bsky.app/docs/advanced-guides/api-directory. rate_limits: auditor right. 3,000/5 min IP and createSession 30/5 min + 300/day are Hosted PDS limits; AppView has generous unpublished caps. https://docs.bsky.app/docs/advanced-guides/rate-limits. Original ~10/min createSession and AppView 3k claims wrong."
 }

@@ -20,7 +20,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown \u2014 verify current free tier on developer.mapquest.com pricing",
+    "free_tier_limits": "50,000 free starter transactions for a limited time; then $0.0045 per transaction under MapQuestGO",
     "paid_plans": null
   },
   "rate_limits": "not published",
@@ -93,6 +93,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

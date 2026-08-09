@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Identity-based per-minute limits (new in 2026): unidentified 10 req/min; compliant User-Agent-only or newer authenticated users 200/min; established authenticated users 2,000/min (caveats apply; bots/WMCS may be exempt). Limit concurrent requests to \u22643. Prefer dumps/SPARQL for heavy use.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "rate_limits: auditor correct. Original \u201cnot published as fixed quotas\u201d is outdated. Official Wikimedia docs (https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits, crawled 2026-08-08) publish cross-API 2026 limits: unidentified 10/min; browser unauth / User-Agent-only / new authenticated 200/min; established authenticated 2,000/min; best practice \u22643 concurrent requests. Also linked from API:Etiquette."
 }

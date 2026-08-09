@@ -25,7 +25,7 @@
   "rate_limits": "not published",
   "example": {
     "request": "curl -s \"https://api-web.nhle.com/v1/scoreboard/now\"",
-    "response_snippet": "{\"focusedDate\":\"2026-04-10\",\"focusedDateCount\":1,\"gamesByDate\":[{\"date\":\"2026-04-10\",\"games\":[{\"id\":2025020123,\"season\":20252026,\"gameType\":2,\"gameState\":\"OFF\",\"awayTeam\":{\"id\":10,\"abbrev\":\"TOR\",\"score\":3},\"homeTeam\":{\"id\":6,\"abbrev\":\"BOS\",\"score\":2}}]}]}"
+    "response_snippet": "{\"focusedDate\":\"2026-04-11\",\"gamesByDate\":[{\"date\":\"2026-04-11\",\"games\":[{\"id\":2025021225,\"season\":20252026,\"gameType\":2,\"gameState\":\"FUT\",\"gameScheduleState\":\"OK\",\"awayTeam\":{\"id\":20,\"abbrev\":\"CGY\",\"score\":0},\"homeTeam\":{\"id\":22,\"abbrev\":\"EDM\",\"score\":0}}]}]}"
   },
   "use_cases": [
     "get today's NHL scoreboard and live game states",
@@ -94,6 +94,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

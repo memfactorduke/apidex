@@ -10,7 +10,7 @@
   "signup_url": "https://app.scrapingbee.com/account/register",
   "auth": {
     "type": "apiKey",
-    "details": "API key via api_key query parameter (self-serve signup at app.scrapingbee.com)."
+    "details": "Authorization: Bearer YOUR_API_KEY (recommended). Query param api_key still works for backward compatibility but is deprecated and may be removed."
   },
   "https": true,
   "cors": "unknown",
@@ -21,12 +21,12 @@
   ],
   "pricing": {
     "free_tier": false,
-    "free_tier_limits": "1,000 free trial credits after signup (credit card required); no ongoing free plan",
+    "free_tier_limits": "1,000 free trial API credits after signup; no credit card required; no ongoing free plan",
     "paid_plans": null
   },
-  "rate_limits": "Plan-based concurrent request limits (e.g. Freelance 5, Startup 50, Business 100, Business+ 200); no published RPS",
+  "rate_limits": "Plan-based concurrent request limits (Freelance 50, Startup 100, Business 200, Business+ 400); no published RPS. Plans may change.",
   "example": {
-    "request": "curl \"https://app.scrapingbee.com/api/v1?api_key=YOUR_API_KEY&url=https%3A%2F%2Fhttpbin.org%2Fhtml\"",
+    "request": "curl \"https://app.scrapingbee.com/api/v1?url=https%3A%2F%2Fhttpbin.org%2Fhtml\" -H \"Authorization: Bearer YOUR_API_KEY\"",
     "response_snippet": "<!DOCTYPE html>\\n<html>..."
   },
   "use_cases": [
@@ -94,6 +94,18 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "rate_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

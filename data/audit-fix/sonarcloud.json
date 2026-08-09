@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
+  "free_tier_limits": "Free plan: private projects up to 50k LOC, max 5 org members, unlimited public projects (main branch only). Separate free OSS plan: unlimited public repos, no private projects.",
+  "paid_plans": "Team (from ~$34/mo, 100k\u20131.9M private LOC, unlimited members) and Enterprise (custom/annual, unlimited LOC ideal from 5M LOC, SSO/SCIM, portfolios, etc.). Priced by private LOC analyzed, not API calls. See sonarsource.com/plans-and-pricing/sonarcloud/",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of disputed name and pricing fields against official SonarSource docs."
+  "resolution_notes": "name: AUDITOR RIGHT. Official product name is SonarQube Cloud (formerly SonarCloud); UI/docs/login use that branding while sonarcloud.io remains the legacy domain. Evidence: docs.sonarsource.com/sonarqube-cloud/\u2026, sonarcloud.io \u2192 sonarsource.com/products/sonarcloud/, en.wikipedia.org/wiki/SonarQube. (No schema `name` field \u2014 flag for directory rename.) pricing: AUDITOR RIGHT. Entry\u2019s \u201cprivate requires paid\u201d is stale. Free includes \u226450k private LOC + \u22645 members; OSS is free unlimited public only; Team/Enterprise raise LOC/features. Evidence: docs.sonarsource.com/sonarqube-cloud/administering-sonarcloud/managing-subscription/subscription-plans and sonarsource.com/plans-and-pricing/sonarcloud/ (free tier \u226450k LoC FAQ). free_tier remains true."
 }

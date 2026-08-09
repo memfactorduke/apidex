@@ -1,17 +1,17 @@
 {
   "id": "guardian",
-  "base_url": null,
-  "docs_url": null,
-  "auth_type": null,
-  "auth_details": null,
-  "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "base_url": "https://content.guardianapis.com",
+  "docs_url": "https://open-platform.theguardian.com/documentation/",
+  "auth_type": "apiKey",
+  "auth_details": "API key via the api-key query parameter. Free self-serve registration at the developer portal.",
+  "free_tier": true,
+  "free_tier_limits": "Developer tier: up to 1 request/second and 500 requests/day; non-commercial use only.",
+  "paid_plans": "Commercial access: custom throttle, quota, and usage-based pricing; request a commercial key.",
+  "rate_limits": "Developer: 1 call/second and 500 calls/day; Commercial: custom throttle and quota limits.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of disputed fields against official Guardian Open Platform docs."
+  "resolution_notes": "auth.details: Auditor right \u2014 official docs document only the api-key query parameter (https://open-platform.theguardian.com/documentation/ and https://open-platform.theguardian.com/access/). No Authorization: Bearer alternative found. free_tier_limits: Auditor right \u2014 Developer tier is free, non-commercial, 1 req/s and 500/day (https://open-platform.theguardian.com/access/). paid_plans: Auditor right \u2014 Commercial tier exists with custom pricing/quotas (https://open-platform.theguardian.com/access/). rate_limits: Auditor right \u2014 same published Developer limits; Commercial custom (https://open-platform.theguardian.com/access/)."
 }

@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free Trial: scrambled/structurally accurate sample data with a small daily call allowance and no SLA for integration testing. Discovery Lab: separate free tier with last-season historical data.",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
-  "example_response_snippet": null,
+  "example_request": "curl \"https://api.sportsdata.io/v3/nfl/scores/json/ScoresByWeek/2024REG/1?key=YOUR_API_KEY\"",
+  "example_response_snippet": "[{\"GameKey\":\"...\",\"Season\":2024,\"Week\":1,...}]",
   "description": null,
   "status": null,
-  "resolution_notes": "Starting live verification against SportsDataIO official docs for free-tier limits, ScoresByWeek season format, and response shape."
+  "resolution_notes": "free_tier_limits: auditor correct \u2014 Free Trial is scrambled integration-test data with limited daily calls/no SLA; Discovery Lab is a separate free last-season dataset (https://sportsdata.io/developers/pricing, https://sportsdata.io/developers/trial-api-key, Discovery Lab pages). example.request: auditor correct \u2014 ScoresByWeek takes a season string like 2024REG, not bare 2024 (https://sportsdata.io/developers/api-documentation/nfl#scores-by-week and API docs). example.response_snippet: auditor correct \u2014 ScoresByWeek returns an array of score objects, not a single object (same NFL scores docs / response schema)."
 }

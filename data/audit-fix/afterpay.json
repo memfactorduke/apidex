@@ -3,7 +3,7 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "HTTP Basic: Merchant ID as username, Secret Key as password (base64-encoded pair). Alternative: OAuth 2.0 client-credentials \u2014 POST grant_type=client_credentials to merchant-auth.afterpay.com/v2/oauth2/token, then Authorization: Bearer <access_token>.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Starting live verification of Afterpay auth against official docs."
+  "resolution_notes": "auth.details: Auditor correct. Official Afterpay docs confirm Basic auth (Merchant ID = username, Secret Key = password) and OAuth 2.0 client-credentials Bearer tokens as the second method. Evidence: https://developers.afterpay.com/afterpay-online-developer/api-reference/reference/introduction/authentication"
 }

@@ -10,7 +10,7 @@
   "signup_url": "https://api.census.gov/data/key_signup.html",
   "auth": {
     "type": "apiKey",
-    "details": "Optional API key as query parameter key=YOUR_API_KEY. Key required for higher rate limits; signup at api.census.gov. Without a key, limited to 500 queries per IP per day."
+    "details": "Free API key required on every Census Data API data query as query param key=YOUR_API_KEY. Signup free at api.census.gov/data/key_signup.html (approved email domains). No unauthenticated access."
   },
   "https": true,
   "cors": "unknown",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "...",
+    "free_tier_limits": "Free API key required for every query; up to 50 variables per query; no paid API plan.",
     "paid_plans": null
   },
-  "rate_limits": "...",
+  "rate_limits": "Up to 50 variables per query. Official docs publish no fixed requests-per-day quota; API key required for all data queries (former 500/day unauth limit is obsolete).",
   "example": {
     "request": "curl \"https://api.census.gov/data/2023/acs/acs1?get=NAME,B01001_001E&for=state:*&key=YOUR_API_KEY\"",
     "response_snippet": "[[\"NAME\",\"B01001_001E\",\"state\"],[\"Alabama\",\"5108468\",\"01\"],[\"Alaska\",\"733406\",\"02\"],[\"Arizona\",\"7431344\",\"04\"]]"
@@ -94,6 +94,17 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "Access token via the required key query parameter; self-serve signup.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Free: 2 req/s and 60 req/min. Paid: Maps Lite 15/s, Developer 20/s, Startup 22/s, Growth Plus 30/s, Business Plus 40/s; Enterprise custom.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of auth methods and current published rate limits."
+  "resolution_notes": "auth.details: Auditor correct. Official docs require access token as query param key only (e.g. https://docs.locationiq.com/docs/search-forward-geocoding: key=YOUR_ACCESS_TOKEN in every example; no Authorization: Bearer documented). rate_limits: Auditor correct. https://locationiq.com/pricing lists Free 2 req/s + 60/min; Maps Lite 15/s, Developer 20/s, Startup 22/s, Growth Plus 30/s, Business Plus 40/s \u2014 not the entry\u2019s vague 5\u201350+."
 }

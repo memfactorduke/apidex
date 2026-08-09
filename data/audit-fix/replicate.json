@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Select models can be run free for limited usage; Replicate eventually requires billing setup, and no fixed free-credit amount is promised.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Default: 600 prediction-creation requests/minute and 3,000 requests/minute for other endpoints; accounts with low/granted credit and no payment method may get stricter limits.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "free_tier_limits: auditor correct \u2014 docs describe free limited use of select models, not a fixed signup credit (https://replicate.com/pricing, https://replicate.com/docs). rate_limits: auditor correct \u2014 Replicate publishes defaults of 600 prediction creates/min and 3,000 other requests/min, with stricter limits possible without payment method (https://replicate.com/docs/topics/rate-limits or /docs/reference/http)."
 }

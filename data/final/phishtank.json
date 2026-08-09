@@ -5,8 +5,8 @@
   "category": "security-identity",
   "tagline": "Community phishing URL verification feed for mail and browser protection",
   "description": "PhishTank is a collaborative clearing house for phishing URL verification. Developers can check URLs against a community-maintained phishing database and consume data feeds for mail and browser protection.",
-  "base_url": "https://checkurl.phishtank.com",
-  "docs_url": "https://www.phishtank.com/api_info.php",
+  "base_url": "null",
+  "docs_url": "null",
   "auth": {
     "type": "apiKey",
     "details": "Optional API key via application parameter; higher rate limits with registered key from free signup at phishtank.com"
@@ -101,6 +101,25 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

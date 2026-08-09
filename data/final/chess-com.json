@@ -23,7 +23,7 @@
     "free_tier_limits": "Fully free public data API; no paid tier for this surface",
     "paid_plans": null
   },
-  "rate_limits": "not published (fair use; avoid excessive concurrent requests)",
+  "rate_limits": "Serial requests are unlimited; parallel requests may be rate-limited with 429, and abnormal activity may be blocked.",
   "example": {
     "request": "curl -s -H 'User-Agent: MyApp/1.0 (contact@example.com)' 'https://api.chess.com/pub/player/hikaru'",
     "response_snippet": "{\"@id\":\"https://api.chess.com/pub/player/hikaru\",\"url\":\"https://www.chess.com/member/hikaru\",\"username\":\"hikaru\",\"player_id\":15448422,\"title\":\"GM\",\"status\":\"premium\",\"name\":\"Hikaru Nakamura\",\"avatar\":\"https://images.chesscomfiles.com/...\",\"country\":\"https://api.chess.com/pub/country/US\",\"joined\":1178554800,\"last_online\":1710000000,\"followers\":1200000,\"is_streamer\":true,\"verified\":true,\"league\":\"Legend\"}"
@@ -94,6 +94,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling the example.response_snippet dispute against the live toptier_agencies endpoint."
+  "resolution_notes": "Auditor correct: live GET https://api.usaspending.gov/api/v2/references/toptier_agencies/ returns USAID as agency_id 801, toptier_code \"072\", abbreviation \"USAID\", agency_name \"Agency for International Development\" (not agency_id 1 / toptier_code \"001\"). Original snippet used stale identifiers. Corrected snippet reflects current live response."
 }

@@ -10,7 +10,7 @@
   "signup_url": "https://dashboard.alchemy.com/signup",
   "auth": {
     "type": "apiKey",
-    "details": "API key via URL path (https://{network}.g.alchemy.com/v2/YOUR_API_KEY) or Alchemy-Auth header on some APIs; self-serve dashboard signup"
+    "details": "API key via URL path (https://{network}.g.alchemy.com/v2/YOUR_API_KEY) or Authorization: Bearer YOUR_API_KEY; self-serve dashboard signup"
   },
   "https": true,
   "cors": "unknown",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free tier with monthly compute unit (CU) allowance; exact CU and rate limits vary by plan \u2014 confirm on pricing page",
-    "paid_plans": "Pay-as-you-go and Growth/Enterprise plans based on compute units"
+    "free_tier_limits": "Free tier includes 30 million compute units (CUs) per month; exact CU and rate limits vary by plan \u2014 confirm on pricing page",
+    "paid_plans": "Pay As You Go and Enterprise plans based on compute units"
   },
-  "rate_limits": "Plan-dependent CU/sec and monthly CU caps; Free tier has lower throughput than Growth",
+  "rate_limits": "Plan-dependent; Free ~25 RPS / 500 CU/s; Pay As You Go ~300 RPS / 10,000 CU/s (confirm current published limits)",
   "example": {
     "request": "curl -s -X POST https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY -H 'Content-Type: application/json' -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"eth_blockNumber\",\"params\":[]}'",
     "response_snippet": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"0x13a2b40\"}"
@@ -93,6 +93,26 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -4,13 +4,13 @@
   "name": "Riot Games API",
   "category": "games-comics",
   "tagline": "Official competitive game data for League of Legends, Valorant, TFT, and more",
-  "description": "The Riot Games API provides developers with programmatic access to official competitive data across Riot titles including League of Legends, VALORANT, Teamfight Tactics, Legends of Runeterra, and more. It exposes match history, player stats, ranked ladders, live game data, and account identity via regional routing. Authentication uses a free personal API key from the Riot Developer Portal with strict rate limits; production apps require a formal application for higher limits.",
+  "description": "Official Riot Games API for League of Legends, VALORANT, TFT, LoR, and more: match history, player stats, ranked ladders, live game data, account identity via regional routing. Free keys from the developer portal with rate limits; production needs approval.",
   "base_url": "https://{region}.api.riotgames.com",
   "docs_url": "https://developer.riotgames.com/docs/portal",
   "signup_url": "https://developer.riotgames.com/",
   "auth": {
     "type": "apiKey",
-    "details": "Personal API key via X-Riot-Token header (or api_key query param). Self-serve signup at developer.riotgames.com; keys expire after 24 hours for development, production keys via application approval."
+    "details": "Development keys auto-issue and deactivate every 24h; personal keys require product registration (private use); production keys need app approval. Auth via X-Riot-Token header or api_key query. VALORANT has separate product/approval restrictions."
   },
   "https": true,
   "cors": "unknown",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Personal development keys: free with short-term expiration (typically 24h renewal) and low rate limits; production keys free after application approval with higher limits. Exact rate numbers are app-specific and shown in the developer portal.",
+    "free_tier_limits": "Development keys: free, deactivate every 24h, low limits. Personal keys: free after product registration for private use. Production keys: free after approval for public apps, higher limits. All via developer.riotgames.com.",
     "paid_plans": null
   },
-  "rate_limits": "Personal keys typically have app-specific limits shown in the developer portal (commonly ~20 req/1s and ~100 req/2min historically, but not guaranteed); production apps get higher limits after approval.",
+  "rate_limits": "Personal keys: 20 req/s and 100 req/2min per region. Production starting limits: 500 req/10s and 30,000 req/10min per region; method/service limits may also apply (see developer portal).",
   "example": {
     "request": "curl -H \"X-Riot-Token: YOUR_API_KEY\" \"https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/GameName/TagLine\"",
     "response_snippet": "{\n  \"puuid\": \"puuid-here\",\n  \"gameName\": \"GameName\",\n  \"tagLine\": \"TagLine\"\n}"
@@ -96,6 +96,25 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

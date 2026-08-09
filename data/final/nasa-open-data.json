@@ -4,7 +4,7 @@
   "name": "NASA Open Data",
   "category": "data-analytics",
   "tagline": "Unified gateway to NASA space datasets and APIs",
-  "description": "NASA Open Data (api.nasa.gov) is a free api_key gateway to NASA open science APIs such as Astronomy Picture of the Day (APOD), Near Earth Objects (NeoWs), EPIC Earth imagery, GIBS, and the NASA Image and Video Library. Some older cataloged endpoints are archived: the Mars Rover Photos API and the legacy Earth (Landsat) API are no longer current; use Earthdata GIBS for Earth imagery instead of the old Landsat endpoint.",
+  "description": "NASA Open Data (api.nasa.gov) is a free api_key gateway to NASA open science APIs such as Astronomy Picture of the Day (APOD), Near Earth Objects (NeoWs), and EPIC Earth imagery. Some older cataloged endpoints are archived: the Mars Rover Photos API and the legacy Earth (Landsat) API are no longer current. Earthdata GIBS and the NASA Image and Video Library are separate NASA services with their own base URLs and authentication (not this gateway).",
   "base_url": "https://api.nasa.gov",
   "docs_url": "https://api.nasa.gov/",
   "signup_url": "https://api.nasa.gov/",
@@ -91,6 +91,15 @@
     "corrected": [
       "description"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

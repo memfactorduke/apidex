@@ -22,7 +22,7 @@
     "free_tier_limits": "500 credits/month free (odds endpoints may cost multiple credits per region; GET /sports is free)",
     "paid_plans": "Paid plans scale by monthly request volume; see official pricing"
   },
-  "rate_limits": "not published",
+  "rate_limits": "30 requests/second on paid usage plans; 429 responses may still occur during bursts. Free-plan request-rate limit is not clearly published.",
   "example": {
     "request": "curl \"https://api.the-odds-api.com/v4/sports?apiKey=YOUR_API_KEY\"",
     "response_snippet": "[{\"key\":\"americanfootball_nfl\",\"group\":\"American Football\",\"title\":\"NFL\",\"description\":\"US Football\",\"active\":true,\"has_outrights\":false}]"
@@ -95,6 +95,15 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -10,8 +10,8 @@
   "rate_limits": null,
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"id\":\"5b11f4ce-a62d-471e-81fc-a69a8278c7da\",\"name\":\"Nirvana\",\"type\":\"Group\",\"country\":\"US\",\"life-span\":{\"begin\":\"1987\",\"end\":\"1994-04-05\",\"ended\":true}}",
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "example.response_snippet: auditor correct. Live GET https://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?fmt=json returns life-span begin=1987, end=1994-04-05, ended=true (not 1988/undated 1994)."
 }

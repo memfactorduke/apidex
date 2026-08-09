@@ -20,7 +20,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free plan includes limited monthly character quota for TTS (check pricing page for current numbers); paid tiers scale by characters and concurrency",
+    "free_tier_limits": "Free plan: 10,000 credits/month shared across products (TTS, STT, music, SFX, etc.); TTS typically ~0.5\u20131 credit per character by model (e.g. Multilingual v2 = 1 credit/char; Flash/Turbo API often 0.5); commercial licensing requires a paid plan",
     "paid_plans": "Starter, Creator, Pro, Scale, and Business plans with higher character quotas and concurrency"
   },
   "rate_limits": "Plan-based concurrency and character quotas; exact published limits vary by tier",
@@ -94,6 +94,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

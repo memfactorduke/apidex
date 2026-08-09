@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "30 requests/second on paid usage plans; 429 responses may still occur during bursts. Free-plan request-rate limit is not clearly published.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "pending verification"
+  "resolution_notes": "rate_limits: auditor correct; original \"not published\" is wrong. Official docs: \"The current rate limit is 30 requests per second on paid usage plans\" and note that 429s can still occur near the limit (https://the-odds-api.com/guide/rate-limit.html). V4 error codes: EXCEEDED_FREQ_LIMIT = 429, \"rate limit is currently 30 API calls per second\" (https://the-odds-api.com/liveapi/guides/v4/api-error-codes.html). Free-plan RPS not stated separately on those pages."
 }

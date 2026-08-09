@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown \u2014 verify current plan limits on pricing page",
-    "paid_plans": null
+    "free_tier_limits": "200,000 messages per day and 100 concurrent connections",
+    "paid_plans": "Channels: Startup $49/mo, Pro $99/mo, Business $299/mo, plus higher tiers (see pricing page)"
   },
   "rate_limits": "not published",
   "example": {
     "request": "curl \"https://api-mt1.pusher.com/apps/YOUR_APP_ID/events?auth_key=YOUR_KEY&auth_timestamp=YOUR_TS&auth_version=1.0&body_md5=YOUR_MD5&auth_signature=YOUR_SIG\" -H \"Content-Type: application/json\" -d '{\"name\":\"my-event\",\"channels\":[\"my-channel\"],\"data\":\"{\\\"message\\\":\\\"hello\\\"}\"}'",
-    "response_snippet": "{\"status\":200}"
+    "response_snippet": "{}"
   },
   "use_cases": [
     "publish a real-time event to a channel from a server",
@@ -91,6 +91,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

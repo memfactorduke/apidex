@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key via the required key query parameter; self-serve signup.",
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "50 requests/day; 1 request/second; current weather and 7-day daily forecasts; non-commercial use.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Free: 50 req/day, 1 req/s; Standard: 25k/day, 25/s; Plus: 250k/day, 50/s; Business: 2M/day, 150/s; Enterprise: custom. Daily quotas reset 00:00 UTC.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling auditor disputes against current official Weatherbit docs (auth, free-tier limits, rate limits)."
+  "resolution_notes": "auth.details: auditor correct \u2014 first-party docs/Swagger mark key as required query only (https://www.weatherbit.io/api/weather-current; https://www.weatherbit.io/static/swagger.json); no header auth documented. free_tier_limits: auditor correct \u2014 Free plan is 50 req/day, 1 req/s, current + 7-day daily, non-commercial (https://www.weatherbit.io/pricing; https://www.weatherbit.io/terms). rate_limits: auditor correct \u2014 plan table publishes daily and per-second limits (https://www.weatherbit.io/pricing; https://help.weatherbit.io/faq/what-happens-when-i-exceed-a-rate-limit/)."
 }

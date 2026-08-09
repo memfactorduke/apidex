@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "JSON/YAML API: 20 requests/minute; one-hour block when exceeded. Other LOC services have separate limits.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying rate limits against official LOC docs."
+  "resolution_notes": "rate_limits: auditor correct; original \"not published\" is wrong. Official docs (https://www.loc.gov/apis/json-and-yaml/working-within-limits/) publish JSON/YAML API limits as 20 requests/minute with a 1-hour block when exceeded; Text/Image microservices are 150/min with the same block window."
 }

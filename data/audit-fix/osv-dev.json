@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free public service with no documented API request limit. HTTP/1.1 responses capped at 32 MiB; HTTP/2 responses have no documented size cap.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Currently no API rate limit is documented.",
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
-  "description": null,
+  "example_response_snippet": "{\"vulns\": [{\"id\": \"GHSA-35jh-r3h4-6jhm\", \"summary\": \"Command Injection in lodash\", \"details\": \"...\", \"affected\": [{\"package\": {\"name\": \"lodash\", \"ecosystem\": \"npm\"}, \"ranges\": [...]}]}]}",
+  "description": "Public vulnerability database and API for querying vulnerabilities by package version, commit, or OSV identifier across open-source ecosystems.",
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "free_tier_limits: auditor right \u2014 https://google.github.io/osv.dev/ and https://ossf.github.io/osv-schema/ / API docs state free public use; no request quota documented; response size limits per Google OSV API docs. rate_limits: auditor right \u2014 official docs document no rate limit (https://google.github.io/osv.dev/api/). example.response_snippet: auditor right \u2014 GHSA-35jh-r3h4-6jhm is Command Injection (https://github.com/advisories/GHSA-35jh-r3h4-6jhm); lodash 4.17.20 may return multiple vulns. description: auditor right \u2014 placeholder invalid; OSV is multi-ecosystem vuln DB/API (https://google.github.io/osv.dev/)."
 }

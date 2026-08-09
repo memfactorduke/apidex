@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key as apiKey URL query param (GET) or JSON body property (POST); self-serve signup on eventregistry.org / newsapi.ai. Header auth not documented.",
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "free_tier_limits": "2,000 free tokens/searches total for testing (one-time, not renewed monthly); free tier limited to last 30 days of content; token cost varies by endpoint/result size",
+  "paid_plans": "Monthly token plans: 5K $90, 10K $150, 20K $220, 50K $400, 100K $700, 200K $1,300, 500K $3,000; custom/enterprise; overage $0.015/token (newsapi.ai/plans)",
+  "rate_limits": "Maximum 5 simultaneous requests per user; excess concurrent requests return HTTP 429",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Checking official Event Registry docs and pricing now for auth, free tier, paid plans, and rate limits."
+  "resolution_notes": "auth.details: auditor right\u2014docs require apiKey as URL param (e.g. apiKey=YOUR_API_KEY), not header; POST examples put apiKey in JSON body (https://newsapi.ai/documentation?tab=introduction). free_tier_limits: auditor right\u2014Free is one-time 2,000 tokens for testing, not monthly; last-30-days data only (https://newsapi.ai/plans; docs intro). paid_plans: auditor right\u2014null was wrong; populate from https://newsapi.ai/plans (5K\u2013500K + custom). rate_limits: auditor right\u2014max 5 simultaneous \u2192 429 (docs Rate Limiting)."
 }

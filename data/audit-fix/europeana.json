@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "Preferred: X-Api-Key header on all Search/Record requests. The wskey query parameter still works but is deprecated (sole option until 2023; grace period for migration). Free keys via Europeana account (Manage API keys).",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -H \"X-Api-Key: YOUR_API_KEY\" \"https://api.europeana.eu/record/v2/search.json?query=Mona%20Lisa&rows=2\"",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of auth.details and example.request against official Europeana API docs."
+  "resolution_notes": "auth.details: auditor correct. Official Accessing the APIs docs mark \u201cX-Api-Key\u201d header as preferred and \u201cwskey\u201d as deprecated (sole option until 2023; grace period). https://europeana.atlassian.net/wiki/spaces/EF/pages/2462351393/Accessing+the+APIs \u2014 example.request: auditor correct. Same page; example should use X-Api-Key header, not wskey in the URL."
 }

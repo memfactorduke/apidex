@@ -5,7 +5,7 @@
   "category": "geo-maps",
   "tagline": "Open-source routing, geocoding, isochrones, and matrix APIs over OpenStreetMap",
   "description": "OpenRouteService (ORS) provides free and paid HTTP APIs for car/bike/foot routing, distance matrices, isochrones, geocoding/reverse geocoding, POI search, elevation, and optimization on OpenStreetMap data. Hosted at api.openrouteservice.org; self-hosting is also supported via open-source engines.",
-  "base_url": "https://api.openrouteservice.org",
+  "base_url": "https://api.heigit.org/openrouteservice",
   "docs_url": "https://openrouteservice.org/dev/#/api-docs",
   "signup_url": "https://openrouteservice.org/dev/#/signup",
   "auth": {
@@ -26,7 +26,7 @@
   },
   "rate_limits": "Published on plans page: free ~40 req/min and 2,000 req/day directions (endpoint-dependent); higher on paid plans",
   "example": {
-    "request": "curl -X GET 'https://api.openrouteservice.org/v2/directions/driving-car?start=8.681495,49.41461&end=8.687872,49.420318' -H 'Authorization: YOUR_API_KEY'",
+    "request": "curl -X GET 'https://api.heigit.org/openrouteservice/v2/directions/driving-car?start=8.681495,49.41461&end=8.687872,49.420318' -H 'Authorization: YOUR_API_KEY'",
     "response_snippet": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{\"segments\":[{\"distance\":1033.5,\"duration\":222.6}],\"summary\":{\"distance\":1033.5,\"duration\":222.6}},\"geometry\":{\"coordinates\":[[8.681495,49.41461],[8.687872,49.420318]],\"type\":\"LineString\"}}]}"
   },
   "use_cases": [
@@ -96,6 +96,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

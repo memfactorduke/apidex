@@ -5,7 +5,7 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free Current Weather & Forecasts: 60 calls/minute and 1,000,000 calls/month. One Call 3.0/4.0 separately: first 1,000 calls/day free (pay-per-call after).",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Looking up official OpenWeatherMap free-tier and rate-limit docs to settle the free_tier_limits dispute."
+  "resolution_notes": "Auditor right on pricing.free_tier_limits. Official pricing (https://openweathermap.org/price) lists Free Weather API access (Current Weather, 5-day/3-hour forecast, etc.) as 60 calls/minute and 1,000,000 calls/month; One Call 4.0 is separate pay-per-call with first 1,000 calls/day free (FAQ: https://openweathermap.org/faq). Entry\u2019s ~1,000/day conflated One Call with the free Current Weather APIs used in the example."
 }

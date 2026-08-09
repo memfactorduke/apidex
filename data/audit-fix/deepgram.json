@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Per-project concurrency; varies by plan, model, service, region. Pay As You Go Nova-3: up to 50 concurrent pre-recorded, 150 streaming. Growth raises streaming (e.g. 225 NA). Enterprise higher. See docs for full tables.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of Deepgram rate-limit documentation."
+  "resolution_notes": "rate_limits: Auditor correct. Official docs publish model-/plan-/region-specific concurrency (not \"not published\"). Pay As You Go Nova-3: 50 pre-recorded + 150 streaming concurrent per project; Growth/Enterprise higher. Evidence: https://developers.deepgram.com/reference/api-rate-limits"
 }

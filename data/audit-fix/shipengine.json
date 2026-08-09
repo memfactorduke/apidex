@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key via API-Key header; obtain from dashboard after self-serve signup.",
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "$0 plan: sandbox + essential API ops with ShipStation-provided carrier accounts, no API usage charge; own carrier accounts/full features need Advanced. Separate 30-day sandbox-only trial if no payment method.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "200 requests/minute by default; sandbox 20 requests/minute; higher limits may be requested.",
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"carriers\":[{\"carrier_id\":\"se-123456\",\"carrier_code\":\"stamps_com\",\"account_number\":\"123456\",\"nickname\":null,\"friendly_name\":\"Stamps.com\",\"primary\":true,\"has_multi_package_supporting_services\":true,\"supports_label_messages\":true,\"services\":[]}]}",
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying disputed fields against current official ShipEngine/ShipStation docs."
+  "resolution_notes": "name: auditor right \u2014 rebranded ShipStation API (formerly ShipEngine) Feb 28 2025; docs at shipstation.com/docs/ and shipengine.com/docs/ rebrand notice. auth.details: auditor right \u2014 current auth docs specify API-Key only, not X-ShipEngine-API-Key (shipstation.com/docs/auth/). free_tier_limits: auditor right \u2014 $0 plan exists with feature restrictions vs trial (shipstation.com/pricing or shipengine.com/pricing). rate_limits: auditor right \u2014 200/min prod, 20/min sandbox published (shipstation.com/docs/rate-limits/ or equivalent). example.response_snippet: auditor right \u2014 carrier object uses nickname/friendly_name not name (list carriers API docs). status: still operational under new brand."
 }

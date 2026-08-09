@@ -10,7 +10,7 @@
   "signup_url": "https://developer.nytimes.com/get-started",
   "auth": {
     "type": "apiKey",
-    "details": "API key via api-key query parameter (or X-Api-Key header on some endpoints); self-serve signup at developer.nytimes.com"
+    "details": "API key via api-key query parameter only; self-serve signup at developer.nytimes.com"
   },
   "https": true,
   "cors": "unknown",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
+    "free_tier_limits": "500 req/day and 5 req/min per API; free access is non-commercial only\u2014commercial use needs NYT licensing (nytlicensing.com)",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "500 requests per day and 5 requests per minute per API; sleep 12s between calls recommended; higher limits via code@nytimes.com",
   "example": {
     "request": "curl \"https://api.nytimes.com/svc/topstories/v2/home.json?api-key=YOUR_API_KEY\"",
     "response_snippet": "{\"status\":\"OK\",\"copyright\":\"Copyright (c) The New York Times Company.\",\"section\":\"home\",\"num_results\":25,\"results\":[{\"section\":\"us\",\"title\":\"Example Headline\",\"url\":\"https://www.nytimes.com/...\",\"published_date\":\"2026-01-01T12:00:00-05:00\"}]}"
@@ -90,6 +90,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

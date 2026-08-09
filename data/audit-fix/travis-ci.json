@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
-  "free_tier": null,
+  "auth_details": "Authentication uses Authorization: token YOUR_API_TOKEN. Travis-API-Version: 3 is a separate required/recommended API version header, not an authentication alternative. Tokens from account settings.",
+  "free_tier": false,
   "free_tier_limits": null,
-  "paid_plans": null,
+  "paid_plans": "Hosted plans from $15/mo (Bootstrap); Free Trial Plans currently unavailable per billing docs. Limited OSS/partner credits may exist under special conditions.",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of auth.details and free_tier against official Travis CI docs."
+  "resolution_notes": "auth.details: Auditor correct \u2014 Travis-API-Version: 3 is the API version header, not auth. Auth is Authorization: token ... (https://developer.travis-ci.com/authentication). free_tier: Auditor correct \u2014 public pricing starts at $15/mo Bootstrap; free trial unavailable (https://www.travis-ci.com/pricing/, billing docs). Original free_tier=true was wrong."
 }

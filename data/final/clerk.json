@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free plan: 50,000 MAU (Hobby); Pro from $25/mo with 10k MAU included then usage-based; see clerk.com/pricing for current limits",
+    "free_tier_limits": "Hobby: free with up to 50,000 MRU (Monthly Retained Users) per app; Pro from $25/mo ($20/mo annual) with 50,000 MRU included per app, then published overages (from $0.02/MRU); see clerk.com/pricing",
     "paid_plans": null
   },
-  "rate_limits": "Backend API rate limited: production typically 100 req/10s (some endpoints higher); development instances lower. See clerk.com/docs/backend-requests/resources/rate-limits",
+  "rate_limits": "Backend API: production 1,000 req/10s; development 100 req/10s; some endpoints have lower limits. See clerk.com/docs/guides/how-clerk-works/system-limits",
   "example": {
     "request": "curl https://api.clerk.com/v1/users -H \"Authorization: Bearer YOUR_API_KEY\"",
-    "response_snippet": "{\"data\":[],\"total_count\":0}"
+    "response_snippet": "[]"
   },
   "use_cases": [
     "list users for an application",
@@ -90,6 +90,17 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

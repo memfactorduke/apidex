@@ -2,16 +2,16 @@
   "id": "geonames",
   "base_url": null,
   "docs_url": null,
-  "auth_type": null,
-  "auth_details": null,
+  "auth_type": "other",
+  "auth_details": "Username query parameter (username=YOUR_USERNAME); free GeoNames account required; enable free web services on the account page. No separate API key is issued.",
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "free_tier_limits": "1000 credits/hour and 10000 credits/day (most requests = 1 credit)",
+  "paid_plans": "Premium Web Services: Best Availability (from 250\u20ac/yr) and Best Price (from 40\u20ac/yr); credit packs valid 1 year. Details: https://www.geonames.org/commercial-webservices.html",
+  "rate_limits": "Free: 1000 credits/hour and 10000 credits/day; commercial Premium plans have higher published limits",
   "cors": null,
-  "example_request": null,
+  "example_request": "curl \"https://secure.geonames.org/searchJSON?q=London&maxRows=1&username=YOUR_USERNAME\"",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling disputes against current official GeoNames docs."
+  "resolution_notes": "auth: auditor right\u2014docs require username param, not an API key (https://www.geonames.org/export/web-services.html). free_tier_limits & rate_limits: auditor right\u2014official free limits are 10k credits/day and 1000/hour, not 20k (https://www.geonames.org/export/). paid_plans: auditor right\u2014Premium Best Availability/Best Price plans published (https://www.geonames.org/commercial-webservices.html). example.request: auditor right\u2014placeholder must be YOUR_USERNAME (same web-services docs)."
 }

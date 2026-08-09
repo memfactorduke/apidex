@@ -10,7 +10,7 @@
   "signup_url": "https://viz.greynoise.io/signup",
   "auth": {
     "type": "apiKey",
-    "details": "API key via key header (e.g. key: YOUR_API_KEY) or Authorization: Bearer YOUR_API_KEY; self-serve signup at viz.greynoise.io"
+    "details": "API key via the key: YOUR_API_KEY header; self-serve signup at viz.greynoise.io"
   },
   "https": true,
   "cors": "unknown",
@@ -94,6 +94,15 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details"
+      ],
+      "upheld_original": false
+    }
   }
 }

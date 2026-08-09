@@ -4,7 +4,7 @@
   "name": "Advice Slip",
   "category": "fun-novelty",
   "tagline": "Random advice slips with search",
-  "description": "Advice Slip is a free public API that returns random advice slips and supports search by keyword. Responses are available in JSON or XML, and no authentication is required.",
+  "description": "Advice Slip is a free public API that returns random advice slips and supports search by keyword. Responses are available in JSON or JSONP; a separate daily RSS feed is also available. No authentication is required.",
   "base_url": "https://api.adviceslip.com",
   "docs_url": "https://api.adviceslip.com",
   "signup_url": null,
@@ -90,6 +90,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

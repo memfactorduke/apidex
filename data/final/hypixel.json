@@ -10,7 +10,7 @@
   "signup_url": "https://developer.hypixel.net/",
   "auth": {
     "type": "apiKey",
-    "details": "API key via key query parameter or API-Key header; free self-serve keys from developer.hypixel.net"
+    "details": "API key via API-Key request header only (v2 OpenAPI); free self-serve keys from developer.hypixel.net"
   },
   "https": true,
   "cors": "unknown",
@@ -22,7 +22,7 @@
     "free_tier_limits": "Free API keys with rate limits by key type; concrete free quota numbers not published as a daily allowance",
     "paid_plans": null
   },
-  "rate_limits": "Personal keys typically ~120 requests/minute; higher limits for application keys \u2014 confirm current values in developer portal",
+  "rate_limits": "Application-dependent limits enforced over 5-minute intervals; use RateLimit-Limit/Remaining/Reset response headers and the developer dashboard as authoritative (official docs do not publish a fixed base quota such as 120/min)",
   "example": {
     "request": "curl -s \"https://api.hypixel.net/v2/player?uuid=YOUR_PLAYER_UUID\" -H \"API-Key: YOUR_API_KEY\"",
     "response_snippet": "{\"success\":true,\"player\":{\"_id\":\"...\",\"uuid\":\"...\",\"displayname\":\"Notch\",\"rank\":\"...\",\"stats\":{}}}"
@@ -93,6 +93,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

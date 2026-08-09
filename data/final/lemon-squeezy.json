@@ -20,12 +20,12 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "Platform free until first sale (no monthly platform fee). API usage not separately metered. Transaction fees apply on sales (typically 5% + $0.50).",
-    "paid_plans": "Transaction-based: typically 5% + $0.50 per transaction (plus payment processing); no separate API subscription tiers."
+    "paid_plans": "Standard platform fee 5% + $0.50 per transaction (covers payment processing and MoR costs); surcharges may apply (e.g. +1.5% international, +1.5% PayPal, +0.5% subscriptions, affiliate/marketing fees); custom pricing available."
   },
-  "rate_limits": "Typically 120 requests/minute; 429 responses include Retry-After. Check docs for current limits.",
+  "rate_limits": "300 API calls per minute. Successful responses include X-Ratelimit-Limit and X-Ratelimit-Remaining; exceeding the limit returns 429 Too Many Requests.",
   "example": {
     "request": "curl -X GET \"https://api.lemonsqueezy.com/v1/users/me\" -H \"Accept: application/vnd.api+json\" -H \"Content-Type: application/vnd.api+json\" -H \"Authorization: Bearer YOUR_API_KEY\"",
-    "response_snippet": "{\"jsonapi\":{\"version\":\"1.0\"},\"links\":{\"self\":\"https://api.lemonsqueezy.com/v1/users/1\"},\"data\":{\"type\":\"users\",\"id\":\"1\",\"attributes\":{\"name\":\"John Doe\",\"email\":\"john@example.com\",\"status\":\"active\"}}}"
+    "response_snippet": "{\"jsonapi\":{\"version\":\"1.0\"},\"links\":{\"self\":\"https://api.lemonsqueezy.com/v1/users/1\"},\"data\":{\"type\":\"users\",\"id\":\"1\",\"attributes\":{\"name\":\"John Doe\",\"email\":\"john@example.com\",\"color\":\"#898FA9\",\"avatar_url\":\"https://www.gravatar.com/avatar/1ace5b3965c59dbcd1db79d85da75048?d=blank\",\"has_custom_avatar\":false,\"createdAt\":\"2024-05-24T14:08:31.000000Z\",\"updatedAt\":\"2024-08-26T13:24:54.000000Z\"}}}"
   },
   "use_cases": [
     "list products and variants for a store",
@@ -95,6 +95,17 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans",
+        "rate_limits",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

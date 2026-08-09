@@ -6,12 +6,12 @@
   "auth_details": null,
   "free_tier": null,
   "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "paid_plans": "Build (free), Start, Elevate, and Enterprise; qualifying small teams may obtain a Maker account",
+  "rate_limits": "Per endpoint and platform (1-min window); e.g. Query Channels 10,000/min, Send Message 1,000/min; also 60 req/min per user per endpoint/platform. Limits can be dynamically adjusted; higher limits available on request.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying both disputed fields against live official Stream docs/pricing now."
+  "resolution_notes": "paid_plans: auditor correct\u2014official Chat pricing is Build/Start/Elevate/Enterprise, not Starter/Team; Maker is a separate eligibility-based free offer (https://getstream.io/pricing/, https://getstream.io/maker-account/). rate_limits: auditor correct\u2014docs publish per-endpoint/platform 1-min limits (Query Channels 10k/min, Send Message 1k/min) plus 60/min per-user limit; dynamic adjustment noted (https://getstream.io/chat/docs/react/rate-limits/)."
 }

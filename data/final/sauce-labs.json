@@ -18,8 +18,8 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
-    "free_tier_limits": "Free trial available; concrete free-tier API request limits not clearly published as a permanent free plan",
+    "free_tier": false,
+    "free_tier_limits": "No permanent free plan. Free 28-day trial: 60 Automated and Live Testing minutes, real devices, Sauce Connect, Error Reporting, 2 VMs in parallel (no credit card). Separate free accounts for qualifying open-source projects (opensource.saucelabs.com).",
     "paid_plans": "Usage-based and subscription plans for Live, Automated, Mobile, Visual, and Error Reporting products"
   },
   "rate_limits": "not published",
@@ -91,6 +91,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier",
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

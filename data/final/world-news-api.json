@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "Free: 50 points/day (then no more calls until midnight UTC reset); 1-month history; backlink required. Points \u2260 1:1 requests (typical call costs ~1 point + 0.01/result).",
-    "paid_plans": null
+    "paid_plans": "Starter, Reporter, Journalist, Editor (paid tiers; daily point quotas + rate limits on official pricing)."
   },
   "rate_limits": "Published by plan. Free: 60 req/min, 1 concurrent; Reporter: 2 req/s, 5 concurrent; Journalist: 10 req/s, 10 concurrent; Editor: 20 req/s, 10 concurrent. Daily point quotas on pricing.",
   "example": {
@@ -89,6 +89,15 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

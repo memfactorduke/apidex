@@ -4,13 +4,13 @@
   "name": "Solar System OpenData",
   "category": "science-space",
   "tagline": "Open REST API for planets, moons, and solar system body physical data",
-  "description": "Solar System OpenData (Le Syst\u00e8me solaire) is a free public REST API that serves physical and orbital data for solar system bodies: planets, moons, asteroids, comets, and dwarf planets. Data includes mass, density, gravity, escape velocity, mean radius, semi-major axis, and related properties. No authentication required for public access; JSON responses over HTTPS.",
+  "description": "Solar System OpenData (Le Syst\u00e8me solaire) is a free public REST API that serves physical and orbital data for solar system bodies: planets, moons, asteroids, comets, and dwarf planets. Data includes mass, density, gravity, escape velocity, mean radius, semi-major axis, and related properties. Access remains free but requires a free Bearer token (generatekey.html); JSON over HTTPS.",
   "base_url": "https://api.le-systeme-solaire.net/rest",
   "docs_url": "https://api.le-systeme-solaire.net/en/",
   "signup_url": null,
   "auth": {
-    "type": "none",
-    "details": "No authentication required. Public REST endpoints are open; no API key or OAuth."
+    "type": "apiKey",
+    "details": "Free Bearer token required. Obtain at https://api.le-systeme-solaire.net/generatekey.html (active email). Send header: Authorization: Bearer <API_KEY_GUID>."
   },
   "https": true,
   "cors": "unknown",
@@ -24,7 +24,7 @@
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl -s \"https://api.le-systeme-solaire.net/rest/bodies/earth\"",
+    "request": "curl -sS \"https://api.le-systeme-solaire.net/rest/bodies/terre\" -H \"Authorization: Bearer YOUR_TOKEN\"",
     "response_snippet": "{\n  \"id\": \"terre\",\n  \"name\": \"La Terre\",\n  \"englishName\": \"Earth\",\n  \"isPlanet\": true,\n  \"moons\": [{\"moon\": \"La Lune\", \"rel\": \"https://api.le-systeme-solaire.net/rest/bodies/lune\"}],\n  \"semimajorAxis\": 149598023,\n  \"perihelion\": 147095000,\n  \"aphelion\": 152100000,\n  \"eccentricity\": 0.0167,\n  \"inclination\": 0,\n  \"mass\": {\"massValue\": 5.97237, \"massExponent\": 24},\n  \"vol\": {\"volValue\": 1.08321, \"volExponent\": 12},\n  \"density\": 5.5136,\n  \"gravity\": 9.8,\n  \"escape\": 11190,\n  \"meanRadius\": 6371.0084,\n  \"equaRadius\": 6378.1366,\n  \"polarRadius\": 6356.752,\n  \"sideralOrbit\": 365.256,\n  \"sideralRotation\": 23.9345,\n  \"discoveredBy\": \"\",\n  \"discoveryDate\": \"\",\n  \"alternativeName\": \"\",\n  \"axialTilt\": 23.4393,\n  \"avgTemp\": 288,\n  \"mainAnomaly\": 358.617,\n  \"argPeriapsis\": 85.901,\n  \"longAscNode\": 18.272,\n  \"bodyType\": \"Planet\",\n  \"rel\": \"https://api.le-systeme-solaire.net/rest/bodies/terre\"\n}"
   },
   "use_cases": [
@@ -92,6 +92,18 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_type",
+        "auth_details",
+        "example_request",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

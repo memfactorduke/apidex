@@ -5,11 +5,11 @@
   "category": "weather-environment",
   "tagline": "Timeline weather API with historical data and forecasts in one call",
   "description": "Timeline weather API combining historical observations and forecasts in one call. API-key auth; free tier includes 1000 records/day.",
-  "base_url": "https://weather.visualcrossing.com",
+  "base_url": "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/",
   "docs_url": "https://www.visualcrossing.com/resources/documentation/weather-api/",
   "auth": {
     "type": "apiKey",
-    "details": "Researching authentication method from official docs."
+    "details": "API key passed as the `key` query parameter (account key from Visual Crossing)."
   },
   "https": true,
   "cors": "unknown",
@@ -18,12 +18,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "1000 records/day free (no credit card); record = one day of weather data for a location",
-    "paid_plans": null
+    "free_tier_limits": "1,000 query-cost records/day free (no card); cost returned as `queryCost`. Forecasts often cost 1 per location; historical commonly costs per day returned.",
+    "paid_plans": "Usage above free: ~$0.0001/query-cost record. Higher tiers: Professional, Corporate, Enterprise with larger allowances and support."
   },
   "rate_limits": "Primary limit is daily record quota (Free: 1000 records/day); higher tiers raise caps. Fixed concurrent/RPM limits are plan-dependent and not always published as a single RPM figure",
   "example": {
-    "request": "curl \"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?unitGroup=metric&key=YOUR_API_KEY&contentType=json\"",
+    "request": "curl \"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK/2026-03-08/2026-03-09?unitGroup=metric&key=YOUR_API_KEY&contentType=json\"",
     "response_snippet": "{\"queryCost\":1,\"latitude\":51.5064,\"longitude\":-0.12721,\"resolvedAddress\":\"London, England, United Kingdom\",\"address\":\"London,UK\",\"timezone\":\"Europe/London\",\"days\":[{\"datetime\":\"2026-03-08\",\"tempmax\":12.1,\"tempmin\":5.2,\"temp\":8.4,\"conditions\":\"Partially cloudy\",\"description\":\"Partly cloudy throughout the day.\"}]}"
   },
   "use_cases": [
@@ -90,6 +90,20 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "auth_details",
+        "free_tier_limits",
+        "paid_plans",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

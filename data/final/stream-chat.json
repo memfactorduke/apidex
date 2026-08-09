@@ -20,9 +20,9 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "Free Maker plan available with usage limits (confirm current quotas on pricing page)",
-    "paid_plans": "Starter, Team, and Enterprise plans with higher MAU and feature tiers"
+    "paid_plans": "Build (free), Start, Elevate, and Enterprise; qualifying small teams may obtain a Maker account"
   },
-  "rate_limits": "not published",
+  "rate_limits": "Per endpoint and platform (1-min window); e.g. Query Channels 10,000/min, Send Message 1,000/min; also 60 req/min per user per endpoint/platform. Limits can be dynamically adjusted; higher limits available on request.",
   "example": {
     "request": "curl -X POST \"https://chat.stream-io-api.com/channels?api_key=YOUR_API_KEY\" -H \"Authorization: YOUR_USER_TOKEN\" -H \"stream-auth-type: jwt\" -H \"Content-Type: application/json\" -d '{\"filter_conditions\":{\"type\":\"messaging\"},\"sort\":[{\"field\":\"last_message_at\",\"direction\":-1}],\"state\":true,\"watch\":false,\"presence\":false,\"limit\":10}'",
     "response_snippet": "{\"channels\":[{\"channel\":{\"id\":\"general\",\"type\":\"messaging\",\"cid\":\"messaging:general\",\"created_at\":\"2024-01-01T00:00:00.000000Z\",\"updated_at\":\"2024-01-01T00:00:00.000000Z\"},\"messages\":[],\"members\":[],\"watcher_count\":0}],\"duration\":\"12.34ms\"}"
@@ -96,6 +96,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

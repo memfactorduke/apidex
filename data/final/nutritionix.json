@@ -6,7 +6,7 @@
   "tagline": "Natural language and barcode nutrition data for food apps",
   "description": "Nutritionix provides food and restaurant nutrition data via REST APIs, including natural language meal parsing, branded and common foods search, barcode lookup, and exercise calorie estimates. Developers authenticate with an app ID and API key and use the Track API for food logging and nutrition lookups in consumer and health apps.",
   "base_url": "https://trackapi.nutritionix.com/v2",
-  "docs_url": "https://docs.nutritionix.com/",
+  "docs_url": "https://developer.nutritionix.com/docs/v2",
   "signup_url": "https://www.nutritionix.com/business/api",
   "auth": {
     "type": "apiKey",
@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "unknown \u2014 confirm on current pricing page",
-    "paid_plans": null
+    "paid_plans": "Paid production plans listed publicly (Trial ~$499/mo, Starter ~$999/mo, MVP from ~$1850/mo; custom enterprise/sales quotes also available)"
   },
   "rate_limits": "not published",
   "example": {
@@ -92,6 +92,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "docs_url",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free for non-commercial use with fair-use rate limits; commercial use requires permission/arrangement.",
-    "paid_plans": null
+    "free_tier_limits": "Free under CC BY-SA with attribution and ShareAlike; paid plans provide alternative licensing, higher limits, and SLAs.",
+    "paid_plans": "Startup $250/month, Small Business $500/month, Enterprise custom"
   },
-  "rate_limits": "not published precisely; fair use; roughly ~20 requests per 10 seconds commonly cited (verify current docs).",
+  "rate_limits": "at least 20 calls every 10 seconds per IP address; clients should back off on HTTP 429",
   "example": {
     "request": "curl -s 'https://api.tvmaze.com/singlesearch/shows?q=girls'",
     "response_snippet": "{\n  \"id\": 139,\n  \"name\": \"Girls\",\n  \"type\": \"Scripted\",\n  \"language\": \"English\",\n  \"genres\": [\"Drama\", \"Romance\"],\n  \"status\": \"Ended\",\n  \"runtime\": 30,\n  \"premiered\": \"2012-04-15\",\n  \"network\": {\"id\": 8, \"name\": \"HBO\"},\n  \"_links\": {\"self\": {\"href\": \"https://api.tvmaze.com/shows/139\"}}\n}"
@@ -92,6 +92,26 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

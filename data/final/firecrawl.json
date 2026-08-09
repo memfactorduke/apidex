@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free plan includes a limited credit allotment for new accounts (commonly cited as ~500 credits); exact free quota and whether it renews vary\u2014confirm on firecrawl.dev/pricing. Credits scale by endpoint (scrape vs crawl vs extract).",
-    "paid_plans": "Hobby, Standard, Growth, and Enterprise tiers billed by credits/month with higher concurrency and features; see firecrawl.dev/pricing for current prices."
+    "free_tier_limits": "1,000 credits/month, 2 concurrent browsers; Free-plan endpoint rate limits apply (e.g. scrape/map/search ~10 RPM, crawl/agent ~2 RPM\u2014confirm on docs).",
+    "paid_plans": "Hobby, Standard, Growth, Scale, and Enterprise tiers billed by credits/month with higher concurrency and features; see firecrawl.dev/pricing for current prices and credits."
   },
-  "rate_limits": "Plan-based concurrency and request limits (not a single public global RPS number); higher tiers raise concurrent browsers/requests. Check dashboard or pricing for your plan; not fully published as one fixed limit.",
+  "rate_limits": "Published per-plan, per-endpoint RPM and concurrency: Free is 10 RPM (scrape/map/search), 2 RPM (crawl/agent), 2 concurrent browsers; higher tiers raise limits\u2014see docs.firecrawl.dev/rate-limits and pricing.",
   "example": {
     "request": "curl -X POST https://api.firecrawl.dev/v2/scrape \\\n  -H 'Content-Type: application/json' \\\n  -H 'Authorization: Bearer YOUR_API_KEY' \\\n  -d '{\"url\":\"https://example.com\",\"formats\":[\"markdown\"]}'",
     "response_snippet": "{\"success\":true,\"data\":{\"markdown\":\"# Example Domain\\n\\nThis domain is for use in illustrative examples...\",\"metadata\":{\"title\":\"Example Domain\",\"sourceURL\":\"https://example.com\",\"statusCode\":200}}}"
@@ -95,6 +95,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

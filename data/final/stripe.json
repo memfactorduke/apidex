@@ -22,7 +22,7 @@
     "free_tier_limits": "No per-request API fee; pay-as-you-go transaction fees (e.g. standard card rates). Test mode free. Exact rates vary by country/product.",
     "paid_plans": "Transaction-based pricing (cards, billing, Connect, etc.); no separate API subscription required for core use."
   },
-  "rate_limits": "Default ~100 read operations/sec and ~100 write operations/sec in live mode; higher in test mode. Exact limits not fully public; 429 on exceed.",
+  "rate_limits": "Global limit: 100 operations/sec in live mode and 25 operations/sec in sandbox; endpoints normally have a 25 operations/sec default, with documented exceptions.",
   "example": {
     "request": "curl https://api.stripe.com/v1/balance -u YOUR_API_KEY:",
     "response_snippet": "{\"object\":\"balance\",\"available\":[{\"amount\":0,\"currency\":\"usd\",\"source_types\":{\"card\":0}}],\"livemode\":false,\"pending\":[{\"amount\":0,\"currency\":\"usd\"}]}"
@@ -94,6 +94,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

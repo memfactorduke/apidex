@@ -4,13 +4,13 @@
   "name": "Launch Library 2",
   "category": "science-space",
   "tagline": "Global space launch schedule and event data API from The Space Devs",
-  "description": "string|null",
-  "base_url": "string|null",
-  "docs_url": "string|null",
+  "description": "The Space Devs' Launch Library 2 API for launches, events, agencies, astronauts, stations, spacecraft, and related spaceflight data.",
+  "base_url": "https://ll.thespacedevs.com/2.3.0",
+  "docs_url": "https://thespacedevs.com/llapi",
   "signup_url": null,
   "auth": {
     "type": "none",
-    "details": "No authentication required for free tier; optional API token for higher rate limits via Authorization header after free signup"
+    "details": "No authentication for public free allowance; higher-rate API keys available via The Space Devs Patreon/supporter program (Authorization header)."
   },
   "https": true,
   "cors": "unknown",
@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "string|null",
-    "paid_plans": null
+    "free_tier_limits": "15 unauthenticated requests per hour on production; development endpoint has stale/limited data but no rate limit.",
+    "paid_plans": "Higher-rate API keys via The Space Devs Patreon/supporter tiers; exact allowances vary by tier\u2014check current Patreon offering."
   },
-  "rate_limits": "string|null",
+  "rate_limits": "15 requests/hour unauthenticated on production; authenticated supporter limits vary by Patreon tier.",
   "example": {
-    "request": "string|null",
-    "response_snippet": "string|null"
+    "request": "curl -s 'https://ll.thespacedevs.com/2.3.0/launch/upcoming/?limit=1'",
+    "response_snippet": "{\"count\":...,\"next\":\"...\",\"previous\":null,\"results\":[{\"id\":\"...\",\"name\":\"...\",\"status\":{...},\"net\":\"...\",...}]}"
   },
   "use_cases": [
     "list upcoming space launches",
@@ -97,6 +97,26 @@
       "description",
       "status"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

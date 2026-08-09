@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Tiered by cumulative spend (T0\u2013T5). Sonar: 50 RPM at T0 \u2192 4,000 RPM at T4\u2013T5 (sonar-deep-research: 5\u2192100 RPM). Agent API: 50/min (T0) \u2192 2,000/min (T4\u2013T5). Search API: 50 query units/sec (all tiers).",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying rate limits against official Perplexity docs now."
+  "resolution_notes": "rate_limits: auditor correct. Official docs publish detailed tier-based limits (not \u201cnot published\u201d). Sonar T0 sonar=50 RPM / deep-research=5 RPM; T4\u2013T5 sonar=4,000 RPM / deep-research=60\u2013100 RPM; Agent 50\u20132,000/min; Search 50 query units/s all tiers. https://docs.perplexity.ai/docs/admin/rate-limits-usage-tiers"
 }

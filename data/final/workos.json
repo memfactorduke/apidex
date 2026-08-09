@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "AuthKit/User Management: first 1M MAUs free (then $2,500/mo per additional 1M MAUs). Radar: first 1,000 checks free. Staging free. SSO & Directory Sync paid per connection from #1 (no free connections).",
-    "paid_plans": null
+    "paid_plans": "AuthKit: $2,500/mo per extra 1M MAUs after free 1M. SSO & Directory Sync: $125/conn/mo (1\u201315), volume discounts to $50 (101\u2013200). Audit Logs: $125/mo SIEM + $99/mo per 1M events. Radar: $100/mo per 50K checks after free 1K. Custom domain $99/mo. Annual Credits custom."
   },
   "rate_limits": "Published: general 6,000 req/60s per API key; AuthKit reads 1,000/10s and writes 500/10s on /user_management/*; plus endpoint-specific limits (SSO authorize 1,000/60s per connection, directory users 4/s per directory).",
   "example": {
@@ -93,6 +93,15 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

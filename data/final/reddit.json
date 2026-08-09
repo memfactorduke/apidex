@@ -24,7 +24,7 @@
   },
   "rate_limits": "100 QPM per OAuth client ID, averaged over a 10-minute window (bursting allowed); monitor X-Ratelimit-Used/Remaining/Reset; User-Agent required; non-OAuth traffic blocked",
   "example": {
-    "request": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"User-Agent: YOUR_APP/1.0\" \"https://oauth.reddit.com/r/programming/hot?limit=5\"",
+    "request": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"User-Agent: linux:com.example.yourapp:v1.0 (by /u/YOUR_USERNAME)\" \"https://oauth.reddit.com/r/programming/hot?limit=5\"",
     "response_snippet": "{\"kind\":\"Listing\",\"data\":{\"children\":[{\"kind\":\"t3\",\"data\":{\"title\":\"...\",\"author\":\"...\",\"score\":123,\"url\":\"...\"}}]}}"
   },
   "use_cases": [
@@ -95,6 +95,15 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

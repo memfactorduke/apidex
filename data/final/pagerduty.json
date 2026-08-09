@@ -10,7 +10,7 @@
   "signup_url": "https://www.pagerduty.com/sign-up/",
   "auth": {
     "type": "apiKey",
-    "details": "API key or OAuth 2.0 access token via Authorization: Token token=YOUR_API_KEY (or Bearer for OAuth). From-Token header often required for user context."
+    "details": "API key or OAuth 2.0 access token via Authorization: Token token=YOUR_API_KEY (or Bearer for OAuth). For certain requests using an account-level API key, include From: user@example.com. This is generally unnecessary for user-level keys."
   },
   "https": true,
   "cors": "unknown",
@@ -22,7 +22,7 @@
     "free_tier_limits": "Free plan available for small teams; API rate limits apply separately (see rate_limits). Exact free API request quotas not clearly published as a simple daily cap.",
     "paid_plans": "Professional, Business, and Enterprise plans with per-user pricing; details on pagerduty.com/pricing"
   },
-  "rate_limits": "Typically 900 requests per minute for most REST endpoints; some write endpoints lower. Exact limits may vary by account/plan.",
+  "rate_limits": "Generally 960 requests/minute per account API key, per user for user API keys, or per applicable OAuth app/user/account context; endpoint-specific exceptions may apply.",
   "example": {
     "request": "curl -sS -H \"Authorization: Token token=YOUR_API_KEY\" -H \"Accept: application/vnd.pagerduty+json;version=2\" \"https://api.pagerduty.com/incidents?limit=1\"",
     "response_snippet": "{\n  \"incidents\": [\n    {\n      \"id\": \"PT4KHLK\",\n      \"type\": \"incident\",\n      \"summary\": \"The server is on fire.\",\n      \"status\": \"triggered\",\n      \"urgency\": \"high\",\n      \"service\": { \"id\": \"PIJ90N7\", \"type\": \"service_reference\" }\n    }\n  ],\n  \"limit\": 1,\n  \"offset\": 0,\n  \"more\": true,\n  \"total\": null\n}"
@@ -94,6 +94,16 @@
     "corrected": [
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

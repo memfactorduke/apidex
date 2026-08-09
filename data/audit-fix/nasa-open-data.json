@@ -11,7 +11,7 @@
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
-  "description": null,
+  "description": "NASA Open Data (api.nasa.gov) is a free api_key gateway to NASA open science APIs such as Astronomy Picture of the Day (APOD), Near Earth Objects (NeoWs), and EPIC Earth imagery. Some older cataloged endpoints are archived: the Mars Rover Photos API and the legacy Earth (Landsat) API are no longer current. Earthdata GIBS and the NASA Image and Video Library are separate NASA services with their own base URLs and authentication (not this gateway).",
   "status": null,
-  "resolution_notes": "Auditor right on GIBS/Image Library: api.nasa.gov docs list APOD, Asteroids NeoWs, DONKI, Earth (Landsat/assets), EONET, EPIC, Exoplanet, GeneLab, Insight, Mars Rover Photos, NASA Image and Video Library, TechTransfer, and others as api.nasa.gov routes, but GIBS is documented under Earthdata (gibs.earthdata.nasa.gov / wmts.earthdata.nasa.gov) with Earthdata auth, not the DEMO_KEY/api_key gateway. Image and Video Library has images-api.nasa.gov and may still be linked from api.nasa.gov \u2014 verifying both on official pages now."
+  "resolution_notes": "Auditor correct on description. api.nasa.gov (https://api.nasa.gov/) is the DEMO_KEY/api_key gateway for APOD, NeoWs, EPIC, and related catalog APIs. GIBS is served under Earthdata (e.g. https://earthdata.nasa.gov/gibs, WMTS/imagery endpoints), not the api.nasa.gov api_key model. NASA Image and Video Library uses images-api.nasa.gov (https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf / https://images.nasa.gov/) and does not use api.nasa.gov keys. Original description over-attributed GIBS and the Image Library to this gateway; corrected text limits the entry to gateway APIs and explicitly separates those services."
 }

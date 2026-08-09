@@ -26,7 +26,7 @@
   "rate_limits": "1 request per second average; bursts may be throttled; anonymous/shared IPs more restricted",
   "example": {
     "request": "curl -H \"User-Agent: MyApp/1.0 (https://example.com)\" \"https://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?fmt=json\"",
-    "response_snippet": "{\"id\":\"5b11f4ce-a62d-471e-81fc-a69a8278c7da\",\"name\":\"Nirvana\",\"type\":\"Group\",\"country\":\"US\",\"life-span\":{\"begin\":\"1988\",\"end\":\"1994\",\"ended\":true}}"
+    "response_snippet": "{\"id\":\"5b11f4ce-a62d-471e-81fc-a69a8278c7da\",\"name\":\"Nirvana\",\"type\":\"Group\",\"country\":\"US\",\"life-span\":{\"begin\":\"1987\",\"end\":\"1994-04-05\",\"ended\":true}}"
   },
   "use_cases": [
     "look up an artist by MusicBrainz ID",
@@ -96,6 +96,15 @@
     "corrected": [
       "free_tier_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -20,10 +20,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Sandbox free for development; production brokerage/API access requires a funded Tradier brokerage account\u2014market-data and trading fees follow account/subscription plans (exact free request caps not published as a simple req/day free tier)",
+    "free_tier_limits": "API access is free for Tradier Brokerage account holders; trading, market-data subscriptions, and regulatory fees may apply (exact free request caps are not a separate published free-tier quota).",
     "paid_plans": "Brokerage commissions and optional market-data subscriptions; details on Tradier pricing and developer portal\u2014confirm current tiers on site"
   },
-  "rate_limits": "not fully published as a single public table; some endpoints document practical limits\u2014treat as account/plan-dependent; not published in aggregate",
+  "rate_limits": "Production Standard and Market Data: 120 requests/minute; production Trading: 60 requests/minute; sandbox: 60 requests/minute for all three categories, per access token.",
   "example": {
     "request": "curl -X GET \"https://api.tradier.com/v1/markets/quotes?symbols=AAPL\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\"",
     "response_snippet": "{\"quotes\":{\"quote\":{\"symbol\":\"AAPL\",\"description\":\"Apple Inc\",\"exch\":\"Q\",\"type\":\"stock\",\"last\":227.52,\"change\":1.23,\"change_percentage\":0.54,\"volume\":45231000,\"average_volume\":55000000,\"last_volume\":100,\"trade_date\":1723075200000,\"open\":226.10,\"high\":228.00,\"low\":225.50,\"close\":null,\"prevclose\":226.29,\"bid\":227.50,\"ask\":227.55,\"bidsize\":2,\"asksize\":1,\"week_52_high\":237.23,\"week_52_low\":164.08}}}"
@@ -95,6 +95,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

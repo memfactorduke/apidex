@@ -21,7 +21,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "20 API calls/day; free EOD history limited to past year; some data types restricted",
-    "paid_plans": null
+    "paid_plans": "EOD Historical Data\u2014All World $19.99/mo; EOD+Intraday\u2014All World Extended $29.99/mo; Fundamentals Data Feed $59.99/mo; All-in-One $99.99/mo (personal). Commercial: Internal Use ~$399/mo, Enterprise ~$2499/mo; custom (eodhd.com/commercial-pricing)."
   },
   "rate_limits": "Free: 20 API calls/day; paid: 100,000 API calls/day default; \u22641,000 requests/minute all plans (call cost varies by endpoint)",
   "example": {
@@ -102,6 +102,15 @@
       "description",
       "status"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

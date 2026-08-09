@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "240 requests/minute per IP for most operations; 1,000 requests/minute for pricing-preview endpoints; immediate-charge subscription updates limited to 20/hour and 100/24 hours per subscription",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling the rate_limits dispute against official Paddle docs now."
+  "resolution_notes": "Auditor correct on rate_limits. Official Paddle docs (https://developer.paddle.com/api-reference/about/rate-limits) publish: 240 requests/minute per IP for most operations; 1,000/minute for pricing-preview endpoints; subscription immediate-charge updates limited to 20/hour and 100/24 hours per subscription. Original \"not published\" is wrong."
 }

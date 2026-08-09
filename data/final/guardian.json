@@ -10,7 +10,7 @@
   "signup_url": "https://bonobo.capi.gutools.co.uk/register/developer",
   "auth": {
     "type": "apiKey",
-    "details": "API key via api-key query parameter (or Authorization header with Bearer per docs variants); free self-serve registration at the developer portal."
+    "details": "API key via the api-key query parameter. Free self-serve registration at the developer portal."
   },
   "https": true,
   "cors": "unknown",
@@ -20,10 +20,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "...",
-    "paid_plans": null
+    "free_tier_limits": "Developer tier: up to 1 request/second and 500 requests/day; non-commercial use only.",
+    "paid_plans": "Commercial access: custom throttle, quota, and usage-based pricing; request a commercial key."
   },
-  "rate_limits": "...",
+  "rate_limits": "Developer: 1 call/second and 500 calls/day; Commercial: custom throttle and quota limits.",
   "example": {
     "request": "curl \"https://content.guardianapis.com/search?q=climate&api-key=YOUR_API_KEY\"",
     "response_snippet": "{\"response\":{\"status\":\"ok\",\"userTier\":\"developer\",\"total\":12345,\"startIndex\":1,\"pageSize\":10,\"currentPage\":1,\"pages\":1235,\"orderBy\":\"relevance\",\"results\":[{\"id\":\"environment/2024/...\",\"type\":\"article\",\"sectionId\":\"environment\",\"webTitle\":\"...\",\"webUrl\":\"https://www.theguardian.com/...\",\"apiUrl\":\"https://content.guardianapis.com/...\"}]}}"
@@ -94,6 +94,22 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

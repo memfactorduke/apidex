@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
-  "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "auth_details": "API key via the api_key query parameter; self-serve signup through Geocode Earth.",
+  "free_tier": false,
+  "free_tier_limits": "No permanent free tier; two-week free trial with no credit card required.",
+  "paid_plans": "Lite $100/mo (150k req, \u226410 rps); Basic $200/mo (400k, \u226410 rps); Advanced $500/mo (2M, \u226420 rps); Custom for higher volume.",
+  "rate_limits": "Plan-dependent: hard per-second limits (Lite/Basic up to 10 rps, Advanced up to 20 rps); trial plans also have hard per-day limits; all plans have soft monthly request allowances.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "placeholder"
+  "resolution_notes": "name: AUDITOR RIGHT. Pelias is open-source software with no universal hosted URL/keys/pricing (https://pelias.io/ FAQ: self-host freely; hosted option is Geocode Earth). Entry\u2019s base_url/docs/auth/pricing describe Geocode Earth\u2019s commercial API (https://geocode.earth/), which is Pelias-powered\u2014prefer naming as Geocode Earth Geocoding API (id kept pelias per schema). auth.details: AUDITOR RIGHT\u2014docs only document api_key query param, not Authorization header (https://geocode.earth/docs/intro/authentication/). free_tier: AUDITOR RIGHT\u2014two-week free trial, not a permanent free tier; paid from Lite $100/mo 150k requests (https://geocode.earth/). rate_limits: AUDITOR RIGHT\u2014\u201cnot published\u201d is wrong; limits are documented and plan-based (https://geocode.earth/docs/intro/rate_limits/; plan rps on https://geocode.earth/)."
 }

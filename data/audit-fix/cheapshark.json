@@ -9,9 +9,9 @@
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -s -H 'User-Agent: MyApp/1.0 (contact@example.com)' 'https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15&pageSize=5'",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "example.request: auditor correct. Official docs (https://apidocs.cheapshark.com/) Authorization/Rate Limiting section state: 'we do require sending a User-Agent on your incoming requests' and give e.g. MyApp/1.0 (contact@example.com). Original curl omitted the required header; corrected example adds -H 'User-Agent: MyApp/1.0 (contact@example.com)'."
 }

@@ -24,9 +24,9 @@
     "free_tier_limits": "Public data free; app token recommended for higher throughput. Exact free quotas not published as a fixed daily allotment.",
     "paid_plans": null
   },
-  "rate_limits": "Without app token: heavily throttled. With app token: higher limits (Socrata typically ~1,000 requests/hour without token; higher with token \u2014 confirm on Socrata docs). Exact Chicago-specific numbers not always published.",
+  "rate_limits": "Without app token: lower shared IP-based throttling. With app token: ordinarily not throttled except for abuse/malicious traffic controls (no fixed published hourly quota). Exact Chicago-specific numbers not always published.",
   "example": {
-    "request": "curl -H \"X-App-Token: YOUR_API_KEY\" \"https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=5\"",
+    "request": "curl -H \"X-App-Token: YOUR_API_KEY\" 'https://data.cityofchicago.org/resource/ijzp-q8t2.json?$limit=5'",
     "response_snippet": "[{\"id\":\"13291213\",\"case_number\":\"JG123456\",\"date\":\"2023-01-15T12:00:00.000\",\"block\":\"001XX N STATE ST\",\"primary_type\":\"THEFT\",\"description\":\"RETAIL THEFT\",\"location_description\":\"DEPARTMENT STORE\",\"arrest\":false,\"domestic\":false,\"district\":\"001\",\"ward\":\"42\",\"community_area\":\"32\",\"latitude\":\"41.884\",\"longitude\":\"-87.627\"}]"
   },
   "use_cases": [
@@ -95,6 +95,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

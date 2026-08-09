@@ -10,7 +10,7 @@
   "signup_url": "https://graphhopper.com/dashboard/",
   "auth": {
     "type": "apiKey",
-    "details": "API key via query parameter key=YOUR_API_KEY or header Authorization; self-serve signup at GraphHopper dashboard."
+    "details": "API key via the key=YOUR_API_KEY query parameter on every request."
   },
   "https": true,
   "cors": "unknown",
@@ -19,12 +19,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "500 credits/month on free plan (verify on pricing page; credit cost varies by endpoint)",
+    "free_tier_limits": "500 credits/day on the Free plan; endpoint credit costs vary, and Free is restricted to supported profiles and non-commercial use.",
     "paid_plans": null
   },
   "rate_limits": "Plan-based concurrency/QPS limits apply; see docs and dashboard for current plan limits",
   "example": {
-    "request": "curl \"https://graphhopper.com/api/1/route?point=51.131,12.414&point=48.224,3.867&vehicle=car&key=YOUR_API_KEY\"",
+    "request": "curl \"https://graphhopper.com/api/1/route?point=51.131,12.414&point=48.224,3.867&profile=car&key=YOUR_API_KEY\"",
     "response_snippet": "{\"paths\":[{\"distance\":450123.2,\"time\":16200000,\"points\":\"...\",\"instructions\":[...]}]}"
   },
   "use_cases": [
@@ -92,6 +92,17 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

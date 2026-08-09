@@ -1,17 +1,17 @@
 {
   "id": "dailymed",
-  "base_url": null,
+  "base_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2",
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "v2 web services are unauthenticated read-only GET endpoints; no API key or login required.",
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free public API with no published numeric quota.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Not published.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Researching official DailyMed docs to settle disputes on base_url, auth.details, rate_limits, and free_tier_limits."
+  "resolution_notes": "base_url: AUDITOR RIGHT. Official docs distinguish web-app root https://dailymed.nlm.nih.gov/ from web-service base https://dailymed.nlm.nih.gov/dailymed/services/ and require version after base (latest v2); sample URIs use .../services/v2/.... Evidence: https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm \u2014 auth_details: AUDITOR RIGHT. \"Researching\" is a placeholder; docs state GET-only retrieve-data service and never mention keys/OAuth/login. Evidence: same page \u2014 rate_limits: AUDITOR RIGHT. Official Web Services page and /spls docs document page/pagesize only; no numeric quota, no ban on parallel requests, no high-load throttling policy. Evidence: https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm and https://dailymed.nlm.nih.gov/dailymed/webservices-help/v2/spls_api.cfm \u2014 free_tier_limits: AUDITOR RIGHT. Same sources; free public access with no published numeric free-tier quota; drop unsupported concurrency/throttling claims. API remains operational."
 }

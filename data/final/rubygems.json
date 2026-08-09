@@ -10,7 +10,7 @@
   "signup_url": "https://rubygems.org/sign_up",
   "auth": {
     "type": "apiKey",
-    "details": "API key (or OAuth) for write/authenticated endpoints; many read endpoints are public with no auth. Key via Authorization header or as query param depending on endpoint."
+    "details": "API key in the Authorization header for authenticated/write endpoints; public read endpoints require no authentication. Some MFA-protected operations also require an OTP header."
   },
   "https": true,
   "cors": "unknown",
@@ -24,7 +24,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "10 requests/second for the API and website; 15 requests/second for the Dependency API. Additional endpoint-specific throttles apply to sensitive and write operations (e.g. gem push, yank, owners).",
   "example": {
     "request": "curl -s https://rubygems.org/api/v1/gems/rails.json",
     "response_snippet": "{\"name\":\"rails\",\"downloads\":...,\"version\":\"...\",\"info\":\"...\",\"authors\":\"...\",\"project_uri\":\"https://rubygems.org/gems/rails\",...}"
@@ -93,6 +93,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

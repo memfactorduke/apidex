@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "HTTP Basic with legacy client_id as username and client_secret as password (Authorization: Basic base64(client_id:client_secret)); new credentials no longer issued.",
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "No new self-serve free tier for the Udemy-hosted Affiliate/course-catalog API\u2014direct access discontinued 1/1/2025. Not a current free tier for new Affiliate Program members; program is via Impact (Impact partner APIs \u2260 Udemy api-2.0).",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
-  "status": null,
-  "resolution_notes": "Starting live verification of Udemy Affiliate API auth, status, and free-tier claims against official docs."
+  "status": "defunct",
+  "resolution_notes": "auth.details: auditor right\u2014placeholder replaced; official docs require Basic auth with client_id:client_secret (archive https://web.archive.org/web/20240910070039/https://www.udemy.com/developers/affiliate/ ; live page no longer documents auth). status: auditor right\u2014live docs mark Deprecated and state access discontinued since 1/1/2025 (https://www.udemy.com/developers/affiliate/) \u2192 defunct, not operational. free_tier_limits: auditor right\u2014no new free API tier; affiliates use Impact (https://partnersupport.udemy.com/hc/en-us/articles/360049413233-How-to-Get-Started-with-Impact), distinct from legacy api-2.0."
 }

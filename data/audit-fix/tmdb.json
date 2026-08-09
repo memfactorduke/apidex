@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "free_tier_limits": "Free for non-commercial use with required TMDB attribution; commercial use requires a separate license.",
+  "paid_plans": "Commercial licensing is available by contacting TMDB sales; public fixed pricing is not published.",
+  "rate_limits": "Legacy 40-per-10-second limiting is disabled, but TMDB retains a soft upper limit around 40 requests/second and clients must honor HTTP 429 responses; this may change.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Gathering official TMDB docs on free-tier terms, commercial licensing, and rate limits to settle the three disputes."
+  "resolution_notes": "free_tier_limits: auditor right \u2014 FAQ: free for non-commercial with attribution (https://developer.themoviedb.org/docs/faq). paid_plans: auditor right \u2014 commercial via sales@themoviedb.org / api-for-business; no public fixed prices on official pages (https://developer.themoviedb.org/docs/faq, https://www.themoviedb.org/api-for-business). rate_limits: auditor right \u2014 docs: legacy 40/10s disabled; soft ~40 rps; honor 429 (https://developer.themoviedb.org/docs/rate-limiting)."
 }

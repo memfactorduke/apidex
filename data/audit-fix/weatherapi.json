@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "100,000 calls/month; 3-day forecast; past 1 day historical weather; limited alerts, AQI, and sports; commercial use permitted with required Free-plan attribution (credit WeatherAPI.com by name or logo)",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Plan-dependent monthly quotas (Free 100K; Starter 3M; Pro+ 5M; Business 10M calls/month) and per-minute burst limits per terms; public pricing table does not publish specific RPM figures",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying free-tier and rate-limit claims against official WeatherAPI pricing/docs now."
+  "resolution_notes": "free_tier_limits: auditor correct. Official pricing (https://www.weatherapi.com/pricing.aspx) lists Free = 100K calls/month (not 1M), Forecast 3 Day, Historical Past 1 day, Limited alerts/AQI/Sports; Commercial Use yes for Free. Terms (https://www.weatherapi.com/terms.aspx) allow commercial use and require Free users to credit WeatherAPI.com by name/logo. rate_limits: auditor correct. No ~15/min Free or ~50/min Standard RPM on pricing.aspx; plan names are Free/Starter/Pro+/Business/Enterprise. Terms only state plan monthly allocation + per-minute burst limits, pointing to pricing.aspx."
 }

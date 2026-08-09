@@ -5,12 +5,12 @@
   "category": "dev-tools",
   "tagline": "Code coverage reporting and analytics API for CI/CD pipelines",
   "description": "Codecov API provides programmatic access to code coverage data, reports, and repository analytics for teams integrating coverage into CI/CD workflows. It supports retrieving coverage metrics, commit reports, and pull request comparisons across major version control platforms.",
-  "base_url": "https://api.codecov.io",
+  "base_url": "https://api.codecov.io/api/v2",
   "docs_url": "https://docs.codecov.com/reference",
   "signup_url": "https://app.codecov.io/login",
   "auth": {
     "type": "apiKey",
-    "details": "API token via Authorization: token YOUR_API_KEY header; self-serve signup on Codecov"
+    "details": "Authorization: bearer YOUR_ACCESS_TOKEN (Codecov access token from account settings)"
   },
   "https": true,
   "cors": "unknown",
@@ -90,6 +90,16 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "auth_details"
+      ],
+      "upheld_original": false
+    }
   }
 }

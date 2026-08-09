@@ -10,7 +10,7 @@
   "signup_url": "https://geocode.earth",
   "auth": {
     "type": "apiKey",
-    "details": "API key via api_key query parameter or Authorization header; self-serve signup on Geocode Earth."
+    "details": "API key via the api_key query parameter; self-serve signup through Geocode Earth."
   },
   "https": true,
   "cors": "unknown",
@@ -18,11 +18,11 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier": false,
+    "free_tier_limits": "No permanent free tier; two-week free trial with no credit card required.",
+    "paid_plans": "Lite $100/mo (150k req, \u226410 rps); Basic $200/mo (400k, \u226410 rps); Advanced $500/mo (2M, \u226420 rps); Custom for higher volume."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Plan-dependent: hard per-second limits (Lite/Basic up to 10 rps, Advanced up to 20 rps); trial plans also have hard per-day limits; all plans have soft monthly request allowances.",
   "example": {
     "request": "curl \"https://api.geocode.earth/v1/search?text=30%20West%2026th%20Street%2C%20New%20York%2C%20NY&api_key=YOUR_API_KEY\"",
     "response_snippet": "{\"geocoding\":{\"version\":\"0.2\",\"attribution\":\"https://geocode.earth/guidelines\",\"query\":{\"text\":\"30 West 26th Street, New York, NY\",\"size\":10}},\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[-73.9897,40.7441]},\"properties\":{\"id\":\"openaddresses:address:us/ny/city_of_new_york:...\",\"gid\":\"openaddresses:address:us/ny/city_of_new_york:...\",\"layer\":\"address\",\"source\":\"openaddresses\",\"name\":\"30 West 26th Street\",\"housenumber\":\"30\",\"street\":\"West 26th Street\",\"postalcode\":\"10010\",\"confidence\":0.9,\"label\":\"30 West 26th Street, New York, NY, USA\"}}]}"
@@ -93,6 +93,19 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "id": "openrouteservice",
-  "base_url": null,
+  "base_url": "https://api.heigit.org/openrouteservice",
   "docs_url": null,
   "auth_type": null,
   "auth_details": null,
@@ -9,9 +9,9 @@
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -X GET 'https://api.heigit.org/openrouteservice/v2/directions/driving-car?start=8.681495,49.41461&end=8.687872,49.420318' -H 'Authorization: YOUR_API_KEY'",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling disputes against live official sources for base_url, free_tier_limits, rate_limits, and example.request."
+  "resolution_notes": "base_url: AUDITOR RIGHT. Official Apr 28 2026 announcement: api.openrouteservice.org deprecated; shut-off Aug 24 2026; core routing base is https://api.heigit.org/openrouteservice (https://ask.openrouteservice.org/t/deprecating-api-openrouteservice-org-in-favour-of-api-heigit-org/7912). free_tier_limits: ORIGINAL STANDS. HeiGIT Standard (free) still Directions V2 quota_max 2000/day, rate 40/min; 10000/day & 60/min are Collaborative, not free Standard (https://account.heigit.org/info/plans; plan data in account SPA). rate_limits: ORIGINAL STANDS for same reason \u2014 free ~40/min & 2000/day directions still current on Standard. example.request: AUDITOR RIGHT \u2014 update host to api.heigit.org/openrouteservice before Aug 24 shut-off (same announcement URL). status: still operational (shutdown not yet occurred as of 2026-08-08)."
 }

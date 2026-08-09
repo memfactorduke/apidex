@@ -19,7 +19,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free trial credits; concrete free quotas vary by product \u2014 verify on pricing page",
+    "free_tier_limits": "Recurring free monthly requests per API (no card): Geocoding 20K; Reverse Geocoding 20K; Routing 20K; legacy Search 2.5K; Map Display Vector Tiles 200K; other products vary \u2014 docs.tomtom.com/pricing",
     "paid_plans": "Pay-as-you-go and enterprise plans via TomTom developer portal"
   },
   "rate_limits": "Product-specific QPS and daily limits; published in developer portal",
@@ -94,6 +94,15 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

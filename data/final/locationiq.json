@@ -10,7 +10,7 @@
   "signup_url": "https://locationiq.com/register",
   "auth": {
     "type": "apiKey",
-    "details": "API key via key query parameter or Authorization: Bearer header; self-serve signup."
+    "details": "Access token via the required key query parameter; self-serve signup."
   },
   "https": true,
   "cors": "unknown",
@@ -22,7 +22,7 @@
     "free_tier_limits": "5000 requests/day, 2 requests/second (Developer free tier)",
     "paid_plans": null
   },
-  "rate_limits": "Free: 2 req/s; paid plans higher (e.g. 5\u201350+ req/s by tier). Published on pricing page.",
+  "rate_limits": "Free: 2 req/s and 60 req/min. Paid: Maps Lite 15/s, Developer 20/s, Startup 22/s, Growth Plus 30/s, Business Plus 40/s; Enterprise custom.",
   "example": {
     "request": "curl \"https://us1.locationiq.com/v1/search?key=YOUR_API_KEY&q=Empire+State+Building&format=json\"",
     "response_snippet": "[{\"place_id\":\"...\",\"licence\":\"...\",\"lat\":\"40.7484\",\"lon\":\"-73.9857\",\"display_name\":\"Empire State Building, ...\"}]"
@@ -90,6 +90,16 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

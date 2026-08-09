@@ -20,7 +20,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown \u2014 free tier exists but exact request quotas need verification from current pricing page",
+    "free_tier_limits": "Free users get $0.10/month in Inference Providers credits (subject to change); extra usage requires purchasing credits / pay-as-you-go. PRO: $2.00/mo; Team/Enterprise: $2.00 per seat.",
     "paid_plans": null
   },
   "rate_limits": "not published",
@@ -95,6 +95,15 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

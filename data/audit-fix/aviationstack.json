@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "100 requests/month; personal-use license; real-time flights; HTTPS included; advanced features such as historical flights and routes require a paid plan",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Monthly quota of 100 requests on the Free plan; no separate per-second limit is prominently published; HTTPS is included",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying free-tier HTTPS claims and rate limits against official AviationStack docs and pricing."
+  "resolution_notes": "pricing.free_tier_limits: auditor correct. Official pricing (https://aviationstack.com/pricing, crawled 2026-08-08) lists Free plan features as 100 Requests, Personal License, Full Aviation Data, Real-Time Flights, and HTTPS Encryption; Historical Flights / Airline Routes appear only on Basic+. The original \u201cHTTP only (HTTPS requires paid)\u201d claim is outdated. rate_limits: auditor correct for the same reason \u2014 Free includes HTTPS; limits are monthly request quotas (100 Free; higher on paid), with no separate per-second cap published on pricing/FAQ (https://aviationstack.com/pricing, https://aviationstack.com/faq)."
 }

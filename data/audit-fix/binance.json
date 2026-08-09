@@ -3,7 +3,7 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key via X-MBX-APIKEY header; signed endpoints require a signature of the query string using the selected key type (HMAC-SHA256, RSA, or Ed25519). Self-serve key creation in account settings; public market data often needs no key.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
@@ -11,7 +11,7 @@
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
-  "description": null,
+  "description": "Binance Spot REST and WebSocket APIs for market data, order placement, account balances, and related spot trading. Developers use API keys with HMAC-SHA256, RSA, or Ed25519 signatures for private endpoints; many public market-data endpoints require no auth. Futures and other products use separate hosts and docs (e.g. fapi.binance.com). Rate limits and endpoint weights are published in the official Spot API documentation.",
   "status": null,
-  "resolution_notes": "pending live verification"
+  "resolution_notes": "auth.details: auditor correct. Official Spot docs document SIGNED request signing with HMAC-SHA256, RSA, and Ed25519 (not HMAC-only). Evidence: https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security and https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types . description: auditor correct. Entry base_url/docs are Spot (api.binance.com); futures use separate roots (e.g. https://fapi.binance.com) and separate docs. Evidence: https://developers.binance.com/docs/binance-spot-api-docs and https://developers.binance.com/docs/derivatives/usds-margined-futures/general-info ."
 }

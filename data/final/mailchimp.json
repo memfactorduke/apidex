@@ -22,10 +22,10 @@
     "free_tier_limits": "Free marketing plan: contact and monthly send caps on current pricing (limits change; verify on mailchimp.com/pricing). API access available on free accounts.",
     "paid_plans": null
   },
-  "rate_limits": "10 concurrent connections per API key; soft throughput ~10 requests/second (higher on paid plans). Exact numbers per current developer docs.",
+  "rate_limits": "10 simultaneously processing Marketing API requests per user; excess requests return 429. No per-customer increase is currently available.",
   "example": {
     "request": "curl --request GET --url 'https://usX.api.mailchimp.com/3.0/' --user 'anystring:YOUR_API_KEY'",
-    "response_snippet": "{}"
+    "response_snippet": "{\n  \"account_id\": \"...\",\n  \"account_name\": \"...\",\n  \"email\": \"...\",\n  \"role\": \"owner\",\n  \"contact\": { ... },\n  \"pro_enabled\": false,\n  \"total_subscribers\": 0,\n  \"_links\": [ ... ]\n}"
   },
   "use_cases": [
     "add or update a subscriber on an audience list",
@@ -92,6 +92,16 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

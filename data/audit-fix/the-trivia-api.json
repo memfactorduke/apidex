@@ -1,17 +1,17 @@
 {
   "id": "the-trivia-api",
   "base_url": null,
-  "docs_url": null,
-  "auth_type": null,
-  "auth_details": null,
-  "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
+  "docs_url": "https://the-trivia-api.com/docs/",
+  "auth_type": "none",
+  "auth_details": "No key is required for basic public question requests; subscribed features use an API key in the x-api-key header.",
+  "free_tier": true,
+  "free_tier_limits": "Free public access for non-commercial use (CC BY-NC 4.0); higher limits with a free/subscription API key.",
+  "paid_plans": "Commercial/premium subscriptions available for commercial use and higher rate limits (see site pricing).",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
-  "description": null,
+  "description": "Public trivia questions API with categories, difficulty filters, tags, and region options. Basic question endpoints work without a key; subscriptions unlock higher limits and commercial use via x-api-key.",
   "status": null,
-  "resolution_notes": "Researching disputed fields against official Trivia API docs and pricing pages."
+  "resolution_notes": "Pending live verification of docs_url, auth, pricing, and description against official sources."
 }

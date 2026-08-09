@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "NerdGraph: 25 concurrent requests per user, no general requests-per-minute limit; REST API v2: 1,000 calls/minute; NRQL API queries: 3,000/account/minute.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "Auditor correct on rate_limits. Official docs: NerdGraph 25 concurrent per user and no general RPM limit (https://docs.newrelic.com/docs/apis/nerdgraph/nerdgraph-usage-limits/); REST API v2 1,000 req/min (https://docs.newrelic.com/docs/apis/rest-api-v2/api-explorer-v2/requirements-restrictions-api-explorer/); NRQL query API 3,000/account/min (https://docs.newrelic.com/docs/apis/nerdgraph/examples/nerdgraph-nrql-tutorial/). Original incorrectly used 3,000 for REST v2 and ~100 rpm complexity."
 }

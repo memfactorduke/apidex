@@ -4,7 +4,7 @@
   "name": "Open Brewery DB",
   "category": "food-drink",
   "tagline": "Free open dataset and REST API of US and global breweries",
-  "description": "Open Brewery DB is a free and open-source dataset and REST API providing public brewery data including names, locations, types, and contact details. Developers can list, search, filter, and autocomplete breweries for maps, directories, and food-and-drink apps without authentication.",
+  "description": "Open Brewery DB is a free and open-source dataset and REST API providing public brewery data including names, locations, types, and contact details. Developers can list, search, and filter breweries for maps, directories, and food-and-drink apps without authentication. Note: the autocomplete endpoint is deprecated and scheduled for removal from v1 by the end of 2026; prefer the brewery search endpoint.",
   "base_url": "https://api.openbrewerydb.org/v1",
   "docs_url": "https://www.openbrewerydb.org/documentation",
   "signup_url": null,
@@ -95,6 +95,15 @@
     "corrected": [
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

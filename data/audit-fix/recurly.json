@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "400 requests/minute for sandbox sites and 1,000 requests/minute for production sites, measured over a rolling five-minute window; all sandbox requests count, while only production GET requests count",
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -u YOUR_API_KEY: -H \"Accept: application/vnd.recurly.v2021-02-25+json\" https://v3.recurly.com/sites",
   "example_response_snippet": null,
-  "description": null,
+  "description": "null",
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "example.request: auditor right \u2014 official Recurly v3 docs require versioned Accept header application/vnd.recurly.v2021-02-25+json (HTTP 406 without it); evidence: https://developers.recurly.com/api/v2021-02-25/ and https://docs.recurly.com/docs/api . rate_limits: auditor right \u2014 Recurly publishes limits (sandbox 400/min, production 1,000/min, 5-min rolling window; all sandbox requests count, production GETs only); evidence: https://docs.recurly.com/docs/api-rate-limits and developer docs. Fields not disputed left null; status operational (API active)."
 }

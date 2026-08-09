@@ -8,8 +8,8 @@
   "base_url": "https://api.memegen.link",
   "docs_url": "https://api.memegen.link",
   "auth": {
-    "type": "none",
-    "details": "Researching authentication requirements"
+    "type": "apiKey",
+    "details": "Optional API key. Anonymous access works (watermarked). Authenticated via X-API-KEY header or api_key query param; keys for sponsors at $10+/mo via support."
   },
   "https": true,
   "cors": "unknown",
@@ -18,8 +18,8 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "Anonymous access is available, but responses are watermarked and may be rate-limited; no numeric anonymous quota is published.",
+    "paid_plans": "Sponsorship at $10+/month can include an API key; contact support for keys or custom pricing for your use case."
   },
   "rate_limits": "not published",
   "example": {
@@ -95,6 +95,18 @@
       "example_response_snippet",
       "description"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_type",
+        "auth_details",
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

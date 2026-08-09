@@ -23,10 +23,10 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "4 requests/second burst limit and 500 requests/hour sustained limit",
   "example": {
-    "request": "curl -s \"https://api.jolpi.ca/ergast/f1/current/driverStandings.json\"",
-    "response_snippet": "{\"MRData\":{\"xmlns\":\"\",\"series\":\"f1\",\"url\":\"http://api.jolpi.ca/ergast/f1/current/driverStandings.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"StandingsTable\":{\"season\":\"2025\",\"StandingsLists\":[{\"season\":\"2025\",\"round\":\"...\",\"DriverStandings\":[{\"position\":\"1\",\"positionText\":\"1\",\"points\":\"...\",\"wins\":\"...\",\"Driver\":{\"driverId\":\"...\",\"code\":\"...\",\"givenName\":\"...\",\"familyName\":\"...\"}}]}]}}}"
+    "request": "curl -s -H \"User-Agent: YourAppName/1.0\" \"https://api.jolpi.ca/ergast/f1/current/driverStandings.json\"",
+    "response_snippet": "{\"MRData\":{\"xmlns\":\"\",\"series\":\"f1\",\"url\":\"http://api.jolpi.ca/ergast/f1/current/driverStandings.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"StandingsTable\":{\"season\":\"2026\",\"StandingsLists\":[{\"season\":\"2026\",\"round\":\"...\",\"DriverStandings\":[{\"position\":\"1\",\"positionText\":\"1\",\"points\":\"...\",\"wins\":\"...\",\"Driver\":{\"driverId\":\"...\",\"code\":\"...\",\"givenName\":\"...\",\"familyName\":\"...\"}}]}]}}}"
   },
   "use_cases": [
     "get current season driver championship standings",
@@ -93,6 +93,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

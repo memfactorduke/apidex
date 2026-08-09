@@ -5,12 +5,12 @@
   "category": "transportation",
   "tagline": "Vehicle diagnostics and repair estimates from OBD codes",
   "description": "CarMD API provides vehicle diagnostics and repair estimates based on OBD-II trouble codes. Developers can look up diagnostic trouble codes (DTCs), get repair cost estimates, vehicle information, and maintenance data for cars.",
-  "base_url": "https://api.carmd.com/v3.0",
-  "docs_url": "https://api.carmd.com/",
+  "base_url": "https://dev-api.carscan.com/v3.0",
+  "docs_url": "https://dev-api.carscan.com/member/docs",
   "signup_url": "https://www.carmd.com/",
   "auth": {
     "type": "apiKey",
-    "details": "API key via header, self-serve signup"
+    "details": "Two headers required on every call: authorization (Authorization Key) and partner-token (Partner Token); content-type application/json. Self-serve register."
   },
   "https": true,
   "cors": "unknown",
@@ -18,14 +18,14 @@
     "json"
   ],
   "pricing": {
-    "free_tier": false,
+    "free_tier": true,
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl -H \"Authorization: YOUR_API_KEY\" \"https://api.carmd.com/v3.0/diag?code=P0420\"",
-    "response_snippet": "{}"
+    "request": "curl -H \"content-type: application/json\" -H \"authorization: YOUR_AUTH_KEY\" -H \"partner-token: YOUR_PARTNER_TOKEN\" \"https://dev-api.carscan.com/v3.0/diag?vin=1GNALDEK9FZ108495&mileage=51000&dtc=p0420\"",
+    "response_snippet": "{\"message\":{\"code\":0,\"message\":\"ok\",\"credentials\":\"valid\",\"version\":\"v3.0.0\",\"endpoint\":\"diag\"},\"data\":{\"code\":\"P0420\",\"urgency\":2,\"urgency_desc\":\"Repair immediately if drivability issues are present...\",\"layman_definition\":\"Catalyst System Efficiency Below Threshold (Bank 1)\",\"tech_definition\":\"Catalyst System Low Efficiency (Bank 1)\"}}"
   },
   "use_cases": [
     "decode OBD-II trouble codes for a vehicle",
@@ -94,6 +94,21 @@
       "description",
       "status"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "Authorization: Bearer YOUR_API_KEY (recommended). Query param api_key still works for backward compatibility but is deprecated and may be removed.",
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "1,000 free trial API credits after signup; no credit card required; no ongoing free plan",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Plan-based concurrent request limits (Freelance 50, Startup 100, Business 200, Business+ 400); no published RPS. Plans may change.",
   "cors": null,
-  "example_request": null,
+  "example_request": "curl \"https://app.scrapingbee.com/api/v1?url=https%3A%2F%2Fhttpbin.org%2Fhtml\" -H \"Authorization: Bearer YOUR_API_KEY\"",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of disputed fields against official ScrapingBee docs."
+  "resolution_notes": "auth.details: auditor right \u2014 docs recommend Bearer header; api_key query param is deprecated (https://www.scrapingbee.com/documentation/). free_tier_limits: auditor right \u2014 pricing/homepage say 1,000 free credits, no credit card required (https://www.scrapingbee.com/pricing/). rate_limits: auditor right \u2014 pricing shows concurrent 50/100/200/400 (https://www.scrapingbee.com/pricing/); help article with lower figures is stale. example.request: auditor right \u2014 official curl examples use Authorization Bearer, not api_key query (https://www.scrapingbee.com/documentation/)."
 }

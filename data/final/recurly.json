@@ -4,7 +4,7 @@
   "name": "Recurly",
   "category": "ecommerce-payments",
   "tagline": "Subscription billing and revenue management API for SaaS and digital businesses.",
-  "description": "Recurly provides a REST API for subscription management, recurring billing, invoices, payments, dunning, and revenue recognition. Developers manage accounts, plans, subscriptions, and transactions programmatically with JSON over HTTPS.",
+  "description": "null",
   "base_url": "https://v3.recurly.com",
   "docs_url": "https://developers.recurly.com/api/v2021-02-25/",
   "signup_url": "https://recurly.com/signup/",
@@ -22,9 +22,9 @@
     "free_tier_limits": "no free tier",
     "paid_plans": "unknown"
   },
-  "rate_limits": "not published",
+  "rate_limits": "400 requests/minute for sandbox sites and 1,000 requests/minute for production sites, measured over a rolling five-minute window; all sandbox requests count, while only production GET requests count",
   "example": {
-    "request": "curl -u YOUR_API_KEY: https://v3.recurly.com/sites",
+    "request": "curl -u YOUR_API_KEY: -H \"Accept: application/vnd.recurly.v2021-02-25+json\" https://v3.recurly.com/sites",
     "response_snippet": "{\"object\":\"list\",\"has_more\":false,\"next\":null,\"data\":[{\"id\":\"...\",\"object\":\"site\",\"...\"}]}"
   },
   "use_cases": [
@@ -90,6 +90,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits",
+        "example_request",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

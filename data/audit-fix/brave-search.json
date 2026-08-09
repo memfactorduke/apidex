@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "free_tier_limits": "$5 monthly credits (\u22481,000 Search requests at $5/1k)",
+  "paid_plans": "Search $5/1k requests; Answers $4/1k + tokens; enterprise custom",
+  "rate_limits": "Search 50 QPS; Answers 2 QPS (plan-dependent)",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "need live official pricing/rate-limit docs before settling free_tier_limits, paid_plans, and rate_limits"
+  "resolution_notes": "free_tier_limits: auditor correct \u2014 https://api-dashboard.search.brave.com/app/documentation/web-search/get-started and pricing at https://brave.com/search/api/ show $5 recurring monthly credits. paid_plans: auditor correct \u2014 Search $5/1k, Answers $4/1k + tokens, enterprise custom (same pricing pages). rate_limits: auditor correct \u2014 docs publish 50 QPS Search / 2 QPS Answers."
 }

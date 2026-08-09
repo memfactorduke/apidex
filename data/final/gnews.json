@@ -22,7 +22,7 @@
     "free_tier_limits": "100 requests/day free",
     "paid_plans": "Paid plans available with higher daily quotas; see pricing page for current tiers"
   },
-  "rate_limits": "Daily request quotas by plan (free: 100/day); additional per-second limits not clearly published",
+  "rate_limits": "Daily quotas by plan (free: 100 requests/day); Free plan: 1 request/second; paid plans: 10 requests/second",
   "example": {
     "request": "curl \"https://gnews.io/api/v4/search?q=technology&lang=en&max=10&apikey=YOUR_API_KEY\"",
     "response_snippet": "{\"totalArticles\":12345,\"articles\":[{\"title\":\"Example headline\",\"description\":\"Short summary...\",\"content\":\"Article snippet...\",\"url\":\"https://example.com/article\",\"image\":\"https://...\",\"publishedAt\":\"2026-01-15T12:00:00Z\",\"source\":{\"name\":\"Example News\",\"url\":\"https://example.com\"}}]}"
@@ -93,6 +93,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

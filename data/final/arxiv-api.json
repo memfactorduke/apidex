@@ -10,7 +10,7 @@
   "signup_url": null,
   "auth": {
     "type": "none",
-    "details": "Researching"
+    "details": "No authentication or API key is required for the public Atom query API."
   },
   "https": true,
   "cors": "unknown",
@@ -91,6 +91,15 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details"
+      ],
+      "upheld_original": false
+    }
   }
 }

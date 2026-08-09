@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key via api-key query parameter only; self-serve signup at developer.nytimes.com",
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "500 req/day and 5 req/min per API; free access is non-commercial only\u2014commercial use needs NYT licensing (nytlicensing.com)",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "500 requests per day and 5 requests per minute per API; sleep 12s between calls recommended; higher limits via code@nytimes.com",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling disputes against live official NYT developer docs."
+  "resolution_notes": "auth.details: auditor right\u2014docs say query-string api-key only (https://developer.nytimes.com/faq \u00a75; Key location:query on https://developer.nytimes.com/docs/most-popular-product/1/routes/viewed/%7Bperiod%7D.json/get); live gateway resolves request.queryparam.api-key; no official X-Api-Key. rate_limits: auditor right\u2014FAQ \u00a711 publishes 500/day + 5/min (https://developer.nytimes.com/faq). free_tier_limits: auditor right\u2014same quotas plus non-commercial-only (FAQ \u00a79\u201311; https://developer.nytimes.com/terms)."
 }

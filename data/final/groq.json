@@ -4,7 +4,7 @@
   "name": "Groq API",
   "category": "ai-ml",
   "tagline": "Ultra-fast LLM inference via OpenAI-compatible API",
-  "description": "Groq provides high-speed inference for open-source and proprietary large language models through an OpenAI-compatible REST API. Developers send chat completions, tool calls, and embeddings to models like Llama, Mixtral, and Gemma, typically with very low latency on Groq\u2019s LPU hardware. Authentication uses a Bearer API key; free and paid tiers include rate limits that vary by model and plan.",
+  "description": "Groq provides high-speed inference for open-source and proprietary large language models through an OpenAI-compatible REST API. Developers use documented Chat Completions, Responses, audio (speech-to-text/text-to-speech), models, batch, and file APIs, plus related endpoints; available model IDs change and should be taken from GET /openai/v1/models or the console models list (e.g. Llama and other currently listed models). Authentication uses a Bearer API key; free and paid tiers include rate limits that vary by model and plan.",
   "base_url": "https://api.groq.com/openai/v1",
   "docs_url": "https://console.groq.com/docs",
   "signup_url": "https://console.groq.com",
@@ -95,6 +95,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -22,7 +22,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Per-project concurrency; varies by plan, model, service, region. Pay As You Go Nova-3: up to 50 concurrent pre-recorded, 150 streaming. Growth raises streaming (e.g. 225 NA). Enterprise higher. See docs for full tables.",
   "example": {
     "request": "curl -X POST \"https://api.deepgram.com/v1/listen?model=nova-3\" -H \"Authorization: Token YOUR_API_KEY\" -H \"Content-Type: audio/wav\" --data-binary @audio.wav",
     "response_snippet": "{\"metadata\":{\"transaction_key\":\"...\",\"request_id\":\"...\",\"sha256\":\"...\",\"created\":\"...\",\"duration\":...},\"results\":{\"channels\":[{\"alternatives\":[{\"transcript\":\"...\",\"confidence\":0.99,\"words\":[]}]}]}}"
@@ -91,6 +91,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

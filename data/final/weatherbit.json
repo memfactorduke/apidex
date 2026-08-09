@@ -10,7 +10,7 @@
   "signup_url": "https://www.weatherbit.io/account/create",
   "auth": {
     "type": "apiKey",
-    "details": "API key via query parameter key=YOUR_API_KEY (or header in some SDKs); self-serve signup."
+    "details": "API key via the required key query parameter; self-serve signup."
   },
   "https": true,
   "cors": "unknown",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
+    "free_tier_limits": "50 requests/day; 1 request/second; current weather and 7-day daily forecasts; non-commercial use.",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Free: 50 req/day, 1 req/s; Standard: 25k/day, 25/s; Plus: 250k/day, 50/s; Business: 2M/day, 150/s; Enterprise: custom. Daily quotas reset 00:00 UTC.",
   "example": {
     "request": "curl \"https://api.weatherbit.io/v2.0/current?city=Raleigh,NC&key=YOUR_API_KEY\"",
     "response_snippet": "{\"data\":[{\"city_name\":\"Raleigh\",\"temp\":22.5,\"weather\":{\"description\":\"Clear sky\"}}],\"count\":1}"
@@ -91,6 +91,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

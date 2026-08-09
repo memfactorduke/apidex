@@ -6,12 +6,12 @@
   "auth_details": null,
   "free_tier": null,
   "free_tier_limits": null,
-  "paid_plans": null,
+  "paid_plans": "Pay-as-you-go pricing per 1 million input/output tokens, varying by model and deployment type; provisioned throughput is priced separately through PTUs and reservations.",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of Azure OpenAI pricing unit (per 1K vs per 1M tokens)."
+  "resolution_notes": "pricing.paid_plans: auditor correct. Official Azure OpenAI pricing (https://azure.microsoft.com/en-us/pricing/details/azure-openai/) labels all model rates as Pricing (1M Tokens) for input/output (and cached input), not per 1K; page also documents Standard pay-as-you-go, Provisioned PTUs with reservations, and Batch. Original \u201cper 1K tokens\u201d is outdated."
 }

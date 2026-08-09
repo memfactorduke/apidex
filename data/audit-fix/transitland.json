@@ -1,17 +1,17 @@
 {
   "id": "transitland",
-  "base_url": null,
+  "base_url": "https://transit.land/api/v2/rest",
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key via apikey query parameter or apikey header; self-serve signup. Does not use Authorization header.",
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "free_tier_limits": "REST API: 10,000 queries/month; also includes 1,000 routing queries/month and 100,000 vector tiles/month (Free plan)",
+  "paid_plans": "Professional: REST 200,000 requests/month (higher paid plans increase product-specific monthly quotas; see pricing)",
+  "rate_limits": "Free: REST 10,000 queries/month, routing 1,000/month, vector tiles 100,000/month; Professional REST: 200,000 requests/month; higher paid plans increase monthly quotas",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Starting live verification of Transitland official docs for base_url, auth, free tier, and rate limits."
+  "resolution_notes": "base_url: auditor correct \u2014 docs use https://transit.land/api/v2/rest as REST root (https://www.transit.land/documentation/rest-api). auth_details: auditor correct \u2014 docs specify apikey query or apikey header, not Authorization (https://www.transit.land/documentation). free_tier_limits: auditor correct \u2014 Free is 10k REST queries/month not 1k/day (https://www.transit.land/plans-pricing/). rate_limits: auditor correct \u2014 monthly product quotas; Pro REST 200k/month (same pricing page)."
 }

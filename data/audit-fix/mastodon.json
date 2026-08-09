@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "Auditor correct on example.request only: official Mastodon client auth docs describe OAuth 2.0 access tokens (Authorization: Bearer), not API keys \u2014 see https://docs.joinmastodon.org/client/token/ and https://docs.joinmastodon.org/api/oauth-scopes/. Original example used YOUR_API_KEY; corrected label is YOUR_ACCESS_TOKEN. No other fields disputed; status remains operational."
 }

@@ -2,16 +2,16 @@
   "id": "memegen",
   "base_url": null,
   "docs_url": null,
-  "auth_type": null,
-  "auth_details": null,
+  "auth_type": "apiKey",
+  "auth_details": "Optional API key. Anonymous access works (watermarked). Authenticated via X-API-KEY header or api_key query param; keys for sponsors at $10+/mo via support.",
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
+  "free_tier_limits": "Anonymous access is available, but responses are watermarked and may be rate-limited; no numeric anonymous quota is published.",
+  "paid_plans": "Sponsorship at $10+/month can include an API key; contact support for keys or custom pricing for your use case.",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling disputes against live official docs now."
+  "resolution_notes": "auth: auditor correct \u2014 optional API-key auth is documented (X-API-KEY / api_key); anonymous still works with restrictions (https://memegen.link/clients/). free_tier_limits: auditor correct \u2014 unauth requests are watermarked and may be rate-limited; no numeric quota published (same URL). paid_plans: auditor correct \u2014 $10+/mo sponsors welcome to an API key; contact support for pricing (same URL)."
 }

@@ -10,7 +10,7 @@
   "signup_url": null,
   "auth": {
     "type": "apiKey",
-    "details": "Researching..."
+    "details": "API key sent in the x-api-key request header; obtain a key through The Cat API signup."
   },
   "https": true,
   "cors": "unknown",
@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "10,000 requests/month on free tier (see pricing)",
-    "paid_plans": null
+    "paid_plans": "Startup $99/month (100,000 requests/month); Enterprise custom pricing (contact for unlimited requests and bespoke features)."
   },
   "rate_limits": "Free: ~10,000 req/month; higher tiers on paid plans (see pricing)",
   "example": {
@@ -89,6 +89,16 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

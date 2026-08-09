@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Daily quotas by plan (free: 100 requests/day); Free plan: 1 request/second; paid plans: 10 requests/second",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying rate_limits against official GNews docs now."
+  "resolution_notes": "rate_limits: Auditor correct. Official error-handling docs publish per-second limits under HTTP 429: Free plan 1 req/s, paid plans 10 req/s (https://docs.gnews.io/error-handling). Free daily quota of 100/day confirmed on pricing (https://gnews.io/pricing). Original claim that per-second limits were 'not clearly published' is wrong."
 }

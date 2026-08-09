@@ -22,7 +22,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "1,000 API calls/hour and 5,000 calls/day per consumer key (additional IP- and action-specific limits may apply)",
   "example": {
     "request": "curl \"https://api.tumblr.com/v2/blog/staff.tumblr.com/info?api_key=YOUR_API_KEY\"",
     "response_snippet": "{\"meta\":{\"status\":200,\"msg\":\"OK\"},\"response\":{\"blog\":{\"title\":\"Staff\",\"name\":\"staff\",\"total_posts\":1234,\"url\":\"https://staff.tumblr.com/\"}}}"
@@ -91,6 +91,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -22,7 +22,7 @@
     "free_tier_limits": "Free models available; paid models billed per token with account credits. Exact free allowance depends on selected free models\u2014verify current list on openrouter.ai/models.",
     "paid_plans": "Pay-as-you-go per model token rates; credits purchased on account. Some models free; others charged by input/output tokens."
   },
-  "rate_limits": "not published",
+  "rate_limits": "Free models (:free): 20 RPM / 50 RPD if <10 credits purchased all-time; 20 RPM / 1,000 RPD after \u226510 credits. Account-wide, not per model. Provider-specific and Cloudflare DDoS limits also apply; paid variants have no platform request cap.",
   "example": {
     "request": "curl https://openrouter.ai/api/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"openai/gpt-4o-mini\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
     "response_snippet": "{\"id\":\"gen-...\",\"model\":\"openai/gpt-4o-mini\",\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":8}}"
@@ -95,6 +95,15 @@
     "corrected": [],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

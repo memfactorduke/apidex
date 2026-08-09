@@ -4,14 +4,14 @@
   "docs_url": null,
   "auth_type": null,
   "auth_details": null,
-  "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "free_tier": false,
+  "free_tier_limits": "$1 introductory credits for new users (trial/promo credit; not an ongoing free inference tier)",
+  "paid_plans": "Pay-as-you-go serverless inference billed per token; dedicated deployments available. Pricing varies by model \u2014 see https://fireworks.ai/pricing",
+  "rate_limits": "Accounts without payment method or credits: 10 RPM. Funded/active accounts: account-wide ceiling ~6,000 RPM plus model-specific serverless token limits. See rate limits docs.",
   "cors": null,
-  "example_request": null,
+  "example_request": "curl https://api.fireworks.ai/inference/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"accounts/fireworks/models/deepseek-v3p1\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Investigating official Fireworks docs for free tier, rate limits, and serverless model availability."
+  "resolution_notes": "pricing: auditor correct \u2014 docs describe $1 new-user credits, not ongoing free tier (https://docs.fireworks.ai/getting-started/quickstart, https://fireworks.ai/pricing). rate_limits: auditor correct \u2014 published: unpaid 10 RPM, funded ~6000 RPM + serverless token quotas (https://docs.fireworks.ai/guides/rate-limits). example.request: auditor correct \u2014 llama-v3p1-8b-instruct not serverless; use deepseek-v3p1 or similar (https://fireworks.ai/models)."
 }

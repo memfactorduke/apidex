@@ -2,16 +2,16 @@
   "id": "boardgamegeek",
   "base_url": null,
   "docs_url": null,
-  "auth_type": null,
-  "auth_details": null,
+  "auth_type": "other",
+  "auth_details": "Application registration and approval required at boardgamegeek.com/applications; approved apps create tokens used as Authorization: Bearer <token> on all XML API requests.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -H \"Authorization: Bearer YOUR_APPLICATION_TOKEN\" \"https://boardgamegeek.com/xmlapi2/thing?id=13&stats=1\"",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of BGG XML API2 auth requirements against official docs."
+  "resolution_notes": "auth: auditor correct. Official guide (https://boardgamegeek.com/using_the_xml_api) states registration/authorization is required for the XML API; approved apps issue tokens sent as Authorization: Bearer. Wiki (https://boardgamegeek.com/wiki/page/BGG_XML_API2) points readers there and notes www can break auth. Community confirms enforcement live since ~Oct 2025. example: auditor correct for same reason\u2014Bearer header is required; prior unauthenticated curl is outdated."
 }

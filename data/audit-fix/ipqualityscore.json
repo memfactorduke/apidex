@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "1,000 free lookups/month (also 35/day on Free); free plan covers IP, email, URL & phone; some products need paid tiers",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"success\":true,\"message\":\"Success\",\"fraud_score\":0,\"country_code\":\"US\",\"proxy\":false,\"vpn\":false,\"tor\":false,\"ISP\":\"GOOGLE\",\"organization\":\"GOOGLE\",\"is_crawler\":false,\"mobile\":false,\"host\":\"dns.google\",\"recent_abuse\":false,\"bot_status\":false}",
   "description": null,
   "status": null,
-  "resolution_notes": "Settling disputes against live official IPQS docs/pricing."
+  "resolution_notes": "free_tier_limits: AUDITOR RIGHT. Official Free plan lists 1,000 lookups/month and 35/day (https://www.ipqualityscore.com/plans); not an unspecified variable limit. example.response_snippet: AUDITOR RIGHT. Proxy Detection docs use uppercase \"ISP\" in example JSON and field table (https://www.ipqualityscore.com/documentation/proxy-detection-api/overview, https://www.ipqualityscore.com/documentation/proxy-detection-api/response-parameters); lowercase \"isp\" was wrong. status unchanged (API operational)."
 }

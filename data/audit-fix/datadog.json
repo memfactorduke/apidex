@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "free_tier_limits": "Infrastructure free: up to 5 hosts, 1-day metric retention; other products have separate free allotments",
+  "paid_plans": "Infrastructure Pro from ~$15/host/mo (annual); APM, logs, and other products priced separately\u2014see pricing page",
+  "rate_limits": "Varies by endpoint; X-RateLimit-* headers; metrics/log submission not API-rate-limited; events ~250k/min/org",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying disputed pricing and rate-limit fields against current Datadog official docs."
+  "resolution_notes": "Verifying all three disputes against current official Datadog docs."
 }

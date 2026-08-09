@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "100 API requests/month (Free plan); HTTP only (HTTPS requires paid); free tier limited to real-time flights (no historical)",
+    "free_tier_limits": "100 requests/month; personal-use license; real-time flights; HTTPS included; advanced features such as historical flights and routes require a paid plan",
     "paid_plans": "Basic from ~$49.99/mo (10,000 req), Professional, Business, and Enterprise with higher volumes and HTTPS"
   },
-  "rate_limits": "Not separately published beyond monthly request quotas per plan; free tier is HTTP-only",
+  "rate_limits": "Monthly quota of 100 requests on the Free plan; no separate per-second limit is prominently published; HTTPS is included",
   "example": {
     "request": "curl \"https://api.aviationstack.com/v1/flights?access_key=YOUR_API_KEY&limit=1\"",
     "response_snippet": "{\"pagination\":{\"limit\":1,\"offset\":0,\"count\":1,\"total\":10000},\"data\":[{\"flight_date\":\"2024-01-15\",\"flight_status\":\"active\",\"departure\":{\"airport\":\"John F Kennedy International\",\"iata\":\"JFK\",\"scheduled\":\"2024-01-15T12:00:00+00:00\"},\"arrival\":{\"airport\":\"Los Angeles International\",\"iata\":\"LAX\"},\"airline\":{\"name\":\"American Airlines\",\"iata\":\"AA\"},\"flight\":{\"number\":\"100\",\"iata\":\"AA100\"}}]}"
@@ -96,6 +96,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

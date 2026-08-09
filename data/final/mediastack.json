@@ -19,7 +19,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "100 requests/month free (Free plan); HTTP only on free tier",
+    "free_tier_limits": "100 requests/month; delayed news data; HTTPS included; no historical data or commercial use",
     "paid_plans": "Standard from ~$24.99/mo (10k req), Professional ~$99.99/mo (50k), Business ~$249.99/mo (250k); higher tiers available"
   },
   "rate_limits": "Monthly request quotas by plan; per-minute limits not clearly published on pricing page",
@@ -92,6 +92,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

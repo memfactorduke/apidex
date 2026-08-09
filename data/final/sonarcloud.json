@@ -19,8 +19,8 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free plan for public open-source projects; private projects require paid plan (limits not expressed as API request quotas)",
-    "paid_plans": "Paid plans for private code analysis (Team/Enterprise-style); see sonarcloud.io/pricing \u2014 priced mainly by lines of code analyzed, not API calls"
+    "free_tier_limits": "Free plan: private projects up to 50k LOC, max 5 org members, unlimited public projects (main branch only). Separate free OSS plan: unlimited public repos, no private projects.",
+    "paid_plans": "Team (from ~$34/mo, 100k\u20131.9M private LOC, unlimited members) and Enterprise (custom/annual, unlimited LOC ideal from 5M LOC, SSO/SCIM, portfolios, etc.). Priced by private LOC analyzed, not API calls. See sonarsource.com/plans-and-pricing/sonarcloud/"
   },
   "rate_limits": "not published (standard web API; no public per-endpoint RPS table found)",
   "example": {
@@ -92,6 +92,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

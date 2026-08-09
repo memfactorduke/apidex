@@ -1,17 +1,17 @@
 {
   "id": "visual-crossing",
-  "base_url": null,
+  "base_url": "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/",
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key passed as the `key` query parameter (account key from Visual Crossing).",
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
+  "free_tier_limits": "1,000 query-cost records/day free (no card); cost returned as `queryCost`. Forecasts often cost 1 per location; historical commonly costs per day returned.",
+  "paid_plans": "Usage above free: ~$0.0001/query-cost record. Higher tiers: Professional, Corporate, Enterprise with larger allowances and support.",
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
-  "example_response_snippet": null,
+  "example_request": "curl \"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK/2026-03-08/2026-03-09?unitGroup=metric&key=YOUR_API_KEY&contentType=json\"",
+  "example_response_snippet": "{\"queryCost\":1,\"latitude\":51.5064,\"longitude\":-0.12721,\"resolvedAddress\":\"London, England, United Kingdom\",\"address\":\"London,UK\",\"timezone\":\"Europe/London\",\"days\":[{\"datetime\":\"2026-03-08\",\"tempmax\":12.1,\"tempmin\":5.2,\"temp\":8.4,\"conditions\":\"Partially cloudy\",\"description\":\"Partly cloudy throughout the day.\"}]}",
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "base_url: auditor right\u2014docs/examples use Timeline path under weather.visualcrossing.com (https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/). auth.details: auditor right\u2014key query param (same docs). free_tier_limits: auditor right\u2014billing uses queryCost; free 1000/day; forecast vs historical differ (https://www.visualcrossing.com/weather-api + pricing). paid_plans: auditor right\u2014paid overage ~$0.0001/record + Pro/Corp/Enterprise (https://www.visualcrossing.com/weather-api). response_snippet: auditor right\u2014undated request \u2260 March 2026 days; aligned request dates with snippet. status: operational (docs live)."
 }

@@ -10,7 +10,7 @@
   "signup_url": "https://www.deepl.com/pro-api",
   "auth": {
     "type": "apiKey",
-    "details": "API key via Authorization: DeepL-Auth-Key YOUR_API_KEY header (or auth_key form field). Free keys use api-free.deepl.com; Pro keys use api.deepl.com. Self-serve signup."
+    "details": "API key must be sent as Authorization: DeepL-Auth-Key YOUR_API_KEY header. Free keys use api-free.deepl.com; paid keys use api.deepl.com. Self-serve signup. Legacy auth_key query/body auth ended 2026-01-15 and now fails."
   },
   "https": true,
   "cors": "unknown",
@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "DeepL API Free (500k chars/month) and API Pro can no longer be purchased. Current free plan is DeepL API Developer: 1,000,000 characters total (not monthly; does not reset). Free keys still use https://api-free.deepl.com; paid use api.deepl.com. Paid plans are Growth (included chars + overage) and Enterprise.",
-    "paid_plans": "DeepL API Pro: pay-as-you-go per character after included usage; enterprise options available \u2014 see pricing page"
+    "paid_plans": "DeepL API Growth is the current self-serve paid plan (fixed monthly/yearly price with included characters + usage overage). Enterprise API is custom via sales. DeepL API Pro is legacy and can no longer be purchased."
   },
   "rate_limits": "not published",
   "example": {
@@ -94,6 +94,16 @@
       "free_tier_limits",
       "description"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

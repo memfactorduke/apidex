@@ -10,7 +10,7 @@
   "signup_url": "https://eventregistry.org/register",
   "auth": {
     "type": "apiKey",
-    "details": "API key via apiKey query parameter or header; self-serve signup on eventregistry.org"
+    "details": "API key as apiKey URL query param (GET) or JSON body property (POST); self-serve signup on eventregistry.org / newsapi.ai. Header auth not documented."
   },
   "https": true,
   "cors": "unknown",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "2000 tokens/month (free plan); tokens spent per request depend on endpoint and result size",
-    "paid_plans": null
+    "free_tier_limits": "2,000 free tokens/searches total for testing (one-time, not renewed monthly); free tier limited to last 30 days of content; token cost varies by endpoint/result size",
+    "paid_plans": "Monthly token plans: 5K $90, 10K $150, 20K $220, 50K $400, 100K $700, 200K $1,300, 500K $3,000; custom/enterprise; overage $0.015/token (newsapi.ai/plans)"
   },
-  "rate_limits": "not published",
+  "rate_limits": "Maximum 5 simultaneous requests per user; excess concurrent requests return HTTP 429",
   "example": {
     "request": "curl \"https://eventregistry.org/api/v1/article/getArticles?apiKey=YOUR_API_KEY&keyword=climate&articlesCount=1\"",
     "response_snippet": "{\"articles\":{\"results\":[{\"uri\":\"...\",\"title\":\"...\",\"body\":\"...\",\"source\":{\"title\":\"...\"}}],\"totalResults\":1}}"
@@ -91,6 +91,18 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

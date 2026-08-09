@@ -3,7 +3,7 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "No authentication or API key is required for the public Atom query API.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Placeholder; live verification pending."
+  "resolution_notes": "auth.details: Auditor correct. Official docs state no authentication is required for the public Atom query API at export.arxiv.org; \"Researching\" was an unresolved placeholder. Evidence: https://info.arxiv.org/help/api/user-manual.html and https://info.arxiv.org/help/api/. id: Auditor wrong for this arbiter task. Directory id must remain exactly \"arxiv-api\" per output rules; any merge with a separate \"arxiv\" entry is a catalog-dedup concern outside this entry's field correction. This record correctly identifies the same public Atom API (base https://export.arxiv.org, docs https://info.arxiv.org/help/api/) and is not defunct. Evidence: https://info.arxiv.org/help/api/ and https://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=1."
 }

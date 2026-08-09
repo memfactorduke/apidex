@@ -25,10 +25,10 @@
     "free_tier_limits": "Fully free public service; no paid plans. Subject to published rate limits and fair-use policy.",
     "paid_plans": null
   },
-  "rate_limits": "15 requests/second per IP (global rate limit); 5500 requests/hour recommended maximum; bulk/download use discouraged via REST\u2014use FTP or Perl/Python APIs for large jobs.",
+  "rate_limits": "15 requests/second per IP (global rate limit); 55000 requests/hour maximum per IP; bulk/download use discouraged via REST\u2014use FTP or Perl/Python APIs for large jobs.",
   "example": {
     "request": "curl -s 'https://rest.ensembl.org/lookup/symbol/homo_sapiens/BRCA2?content-type=application/json'",
-    "response_snippet": "{\"id\":\"ENSG00000139618\",\"species\":\"homo_sapiens\",\"object_type\":\"Gene\",\"db_type\":\"core\",\"biotype\":\"protein_coding\",\"display_name\":\"BRCA2\",\"seq_region_name\":\"13\",\"start\":32315086,\"end\":32400266,\"strand\":1,\"assembly_name\":\"GRCh38\",\"description\":\"BRCA2 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1101]\"}"
+    "response_snippet": "{\"id\":\"ENSG00000139618\",\"species\":\"homo_sapiens\",\"object_type\":\"Gene\",\"db_type\":\"core\",\"biotype\":\"protein_coding\",\"display_name\":\"BRCA2\",\"seq_region_name\":\"13\",\"start\":32315086,\"end\":32400268,\"strand\":1,\"assembly_name\":\"GRCh38\",\"description\":\"BRCA2 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1101]\"}"
   },
   "use_cases": [
     "look up a human gene by symbol and get Ensembl ID and genomic coordinates",
@@ -99,6 +99,16 @@
     "corrected": [
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

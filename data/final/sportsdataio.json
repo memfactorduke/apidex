@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
+    "free_tier_limits": "Free Trial: scrambled/structurally accurate sample data with a small daily call allowance and no SLA for integration testing. Discovery Lab: separate free tier with last-season historical data.",
     "paid_plans": null
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl \"https://api.sportsdata.io/v3/nfl/scores/json/ScoresByWeek/2024/1?key=YOUR_API_KEY\"",
-    "response_snippet": "{\"GameKey\":\"...\",\"Season\":2024,\"Week\":1,...}"
+    "request": "curl \"https://api.sportsdata.io/v3/nfl/scores/json/ScoresByWeek/2024REG/1?key=YOUR_API_KEY\"",
+    "response_snippet": "[{\"GameKey\":\"...\",\"Season\":2024,\"Week\":1,...}]"
   },
   "use_cases": [
     "get NFL scores for a given week",
@@ -90,6 +90,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

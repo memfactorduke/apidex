@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "1,000 API calls/hour and 5,000 calls/day per consumer key (additional IP- and action-specific limits may apply)",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of rate_limits against official Tumblr docs."
+  "resolution_notes": "Auditor right on rate_limits. Official Tumblr Developer Resources (help.tumblr.com/knowledge-base/developer-resources/) publishes defaults: 1,000 API calls/hour and 5,000/day per consumer key, plus IP- and action-specific limits. Original \"not published\" is incorrect."
 }

@@ -5,7 +5,7 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free users get $0.10/month in Inference Providers credits (subject to change); extra usage requires purchasing credits / pay-as-you-go. PRO: $2.00/mo; Team/Enterprise: $2.00 per seat.",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "pricing.free_tier_limits: Auditor correct. Official docs (https://huggingface.co/docs/inference-providers/en/pricing) state Free Users receive $0.10 monthly Inference Providers credits (subject to change), with extra usage via credits purchase/pay-as-you-go; PRO $2.00; Team/Enterprise $2.00 per seat. Original 'unknown request quotas' was wrong\u2014limits are credit-based, not unspecified request counts."
 }

@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "30 requests/day free (free plan)",
-    "paid_plans": "Paid plans from ~$12/month with higher daily quotas"
+    "free_tier_limits": "50 requests/day free (Personal/Free Forever plan; no card required)",
+    "paid_plans": "Start-Up plan $15 USD/month for up to 15,000 requests/day (Stripe); Unlimited plan via support@openuv.io"
   },
-  "rate_limits": "Free: 30 req/day; paid tiers increase daily quota (see pricing page)",
+  "rate_limits": "Free: 50 req/day; Start-Up: 15,000 req/day ($15/month); Unlimited via support",
   "example": {
     "request": "curl -X GET \"https://api.openuv.io/api/v1/uv?lat=37.7749&lng=-122.4194\" -H \"x-access-token: YOUR_API_KEY\"",
     "response_snippet": "{\"result\":{\"uv\":5.2,\"uv_time\":\"2026-08-08T18:00:00.000Z\",\"uv_max\":8.1,\"uv_max_time\":\"2026-08-08T20:00:00.000Z\",\"ozone\":310,\"safe_exposure_time\":{\"st1\":67,\"st2\":83,\"st3\":111,\"st4\":139,\"st5\":222,\"st6\":417}}}"
@@ -94,6 +94,17 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

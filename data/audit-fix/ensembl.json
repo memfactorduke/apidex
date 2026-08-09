@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "15 requests/second per IP (global rate limit); 55000 requests/hour maximum per IP; bulk/download use discouraged via REST\u2014use FTP or Perl/Python APIs for large jobs.",
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"id\":\"ENSG00000139618\",\"species\":\"homo_sapiens\",\"object_type\":\"Gene\",\"db_type\":\"core\",\"biotype\":\"protein_coding\",\"display_name\":\"BRCA2\",\"seq_region_name\":\"13\",\"start\":32315086,\"end\":32400268,\"strand\":1,\"assembly_name\":\"GRCh38\",\"description\":\"BRCA2 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1101]\"}",
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of rate_limits and BRCA2 response coordinates against official Ensembl docs and REST endpoints."
+  "resolution_notes": "rate_limits: auditor correct. Official Ensembl REST rate-limit docs (https://rest.ensembl.org/documentation/info/rate_limit and https://github.com/Ensembl/ensembl-rest/wiki/Rate-Limits) state 15 req/s and 55000 req/hour per IP, not 5500. example.response_snippet: auditor correct. Live GET https://rest.ensembl.org/lookup/symbol/homo_sapiens/BRCA2?content-type=application/json returns end=32400268 (not 32400266) on GRCh38 as of verification."
 }

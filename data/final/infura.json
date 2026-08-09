@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "Core Free: 3,000,000 credits/day (1 API key)",
+    "paid_plans": "Developer $50/mo (15M credits/day); Team $225/mo (75M credits/day); Enterprise custom"
   },
-  "rate_limits": "not published",
+  "rate_limits": "Core: 500 credits/sec; Developer: 4,000 credits/sec; Team: 40,000 credits/sec; plus plan daily credit quotas",
   "example": {
     "request": "curl -X POST https://mainnet.infura.io/v3/YOUR_API_KEY -H \"Content-Type: application/json\" -d '{\"jsonrpc\":\"2.0\",\"method\":\"eth_blockNumber\",\"params\":[],\"id\":1}'",
     "response_snippet": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"0x12a05f1\"}"
@@ -91,6 +91,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

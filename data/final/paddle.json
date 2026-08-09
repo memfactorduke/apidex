@@ -22,7 +22,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "240 requests/minute per IP for most operations; 1,000 requests/minute for pricing-preview endpoints; immediate-charge subscription updates limited to 20/hour and 100/24 hours per subscription",
   "example": {
     "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.paddle.com/products\"",
     "response_snippet": "{\"data\":[{\"id\":\"pro_...\",\"name\":\"...\",\"status\":\"active\"}],\"meta\":{\"request_id\":\"...\"}}"
@@ -90,6 +90,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

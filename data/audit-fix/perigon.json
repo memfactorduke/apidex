@@ -1,17 +1,17 @@
 {
   "id": "perigon",
-  "base_url": null,
+  "base_url": "https://api.perigon.io/v1",
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key via apiKey query parameter, Authorization: Bearer header, or x-api-key header; header authentication is recommended.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "curl \"https://api.perigon.io/v1/articles/all?apiKey=YOUR_API_KEY&q=technology\"",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Checking official Perigon docs now for base_url, auth methods, and example host."
+  "resolution_notes": "base_url: auditor right \u2014 official docs use https://api.perigon.io/v1 (docs.perigon.io / perigon.io/docs). auth_details: auditor right \u2014 apiKey query, Bearer, or x-api-key; headers preferred. example_request: auditor right \u2014 same host update as base_url."
 }

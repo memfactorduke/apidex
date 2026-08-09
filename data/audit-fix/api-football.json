@@ -6,12 +6,12 @@
   "auth_details": null,
   "free_tier": null,
   "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "paid_plans": "Pro $19/mo (7,500 req/day); Ultra $29/mo (75,000/day); Mega $39/mo (150,000/day); billing discounts may apply",
+  "rate_limits": "Free 10 req/min; Pro 300/min & 5/s; Ultra 450/min & 7.5/s; Mega 900/min & 15/s; daily quotas also apply",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of pricing.paid_plans and rate_limits against official docs."
+  "resolution_notes": "paid_plans: auditor right \u2014 official pricing lists Pro/Ultra/Mega paid tiers (https://www.api-football.com/pricing). rate_limits: auditor right \u2014 docs/dashboard publish per-plan RPM/RPS plus daily quotas (https://www.api-football.com/documentation-v3, https://www.api-football.com/pricing)."
 }

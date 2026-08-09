@@ -6,12 +6,12 @@
   "auth_details": null,
   "free_tier": null,
   "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "paid_plans": "Prepaid pay-as-you-go credits (flexible packages, 1-year validity) plus Enterprise from \u20ac100/month. Premium Weather API published tiers from ~\u20ac2400/year (e.g. 40k calls/month \u2248 320M credits at ~8k credits/call); Maps/Dataset/other products separate.",
+  "rate_limits": "500 calls per minute unless otherwise agreed; API keys can also have configurable daily credit/usage limits (account-level and key-level).",
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"metadata\":{\"name\":\"\",\"latitude\":48,\"longitude\":8,\"height\":560,\"timezone_abbrevation\":\"CEST\",\"utc_timeoffset\":2,\"modelrun_utc\":\"2025-08-06 12:21\",\"modelrun_updatetime_utc\":\"2025-08-06 12:00\",\"generation_time_ms\":13.34},\"units\":{\"time\":\"YYYY-MM-DD hh:mm\",\"temperature\":\"C\",\"precipitation\":\"mm\",\"windspeed\":\"ms-1\"},\"data_day\":{\"time\":[\"2025-08-06\"],\"temperature_max\":[28.0],\"temperature_min\":[14.0],\"precipitation\":[8.0],\"pictocode\":[1],\"...\":\"truncated\"}}",
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "paid_plans: auditor right\u2014null contradicts published paid options; Free API comparison lists Prepaid (pay-as-you-go) and Enterprise (from \u20ac100/mo) at https://business.meteoblue.com/products/weather-apis/free-weather-api; credit purchases https://docs.meteoblue.com/en/weather-apis/free-weather-api/overview; Premium tiers https://business.meteoblue.com/pricing. rate_limits: auditor right\u2014docs state 500 calls/min default plus optional daily credit limits: https://docs.meteoblue.com/en/weather-apis/introduction/overview and https://my.meteoblue.com/packages/openapi.yml. example_response_snippet: auditor right\u2014`{}` is not a valid basic-day body; OpenAPI requires metadata+units+data_* and publishes non-empty field/CSV examples (https://my.meteoblue.com/packages/openapi.yml / redoc)."
 }

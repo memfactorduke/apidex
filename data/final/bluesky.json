@@ -10,7 +10,7 @@
   "signup_url": "https://bsky.app/",
   "auth": {
     "type": "other",
-    "details": "Public reads often need no auth. Authenticated calls use session JWT (createSession with handle/app password) or OAuth 2.0; AppView/PDS XRPC endpoints accept Authorization: Bearer <accessJwt>."
+    "details": "public.api.bsky.app is unauthenticated public-read only (AppView). Authenticated XRPC (createSession, writes, private data) go to the user's PDS or Bluesky entryway (bsky.social) with session JWT (app password) or OAuth; Authorization: Bearer <accessJwt>."
   },
   "https": true,
   "cors": "unknown",
@@ -22,7 +22,7 @@
     "free_tier_limits": "Free to use the public API and self-host; no published paid API plans",
     "paid_plans": null
   },
-  "rate_limits": "AppView roughly 3,000 req/5 min IP for most endpoints; stricter on createSession (~10/min) and write actions \u2014 check docs for current tables",
+  "rate_limits": "Public AppView (api.bsky.app / public.api.bsky.app): generous limits, no published general numeric cap\u2014contact Bluesky if hit. Hosted PDS (by IP): 3,000 req/5 min overall; createSession 30/5 min and 300/day per account; stricter on some writes\u2014see docs.",
   "example": {
     "request": "curl -s 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bsky.app'",
     "response_snippet": "{\"did\":\"did:plc:...\",\"handle\":\"bsky.app\",\"displayName\":\"Bluesky\",\"avatar\":\"https://...\",\"description\":\"...\",\"followersCount\":...,\"followsCount\":...,\"postsCount\":...}"
@@ -95,6 +95,16 @@
     "corrected": [
       "base_url"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

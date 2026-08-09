@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Global limit: 100 operations/sec in live mode and 25 operations/sec in sandbox; endpoints normally have a 25 operations/sec default, with documented exceptions.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of Stripe rate-limit docs."
+  "resolution_notes": "rate_limits: Auditor correct. Official docs (https://docs.stripe.com/rate-limits) state global limits of 100 req/s live and 25 req/s sandbox, plus a default 25 req/s per endpoint (with exceptions). Original wrongly split ~100 read and ~100 write and claimed test mode is higher."
 }

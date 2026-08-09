@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Public instance free for policy-compliant light use (including moderate end-user-triggered app/website use); no SLA\u2014access may be withdrawn; commercial apps should not depend on continued availability; heavy/regular bulk use must self-host or use third-party providers",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Absolute maximum 1 request/second on public nominatim.openstreetmap.org; identify with valid User-Agent or Referer; cache results. Bulk geocoding discouraged\u2014smaller one-time jobs may be allowed (single thread, one machine); scripts lasting over a day or run regularly limited to 4 requests/minute. Systematic queries, autocomplete-on-API, and reselling primary geocoding services forbidden.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
-  "description": null,
+  "description": "Nominatim is OpenStreetMap\u2019s free geocoding service for forward search (place names to coordinates), reverse geocoding (coordinates to addresses), and structured address lookups. The public instance at nominatim.openstreetmap.org is intended for light, policy-compliant use with no SLA; commercial users should plan for an alternative provider or self-hosting. Responses are typically JSON (or XML/GeoJSON) and require a valid User-Agent or email for identification.",
   "status": null,
-  "resolution_notes": "Researching current Nominatim usage policy and rate limits from official sources."
+  "resolution_notes": "free_tier_limits: AUDITOR RIGHT. Official policy (https://operations.osmfoundation.org/policies/nominatim/) does not ban commercial use; it allows moderate end-user-triggered use and only warns commercial apps that access may be withdrawn without notice. rate_limits: AUDITOR RIGHT. Same policy: bulk is discouraged not categorically forbidden; smaller one-time bulk tasks may be permissible; long-running/regular scripts capped at 4 req/min; systematic queries forbidden. description: AUDITOR RIGHT. \u201cnon-commercial\u201d misstates policy\u2014use \u201clight, policy-compliant use with no SLA\u201d per https://operations.osmfoundation.org/policies/nominatim/."
 }

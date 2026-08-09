@@ -22,7 +22,7 @@
     "free_tier_limits": "Free plan: 100 requests/month",
     "paid_plans": "Paid tiers by monthly validation volume; see abstractapi.com pricing."
   },
-  "rate_limits": "not published",
+  "rate_limits": "3 requests/second on Free and self-serve paid tiers (pricing page); Enterprise flexible. Docs 429 still say 1 req/sec on free.",
   "example": {
     "request": "curl \"https://emailvalidation.abstractapi.com/v1/?api_key=YOUR_API_KEY&email=johnsmith@gmail.com\"",
     "response_snippet": "{\"email\":\"johnsmith@gmail.com\",\"autocorrect\":\"\",\"deliverability\":\"DELIVERABLE\",\"quality_score\":0.95,\"is_valid_format\":{\"value\":true,\"text\":\"TRUE\"},\"is_free_email\":{\"value\":true,\"text\":\"TRUE\"},\"is_disposable_email\":{\"value\":false,\"text\":\"FALSE\"},\"is_mx_found\":{\"value\":true,\"text\":\"TRUE\"},\"is_smtp_valid\":{\"value\":true,\"text\":\"TRUE\"}}"
@@ -93,6 +93,15 @@
       "docs_url",
       "free_tier_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

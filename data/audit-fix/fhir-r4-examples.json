@@ -1,7 +1,7 @@
 {
   "id": "fhir-r4-examples",
   "base_url": null,
-  "docs_url": null,
+  "docs_url": "https://www.open-emr.org/wiki/index.php/OpenEMR_API",
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
@@ -9,9 +9,9 @@
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Accept: application/fhir+json\" \"https://YOUR_OPENEMR_HOST/apis/default/fhir/Patient\"",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "placeholder"
+  "resolution_notes": "docs_url: ORIGINAL STANDS. Live check of https://www.open-emr.org/wiki/index.php/OpenEMR_API (2026-03-08) shows it is the current API landing page for OpenEMR 7.0.3+, covering REST/FHIR, OAuth2/SMART, registration, scopes, and base paths\u2014not obsolete PHP-doc. Version pages (e.g. OpenEMR_7.0.3_API / 8.x) are linked siblings; the generic OpenEMR_API URL remains the correct canonical docs_url. Auditor\u2019s \u201cinternally generated PHP code documentation\u201d claim does not match that page\u2019s content. example.request: AUDITOR RIGHT. Official docs describe OAuth2 access tokens (Bearer), not static API keys; placeholder YOUR_API_KEY is misleading. Use YOUR_ACCESS_TOKEN. Evidence: https://www.open-emr.org/wiki/index.php/OpenEMR_API and SMART/OAuth sections on versioned API wiki pages."
 }

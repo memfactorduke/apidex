@@ -22,7 +22,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Default 1 request/second for non-identified clients; 3 requests/second when identified via User-Agent with app name and contact email/phone. APIs are for low-volume, real-time human-facing use\u2014not bulk harvest or high-traffic backends; use monthly data dumps for bulk access. Violations may bring aggressive limiting or blocking.",
   "example": {
     "request": "curl \"https://openlibrary.org/search.json?q=the+lord+of+the+rings&limit=1\"",
     "response_snippet": "{\"numFound\":...,\"docs\":[{\"key\":\"/works/OL...\",\"title\":\"The Lord of the Rings\",\"author_name\":[\"J. R. R. Tolkien\"],...}]}"
@@ -91,6 +91,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

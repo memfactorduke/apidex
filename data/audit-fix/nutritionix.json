@@ -1,17 +1,17 @@
 {
   "id": "nutritionix",
   "base_url": null,
-  "docs_url": null,
+  "docs_url": "https://developer.nutritionix.com/docs/v2",
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
   "free_tier_limits": null,
-  "paid_plans": null,
+  "paid_plans": "Paid production plans listed publicly (Trial ~$499/mo, Starter ~$999/mo, MVP from ~$1850/mo; custom enterprise/sales quotes also available)",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling docs_url and paid_plans against live official Nutritionix sources now."
+  "resolution_notes": "docs_url: auditor correct \u2014 official Track API v2 docs live at https://developer.nutritionix.com/docs/v2 (also mirrored at docx.syndigo.com); docs.nutritionix.com is not the current discoverable location. paid_plans: auditor correct \u2014 null was misleading; https://www.nutritionix.com/api lists paid plans (Trial $499/mo, Starter $999/mo, MVP from $1850/mo) and https://developer.nutritionix.com/ says public free tier discontinued with access via sales contact. Undisputed fields left null; status remains operational (API still offered to partners)."
 }

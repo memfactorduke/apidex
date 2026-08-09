@@ -10,7 +10,7 @@
   "signup_url": "https://www.shipengine.com/signup/",
   "auth": {
     "type": "apiKey",
-    "details": "API key via API-Key header (or X-ShipEngine-API-Key); obtain from dashboard after self-serve signup."
+    "details": "API key via API-Key header; obtain from dashboard after self-serve signup."
   },
   "https": true,
   "cors": "unknown",
@@ -19,13 +19,13 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free trial/developer credits available; exact request quotas vary by plan \u2014 verify on pricing page",
+    "free_tier_limits": "$0 plan: sandbox + essential API ops with ShipStation-provided carrier accounts, no API usage charge; own carrier accounts/full features need Advanced. Separate 30-day sandbox-only trial if no payment method.",
     "paid_plans": "Usage-based and volume plans; see shipengine.com/pricing"
   },
-  "rate_limits": "not published",
+  "rate_limits": "200 requests/minute by default; sandbox 20 requests/minute; higher limits may be requested.",
   "example": {
     "request": "curl -X GET \"https://api.shipengine.com/v1/carriers\" -H \"API-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\"",
-    "response_snippet": "{\"carriers\":[{\"carrier_id\":\"se-123456\",\"carrier_code\":\"stamps_com\",\"account_number\":\"123456\",\"name\":\"Stamps.com\",\"nickname\":null,\"friendly_name\":\"Stamps.com\",\"primary\":true}]}"
+    "response_snippet": "{\"carriers\":[{\"carrier_id\":\"se-123456\",\"carrier_code\":\"stamps_com\",\"account_number\":\"123456\",\"nickname\":null,\"friendly_name\":\"Stamps.com\",\"primary\":true,\"has_multi_package_supporting_services\":true,\"supports_label_messages\":true,\"services\":[]}]}"
   },
   "use_cases": [
     "get multi-carrier shipping rates for a package",
@@ -92,6 +92,18 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "rate_limits",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

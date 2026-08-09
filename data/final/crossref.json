@@ -22,7 +22,7 @@
     "free_tier_limits": "Free public REST API with no hard published free-tier quota; polite pool (mailto/User-Agent) recommended for better/more consistent rate limits\u2014not unlimited as a guaranteed SLA",
     "paid_plans": null
   },
-  "rate_limits": "No hard published free-tier quota. Public pool is shared; polite pool is higher/more consistent when mailto or User-Agent contact is provided. The ~50 req/s figure is not an authoritative current published public-pool limit",
+  "rate_limits": "Single-record: 5 RPS public / 10 RPS polite (concurrency 1 / 3). List/query requests: 1 RPS public / 3 RPS polite (concurrency 1 / 3). Limits in headers x-rate-limit-limit, x-rate-limit-interval, x-concurrency-limit, x-rate-limit-type; HTTP 429 when exceeded.",
   "example": {
     "request": "curl -s \"https://api.crossref.org/works/10.1037/0003-066X.59.1.29\" -H \"User-Agent: MyApp/1.0 (mailto:you@example.com)\"",
     "response_snippet": "{\"status\":\"ok\",\"message-type\":\"work\",\"message-version\":\"1.0.0\",\"message\":{\"DOI\":\"10.1037/0003-066X.59.1.29\",\"title\":[\"...\"],\"author\":[{\"given\":\"...\",\"family\":\"...\"}],\"type\":\"journal-article\",\"published\":{\"date-parts\":[[2004]]}}}"
@@ -96,6 +96,15 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

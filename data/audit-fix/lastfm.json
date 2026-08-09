@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling the only dispute (example.response_snippet) against current official Last.fm docs and a live call if needed."
+  "resolution_notes": "example.response_snippet: ORIGINAL STANDS. Official artist.getInfo sample response uses stats.plays (not playcount): https://www.last.fm/api/show/artist.getInfo shows <stats><listeners>196440</listeners><plays>1599101</plays></stats>. Auditor likely confused with track.getInfo, which uses playcount. JSON maps the XML element name, so stats.plays is correct."
 }

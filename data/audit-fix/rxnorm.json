@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "No auth for ordinary public REST endpoints. Exception: getProprietaryInformation may require a UMLS UTS API key via Authorization: Bearer for restricted source vocabularies.",
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free of charge; online usage limited to 20 requests/second per IP address. No paid plan is offered.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Maximum 20 requests/second per IP address; excess requests may not be serviced. NLM recommends caching results for 12\u201324 hours.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "pending"
+  "resolution_notes": "auth.details: auditor right \u2014 official getProprietaryInformation docs state a UMLS UTS API key may be sent as Authorization: Bearer for restricted sources (https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxNorm.getProprietaryInformation.html). free_tier_limits: auditor right \u2014 ToS: APIs free-of-charge, \u226420 req/s/IP, no paid tier (https://lhncbc.nlm.nih.gov/RxNav/TermsofService.html). rate_limits: auditor right \u2014 same ToS limit plus 12\u201324h cache guidance; ToS says excess may not be serviced (not specifically HTTP 429)."
 }

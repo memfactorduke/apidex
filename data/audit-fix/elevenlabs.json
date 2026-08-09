@@ -5,7 +5,7 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free plan: 10,000 credits/month shared across products (TTS, STT, music, SFX, etc.); TTS typically ~0.5\u20131 credit per character by model (e.g. Multilingual v2 = 1 credit/char; Flash/Turbo API often 0.5); commercial licensing requires a paid plan",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "pricing.free_tier_limits: auditor correct. Official pricing (https://elevenlabs.io/pricing) lists Free at 10k credits/month shared across products; FAQ states Multilingual v2 = 1 credit/char and Flash/Turbo API ~0.5\u20131 credit/char; Commercial License is listed under Starter+, not Free. Docs also note credits were formerly called characters (https://elevenlabs.io/docs/help-center/account/general/have-characters-changed)."
 }

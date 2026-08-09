@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "10000 requests/min Professional; 25000 requests/min Premium; excess may get HTTP 429",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of TaxJar rate limits against official docs."
+  "resolution_notes": "rate_limits: auditor right. Official docs list 10k RPM (Professional) and 25k RPM (Premium) with 429 on excess: https://developers.taxjar.com/api/reference/#introduction and https://support.taxjar.com/article/160-what-are-the-api-call-limits"
 }

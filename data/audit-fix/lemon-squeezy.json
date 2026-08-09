@@ -6,12 +6,12 @@
   "auth_details": null,
   "free_tier": null,
   "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "paid_plans": "Standard platform fee 5% + $0.50 per transaction (covers payment processing and MoR costs); surcharges may apply (e.g. +1.5% international, +1.5% PayPal, +0.5% subscriptions, affiliate/marketing fees); custom pricing available.",
+  "rate_limits": "300 API calls per minute. Successful responses include X-Ratelimit-Limit and X-Ratelimit-Remaining; exceeding the limit returns 429 Too Many Requests.",
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"jsonapi\":{\"version\":\"1.0\"},\"links\":{\"self\":\"https://api.lemonsqueezy.com/v1/users/1\"},\"data\":{\"type\":\"users\",\"id\":\"1\",\"attributes\":{\"name\":\"John Doe\",\"email\":\"john@example.com\",\"color\":\"#898FA9\",\"avatar_url\":\"https://www.gravatar.com/avatar/1ace5b3965c59dbcd1db79d85da75048?d=blank\",\"has_custom_avatar\":false,\"createdAt\":\"2024-05-24T14:08:31.000000Z\",\"updatedAt\":\"2024-08-26T13:24:54.000000Z\"}}}",
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of rate limits, pricing, and User schema against official Lemon Squeezy docs."
+  "resolution_notes": "rate_limits: AUDITOR RIGHT. Official API docs state 300 calls/min, X-Ratelimit-Limit/Remaining on success, 429 on exceed; no Retry-After promised. https://docs.lemonsqueezy.com/api#rate-limiting \u2014 paid_plans: AUDITOR RIGHT. Platform fee is 5%+$0.50 covering processing/MoR; extra surcharges and custom pricing documented. https://docs.lemonsqueezy.com/help/getting-started/fees https://www.lemonsqueezy.com/pricing \u2014 example.response_snippet: AUDITOR RIGHT. User has no status; schema is name, email, color, avatar_url, has_custom_avatar, createdAt, updatedAt. https://docs.lemonsqueezy.com/api/users/the-user-object"
 }

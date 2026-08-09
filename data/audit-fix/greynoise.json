@@ -3,7 +3,7 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key via the key: YOUR_API_KEY header; self-serve signup at viz.greynoise.io",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live docs check for auth.details (key header vs Authorization Bearer)."
+  "resolution_notes": "auth.details: Auditor correct. Official v3 and Community docs only show the key header (headers = {\"key\": \"...\"} / -H \"key:API_KEY\"); Authorization: Bearer is not documented as an alternative for the REST API. Evidence: https://docs.greynoise.io/docs/using-the-greynoise-api and https://docs.greynoise.io/docs/using-the-greynoise-community-api"
 }

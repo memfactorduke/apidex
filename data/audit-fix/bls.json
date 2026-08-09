@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Unregistered: 25 queries/day, 25 series/query; registered: 500 queries/day, 50 series/query. Also 50 requests per 10 seconds for both registered and unregistered.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of rate_limits dispute against official BLS docs."
+  "resolution_notes": "Auditor right on rate_limits: official BLS FAQ states 50 requests per 10 seconds for registered and unregistered users, alongside daily/series caps. Evidence: https://www.bls.gov/developers/api_faqs.htm and https://www.bls.gov/developers/api_signature_v2.htm"
 }

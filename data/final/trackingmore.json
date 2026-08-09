@@ -10,7 +10,7 @@
   "signup_url": "https://www.trackingmore.com/register",
   "auth": {
     "type": "apiKey",
-    "details": "API key via Tracking-Api-Key header (self-serve signup). Some docs also show Authorization: Bearer YOUR_API_KEY."
+    "details": "API key via Tracking-Api-Key header (self-serve key generation in admin for plans that include API access)."
   },
   "https": true,
   "cors": "unknown",
@@ -18,11 +18,11 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
+    "free_tier": false,
     "free_tier_limits": "Free plan: 100 trackings/month (confirm on current pricing page)",
     "paid_plans": null
   },
-  "rate_limits": "Per-endpoint (docs): Create a tracking 3 req/s; Get tracking results 10/s; Batch create 1/s; Detect courier 3/s (varies by endpoint)",
+  "rate_limits": "Plan-based (pricing): Basic 6 req/s, Pro 10 req/s, Enterprise custom. Endpoint defaults (support): create 3/s; batch/get/update/delete/retrack/detect/couriers mostly 10/s. 429 \u2192 wait ~120s.",
   "example": {
     "request": "curl -X GET 'https://api.trackingmore.com/v4/trackings/get?tracking_numbers=1Z999AA10123456784&courier_code=ups' -H 'Tracking-Api-Key: YOUR_API_KEY' -H 'Content-Type: application/json'",
     "response_snippet": "{\"meta\":{\"code\":200,\"message\":\"Success\"},\"data\":[{\"id\":\"...\",\"tracking_number\":\"1Z999AA10123456784\",\"courier_code\":\"ups\",\"delivery_status\":\"delivered\",\"origin_info\":{\"trackinfo\":[{\"checkpoint_date\":\"2024-01-15 10:00:00\",\"tracking_detail\":\"Delivered\"}]}}]}"
@@ -99,6 +99,17 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

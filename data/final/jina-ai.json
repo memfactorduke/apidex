@@ -4,9 +4,9 @@
   "name": "Jina AI",
   "category": "ai-ml",
   "tagline": "Multimodal embeddings, reranking, and neural search APIs for AI applications",
-  "description": "Jina AI provides developer APIs for embeddings, reranking, reader/search, and related neural search workloads. The platform centers on api.jina.ai with API-key authentication, self-serve access, and usage-based pricing. Primary products include text/image embeddings, rerankers, and web reading/search helpers used to build retrieval and RAG systems.",
+  "description": "Jina AI developer APIs for embeddings, reranking, and neural search on api.jina.ai (Search Foundation). Related products use separate hosts: Reader (r.jina.ai), Search (s.jina.ai), and DeepSearch (deepsearch.jina.ai). API-key auth, self-serve, usage-based pricing.",
   "base_url": "https://api.jina.ai",
-  "docs_url": "https://jina.ai/docs",
+  "docs_url": "https://api.jina.ai/docs",
   "signup_url": "https://jina.ai",
   "auth": {
     "type": "apiKey",
@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "free_tier_limits": "New users receive 10 million free tokens; usage and product-specific rate limits apply",
     "paid_plans": "usage-based paid plans available"
   },
-  "rate_limits": "not published",
+  "rate_limits": "Product- and tier-specific (e.g. Search Foundation Free: 500 RPM, 1M TPM, 5 concurrent); Reader/Search have separate limits",
   "example": {
     "request": "curl https://api.jina.ai/v1/embeddings -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"jina-embeddings-v3\",\"input\":[\"Hello world\"]}'",
     "response_snippet": "{\"model\":\"jina-embeddings-v3\",\"data\":[{\"object\":\"embedding\",\"index\":0,\"embedding\":[0.01,-0.02]}],\"usage\":{\"total_tokens\":4}}"
@@ -90,6 +90,18 @@
       "base_url",
       "docs_url"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "docs_url",
+        "free_tier_limits",
+        "rate_limits",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

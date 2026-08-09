@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Stocks Basic (free): 5 API calls/minute; end-of-day US stocks; 2 years historical data. Options/forex/crypto free tiers exist with plan-specific limits (typically 5 calls/min, end-of-day).",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Stocks Basic: 5 API calls/minute; paid individual Stocks plans (Starter/Developer/Advanced): unlimited API calls (fair-use; recommend staying under 100 req/s). Other asset-class free tiers also 5/min; paid tiers unlimited.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying disputed free-tier and rate-limit claims against current Massive official docs."
+  "resolution_notes": "pricing.free_tier_limits: auditor RIGHT. Official Stocks Basic is end-of-day, not delayed\u2014see https://massive.com/stocks and https://massive.com/pricing (Basic: End of Day Data; Starter: 15-minute Delayed). rate_limits: auditor RIGHT. Free remains 5/min; paid individual plans advertise Unlimited API Calls\u2014see https://massive.com/pricing and https://massive.com/knowledge-base/article/what-is-the-request-limit-for-massives-restful-apis (paying customers unlimited; recommend <100 req/s)."
 }

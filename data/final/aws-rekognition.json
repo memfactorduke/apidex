@@ -19,12 +19,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "12 months for new AWS accounts: 5,000 images/month (DetectLabels, DetectModerationLabels, DetectText, DetectFaces, RecognizeCelebrities, CompareFaces); 1,000 face metadata storage months; Face Liveness: 50 sessions/month (Group A) or 1,000 vector searches/month; Video (stored): 1,000 min/month group 1, 2,000 min group 2, 500 min group 3; Custom Labels free trial separate \u2014 see pricing page",
+    "free_tier_limits": "12-mo Free Tier: 1,000 images/mo each Group 1 & Group 2 Image APIs (not Image Properties); 1,000 face + 1,000 user vector objects/mo; Video 60 min/mo. Custom Labels: 2 training + 1 inference hr/mo. Face Liveness: no free tier listed. Post-2025-07-15 new accounts: up to $200 AWS Free Tier credits may apply.",
     "paid_plans": null
   },
   "rate_limits": "AWS publishes default service quotas (TPS) per API/region in Rekognition quotas docs and Service Quotas console; e.g. many image APIs default ~5 TPS (varies by API/region); limits are soft and increase-requestable",
   "example": {
-    "request": "curl -s https://rekognition.us-east-1.amazonaws.com/ -H 'Content-Type: application/x-amz-json-1.1' -H 'X-Amz-Target: RekognitionService.DetectLabels' -H 'Authorization: AWS4-HMAC-SHA256 Credential=YOUR_API_KEY/...' -d '{\"Image\":{\"S3Object\":{\"Bucket\":\"my-bucket\",\"Name\":\"photo.jpg\"}},\"MaxLabels\":10}'",
+    "request": "aws rekognition detect-labels --image '{\"S3Object\":{\"Bucket\":\"my-bucket\",\"Name\":\"photo.jpg\"}}' --max-labels 10 --region us-east-1",
     "response_snippet": "{\"Labels\":[{\"Name\":\"Person\",\"Confidence\":99.1,\"Instances\":[]}],\"LabelModelVersion\":\"3.0\"}"
   },
   "use_cases": [
@@ -92,6 +92,16 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -10,7 +10,7 @@
   "signup_url": "https://pro.europeana.eu/page/get-api",
   "auth": {
     "type": "apiKey",
-    "details": "API key via wskey query parameter (self-serve registration at Europeana Pro). Required on all Search and Record requests."
+    "details": "Preferred: X-Api-Key header on all Search/Record requests. The wskey query parameter still works but is deprecated (sole option until 2023; grace period for migration). Free keys via Europeana account (Manage API keys)."
   },
   "https": true,
   "cors": "unknown",
@@ -26,7 +26,7 @@
   },
   "rate_limits": "not published",
   "example": {
-    "request": "curl \"https://api.europeana.eu/record/v2/search.json?wskey=YOUR_API_KEY&query=Mona+Lisa&rows=2\"",
+    "request": "curl -H \"X-Api-Key: YOUR_API_KEY\" \"https://api.europeana.eu/record/v2/search.json?query=Mona%20Lisa&rows=2\"",
     "response_snippet": "{\"apikey\":\"...\",\"success\":true,\"requestNumber\":999,\"itemsCount\":2,\"totalResults\":12345,\"items\":[{\"id\":\"/9200365/...\",\"title\":[\"Mona Lisa\"],\"type\":\"IMAGE\",\"dcCreator\":[\"Leonardo da Vinci\"],...}]}"
   },
   "use_cases": [
@@ -87,6 +87,16 @@
     "corrected": [
       "base_url"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

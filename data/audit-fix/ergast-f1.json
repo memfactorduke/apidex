@@ -9,9 +9,9 @@
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
-  "example_response_snippet": null,
+  "example_request": "curl -s -H 'User-Agent: APIDirectoryExample/1.0' 'https://api.jolpi.ca/ergast/f1/2024/1/results.json'",
+  "example_response_snippet": "{\"MRData\":{\"xmlns\":\"\",\"series\":\"f1\",\"url\":\"http://api.jolpi.ca/ergast/f1/2024/1/results.json\",\"limit\":\"30\",\"offset\":\"0\",\"total\":\"20\",\"RaceTable\":{\"season\":\"2024\",\"round\":\"1\",\"Races\":[{\"season\":\"2024\",\"round\":\"1\",\"raceName\":\"Bahrain Grand Prix\",\"Results\":[{\"number\":\"1\",\"position\":\"1\",\"positionText\":\"1\",\"points\":\"26\",\"Driver\":{\"driverId\":\"max_verstappen\",\"givenName\":\"Max\",\"familyName\":\"Verstappen\"},\"Constructor\":{\"constructorId\":\"red_bull\",\"name\":\"Red Bull\"}}]}]}}}",
   "description": null,
   "status": null,
-  "resolution_notes": "settling auditor dispute on example (User-Agent + xmlns) against live official Jolpica docs"
+  "resolution_notes": "example: auditor correct. Official docs (https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md) require a custom User-Agent and define MRData.xmlns as blank for legacy Ergast compatibility; entry curl lacked UA and used legacy xmlns http://ergast.com/mrd/1.5."
 }

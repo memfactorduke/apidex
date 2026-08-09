@@ -24,7 +24,7 @@
   },
   "rate_limits": "not published (self-hosted; operator-defined)",
   "example": {
-    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/fhir+json\" \"https://YOUR_OPENEMR_HOST/apis/default/fhir/Patient\"",
+    "request": "curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Accept: application/fhir+json\" \"https://YOUR_OPENEMR_HOST/apis/default/fhir/Patient\"",
     "response_snippet": "{\"resourceType\":\"Bundle\",\"type\":\"searchset\",\"total\":1,\"entry\":[{\"resource\":{\"resourceType\":\"Patient\",\"id\":\"1\",\"name\":[{\"family\":\"Smith\",\"given\":[\"John\"]}],\"gender\":\"male\",\"birthDate\":\"1980-01-15\"}}]}"
   },
   "use_cases": [
@@ -93,6 +93,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "docs_url",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

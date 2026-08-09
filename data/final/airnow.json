@@ -21,7 +21,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free for non-commercial use after registration; commercial use may require agreement. Specific hourly/request quotas are not published on public docs.",
+    "free_tier_limits": "Free after registration; subject to AirNow Data Exchange Guidelines. Public docs do not state a non-commercial-only restriction or separate commercial agreement.",
     "paid_plans": null
   },
   "rate_limits": "Not publicly documented as a fixed 500 requests/hour per API key; verify limits in the AirNow API account portal or contact AirNow.",
@@ -95,6 +95,15 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

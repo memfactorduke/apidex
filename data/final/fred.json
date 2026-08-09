@@ -4,7 +4,7 @@
   "name": "FRED",
   "category": "data-analytics",
   "tagline": "Federal Reserve Economic Data time series API for U.S. and international economic indicators.",
-  "description": "FRED is the St. Louis Fed\u2019s public API for economic time series. It exposes observations, series metadata, categories, releases, sources, and tags for thousands of U.S. and international indicators (GDP, CPI, unemployment, interest rates, and more). Developers query JSON or XML with an API key; responses support vintage dates, frequency aggregation, and unit transformations useful for analytics and research apps.",
+  "description": "FRED is the St. Louis Fed's public API for economic time series. It exposes observations, series metadata, categories, releases, sources, and tags for thousands of U.S. and international indicators (GDP, CPI, unemployment, interest rates, and more). Developers query JSON or XML with an API key; responses support vintage dates, frequency aggregation, and unit transformations useful for analytics and research apps.",
   "base_url": "https://api.stlouisfed.org/fred",
   "docs_url": "https://fred.stlouisfed.org/docs/api/fred/",
   "signup_url": "https://fred.stlouisfed.org/docs/api/api_key.html",
@@ -95,6 +95,25 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

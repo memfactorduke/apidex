@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling free_tier dispute against current official Razorpay docs and pricing pages."
+  "resolution_notes": "pricing.free_tier: original stands (true). Official docs treat Test mode as a free sandbox (no real money; separate rzp_test_ keys) \u2014 https://razorpay.com/docs/payments/dashboard/test-live-modes/ \u2014 while Live is pay-as-you-go with \u20b90 setup and \u20b90 AMC and a per-successful-transaction platform fee (e.g. 2% + GST domestic), not a subscription API plan \u2014 https://razorpay.com/pricing/ . That model is free-to-start / usage-priced, not \u201cmust buy a paid plan,\u201d so free_tier=true with the existing free_tier_limits text (test free; live transaction-priced) matches current official pricing. Auditor is right that test mode is not free production volume, but that is already stated in free_tier_limits and does not require flipping free_tier to false."
 }

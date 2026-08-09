@@ -19,12 +19,12 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free plan available; exact request quotas require account/pricing page confirmation",
+    "free_tier_limits": "Free plan: Autosuggest up to 10 requests/second and Available Languages up to 200 requests/second; conversion and grid functions require a Business plan.",
     "paid_plans": "Paid plans available via what3words account/select-plan"
   },
-  "rate_limits": "not published",
+  "rate_limits": "Free Autosuggest: 10 req/s; Free Available Languages: 200 req/s; Business plan functions generally 200 req/s (per-function limits).",
   "example": {
-    "request": "curl \"https://api.what3words.com/v3/convert-to-coordinates?words=filled.count.soap&key=YOUR_API_KEY\"",
+    "request": "curl \"https://api.what3words.com/v3/autosuggest?input=filled.count.soa&key=YOUR_API_KEY\"",
     "response_snippet": "{\"country\":\"GB\",\"square\":{\"southwest\":{\"lng\":-0.195543,\"lat\":51.520833},\"northeast\":{\"lng\":-0.195499,\"lat\":51.52086}},\"nearestPlace\":\"Bayswater, London\",\"coordinates\":{\"lng\":-0.195521,\"lat\":51.520847},\"words\":\"filled.count.soap\",\"language\":\"en\",\"map\":\"https://w3w.co/filled.count.soap\"}"
   },
   "use_cases": [
@@ -92,6 +92,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

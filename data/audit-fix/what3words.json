@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Free plan: Autosuggest up to 10 requests/second and Available Languages up to 200 requests/second; conversion and grid functions require a Business plan.",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Free Autosuggest: 10 req/s; Free Available Languages: 200 req/s; Business plan functions generally 200 req/s (per-function limits).",
   "cors": null,
-  "example_request": null,
+  "example_request": "curl \"https://api.what3words.com/v3/autosuggest?input=filled.count.soa&key=YOUR_API_KEY\"",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Researching official What3Words pricing, plan limits, and Free vs Business endpoint access against live docs."
+  "resolution_notes": "Auditor right on free_tier_limits, rate_limits, example (402 on free for convert). Verifying live official docs."
 }

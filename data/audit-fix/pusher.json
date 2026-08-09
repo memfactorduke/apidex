@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
+  "free_tier_limits": "200,000 messages per day and 100 concurrent connections",
+  "paid_plans": "Channels: Startup $49/mo, Pro $99/mo, Business $299/mo, plus higher tiers (see pricing page)",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{}",
   "description": null,
   "status": null,
-  "resolution_notes": "Settling disputes with live official sources."
+  "resolution_notes": "free_tier_limits: auditor right \u2014 Sandbox (free) is 200k messages/day + 100 concurrent connections (https://pusher.com/channels/pricing). paid_plans: auditor right \u2014 self-serve Channels plans include Startup $49, Pro $99, Business $299/mo (same page). example.response_snippet: auditor right \u2014 successful event trigger without info returns empty JSON object {} with HTTP 200, not a body status field (https://pusher.com/docs/channels/library_auth_reference/rest-api/)."
 }

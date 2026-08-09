@@ -1,17 +1,17 @@
 {
   "id": "jina-ai",
   "base_url": null,
-  "docs_url": null,
+  "docs_url": "https://api.jina.ai/docs",
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "New users receive 10 million free tokens; usage and product-specific rate limits apply",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Product- and tier-specific (e.g. Search Foundation Free: 500 RPM, 1M TPM, 5 concurrent); Reader/Search have separate limits",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
-  "description": null,
+  "description": "Jina AI developer APIs for embeddings, reranking, and neural search on api.jina.ai (Search Foundation). Related products use separate hosts: Reader (r.jina.ai), Search (s.jina.ai), and DeepSearch (deepsearch.jina.ai). API-key auth, self-serve, usage-based pricing.",
   "status": null,
-  "resolution_notes": "Settling disputed fields against live official Jina sources now."
+  "resolution_notes": "docs_url: auditor right \u2014 OpenAPI/interactive docs at https://api.jina.ai/docs (jina.ai/docs is marketing). free_tier_limits: auditor right \u2014 https://jina.ai/api-dashboard and pricing state 10M free tokens for new users. rate_limits: auditor right \u2014 Search Foundation OpenAPI/docs publish Free tier 500 RPM / 1M TPM / 5 concurrent; other products list separate limits. description: auditor right \u2014 Reader/Search/DeepSearch use r.jina.ai, s.jina.ai, deepsearch.jina.ai, not only api.jina.ai. status: operational."
 }

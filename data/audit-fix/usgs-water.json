@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "For small requests (e.g. up to 7\u201314 days for a single site): max 5\u201310 requests/sec steady; brief bursts of 40\u201350 requests/sec OK but not sustained. Excessive use may be blocked (HTTP 403).",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "pending"
+  "resolution_notes": "rate_limits: auditor right. Official General Questions publishes 5\u201310 req/s steady and 40\u201350 burst guidance; excess may be blocked. https://waterservices.usgs.gov/docs/general/ status: original operational stands (not defunct); auditor right that early-2027 decommission is material\u2014homepage + blog: Q1 2027 shutdown, migrate to https://api.waterdata.usgs.gov (migration guide). https://waterservices.usgs.gov/ https://waterdata.usgs.gov/blog/api-waterservices-decom/"
 }

@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "12-mo Free Tier: 1,000 images/mo each Group 1 & Group 2 Image APIs (not Image Properties); 1,000 face + 1,000 user vector objects/mo; Video 60 min/mo. Custom Labels: 2 training + 1 inference hr/mo. Face Liveness: no free tier listed. Post-2025-07-15 new accounts: up to $200 AWS Free Tier credits may apply.",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "aws rekognition detect-labels --image '{\"S3Object\":{\"Bucket\":\"my-bucket\",\"Name\":\"photo.jpg\"}}' --max-labels 10 --region us-east-1",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying free-tier limits and example request against current official AWS docs."
+  "resolution_notes": "free_tier_limits: Auditor correct. Official pricing (https://aws.amazon.com/rekognition/pricing/) lists 1,000 images/mo each for Group 1 and Group 2, 1,000 face-vector + 1,000 user-vector objects/mo, and 60 video min/mo\u2014not 5,000 images, Face Liveness 50 sessions, or stored-video group minutes. July 15 2025 $200 credit Free Tier also documented. example.request: Auditor correct\u2014the curl Authorization is incomplete and mislabels the access key as YOUR_API_KEY; replaced with official AWS CLI detect-labels (https://docs.aws.amazon.com/rekognition/latest/dg/labels-detect-labels-image.html)."
 }

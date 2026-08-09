@@ -10,8 +10,8 @@
   "rate_limits": null,
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"response_code\":0,\"results\":[{\"type\":\"multiple\",\"difficulty\":\"easy\",\"category\":\"General Knowledge\",\"question\":\"What are Panama hats made out of?\",\"correct_answer\":\"Straw\",\"incorrect_answers\":[\"Silk\",\"Hemp\",\"Flax\"]}]}",
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "Auditor correct on example.response_snippet. Live category list at https://opentdb.com/api_category.php maps id 9 \u2192 General Knowledge and id 20 \u2192 Mythology. Live GET https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple returns category \"General Knowledge\", not Mythology. Original snippet mismatched request category=9 with a Mythology result; response_snippet replaced with a live category=9 sample. Request left unchanged."
 }

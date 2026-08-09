@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Shared free tier: unauthenticated ~1,000 RPS shared pool (with possible additional throttling); free API key grants introductory individual limit of ~1 RPS; higher/partner limits via application/review",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Unauthenticated: ~1,000 RPS shared across all unauthenticated users, with possible additional throttling. API key: introductory individual limit of 1 RPS across endpoints; higher limits may be granted after review.",
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"total\":...,\"offset\":0,\"data\":[{\"paperId\":\"...\",\"title\":\"Attention Is All You Need\"}]}",
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "pricing.free_tier_limits: auditor right \u2014 official docs state unauthenticated shared pool ~1000 RPS and API key introductory 1 RPS (https://www.semanticscholar.org/product/api#api-key-form / https://api.semanticscholar.org/api-docs/). rate_limits: auditor right \u2014 same sources; key is individual 1 RPS not merely higher shared pool. example.response_snippet: auditor right \u2014 total is estimated full match count, not equal to limit; use noncommittal total. status/other fields: not disputed or confirmed operational via live docs."
 }

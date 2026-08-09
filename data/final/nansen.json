@@ -10,7 +10,7 @@
   "signup_url": "https://app.nansen.ai",
   "auth": {
     "type": "apiKey",
-    "details": "API key via Authorization header (Bearer or API key scheme); confirm exact header from official docs."
+    "details": "API key via the apikey: YOUR_API_KEY header."
   },
   "https": true,
   "cors": "unknown",
@@ -20,11 +20,11 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "Free plan includes limited API credits (exact quotas vary; check pricing page)",
-    "paid_plans": null
+    "paid_plans": "Pro API plan available plus purchasable usage/flexi credits; see nansen.ai pricing for current amounts."
   },
-  "rate_limits": "Published per plan (e.g. Free: 5 RPM / 500 RPD); check docs.nansen.ai for current limits",
+  "rate_limits": "20 requests per second and 300 requests per minute per API key (plan-dependent; verify current docs).",
   "example": {
-    "request": "curl -s \"https://api.nansen.ai/api/v1/profiler/address-portfolio\" -H \"apikey: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"address\":\"0x...\",\"chain\":\"ethereum\"}'",
+    "request": "curl -s \"https://api.nansen.ai/api/v1/profiler/address/current-balance\" -H \"apikey: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"address\":\"0x28c6c06298d514db089934071355e5743bf21d60\",\"chain\":\"ethereum\"}'",
     "response_snippet": "{\"data\":[...]}"
   },
   "use_cases": [
@@ -91,6 +91,26 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

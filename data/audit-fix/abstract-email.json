@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "3 requests/second on Free and self-serve paid tiers (pricing page); Enterprise flexible. Docs 429 still say 1 req/sec on free.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of Abstract Email Validation rate limits."
+  "resolution_notes": "rate_limits: auditor correct. Official pricing page lists 3 requests/second for Free (and Starter/Standard/Professional); original 'not published' is wrong. Docs 429 text still cites 1/sec on free (stale). Evidence: https://www.abstractapi.com/api/email-verification-validation-api ; conflict: https://docs.abstractapi.com/api/email-validation"
 }

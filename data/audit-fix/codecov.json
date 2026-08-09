@@ -1,9 +1,9 @@
 {
   "id": "codecov",
-  "base_url": null,
+  "base_url": "https://api.codecov.io/api/v2",
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "Authorization: bearer YOUR_ACCESS_TOKEN (Codecov access token from account settings)",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Starting live verification against Codecov official docs for base_url and auth disputes."
+  "resolution_notes": "base_url: auditor correct \u2014 official Codecov API Reference documents versioned REST endpoints under https://api.codecov.io/api/v2 (e.g. /api/v2/{service}/{owner}/repos/{repo}/); host-only https://api.codecov.io is not the API root used by documented paths (https://docs.codecov.com/reference). auth_details: auditor correct \u2014 Codecov\u2019s API auth guide and reference use Bearer credentials (Authorization: bearer <access_token> / Bearer token), not Authorization: token; credentials are Codecov access tokens (https://docs.codecov.com/docs/authentication, https://docs.codecov.com/reference)."
 }

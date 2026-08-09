@@ -5,7 +5,7 @@
   "category": "weather-environment",
   "tagline": "Multi-product weather, marine, ski, and historical weather API with free trial",
   "description": "World Weather Online provides weather, marine, ski, and historical weather data APIs for developers. It offers current conditions, forecasts, historical weather, and specialized products through a REST API with free trial access.",
-  "base_url": "https://api.worldweatheronline.com",
+  "base_url": "https://api.worldweatheronline.com/premium/v1",
   "docs_url": "https://www.worldweatheronline.com/developer/",
   "signup_url": null,
   "auth": {
@@ -19,11 +19,11 @@
     "xml"
   ],
   "pricing": {
-    "free_tier": false,
-    "free_tier_limits": "14-day free trial only: 500 requests/day; no permanent free tier documented",
+    "free_tier": true,
+    "free_tier_limits": "Permanent free plan (personal/educational/research, noncommercial, attribution required): 100 requests/day per pricing page; 14-day paid trials also offered (other first-party pages historically showed 500/day \u2014 reconcile in account dashboard)",
     "paid_plans": null
   },
-  "rate_limits": "Trial: 500 requests/day; paid plans publish daily request caps (varies by plan)",
+  "rate_limits": "Free: 100 requests/day (pricing page); paid plans publish plan-specific daily caps; trial quotas may differ by product \u2014 confirm in developer dashboard",
   "example": {
     "request": "curl \"https://api.worldweatheronline.com/premium/v1/weather.ashx?key=YOUR_API_KEY&q=London&format=json&num_of_days=1\"",
     "response_snippet": "{\"data\":{\"request\":[{\"type\":\"City\",\"query\":\"London, United Kingdom\"}],\"current_condition\":[{\"temp_C\":\"15\",\"weatherDesc\":[{\"value\":\"Partly cloudy\"}]}]}}"
@@ -94,6 +94,18 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

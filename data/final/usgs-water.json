@@ -25,7 +25,7 @@
     "free_tier_limits": "Fully free public service; no paid plans. Fair-use rate limits apply (see rate_limits).",
     "paid_plans": null
   },
-  "rate_limits": "not published as fixed numeric quotas; USGS requests responsible use and may throttle heavy automated traffic. Check current service notices.",
+  "rate_limits": "For small requests (e.g. up to 7\u201314 days for a single site): max 5\u201310 requests/sec steady; brief bursts of 40\u201350 requests/sec OK but not sustained. Excessive use may be blocked (HTTP 403).",
   "example": {
     "request": "curl -s \"https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01646500&parameterCd=00060,00065\"",
     "response_snippet": "{\"name\":\"ns1:timeSeriesResponseType\",\"declaredType\":\"org.cuahsi.waterml.TimeSeriesResponseType\",\"value\":{\"queryInfo\":{\"queryURL\":\"...\",\"criteria\":{\"locationParam\":\"[ALL:01646500]\",\"variableParam\":\"[00060,00065]\"},\"note\":[{\"value\":\"all\",\"title\":\"filter:sites\"}]},\"timeSeries\":[{\"sourceInfo\":{\"siteName\":\"POTOMAC RIVER NEAR WASH, DC LITTLE FALLS PUMP STA\",\"siteCode\":[{\"value\":\"01646500\",\"network\":\"NWIS\",\"agencyCode\":\"USGS\"}]},\"variable\":{\"variableCode\":[{\"value\":\"00060\",\"network\":\"NWIS\",\"vocabulary\":\"NWIS:UnitValues\",\"variableID\":45807197,\"default\":true}],\"variableName\":\"Streamflow, ft\u00b3/s\"},\"values\":[{\"value\":[{\"value\":\"12500\",\"qualifiers\":[\"P\"],\"dateTime\":\"2026-08-08T12:00:00.000-04:00\"}]}]}}"
@@ -97,6 +97,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

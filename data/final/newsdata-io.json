@@ -19,8 +19,8 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "200 credits/day free (1 credit per article on free plan)",
-    "paid_plans": "Starter, Professional, Corporate plans with higher credits and features"
+    "free_tier_limits": "200 credits/day free; up to 10 articles per credit",
+    "paid_plans": "Basic, Professional, and Corporate plans with higher credits and features"
   },
   "rate_limits": "not published precisely; free tier limited by daily credits",
   "example": {
@@ -92,6 +92,16 @@
       "example_response_snippet",
       "description"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

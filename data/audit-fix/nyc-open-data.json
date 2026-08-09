@@ -2,16 +2,16 @@
   "id": "nyc-open-data",
   "base_url": null,
   "docs_url": null,
-  "auth_type": null,
-  "auth_details": null,
+  "auth_type": "none",
+  "auth_details": "Optional. Public SODA reads work without credentials. A free Socrata app token (X-App-Token header or $$app_token query param) is not authentication; it identifies the app for a higher request pool vs low anonymous IP throttling. OAuth/user auth is separate and only needed for private/write access.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Without app token: much lower IP-based throttling (exact threshold unpublished). With app token: substantially higher application-scoped limits; requests are generally unthrottled except under abuse/malicious traffic. Historical ~1,000 req/hour figures are not current official docs.",
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -H \"X-App-Token: YOUR_API_KEY\" 'https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=5'",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of disputed fields against official Socrata/NYC Open Data docs."
+  "resolution_notes": "auth.type: auditor correct. Official docs state app tokens are \"not necessarily used for authentication\" and unauthenticated public queries work without a token (https://dev.socrata.com/docs/app-tokens.html). Schema has no separate \"optionalAppToken\" type; \"none\" + details matches that model. rate_limits: auditor correct on removing ~1,000/hour. Same page documents lower IP throttling without token and higher limits with token, but publishes no numeric quota; changelog only clarified abuse handling (https://dev.socrata.com/docs/app-tokens.html, https://dev.socrata.com/changelog/2016/06/04/clarification-of-throttling-limits). example.request: auditor correct. Double-quoted URL causes shells to expand $limit; single-quote the URL (or escape $) so the SODA $limit param is sent."
 }

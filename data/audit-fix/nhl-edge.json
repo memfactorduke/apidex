@@ -10,8 +10,8 @@
   "rate_limits": null,
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "{\"focusedDate\":\"2026-04-11\",\"gamesByDate\":[{\"date\":\"2026-04-11\",\"games\":[{\"id\":2025021225,\"season\":20252026,\"gameType\":2,\"gameState\":\"FUT\",\"gameScheduleState\":\"OK\",\"awayTeam\":{\"id\":20,\"abbrev\":\"CGY\",\"score\":0},\"homeTeam\":{\"id\":22,\"abbrev\":\"EDM\",\"score\":0}}]}]}",
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of example.response_snippet against api-web.nhle.com."
+  "resolution_notes": "Auditor correct on example.response_snippet. Live GET https://api-web.nhle.com/v1/scoreboard/now (2026-04-11) returns real structure but not the entry\u2019s invented TOR@BOS 2026-04-10 / game id 2025020123 sample. Capture: focusedDate 2026-04-11; sample game id 2025021225 CGY@EDM (FUT). Docs: https://github.com/Zmalski/NHL-API-Reference"
 }

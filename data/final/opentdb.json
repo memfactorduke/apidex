@@ -25,7 +25,7 @@
   "rate_limits": "1 request per 5 seconds per IP (response_code 5 / HTTP 429 if exceeded). Max 50 questions per call; only 1 category per call.",
   "example": {
     "request": "curl -s \"https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple\"",
-    "response_snippet": "{\"response_code\":0,\"results\":[{\"type\":\"multiple\",\"difficulty\":\"easy\",\"category\":\"Mythology\",\"question\":\"The Nike apparel and footwear brand takes it&#039;s name from the Greek goddess of what?\",\"correct_answer\":\"Victory\",\"incorrect_answers\":[\"Courage\",\"Strength\",\"Honor\"]}]}"
+    "response_snippet": "{\"response_code\":0,\"results\":[{\"type\":\"multiple\",\"difficulty\":\"easy\",\"category\":\"General Knowledge\",\"question\":\"What are Panama hats made out of?\",\"correct_answer\":\"Straw\",\"incorrect_answers\":[\"Silk\",\"Hemp\",\"Flax\"]}]}"
   },
   "use_cases": [
     "fetch random trivia questions for a quiz app",
@@ -96,6 +96,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

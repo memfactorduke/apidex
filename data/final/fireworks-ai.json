@@ -18,13 +18,13 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier": false,
+    "free_tier_limits": "$1 introductory credits for new users (trial/promo credit; not an ongoing free inference tier)",
+    "paid_plans": "Pay-as-you-go serverless inference billed per token; dedicated deployments available. Pricing varies by model \u2014 see https://fireworks.ai/pricing"
   },
-  "rate_limits": "not published",
+  "rate_limits": "Accounts without payment method or credits: 10 RPM. Funded/active accounts: account-wide ceiling ~6,000 RPM plus model-specific serverless token limits. See rate limits docs.",
   "example": {
-    "request": "curl https://api.fireworks.ai/inference/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"accounts/fireworks/models/llama-v3p1-8b-instruct\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+    "request": "curl https://api.fireworks.ai/inference/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"accounts/fireworks/models/deepseek-v3p1\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
     "response_snippet": "{\"id\":\"...\",\"object\":\"chat.completion\",\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help?\"}}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":8}}"
   },
   "use_cases": [
@@ -90,6 +90,19 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown",
-    "paid_plans": null
+    "free_tier_limits": "Infrastructure free: up to 5 hosts, 1-day metric retention; other products have separate free allotments",
+    "paid_plans": "Infrastructure Pro from ~$15/host/mo (annual); APM, logs, and other products priced separately\u2014see pricing page"
   },
-  "rate_limits": "not published",
+  "rate_limits": "Varies by endpoint; X-RateLimit-* headers; metrics/log submission not API-rate-limited; events ~250k/min/org",
   "example": {
     "request": "curl -X GET \"https://api.datadoghq.com/api/v1/validate\" -H \"DD-API-KEY: YOUR_API_KEY\"",
     "response_snippet": "{\"valid\": true}"
@@ -92,6 +92,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

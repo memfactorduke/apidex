@@ -10,7 +10,7 @@
   "signup_url": "https://bitbucket.org/account/signup/",
   "auth": {
     "type": "other",
-    "details": "API tokens (Basic auth with Atlassian email + token), OAuth 2.0, workspace/project/repo access tokens; app passwords deprecated/retired 2025\u20132026"
+    "details": "API tokens (Basic auth with Atlassian email + token), OAuth 2.0, workspace/project/repo access tokens; app passwords retired (final removal July 28, 2026)"
   },
   "https": true,
   "cors": "unknown",
@@ -22,7 +22,7 @@
     "free_tier_limits": "Free plan includes API access; default API rate limit 1,000 req/hour (shared across plans, not free-only). Product free: ~5 users, 1 GB storage, 50 build min/mo; higher rate limits for larger Standard/Premium workspaces with access tokens or Forge",
     "paid_plans": "Standard ~$3.65/user/mo; Premium ~$7.25/user/mo; scaled rate limits up to 10,000 req/hour for large Standard/Premium workspaces"
   },
-  "rate_limits": "Default 1,000 requests/hour; Standard/Premium with 100+ paid users and access tokens/Forge: +10 req/hour per paid user, capped at 10,000/hour",
+  "rate_limits": "Default 1,000 requests/hour; Standard/Premium with 100+ paid users and access tokens/Forge: 1,000 + (paid seats \u2212 100) \u00d7 10, capped at 10,000/hour",
   "example": {
     "request": "curl -s -u \"YOUR_EMAIL:YOUR_API_KEY\" \"https://api.bitbucket.org/2.0/user\"",
     "response_snippet": "{\"type\": \"user\", \"username\": \"example\", \"display_name\": \"Example User\", \"uuid\": \"{...}\", \"links\": {\"self\": {\"href\": \"https://api.bitbucket.org/2.0/user\"}, \"avatar\": {\"href\": \"...\"}}}"
@@ -97,6 +97,26 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

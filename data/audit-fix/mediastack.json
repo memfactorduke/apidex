@@ -5,7 +5,7 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "100 requests/month; delayed news data; HTTPS included; no historical data or commercial use",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of free-tier HTTPS claim against official mediastack docs/pricing."
+  "resolution_notes": "pricing.free_tier_limits: Auditor correct. Official pricing (https://mediastack.com/pricing) lists Free plan features as 100 Calls/mo, Delayed News Data, HTTPS Encryption \u2014 not HTTP-only. Historical Data and Commercial Use appear only on paid tiers (Standard+). Older third-party writeups still say HTTP-only; official page wins."
 }

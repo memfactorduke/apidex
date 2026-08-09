@@ -9,9 +9,9 @@
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"User-Agent: linux:com.example.yourapp:v1.0 (by /u/YOUR_USERNAME)\" \"https://oauth.reddit.com/r/programming/hot?limit=5\"",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": ""
+  "resolution_notes": "example.request: auditor correct. Official Reddit Data API Wiki requires User-Agent format <platform>:<app ID>:<version string> (by /u/<reddit username>); example: android:com.example.myredditapp:v1.2.3 (by /u/kemitche). Original YOUR_APP/1.0 does not match. Evidence: https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki"
 }

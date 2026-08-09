@@ -1,17 +1,17 @@
 {
   "id": "ebay",
-  "base_url": null,
+  "base_url": "https://api.ebay.com/buy (most Buy APIs, e.g. Browse); guest Order API: https://apix.ebay.com/buy/order/v2",
   "docs_url": null,
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Sandbox and default call limits free via Developers Program. Browse API default 5,000 calls/day (most methods). Many Buy APIs are Limited Release: production needs eBay Partner Network approval plus free Application Growth Check (not guaranteed).",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
+  "example_request": "curl -X GET 'https://api.ebay.com/buy/browse/v1/item_summary/search?q=iphone&limit=3' -H 'Authorization: Bearer YOUR_OAUTH_ACCESS_TOKEN' -H 'X-EBAY-C-MARKETPLACE-ID: EBAY_US' -H 'Content-Type: application/json'",
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying disputed fields against live eBay official docs."
+  "resolution_notes": "base_url: Auditor right. Browse uses api.ebay.com/buy (e.g. https://api.ebay.com/buy/browse/v1); guest Order production URI is https://apix.ebay.com/buy/order/v2 (developer.ebay.com/api-docs/buy/order/resources/purchase_order/methods/getPurchaseOrder; developer.ebay.com/api-docs/buy/static/api-order.html). pricing: Auditor right. Many Buy APIs Limited Release; production via EPN + free Application Growth Check (developer.ebay.com/api-docs/buy/static/buy-requirements.html; developer.ebay.com/grow/application-growth-check). Browse default 5,000/day (developer.ebay.com/develop/get-started/api-call-limits). No ordinary paid API plans\u2014paid_plans cleared. free_tier true stands. example.request: Auditor right\u2014Bearer must be OAuth access token, not app key (developer.ebay.com/develop/guides-v2: Authorization: Bearer <accessToken>)."
 }

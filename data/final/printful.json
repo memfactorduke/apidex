@@ -22,10 +22,10 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "120 requests per minute generally; lower endpoint-specific limits may apply",
   "example": {
-    "request": "curl -sS -H \"Authorization: Bearer YOUR_API_KEY\" https://api.printful.com/store",
-    "response_snippet": "{\"code\":200,\"result\":{\"id\":12345,\"name\":\"My Store\",\"type\":\"native\",\"website\":\"https://example.com\"}}"
+    "request": "curl -sS -H \"Authorization: Bearer YOUR_API_KEY\" https://api.printful.com/stores",
+    "response_snippet": "{\"code\":200,\"result\":[{\"id\":12345,\"name\":\"My Store\",\"type\":\"native\",\"website\":\"https://example.com\"}],\"paging\":{\"total\":1,\"offset\":0,\"limit\":20}}"
   },
   "use_cases": [
     "create a print-on-demand order for a custom t-shirt",
@@ -92,6 +92,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits",
+        "example_request",
+        "example_response_snippet"
+      ],
+      "upheld_original": false
+    }
   }
 }

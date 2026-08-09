@@ -10,7 +10,7 @@
   "signup_url": "https://www.inaturalist.org/users/api_token",
   "auth": {
     "type": "jwt",
-    "details": "Optional JWT API token (Authorization: Bearer or Authorization: JWT) for higher rate limits and authenticated writes; self-serve from user account. Many read endpoints work unauthenticated."
+    "details": "JWT via OAuth then GET https://www.inaturalist.org/users/api_token; send Authorization: Bearer <JWT> (24h expiry). Required for PUT/POST and some private GETs; many reads work unauthenticated. Does not grant a documented higher rate limit."
   },
   "https": true,
   "cors": "unknown",
@@ -22,7 +22,7 @@
     "free_tier_limits": "Free public API; no paid plans. Exact numeric quotas not cleanly published as fixed ~100 unauth / higher auth figures; use response rate-limit headers and current docs/community guidance.",
     "paid_plans": null
   },
-  "rate_limits": "Official docs emphasize checking rate-limit response headers; authenticated JWT access gets higher limits than unauthenticated. Community figures (~100/min unauth, ~1000/min auth) are not authoritative fixed published quotas.",
+  "rate_limits": "Official guidance: ~1 request/second and ~10,000/day (Recommended Practices); swagger Terms also cite max ~100/min (prefer \u226460/min) and 10k/day. Excess may get HTTP 429; media downloads have separate caps. Auth has no documented higher quota.",
   "example": {
     "request": "curl -s 'https://api.inaturalist.org/v1/observations?taxon_name=Danaus+plexippus&per_page=1'",
     "response_snippet": "{\"total_results\":12345,\"page\":1,\"per_page\":1,\"results\":[{\"id\":123,\"species_guess\":\"Monarch\",\"taxon\":{\"id\":48662,\"name\":\"Danaus plexippus\",\"rank\":\"species\"},\"observed_on\":\"2024-06-15\",\"place_guess\":\"California, US\"}]}"
@@ -94,6 +94,16 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

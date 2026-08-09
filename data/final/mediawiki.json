@@ -13,7 +13,7 @@
     "details": "Most read queries need no auth. Write/login use bot passwords or OAuth (MediaWiki OAuth extension); cookies/tokens for session. Self-hosted wikis may differ."
   },
   "https": true,
-  "cors": "yes",
+  "cors": "unknown",
   "formats": [
     "json",
     "xml"
@@ -95,6 +95,25 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

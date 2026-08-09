@@ -23,7 +23,7 @@
     "free_tier_limits": "100 GB/month data ingest, 1 full platform user, unlimited basic users (API quotas not separately itemized)",
     "paid_plans": null
   },
-  "rate_limits": "NerdGraph: 25 concurrent, ~100 rpm complexity limits; REST API v2: 3,000 req/min per account (see docs)",
+  "rate_limits": "NerdGraph: 25 concurrent requests per user, no general requests-per-minute limit; REST API v2: 1,000 calls/minute; NRQL API queries: 3,000/account/minute.",
   "example": {
     "request": "curl -X POST https://api.newrelic.com/graphql -H \"Content-Type: application/json\" -H \"API-Key: YOUR_API_KEY\" -d '{\"query\":\"{ actor { user { email } } }\"}'",
     "response_snippet": "{\"data\":{\"actor\":{\"user\":{\"email\":\"user@example.com\"}}}}"
@@ -92,6 +92,15 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

@@ -22,7 +22,7 @@
     "free_tier_limits": "unknown",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Tiered by cumulative spend (T0\u2013T5). Sonar: 50 RPM at T0 \u2192 4,000 RPM at T4\u2013T5 (sonar-deep-research: 5\u2192100 RPM). Agent API: 50/min (T0) \u2192 2,000/min (T4\u2013T5). Search API: 50 query units/sec (all tiers).",
   "example": {
     "request": "curl -X POST https://api.perplexity.ai/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"sonar\",\"messages\":[{\"role\":\"user\",\"content\":\"What is the capital of France?\"}]}'",
     "response_snippet": "{\"id\":\"...\",\"model\":\"sonar\",\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"Paris is the capital of France.\"},\"finish_reason\":\"stop\"}],\"citations\":[\"https://...\"]}"
@@ -90,6 +90,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

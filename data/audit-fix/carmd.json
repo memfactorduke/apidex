@@ -1,17 +1,17 @@
 {
   "id": "carmd",
-  "base_url": null,
-  "docs_url": null,
-  "auth_type": null,
-  "auth_details": null,
-  "free_tier": null,
+  "base_url": "https://dev-api.carscan.com/v3.0",
+  "docs_url": "https://dev-api.carscan.com/member/docs",
+  "auth_type": "apiKey",
+  "auth_details": "Two headers required on every call: authorization (Authorization Key) and partner-token (Partner Token); content-type application/json. Self-serve register.",
+  "free_tier": true,
   "free_tier_limits": null,
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
-  "example_request": null,
-  "example_response_snippet": null,
+  "example_request": "curl -H \"content-type: application/json\" -H \"authorization: YOUR_AUTH_KEY\" -H \"partner-token: YOUR_PARTNER_TOKEN\" \"https://dev-api.carscan.com/v3.0/diag?vin=1GNALDEK9FZ108495&mileage=51000&dtc=p0420\"",
+  "example_response_snippet": "{\"message\":{\"code\":0,\"message\":\"ok\",\"credentials\":\"valid\",\"version\":\"v3.0.0\",\"endpoint\":\"diag\"},\"data\":{\"code\":\"P0420\",\"urgency\":2,\"urgency_desc\":\"Repair immediately if drivability issues are present...\",\"layman_definition\":\"Catalyst System Efficiency Below Threshold (Bank 1)\",\"tech_definition\":\"Catalyst System Low Efficiency (Bank 1)\"}}",
   "description": null,
   "status": null,
-  "resolution_notes": "Investigating CarMD vs CarScan with live official sources."
+  "resolution_notes": "name: auditor right\u2014docs title \u201cCarScan API\u201d, zero CarMD refs (https://dev-api.carscan.com/member/docs; WB 2026-02-27). base_url: auditor right\u2014canonical host https://dev-api.carscan.com/v3.0/* in API Reference. docs_url: auditor right\u2014https://dev-api.carscan.com/member/docs. auth: auditor right\u2014registration yields Partner Token + Authorization Key as headers (authorization, partner-token). free_tier: auditor right\u2014\u201cUsing the APIs is FREE to a limit\u201d; VIN decode free \u226425/mo (https://dev.carscan.com/api/free-vin-decoder-api); credits for paid use. example: auditor right\u2014GET /diag?vin&mileage&dtc + both headers (not code= alone / api.carmd.com). status operational."
 }

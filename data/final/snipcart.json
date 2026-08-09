@@ -20,7 +20,7 @@
   "pricing": {
     "free_tier": true,
     "free_tier_limits": "Free plan available for testing/development; transaction fees apply on paid plans (verify current tiers on snipcart.com/pricing)",
-    "paid_plans": "Transaction-fee and subscription plans; see snipcart.com/pricing for current rates"
+    "paid_plans": "2% of transactions + payment gateway fees; if monthly sales are under $1,000 USD, the 2% is replaced by a $20 USD monthly fee (see snipcart.com/pricing)"
   },
   "rate_limits": "not published",
   "example": {
@@ -93,6 +93,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

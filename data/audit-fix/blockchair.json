@@ -3,7 +3,7 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "Occasional/testing requests allowed without a key. API keys (when used) are passed as the query parameter ?key=YOUR_API_KEY on the request URL (e.g. https://api.blockchair.com/bitcoin/blocks?key=MYSECRETKEY). Keep keys server-side.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of disputed auth.details against official Blockchair docs."
+  "resolution_notes": "auth.details: auditor correct. Original value was unfinished placeholder text. Official Blockchair Support API docs state occasional use needs no key, and keys are appended as ?key= on the query string: https://github.com/Blockchair/Blockchair.Support/blob/master/API.md (section \u201cPlease apply for an API key first\u201d; live docs also at https://blockchair.com/api/docs). Live GET https://api.blockchair.com/bitcoin/stats returned HTTP 200, so status stays operational (null)."
 }

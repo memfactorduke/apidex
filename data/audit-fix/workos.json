@@ -6,12 +6,12 @@
   "auth_details": null,
   "free_tier": null,
   "free_tier_limits": null,
-  "paid_plans": null,
+  "paid_plans": "AuthKit: $2,500/mo per extra 1M MAUs after free 1M. SSO & Directory Sync: $125/conn/mo (1\u201315), volume discounts to $50 (101\u2013200). Audit Logs: $125/mo SIEM + $99/mo per 1M events. Radar: $100/mo per 50K checks after free 1K. Custom domain $99/mo. Annual Credits custom.",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending live verification of paid_plans against official WorkOS pricing."
+  "resolution_notes": "paid_plans: auditor correct \u2014 null was inconsistent with live pricing. Official https://workos.com/pricing (fetched 2026-08-08): AuthKit $2,500/mo per additional 1M MAUs; SSO/Directory Sync from $125/conn/mo with volume tiers; Radar $100/mo per 50K checks after first 1,000 free; Audit Logs and custom domain also paid."
 }

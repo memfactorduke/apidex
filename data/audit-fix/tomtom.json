@@ -5,7 +5,7 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Recurring free monthly requests per API (no card): Geocoding 20K; Reverse Geocoding 20K; Routing 20K; legacy Search 2.5K; Map Display Vector Tiles 200K; other products vary \u2014 docs.tomtom.com/pricing",
   "paid_plans": null,
   "rate_limits": null,
   "cors": null,
@@ -13,5 +13,5 @@
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Pending verification of free-tier limits against current TomTom pricing docs."
+  "resolution_notes": "pricing.free_tier_limits: Auditor correct. Official pricing (https://docs.tomtom.com/pricing) advertises free monthly requests per API, not trial-only credits: Geocoding Free 20K monthly; Reverse Geocoding 20K; legacy Search API 2.5K; Matrix/Snap/EV/Reachable Range/Traffic Incidents 2.5K; Map Display vector tiles 200K; etc. Original wording understated this as vague trial credits."
 }

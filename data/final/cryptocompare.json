@@ -10,7 +10,7 @@
   "signup_url": "https://www.cryptocompare.com/cryptopian/api-keys",
   "auth": {
     "type": "apiKey",
-    "details": "API key via Authorization header as Apikey YOUR_API_KEY, or query parameter api_key=YOUR_API_KEY; free self-serve key from CryptoCompare account"
+    "details": "API key via Authorization: Apikey YOUR_API_KEY or query api_key=; active CoinDesk Data API subscription/plan required (key alone insufficient after free-tier retirement May 21, 2026)"
   },
   "https": true,
   "cors": "unknown",
@@ -18,9 +18,9 @@
     "json"
   ],
   "pricing": {
-    "free_tier": true,
-    "free_tier_limits": "Free tier available; exact request quotas vary by plan (see pricing page)",
-    "paid_plans": "Paid subscription plans with higher rate limits and data access"
+    "free_tier": false,
+    "free_tier_limits": "Free API tier retired May 21, 2026; no recurring free quota. Pricing still lists Personal (FREE, non-commercial) with capped lifetime calls (docs default lifetime 250,000).",
+    "paid_plans": "Start-Up: contact sales / preferential early-stage pricing; Enterprise: contact/bespoke. Personal shown FREE with lifetime call cap. See developers.coindesk.com/pricing."
   },
   "rate_limits": "Plan-dependent; published on pricing/docs (free tier has lower call limits)",
   "example": {
@@ -93,6 +93,18 @@
     "corrected": [],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans"
+      ],
+      "upheld_original": false
+    }
   }
 }

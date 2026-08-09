@@ -1,17 +1,17 @@
 {
   "id": "openalex",
-  "base_url": null,
-  "docs_url": null,
-  "auth_type": null,
-  "auth_details": null,
-  "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
-  "rate_limits": null,
+  "base_url": "https://api.openalex.org",
+  "docs_url": "https://developers.openalex.org/",
+  "auth_type": "apiKey",
+  "auth_details": "Free API key required via api_key query param (get at openalex.org/settings/api). Unauthenticated demo use may work limitedly.",
+  "free_tier": true,
+  "free_tier_limits": "$1/day free usage credit; singleton entity lookups free; lists/searches/content incur endpoint-based costs.",
+  "paid_plans": "Prepaid/paid usage after free daily credit; higher tiers via OpenAlex pricing/contact.",
+  "rate_limits": "Max 100 requests/second; daily usage limited by key credit allowance ($1 free/day).",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Settling disputes with live official docs: docs_url, auth, pricing, rate_limits."
+  "resolution_notes": "docs_url: auditor right \u2014 official docs at https://developers.openalex.org/ (docs.openalex.org deprecated). auth: auditor right \u2014 free API key required via api_key; https://developers.openalex.org/ and https://openalex.org/settings/api. pricing: auditor right \u2014 $1/day free credit + endpoint-based usage, not polite-pool/100k model; see developers.openalex.org pricing. rate_limits: auditor right \u2014 100 req/s max + credit allowance; old 1/10 polite-pool and Premium 1M/day obsolete. Live check against official OpenAlex developer docs."
 }

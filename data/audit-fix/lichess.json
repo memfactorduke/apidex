@@ -7,11 +7,11 @@
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Fixed numeric limits are intentionally unpublished. Docs advise throttling and not hammering the API; send requests sequentially (one at a time) and, after any 429, wait a full minute before retrying.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "placeholder"
+  "resolution_notes": "rate_limits: Auditor correct. Official Lichess API docs (https://lichess.org/api) state fixed rate limits are not published as fixed numbers; they instruct developers to make only one request at a time and, after a 429, wait a full minute. The original entry\u2019s \u201c~20\u201330 req/s for some endpoints\u201d is not official published guidance and conflicts with that sequential + 1-minute-after-429 rule."
 }

@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
-  "free_tier": null,
-  "free_tier_limits": null,
-  "paid_plans": null,
+  "auth_details": "API key via Authorization: Apikey YOUR_API_KEY or query api_key=; active CoinDesk Data API subscription/plan required (key alone insufficient after free-tier retirement May 21, 2026)",
+  "free_tier": false,
+  "free_tier_limits": "Free API tier retired May 21, 2026; no recurring free quota. Pricing still lists Personal (FREE, non-commercial) with capped lifetime calls (docs default lifetime 250,000).",
+  "paid_plans": "Start-Up: contact sales / preferential early-stage pricing; Enterprise: contact/bespoke. Personal shown FREE with lifetime call cap. See developers.coindesk.com/pricing.",
   "rate_limits": null,
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "placeholder"
+  "resolution_notes": "name: auditor right\u2014CCData\u2192CoinDesk Data (https://data.coindesk.com/press-releases/coindesk-unveils-strategic-rebrand-of-ccdata-to-coindesk-data); min-api.cryptocompare.com still legacy Min API under CoinDesk (developers.coindesk.com). pricing: auditor right\u2014free tier retired 2026-05-21 (https://data.coindesk.com/blogs/changes-to-coindesk-data-indices-api-free-tier-access); Personal FREE + lifetime caps; Start-Up/Enterprise contact (https://developers.coindesk.com/pricing/). auth: auditor right\u2014subscription required; live min-api 401 without entitled key."
 }

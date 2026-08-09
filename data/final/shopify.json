@@ -4,7 +4,7 @@
   "name": "Shopify Admin API",
   "category": "ecommerce-payments",
   "tagline": "Manage products, orders, customers, inventory, and store data via REST or GraphQL.",
-  "description": "Shopify Admin API lets apps and integrations manage a merchant's store: products, variants, inventory, orders, customers, fulfillments, discounts, and more. Developers can use REST or GraphQL over HTTPS against shop-specific endpoints, with OAuth for public apps and access tokens for custom apps. It is the primary backend surface for Shopify app development and store automation.",
+  "description": "Shopify Admin API lets apps and integrations manage a merchant's store: products, inventory, orders, customers, fulfillments, discounts, and more. GraphQL Admin is the primary/current interface; REST Admin is legacy (as of Oct 1, 2024). Since April 1, 2025, new public App Store apps must use GraphQL exclusively. REST remains for some existing/custom-app cases. OAuth for public apps; access tokens for custom apps. Shop-specific HTTPS endpoints.",
   "base_url": "https://{shop}.myshopify.com/admin/api/{version}",
   "docs_url": "https://shopify.dev/docs/api/admin",
   "signup_url": "https://partners.shopify.com/signup",
@@ -25,8 +25,8 @@
   },
   "rate_limits": "REST: 2 req/s bucket (leaky); GraphQL: cost-based (points/sec). Plus plans higher. Exact limits vary by plan and version \u2014 see docs.",
   "example": {
-    "request": "curl -X GET \"https://YOUR_SHOP.myshopify.com/admin/api/2025-01/products.json?limit=1\" -H \"X-Shopify-Access-Token: YOUR_API_KEY\" -H \"Content-Type: application/json\"",
-    "response_snippet": "{\"products\":[{\"id\":632910392,\"title\":\"IPod Nano - 8GB\",\"body_html\":\"...\",\"vendor\":\"Apple\",\"product_type\":\"Cult Products\",\"created_at\":\"...\",\"handle\":\"ipod-nano\",\"status\":\"active\",\"variants\":[{\"id\":808950810,\"price\":\"199.00\",\"sku\":\"IPOD2008PINK\",\"inventory_quantity\":10}]}],\"...\"}"
+    "request": "curl -X POST \"https://YOUR_SHOP.myshopify.com/admin/api/2026-07/graphql.json\" -H \"Content-Type: application/json\" -H \"X-Shopify-Access-Token: YOUR_API_KEY\" -d '{\"query\":\"{ products(first: 1) { edges { node { id title } } } }\"}'",
+    "response_snippet": "{\"data\":{\"products\":{\"edges\":[{\"node\":{\"id\":\"gid://shopify/Product/632910392\",\"title\":\"Hiking backpack\"}}]}},\"extensions\":{\"cost\":{\"requestedQueryCost\":3,\"actualQueryCost\":3}}}"
   },
   "use_cases": [
     "list products and variants for a Shopify store",
@@ -96,6 +96,17 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

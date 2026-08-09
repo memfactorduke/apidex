@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "5 API calls/minute (Stocks Free); delayed US stocks; options/forex/crypto free tiers exist with plan-specific limits",
+    "free_tier_limits": "Stocks Basic (free): 5 API calls/minute; end-of-day US stocks; 2 years historical data. Options/forex/crypto free tiers exist with plan-specific limits (typically 5 calls/min, end-of-day).",
     "paid_plans": null
   },
-  "rate_limits": "Free 5/min; Starter 100/min; Developer 500/min; Advanced 1000/min (plus burst, e.g. Free max burst 25)",
+  "rate_limits": "Stocks Basic: 5 API calls/minute; paid individual Stocks plans (Starter/Developer/Advanced): unlimited API calls (fair-use; recommend staying under 100 req/s). Other asset-class free tiers also 5/min; paid tiers unlimited.",
   "example": {
     "request": "curl \"https://api.massive.com/v2/aggs/ticker/AAPL/prev?apiKey=YOUR_API_KEY\"",
     "response_snippet": "{\"ticker\":\"AAPL\",\"status\":\"OK\",\"results\":[{\"o\":150.0,\"h\":155.0,\"l\":149.0,\"c\":154.0,\"v\":50000000}]}"
@@ -97,6 +97,16 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

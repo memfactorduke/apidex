@@ -25,7 +25,7 @@
   "rate_limits": "FAQ: ~1 message/sec per private chat; \u226420 messages/min per group; 429 on excess. Free bulk broadcast about 30 msg/sec; paid broadcasts (BotFather/Stars) can go higher when eligible. Other method limits not fully published.",
   "example": {
     "request": "curl \"https://api.telegram.org/botYOUR_API_KEY/getMe\"",
-    "response_snippet": "{\"ok\":true,\"result\":{\"id\":123456789,\"is_bot\":true,\"first_name\":\"ExampleBot\",\"username\":\"ExampleBot\",\"can_join_groups\":true,\"can_read_all_group_messages\":false,\"supports_inline_queries\":false}}"
+    "response_snippet": "{\"ok\":true,\"result\":{\"id\":123456789,\"is_bot\":true,\"first_name\":\"ExampleBot\",\"username\":\"ExampleBot\",\"can_join_groups\":true,\"can_read_all_group_messages\":false,\"supports_inline_queries\":false}"
   },
   "use_cases": [
     "send a text message to a Telegram user or chat",
@@ -97,6 +97,26 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "paid_plans",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

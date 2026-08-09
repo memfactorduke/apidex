@@ -10,7 +10,7 @@
   "signup_url": null,
   "auth": {
     "type": "none",
-    "details": "No authentication required for public REST endpoints; free public use under NLM terms."
+    "details": "No auth for ordinary public REST endpoints. Exception: getProprietaryInformation may require a UMLS UTS API key via Authorization: Bearer for restricted source vocabularies."
   },
   "https": true,
   "cors": "unknown",
@@ -20,10 +20,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "...",
+    "free_tier_limits": "Free of charge; online usage limited to 20 requests/second per IP address. No paid plan is offered.",
     "paid_plans": null
   },
-  "rate_limits": "...",
+  "rate_limits": "Maximum 20 requests/second per IP address; excess requests may not be serviced. NLM recommends caching results for 12\u201324 hours.",
   "example": {
     "request": "curl -s 'https://rxnav.nlm.nih.gov/REST/rxcui.json?name=lipitor'",
     "response_snippet": "{\"idGroup\":{\"name\":\"lipitor\",\"rxnormId\":[\"153165\"]}}"
@@ -93,6 +93,17 @@
       "free_tier_limits",
       "rate_limits"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "auth_details",
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

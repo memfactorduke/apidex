@@ -5,13 +5,13 @@
   "auth_type": null,
   "auth_details": null,
   "free_tier": null,
-  "free_tier_limits": null,
+  "free_tier_limits": "Hobby: free with up to 50,000 MRU (Monthly Retained Users) per app; Pro from $25/mo ($20/mo annual) with 50,000 MRU included per app, then published overages (from $0.02/MRU); see clerk.com/pricing",
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Backend API: production 1,000 req/10s; development 100 req/10s; some endpoints have lower limits. See clerk.com/docs/guides/how-clerk-works/system-limits",
   "cors": null,
   "example_request": null,
-  "example_response_snippet": null,
+  "example_response_snippet": "[]",
   "description": null,
   "status": null,
-  "resolution_notes": "pending verification"
+  "resolution_notes": "pricing.free_tier_limits: AUDITOR RIGHT. Official pricing (clerk.com/pricing) uses Monthly Retained Users (MRU), not MAU; Hobby free 50k MRU/app; Pro $25/mo ($20 annual) includes 50k MRU then overages from $0.02. Original \"10k MAU\" Pro allotment is obsolete. rate_limits: AUDITOR RIGHT. Official docs (clerk.com/docs/guides/how-clerk-works/system-limits) and changelog 2025-07-03: production 1000 req/10s (was 100), development 100 req/10s. example.response_snippet: AUDITOR RIGHT that {\"data\":[],\"total_count\":0} is wrong for raw REST. OpenAPI shows 200 is a JSON array of User objects; total_count is only a response header (not body), so empty list is []. SDK getUserList wraps as {data, totalCount}."
 }

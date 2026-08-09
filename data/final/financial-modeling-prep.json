@@ -25,7 +25,7 @@
   "rate_limits": "Published by plan: Free 250/day; Starter 300/min; Premium 750/min; Ultimate 3000/min",
   "example": {
     "request": "curl \"https://financialmodelingprep.com/stable/quote?symbol=AAPL&apikey=YOUR_API_KEY\"",
-    "response_snippet": "[{\"symbol\":\"AAPL\",\"name\":\"Apple Inc.\",\"price\":178.72,\"changesPercentage\":0.5,\"change\":0.89,\"dayLow\":177.5,\"dayHigh\":179.2,\"yearHigh\":199.62,\"yearLow\":164.08,\"marketCap\":2800000000000,\"volume\":52000000,\"avgVolume\":55000000,\"exchange\":\"NASDAQ\",\"open\":178.0,\"previousClose\":177.83,\"eps\":6.13,\"pe\":29.15,\"earningsAnnouncement\":null,\"sharesOutstanding\":15550000000,\"timestamp\":1710000000}]"
+    "response_snippet": "[{\"symbol\":\"AAPL\",\"name\":\"Apple Inc.\",\"price\":178.72,\"changePercentage\":0.5,\"change\":0.89,\"dayLow\":177.5,\"dayHigh\":179.2,\"yearHigh\":199.62,\"yearLow\":164.08,\"marketCap\":2800000000000,\"volume\":52000000,\"avgVolume\":55000000,\"exchange\":\"NASDAQ\",\"open\":178.0,\"previousClose\":177.83,\"eps\":6.13,\"pe\":29.15,\"earningsAnnouncement\":null,\"sharesOutstanding\":15550000000,\"timestamp\":1710000000}]"
   },
   "use_cases": [
     "get real-time or delayed stock quote for a ticker",
@@ -95,6 +95,25 @@
     ],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "docs_url",
+        "auth_type",
+        "auth_details",
+        "free_tier",
+        "free_tier_limits",
+        "rate_limits",
+        "cors",
+        "example_request",
+        "example_response_snippet",
+        "description"
+      ],
+      "upheld_original": false
+    }
   }
 }

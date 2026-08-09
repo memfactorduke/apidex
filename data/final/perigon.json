@@ -5,12 +5,12 @@
   "category": "news-media",
   "tagline": "Real-time news and web content API for developers",
   "description": "Perigon provides a news and web content API that delivers real-time articles, headlines, and structured media data for applications that need current events coverage, media monitoring, or content intelligence.",
-  "base_url": "https://api.goperigon.com/v1",
+  "base_url": "https://api.perigon.io/v1",
   "docs_url": "https://perigon.io/docs/",
   "signup_url": "https://www.goperigon.com",
   "auth": {
     "type": "apiKey",
-    "details": "API key authentication; exact header/query method needs verification from official docs"
+    "details": "API key via apiKey query parameter, Authorization: Bearer header, or x-api-key header; header authentication is recommended."
   },
   "https": true,
   "cors": "unknown",
@@ -24,7 +24,7 @@
   },
   "rate_limits": "Free: 1 req/sec; Basic: 2; Plus: 4; Commercial: custom (https://perigon.io/products/pricing/apis)",
   "example": {
-    "request": "curl \"https://api.goperigon.com/v1/articles/all?apiKey=YOUR_API_KEY&q=technology\"",
+    "request": "curl \"https://api.perigon.io/v1/articles/all?apiKey=YOUR_API_KEY&q=technology\"",
     "response_snippet": "{\n  \"status\": 200,\n  \"numResults\": 1,\n  \"articles\": [\n    {\n      \"url\": \"https://example.com/story\",\n      \"title\": \"Sample technology headline\",\n      \"source\": { \"domain\": \"example.com\" },\n      \"pubDate\": \"2026-08-01T12:00:00Z\"\n    }\n  ]\n}"
   },
   "use_cases": [
@@ -93,6 +93,17 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "base_url",
+        "auth_details",
+        "example_request"
+      ],
+      "upheld_original": false
+    }
   }
 }

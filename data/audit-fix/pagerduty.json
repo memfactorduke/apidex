@@ -3,15 +3,15 @@
   "base_url": null,
   "docs_url": null,
   "auth_type": null,
-  "auth_details": null,
+  "auth_details": "API key or OAuth 2.0 access token via Authorization: Token token=YOUR_API_KEY (or Bearer for OAuth). For certain requests using an account-level API key, include From: user@example.com. This is generally unnecessary for user-level keys.",
   "free_tier": null,
   "free_tier_limits": null,
   "paid_plans": null,
-  "rate_limits": null,
+  "rate_limits": "Generally 960 requests/minute per account API key, per user for user API keys, or per applicable OAuth app/user/account context; endpoint-specific exceptions may apply.",
   "cors": null,
   "example_request": null,
   "example_response_snippet": null,
   "description": null,
   "status": null,
-  "resolution_notes": "Verifying disputed auth.details and rate_limits against official PagerDuty docs."
+  "resolution_notes": "auth.details: Auditor correct. Official REST API docs require a From header (user email) for some account-level API key requests, not From-Token. Evidence: https://developer.pagerduty.com/docs/rest-api-v2/authentication/ and https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTUw-authentication. rate_limits: Auditor correct. Current official rate-limit guidance is 960 req/min (scope by credential type), not 900. Evidence: https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTU4-rate-limiting and https://developer.pagerduty.com/docs/rest-api-v2/rate-limiting/."
 }

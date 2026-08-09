@@ -19,10 +19,10 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "free_tier_limits": "300 requests/month; service is suspended until the next month after the quota is exceeded.",
     "paid_plans": null
   },
-  "rate_limits": "not published",
+  "rate_limits": "Plan- and endpoint-specific. FREE GET /search: 2 req/s and 20 req/min; PRO medium, ENTERPRISE high (other endpoint numbers not fully published).",
   "example": {
     "request": "curl -H \"X-ListenAPI-Key: YOUR_API_KEY\" \"https://listen-api.listennotes.com/api/v2/search?q=startup&type=episode\"",
     "response_snippet": "{\"count\": 10, \"total\": 12345, \"results\": [{\"id\": \"...\", \"title_original\": \"...\", \"podcast\": {\"title_original\": \"...\"}}]}"
@@ -91,6 +91,16 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits",
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

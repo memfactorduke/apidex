@@ -22,7 +22,7 @@
     "free_tier_limits": "Free; unregistered 25 queries/day (25 series/query); registered 500 queries/day (50 series/query). No paid plans.",
     "paid_plans": null
   },
-  "rate_limits": "Unregistered: 25 queries/day, 25 series per query. Registered: 500 queries/day, 50 series per query. Not published as per-second limits.",
+  "rate_limits": "Unregistered: 25 queries/day, 25 series/query; registered: 500 queries/day, 50 series/query. Also 50 requests per 10 seconds for both registered and unregistered.",
   "example": {
     "request": "curl -X POST 'https://api.bls.gov/publicAPI/v2/timeseries/data/' -H 'Content-Type: application/json' -d '{\"seriesid\":[\"CUUR0000SA0\"],\"startyear\":\"2023\",\"endyear\":\"2024\",\"registrationkey\":\"YOUR_API_KEY\"}'",
     "response_snippet": "{\"status\":\"REQUEST_SUCCEEDED\",\"responseTime\":120,\"message\":[],\"Results\":{\"series\":[{\"seriesID\":\"CUUR0000SA0\",\"data\":[{\"year\":\"2024\",\"period\":\"M12\",\"periodName\":\"December\",\"value\":\"315.605\",\"footnotes\":[{}]}]}]}}"
@@ -96,6 +96,15 @@
     "corrected": [],
     "unverifiable": [
       "cors"
-    ]
+    ],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

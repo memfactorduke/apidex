@@ -19,7 +19,7 @@
   ],
   "pricing": {
     "free_tier": true,
-    "free_tier_limits": "Free plan: 40,000 Compute Units (CU)/month; rate limits apply by plan",
+    "free_tier_limits": "Free plan: 40,000 Compute Units per day and 40 RPS; attribution required.",
     "paid_plans": "Paid plans by compute units (CU) and throughput; see moralis.io/pricing"
   },
   "rate_limits": "Plan-based throughput and monthly CU; exact numbers depend on plan (not fully verified here)",
@@ -95,6 +95,15 @@
       "example_request",
       "example_response_snippet"
     ],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "free_tier_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }

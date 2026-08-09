@@ -22,7 +22,7 @@
     "free_tier_limits": "api.data.gov standard free tier (typically 1,000 req/hour); confirm on signup",
     "paid_plans": null
   },
-  "rate_limits": "Subject to api.data.gov rate limits; exact published limits may vary",
+  "rate_limits": "api.data.gov default: 1,000 requests/hour for ordinary keys; Comment (POST) API: 50 requests/minute and 500 requests/hour; GSA may grant indefinite GET-key increases case-by-case; POST key increases not available",
   "example": {
     "request": "curl -H \"X-Api-Key: YOUR_API_KEY\" \"https://api.regulations.gov/v4/documents?filter[searchTerm]=climate&page[size]=5\"",
     "response_snippet": "{\"data\":[{\"id\":\"EPA-HQ-OAR-2021-0317-0001\",\"type\":\"documents\",\"attributes\":{\"title\":\"...\",\"documentType\":\"Proposed Rule\",\"agencyId\":\"EPA\"}}],\"meta\":{\"totalElements\":...}}"
@@ -91,6 +91,15 @@
       "description"
     ],
     "corrected": [],
-    "unverifiable": []
+    "unverifiable": [],
+    "audit": {
+      "auditor": "gpt-5.6-offline",
+      "arbiter": "grok-4.5-live-web",
+      "date": "2026-08-08",
+      "corrected": [
+        "rate_limits"
+      ],
+      "upheld_original": false
+    }
   }
 }
