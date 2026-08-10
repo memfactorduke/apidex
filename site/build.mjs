@@ -63,6 +63,9 @@ function shell({ root, title, desc, path, body, current }) {
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:type" content="website">
+<meta property="og:image" content="${SITE_URL}/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE_URL}/og.png">
 <meta name="theme-color" content="#f5f6f2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#15170f" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="${root}favicon.svg" type="image/svg+xml">
@@ -351,6 +354,7 @@ for (const a of apis) {
   writeFileSync(join(dir, 'index.html'), detailPage(a));
 }
 
+cpSync(join(HERE, 'src', 'og.png'), join(DIST, 'og.png'));
 cpSync(join(HERE, 'src', 'styles.css'), join(DIST, 'assets', 'styles.css'));
 cpSync(join(HERE, 'src', 'fonts.css'), join(DIST, 'assets', 'fonts.css'));
 cpSync(join(HERE, 'src', 'app.js'), join(DIST, 'assets', 'app.js'));
