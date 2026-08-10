@@ -2,6 +2,8 @@
 
 An MCP server that gives coding agents a **verified directory of public APIs**.
 
+**Browse the directory:** https://memfactorduke.github.io/apidex/
+
 Agents hallucinate APIs constantly — dead endpoints, invented auth schemes, imaginary rate
 limits. apidex fixes that: every entry in its dataset was researched and then **cross-checked
 by two independent verification passes** (plus automated liveness checks), with disagreements

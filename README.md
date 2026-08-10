@@ -4,9 +4,13 @@ This repo builds **[apidex](mcp-server/)**: an MCP server giving coding agents a
 directory of public APIs. The dataset is produced by a fleet of Grok 4.5 agents orchestrated
 by Claude (Fable 5), with every fact cross-checked by independent verification passes.
 
+**Browse the directory:** https://memfactorduke.github.io/apidex/ · **Install:**
+`claude mcp add apidex -- npx -y apidex`
+
 ## Layout
 
 - `mcp-server/` — the publishable npm package (`npx apidex`), TypeScript MCP server
+- `site/` — the static directory site (zero-dep SSG), deployed to GitHub Pages on push
 - `schema/` — JSON Schemas constraining every agent's output (`--json-schema` decoding)
 - `pipeline/` — fleet runner + per-phase job generators
 - `data/` — pipeline artifacts: `seeds/` → `research/` → `verify/` → `adjudicate/` → `final/`
