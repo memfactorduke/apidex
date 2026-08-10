@@ -29,7 +29,9 @@ Use web search heavily — check the official docs, pricing page, and any status
 
 
 def main():
-    merged = ROOT / "data" / "seeds" / "merged.jsonl"
+    import sys
+    merged = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "data" / "seeds" / "merged.jsonl"
+    out_name = sys.argv[2] if len(sys.argv) > 2 else "jobs-research.jsonl"
     seeds = [json.loads(l) for l in merged.read_text().splitlines() if l.strip()]
     # Round-robin across categories so a mid-phase quota death still leaves
     # every category evenly covered.
@@ -52,7 +54,7 @@ def main():
             "schema": str(ROOT / "schema" / "entry.schema.json"),
             "out": str(ROOT / "data" / "research" / f"{s['slug']}.json"),
         })
-    out = ROOT / "pipeline" / "jobs-research.jsonl"
+    out = ROOT / "pipeline" / out_name
     out.write_text("\n".join(json.dumps(j) for j in jobs) + "\n")
     print(f"wrote {len(jobs)} researcher jobs to {out}")
 
