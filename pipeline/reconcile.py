@@ -44,10 +44,17 @@ def load(p):
 
 def main():
     emit_queue = "--emit-queue" in sys.argv
-    finals, conflicts, dropped, waiting = 0, [], [], 0
+    # --skip-existing: never rewrite an entry that already shipped. Round-1
+    # finals carry audit-arbitration corrections that exist nowhere in
+    # research/verify/adjudicate inputs; rebuilding them would erase those.
+    skip_existing = "--skip-existing" in sys.argv
+    finals, conflicts, dropped, waiting, preserved = 0, [], [], 0, 0
     for f in sorted((ROOT / "data" / "research").glob("*.json")):
         entry = load(f)
         slug = entry["id"]
+        if skip_existing and (ROOT / "data" / "final" / f"{slug}.json").exists():
+            preserved += 1
+            continue
         if entry.get("status") == "defunct":
             dropped.append((slug, "researcher: defunct"))
             continue
@@ -92,7 +99,8 @@ def main():
     if emit_queue:
         q = ROOT / "data" / "adjudicate-queue.jsonl"
         q.write_text("\n".join(json.dumps(c) for c in conflicts) + ("\n" if conflicts else ""))
-    print(f"finalized={finals} conflicts={len(conflicts)} waiting={waiting} dropped={len(dropped)}")
+    print(f"finalized={finals} conflicts={len(conflicts)} waiting={waiting} "
+          f"dropped={len(dropped)} preserved={preserved}")
     for slug, why in dropped:
         print(f"  dropped {slug}: {why}")
 

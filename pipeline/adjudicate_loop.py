@@ -22,7 +22,7 @@ def verify_fleet_running():
 
 for rnd in range(1, MAX_ROUNDS + 1):
     purged = int(run(["python3", "pipeline/purge_punts.py"]).stdout.strip().splitlines()[-1])
-    run(["python3", "pipeline/reconcile.py", "--emit-queue"])
+    run(["python3", "pipeline/reconcile.py", "--emit-queue", "--skip-existing"])
     gen = run(["python3", "pipeline/gen_adjudicate_jobs.py"]).stdout
     njobs = int(gen.split("wrote ")[1].split(" ")[0])
     print(f"[round {rnd}] purged={purged} queued={njobs}", flush=True)
