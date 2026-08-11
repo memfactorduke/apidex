@@ -1,0 +1,52 @@
+{
+  "id": "db-ip",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://db-ip.com/api/doc.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://db-ip.com/api/doc.php"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://db-ip.com/api/doc.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://db-ip.com/api/doc.php"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free API key: 1,000 queries/day; free lite path (no key) also offered with non-commercial limits (docs describe free endpoint usage constraints)",
+      "source": "https://db-ip.com/api/doc.php"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 1,000 queries/day; paid plans have higher daily quotas (see account/pricing)",
+      "source": "https://db-ip.com/api/doc.php"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://db-ip.com/api/doc.php"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://db-ip.com/api/doc.php"
+    }
+  },
+  "notes": "Docs-first check of db-ip.com API docs and pricing. Free lite and key-based free tier exist; free tier has published 1k/day limit so free_tier_limits and rate_limits should not be unknown/not published. CORS not stated in official docs."
+}

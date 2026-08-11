@@ -1,0 +1,100 @@
+{
+  "id": "qr-code-generator",
+  "status": "operational",
+  "name": "QR Code Generator",
+  "category": "utilities",
+  "tagline": "Free HTTP API that generates downloadable QR code images from text or URLs",
+  "description": "Simple free public HTTP API from goQR.me that turns submitted text or URLs into QR code images. The create-qr-code endpoint supports PNG, GIF, JPEG/JPG, SVG, and EPS output without signup, making it useful for embeds, email signatures, and print assets.",
+  "base_url": "https://api.qrserver.com/v1",
+  "docs_url": "https://goqr.me/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public HTTP GET endpoints; no API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "binary",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free unlimited use for reasonable traffic; commercial use allowed. No published hard free quota. Very high volume may require contacting them.",
+    "paid_plans": null
+  },
+  "rate_limits": "No request limit. The provider may reject requests it considers abusive or inappropriate. Services regularly generating more than 10,000 requests per day should notify the provider.",
+  "example": {
+    "request": "curl -sS -o qr.png \"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example\"",
+    "response_snippet": "Binary PNG image bytes (Content-Type: image/png). For SVG: ...&format=svg returns XML SVG markup."
+  },
+  "use_cases": [
+    "generate a PNG QR code image from a URL or plain text",
+    "create SVG QR codes for print or high-resolution embeds",
+    "build a simple endpoint that returns QR codes without a local library",
+    "embed QR codes in emails, invoices, or tickets from a server script"
+  ],
+  "sources": [
+    "https://goqr.me/api/",
+    "https://goqr.me/api/doc/create-qr-code/",
+    "https://api.qrserver.com/v1/create-qr-code/"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example"
+    ],
+    "corrected": [
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

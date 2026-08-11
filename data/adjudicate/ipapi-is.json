@@ -1,0 +1,15 @@
+{
+  "id": "ipapi-is",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "100 anonymous requests per client IP per UTC day with a minimal response; 1,000 requests per day with a free account and API key, returning the full response.",
+  "rate_limits": "100 anonymous requests per client IP per UTC day; excess requests return HTTP 429 and continued hammering triggers a 12-hour firewall ban. Free accounts receive 1,000 requests/day; paid daily quotas range from 20,000 to 2,000,000.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifiers confirmed. Current official docs state 100 anonymous requests per client IP per UTC day with minimal output and 1,000/day for a free keyed account with full output: https://ipapi.is/developers.html. rate_limits: Original 'not published' is incorrect; the same docs publish HTTP 429 and a 12-hour ban, while paid quotas are listed at https://ipapi.is/pricing.html."
+}

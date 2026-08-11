@@ -1,0 +1,41 @@
+{
+  "id": "opentripmap",
+  "status": "operational",
+  "name": "OpenTripMap",
+  "category": "travel-hospitality",
+  "tagline": "Worldwide tourist attractions and points of interest API for travel apps",
+  "description": "OpenTripMap provides geospatial access to tourist attractions, landmarks, and points of interest worldwide. Developers query places by radius, bounding box, or name and retrieve details such as coordinates, categories, ratings, Wikipedia extracts, and images. Typical use is powering travel discovery, map layers, and itinerary features with free developer access and an API key.",
+  "base_url": "https://api.opentripmap.com/0.1",
+  "docs_url": "https://opentripmap.io/docs",
+  "signup_url": "https://opentripmap.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter; free self-serve registration on opentripmap.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=2.2945&lat=48.8584&apikey=YOUR_API_KEY\"",
+    "response_snippet": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"id\":\"W123\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[2.2945,48.8584]},\"properties\":{\"xid\":\"W123\",\"name\":\"Eiffel Tower\",\"rate\":7,\"kinds\":\"architecture,interesting_places\"}}]}"
+  },
+  "use_cases": [
+    "list tourist attractions near a lat/lon within a radius",
+    "get place details and Wikipedia extract by xid",
+    "search points of interest by name or bounding box",
+    "filter attractions by category kinds for a map layer"
+  ],
+  "sources": [
+    "https://opentripmap.io/docs",
+    "https://opentripmap.io/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "mobygames",
+  "status": "operational",
+  "name": "MobyGames",
+  "category": "games-comics",
+  "tagline": "Historical game catalog with platforms, covers, credits, and companies",
+  "description": "MobyGames API provides access to a deep historical catalog of video games including platforms, cover art, credits, and company relationships. Developers can query game metadata for catalogs, research tools, and game-related applications.",
+  "base_url": "https://api.mobygames.com/v1",
+  "docs_url": "https://www.mobygames.com/info/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required; pass as query parameter or header per current docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.mobygames.com/v1/games?api_key=YOUR_API_KEY&title=halo&limit=1\"",
+    "response_snippet": "{\"games\":[{\"game_id\":1,\"title\":\"Example\",\"moby_url\":\"https://www.mobygames.com/game/...\"}]}"
+  },
+  "use_cases": [
+    "look up a game by title and platform",
+    "fetch cover art and release metadata for a catalog",
+    "list credits and companies for a game",
+    "search historical game releases by year or platform"
+  ],
+  "sources": [
+    "https://www.mobygames.com/info/api/"
+  ],
+  "researcher_confidence": "low"
+}

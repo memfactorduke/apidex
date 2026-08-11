@@ -1,0 +1,52 @@
+{
+  "id": "workable",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://{subdomain}.workable.com/spi/v3",
+      "source": "https://workable.readme.io/reference/jobs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://workable.readme.io/reference/generate-an-access-token"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.workable.com/hc/en-us/articles/115015785428-Generating-revoking-access-tokens-for-Workable-s-API"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://help.workable.com/hc/en-us/articles/115011955988-Workable-plans-packages-and-pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "A 15-day Standard-plan trial is available. After a trial or subscription ends, the restricted Free plan cannot post jobs or interact with candidates and can only view existing candidate data.",
+      "source": "https://help.workable.com/hc/en-us/articles/115011955988-Workable-plans-packages-and-pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "10 requests per 10 seconds; exceeding the limit returns HTTP 429.",
+      "source": "https://help.workable.com/hc/en-us/articles/115013356548-Workable-API-Documentation"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "not supported",
+      "source": "https://help.workable.com/hc/en-us/articles/4903195036183-Troubleshooting-API-issues"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://<subdomain>.workable.com/spi/v3/jobs\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+      "source": "https://workable.readme.io/reference/generate-an-access-token"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Workable is an ATS with a REST API for retrieving jobs and hiring-workflow data and for creating, updating, and moving candidates. Its documented native job endpoints retrieve job postings; the current official documentation does not show native endpoints for creating or updating job postings.",
+      "source": "https://help.workable.com/hc/en-us/articles/115013356548-Workable-API-Documentation"
+    }
+  },
+  "notes": "The current API is SPI v3 under each account subdomain. It uses an API key/token in the Authorization: Bearer header, limits requests to 10 per 10 seconds, and does not support CORS. Workable documents both a 15-day trial and a restricted Free plan."
+}

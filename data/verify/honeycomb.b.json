@@ -1,0 +1,52 @@
+{
+  "id": "honeycomb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.honeycomb.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 20 million events and 100 million metrics data points per month; includes 2 triggers.",
+      "source": "https://www.honeycomb.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are documented through response headers and endpoint-specific limits. Create Query Result is limited to 10 requests per minute; its relational-fields variant is limited to 1 request per minute.",
+      "source": "https://docs.honeycomb.io/api/rate-limit"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/auth/list-authorizations"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/introduction"
+    }
+  },
+  "notes": "The API is current and operational. The listed base URL is the US endpoint; EU accounts use https://api.eu1.honeycomb.io. The entry fails because current free-plan limits and API rate-limit information are officially published, contrary to the supplied values. No authoritative API-wide CORS policy was located."
+}

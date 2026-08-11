@@ -1,0 +1,52 @@
+{
+  "id": "complyadvantage",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.complyadvantage.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.complyadvantage.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.complyadvantage.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://complyadvantage.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://complyadvantage.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: 600 API calls/minute (standard contract); 300/minute (sandbox). Higher limits available by contract.",
+      "source": "https://docs.complyadvantage.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.complyadvantage.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.complyadvantage.com/"
+    }
+  },
+  "notes": "Clear fail on rate_limits: official docs publish 600/min (standard) and 300/min (sandbox), not 'not published'. Classic CSOM API at api.complyadvantage.com is live (401 Token realm). Auth Token scheme and GET /searches match docs. ComplyLaunch is free for qualifying startups but not a general free API tier. Mesh is a separate product (OAuth2)."
+}

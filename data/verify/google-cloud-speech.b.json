@@ -1,0 +1,52 @@
+{
+  "id": "google-cloud-speech",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://speech.googleapis.com",
+      "source": "https://cloud.google.com/speech-to-text/docs/reference/rest"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/speech-to-text/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/speech-to-text/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/speech-to-text/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "60 minutes per month free for Standard models (Speech-to-Text API v1); free trial credits also apply. Check pricing page for current model-specific free allotments.",
+      "source": "https://cloud.google.com/speech-to-text/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published default quotas exist (e.g. requests per minute for recognize/streaming); configurable in Cloud Console Quotas. Not \"not published\".",
+      "source": "https://cloud.google.com/speech-to-text/quotas"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/speech-to-text/docs/reference/rest/v1/speech/recognize"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/speech-to-text/docs"
+    }
+  },
+  "notes": "Adversarial review found wrongs: base_url should not include /v1 as the service root in the usual directory sense (or is acceptable as REST base\u2014recheck). free_tier_limits is knowable from pricing. rate_limits are published as quotas."
+}

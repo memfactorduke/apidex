@@ -1,0 +1,96 @@
+{
+  "id": "descope",
+  "status": "operational",
+  "name": "Descope",
+  "category": "security-identity",
+  "tagline": "Passwordless auth and identity platform API for passkeys, SSO, and MFA",
+  "description": "Descope is a modern authentication and identity platform API that provides passwordless login (passkeys, magic links, OTPs), social login, enterprise SSO (SAML/OIDC), MFA, session management, and user management. Positioned as a 2020s alternative to Auth0/Okta for developers building secure auth flows without maintaining identity infrastructure.",
+  "base_url": "https://api.descope.com",
+  "docs_url": "https://docs.descope.com/",
+  "signup_url": "https://app.descope.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Project ID and Management Key (or access key) sent via Authorization header; see docs for exact header format"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free Forever: 7,500 MAUs, 10 active tenants, 3 SSO connections, 1 OIDC federated app, 5 test users, 10,000 M2M exchanges, 2,000 MACs and 2,000 MATKs; community support; no overages (upgrade required).",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X POST https://api.descope.com/v1/mgmt/user/search -H \"Authorization: Bearer <ProjectId>:<ManagementKey>\" -H \"Content-Type: application/json\" -d '{}'",
+    "response_snippet": "{\"users\":[{\"loginIds\":[\"brian\"],\"userId\":\"U2iOCFIwsdgeGvusdfkKUb9HJKsdi\",\"name\":\"Brian\",\"email\":\"\",\"verifiedEmail\":false,\"roleNames\":[],\"userTenants\":[],\"status\":\"enabled\"}]}"
+  },
+  "use_cases": [
+    "authenticate users with passkeys or magic links",
+    "configure enterprise SSO (SAML/OIDC)",
+    "enforce MFA and session management",
+    "manage users and tenants via management API"
+  ],
+  "sources": [
+    "https://docs.descope.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

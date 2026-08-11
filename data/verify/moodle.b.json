@@ -1,0 +1,52 @@
+{
+  "id": "moodle",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supportus.moodle.com/support/solutions/articles/80001016973-using-the-web-services-application-programming-interface-api-in-moodle"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://moodledev.io/docs/apis/subsystems/external"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/moodle/moodle/blob/main/public/webservice/rest/server.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.moodle.com/support/solutions/articles/80000825155-moodlecloud-and-moodle-hosting-options"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported; Moodle sets Access-Control-Allow-Origin: * for web-service requests when needed, although a proxy, firewall, or web-server module can remove it",
+      "source": "https://docs.moodle.org/500/en/Moodle_app_FAQ"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/moodle/moodle/blob/main/public/webservice/rest/locallib.php"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Moodle Web Services are site-specific, but deployments may be self-hosted, hosted directly by Moodle through MoodleCloud, or hosted by a Moodle Certified Partner or Service Provider.",
+      "source": "https://support.moodle.com/support/solutions/articles/80000825155-moodlecloud-and-moodle-hosting-options"
+    }
+  },
+  "notes": "HTTP 0 is expected because the base URL contains a placeholder rather than a resolvable host. The entry fails because CORS is documented as supported and the description incorrectly excludes first-party MoodleCloud hosting. Moodle 4.1 also moved XML-RPC web services out of core into a separate plugin. Official sources did not establish the claimed global rate-limit policy or the complete no-quota wording."
+}

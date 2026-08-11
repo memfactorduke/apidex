@@ -1,0 +1,52 @@
+{
+  "id": "tenderly",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tenderly.co/api-reference/simulator/simulate-transaction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tenderly.co/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tenderly.co/api-reference/simulator/simulate-transaction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tenderly.co/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Tenderly Free includes Explorer, Debugger, and single-transaction simulation in the browser. It does not include API or Node RPC access.",
+      "source": "https://tenderly.co/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Current public documentation does not publish plan-specific rate-limit quotas. Node RPC is paid-only and metered using per-method Tenderly Unit costs; customers must contact sales to discuss capacity and limits.",
+      "source": "https://docs.tenderly.co/node-rpc/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tenderly.co/api-reference/simulator/simulate-transaction"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Tenderly provides the listed simulation, debugging, Node RPC, Virtual Environment, and monitoring capabilities. However, API access tokens are personal-account or organization tokens, not project-scoped keys. REST paths commonly identify account and project slugs, while Node RPC access keys are embedded in gateway URLs.",
+      "source": "https://docs.tenderly.co/platform/account/projects/api-tokens"
+    }
+  },
+  "notes": "The REST base URL, X-Access-Key authentication, and simulation example remain current. The material errors concern the 2026 commercial model: Free has no API or Node RPC access, current team pricing has no public plan tiers or quotas, and access tokens are account- or organization-level rather than project-scoped."
+}

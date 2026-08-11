@@ -1,0 +1,43 @@
+{
+  "id": "paystack",
+  "status": "operational",
+  "name": "Paystack API",
+  "category": "ecommerce-payments",
+  "tagline": "African payments API for cards, bank transfers, and mobile money",
+  "description": "Paystack is a payment gateway popular across Africa that lets businesses accept card, bank transfer, USSD, and mobile money payments. Its REST API covers charge initialization, verification, customers, transfers, subscriptions, and settlements, with sandbox keys for testing and production keys for live traffic.",
+  "base_url": "https://api.paystack.co",
+  "docs_url": "https://paystack.com/docs/api/",
+  "signup_url": "https://dashboard.paystack.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token: Authorization: Bearer YOUR_SECRET_KEY (secret key from dashboard). Public key used client-side for Paystack Inline/JS."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No monthly platform fee; pay per successful transaction (rates vary by country/channel). Test mode free with test keys.",
+    "paid_plans": "Transaction fees only (e.g. Nigeria cards often ~1.5% + cap); no fixed subscription required for standard API access."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.paystack.co/transaction/verify/YOUR_REFERENCE -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"status\":true,\"message\":\"Verification successful\",\"data\":{\"id\":123,\"status\":\"success\",\"reference\":\"YOUR_REFERENCE\",\"amount\":20000,\"currency\":\"NGN\"}}"
+  },
+  "use_cases": [
+    "initialize a payment for an order amount and email",
+    "verify a transaction by reference after checkout",
+    "list or create customers for recurring billing",
+    "initiate a bank transfer payout to a recipient",
+    "charge a saved authorization for subscription renewal"
+  ],
+  "sources": [
+    "https://paystack.com/docs/api/",
+    "https://paystack.com/pricing",
+    "https://paystack.com/docs/payments/accept-payments/"
+  ],
+  "researcher_confidence": "medium"
+}

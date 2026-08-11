@@ -1,0 +1,99 @@
+{
+  "id": "solcast",
+  "status": "operational",
+  "name": "Solcast",
+  "category": "energy-utilities",
+  "tagline": "High-accuracy solar irradiance and PV power forecasts via REST API",
+  "description": "Solcast provides high-accuracy solar irradiance and photovoltaic (PV) power forecast and live data via a REST API. Developers use it for solar resource assessment, short-term PV power forecasting, and grid/energy management applications. A free tier is available for limited API use.",
+  "base_url": "https://api.solcast.com.au",
+  "docs_url": "https://docs.solcast.com.au/",
+  "signup_url": "https://toolkit.solcast.com.au/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or Authorization header; self-serve signup at Solcast Toolkit."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Evaluation: up to 15 Historic Time Series and 10 Live/Forecast requests at user locations; unlimited at unmetered locations. Researchers receive 50 free historical requests. Home hobbyists receive 10 requests/day for one residential site.",
+    "paid_plans": "Commercial plans available"
+  },
+  "rate_limits": "Enforced per API key and dependent on the subscription plan/product. Current limits are shown in the API Toolkit and response headers; exceeding a rate limit returns HTTP 429 with Retry-After.",
+  "example": {
+    "request": "curl -X GET \"https://api.solcast.com.au/data/live/radiation_and_weather?latitude=-33.8567&longitude=151.2152&hours=1&period=PT30M&output_parameters=ghi&format=json\" -H \"Authorization: Bearer $API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"estimated_actuals\":[{\"ghi\":639,\"period_end\":\"2026-08-07T02:30:00.0000000Z\",\"period\":\"PT30M\"}]}"
+  },
+  "use_cases": [
+    "get live solar irradiance for a lat/lon",
+    "fetch PV power forecast for a site",
+    "retrieve historical solar radiation data",
+    "get satellite-based solar estimates"
+  ],
+  "sources": [
+    "https://docs.solcast.com.au/",
+    "https://solcast.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "traveltime",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.traveltime.com/api/overview/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.traveltime.com/api/overview/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.traveltime.com/api/start/auth"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://account.traveltime.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "A two-week free trial allows up to 60 hits per minute. Afterward, non-paid access is limited to 5 hits per minute. Endpoint-specific travel-time and level-of-detail limits also apply.",
+      "source": "https://docs.traveltime.com/api/overview/usage-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published and plan-dependent: 60 hits per minute during the two-week trial, 5 hits per minute afterward, and custom or no concurrency limits for paid licences.",
+      "source": "https://docs.traveltime.com/api/overview/usage-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.traveltime.com/api/reference/isochrones"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.traveltime.com/api/overview/introduction"
+    }
+  },
+  "notes": "Official status and update pages show API v4 operational with no shutdown or migration warning. The material error is the claim that limits are unknown or unpublished; TravelTime documents trial, post-trial, endpoint, and plan-specific limits. CORS remains undocumented in the official sources located."
+}

@@ -1,0 +1,95 @@
+{
+  "id": "ankr",
+  "status": "operational",
+  "name": "Ankr",
+  "category": "crypto",
+  "tagline": "Multi-chain public RPC and Advanced API for balances, NFTs, and tokens",
+  "description": "Ankr provides free and premium multi-chain JSON-RPC endpoints plus an Advanced API for token balances, NFT data, and blockchain queries across many networks.",
+  "base_url": "https://rpc.ankr.com",
+  "docs_url": "https://www.ankr.com/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Public RPC works without a key at path endpoints; Advanced API and higher limits use an API key from the Ankr dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public Node API is free. Freemium includes 200M API credits/month. Public and Freemium Node API guarantee about 1,800 requests/min across all endpoints; Freemium Advanced API allows 50 requests/min, capped at 500 per 10 min.",
+    "paid_plans": null
+  },
+  "rate_limits": "Public/Freemium Node API: about 1,800 requests/min guaranteed across all endpoints, with more possible depending on load. Freemium Advanced API: 50 requests/min, maximum 500/10 min. Premium Node API: up to about 1,500 requests/sec per endpoint, or 4,000/sec for Solana; Advanced API: 1,000+/min.",
+  "example": {
+    "request": "curl -X POST https://rpc.ankr.com/eth -H 'Content-Type: application/json' -d '{\"jsonrpc\":\"2.0\",\"method\":\"eth_blockNumber\",\"params\":[],\"id\":1}'",
+    "response_snippet": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"0x12a05f1\"}"
+  },
+  "use_cases": [
+    "call eth_blockNumber on Ethereum via public RPC",
+    "query token balances across chains",
+    "fetch NFT metadata for a wallet",
+    "send multi-chain JSON-RPC requests"
+  ],
+  "sources": [
+    "https://www.ankr.com/docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

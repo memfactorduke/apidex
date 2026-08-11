@@ -1,0 +1,52 @@
+{
+  "id": "levels-fyi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.levels.fyi/api-access/",
+      "source": "https://www.levels.fyi/api-access/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.levels.fyi/offerings/data/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable; API access is listed only with the paid Enterprise plan, currently $4,000/month with an annual commitment.",
+      "source": "https://www.levels.fyi/offerings/data/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No public curl request, root API endpoint, or example response is documented; prospective users must request access.",
+      "source": "https://www.levels.fyi/api-access/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Levels.fyi offers granular, real-time salary and leveling data. API, MCP, or CLI access is request-based, and API access to the Data Stream is listed under the paid Enterprise plan.",
+      "source": "https://www.levels.fyi/offerings/data/"
+    }
+  },
+  "notes": "The current official API page is an access-request page, not public endpoint documentation. It publishes embeds but no API base URL, authentication scheme, rate limits, CORS policy, or curl examples. The community URL is unrelated to API documentation."
+}

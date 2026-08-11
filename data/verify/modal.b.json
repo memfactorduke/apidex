@@ -1,0 +1,52 @@
+{
+  "id": "modal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/modal-labs/modal-client/blob/main/py/modal/config.py"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/docs/sdk/py/latest/config"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The Starter plan includes $30/month of compute and costs $0 plus compute usage; the pricing page does not restrict this recurring credit to new users.",
+      "source": "https://modal.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "For a new account, the workspace limit is 200 Function calls or HTTP requests per second with a five-second burst multiplier; excess requests return HTTP 429.",
+      "source": "https://modal.com/docs/guide/webhooks"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/docs/guide/webhooks"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/docs"
+    }
+  },
+  "notes": "api.modal.com is the SDK's primary gRPC control-plane host, with api.modal2.com as failover; Modal warns that its gRPC API is not public. User-facing HTTP endpoints instead have deployment-specific modal.run URLs. The auth details also use the old web_endpoint name, now fastapi_endpoint."
+}

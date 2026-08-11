@@ -1,0 +1,38 @@
+{
+  "id": "intrinio",
+  "status": "operational",
+  "name": "Intrinio",
+  "category": "finance",
+  "tagline": "Institutional-grade fundamentals, options, and real-time market data API",
+  "description": "Intrinio provides financial market data APIs covering equities, options, fundamentals, company filings, and real-time/delayed market data for developers and institutions.",
+  "base_url": "https://api-v2.intrinio.com",
+  "docs_url": "https://docs.intrinio.com/",
+  "signup_url": "https://intrinio.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header/query mechanism needs verification from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api-v2.intrinio.com/companies/AAPL\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "get company fundamentals for a ticker",
+    "fetch options chain data for a stock"
+  ],
+  "sources": [
+    "https://docs.intrinio.com/"
+  ],
+  "researcher_confidence": "low"
+}

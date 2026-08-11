@@ -1,0 +1,99 @@
+{
+  "id": "rest-countries",
+  "status": "operational",
+  "name": "REST Countries",
+  "category": "travel-hospitality",
+  "tagline": "Free country metadata API for names, capitals, currencies, borders, and flags",
+  "description": "Read-only JSON-over-HTTPS country-data API covering 90+ normalized fields, including names, codes, capitals, currencies, languages, borders, geography, and flags. The maintained public surface is v5 at api.restcountries.com and requires an API key; a restricted demo key is available without an account.",
+  "base_url": "https://api.restcountries.com/countries/v5",
+  "docs_url": "https://restcountries.com/docs/countries",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "No authentication required for public read endpoints; requests work without API keys or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 500 requests/month, up to 100 objects/request, 24-hour data sync, and 2 API keys.",
+    "paid_plans": "Commercial license/plan available via the project site; exact tiers and prices not fully public as standard SaaS tiers"
+  },
+  "rate_limits": "Sustained traffic above 20 requests per 10 seconds is rejected with HTTP 429; monthly plan quotas also apply.",
+  "example": {
+    "request": "curl \"https://api.restcountries.com/countries/v5?q=Canada&response_fields=names.common,codes.alpha_2,flag.emoji&api-key=rc_live_demo&pretty=1\"",
+    "response_snippet": "{\"data\":{\"objects\":[{\"names\":{\"common\":\"Canada\"},\"codes\":{\"alpha_2\":\"CA\"},\"flag\":{\"emoji\":\"\ud83c\udde8\ud83c\udde6\"}}],\"meta\":{\"total\":1,\"count\":1,\"limit\":25,\"offset\":0,\"more\":false}}}"
+  },
+  "use_cases": [
+    "get capital and currency for a country by name",
+    "list countries by region for a trip planner filter",
+    "resolve ISO country code to borders and neighboring countries",
+    "fetch flag and demonym metadata for visa or travel UI labels",
+    "search countries by currency code for multi-currency trip apps"
+  ],
+  "sources": [
+    "https://restcountries.com/",
+    "https://gitlab.com/restcountries/restcountries",
+    "https://restcountries.com/#api-endpoints-v3"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "free_tier"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

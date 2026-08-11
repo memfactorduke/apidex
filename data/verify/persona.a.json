@@ -1,0 +1,52 @@
+{
+  "id": "persona",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.withpersona.com/api-reference/inquiries/list-all-inquiries"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.withpersona.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.withpersona.com/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.withpersona.com/articles/6oZbzp7jb7AWGClF5vpY3K/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable: there is no ongoing free tier. Persona currently offers a no-credit-card 60-day Essential trial with up to 50 services, Sandbox-only by default.",
+      "source": "https://help.withpersona.com/articles/6oZbzp7jb7AWGClF5vpY3K/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The default production environment limit is 300 API requests per minute. Product-specific creation quotas also apply and are shown in the Persona Dashboard.",
+      "source": "https://docs.withpersona.com/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.withpersona.com/api-reference/inquiries/list-all-inquiries"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.withpersona.com/api-introduction"
+    }
+  },
+  "notes": "Current pricing and Help Center materials supersede Persona's older Starter-plan blog: the current entry-level plan is paid, with only a limited trial. The example curl is a valid GET request for listing inquiries; the supplied response snippet is schematic and omits the list endpoint's array wrapper."
+}

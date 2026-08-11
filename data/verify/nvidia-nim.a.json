@@ -1,0 +1,52 @@
+{
+  "id": "nvidia-nim",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.nvidia.com/nim/reference/llm-apis"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.nvidia.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.nvidia.com/nim/re/docs/api-quickstart"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nvidia.com/en-us/ai-data-science/products/nim-microservices/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.api.nvidia.com/nim/re/docs/faq"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Limits vary by model and concurrent usage; users must check the applicable limits in their signed-in build.nvidia.com account.",
+      "source": "https://forums.developer.nvidia.com/t/nvidia-nim-faq/300317"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST https://integrate.api.nvidia.com/v1/chat/completions -H \"Authorization: Bearer $NVIDIA_API_KEY\" -H \"Content-Type: application/json\" -H \"Accept: application/json\" -d '{\"model\":\"meta/llama-guard-4-12b\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+      "source": "https://docs.api.nvidia.com/nim/reference/meta-llama-guard-4-12b-infer"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nvidia.com/en-us/ai-data-science/products/nim-microservices/"
+    }
+  },
+  "notes": "The hosted API and documentation are operational. NVIDIA confirms free hosted prototyping and API-key authentication using bearer credentials. Public sources describe trial credits but do not consistently state a current numeric allowance. The placeholder curl is invalid, and rate limits are model/load dependent rather than simply unpublished."
+}

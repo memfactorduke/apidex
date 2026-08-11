@@ -1,0 +1,15 @@
+{
+  "id": "careerjet",
+  "base_url": "https://search.api.careerjet.net/v4/query",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl --user \"YOUR_API_KEY:\" --get \"https://search.api.careerjet.net/v4/query\" --data-urlencode \"locale_code=en_GB\" --data-urlencode \"keywords=python developer\" --data-urlencode \"location=London\" --data-urlencode \"user_ip=1.2.3.4\" --data-urlencode \"user_agent=Mozilla/5.0\" --data-urlencode \"page_size=10\"",
+  "example_response_snippet": "{\"type\":\"JOBS\",\"hits\":62,\"message\":\"62 matching jobs found\",\"pages\":4,\"response_time\":0.322,\"jobs\":[{\"title\":\"Python Developer\",\"company\":\"NBC\",\"date\":\"Mon, 10 Aug 2026 14:22:31 GMT\",\"description\":\"Job description excerpt\",\"locations\":\"London\",\"url\":\"https://jobviewtrack.com/v2/unique-link\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect. Current official docs specify https://search.api.careerjet.net/v4/query, replacing the dead public.api host. example: incorrect. Official docs require Basic authentication (API key as username, empty password), user_ip and user_agent; locale_code is the current parameter, page_size replaces pagesize, and jobs use locations plus an RFC-style date. Evidence: https://www.careerjet.com/partners/api/"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "minor-planet-center",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.minorplanetcenter.net",
+      "source": "https://data.minorplanetcenter.net/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/get-orb/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -sS -X GET -H 'Content-Type: application/json' -d '{\"desig\":\"Ceres\"}' https://data.minorplanetcenter.net/api/get-orb; response is a JSON list containing an mpc_orb object, not {}",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/get-orb/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/"
+    }
+  },
+  "notes": "The API remains documented and operational, but the submitted entry points are stale. Current REST endpoints use the data.minorplanetcenter.net host, while maintained documentation is on docs.minorplanetcenter.net. Official examples require no credentials. No authoritative pricing, quota, rate-limit, or CORS statement was located."
+}

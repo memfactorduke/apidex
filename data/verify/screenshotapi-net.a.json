@@ -1,0 +1,52 @@
+{
+  "id": "screenshotapi-net",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/docs/renderScreenshot"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/docs/renderScreenshot"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/docs/renderScreenshot"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/help"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The documented rate limit is 20\u201380 requests per minute depending on plan. screenshot_limit_reached is documented as an HTTP 403 monthly-quota error, not as a 429 response for exceeding RPM.",
+      "source": "https://www.screenshotapi.net/help"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/docs/renderScreenshot"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/features"
+    }
+  },
+  "notes": "Official pricing currently shows a 7-day, 100-screenshot trial; the homepage says no card is required, while Help says free requests reset monthly. The API and documentation are live. No official CORS policy or authoritative CORS confirmation was found. The rate-limit error/status claim causes failure."
+}

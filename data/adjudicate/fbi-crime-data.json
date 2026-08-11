@@ -1,0 +1,15 @@
+{
+  "id": "fbi-crime-data",
+  "base_url": null,
+  "docs_url": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Registered API keys: default 1,000 requests/hour. DEMO_KEY: 30 requests/hour and 50 requests/day per IP. Service-specific limits may vary; higher limits may be requested.",
+  "rate_limits": "Default 1,000 requests/hour per registered API key; DEMO_KEY is limited to 30 requests/hour and 50 requests/day per IP. Limits use rolling counters and may vary by service.",
+  "cors": null,
+  "example_request": "curl \"https://api.usa.gov/crime/fbi/cde/summarized/state/CA/V?from=01-2024&to=12-2024&API_KEY=YOUR_API_KEY\"",
+  "example_response_snippet": "{\"offenses\":{\"rates\":{\"State Offenses\":{\"01-2024\":494.6,\"...\":\"...\"}},\"actuals\":{\"State Offenses\":{\"01-2024\":16122,\"...\":\"...\"},\"State Clearances\":{\"01-2024\":4150,\"...\":\"...\"}}},\"populations\":{\"population\":{\"State\":{\"01-2024\":38965193,\"...\":\"...\"}}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: keep /cde; the bare prefix may return 404. Evidence: https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi. docs_url: replace with current CJIS URL above. free_tier_limits: published defaults and DEMO_KEY limits. Evidence: https://api.data.gov/docs/developer-manual/. rate_limits: replace with those published limits; same evidence. example: replace with current /cde/summarized route. Evidence: https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "gleif",
+  "status": "operational",
+  "name": "GLEIF LEI API",
+  "category": "legal-compliance",
+  "tagline": "Global Legal Entity Identifier lookup for standardized entity identity",
+  "description": "Public REST API from the Global Legal Entity Identifier Foundation providing free access to the Global LEI Index. Lookup LEI records, search legal entities by name or attributes, and retrieve relationship data for KYC, AML, and regulatory compliance workflows.",
+  "base_url": "https://api.gleif.org/api/v1",
+  "docs_url": "https://www.gleif.org/en/lei-data/gleif-api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public open data endpoints; rate limits may apply per IP."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no paid plans published for the open API",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12\" -H \"Accept: application/vnd.api+json\"",
+    "response_snippet": "{\"data\":{\"type\":\"lei-records\",\"id\":\"5493001KJTIIGC8Y1R12\",\"attributes\":{\"lei\":\"5493001KJTIIGC8Y1R12\",\"entity\":{\"legalName\":{\"name\":\"Example Entity\"},\"status\":\"ACTIVE\"}}}}"
+  },
+  "use_cases": [
+    "look up a legal entity by LEI code",
+    "search LEIs by legal entity name",
+    "verify entity status for KYC/AML checks",
+    "retrieve parent/child relationship data for corporate hierarchy",
+    "enrich compliance records with standardized LEI identity fields"
+  ],
+  "sources": [
+    "https://www.gleif.org/en/lei-data/gleif-api",
+    "https://api.gleif.org/api/v1"
+  ],
+  "researcher_confidence": "medium"
+}

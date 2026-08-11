@@ -1,0 +1,92 @@
+{
+  "id": "afp-api",
+  "status": "operational",
+  "name": "AFP API",
+  "category": "news-media",
+  "tagline": "International wire news and multimedia from Agence France-Presse.",
+  "description": "Content API from Agence France-Presse delivering international wire news, photos, video, and multimedia. Access is typically commercial and contract-based for publishers, media platforms, and enterprise products.",
+  "base_url": "https://afp-apicore-prod.afp.com",
+  "docs_url": "https://www.afp.com/en/our-offer/afp-api",
+  "signup_url": "https://www.afp.com/en/products-services/afp-services/afp-api",
+  "auth": {
+    "type": "other",
+    "details": "Commercial contract access; authentication method not fully public in marketing materials\u2014likely credentials issued after sales onboarding."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Enterprise/contract pricing; contact AFP sales."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --fail --show-error --get \"$AFP_CONTRACT_SEARCH_URL\" -H \"Accept: application/json\" -H \"$AFP_CONTRACT_AUTH_HEADER\" --data-urlencode \"query=climate\"",
+    "response_snippet": "{\"count\":1,\"documents\":[{\"uno\":\"<AFP UNO>\",\"title\":\"<AFP headline>\",\"published\":\"<ISO-8601 timestamp>\"}]}"
+  },
+  "use_cases": [
+    "search international wire news by topic or keyword",
+    "fetch latest AFP stories for a news aggregator",
+    "retrieve multimedia assets linked to a story",
+    "monitor breaking international news feeds"
+  ],
+  "sources": [
+    "https://www.afp.com/en/products-services/afp-services/afp-api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

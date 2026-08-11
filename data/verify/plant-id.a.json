@@ -1,0 +1,52 @@
+{
+  "id": "plant-id",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kindwise.com/handbook"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://admin.kindwise.com/public/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kindwise.com/handbook"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kindwise.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 free credits after registration; each successful identification costs 1 credit, with another credit charged when plant.health is included.",
+      "source": "https://www.kindwise.com/faq"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Kindwise states there are no limits or caps on the number of API requests, although exceeding SLA conditions may make processing slower.",
+      "source": "https://www.kindwise.com/faq"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Official status reports 200 OK and 100% rolling uptime. The current docs directory still lists plant.id/docs. Pricing and FAQ establish 100 signup credits and no request caps. CORS could not be determined. The official SDK uses raw Base64, so the sample's data-URI-prefixed image could not be confirmed. Core capabilities are supported, but the broad \u201cwidely used\u201d claim is not substantiated."
+}

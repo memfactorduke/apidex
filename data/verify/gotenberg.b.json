@@ -1,0 +1,52 @@
+{
+  "id": "gotenberg",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gotenberg.dev/docs/getting-started/installation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gotenberg.dev/docs/getting-started/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gotenberg.dev/docs/configuration"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/gotenberg/gotenberg"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "MIT-licensed self-hosting is free, and the project now provides an official hosted live demo requiring no installation; the demo is limited to 2 requests/second per IP and a 5 MB request body.",
+      "source": "https://gotenberg.dev/docs/getting-started/installation"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Self-hosted deployments have no project-wide request rate limit, but the official hosted demo publishes limits of 2 requests/second per IP and a 5 MB request body.",
+      "source": "https://gotenberg.dev/docs/getting-started/installation"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gotenberg.dev/docs/convert-with-chromium/convert-html-to-pdf"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/gotenberg/gotenberg"
+    }
+  },
+  "notes": "The localhost URL is the documented deployment-local default, so HTTP 0 without a running container is expected. The API remains active and has an official hosted demo. Although auth.type is correctly none by default, the details are outdated: current Gotenberg offers optional built-in Basic Auth, not API-key middleware."
+}

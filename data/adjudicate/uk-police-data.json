@@ -1,0 +1,15 @@
+{
+  "id": "uk-police-data",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "15 requests per second with a burst of 30; on average, fewer than 15 requests per second. Excess requests receive HTTP 429. Calls over time are unlimited.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: ORIGINAL is incorrect. Current official documentation specifies a leaky-bucket limit of 15 requests per second, permits bursts up to 30 in one second, returns HTTP 429 when exceeded, and allows unlimited calls over time. Evidence: https://data.police.uk/docs/api-call-limits/"
+}

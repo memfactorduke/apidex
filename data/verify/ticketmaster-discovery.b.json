@@ -1,0 +1,52 @@
+{
+  "id": "ticketmaster-discovery",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Ticketmaster publishes a default Public API quota of 5,000 requests per day and 2 requests per second.",
+      "source": "https://developer.ticketmaster.com/support/faq/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "5,000 requests per day and 2 requests per second by default.",
+      "source": "https://developer.ticketmaster.com/support/faq/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/getting-started/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    }
+  },
+  "notes": "Official materials show the API remains current and direct new global integrations to Discovery v2. Ticketmaster does not explicitly describe Public API access as a free pricing tier. Its current FAQ says 2 requests/second, while the older Discovery/getting-started text still says 5; the FAQ's specific current quota answer was preferred."
+}

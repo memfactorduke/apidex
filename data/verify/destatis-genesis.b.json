@@ -1,0 +1,52 @@
+{
+  "id": "destatis-genesis",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www-genesis.destatis.de/genesis/online?operation=seitenaufruf&navigationname=Statistik&levelindex=0&levelid=1754764800#abreadcrumb",
+      "source": "https://www-genesis.destatis.de/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/"
+    }
+  },
+  "notes": "Adversarial check needed against official Destatis docs; verifying base URL, docs URL, auth, and rate limits."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "bandsintown",
+  "status": "operational",
+  "name": "Bandsintown Concerts API",
+  "category": "events-holidays",
+  "tagline": "Artist tour dates and concert listings for music apps and sites.",
+  "description": "The Bandsintown Concerts API provides public endpoints for artist profiles, upcoming and past event listings, and related venue data. Developers use an app_id (API key) to query concert schedules by artist name or Bandsintown artist ID, making it a common integration for music discovery apps, ticketing widgets, and tour-date embeds. Access is free for approved use cases; commercial or high-volume use may require partnership.",
+  "base_url": "https://rest.bandsintown.com",
+  "docs_url": "https://artists.bandsintown.com/support/api-installation",
+  "signup_url": "https://artists.bandsintown.com/support/api-installation",
+  "auth": {
+    "type": "apiKey",
+    "details": "App ID (API key) as query parameter app_id on every request; self-serve via Bandsintown artist/support API docs (register application name as app_id)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial/approved use; rate and volume limits not publicly published as fixed quotas",
+    "paid_plans": "Commercial/high-volume use via Bandsintown partnership (not self-serve public pricing)"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://rest.bandsintown.com/artists/Coldplay/events?app_id=YOUR_API_KEY\"",
+    "response_snippet": "[{\"id\":\"12345\",\"url\":\"https://www.bandsintown.com/e/12345\",\"datetime\":\"2026-09-15T20:00:00\",\"venue\":{\"name\":\"Madison Square Garden\",\"city\":\"New York\",\"region\":\"NY\",\"country\":\"United States\"},\"lineup\":[\"Coldplay\"],\"offers\":[{\"type\":\"Tickets\",\"url\":\"https://...\",\"status\":\"available\"}]}]"
+  },
+  "use_cases": [
+    "get upcoming concert dates for an artist by name",
+    "list past tour dates for an artist",
+    "fetch artist profile and social links from Bandsintown",
+    "resolve a Bandsintown artist ID for event queries",
+    "show venue city and ticket offer links for an artist's shows"
+  ],
+  "sources": [
+    "https://artists.bandsintown.com/support/api-installation",
+    "https://www.bandsintown.com"
+  ],
+  "researcher_confidence": "medium"
+}

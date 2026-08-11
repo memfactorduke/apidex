@@ -1,0 +1,42 @@
+{
+  "id": "idealista",
+  "status": "operational",
+  "name": "Idealista API",
+  "category": "real-estate-housing",
+  "tagline": "Iberian property listings and market data for Spain, Portugal, and Italy",
+  "description": "Idealista provides real-estate listing search and market data across Spain, Portugal, and Italy. Access is typically partner/business oriented rather than fully self-serve; authentication, endpoints, and pricing should be verified against current official developer documentation before integration.",
+  "base_url": "https://api.idealista.com",
+  "docs_url": "https://developers.idealista.com",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Partner/business access; authentication method not fully confirmed from public docs in this pass \u2014 verify OAuth/API credentials with Idealista before use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.idealista.com/3.5/es/search?center=40.4168,-3.7038&distance=5000&propertyType=homes&operation=sale\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"elementList\":[{\"propertyCode\":\"123456\",\"thumbnail\":\"https://...\",\"price\":350000,\"size\":95,\"rooms\":3,\"address\":\"Calle Example\",\"province\":\"Madrid\",\"municipality\":\"Madrid\"}],\"total\":1,\"totalPages\":1,\"actualPage\":1}"
+  },
+  "use_cases": [
+    "search property listings by location and filters in Spain",
+    "get listing details for a property code",
+    "query market statistics for a municipality",
+    "filter homes by price, size, and operation (sale/rent)",
+    "find properties near coordinates within a radius"
+  ],
+  "sources": [
+    "https://developers.idealista.com",
+    "https://www.idealista.com"
+  ],
+  "researcher_confidence": "low"
+}

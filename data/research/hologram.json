@@ -1,0 +1,40 @@
+{
+  "id": "hologram",
+  "status": "operational",
+  "name": "Hologram",
+  "category": "iot-devices",
+  "tagline": "Cellular IoT connectivity platform for SIM, messaging, and device management",
+  "description": "Hologram provides cellular IoT connectivity with a REST API for managing SIMs, devices, messaging, and connectivity. Developers use it to provision SIMs, send/receive data, monitor usage, and control device fleets over cellular networks.",
+  "base_url": "https://dashboard.hologram.io/api/1",
+  "docs_url": "https://www.hologram.io/references/http",
+  "signup_url": "https://dashboard.hologram.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication for REST endpoints; self-serve signup via Hologram dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u apikey:YOUR_API_KEY \"https://dashboard.hologram.io/api/1/devices\"",
+    "response_snippet": "{\"success\":true,\"data\":[{\"id\":12345,\"name\":\"device\",\"type\":\"Unknown\",\"tags\":[]}]} "
+  },
+  "use_cases": [
+    "list cellular IoT devices and SIMs",
+    "send messages to IoT devices over cellular",
+    "check SIM data usage and connectivity status",
+    "activate or pause IoT SIMs programmatically"
+  ],
+  "sources": [
+    "https://www.hologram.io/references/http"
+  ],
+  "researcher_confidence": "low"
+}

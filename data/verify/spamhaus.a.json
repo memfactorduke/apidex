@@ -1,0 +1,52 @@
+{
+  "id": "spamhaus",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://apibl.spamhaus.net/lookup/v1/",
+      "source": "https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/020-api-auth.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.spamhaus.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/020-api-auth.html"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://www.spamhaus.com/terms-of-use-fair-use-policy-for-free-data-query-service/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free DQS is restricted to eligible non-commercial small organizations and individuals whose volume does not consistently exceed 100,000 queries per day.",
+      "source": "https://www.spamhaus.com/terms-of-use-fair-use-policy-for-free-data-query-service/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "A 100,000-queries-per-day fair-use ceiling is published for Free DQS; WQS also returns HTTP 429 when rate limiting is in effect.",
+      "source": "https://www.spamhaus.com/terms-of-use-fair-use-policy-for-free-data-query-service/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_DQS_KEY\" -H \"Accept: application/json\" \"https://apibl.spamhaus.net/lookup/v1/DBL/example.com\"",
+      "source": "https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/080-examples.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/000-intro.html"
+    }
+  },
+  "notes": "The entry conflates Spamhaus WQS/DQS, which exposes DBL at apibl.spamhaus.net using a DQS key, with the separate Spamhaus Intelligence API at api.spamhaus.org. SIA uses credentials to obtain a temporary bearer token and has different paths. The invented /v1/lookup/domain path and response shape are undocumented."
+}

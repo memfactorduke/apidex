@@ -1,0 +1,52 @@
+{
+  "id": "helius",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/docs/api-reference/wallet-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.helius.dev/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/docs/api-reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/docs/billing/plans"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/docs/billing/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.helius.xyz/v1/wallet/YOUR_WALLET/balances?api-key=YOUR_API_KEY\"",
+      "source": "https://www.helius.dev/docs/api-reference/wallet-api/balances"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/docs/api-reference"
+    }
+  },
+  "notes": "The API is live. api.helius.xyz is the Wallet API base, while RPC and other products use additional hosts. The example uses an obsolete v0 balance path and response shape; current results use balances[]. Free includes 1M monthly credits, 10 RPC RPS, and 2 DAS/Enhanced RPS. Enhanced Transactions still operates but is deprecated. The auth details also misname the supported REST header: current Wallet API docs specify X-Api-Key, not Authorization."
+}

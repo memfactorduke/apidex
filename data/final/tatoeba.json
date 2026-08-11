@@ -1,0 +1,96 @@
+{
+  "id": "tatoeba",
+  "status": "operational",
+  "name": "Tatoeba API",
+  "category": "education-reference",
+  "tagline": "Multilingual sentence corpus with translations for language learning",
+  "description": "Collaborative, open multilingual dataset of sentences and translations exposed through a public read-only API; by default, sentence search may include unapproved or orphaned (likely unproofread) sentences unless filtered.",
+  "base_url": "https://api.tatoeba.org",
+  "docs_url": "https://en.wiki.tatoeba.org/articles/show/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Researching authentication requirements from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --get 'https://api.tatoeba.org/v1/sentences' --data-urlencode 'lang=eng' --data-urlencode 'q=hello' --data-urlencode 'trans:lang=jpn'",
+    "response_snippet": "{\"data\":[{\"id\":373330,\"text\":\"Hello!\",\"lang\":\"eng\",\"script\":null,\"license\":\"CC BY 2.0 FR\",\"owner\":\"kroko\",\"is_unapproved\":false,\"translations\":[{\"text\":\"\u3053\u3093\u306b\u3061\u306f\u3002\",\"lang\":\"jpn\"}]}],\"paging\":{\"next\":\"...\"}}"
+  },
+  "use_cases": [
+    "search sentences by language pair",
+    "fetch sentence translations"
+  ],
+  "sources": [
+    "https://en.wiki.tatoeba.org/articles/show/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

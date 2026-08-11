@@ -1,0 +1,15 @@
+{
+  "id": "quickbooks",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Builder tier: no monthly program fee; Core API calls are unmetered and uncharged; up to 500,000 CorePlus calls per workspace per month. Further CorePlus calls are blocked. Sandbox calls are not metered.",
+  "rate_limits": "REST (sandbox and production): 500 requests/minute per realm ID and 10 requests/second per realm ID/app. Batch: 40 requests/minute per realm ID/app and 120/minute per realm ID.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Replace the unknown value. Intuit's current FAQ confirms the uncharged Builder tier, unmetered Core calls, 500,000 monthly CorePlus calls per workspace, and blocking above the cap: https://developer.intuit.com/app/developer/qbo/docs/get-started/partner-faq. rate_limits: Replace 'not published'; Intuit publishes the REST and batch limits stated here: https://developer.intuit.com/app/developer/qbo/docs/learn/limits-and-throttles."
+}

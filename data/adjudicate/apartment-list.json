@@ -1,0 +1,15 @@
+{
+  "id": "apartment-list",
+  "base_url": "unknown",
+  "docs_url": "https://support.apartmentlist.com/faq-partner",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS -o /dev/null -w \"%{http_code}\\n\" \"https://api.apartmentlist.com/\"",
+  "example_response_snippet": "404",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ORIGINAL rejected; https://api.apartmentlist.com returns 404, and official partner materials disclose no replacement base URL (https://support.apartmentlist.com/faq-partner). docs_url: ORIGINAL returns 404; use the current official partner FAQ at https://support.apartmentlist.com/faq-partner. example: ORIGINAL /v1/listings and Bearer scheme are undocumented; replaced with a diagnostic curl showing the confirmed 404. Official API mention: https://support.apartmentlist.com/ccpa-guidelines-for-clients."
+}

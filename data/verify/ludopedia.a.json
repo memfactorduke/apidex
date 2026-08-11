@@ -1,0 +1,52 @@
+{
+  "id": "ludopedia",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ludopedia.com.br/api/v1/colecao"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://ludopedia.com.br/api/documentacao.html",
+      "source": "https://ludopedia.com.br/api/documentacao.html"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://ludopedia.com.br/topico/48099/api-ludopedia-acesso-alpha"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ludopedia.com.br/aplicativo"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for non-commercial use, with Ludopedia attribution and a link wherever its data is used; Ludopedia reserves the right to block access.",
+      "source": "https://ludopedia.com.br/aplicativo"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ludopedia.com.br/topico/48099/api-ludopedia-acesso-alpha"
+    }
+  },
+  "notes": "The API is not dead: /api/v1/colecao reached Ludopedia and returned 401, so the bare version root's 404 is non-diagnostic. The site's current API link points to /api/documentacao.html, not /api. That documentation did not expose a renderable specification to the crawler, preventing verification of CORS, quotas, rate limits, and the exact example."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "reed",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Reed.co.uk's Jobseeker API searches Reed job listings and retrieves individual job details using an API key via HTTP Basic authentication. Responses include limited employer identifiers and names. Recruiter functions, job posting, and candidate-data access are separate APIs with different endpoints, authentication, and access requirements.",
+  "status": null,
+  "resolution_notes": "description: INCORRECT. Official Jobseeker documentation limits this API to job search and job details, with employer ID/name only as fields in job records: https://www.reed.co.uk/developers/jobseeker. Reed's API directory lists Candidate Search and recruiter Jobs separately, and the Recruiter documentation requires separate credentials and access: https://www.reed.co.uk/developers and https://www.reed.co.uk/developers/recruiter."
+}

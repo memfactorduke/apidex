@@ -1,0 +1,40 @@
+{
+  "id": "who-icd-api",
+  "status": "operational",
+  "name": "ICD API (WHO)",
+  "category": "health-fitness",
+  "tagline": "Official WHO ICD-11 API for diagnosis coding and classification.",
+  "description": "The WHO ICD API provides programmatic access to the International Classification of Diseases, 11th Revision (ICD-11), including search, entity lookup, linearizations, and coding tools for health information systems.",
+  "base_url": "https://id.who.int/icd",
+  "docs_url": "https://icd.who.int/docs/icd-api/APIDoc-Version2/",
+  "signup_url": "https://icd.who.int/icdapi",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 client credentials: register at icd.who.int/icdapi, then POST client_id/client_secret to the token endpoint for a Bearer access token."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\" -H \"API-Version: v2\" \"https://id.who.int/icd/entity/1435254666\"",
+    "response_snippet": "{\n  \"@context\": \"...\",\n  \"@id\": \"http://id.who.int/icd/entity/1435254666\",\n  \"title\": { \"@language\": \"en\", \"@value\": \"...\" }\n}"
+  },
+  "use_cases": [
+    "look up an ICD-11 entity by code or URI",
+    "search ICD-11 for a diagnosis term",
+    "get linearization details for a disease code",
+    "resolve foundation entity relationships"
+  ],
+  "sources": [
+    "https://icd.who.int/docs/icd-api/APIDoc-Version2/"
+  ],
+  "researcher_confidence": "low"
+}

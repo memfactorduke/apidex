@@ -1,0 +1,50 @@
+{
+  "id": "britannica",
+  "status": "operational",
+  "name": "Encyclopaedia Britannica Syndication API",
+  "category": "education-reference",
+  "tagline": "Licensed encyclopedia articles and media via Britannica's syndication API",
+  "description": "Official Encyclopaedia Britannica Syndication API for licensed encyclopedia content: article lists (JSON), full article bodies (XML), and media (images, audio, video). Products include full Britannica, Concise, Intermediate, Elementary/Primary, Portuguese editions, and thematic subsets (science, people, places, etc.). Free for non-commercial apps under 1,000 queries/day (two keys); commercial use requires a Britannica license. Note: api.britannica.com does not resolve; this is not the library product Britannica Academic (academic.eb.com).",
+  "base_url": "https://syndication.api.eb.com/production",
+  "docs_url": "https://encyclopediaapi.com/products/json",
+  "signup_url": "https://encyclopediaapi.com/register/index",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-api-key header. Self-serve register at encyclopediaapi.com (email verification); two keys on signup, more by contact. Key is product-scoped (articleTypeId/thematic category chosen at registration)."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Non-commercial only: 1,000 queries/day per API key; max two reference APIs. Cached content may be shown for 30 days only.",
+    "paid_plans": "Commercial use (ads or paid product) or over 1,000 queries/day requires a licensing fee; contact Britannica for case-by-case terms."
+  },
+  "rate_limits": "1,000 queries per API key per day; exceeding call_limit returns 401 (per OpenAPI). No finer per-second limit published.",
+  "example": {
+    "request": "curl -X GET \"https://syndication.api.eb.com/production/articles?articleTypeId=31&lastUpdated=2020-10-01\" -H \"accept: application/json\" -H \"x-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\n  \"totalCount\": 4888,\n  \"articles\": [\n    {\n      \"articleId\": 345449,\n      \"articleTypeId\": 38,\n      \"title\": \"John Adams\",\n      \"lastUpdated\": \"2021-08-04\"\n    },\n    {\n      \"articleId\": 345450,\n      \"articleTypeId\": 38,\n      \"title\": \"John Quincy Adams\",\n      \"lastUpdated\": \"2021-08-04\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "list encyclopedia articles for a product level (e.g. intermediate articleTypeId=31)",
+    "fetch full article XML by articleId for a learning app",
+    "list articles updated since a date for content sync",
+    "pull a thematic subset (science, animals, people) via categoryId",
+    "resolve media URLs from article XML (cdn.britannica.com images/audio)",
+    "check API service version via /application/metadata"
+  ],
+  "sources": [
+    "https://encyclopediaapi.com/",
+    "https://encyclopediaapi.com/products/index",
+    "https://encyclopediaapi.com/products/json",
+    "https://encyclopediaapi.com/info/frequently-asked-questions",
+    "https://britannica.github.io/syndication-service/swagger/?host=syndication.api.eb.com&stage=production",
+    "https://syndication.api.eb.com/production/docs/swagger.yaml?stage=production",
+    "https://www.britannica.com/",
+    "https://www.britannica.com/developer"
+  ],
+  "researcher_confidence": "high"
+}

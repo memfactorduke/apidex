@@ -1,0 +1,99 @@
+{
+  "id": "netlify",
+  "status": "operational",
+  "name": "Netlify API",
+  "category": "dev-tools",
+  "tagline": "Jamstack hosting REST API for sites, deploys, forms, and edge functions",
+  "description": "REST API for Netlify's platform: manage sites, deploys, builds, forms, edge functions, DNS, and account resources. Used for CI automation, programmatic site management, and integrating Netlify into developer tooling and agent workflows.",
+  "base_url": "https://api.netlify.com/api/v1",
+  "docs_url": "https://docs.netlify.com/api/get-started/",
+  "signup_url": "https://app.netlify.com/signup",
+  "auth": {
+    "type": "oauth2",
+    "details": "Personal access token (OAuth or user token) sent as Authorization: Bearer YOUR_API_KEY; create under User settings > Applications > Personal access tokens"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "300 credits per month; this is a hard limit. When exhausted, all projects pause until the next billing cycle unless the account upgrades. Auto recharge is unavailable on Free.",
+    "paid_plans": null
+  },
+  "rate_limits": "Up to 500 requests per minute for most requests. Some operations have stricter limits; API deploys are limited to 3 per minute and 100 per day.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://api.netlify.com/api/v1/sites",
+    "response_snippet": "[{\"id\":\"...\",\"name\":\"...\",\"url\":\"https://...\",\"ssl_url\":\"https://...\",\"admin_url\":\"https://app.netlify.com/sites/...\",\"build_settings\":{}}]"
+  },
+  "use_cases": [
+    "list all sites on a Netlify account",
+    "trigger or inspect a site deploy",
+    "read form submissions for a Netlify form",
+    "manage DNS records for a Netlify domain",
+    "create or update environment variables for a site",
+    "check build and deploy status for CI automation"
+  ],
+  "sources": [
+    "https://docs.netlify.com/api/get-started/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

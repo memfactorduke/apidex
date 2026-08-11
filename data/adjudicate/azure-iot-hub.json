@@ -1,0 +1,15 @@
+{
+  "id": "azure-iot-hub",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free (F1): 8,000 messages/day, metered in 0.5 KB blocks, and up to 500 registered device identities; limited to one free-tier hub per Azure subscription.",
+  "rate_limits": "Published throttles vary by operation and SKU. Identity-registry operations: 100/min/unit on Free/B1/S1/B2/S2 and 5,000/min/unit on B3/S3. Queries: 20/min/unit on Free/B1/S1/B2/S2 and 1,000/min/unit on B3/S3. Sustained excess can return HTTP 429.",
+  "cors": null,
+  "example_request": "curl -sS \"https://your-hub-name.azure-devices.net/devices?api-version=2021-04-12\" -H \"Authorization: SharedAccessSignature sr=your-hub-name.azure-devices.net&sig=URL_ENCODED_SIGNATURE&se=UNIX_EXPIRY&skn=registryRead\" -H \"Content-Type: application/json\"",
+  "example_response_snippet": "[{\"deviceId\":\"myDevice\",\"generationId\":\"638123456789012345\",\"connectionState\":\"Disconnected\",\"status\":\"enabled\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier: keep true; official pricing still lists Free. free_tier_limits: 8,000 messages/day and 500 identities (https://azure.microsoft.com/en-us/pricing/details/iot-hub/). rate_limits: published SKU/operation throttles (https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-quotas-throttling). example: endpoint returns Device[] and HTTPS requires a SAS Authorization token (https://learn.microsoft.com/en-us/rest/api/iothub/service/devices/get-devices; https://learn.microsoft.com/en-us/azure/iot-hub/authenticate-authorize-sas)."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "numbeo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.numbeo.com/",
+      "source": "https://www.numbeo.com/api/doc.jsp"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.numbeo.com/api/doc.jsp",
+      "source": "https://www.numbeo.com/api/doc.jsp"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/api/doc.jsp"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/api/cost-of-living-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/common/api.jsp"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published monthly quotas: Basic 200,000 queries; Professional 1,000,000; Enterprise 5,000,000.",
+      "source": "https://www.numbeo.com/common/api.jsp"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/api/cost-of-living-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/api/doc.jsp"
+    }
+  },
+  "notes": "The API remains documented and sold in 2026. The submitted page is the pricing/overview page, not the complete reference. Current prices are published ($260/$480/$1,250 monthly), so the entry's separate paid-plan wording is also outdated."
+}

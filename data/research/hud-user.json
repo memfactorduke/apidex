@@ -1,0 +1,43 @@
+{
+  "id": "hud-user",
+  "status": "operational",
+  "name": "HUD User API",
+  "category": "real-estate-housing",
+  "tagline": "Official Fair Market Rents, income limits, and HUD housing datasets from the U.S. Department of Housing and Urban Development.",
+  "description": "HUD User provides programmatic access to official U.S. Department of Housing and Urban Development datasets including Fair Market Rents (FMR), Income Limits, and related housing market data. Developers can query current and historical FMR values by geography (ZIP, county, metro), retrieve income limit thresholds used for housing assistance eligibility, and access other HUD-published housing statistics for applications in affordable housing analysis, rental market research, and policy tools.",
+  "base_url": "https://www.huduser.gov/hudapi/public",
+  "docs_url": "https://www.huduser.gov/portal/dataset/fmr-api.html",
+  "signup_url": "https://www.huduser.gov/hudapi/public/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via Authorization: Bearer YOUR_API_KEY header. Free self-serve registration at HUD User developer portal; token issued after account approval/signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for public use; no published request quota on official docs",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://www.huduser.gov/hudapi/public/fmr/data/METRO47900M47900\"",
+    "response_snippet": "{\n  \"data\": {\n    \"year\": 2024,\n    \"county_name\": \"Washington-Arlington-Alexandria, DC-VA-MD-WV\",\n    \"Efficiency\": 1663,\n    \"One-Bedroom\": 1699,\n    \"Two-Bedroom\": 1932,\n    \"Three-Bedroom\": 2443,\n    \"Four-Bedroom\": 2921\n  }\n}"
+  },
+  "use_cases": [
+    "get Fair Market Rent by ZIP code or metro area",
+    "look up HUD income limits for a county or MSA",
+    "compare FMR bedroom rents across geographies",
+    "pull current vs prior-year FMR for housing affordability analysis",
+    "resolve geography codes for HUD FMR datasets"
+  ],
+  "sources": [
+    "https://www.huduser.gov/portal/dataset/fmr-api.html",
+    "https://www.huduser.gov/hudapi/public/register",
+    "https://www.huduser.gov/portal/datasets/fmr.html"
+  ],
+  "researcher_confidence": "medium"
+}

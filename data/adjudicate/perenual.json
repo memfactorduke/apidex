@@ -1,0 +1,15 @@
+{
+  "id": "perenual",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Personal plan: 100 requests/day; Regular API; species data IDs 1-3000; hardiness maps and plant care guides/FAQ for species IDs 1-3000; plant disease API IDs 1-100.",
+  "rate_limits": "Daily request quotas: Personal 100; Premium 10,000; Supreme 100,000; Enterprise custom limits.",
+  "cors": null,
+  "example_request": "curl --location \"https://www.perenual.com/api/v2/species-list?key=YOUR_API_KEY&page=1\"",
+  "example_response_snippet": "{\"data\":[{\"id\":1,\"common_name\":\"European Silver Fir\",\"scientific_name\":[\"Abies alba\"],\"other_name\":[\"Common Silver Fir\"],\"family\":null,\"hybrid\":null,\"authority\":null,\"subspecies\":null,\"cultivar\":null,\"variety\":null,\"species_epithet\":\"alba\",\"genus\":\"Abies\",\"default_image\":{\"image_id\":9,\"license\":5,\"license_name\":\"Attribution-ShareAlike License\"}}],\"to\":30,\"per_page\":30,\"current_page\":1,\"from\":1,\"last_page\":405,\"total\":10104}",
+  "description": "REST API for plant species lists and details, care guides, hardiness maps, and searchable pest/disease listings. It exposes botanical data including growth, images, watering, and sunlight. A free Personal plan is available. The disease endpoint lists records; plant identification is a separate beta API.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected; pricing gives Personal 100/day and the stated ID ranges (https://www.perenual.com/subscription-api-pricing). rate_limits: corrected; pricing gives 100/10,000/100,000 daily quotas and Enterprise custom limits (https://www.perenual.com/subscription-api-pricing). example: corrected to the documented v2 route and sample shape (https://www.perenual.com/docs/api). description: corrected; docs call pest-disease-list a disease list, while identification is separate beta (https://www.perenual.com/docs/api; https://perenual.com/docs/identify/api)."
+}

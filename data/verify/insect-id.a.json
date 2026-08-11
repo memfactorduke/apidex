@@ -1,0 +1,52 @@
+{
+  "id": "insect-id",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/flowerchecker/insect-id-examples"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://insect.kindwise.com/docs",
+      "source": "https://admin.kindwise.com/public/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kindwise.com/handbook"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kindwise.com/faq"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 free API credits for testing; each successful identification costs 1 credit.",
+      "source": "https://www.kindwise.com/faq"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Kindwise states there are no request-count limits or caps, although performance guarantees are conditional on SLA traffic thresholds.",
+      "source": "https://www.kindwise.com/faq"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "POST https://insect.kindwise.com/api/v1/identification with Api-Key and Content-Type: application/json; send images as base64 strings in the JSON images array, not as multipart file fields.",
+      "source": "https://github.com/flowerchecker/insect-id-examples"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.kindwise.com/insect-id"
+    }
+  },
+  "notes": "The API is operational and the host/path are current. Official materials support photo-based insect and terrestrial-invertebrate identification, confidence-ranked suggestions, and metadata. They do not substantiate the specific IPM, farm-scouting, or livestock-monitoring adoption claims. The submitted documentation URL and multipart request are stale or wrong."
+}

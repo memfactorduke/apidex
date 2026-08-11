@@ -1,0 +1,39 @@
+{
+  "id": "corelogic",
+  "status": "operational",
+  "name": "CoreLogic Property API",
+  "category": "real-estate-housing",
+  "tagline": "Enterprise property intelligence, tax, and mortgage data for lending workflows.",
+  "description": "CoreLogic (now part of Cotality) provides enterprise property intelligence APIs covering ownership, tax, mortgage, and risk data used in lending and real-estate workflows. Access is typically enterprise/contract-based rather than self-serve free tiers.",
+  "base_url": "https://api-prod.corelogic.com",
+  "docs_url": "https://developer.corelogic.com",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Enterprise credentials; confirm OAuth2/API key pattern from current developer portal docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Enterprise contract pricing; contact sales"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS 'https://api-prod.corelogic.com/' -H 'Authorization: Bearer YOUR_API_KEY'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "look up property ownership and tax data by address",
+    "retrieve mortgage and lien information for underwriting",
+    "pull property risk and valuation intelligence for lending"
+  ],
+  "sources": [
+    "https://developer.corelogic.com"
+  ],
+  "researcher_confidence": "low"
+}

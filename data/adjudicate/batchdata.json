@@ -1,0 +1,15 @@
+{
+  "id": "batchdata",
+  "base_url": "https://api.batchdata.com/api/v1",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST \"https://api.batchdata.com/api/v1/property/lookup\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"requests\":[{\"address\":{\"street\":\"1634 W Grovers Ave\",\"city\":\"Phoenix\",\"state\":\"AZ\",\"zip\":\"85023\"}}]}'",
+  "example_response_snippet": "{\"results\":[{\"address\":{\"street\":\"1634 W Grovers Ave\",\"city\":\"Phoenix\",\"state\":\"AZ\",\"zip\":\"85023\"}}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ORIGINAL incorrect; the official 2026 example uses /api/v1/property/lookup, establishing https://api.batchdata.com/api/v1 as the base. example: ORIGINAL incorrect; the API requires POST, Bearer authentication, JSON content type, and a requests/address payload; successful responses contain a results array. Evidence: https://batchdata.io/blog/best-address-verification-apis-2026-complete-comparison-guide and https://batchdata.io/blog/automate-hubspot-batchdata-property-contact-enrichment-api"
+}

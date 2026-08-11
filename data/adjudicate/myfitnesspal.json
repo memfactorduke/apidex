@@ -1,0 +1,15 @@
+{
+  "id": "myfitnesspal",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS 'https://api.myfitnesspal.com/v2/diary?entry_date=2014-08-25&types=diary_meal,exercise&fields%5B%5D=nutritional_contents&fields%5B%5D=exercise&fields%5B%5D=energy' -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' -H 'mfp-client-id: YOUR_CLIENT_ID' -H 'mfp-user-id: YOUR_USER_ID'",
+  "example_response_snippet": "{\"items\":[{\"type\":\"diary_meal\",\"date\":\"2014-08-25\",\"diary_meal\":\"Breakfast\",\"nutritional_contents\":{\"protein\":22.35,\"fat\":25.72,\"carbohydrates\":49.72,\"energy\":{\"unit\":\"calories\",\"value\":515}}},{\"id\":\"61a4452be5b1db6813cdc85546f5c49eea7585bc\",\"type\":\"exercise\",\"date\":\"2014-08-25\",\"exercise\":{\"id\":134026223316461},\"duration\":1800,\"energy\":{\"unit\":\"calories\",\"value\":210}}]}",
+  "description": "MyFitnessPal\u2019s partner-facing v2 REST API lets authorized apps read a consenting user\u2019s food diary and create exercise, steps, and water entries, but it does not document creating food or meal entries. It can read and create weight measurements, read user information, update only the user\u2019s daily step goal, and provide subscription notifications. Access uses OAuth 2.0, and MyFitnessPal is not accepting new API-access requests.",
+  "status": null,
+  "resolution_notes": "Example\u2014corrected: official guidance requires URL-encoded square brackets in real requests; the date was aligned with the official response example. https://myfitnesspalapi.com/docs/get-request-query-param/ Description\u2014corrected: diary POST supports exercise, steps, and water, not meals; user PATCH only supports daily_step_goal. https://myfitnesspalapi.com/docs/diary-post/ https://myfitnesspalapi.com/docs/patch-request-example/ Access closure is current: https://myfitnesspalapi.com/"
+}

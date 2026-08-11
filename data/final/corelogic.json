@@ -1,0 +1,90 @@
+{
+  "id": "corelogic",
+  "status": "operational",
+  "name": "CoreLogic Property API",
+  "category": "real-estate-housing",
+  "tagline": "Enterprise property intelligence, tax, and mortgage data for lending workflows.",
+  "description": "CoreLogic (now part of Cotality) provides enterprise property intelligence APIs covering ownership, tax, mortgage, and risk data used in lending and real-estate workflows. Access is typically enterprise/contract-based rather than self-serve free tiers.",
+  "base_url": "https://api.cotality.com",
+  "docs_url": "https://developer.corelogic.com",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Enterprise credentials; confirm OAuth2/API key pattern from current developer portal docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Enterprise contract pricing; contact sales"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS 'https://api.cotality.com/trestle/odata/Property?$top=1' -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
+    "response_snippet": "{\"@odata.context\":\"https://api.cotality.com/trestle/odata/$metadata#Property/CoreLogic.DataStandard.RESO.DD.Property\",\"value\":[{\"ListingKey\":\"123456\",\"StandardStatus\":\"Active\"}]}"
+  },
+  "use_cases": [
+    "look up property ownership and tax data by address",
+    "retrieve mortgage and lien information for underwriting",
+    "pull property risk and valuation intelligence for lending"
+  ],
+  "sources": [
+    "https://developer.corelogic.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "auth_type"
+    ]
+  }
+}

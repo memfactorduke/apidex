@@ -1,0 +1,100 @@
+{
+  "id": "barchart-ondemand",
+  "status": "operational",
+  "name": "Barchart OnDemand",
+  "category": "finance",
+  "tagline": "Futures, options, and equities market data API for trading tools and research",
+  "description": "Barchart OnDemand provides REST access to real-time and historical market data across equities, futures, options, forex, and related instruments. Commonly used by trading platforms, research apps, and quant tools for quotes, charts, fundamentals, and options chains. Developers authenticate with an API key obtained through Barchart\u2019s commercial OnDemand plans.",
+  "base_url": "https://ondemand.websol.barchart.com",
+  "docs_url": "https://www.barchart.com/ondemand/api",
+  "signup_url": "https://www.barchart.com/ondemand",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via get parameter (apikey=YOUR_API_KEY) or request auth; commercial signup required"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Commercial OnDemand plans; contact sales for pricing"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://ondemand.websol.barchart.com/getQuote.json?apikey=YOUR_API_KEY&symbols=AAPL\"",
+    "response_snippet": "{\"status\":{\"code\":200,\"message\":\"Success\"},\"results\":[{\"symbol\":\"AAPL\",\"name\":\"Apple Inc\",\"lastPrice\":178.72,\"netChange\":1.25,\"percentChange\":0.70,\"open\":177.5,\"high\":179.1,\"low\":177.0,\"volume\":52000000}]}"
+  },
+  "use_cases": [
+    "get real-time or delayed equity quotes by symbol",
+    "fetch historical futures and options price history",
+    "pull options chains for underlyings",
+    "retrieve market profiles and fundamentals for equities",
+    "power charting and research apps with OHLC data"
+  ],
+  "sources": [
+    "https://www.barchart.com/ondemand/api",
+    "https://ondemand.websol.barchart.com",
+    "https://www.barchart.com/ondemand"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

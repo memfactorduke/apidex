@@ -1,0 +1,52 @@
+{
+  "id": "remotive",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://remotive.com/api-documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://remotive.com/api-documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://remotive.com/api/remote-jobs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://remotive.com/remote-jobs/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Public listings are delayed by 24 hours; Remotive advises at most 4 requests per day, and requests exceeding 2 per minute are blocked.",
+      "source": "https://remotive.com/api-documentation"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Remotive advises a maximum of 4 requests per day and states that excessive requests exceeding 2 per minute will be blocked.",
+      "source": "https://remotive.com/api-documentation"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://remotive.com/api-documentation"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Remotive exposes a public unauthenticated JSON GET endpoint for 24-hour-delayed active remote listings. Its documentation lists category, company, search, and limit filters. Reuse requires Remotive attribution and backlinks, while submission to third-party job sites is prohibited.",
+      "source": "https://remotive.com/api-documentation"
+    }
+  },
+  "notes": "Published throttling and the 24-hour delay make both claimed unknown limits wrong. The API is live, but current official responses for category=software-dev and limit=5 each returned 20 mixed-category jobs, suggesting those documented filters are presently ignored. The example is confirmed only under the requested documentation-consistency test."
+}

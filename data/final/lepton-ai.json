@@ -1,0 +1,94 @@
+{
+  "id": "lepton-ai",
+  "status": "operational",
+  "name": "Lepton AI",
+  "category": "ai-ml",
+  "tagline": "Python-first platform for deploying and calling ML inference APIs",
+  "description": "NVIDIA DGX Cloud Lepton is a fully managed platform for developing, training, and deploying AI models. It provides scalable hosted inference endpoints, REST API support, a Python SDK, development pods, batch jobs, and managed GPU infrastructure.",
+  "base_url": "https://gateway.dgxc-lepton.nvidia.com/api/v2/workspaces/<WORKSPACE_ID>",
+  "docs_url": "https://docs.nvidia.com/dgx-cloud/lepton/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "unknown"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"<ENDPOINT_URL>/v1/chat/completions\" -H \"Authorization: Bearer <ENDPOINT_TOKEN>\" -H \"Content-Type: application/json\" -H \"Accept: application/json\" -d '{\"model\":\"<model-id>\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}],\"max_tokens\":100,\"stream\":false}'",
+    "response_snippet": "{\"id\":\"chatcmpl-abc123\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help you today?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":10,\"total_tokens\":18}}"
+  },
+  "use_cases": [
+    "deploy an ML model as an API",
+    "call a hosted inference endpoint"
+  ],
+  "sources": [
+    "https://www.lepton.ai/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

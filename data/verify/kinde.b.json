@@ -1,0 +1,52 @@
+{
+  "id": "kinde",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://<your_subdomain>.kinde.com (Management API endpoints are under /api/v1)",
+      "source": "https://docs.kinde.com/developer-tools/kinde-api/access-token-for-api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.kinde.com/get-started/apis-and-sdks/about-kinde-apis/",
+      "source": "https://docs.kinde.com/get-started/apis-and-sdks/about-kinde-apis/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.kinde.com/developer-tools/kinde-api/access-token-for-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kinde.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free includes 10,500 MAU, 5 MAO, 2,000 M2M tokens, 10 feature flags, 2 roles, 10 permissions, 5 custom properties, 1 webhook per environment, and 1 production plus 1 non-production environment.",
+      "source": "https://www.kinde.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Kinde documents rate and concurrency limiting with HTTP 429 responses. Published constraints include a maximum page_size of 500 and no more than 100 objects per bulk POST/PATCH request; a general requests-per-minute number is not stated.",
+      "source": "https://docs.kinde.com/developer-tools/kinde-api/api-rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl --request GET --url 'https://<your_subdomain>.kinde.com/api/v1/users' --header 'authorization: Bearer <m2m_access_token>' --header 'content-type: application/json'",
+      "source": "https://docs.kinde.com/developer-tools/kinde-api/access-token-for-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.kinde.com/get-started/apis-and-sdks/about-kinde-apis/"
+    }
+  },
+  "notes": "The service and Management API remain documented and active, but the entry uses a nonexistent universal API host and a retired documentation URL. Management calls are tenant-specific. The sample also incorrectly labels the OAuth M2M access token as an API key. Current pricing and limiter information are published."
+}

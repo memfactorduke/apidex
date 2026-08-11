@@ -1,0 +1,42 @@
+{
+  "id": "duffel",
+  "status": "operational",
+  "name": "Duffel",
+  "category": "travel-hospitality",
+  "tagline": "Modern airline NDC-friendly flights API with sandbox and clear docs",
+  "description": "Duffel provides a unified flights API for searching, booking, and managing airline offers via NDC and traditional GDS. Developers get REST endpoints for offers, orders, seats, and ancillaries, with sandbox access and production keys after signup.",
+  "base_url": "https://api.duffel.com",
+  "docs_url": "https://duffel.com/docs/api",
+  "signup_url": "https://app.duffel.com/join",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token via Authorization: Bearer YOUR_API_KEY (test_ or live_ prefix); self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X GET \"https://api.duffel.com/air/airports?iata_code=LHR\" -H \"Accept: application/json\" -H \"Duffel-Version: v2\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[{\"id\":\"arp_lhr_gb\",\"iata_code\":\"LHR\",\"name\":\"Heathrow\",\"city_name\":\"London\",\"iata_country_code\":\"GB\",\"latitude\":51.47,\"longitude\":-0.46,\"time_zone\":\"Europe/London\",\"type\":\"airport\"}]}"
+  },
+  "use_cases": [
+    "search one-way or round-trip flight offers by origin destination and dates",
+    "create a flight order from a selected offer",
+    "list seats and ancillaries for an offer",
+    "look up airports by IATA code",
+    "cancel or change a booking when the airline allows"
+  ],
+  "sources": [
+    "https://duffel.com/docs/api",
+    "https://duffel.com"
+  ],
+  "researcher_confidence": "low"
+}

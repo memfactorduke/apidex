@@ -1,0 +1,42 @@
+{
+  "id": "bitquery",
+  "status": "operational",
+  "name": "Bitquery",
+  "category": "crypto",
+  "tagline": "GraphQL and streaming on-chain data across many blockchains",
+  "description": "Bitquery provides GraphQL and streaming APIs for blockchain data across many chains, with strong coverage of DEX trades, transfers, balances, and analytics. Developers query historical and real-time on-chain activity via a unified GraphQL endpoint and related streaming products.",
+  "base_url": "https://graphql.bitquery.io",
+  "docs_url": "https://docs.bitquery.io/",
+  "signup_url": "https://account.bitquery.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer YOUR_API_KEY (or X-API-KEY); self-serve signup at account.bitquery.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST 'https://graphql.bitquery.io' -H 'Content-Type: application/json' -H 'Authorization: Bearer YOUR_API_KEY' -d '{\"query\":\"{ EVM(network: eth) { Blocks(limit: {count: 1}) { Block { Number } } } }\"}'",
+    "response_snippet": "{\"data\":{\"EVM\":{\"Blocks\":[{\"Block\":{\"Number\":12345678}}]}}"
+  },
+  "use_cases": [
+    "query recent DEX trades on Ethereum or Solana",
+    "get token transfer history for a wallet",
+    "stream real-time on-chain events",
+    "fetch token balances and prices across chains",
+    "analyze DEX liquidity and volume"
+  ],
+  "sources": [
+    "https://docs.bitquery.io/"
+  ],
+  "researcher_confidence": "low"
+}

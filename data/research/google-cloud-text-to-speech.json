@@ -1,0 +1,40 @@
+{
+  "id": "google-cloud-text-to-speech",
+  "status": "operational",
+  "name": "Google Cloud Text-to-Speech",
+  "category": "ai-ml",
+  "tagline": "Neural and WaveNet voices for speech synthesis",
+  "description": "Google Cloud Text-to-Speech converts text into natural-sounding speech using WaveNet and neural voices. Supports SSML, many languages and voices, and audio formats such as LINEAR16, MP3, and OGG_OPUS. Developers call the REST API at texttospeech.googleapis.com (or client libraries) with Google Cloud credentials.",
+  "base_url": "https://texttospeech.googleapis.com/v1",
+  "docs_url": "https://cloud.google.com/text-to-speech/docs",
+  "signup_url": "https://console.cloud.google.com/",
+  "auth": {
+    "type": "other",
+    "details": "Google Cloud OAuth2 access token (Bearer) or API key; typically service account or Application Default Credentials. API key can be passed as ?key= or x-goog-api-key header for some endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://texttospeech.googleapis.com/v1/text:synthesize?key=YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"input\":{\"text\":\"Hello\"},\"voice\":{\"languageCode\":\"en-US\",\"name\":\"en-US-Neural2-A\"},\"audioConfig\":{\"audioEncoding\":\"MP3\"}}'",
+    "response_snippet": "{\"audioContent\":\"//uQx...base64...\"}"
+  },
+  "use_cases": [
+    "convert product description text to spoken audio",
+    "generate voiceover narration from a script",
+    "synthesize accessibility audio for UI strings",
+    "create multi-language speech samples for testing"
+  ],
+  "sources": [
+    "https://cloud.google.com/text-to-speech/docs"
+  ],
+  "researcher_confidence": "low"
+}

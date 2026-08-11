@@ -1,0 +1,41 @@
+{
+  "id": "spamhaus",
+  "status": "operational",
+  "name": "Spamhaus DBL/API",
+  "category": "security-identity",
+  "tagline": "DNSBL and threat-list APIs for domain and IP reputation used in mail and abuse pipelines.",
+  "description": "Spamhaus provides DNSBL and threat-list APIs for checking domain and IP reputation, used by mail servers, security tools, and abuse pipelines to identify spam sources, malware domains, and other threats. The DBL (Domain Block List) and related APIs offer real-time reputation data for filtering and threat intelligence.",
+  "base_url": "https://api.spamhaus.org",
+  "docs_url": "https://docs.spamhaus.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via header or query parameter; requires registration and account approval for commercial use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.spamhaus.org/v1/lookup/domain/example.com\"",
+    "response_snippet": "{\"domain\": \"example.com\", \"listed\": false, \"lists\": []}"
+  },
+  "use_cases": [
+    "check if a domain is listed on Spamhaus DBL",
+    "look up IP reputation against Spamhaus blocklists",
+    "validate sender domains in mail filtering pipelines",
+    "enrich threat intelligence with domain blocklist status"
+  ],
+  "sources": [
+    "https://docs.spamhaus.com/",
+    "https://www.spamhaus.org/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "rome2rio",
+  "base_url": "http://free.rome2rio.com/api/1.4",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl \"http://free.rome2rio.com/api/1.4/json/Search?key=YOUR_API_KEY&oName=London&dName=Paris\"",
+  "example_response_snippet": "{\"routes\":[{\"name\":\"Train\",\"distance\":455.83,\"duration\":168,\"segments\":[{\"kind\":\"train\",\"sName\":\"London\",\"tName\":\"Paris\"}]}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: original is incorrect; Rome2Rio's official v1.4 Search documentation identifies http://free.rome2rio.com/api/1.4 (https://www.rome2rio.com/documentation/1-4/search/). example: original endpoint is incorrect; the same official documentation shows /json/Search with key, oName, and dName. The current API page says new applications are not accepted but still refers to API partners, so operational status is retained (https://www.rome2rio.com/documentation/)."
+}

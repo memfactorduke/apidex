@@ -1,0 +1,77 @@
+{
+  "category": "social-communication",
+  "apis": [
+    {
+      "name": "Reddit API",
+      "slug": "reddit",
+      "base_domain": "oauth.reddit.com",
+      "docs_url": "https://www.reddit.com/dev/api",
+      "why_notable": "Large public social platform API for posts, comments, subreddits, and OAuth app integrations.",
+      "free_tier": true
+    },
+    {
+      "name": "Lemmy API",
+      "slug": "lemmy",
+      "base_domain": "{instance}",
+      "docs_url": "https://join-lemmy.org/docs/en/users/03-clients.html",
+      "why_notable": "Federated Reddit-like forum software with a documented REST API per instance.",
+      "free_tier": true
+    },
+    {
+      "name": "Loops.so",
+      "slug": "loops",
+      "base_domain": "app.loops.so",
+      "docs_url": "https://loops.so/docs/api-reference",
+      "why_notable": "Modern transactional and marketing email API popular with startups; simple REST endpoints.",
+      "free_tier": true
+    },
+    {
+      "name": "Customer.io",
+      "slug": "customer-io",
+      "base_domain": "api.customer.io",
+      "docs_url": "https://docs.customer.io/api/",
+      "why_notable": "Behavioral messaging platform with REST APIs for people, events, and transactional messages.",
+      "free_tier": true
+    },
+    {
+      "name": "Klaviyo",
+      "slug": "klaviyo",
+      "base_domain": "a.klaviyo.com",
+      "docs_url": "https://developers.klaviyo.com/en/reference/api-overview",
+      "why_notable": "Major email/SMS marketing automation API widely used in e-commerce.",
+      "free_tier": true
+    },
+    {
+      "name": "SparkPost",
+      "slug": "sparkpost",
+      "base_domain": "api.sparkpost.com",
+      "docs_url": "https://developers.sparkpost.com/api/",
+      "why_notable": "Enterprise-grade email delivery API (MessageBird/Sinch family) with strong analytics.",
+      "free_tier": true
+    },
+    {
+      "name": "Amazon SES",
+      "slug": "amazon-ses",
+      "base_domain": "email.{region}.amazonaws.com",
+      "docs_url": "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html",
+      "why_notable": "AWS Simple Email Service \u2014 high-scale transactional and bulk email sending via HTTP API.",
+      "free_tier": true
+    },
+    {
+      "name": "Mailjet",
+      "slug": "mailjet",
+      "base_domain": "api.mailjet.com",
+      "docs_url": "https://dev.mailjet.com/email/guides/",
+      "why_notable": "European email API for transactional and marketing mail with contacts and templates.",
+      "free_tier": true
+    },
+    {
+      "name": "PostHog",
+      "slug": "posthog",
+      "base_domain": "us.i.posthog.com",
+      "docs_url": "https://posthog.com/docs/api",
+      "why_notable": "Product analytics with session replay and feature flags \u2014 not primarily social-communication.",
+      "free_tier": true
+    }
+  ]
+}

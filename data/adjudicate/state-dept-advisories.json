@@ -1,0 +1,15 @@
+{
+  "id": "state-dept-advisories",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -L -sS -A 'Mozilla/5.0' 'https://travel.state.gov/en/international-travel/travel-advisories.html'",
+  "example_response_snippet": "<h1>Travel Advisories</h1> ... <table> ... <tr><td>Afghanistan</td><td>Level 4: Do not travel</td> ...</tr> ... </table>",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: incorrect as written because the old /content/travel/... URL currently redirects and curl lacked -L. Use the canonical current page with redirect following and a browser user-agent; it serves an HTML destination table containing advisory levels and risk indicators. Evidence: https://travel.state.gov/en/international-travel/travel-advisories.html"
+}

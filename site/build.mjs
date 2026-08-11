@@ -10,16 +10,15 @@ const DIST = join(HERE, 'dist');
 const SITE_URL = 'https://memfactorduke.github.io/apidex';
 const REPO = 'https://github.com/memfactorduke/apidex';
 const NPM = 'https://www.npmjs.com/package/apidex';
-const DROPPED_DEAD = 17; // audit-confirmed defunct APIs removed before shipping (see repo README)
+const DROPPED_DEAD = 44; // defunct APIs caught and removed across all rounds (see repo README)
 
 const data = JSON.parse(readFileSync(join(HERE, '..', 'mcp-server', 'data', 'apis.json'), 'utf8'));
 const apis = data.apis.filter(a => a.status !== 'defunct').sort((a, b) => a.name.localeCompare(b.name));
 
 /* ---------- derived stats ---------- */
-const corrections = data.apis.reduce((n, a) => {
-  const v = a.verification || {};
-  return n + (v.corrected?.length || 0) + (v.audit?.corrected?.length || 0);
-}, 0);
+const adjCorrections = data.apis.reduce((n, a) => n + (a.verification?.corrected?.length || 0), 0);
+const auditCorrections = data.apis.reduce((n, a) => n + (a.verification?.audit?.corrected?.length || 0), 0);
+const corrections = adjCorrections + auditCorrections;
 const noAuth = apis.filter(a => a.auth?.type === 'none').length;
 const freeTier = apis.filter(a => a.pricing?.free_tier).length;
 const categories = [...new Set(apis.map(a => a.category))].sort();
@@ -169,8 +168,8 @@ const landing = shell({
     <div class="stage-row"><span class="num">01</span><h3>Research</h3><p>An agent with live web search fills a strict schema from the official docs — endpoints, auth, pricing, limits, a working <b>curl</b> example.</p></div>
     <div class="stage-row"><span class="num">02</span><h3>Machine checks</h3><p>Scripts hit every base and docs URL. Dead links and schema violations get flagged before any model opines.</p></div>
     <div class="stage-row"><span class="num">03</span><h3>Double verification</h3><p>Two independent agents re-research every entry — one <b>docs-first</b>, one <b>adversarial</b> — and issue per-field verdicts: confirm, incorrect, or unverifiable.</p></div>
-    <div class="stage-row"><span class="num">04</span><h3>Adjudication</h3><p>Disputed fields go to a third agent that must rule with cited sources. ${(790).toLocaleString()} corrections came out of this stage alone.</p></div>
-    <div class="stage-row"><span class="num">05</span><h3>Cross-family audit</h3><p>A different model family audits every entry offline; a live-web arbiter settles each dispute against current docs. ${(1934).toLocaleString()} more corrections, ${DROPPED_DEAD} dead APIs dropped.</p></div>
+    <div class="stage-row"><span class="num">04</span><h3>Adjudication</h3><p>Disputed fields go to a third agent that must rule with cited sources. ${adjCorrections.toLocaleString()} corrections came out of this stage alone.</p></div>
+    <div class="stage-row"><span class="num">05</span><h3>Cross-family checks</h3><p>A second model family re-checks the work — auditing entries offline with live-web arbitration, and running independent verification passes of its own. ${auditCorrections.toLocaleString()} more corrections; ${DROPPED_DEAD} dead APIs caught and dropped across all stages.</p></div>
   </div>
 </div></section>
 
@@ -304,8 +303,8 @@ const methodology = shell({
     <li><b>Research.</b> One agent per API filled a strict JSON schema from official docs: base URL, auth scheme, free-tier limits, rate limits, CORS, and a <code>curl</code> example that has to name real endpoints and parameters.</li>
     <li><b>Machine checks.</b> Scripts probed every base and docs URL for liveness and validated every record against the schema. Models can argue; HTTP status codes don't.</li>
     <li><b>Double verification.</b> Two independent agents re-researched every entry from scratch — one told to trust nothing but current official docs, one told to actively hunt for errors — and issued per-field verdicts: <b>confirm</b>, <b>incorrect</b>, or <b>unverifiable</b>.</li>
-    <li><b>Adjudication.</b> Any field the verifiers disputed went to a third agent required to rule with cited sources. This stage alone produced <b>790 field corrections</b>.</li>
-    <li><b>Cross-family audit.</b> A model from a different family audited every entry offline, from its own knowledge — a deliberately different failure profile. Its disputes went to a live-web arbiter with one rule: <b>recency wins; what the official docs say today is the truth.</b> That produced <b>1,934 further corrections</b> and caught <b>17 dead APIs</b>, which were dropped rather than shipped.</li>
+    <li><b>Adjudication.</b> Any field the verifiers disputed went to a third agent required to rule with cited sources. This stage alone produced <b>${adjCorrections.toLocaleString()} field corrections</b>.</li>
+    <li><b>Cross-family checks.</b> A model from a different family audited entries offline, from its own knowledge — a deliberately different failure profile — with disputes settled by a live-web arbiter under one rule: <b>recency wins; what the official docs say today is the truth.</b> That produced <b>${auditCorrections.toLocaleString()} further corrections</b>. In the expansion round the second family also ran independent verification and adjudication passes of its own, so cross-family disagreement is baked into the whole corpus. <b>${DROPPED_DEAD} dead APIs</b> were caught across all stages and dropped rather than shipped.</li>
   </ol>
 
   <h2>What the verdicts mean</h2>
@@ -316,7 +315,7 @@ const methodology = shell({
   </ul>
 
   <h2>Scale</h2>
-  <p>The pipeline ran as a fleet of <b>3,458 agent jobs</b> consuming roughly <b>758 million tokens</b> across seeding, research, dual verification, adjudication, and arbitration — with every intermediate artifact committed to the <a href="${REPO}">open repository</a>: job definitions, raw verdicts, adjudication rulings, token ledgers. You can trace any field on this site back to the agents that checked it.</p>
+  <p>The pipeline ran as a fleet of <b>4,148 agent jobs</b> consuming just over <b>a billion tokens</b> across seeding, research, dual verification, adjudication, and arbitration — and when that fleet's quota ran dry mid-verification, a second fleet from a different model family picked up the remaining verification and adjudication jobs and finished the corpus. Every intermediate artifact is committed to the <a href="${REPO}">open repository</a>: job definitions, raw verdicts, adjudication rulings, token ledgers. You can trace any field on this site back to the agents that checked it.</p>
 
   <h2>Honesty about limits</h2>
   <p>Verification has a timestamp — every entry shows its <b>last checked</b> date and APIs keep changing after it. Fields marked unverifiable were never confirmed, only researched. And verification agents share a weakness: they can agree on something official docs state ambiguously. The receipts tell you how much to trust each field; nothing here asks to be trusted blindly.</p>

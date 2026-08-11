@@ -1,0 +1,15 @@
+{
+  "id": "thingsboard",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Community Edition: free, open-source self-hosting with unlimited devices/assets. Cloud Free ($0/month): 5 devices, 5 assets, 2 customers, 5 users, 5 dashboards, 3 rule chains; 0.5M transport messages and 1M data points/month; 30-day TTL.",
+  "rate_limits": "Cloud REST limits: Free\u2014tenant 100 requests/s and 1,000/min; customer 50/s and 500/min. Paid plans\u2014tenant 100/s and 2,000/min; customer 50/s and 1,000/min. Transport, device, gateway, and WebSocket limits are also published by plan.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "ThingsBoard Community Edition is an open-source IoT platform; Cloud and Professional editions are also offered. Its REST API manages platform entities, integrations, device provisioning, telemetry, attributes, alarms, rule chains, dashboards, and custom applications. API-key authentication via X-Authorization: ApiKey is recommended; username/password JWT login remains supported but is deprecated. Device transport APIs use separate device credentials.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: replace; official 2026 Cloud plans show a $0 Free plan with published caps, while CE is free/open source: https://thingsboard.io/docs/paas/reference/subscriptions/ . rate_limits: replace; the official REST table publishes Free and paid limits: https://thingsboard.io/docs/paas/reference/subscriptions/ . description: replace; current REST docs designate API keys as recommended and JWT as deprecated: https://thingsboard.io/docs/reference/rest-api/"
+}

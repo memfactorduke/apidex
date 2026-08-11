@@ -1,0 +1,15 @@
+{
+  "id": "cta-api",
+  "base_url": "https://lapi.transitchicago.com/api/1.0/ (Train Tracker); https://www.ctabustracker.com/bustime/api/v3/ (Bus Tracker)",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free API keys are required. Train Tracker: 50,000 transactions/day by default. Bus Tracker: 100,000 transactions/day by default. CTA may approve higher limits; DoS protection may temporarily time out heavy traffic.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl 'https://www.ctabustracker.com/bustime/api/v3/getpredictions?key=YOUR_KEY&rt=20&stpid=456&format=json'",
+  "example_response_snippet": "{\"bustime-response\":{\"prd\":[{\"tmstmp\":\"20250421 16:04\",\"typ\":\"A\",\"stpnm\":\"Madison & Jefferson\",\"stpid\":\"456\",\"vid\":\"8184\",\"rt\":\"20\",\"rtdir\":\"Westbound\",\"des\":\"Austin\",\"prdtm\":\"20250421 16:06\",\"dly\":false,\"prdctdn\":\"DUE\"}]}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect; current roots are https://lapi.transitchicago.com/api/1.0/ and https://www.ctabustracker.com/bustime/api/v3/; evidence https://www.transitchicago.com/developers/ttdocs/ and https://www.transitchicago.com/developers/bustracker/. free_tier_limits: incorrect; Train is 50,000/day and Bus is 100,000/day; evidence https://www.transitchicago.com/developers/traintracker/ and https://www.transitchicago.com/developers/bustracker/. example: incorrect; use documented Bus v3 getpredictions JSON; evidence https://www.transitchicago.com/developers/bustracker/."
+}

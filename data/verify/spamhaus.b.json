@@ -1,0 +1,52 @@
+{
+  "id": "spamhaus",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://apibl.spamhaus.net/lookup/v1/",
+      "source": "https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/020-api-auth.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.spamhaus.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/020-api-auth.html"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://www.spamhaus.com/data-access/free-data-query-service/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free DQS is for qualifying non-commercial small organizations and individuals whose usage does not consistently exceed 100,000 queries per day.",
+      "source": "https://www.spamhaus.com/terms-of-use-fair-use-policy-for-free-data-query-service/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "WQS can return HTTP 429 when rate limiting applies; free DQS usage must not consistently exceed 100,000 queries per day.",
+      "source": "https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/040-api-queries.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_DQS_KEY\" -H \"Accept: application/json\" \"https://apibl.spamhaus.net/lookup/v1/DBL/example.com\"",
+      "source": "https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/080-examples.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/000-intro.html"
+    }
+  },
+  "notes": "The service is operational, but the entry conflates the Spamhaus Intelligence API host with the DBL Web Query Service. Its lookup path is invented, and current official sources document a qualifying free DQS account with a 100,000-query-per-day fair-use ceiling."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "aleph-alpha",
+  "status": "operational",
+  "name": "Aleph Alpha",
+  "category": "ai-ml",
+  "tagline": "European multimodal LLM API with built-in explainability features.",
+  "description": "Aleph Alpha provides a European-hosted generative AI API for completion, chat, embeddings, and multimodal tasks, with strong emphasis on transparency and explainability for enterprise use.",
+  "base_url": "https://api.aleph-alpha.com",
+  "docs_url": "https://docs.aleph-alpha.com/",
+  "signup_url": "https://app.aleph-alpha.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; self-serve account and key management in the Aleph Alpha console."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://api.aleph-alpha.com/complete -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"luminous-base\",\"prompt\":\"Hello\",\"maximum_tokens\":16}'",
+    "response_snippet": "{\"model_version\":\"...\",\"completions\":[{\"completion\":\" world\",\"finish_reason\":\"maximum_tokens\"}]}"
+  },
+  "use_cases": [
+    "generate text completions with European-hosted LLMs",
+    "run multimodal prompt tasks with images and text",
+    "get embeddings for semantic search",
+    "use explainability features for model decision transparency"
+  ],
+  "sources": [
+    "https://docs.aleph-alpha.com/"
+  ],
+  "researcher_confidence": "low"
+}

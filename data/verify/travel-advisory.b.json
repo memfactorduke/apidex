@@ -1,0 +1,52 @@
+{
+  "id": "travel-advisory",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": null,
+      "source": "https://www.travel-advisory.info/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": null,
+      "source": "https://www.travel-advisory.info/data-api"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No valid current example: the documented GET endpoint is offline.",
+      "source": "https://www.travel-advisory.info/api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Former API that supplied aggregated 0\u20135 country risk scores; it is not currently operational.",
+      "source": "https://findapis.com/en/api/travel-advisory"
+    }
+  },
+  "notes": "Both official URLs are unreachable, and current monitoring reports 0 successful checks out of 30. No shutdown notice or verified replacement was found. The similarly named traveladvisory.io service is operated separately and requires API-key authentication, so it was not treated as a migration target."
+}

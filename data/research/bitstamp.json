@@ -1,0 +1,41 @@
+{
+  "id": "bitstamp",
+  "status": "operational",
+  "name": "Bitstamp",
+  "category": "crypto",
+  "tagline": "European crypto exchange public ticker and private trading API",
+  "description": "Bitstamp is a long-running European cryptocurrency exchange offering public market data (ticker, order book, trades) and authenticated private endpoints for account balances, order management, and trading. REST APIs are documented with API keys for private calls; public market endpoints need no auth.",
+  "base_url": "https://www.bitstamp.net/api/v2",
+  "docs_url": "https://www.bitstamp.net/api/",
+  "signup_url": "https://www.bitstamp.net/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key + secret + customer ID via signed private requests (self-serve after account verification); public market data needs no auth"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://www.bitstamp.net/api/v2/ticker/btcusd/'",
+    "response_snippet": "{\"high\": \"...\", \"last\": \"...\", \"timestamp\": \"...\", \"bid\": \"...\", \"vwap\": \"...\", \"volume\": \"...\", \"low\": \"...\", \"ask\": \"...\", \"open\": \"...\"}"
+  },
+  "use_cases": [
+    "get BTC/USD ticker price",
+    "fetch order book for a pair",
+    "list recent public trades",
+    "place authenticated buy/sell orders",
+    "check account balances"
+  ],
+  "sources": [
+    "https://www.bitstamp.net/api/"
+  ],
+  "researcher_confidence": "low"
+}

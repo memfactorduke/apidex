@@ -1,0 +1,52 @@
+{
+  "id": "baseten",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://model-{MODEL_ID}.api.baseten.co (per-model host; no single generic api.baseten.co root for inference)",
+      "source": "https://docs.baseten.co/api-reference/inference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.baseten.co/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.baseten.co/api-reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.baseten.co/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free credits (e.g. $30) on signup; usage billed against compute \u2014 not a fixed free request quota",
+      "source": "https://www.baseten.co/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.baseten.co/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"https://model-{MODEL_ID}.api.baseten.co/production/predict\" -H \"Authorization: Api-Key $BASETEN_API_KEY\" -H \"Content-Type: application/json\" -d '{...}'",
+      "source": "https://docs.baseten.co/api-reference/inference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.baseten.co/"
+    }
+  },
+  "notes": "Base URL and example curl were hallucinated/oversimplified. Auth is Api-Key. Free credits exist; exact free_tier_limits need pricing page wording. CORS not documented."
+}

@@ -1,0 +1,205 @@
+{
+  "category": "education-reference",
+  "apis": [
+    {
+      "name": "Wikidata Query Service",
+      "slug": "wikidata",
+      "base_domain": "query.wikidata.org",
+      "docs_url": "https://query.wikidata.org/",
+      "why_notable": "SPARQL endpoint for structured encyclopedic knowledge linking entities across Wikimedia projects.",
+      "free_tier": true
+    },
+    {
+      "name": "DBpedia SPARQL",
+      "slug": "dbpedia",
+      "base_domain": "dbpedia.org",
+      "docs_url": "https://www.dbpedia.org/resources/sparql/",
+      "why_notable": "Linked open data extracted from Wikipedia; foundational for semantic and educational knowledge graphs.",
+      "free_tier": true
+    },
+    {
+      "name": "Britannica Academic API",
+      "slug": "britannica",
+      "base_domain": "api.britannica.com",
+      "docs_url": "https://www.britannica.com/developer",
+      "why_notable": "Commercial encyclopedia content API for licensed article and media access in learning products.",
+      "free_tier": false
+    },
+    {
+      "name": "World Bank Education API",
+      "slug": "world-bank-education",
+      "base_domain": "api.worldbank.org",
+      "docs_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+      "why_notable": "Global education indicators (enrollment, literacy, spending) via World Bank open data REST endpoints.",
+      "free_tier": true
+    },
+    {
+      "name": "U.S. Department of Education Data",
+      "slug": "ed-gov-data",
+      "base_domain": "api.data.gov",
+      "docs_url": "https://api.data.gov/docs/ed/",
+      "why_notable": "Federal education open data including colleges, K-12, and financial-aid datasets via data.gov.",
+      "free_tier": true
+    },
+    {
+      "name": "College Scorecard API",
+      "slug": "college-scorecard",
+      "base_domain": "api.data.gov",
+      "docs_url": "https://collegescorecard.ed.gov/data/api-documentation/",
+      "why_notable": "U.S. higher-ed outcomes: costs, graduation rates, earnings by institution and field of study.",
+      "free_tier": true
+    },
+    {
+      "name": "EdX API",
+      "slug": "edx",
+      "base_domain": "courses.edx.org",
+      "docs_url": "https://docs.edx.org/en/latest/developers/references/apis.html",
+      "why_notable": "Open edX / edX course catalog and learner platform APIs for MOOC integration.",
+      "free_tier": true
+    },
+    {
+      "name": "Udemy Affiliate API",
+      "slug": "udemy",
+      "base_domain": "www.udemy.com",
+      "docs_url": "https://www.udemy.com/developers/affiliate/",
+      "why_notable": "Course catalog search and affiliate data for the large commercial online-learning marketplace.",
+      "free_tier": true
+    },
+    {
+      "name": "Khan Academy API",
+      "slug": "khan-academy",
+      "base_domain": "www.khanacademy.org",
+      "docs_url": "https://api-explorer.khanacademy.org/",
+      "why_notable": "Free K\u201312 and lifelong learning content tree, exercises, and video metadata.",
+      "free_tier": true
+    },
+    {
+      "name": "Canvas LMS API",
+      "slug": "canvas-lms",
+      "base_domain": "canvas.instructure.com",
+      "docs_url": "https://canvas.instructure.com/doc/api/",
+      "why_notable": "Dominant higher-ed LMS REST API for courses, assignments, grades, and enrollments.",
+      "free_tier": true
+    },
+    {
+      "name": "Moodle Web Services",
+      "slug": "moodle",
+      "base_domain": "moodle.org",
+      "docs_url": "https://moodledev.io/docs/apis",
+      "why_notable": "Open-source LMS web-service API used worldwide for course and user integration.",
+      "free_tier": true
+    },
+    {
+      "name": "Google Books API",
+      "slug": "google-books",
+      "base_domain": "www.googleapis.com",
+      "docs_url": "https://developers.google.com/books/docs/v1/using",
+      "why_notable": "Book metadata, previews, and volumes search\u2014core reference for libraries and reading apps.",
+      "free_tier": true
+    },
+    {
+      "name": "Internet Archive API",
+      "slug": "internet-archive",
+      "base_domain": "archive.org",
+      "docs_url": "https://archive.org/developers/",
+      "why_notable": "Massive public-domain books, texts, and media via Search, Metadata, and related APIs.",
+      "free_tier": true
+    },
+    {
+      "name": "British National Bibliography API",
+      "slug": "bnb-api",
+      "base_domain": "bnb.data.bl.uk",
+      "docs_url": "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931",
+      "why_notable": "British Library bibliographic open data for UK published works (Linked Data / SPARQL heritage).",
+      "free_tier": true
+    },
+    {
+      "name": "Crossref REST API",
+      "slug": "crossref",
+      "base_domain": "api.crossref.org",
+      "docs_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "why_notable": "DOI metadata for scholarly articles\u2014essential academic reference and citation plumbing.",
+      "free_tier": true
+    },
+    {
+      "name": "OpenAlex",
+      "slug": "openalex",
+      "base_domain": "api.openalex.org",
+      "docs_url": "https://docs.openalex.org/",
+      "why_notable": "Free scholarly graph of works, authors, institutions replacing Microsoft Academic Graph.",
+      "free_tier": true
+    },
+    {
+      "name": "Semantic Scholar API",
+      "slug": "semantic-scholar",
+      "base_domain": "api.semanticscholar.org",
+      "docs_url": "https://api.semanticscholar.org/api-docs/",
+      "why_notable": "AI-powered academic paper search, citations, and recommendations from Allen Institute.",
+      "free_tier": true
+    },
+    {
+      "name": "CORE API",
+      "slug": "core-ac-uk",
+      "base_domain": "api.core.ac.uk",
+      "docs_url": "https://core.ac.uk/services/api",
+      "why_notable": "Aggregates open-access research papers worldwide for full-text scholarly search.",
+      "free_tier": true
+    },
+    {
+      "name": "Quotable",
+      "slug": "quotable",
+      "base_domain": "api.quotable.io",
+      "docs_url": "https://github.com/lukePeavey/quotable",
+      "why_notable": "Free open-source random and filtered quotes API popular with developers and demos.",
+      "free_tier": true
+    },
+    {
+      "name": "API Ninjas Quotes",
+      "slug": "api-ninjas-quotes",
+      "base_domain": "api.api-ninjas.com",
+      "docs_url": "https://api-ninjas.com/api/quotes",
+      "why_notable": "Simple quotes endpoint among many reference utilities; free tier with API key.",
+      "free_tier": true
+    },
+    {
+      "name": "Forvo Pronunciation API",
+      "slug": "forvo",
+      "base_domain": "apifree.forvo.com",
+      "docs_url": "https://api.forvo.com/documentation/word-pronunciations/",
+      "why_notable": "Crowdsourced word pronunciations in many languages for language-learning apps.",
+      "free_tier": true
+    },
+    {
+      "name": "Lingua.com API / Tatoeba",
+      "slug": "tatoeba",
+      "base_domain": "tatoeba.org",
+      "docs_url": "https://en.wiki.tatoeba.org/articles/show/api",
+      "why_notable": "Multilingual sentence corpus with translations\u2014gold standard for language-learning datasets/API access.",
+      "free_tier": true
+    },
+    {
+      "name": "AnkiConnect",
+      "slug": "ankiconnect",
+      "base_domain": "localhost",
+      "docs_url": "https://foosoft.net/projects/anki-connect/",
+      "why_notable": "Local HTTP API to control Anki decks\u2014widely used by spaced-repetition language learners (local only).",
+      "free_tier": true
+    },
+    {
+      "name": "DeepL API",
+      "slug": "deepl",
+      "base_domain": "api-free.deepl.com",
+      "docs_url": "https://developers.deepl.com/docs",
+      "why_notable": "High-quality translation used heavily in language learning and education tooling; free tier exists.",
+      "free_tier": true
+    },
+    {
+      "name": "LibreTranslate",
+      "slug": "libretranslate",
+      "base_domain": "libretranslate.com",
+      "docs_url": "https://libretranslate.com/docs/",
+      "why_notable": "Open-source self-hostable translation HTTP API for privacy-friendly language education apps.",
+      "free_tier": true
+    }
+  ]
+}

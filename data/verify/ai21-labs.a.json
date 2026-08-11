@@ -1,0 +1,52 @@
+{
+  "id": "ai21-labs",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ai21.com/reference/jamba-1-5-api-ref"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ai21.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ai21.com/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://studio.ai21.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free trial credits available for new accounts; exact limits not publicly fixed \u2014 check Studio billing",
+      "source": "https://docs.ai21.com/docs/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits apply per account/plan; see docs and Studio for current TPM/RPM",
+      "source": "https://docs.ai21.com/docs/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"https://api.ai21.com/studio/v1/chat/completions\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"jamba-large\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+      "source": "https://docs.ai21.com/reference/jamba-1-5-api-ref"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ai21.com/"
+    }
+  },
+  "notes": "Verified against AI21 docs. Base URL and docs URL correct. Free trial exists. Example curl path was incomplete."
+}

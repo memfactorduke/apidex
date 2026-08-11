@@ -1,0 +1,41 @@
+{
+  "id": "opentopomap",
+  "status": "operational",
+  "name": "OpenTopoMap",
+  "category": "geo-maps",
+  "tagline": "Free topographic map tiles from OSM and SRTM elevation data",
+  "description": "OpenTopoMap is a free topographic map tile service that renders OpenStreetMap data with SRTM elevation into classic contour-style map tiles. Developers typically load XYZ raster tiles at zoom levels for outdoor, hiking, and terrain-focused maps.",
+  "base_url": "https://tile.opentopomap.org",
+  "docs_url": "https://opentopomap.org/about",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required for public tile usage. Usage is subject to fair-use and attribution requirements on the project site."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public free tile access; no published paid plans. Respect fair-use limits from the project.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sL \"https://tile.opentopomap.org/10/512/340.png\" -o tile.png",
+    "response_snippet": "HTTP 200; image/png topographic map tile (binary PNG raster for z/x/y)"
+  },
+  "use_cases": [
+    "load topographic base map tiles in a web map",
+    "show hiking terrain with contour-style basemap",
+    "add outdoor-oriented OSM tiles to a mobile map view",
+    "prefetch XYZ topo tiles for offline cache"
+  ],
+  "sources": [
+    "https://opentopomap.org/about",
+    "https://tile.opentopomap.org"
+  ],
+  "researcher_confidence": "medium"
+}

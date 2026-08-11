@@ -1,0 +1,52 @@
+{
+  "id": "azure-ai-vision",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/call-analyze-image"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/computer-vision/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "F0 free tier: 20 transactions/minute and 5,000 transactions/month (Image Analysis / Computer Vision pricing)",
+      "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/computer-vision/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per tier: Free (F0) 20 TPM; S1 standard tiers have documented TPS/TPM (e.g. Image Analysis S1 often 10 TPS); exact limits vary by feature and region \u2014 see Azure pricing and service limits docs",
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-limiting-access"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "v3.2 Analyze still documented in places but Image Analysis 4.0 is the current path: POST https://{endpoint}/computervision/imageanalysis:analyze?api-version=2024-02-01 (or current GA api-version) with features query; legacy vision/v3.2/analyze is older Computer Vision REST",
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/call-analyze-image-40"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/"
+    }
+  },
+  "notes": "Adversarial review found free_tier_limits and rate_limits wrongly marked unknown/not published (F0 limits are public). Example uses legacy v3.2 Analyze path while Image Analysis 4.0 is current. base_url/docs/auth hold."
+}

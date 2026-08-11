@@ -1,0 +1,42 @@
+{
+  "id": "jetbrains-space",
+  "status": "operational",
+  "name": "JetBrains Space API",
+  "category": "dev-tools",
+  "tagline": "HTTP API for JetBrains Space DevOps automation",
+  "description": "JetBrains Space is an all-in-one collaboration and DevOps platform covering git hosting, CI/CD, issue tracking, packages, and team tools. Its HTTP API lets developers and agents automate work across Space projects\u2014managing repositories, issues, packages, members, and more\u2014via authenticated REST-style endpoints on organization-specific hosts.",
+  "base_url": "https://{organization}.jetbrains.space/api/http",
+  "docs_url": "https://www.jetbrains.com/help/space/api.html",
+  "signup_url": "https://www.jetbrains.com/space/",
+  "auth": {
+    "type": "other",
+    "details": "Permanent tokens or OAuth 2.0 apps; Authorization: Bearer YOUR_TOKEN. Tokens created in Space (My Profile \u2192 Personal Tokens or app credentials)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\" \"https://YOUR_ORG.jetbrains.space/api/http/team-directory/profiles/me\"",
+    "response_snippet": "{\"id\":\"profile-id\",\"username\":\"jdoe\",\"name\":{\"firstName\":\"Jane\",\"lastName\":\"Doe\"},\"emails\":[{\"email\":\"jane@example.com\"}]}"
+  },
+  "use_cases": [
+    "list Space projects and repositories for an organization",
+    "create or update issues in a Space project",
+    "trigger or inspect CI/CD automation jobs",
+    "manage package registry artifacts",
+    "fetch team directory profiles and membership",
+    "post chat messages or notifications from bots"
+  ],
+  "sources": [
+    "https://www.jetbrains.com/help/space/api.html"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "la-open-data",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Anonymous SODA 2.x requests share an IP-based pool and may be throttled at an unspecified threshold. App-token requests are currently not throttled unless deemed abusive, malicious, or monopolizing; no numeric token quota is published.",
+  "cors": "yes",
+  "example_request": "curl 'https://data.lacity.org/resource/2nrs-mtv8.json?$limit=1'",
+  "example_response_snippet": "[{\"dr_no\":\"211507896\",\"date_rptd\":\"2021-04-11T00:00:00.000\",\"date_occ\":\"2020-11-07T00:00:00.000\",\"time_occ\":\"0845\",\"area\":\"15\",\"area_name\":\"N Hollywood\",\"crm_cd\":\"354\",\"crm_cd_desc\":\"THEFT OF IDENTITY\",\"status\":\"IC\",\"status_desc\":\"Invest Cont\"}]",
+  "description": "City of Los Angeles public datasets are queryable through Socrata SODA. The listed /resource base is the fully supported SODA 2.1 API: public reads may be anonymous, while an optional app token identifies the application and provides a separate request pool. SODA3 is now the platform default and requires an app token or authenticated identity for queries.",
+  "status": null,
+  "resolution_notes": "auth_type=other: app token differs from API key+secret (https://support.socrata.com/hc/en-us/articles/210138558). rate_limits=corrected: IP pool; tokens unthrottled except abuse (https://dev.socrata.com/docs/app-tokens.html). cors=yes: public read-only CORS (https://dev.socrata.com/docs/cors-and-jsonp.html). example=corrected: live HTTP 200 JSON (https://data.lacity.org/resource/2nrs-mtv8.json?$limit=1). description=corrected: SODA2.1 supported; SODA3 defaults and requires identity (https://support.socrata.com/hc/en-us/articles/34730618169623-SODA3-API)."
+}

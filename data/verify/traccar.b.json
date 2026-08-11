@@ -1,0 +1,52 @@
+{
+  "id": "traccar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/api-reference/openapi.yaml"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/api-reference/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/traccar-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/demo-server/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Self-hosting is free/open source. The free hosted offering consists of testing-oriented demo servers with no feature or device-count limits, but without reverse geocoding, email service, guaranteed quality of service, or guaranteed full history; it is not an official Traccar Cloud free plan.",
+      "source": "https://www.traccar.org/demo-server/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/api-reference/openapi.yaml"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Session login uses POST /api/session with form-encoded email and password, or GET /api/session?token=USER_TOKEN. HTTP Basic and Bearer authentication are separate authorization options; the session is not created by a Basic-Auth-only login request.",
+      "source": "https://www.traccar.org/api-reference/openapi.yaml"
+    }
+  },
+  "notes": "The current official OpenAPI is version 6.14.5 and lists the submitted demo base URL. The definite defects are the session-login description and characterization of demo servers as a cloud free plan. No current official REST request-rate limit or demo-host CORS policy was located."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "plant-id",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/flowerchecker/plant-id-examples"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://admin.kindwise.com/public/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kindwise.com/handbook"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kindwise.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 free testing credits after registration; each identification costs 1 credit and adding plant.health costs another credit.",
+      "source": "https://www.kindwise.com/faq"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Kindwise says there is no request-count cap. Its SLA publishes performance-guarantee thresholds of 20, 60, or 240 uploaded photos per minute for tiers A-B, C, and D+/retroactive pay, respectively.",
+      "source": "https://www.kindwise.com/service-level-agreement"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "POST https://api.plant.id/v3/identification with an Api-Key header and JSON body containing images as raw Base64 strings, without the data:image/jpeg;base64, prefix.",
+      "source": "https://github.com/flowerchecker/plant-id-examples"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.kindwise.com/plant-id"
+    }
+  },
+  "notes": "The API is active and v3 is current. The entry fails because the free-credit allowance and published traffic conditions are misstated, and its curl payload uses a data-URI prefix where Kindwise's current example sends raw Base64. Core identification, taxonomy, common-name, confidence, weed, and optional plant-health capabilities are supported, but the broad claim that it is widely used across all listed sectors could not be independently verified from official sources."
+}

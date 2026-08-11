@@ -1,0 +1,52 @@
+{
+  "id": "opentopomap",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentopomap.org/about"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentopomap.org/about#verwendung"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentopomap.org/about#verwendung"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentopomap.org/about"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentopomap.org/about"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://opentopomap.org/about"
+    }
+  },
+  "notes": "Official 2026 material says the raster server was replaced on 2026-01-05 and remains available, although raster tiles are deprecated in favor of forthcoming vector tiles. Official docs specify https://{a|b|c}.tile.opentopomap.org/{z}/{x}/{y}.png, so the entry's exact bare host and curl could not be confirmed. No numeric rate limit is published; mass downloads must not overload the server, and uptime is not guaranteed."
+}

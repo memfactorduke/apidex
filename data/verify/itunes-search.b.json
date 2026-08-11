@@ -1,0 +1,52 @@
+{
+  "id": "itunes-search",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://performance-partners.apple.com/search-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://performance-partners.apple.com/search-api"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://performance-partners.apple.com/search-api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Apple's unauthenticated Search API searches content in the iTunes Store and Apple Books Store, supports term searches and ID-based lookups across documented media types, and returns JSON metadata such as artwork, previews, and store links. It is distinct from the authenticated Apple Music API and should not be described as searching the Apple Music catalog.",
+      "source": "https://performance-partners.apple.com/search-api"
+    }
+  },
+  "notes": "Apple's current Performance Partners page still documents the endpoint and approximately 20 calls/minute. Apple does not publish a free-tier or no-paid-plans statement, CORS policy, or the claimed over-limit response behavior. The archived guide remains accessible. No official shutdown notice was found; a direct live probe could not be completed in this environment."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "faostat",
+  "status": "operational",
+  "name": "FAOSTAT",
+  "category": "agriculture",
+  "tagline": "UN FAO global production, trade, and food-security statistics for countries and commodities.",
+  "description": "FAOSTAT is the Food and Agriculture Organization of the United Nations' open statistical API. It provides country- and commodity-level data on agricultural production, trade, food balances, prices, inputs, emissions, and food security indicators. Developers query domain codes, element codes, and area/item lists via REST endpoints; responses are typically JSON (or CSV). No API key is required for public access.",
+  "base_url": "https://fenixservices.fao.org/faostat/api/v1",
+  "docs_url": "https://fenixservices.fao.org/faostat/static/documents/API/API_Manual_EN.pdf",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints. Open access; no API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no published request quota",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://fenixservices.fao.org/faostat/api/v1/en/definitions/domain'",
+    "response_snippet": "{\n  \"data\": [\n    {\n      \"code\": \"QCL\",\n      \"label\": \"Crops and livestock products\",\n      \"date_update\": \"2024-12-19\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "list FAOSTAT statistical domains and codes",
+    "get crop production by country and year",
+    "fetch trade quantities for a commodity",
+    "look up area and item code definitions",
+    "query food security indicators for countries"
+  ],
+  "sources": [
+    "https://fenixservices.fao.org/faostat/static/documents/API/API_Manual_EN.pdf",
+    "https://www.fao.org/faostat/en/#data",
+    "https://fenixservices.fao.org/faostat/api/v1/en/definitions/domain"
+  ],
+  "researcher_confidence": "medium"
+}

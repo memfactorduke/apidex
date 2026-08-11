@@ -1,0 +1,98 @@
+{
+  "id": "aws-iot-core",
+  "status": "operational",
+  "name": "AWS IoT Core",
+  "category": "iot-devices",
+  "tagline": "Managed cloud service for connecting IoT devices via MQTT, HTTP, and WebSockets",
+  "description": "AWS IoT Core is a managed cloud service that lets connected devices interact with cloud applications and other devices. It supports MQTT, HTTPS, and MQTT over WebSockets, device shadows, jobs, fleets, and a full HTTP control-plane API for managing things, certificates, rules, and more.",
+  "base_url": "https://iot.<region>.amazonaws.com",
+  "docs_url": "https://docs.aws.amazon.com/iot/latest/apireference/Welcome.html",
+  "signup_url": "https://console.aws.amazon.com/iot/",
+  "auth": {
+    "type": "other",
+    "details": "AWS Signature Version 4 (SigV4) with IAM credentials or temporary credentials from STS; devices may use X.509 certificates for MQTT/data plane"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Accounts created before July 15, 2025: for 12 months, 2.25M connection minutes, 500k messages, 225k Registry/Device Shadow operations, 250k rules triggered, and 250k actions applied monthly. New customers receive up to $200 in credits; the free plan lasts up to 6 months.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published per-account, per-region quotas vary by API and region. Current defaults include 10 TPS for ListThings and 10 TPS for DescribeEndpoint; some quotas are adjustable.",
+  "example": {
+    "request": "curl --aws-sigv4 \"aws:amz:us-east-1:execute-api\" --user \"$AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY\" -H \"x-amz-security-token: $AWS_SESSION_TOKEN\" \"https://iot.us-east-1.amazonaws.com/things\"",
+    "response_snippet": "{\"things\":[{\"thingName\":\"sensor-001\",\"thingArn\":\"arn:aws:iot:us-east-1:123456789012:thing/sensor-001\",\"attributes\":{},\"version\":1}]}"
+  },
+  "use_cases": [
+    "list IoT things in an account",
+    "get device shadow state",
+    "create a thing and attach a certificate",
+    "publish a message to an MQTT topic",
+    "list IoT jobs for a fleet"
+  ],
+  "sources": [
+    "https://docs.aws.amazon.com/iot/latest/apireference/Welcome.html"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

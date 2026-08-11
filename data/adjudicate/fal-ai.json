@@ -1,0 +1,15 @@
+{
+  "id": "fal-ai",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "New accounts start at 2 concurrent IN_PROGRESS requests globally; paid credit purchases scale the self-serve limit up to 40. Excess requests queue, and endpoint-specific caps may apply.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Replace original; fal publishes concurrency limits, including the 2-request default, scaling to 40, queuing, and possible endpoint caps: https://fal.ai/docs/documentation/model-apis/concurrency-limits. cors: Set to yes; fal's official browser client is designed for direct browser use, while a proxy is recommended to protect API keys: https://github.com/fal-ai/fal-js and https://fal.ai/docs/documentation/model-apis/inference/server-side."
+}

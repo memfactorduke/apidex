@@ -1,0 +1,52 @@
+{
+  "id": "septa-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.septa.org/api",
+      "source": "https://api.septa.org/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.septa.org/",
+      "source": "https://api.septa.org/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://api.septa.org/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s 'https://api.septa.org/api/Arrivals/index.php?station=30th%20Street%20Station&results=5'",
+      "source": "https://api.septa.org/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Public SEPTA API providing Regional Rail arrivals and train positions, bus and trolley vehicle locations, alerts and detours, plus Regional Rail and bus/trolley schedule and static data.",
+      "source": "https://api.septa.org/"
+    }
+  },
+  "notes": "Current official Swagger documentation is hosted at api.septa.org and declares /api as its base. The supplied www3 URLs returned 403, while current official search results identify the new host. The documentation describes Regional Rail, bus, and trolley APIs, not subway/elevated real-time coverage. No authoritative API pricing, quota, authentication, or CORS statement was found."
+}

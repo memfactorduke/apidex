@@ -1,0 +1,15 @@
+{
+  "id": "tcgplayer",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl --request GET --header \"Accept: application/json\" --header \"Authorization: bearer BEARER_TOKEN\" \"https://api.tcgplayer.com/v1.39.0/catalog/categories\"",
+  "example_response_snippet": "{\"success\":true,\"errors\":[],\"results\":[{\"categoryId\":1,\"name\":\"Magic\"},{\"categoryId\":3,\"name\":\"Pokemon\"},{\"categoryId\":2,\"name\":\"YuGiOh\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: Original is incorrect. Official documentation requires an OAuth 2.0 client-credentials grant at POST /token, which returns a bearer access token: https://docs.tcgplayer.com/docs/getting-started. example: Original root request and API-key wording are incorrect; the same current official guide specifies v1.39.0, the bearer Authorization header, GET /catalog/categories, and the JSON response structure used here: https://docs.tcgplayer.com/docs/getting-started."
+}

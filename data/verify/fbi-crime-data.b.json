@@ -1,0 +1,52 @@
+{
+  "id": "fbi-crime-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.usa.gov/crime/fbi/sapi",
+      "source": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi",
+      "source": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.data.gov/signup/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.data.gov/signup/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 requests/hour per API key (api.data.gov free tier default)",
+      "source": "https://api.data.gov/docs/rate-limits/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 requests/hour (api.data.gov free tier; higher limits available by request)",
+      "source": "https://api.data.gov/docs/rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.usa.gov/crime/fbi/sapi/api/arrest/national/all?from=2019&to=2021&API_KEY=YOUR_API_KEY\"",
+      "source": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi"
+    }
+  },
+  "notes": "Old fr.cloud.gov and /crime/fbi/cde paths 404. Current CDE lives at cde.ucr.cjis.gov; public API base is api.usa.gov/crime/fbi/sapi. Auth is free api.data.gov key (1k/hr)."
+}

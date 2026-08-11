@@ -1,0 +1,40 @@
+{
+  "id": "blynk",
+  "status": "operational",
+  "name": "Blynk",
+  "category": "iot-devices",
+  "tagline": "HTTPS API for IoT datastreams, device control, and dashboards",
+  "description": "Blynk is a no-code IoT platform with cloud HTTPS APIs for reading and writing datastreams, controlling devices, and powering mobile dashboards. Developers use tokens and REST-style endpoints to manage hardware from apps and automations.",
+  "base_url": "https://blynk.cloud",
+  "docs_url": "https://docs.blynk.io/en/blynk.cloud/https-api-overview",
+  "signup_url": "https://blynk.cloud",
+  "auth": {
+    "type": "apiKey",
+    "details": "Device or organization token via query param or header; confirm exact mechanism from current docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://blynk.cloud/external/api/get?token=YOUR_API_KEY&v0\"",
+    "response_snippet": "\"1\""
+  },
+  "use_cases": [
+    "read IoT device datastream values",
+    "write pin or virtual pin values to devices",
+    "trigger device updates from server automations",
+    "build custom dashboards on Blynk cloud data"
+  ],
+  "sources": [
+    "https://docs.blynk.io/en/blynk.cloud/https-api-overview"
+  ],
+  "researcher_confidence": "low"
+}

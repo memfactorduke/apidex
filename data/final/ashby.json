@@ -1,0 +1,94 @@
+{
+  "id": "ashby",
+  "status": "operational",
+  "name": "Ashby Job Posting API",
+  "category": "jobs-careers",
+  "tagline": "Public job posting API for Ashby careers-site embeds and open roles.",
+  "description": "Ashby's Public Job Posting API lets developers list open roles, fetch job details, and power careers-site embeds for companies that use Ashby ATS. It is designed for public job data without private recruiting workflows.",
+  "base_url": "https://api.ashbyhq.com/posting-api",
+  "docs_url": "https://developers.ashbyhq.com/docs/public-job-posting-api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Unknown pending verification from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS 'https://api.ashbyhq.com/posting-api/job-board/Ashby?includeCompensation=true'",
+    "response_snippet": "{\"apiVersion\":\"1\",\"jobs\":[{\"title\":\"Product Manager\",\"location\":\"Houston, TX\",\"isRemote\":true,\"workplaceType\":\"Remote\",\"jobUrl\":\"https://jobs.ashbyhq.com/example_job\",\"applyUrl\":\"https://jobs.ashbyhq.com/example/apply\"}]}"
+  },
+  "use_cases": [
+    "list open jobs for a company careers page",
+    "fetch job posting details by id"
+  ],
+  "sources": [
+    "https://developers.ashbyhq.com/docs/public-job-posting-api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

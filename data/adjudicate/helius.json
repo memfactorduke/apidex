@@ -1,0 +1,15 @@
+{
+  "id": "helius",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Free/Developer/Business/Professional: RPC 10/50/200/500 requests/s; DAS & Enhanced APIs 2/10/50/100 requests/s. Enterprise limits are custom; special endpoint limits apply.",
+  "cors": null,
+  "example_request": "curl \"https://api.helius.xyz/v1/wallet/86xCnPeV69n6t3DnyGvkKobf9FdN2H9oiVDdaMpo2MMY/balances?api-key=YOUR_API_KEY\"",
+  "example_response_snippet": "{\"balances\":[{\"mint\":\"So11111111111111111111111111111111111111112\",\"balance\":1.5,\"decimals\":9,\"tokenProgram\":\"spl-token\",\"symbol\":\"SOL\",\"name\":\"Solana\",\"pricePerToken\":145.32,\"usdValue\":217.98}],\"totalUsdValue\":217.98,\"pagination\":{\"page\":1,\"limit\":100,\"hasMore\":true}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: ORIGINAL is incorrect because Helius documents plan-specific per-second limits distinct from credit billing; the corrected current limits are at https://www.helius.dev/docs/billing/rate-limits. example: Both verifiers are correct; the current balances route is /v1/wallet/{wallet}/balances and its response uses balances, totalUsdValue, and pagination, as documented at https://www.helius.dev/docs/api-reference/wallet-api/balances."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "codeclimate",
+  "status": "operational",
+  "name": "CodeClimate Quality API",
+  "category": "dev-tools",
+  "tagline": "Programmatic access to Code Climate Quality maintainability, coverage, and repo analysis data.",
+  "description": "Code Climate Quality API provides authenticated access to repository analysis status, maintainability metrics, test coverage data, and related quality insights for GitHub, GitLab, and Bitbucket projects. Developers use it to pull snapshot results, coverage history, and org/repo metadata into CI pipelines, dashboards, and automation workflows.",
+  "base_url": "https://api.codeclimate.com/v1",
+  "docs_url": "https://developer.codeclimate.com/",
+  "signup_url": "https://codeclimate.com/quality/pricing",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal access token (PAT) via Authorization: Token token=YOUR_API_KEY header; tokens created in Code Climate user settings (self-serve for Quality users)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Quality open-source/public repos free; private-repo free tier and API call quotas not clearly published as fixed request limits \u2014 check current Quality pricing for private seats",
+    "paid_plans": "Code Climate Quality paid plans for private repositories (team/org pricing); Velocity is a separate product"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Token token=YOUR_API_KEY\" -H \"Accept: application/vnd.api+json\" \"https://api.codeclimate.com/v1/repos?github_slug=codeclimate/codeclimate\"",
+    "response_snippet": "{\"data\":[{\"id\":\"...\",\"type\":\"repos\",\"attributes\":{\"analysis_status\":\"completed\",\"badge_token\":\"...\",\"github_slug\":\"codeclimate/codeclimate\",\"human_name\":\"codeclimate\",\"score\":1.2},\"relationships\":{...}}]}"
+  },
+  "use_cases": [
+    "get maintainability grade and score for a GitHub repository",
+    "check latest analysis status of a repo after a push",
+    "retrieve test coverage percentage and coverage history for a project",
+    "list repositories linked to a Code Climate organization",
+    "pull badge tokens or quality metrics for CI dashboards"
+  ],
+  "sources": [
+    "https://developer.codeclimate.com/",
+    "https://docs.codeclimate.com/",
+    "https://codeclimate.com/quality/pricing",
+    "https://codeclimate.com"
+  ],
+  "researcher_confidence": "medium"
+}

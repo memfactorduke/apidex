@@ -1,0 +1,52 @@
+{
+  "id": "render",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.render.com/reference/list-services"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.render.com/reference/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.render.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://render.com/docs/free"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Limits are published: 750 Free instance hours per workspace monthly; web services spin down after 15 idle minutes; Free Postgres is limited to one per workspace, 1 GB, and 30 days; Free Key Value is limited to one per workspace and is nonpersistent. Bandwidth and pipeline limits also apply.",
+      "source": "https://render.com/docs/free"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published. Examples include 400/minute for other GET requests, 30/minute for other POST/PATCH/DELETE requests, 20/hour for specified service mutations and deploys, 100/minute for job creation, and 10/minute/service for deploy hooks.",
+      "source": "https://api-docs.render.com/reference/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.render.com/reference/list-services"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://render.com/docs/api"
+    }
+  },
+  "notes": "The API and documentation are live. The entry fails because Render currently publishes both endpoint-specific rate limits and detailed free-tier limits, contradicting \u201cnot published\u201d and \u201cunknown.\u201d No authoritative CORS policy was located."
+}

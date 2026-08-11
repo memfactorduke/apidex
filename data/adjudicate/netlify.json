@@ -1,0 +1,15 @@
+{
+  "id": "netlify",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": "300 credits per month; this is a hard limit. When exhausted, all projects pause until the next billing cycle unless the account upgrades. Auto recharge is unavailable on Free.",
+  "rate_limits": "Up to 500 requests per minute for most requests. Some operations have stricter limits; API deploys are limited to 3 per minute and 100 per day.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: oauth2; Netlify explicitly says it uses OAuth2 and PATs are bearer tokens: https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/#authentication. free_tier_limits: 300 credits/month with a hard limit and project pausing: https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/how-credits-work/. rate_limits: 500/minute generally; API deploys 3/minute and 100/day: https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/#rate-limiting."
+}

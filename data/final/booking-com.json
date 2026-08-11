@@ -1,0 +1,96 @@
+{
+  "id": "booking-com",
+  "status": "operational",
+  "name": "Booking.com Demand API",
+  "category": "travel-hospitality",
+  "tagline": "Hotel and accommodation inventory search, booking, and content via Booking.com's partner Demand API.",
+  "description": "Booking.com Demand API gives partners programmatic access to hotel and accommodation inventory on one of the world's largest OTAs. Partners can search availability, retrieve property content, check rates, and create bookings through documented REST endpoints. Access is partner-oriented with self-serve onboarding paths; authentication and commercial terms are managed through Booking.com's developer/partner programs.",
+  "base_url": "https://demandapi.booking.com/3.1",
+  "docs_url": "https://developers.booking.com/demand/docs",
+  "signup_url": "https://developers.booking.com/demand/docs",
+  "auth": {
+    "type": "other",
+    "details": "Partner credentials issued after Demand API onboarding; exact header scheme (Bearer token vs API key) requires confirmation from current partner docs after account access."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Commercial partner terms; not a public self-serve metered SaaS pricing page."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS -X POST 'https://demandapi.booking.com/3.1/accommodations/search' -H 'Authorization: Bearer YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"booker\":{\"country\":\"us\",\"platform\":\"desktop\"},\"checkin\":\"2026-09-01\",\"checkout\":\"2026-09-03\",\"city\":-2140479,\"guests\":{\"number_of_adults\":2,\"number_of_rooms\":1}}'",
+    "response_snippet": "{\"request_id\":\"...\",\"data\":[{\"id\":10004,\"name\":\"Example Hotel\",\"currency\":\"USD\",\"price\":{\"book\":199.00,\"total\":219.00},\"deep_link_url\":\"https://www.booking.com/...\"}]}"
+  },
+  "use_cases": [
+    "search hotels by city and dates with guest counts",
+    "fetch property content and amenities for a hotel ID",
+    "check live rates and availability for stay dates",
+    "create or manage accommodation bookings as a partner",
+    "retrieve cancellation policies and room details"
+  ],
+  "sources": [
+    "https://developers.booking.com/demand/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

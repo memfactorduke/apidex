@@ -1,0 +1,41 @@
+{
+  "id": "cboe-livevol",
+  "status": "operational",
+  "name": "Cboe LiveVol",
+  "category": "finance",
+  "tagline": "Options and volatility market data via Cboe delayed and LiveVol endpoints",
+  "description": "Cboe LiveVol provides options market data and volatility research endpoints used for VIX, options chains, and market microstructure work. Public documentation emphasizes delayed quotes and related research APIs hosted on Cboe domains such as cdn.cboe.com, with commercial LiveVol products for deeper historical and real-time coverage.",
+  "base_url": "https://cdn.cboe.com",
+  "docs_url": "https://www.cboe.com/delayed_quotes/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public delayed-quotes CDN endpoints are commonly unauthenticated; commercial LiveVol API access is account-based and not fully documented on the public delayed-quotes page."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public delayed quotes endpoints appear free/unauthenticated; commercial LiveVol paid plans not confirmed on the public delayed-quotes docs page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://cdn.cboe.com/api/global/delayed_quotes/options/_SPX.json'",
+    "response_snippet": "{\n  \"data\": {\n    \"symbol\": \"_SPX\",\n    \"options\": [\n      {\n        \"option\": \"SPX240920C05000000\",\n        \"bid\": 12.3,\n        \"ask\": 12.5,\n        \"last_trade_price\": 12.4\n      }\n    ]\n  }\n}"
+  },
+  "use_cases": [
+    "fetch delayed options chain quotes for an underlying",
+    "pull VIX-related delayed market snapshots for research",
+    "screen options bid/ask and last trade from public delayed data",
+    "prototype volatility dashboards without a paid market-data feed"
+  ],
+  "sources": [
+    "https://www.cboe.com/delayed_quotes/api/",
+    "https://cdn.cboe.com"
+  ],
+  "researcher_confidence": "low"
+}

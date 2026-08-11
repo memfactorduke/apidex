@@ -1,0 +1,43 @@
+{
+  "id": "keycloak",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://www.keycloak.org/docs-api/latest/rest-api/index.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://www.keycloak.org/docs-api/latest/rest-api/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://www.keycloak.org/docs/latest/server_development/index.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://github.com/keycloak/keycloak"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://www.keycloak.org/docs-api/latest/rest-api/index.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://www.keycloak.org/docs/latest/server_development/index.html"
+    }
+  },
+  "notes": "The HTTP 0 result is expected because {host} is a deployment-specific placeholder, not a live hostname; the documented URI scheme is {base url}/admin/realms. Apache-2.0 licensing is verified. Official sources do not explicitly publish Admin REST quotas, a no-quota guarantee, hosting-cost language, or a definitive Admin REST CORS policy, so those claims remain unverifiable."
+}

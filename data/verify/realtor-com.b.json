@@ -1,0 +1,48 @@
+{
+  "id": "realtor-com",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.listhub.com/",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.listhub.com/mls-api-documentation/",
+      "source": "https://www.listhub.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "OAuth 2.0 client credentials, producing a JWT bearer token",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "3,000 requests per minute for /odata/Property and 3 requests per hour for /odata/Sync",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "The official documentation shows Access-Control-Allow-Origin: *",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://api.listhub.com/odata/Property?$top=5' -H 'Authorization: Bearer <token>' -H 'Accept-Encoding: gzip'",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "ListHub's Syndication API is a RESO Web API for publishers to download MLS-sourced listing data into their own systems. It is not intended for live end-user searches.",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    }
+  },
+  "notes": "The submitted Realtor.com host and documentation URL are not the current official API offering. Move's current listing-data API is operated under ListHub and requires publisher-oriented integration. Official documentation provides a public testing sandbox, but it does not establish a production free tier or publish production pricing."
+}

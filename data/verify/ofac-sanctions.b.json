@@ -1,0 +1,52 @@
+{
+  "id": "ofac-sanctions",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/sdn-list-data-formats-data-schemas/ofac-technical-actions-in-reverse-chronological-order/20240516_44"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/faqs/topic/1636"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/faqs/topic/1636"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Sanctions List Search is free but intended for individual users and must not be used by automated systems configured to continually run searches; automation should use OFAC's downloadable machine-readable files or SLS API.",
+      "source": "https://ofac.treasury.gov/faqs/topic/1636"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/sdn-list-data-formats-data-schemas/ofac-technical-actions-in-reverse-chronological-order/20240516_44"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/sanctions-list-service"
+    }
+  },
+  "notes": "The export endpoint is live and redirects to a current Treasury-hosted SDN.XML object. Curl supplies the User-Agent header OFAC requires. The shown response snippet {} is not representative of the XML response, but the example verdict follows the instruction to assess only the request. No authoritative numeric rate limit or CORS policy was located."
+}

@@ -1,0 +1,98 @@
+{
+  "id": "google-cloud-natural-language",
+  "status": "operational",
+  "name": "Google Cloud Natural Language",
+  "category": "ai-ml",
+  "tagline": "Entity, sentiment, and syntax analysis without training models.",
+  "description": "Google Cloud Natural Language API provides pre-trained machine learning models for entity recognition, sentiment analysis, syntax analysis, and content classification without requiring model training. It supports multiple languages and integrates with other Google Cloud services for text analysis workflows.",
+  "base_url": "https://language.googleapis.com/v1",
+  "docs_url": "https://cloud.google.com/natural-language/docs",
+  "signup_url": "https://console.cloud.google.com/apis/library/language.googleapis.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter or OAuth2 access token via Authorization: Bearer header. Requires Google Cloud project with Natural Language API enabled."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "First 5,000 units/month free for entity, sentiment, syntax, and entity sentiment analysis; first 30,000 units/month free for content classification; first 50,000 units/month free for text moderation. Units are 1,000 characters except moderation units are 100 characters.",
+    "paid_plans": "Pay-as-you-go after free tier; pricing varies by feature (entity, sentiment, syntax, classification)"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://language.googleapis.com/v1/documents:analyzeSentiment?key=YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"document\":{\"type\":\"PLAIN_TEXT\",\"content\":\"Google Cloud Natural Language is powerful.\"},\"encodingType\":\"UTF8\"}'",
+    "response_snippet": "{\"documentSentiment\":{\"magnitude\":0.8,\"score\":0.8},\"language\":\"en\",\"sentences\":[{\"text\":{\"content\":\"Google Cloud Natural Language is powerful.\",\"beginOffset\":0},\"sentiment\":{\"magnitude\":0.8,\"score\":0.8}}]}"
+  },
+  "use_cases": [
+    "analyze sentiment of product reviews",
+    "extract named entities from news articles",
+    "parse syntax and parts of speech in text",
+    "classify content into categories",
+    "detect language of user-submitted text"
+  ],
+  "sources": [
+    "https://cloud.google.com/natural-language/docs",
+    "https://cloud.google.com/natural-language/pricing",
+    "https://cloud.google.com/natural-language/docs/reference/rest"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "xero",
+  "status": "operational",
+  "name": "Xero Accounting API",
+  "category": "ecommerce-payments",
+  "tagline": "Full accounting API for invoices, contacts, payments, and bank reconciliation.",
+  "description": "Xero Accounting API provides programmatic access to Xero\u2019s cloud accounting platform for B2B commerce. Developers can create and manage invoices, contacts, payments, bank transactions, and reconciliation data via OAuth 2.0\u2013secured REST endpoints, enabling ERP-style integrations, automated bookkeeping, and multi-org financial workflows.",
+  "base_url": "https://api.xero.com/api.xro/2.0",
+  "docs_url": "https://developer.xero.com/documentation/api/accounting/overview",
+  "signup_url": "https://developer.xero.com/app/manage",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 (authorization code) with tenant connection; Bearer access token plus Xero-Tenant-Id header on Accounting API calls. Apps registered in the Xero Developer portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.xero.com/api.xro/2.0/Organisation\" -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Xero-Tenant-Id: YOUR_TENANT_ID\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"Organisations\":[{\"OrganisationID\":\"...\",\"Name\":\"Demo Company\",\"LegalName\":\"...\",\"PaysTax\":true,\"Version\":\"US\",\"BaseCurrency\":\"USD\",\"CountryCode\":\"US\",\"IsDemoCompany\":true,\"OrganisationStatus\":\"ACTIVE\"}]}"
+  },
+  "use_cases": [
+    "list invoices for a Xero organisation",
+    "create a sales invoice for a contact",
+    "record a payment against an invoice",
+    "sync contacts and customers from Xero",
+    "fetch bank transactions for reconciliation",
+    "get organisation and chart of accounts details"
+  ],
+  "sources": [
+    "https://developer.xero.com/documentation/api/accounting/overview"
+  ],
+  "researcher_confidence": "low"
+}

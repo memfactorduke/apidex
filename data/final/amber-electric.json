@@ -1,0 +1,94 @@
+{
+  "id": "amber-electric",
+  "status": "operational",
+  "name": "Amber Electric API",
+  "category": "energy-utilities",
+  "tagline": "Live and forecast Australian wholesale-linked retail electricity prices",
+  "description": "API providing Australian retail electricity pricing linked to wholesale markets, including live and forecast price intervals for Amber Electric customers and developers integrating smart energy applications.",
+  "base_url": "https://api.amber.com.au",
+  "docs_url": "https://app.amber.com.au/developers/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and signup flow to be verified from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Accept: application/json\" -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.amber.com.au/v1/sites\"",
+    "response_snippet": "[{\"id\":\"01F5A5CRKMZ5BCX9P1S4V990AM\",\"nmi\":\"3052282872\",\"channels\":[{\"identifier\":\"E1\",\"type\":\"general\",\"tariff\":\"A100\"}],\"network\":\"Jemena\",\"status\":\"active\",\"activeFrom\":\"2022-01-01\"}]"
+  },
+  "use_cases": [
+    "get current wholesale-linked electricity price for a site",
+    "fetch forecast price intervals for energy optimization"
+  ],
+  "sources": [
+    "https://app.amber.com.au/developers/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

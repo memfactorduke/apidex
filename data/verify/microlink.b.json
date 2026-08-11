@@ -1,0 +1,52 @@
+{
+  "id": "microlink",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://microlink.io/docs/api/basics/endpoint"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://microlink.io/docs/api/getting-started/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://microlink.io/docs/api/basics/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://microlink.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "25 unauthenticated requests per day, approximately 1,500 per month.",
+      "source": "https://microlink.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free has a soft limit of 25 requests per day. Current Pro pricing lists unlimited daily requests and monthly quotas of 46,000\u2013420,000 requests; exceeding quota returns HTTP 429.",
+      "source": "https://microlink.io/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use https://pro.microlink.io when sending the x-api-key header, or remove the header when using https://api.microlink.io. Microlink states that sending x-api-key to the free endpoint fails with EPRO.",
+      "source": "https://microlink.io/docs/guides/common/production-patterns"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Microlink provides the described unified metadata, screenshot, PDF, and extraction capabilities through two GET endpoints: api.microlink.io for unauthenticated requests and pro.microlink.io for authenticated requests.",
+      "source": "https://microlink.io/docs/api/basics/endpoint"
+    }
+  },
+  "notes": "The service is active and its official changelog shows API updates through August 2026. The entry fails because the free quota changed from 50 to 25 requests/day, the authenticated curl uses the wrong host, and the description's single-endpoint wording conflicts with the documented free and Pro endpoints."
+}

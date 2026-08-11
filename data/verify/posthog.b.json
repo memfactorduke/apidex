@@ -1,0 +1,52 @@
+{
+  "id": "posthog",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No single base URL: US public endpoints use https://us.i.posthog.com and private endpoints use https://us.posthog.com; EU equivalents are https://eu.i.posthog.com and https://eu.posthog.com.",
+      "source": "https://posthog.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://posthog.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://posthog.com/docs/api/personal-api-keys"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://posthog.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Published monthly limits include 1M analytics events, 5K session recordings, 1M feature-flag requests, 100K exceptions, 1,500 survey responses, and additional product-specific allowances.",
+      "source": "https://posthog.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits include: analytics 240/min and 1,200/hour; events/values 60/min and 300/hour; query 2,400/hour; feature-flag local evaluation 600/min; other CRUD endpoints 480/min and 4,800/hour. Public capture and flag-evaluation endpoints have no request-level limit.",
+      "source": "https://posthog.com/docs/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -L --header \"Content-Type: application/json\" -d '{\"api_key\":\"<ph_project_token>\",\"event\":\"event name\",\"distinct_id\":\"user distinct id\"}' https://us.i.posthog.com/i/v0/e/",
+      "source": "https://posthog.com/docs/api/capture"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://posthog.com/docs/api"
+    }
+  },
+  "notes": "PostHog and its API are operational. The entry conflates public ingestion and private API hosts: /api/projects/ is a private GET request and cannot be called unauthenticated on us.i.posthog.com. Pricing limits and API rate limits are explicitly published, contradicting both unknown/not-published claims. No authoritative general CORS policy was located."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "open-charge-map",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No numeric quota is published. The free basic API is governed by a fair-use policy: avoid duplicate or excessive requests; access may be blocked at the administrator's discretion, and high-volume users should host a mirror or import the data.",
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openchargemap.org/develop/api"
+    }
+  },
+  "notes": "Official docs identify the v3 base URL and support GET /poi with output, countrycode, maxresults, and either key or X-API-Key authentication. The legacy docs route resolves to the current canonical documentation route. The observed 403 is consistent with key, user-agent, or Cloudflare enforcement and does not show that the API is dead. No authoritative current CORS statement was found."
+}

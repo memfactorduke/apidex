@@ -1,0 +1,41 @@
+{
+  "id": "watttime",
+  "status": "operational",
+  "name": "WattTime",
+  "category": "energy-utilities",
+  "tagline": "Marginal emissions and grid signals for carbon-aware computing",
+  "description": "WattTime provides real-time and forecasted marginal emissions data for electricity grids, enabling carbon-aware load shifting, scheduling, and reporting. Developers access region signals, historical emissions, and forecasts via a REST API used for research and production carbon optimization.",
+  "base_url": "https://api.watttime.org/v3",
+  "docs_url": "https://docs.watttime.org/",
+  "signup_url": "https://watttime.org/get-the-data/",
+  "auth": {
+    "type": "other",
+    "details": "Username/password registration; Bearer token obtained via login endpoint (JWT-style). Exact header and free-tier details need verification from current docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.watttime.org/v3/signal-index?region=CAISO_NORTH\"",
+    "response_snippet": "{\"data\":[{\"point_time\":\"2024-01-01T00:00:00Z\",\"value\":45.2}],\"meta\":{\"region\":\"CAISO_NORTH\"}}"
+  },
+  "use_cases": [
+    "get current marginal emissions for a grid region",
+    "forecast cleanest hours to schedule flexible compute jobs",
+    "compare historical carbon intensity across balancing authorities",
+    "shift EV charging or HVAC load to lower-emissions periods"
+  ],
+  "sources": [
+    "https://docs.watttime.org/",
+    "https://watttime.org/"
+  ],
+  "researcher_confidence": "low"
+}

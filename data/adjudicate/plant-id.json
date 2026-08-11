@@ -1,0 +1,15 @@
+{
+  "id": "plant-id",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "100 free testing credits after registration. Each successful identification costs 1 credit; including plant.health in the same request costs 1 additional credit.",
+  "rate_limits": "No request-count cap. SLA processing guarantees apply up to 20 uploaded photos/minute for tiers A-B, 60 for tier C, and 240 for tier D+ or retroactive pay; higher traffic may be queued or slower.",
+  "cors": null,
+  "example_request": "curl -X POST 'https://api.plant.id/v3/identification?details=common_names' -H 'Api-Key: YOUR_API_KEY' -H 'Content-Type: application/json' --data \"{\\\"images\\\":[\\\"$(base64 < plant.jpg | tr -d '\\n')\\\"]}\"",
+  "example_response_snippet": "{\"access_token\":\"gi4KQuLJM2UT7wE\",\"model_version\":\"plant_id:3.1.1\",\"result\":{\"is_plant\":{\"probability\":1,\"binary\":true,\"threshold\":0.5},\"classification\":{\"suggestions\":[{\"id\":\"ae8faed4a61d9de2\",\"name\":\"Leucojum vernum\",\"probability\":0.9998678}]}},\"status\":\"COMPLETED\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits corrected: the FAQ specifies 100 signup credits, 1 per identification, plus 1 for plant.health: https://www.kindwise.com/faq. rate_limits corrected: the FAQ says no request cap; the SLA gives 20/60/240 photos-per-minute performance thresholds: https://www.kindwise.com/service-level-agreement. example corrected: official code sends plain Base64 without a data-URL prefix and its sample confirms the response shape: https://github.com/flowerchecker/plant-id-examples."
+}

@@ -1,0 +1,197 @@
+{
+  "category": "security-identity",
+  "apis": [
+    {
+      "name": "Dehashed",
+      "slug": "dehashed",
+      "base_domain": "api.dehashed.com",
+      "docs_url": "https://www.dehashed.com/docs",
+      "why_notable": "Breach-data search API for email, username, IP, and password exposure lookups used in identity risk workflows.",
+      "free_tier": false
+    },
+    {
+      "name": "HIBP V3 (breaches)",
+      "slug": "hibp-breaches",
+      "base_domain": "haveibeenpwned.com",
+      "docs_url": "https://haveibeenpwned.com/API/v3",
+      "why_notable": "Canonical breach catalog and account-exposure API; distinct surface from the Pwned Passwords k-anonymity endpoint already listed.",
+      "free_tier": false
+    },
+    {
+      "name": "BinaryEdge",
+      "slug": "binaryedge",
+      "base_domain": "api.binaryedge.io",
+      "docs_url": "https://docs.binaryedge.io/",
+      "why_notable": "Internet-wide scanning and threat-intel API for host, CVE, and service exposure research.",
+      "free_tier": true
+    },
+    {
+      "name": "LeakIX",
+      "slug": "leakix",
+      "base_domain": "leakix.net",
+      "docs_url": "https://leakix.net/api",
+      "why_notable": "Open-index API for leaked services, misconfigured hosts, and credential-exposure findings.",
+      "free_tier": true
+    },
+    {
+      "name": "CIRCL Vulnerability-Lookup",
+      "slug": "circl-vulnerability-lookup",
+      "base_domain": "vulnerability.circl.lu",
+      "docs_url": "https://www.circl.lu/services/vulnerability-lookup/",
+      "why_notable": "European free vulnerability-lookup service with REST API over CVE and related vulnerability sources.",
+      "free_tier": true
+    },
+    {
+      "name": "EPSS (FIRST)",
+      "slug": "epss-first",
+      "base_domain": "api.first.org",
+      "docs_url": "https://www.first.org/epss/api",
+      "why_notable": "Industry-standard exploit-prediction scores per CVE for prioritization in vuln management.",
+      "free_tier": true
+    },
+    {
+      "name": "CISA KEV",
+      "slug": "cisa-kev",
+      "base_domain": "www.cisa.gov",
+      "docs_url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "why_notable": "Authoritative Known Exploited Vulnerabilities catalog available as machine-readable JSON for automated triage.",
+      "free_tier": true
+    },
+    {
+      "name": "Pulsedive",
+      "slug": "pulsedive",
+      "base_domain": "pulsedive.com",
+      "docs_url": "https://pulsedive.com/api/",
+      "why_notable": "Threat-intel API for IOC enrichment, risk scoring, and community indicators.",
+      "free_tier": true
+    },
+    {
+      "name": "URLHaus (abuse.ch)",
+      "slug": "urlhaus",
+      "base_domain": "urlhaus-api.abuse.ch",
+      "docs_url": "https://urlhaus-api.abuse.ch/",
+      "why_notable": "Malware URL sharing platform API widely used for phishing and payload URL blocking.",
+      "free_tier": true
+    },
+    {
+      "name": "MalwareBazaar (abuse.ch)",
+      "slug": "malwarebazaar",
+      "base_domain": "mb-api.abuse.ch",
+      "docs_url": "https://bazaar.abuse.ch/api/",
+      "why_notable": "Malware sample metadata and hash-lookup API from abuse.ch\u2019s open threat-sharing stack.",
+      "free_tier": true
+    },
+    {
+      "name": "ThreatFox (abuse.ch)",
+      "slug": "threatfox",
+      "base_domain": "threatfox-api.abuse.ch",
+      "docs_url": "https://threatfox.abuse.ch/api/",
+      "why_notable": "IOC-sharing API for malware C2, IPs, domains, and URLs with free community access.",
+      "free_tier": true
+    },
+    {
+      "name": "DNS0.eu",
+      "slug": "dns0-eu",
+      "base_domain": "dns0.eu",
+      "docs_url": "https://www.dns0.eu/api",
+      "why_notable": "European privacy-focused DNS/security resolver with threat-blocking and DoH-style developer endpoints.",
+      "free_tier": true
+    },
+    {
+      "name": "Quad9",
+      "slug": "quad9",
+      "base_domain": "dns.quad9.net",
+      "docs_url": "https://www.quad9.net/support/faq/",
+      "why_notable": "Threat-blocking recursive DNS used for secure DNS resolution; developer-facing DoH endpoints.",
+      "free_tier": true
+    },
+    {
+      "name": "Certificate Transparency Log List",
+      "slug": "google-ct-log-list",
+      "base_domain": "www.gstatic.com",
+      "docs_url": "https://googlechrome.github.io/CertificateTransparency/log_list.html",
+      "why_notable": "Google\u2019s CT log-list JSON used by TLS tooling to discover and monitor certificate logs.",
+      "free_tier": true
+    },
+    {
+      "name": "Descope",
+      "slug": "descope",
+      "base_domain": "api.descope.com",
+      "docs_url": "https://docs.descope.com/",
+      "why_notable": "Modern auth/identity platform API (passkeys, SSO, MFA) as a 2020s Auth0/Okta alternative.",
+      "free_tier": true
+    },
+    {
+      "name": "Kinde",
+      "slug": "kinde",
+      "base_domain": "api.kinde.com",
+      "docs_url": "https://docs.kinde.com/developer-tools/about/using-kinde-apis/",
+      "why_notable": "Developer auth and user-management API with self-serve free tier and modern OAuth/OIDC flows.",
+      "free_tier": true
+    },
+    {
+      "name": "Supabase Auth",
+      "slug": "supabase-auth",
+      "base_domain": "supabase.com",
+      "docs_url": "https://supabase.com/docs/reference/auth",
+      "why_notable": "GoTrue-based auth HTTP API for signup, sessions, MFA, and OAuth widely used in app identity stacks.",
+      "free_tier": true
+    },
+    {
+      "name": "Keycloak Admin REST",
+      "slug": "keycloak",
+      "base_domain": "www.keycloak.org",
+      "docs_url": "https://www.keycloak.org/docs-api/latest/rest-api/index.html",
+      "why_notable": "Open-source IdP with comprehensive Admin REST API for realms, users, clients, and SSO.",
+      "free_tier": true
+    },
+    {
+      "name": "FusionAuth",
+      "slug": "fusionauth",
+      "base_domain": "fusionauth.io",
+      "docs_url": "https://fusionauth.io/docs/apis/",
+      "why_notable": "Self-hostable and cloud auth API covering users, tenants, MFA, and app identity.",
+      "free_tier": true
+    },
+    {
+      "name": "IPinfo",
+      "slug": "ipinfo",
+      "base_domain": "ipinfo.io",
+      "docs_url": "https://ipinfo.io/developers",
+      "why_notable": "IP geolocation and ASN API commonly used in fraud, access-control, and security enrichment.",
+      "free_tier": true
+    },
+    {
+      "name": "ipapi.is",
+      "slug": "ipapi-is",
+      "base_domain": "api.ipapi.is",
+      "docs_url": "https://ipapi.is/developers.html",
+      "why_notable": "IP intelligence API with hosting, VPN, proxy, and abuser signals for security decisions.",
+      "free_tier": true
+    },
+    {
+      "name": "Spamhaus DBL/API",
+      "slug": "spamhaus",
+      "base_domain": "api.spamhaus.org",
+      "docs_url": "https://docs.spamhaus.com/",
+      "why_notable": "DNSBL and threat-list APIs for domain and IP reputation used in mail and abuse pipelines.",
+      "free_tier": false
+    },
+    {
+      "name": "CIRCL Passive DNS",
+      "slug": "circl-passive-dns",
+      "base_domain": "www.circl.lu",
+      "docs_url": "https://www.circl.lu/services/passive-dns/",
+      "why_notable": "Free passive DNS lookup service for historical domain/IP resolution in investigations.",
+      "free_tier": true
+    },
+    {
+      "name": "urlscan.io Search (Public)",
+      "slug": "urlscan-search-public",
+      "base_domain": "urlscan.io",
+      "docs_url": "https://urlscan.io/docs/api/",
+      "why_notable": "Already excluded \u2014 skip.",
+      "free_tier": true
+    }
+  ]
+}

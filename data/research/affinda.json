@@ -1,0 +1,40 @@
+{
+  "id": "affinda",
+  "status": "operational",
+  "name": "Affinda Resume Parser",
+  "category": "jobs-careers",
+  "tagline": "AI resume and CV parsing API with structured skills and experience extraction",
+  "description": "Affinda provides an AI-powered document parsing API specializing in resumes and CVs. It extracts structured fields such as contact info, work experience, education, skills, and certifications from uploaded documents, returning JSON suitable for ATS, recruiting, and HR workflows.",
+  "base_url": "https://api.affinda.com/v3",
+  "docs_url": "https://docs.affinda.com/",
+  "signup_url": "https://app.affinda.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (self-serve signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://api.affinda.com/v3/documents\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: multipart/form-data\" -F \"file=@resume.pdf\" -F \"workspace=YOUR_WORKSPACE\"",
+    "response_snippet": "{\"data\":{\"name\":{\"raw\":\"Jane Doe\"},\"emails\":[\"jane@example.com\"],\"phoneNumbers\":[\"+1 555-0100\"],\"skills\":[{\"name\":\"Python\"}],\"workExperience\":[{\"jobTitle\":\"Engineer\",\"organization\":\"Acme\"}]}"
+  },
+  "use_cases": [
+    "parse a resume PDF into structured JSON",
+    "extract skills and work history from a CV",
+    "normalize candidate contact info from uploaded resumes",
+    "batch-parse applicant CVs for ATS ingestion"
+  ],
+  "sources": [
+    "https://docs.affinda.com/"
+  ],
+  "researcher_confidence": "low"
+}

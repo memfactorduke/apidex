@@ -1,0 +1,43 @@
+{
+  "id": "calendarific",
+  "status": "operational",
+  "name": "Calendarific",
+  "category": "events-holidays",
+  "tagline": "Holiday and observance data for 200+ countries worldwide",
+  "description": "Calendarific is a holiday API providing national, local, religious, and optional observances for 200+ countries. Developers use it to look up holidays by country, year, and type, with support for multi-language names and regional variations for calendar, scheduling, and localization apps.",
+  "base_url": "https://calendarific.com/api/v2",
+  "docs_url": "https://calendarific.com/api-documentation",
+  "signup_url": "https://calendarific.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter; free self-serve signup at calendarific.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 requests/month free (Hobby plan)",
+    "paid_plans": "Paid plans from ~$9.99/mo with higher monthly request quotas; see pricing page"
+  },
+  "rate_limits": "Tied to plan monthly request quotas; finer per-second limits not clearly published",
+  "example": {
+    "request": "curl \"https://calendarific.com/api/v2/holidays?api_key=YOUR_API_KEY&country=US&year=2026\"",
+    "response_snippet": "{\"meta\":{\"code\":200},\"response\":{\"holidays\":[{\"name\":\"New Year's Day\",\"description\":\"New Year\u2019s Day is...\",\"country\":{\"id\":\"us\",\"name\":\"United States\"},\"date\":{\"iso\":\"2026-01-01\",\"datetime\":{\"year\":2026,\"month\":1,\"day\":1}},\"type\":[\"National holiday\"]}]}}"
+  },
+  "use_cases": [
+    "list public holidays for a country and year",
+    "check if a given date is a holiday in a country",
+    "get religious and optional observances for localization",
+    "build a multi-country holiday calendar",
+    "filter holidays by type (national, religious, observance)"
+  ],
+  "sources": [
+    "https://calendarific.com/api-documentation",
+    "https://calendarific.com/pricing",
+    "https://calendarific.com"
+  ],
+  "researcher_confidence": "medium"
+}

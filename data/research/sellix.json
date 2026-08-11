@@ -1,0 +1,41 @@
+{
+  "id": "sellix",
+  "status": "operational",
+  "name": "Sellix API",
+  "category": "ecommerce-payments",
+  "tagline": "Digital product storefront API with crypto and card payments for automated ecom stores.",
+  "description": "Sellix provides a REST API for managing digital product storefronts, orders, products, and payments including cryptocurrency and card payments. Developers can automate e-commerce operations, retrieve order data, manage inventory, and integrate payment processing for digital goods.",
+  "base_url": "https://dev.sellix.io/v1",
+  "docs_url": "https://docs.sellix.io/",
+  "signup_url": "https://dashboard.sellix.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer YOUR_API_KEY header, obtained from Sellix dashboard settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://dev.sellix.io/v1/products\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"status\": 200, \"data\": {\"products\": [{\"uniqid\": \"...\", \"title\": \"Product Name\", \"price\": 10.00, \"currency\": \"USD\"}]}}"
+  },
+  "use_cases": [
+    "list digital products in a store",
+    "create a payment invoice for a product",
+    "retrieve order details by ID",
+    "check payment status for an order",
+    "manage product inventory and stock"
+  ],
+  "sources": [
+    "https://docs.sellix.io/"
+  ],
+  "researcher_confidence": "low"
+}

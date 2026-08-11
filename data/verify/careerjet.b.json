@@ -1,0 +1,52 @@
+{
+  "id": "careerjet",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://public.api.careerjet.net (docs still cite this host, but live requests currently fail/time out \u2014 host appears unreachable as of check; treat as non-operational until confirmed)",
+      "source": "https://www.careerjet.com/partners/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.careerjet.com/partners/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.careerjet.com/partners/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.careerjet.com/partners/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.careerjet.com/partners/api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.careerjet.com/partners/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Required params include affid, user_ip, user_agent; locale is path-based (e.g. /search?locale=en_GB) or country-specific docs \u2014 verify exact URL form in current docs. Example may omit locale and use wrong date format in snippet.",
+      "source": "https://www.careerjet.com/partners/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.careerjet.com/partners/api/"
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after research."
+}

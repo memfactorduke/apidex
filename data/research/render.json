@@ -1,0 +1,41 @@
+{
+  "id": "render",
+  "status": "operational",
+  "name": "Render API",
+  "category": "dev-tools",
+  "tagline": "REST API for Render PaaS \u2014 services, deploys, jobs, and databases",
+  "description": "Render provides a REST API for managing cloud services, deploys, one-off jobs, databases, and infrastructure on the Render platform. Developers use it for Git-to-prod automation, CI/CD hooks, and programmatic control of web services, workers, and Postgres.",
+  "base_url": "https://api.render.com/v1",
+  "docs_url": "https://api-docs.render.com/reference/introduction",
+  "signup_url": "https://dashboard.render.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; create keys in Render Dashboard (Account Settings \u2192 API Keys)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.render.com/v1/services\"",
+    "response_snippet": "{ \"cursor\": \"...\", \"services\": [ { \"id\": \"srv-...\", \"name\": \"my-app\", \"type\": \"web_service\", \"serviceDetails\": { \"url\": \"https://...\" } } ] }"
+  },
+  "use_cases": [
+    "list all Render services in an account",
+    "trigger a deploy for a web service",
+    "check deploy status for a service",
+    "create or list one-off jobs",
+    "manage Postgres databases programmatically"
+  ],
+  "sources": [
+    "https://api-docs.render.com/reference/introduction"
+  ],
+  "researcher_confidence": "low"
+}

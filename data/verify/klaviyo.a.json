@@ -1,0 +1,52 @@
+{
+  "id": "klaviyo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/reference/get_accounts"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/reference/api-overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/docs/authenticate_"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.klaviyo.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 250 active profiles, 500 email sends per month, $5 of mobile messages per month, and 10,000 Composer credits.",
+      "source": "https://www.klaviyo.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published per endpoint. Standard tiers range from XS (1 request/second burst and 15/minute steady) through XL (350/second and 3,500/minute); GET /api/accounts is limited to 1/second and 15/minute.",
+      "source": "https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/v2024-10-15/reference/get_accounts"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/docs/introduction_to_klaviyos_data_model"
+    }
+  },
+  "notes": "The API and example endpoint remain documented. The dated 2024-10-15 revision is still within Klaviyo's two-year lifecycle as of August 2026, though new integrations should use the latest stable revision. The entry fails because its free-plan limits and rate-limit claims disregard currently published official information."
+}

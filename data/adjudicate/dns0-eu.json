@@ -1,0 +1,15 @@
+{
+  "id": "dns0-eu",
+  "base_url": "https://dns0.eu",
+  "docs_url": "https://docs.dns0.eu/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS --max-time 15 'https://dns0.eu/'",
+  "example_response_snippet": "curl: (6) Could not resolve host: dns0.eu",
+  "description": null,
+  "status": "defunct",
+  "resolution_notes": "base_url: replace; official DoH documentation identifies https://dns0.eu/ as the resolver endpoint, not api.dns0.eu (https://docs.dns0.eu/known-issues/dns-over-https-windows-11). docs_url: replace with the official documentation root (https://docs.dns0.eu/). example: replace; the resolver no longer resolves, so no working API example exists. DNS0.eu announced that the service was discontinued (https://www.dns0.eu/), consistent with both supplied HTTP 0 checks; status is defunct."
+}

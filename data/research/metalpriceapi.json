@@ -1,0 +1,42 @@
+{
+  "id": "metalpriceapi",
+  "status": "operational",
+  "name": "MetalpriceAPI",
+  "category": "finance",
+  "tagline": "Real-time and historical precious metal and commodity exchange rates",
+  "description": "MetalpriceAPI provides real-time and historical pricing for gold, silver, platinum, palladium, and other metals plus commodity FX-style rates. Developers query live spot prices, convert between metal and currency pairs, and pull time-series or fluctuation data via a simple REST API with a free tier for lightweight gold/silver apps.",
+  "base_url": "https://api.metalpriceapi.com/v1",
+  "docs_url": "https://metalpriceapi.com/documentation",
+  "signup_url": "https://metalpriceapi.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (or Authorization header); self-serve signup for free and paid keys"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "100 requests/month free (Basic plan); higher tiers available",
+    "paid_plans": "Paid plans from Pro upward with higher monthly request quotas and more features"
+  },
+  "rate_limits": "not published beyond plan request quotas",
+  "example": {
+    "request": "curl \"https://api.metalpriceapi.com/v1/latest?api_key=YOUR_API_KEY&base=USD&currencies=XAU,XAG\"",
+    "response_snippet": "{\"success\":true,\"base\":\"USD\",\"timestamp\":1700000000,\"rates\":{\"USDXAU\":0.0005,\"USDXAG\":0.04}}"
+  },
+  "use_cases": [
+    "get current gold and silver spot prices in USD",
+    "convert a metal amount to fiat currency",
+    "fetch historical precious metal rates for a date",
+    "track metal price fluctuations over a period",
+    "power a jewelry or bullion pricing display"
+  ],
+  "sources": [
+    "https://metalpriceapi.com/documentation",
+    "https://metalpriceapi.com/"
+  ],
+  "researcher_confidence": "low"
+}

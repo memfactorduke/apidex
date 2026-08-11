@@ -1,0 +1,165 @@
+{
+  "category": "agriculture",
+  "apis": [
+    {
+      "name": "USDA NASS Quick Stats",
+      "slug": "usda-nass-quick-stats",
+      "base_domain": "quickstats.nass.usda.gov",
+      "docs_url": "https://quickstats.nass.usda.gov/api",
+      "why_notable": "Authoritative US crop, livestock, and farm economics census/survey data with a free API key.",
+      "free_tier": true
+    },
+    {
+      "name": "USDA FoodData Central",
+      "slug": "usda-fooddata-central",
+      "base_domain": "fdc.nal.usda.gov",
+      "docs_url": "https://fdc.nal.usda.gov/api-guide",
+      "why_notable": "Gold-standard nutrient composition database for foods and agricultural commodities.",
+      "free_tier": true
+    },
+    {
+      "name": "Open-Meteo Agricultural",
+      "slug": "open-meteo-agricultural",
+      "base_domain": "open-meteo.com",
+      "docs_url": "https://open-meteo.com/en/docs/agricultural-api",
+      "why_notable": "Free weather API with soil temperature/moisture and crop-relevant variables, no key for non-commercial.",
+      "free_tier": true
+    },
+    {
+      "name": "Plant.id (Kindwise)",
+      "slug": "plant-id",
+      "base_domain": "plant.id",
+      "docs_url": "https://plant.id/docs",
+      "why_notable": "Image-based plant identification and disease diagnosis widely used in agtech apps.",
+      "free_tier": true
+    },
+    {
+      "name": "Trefle",
+      "slug": "trefle",
+      "base_domain": "trefle.io",
+      "docs_url": "https://docs.trefle.io/",
+      "why_notable": "Plant species encyclopedia API with taxonomy, growth habits, and distribution data.",
+      "free_tier": true
+    },
+    {
+      "name": "Perenual Plant API",
+      "slug": "perenual",
+      "base_domain": "perenual.com",
+      "docs_url": "https://perenual.com/docs/api",
+      "why_notable": "Plant care, species, and hardiness data with a generous free tier for gardening apps.",
+      "free_tier": true
+    },
+    {
+      "name": "GBIF",
+      "slug": "gbif",
+      "base_domain": "gbif.org",
+      "docs_url": "https://techdocs.gbif.org/en/openapi/",
+      "why_notable": "Global biodiversity occurrence API for wild and cultivated plant/animal distribution.",
+      "free_tier": true
+    },
+    {
+      "name": "iNaturalist",
+      "slug": "inaturalist",
+      "base_domain": "api.inaturalist.org",
+      "docs_url": "https://api.inaturalist.org/v1/docs/",
+      "why_notable": "Citizen-science observations of plants, pests, and wildlife useful for ecological ag context.",
+      "free_tier": true
+    },
+    {
+      "name": "OpenAQ",
+      "slug": "openaq",
+      "base_domain": "openaq.org",
+      "docs_url": "https://docs.openaq.org/",
+      "why_notable": "Air quality data often paired with agricultural exposure and crop stress analysis.",
+      "free_tier": true
+    },
+    {
+      "name": "FAOSTAT (FAO)",
+      "slug": "faostat",
+      "base_domain": "faostat.fao.org",
+      "docs_url": "https://fenixservices.fao.org/faostat/static/documents/API/API_Manual_EN.pdf",
+      "why_notable": "UN FAO global production, trade, and food-security statistics for countries and commodities.",
+      "free_tier": true
+    },
+    {
+      "name": "World Bank Climate Data API",
+      "slug": "world-bank-climate",
+      "base_domain": "worldbank.org",
+      "docs_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/902061-climate-data-api",
+      "why_notable": "Historical and projected climate indicators used in agricultural risk modeling.",
+      "free_tier": true
+    },
+    {
+      "name": "NOAA Climate Data Online",
+      "slug": "noaa-cdo",
+      "base_domain": "ncdc.noaa.gov",
+      "docs_url": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+      "why_notable": "Station weather and climate normals critical for growing-degree-day and frost risk apps.",
+      "free_tier": true
+    },
+    {
+      "name": "USDA ERS Data",
+      "slug": "usda-ers",
+      "base_domain": "ers.usda.gov",
+      "docs_url": "https://www.ers.usda.gov/developer/",
+      "why_notable": "Economic Research Service APIs for farm income, commodities, and food markets.",
+      "free_tier": true
+    },
+    {
+      "name": "SoilGrids (ISRIC)",
+      "slug": "soilgrids",
+      "base_domain": "isric.org",
+      "docs_url": "https://rest.isric.org/soilgrids/v2.0/docs",
+      "why_notable": "Global soil property maps (texture, pH, carbon) via REST for precision-ag planning.",
+      "free_tier": true
+    },
+    {
+      "name": "Agromonitoring (OpenWeather)",
+      "slug": "agromonitoring",
+      "base_domain": "agromonitoring.com",
+      "docs_url": "https://agromonitoring.com/api",
+      "why_notable": "Satellite NDVI, soil, and weather for farm polygons; free tier with signup.",
+      "free_tier": true
+    },
+    {
+      "name": "NASA POWER",
+      "slug": "nasa-power",
+      "base_domain": "power.larc.nasa.gov",
+      "docs_url": "https://power.larc.nasa.gov/docs/services/api/",
+      "why_notable": "NASA agroclimatology parameters (solar, temp, precip) by lat/lon for crop models.",
+      "free_tier": true
+    },
+    {
+      "name": "FishWatch (NOAA)",
+      "slug": "fishwatch",
+      "base_domain": "fishwatch.gov",
+      "docs_url": "https://www.fishwatch.gov/developers",
+      "why_notable": "US seafood species profiles and sustainability data for fisheries apps.",
+      "free_tier": true
+    },
+    {
+      "name": "Open Food Facts",
+      "slug": "open-food-facts",
+      "base_domain": "openfoodfacts.org",
+      "docs_url": "https://openfoodfacts.github.io/openfoodfacts-server/api/",
+      "why_notable": "Crowdsourced product/agri-food database spanning ingredients and origins.",
+      "free_tier": true
+    },
+    {
+      "name": "EPPO Global Database API",
+      "slug": "eppo-global-database",
+      "base_domain": "eppo.int",
+      "docs_url": "https://data.eppo.int/documentation",
+      "why_notable": "Pest and plant pathogen codes and taxonomy used across plant health systems.",
+      "free_tier": true
+    },
+    {
+      "name": "Kindwise Insect.id",
+      "slug": "insect-id",
+      "base_domain": "insect.id",
+      "docs_url": "https://insect.id/docs",
+      "why_notable": "Image-based insect/pest identification for IPM and livestock-adjacent pest apps.",
+      "free_tier": true
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "tuya",
+  "status": "operational",
+  "name": "Tuya",
+  "category": "iot-devices",
+  "tagline": "Cloud API for white-label smart-home and IoT devices worldwide",
+  "description": "Tuya Cloud API lets developers control and manage millions of white-label consumer IoT devices (lights, plugs, locks, sensors, and more) via a multi-region REST platform. Apps and platforms use it for device linking, status, and remote control across Tuya-powered SKUs.",
+  "base_url": "https://openapi.tuyaus.com",
+  "docs_url": "https://developer.tuya.com/en/docs/cloud/",
+  "signup_url": "https://developer.tuya.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Access ID and Access Secret from the Tuya IoT Platform; sign requests with HMAC-SHA256 (client_id, timestamp, nonce, signature headers). Token via GET /v1.0/token?grant_type=1."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://openapi.tuyaus.com/v1.0/token?grant_type=1\" -H \"client_id: YOUR_CLIENT_ID\" -H \"sign: YOUR_SIGN\" -H \"t: YOUR_TIMESTAMP\" -H \"sign_method: HMAC-SHA256\" -H \"nonce: YOUR_NONCE\"",
+    "response_snippet": "{\"result\":{\"access_token\":\"...\",\"expire_time\":7200,\"refresh_token\":\"...\",\"uid\":\"...\"},\"success\":true,\"t\":...}"
+  },
+  "use_cases": [
+    "get OAuth access token for Tuya Cloud",
+    "list devices linked to a user",
+    "get real-time status of a smart device",
+    "send a control command to a Tuya-powered device",
+    "query device functions and data points (DPs)"
+  ],
+  "sources": [
+    "https://developer.tuya.com/en/docs/cloud/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "sambanova-cloud",
+  "base_url": null,
+  "docs_url": "https://docs.sambanova.ai/docs/en/get-started/overview",
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "New accounts receive $5 in API credits without a credit card; credits expire after 30 days. Eligible Free Tier models allow 20 RPM, 20 RPD, and 200,000 tokens/day per model.",
+  "rate_limits": "Published by model and tier. Eligible Free Tier models: 20 RPM, 20 RPD, and 200,000 TPD per model. Developer limits vary by model and include a 20-million-token daily limit across all models.",
+  "cors": null,
+  "example_request": "curl -X POST https://api.sambanova.ai/v1/chat/completions \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+  "example_response_snippet": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"Hello! How can I assist you today?\",\"role\":\"assistant\"}}],\"created\":1786406400.0,\"id\":\"83a7809d-e18f-44f9-9ab7-2bc494c6c661\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":9,\"prompt_tokens\":36,\"total_tokens\":45}}",
+  "description": "SambaCloud is an RDU-powered, high-throughput inference platform for supported open-source models. Developers create self-service API keys and use OpenAI-compatible APIs, including Chat Completions and Responses. Hosted models are designated for production or preview workloads.",
+  "status": null,
+  "resolution_notes": "docs_url: update; current page: https://docs.sambanova.ai/docs/en/get-started/overview. free_tier: true; $5/no card/30-day expiry: https://cloud.sambanova.ai/plans. free_tier_limits and rate_limits: use published tier/model caps: https://docs.sambanova.ai/docs/en/models/rate-limits. example: 3.1-8B removed 2026-04-14; use 3.3-70B: https://docs.sambanova.ai/docs/en/models/deprecations. description: official page specifies open-source models, RDUs, and OpenAI-compatible endpoints: https://sambanova.ai/products/sambacloud"
+}

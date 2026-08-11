@@ -1,0 +1,42 @@
+{
+  "id": "associated-press",
+  "status": "operational",
+  "name": "Associated Press API",
+  "category": "news-media",
+  "tagline": "Licensed wire-service API for AP headlines, photos, and full news stories",
+  "description": "The Associated Press (AP) Content API provides licensed access to AP wire content including headlines, full stories, photos, videos, and metadata. Developers integrate via authenticated HTTPS endpoints under commercial licensing\u2014typically used by publishers, media platforms, and enterprise products that need authoritative newswire content rather than free public news feeds.",
+  "base_url": "https://api.ap.org/media/v",
+  "docs_url": "https://developer.ap.org/",
+  "signup_url": "https://developer.ap.org/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key (x-api-key header) issued under AP commercial license; not self-serve free signup\u2014access requires AP Media/Content API agreement"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Commercial licensing only; pricing via AP sales (not published self-serve tiers)"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.ap.org/media/v/content/search?q=elections&page_size=5\" -H \"x-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\n  \"data\": {\n    \"items\": [\n      {\n        \"type\": \"text\",\n        \"item\": {\n          \"altids\": { \"itemid\": \"...\" },\n          \"versioncreated\": \"2026-...\",\n          \"headline\": \"...\",\n          \"description_text\": \"...\"\n        }\n      }\n    ]\n  }\n}"
+  },
+  "use_cases": [
+    "search AP wire stories by keyword or topic",
+    "fetch full text of a licensed AP news article by item ID",
+    "pull latest AP headlines for a news feed or alert system",
+    "retrieve AP photos and media metadata for a story",
+    "monitor breaking news updates from the AP newswire"
+  ],
+  "sources": [
+    "https://developer.ap.org/",
+    "https://api.ap.org/"
+  ],
+  "researcher_confidence": "medium"
+}

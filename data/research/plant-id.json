@@ -1,0 +1,40 @@
+{
+  "id": "plant-id",
+  "status": "operational",
+  "name": "Plant.id (Kindwise)",
+  "category": "agriculture",
+  "tagline": "Image-based plant identification and disease diagnosis API for apps",
+  "description": "Plant.id by Kindwise is a computer-vision API that identifies plants, weeds, and diseases from photos. Developers send plant images and receive species suggestions with confidence scores, taxonomy, common names, and optional health/disease assessment. Widely used in gardening, farming, and agtech apps for field identification and crop health checks.",
+  "base_url": "https://api.plant.id/v3",
+  "docs_url": "https://plant.id/docs",
+  "signup_url": "https://web.plant.id/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Api-Key header (or api_key query param in some endpoints); self-serve signup on web.plant.id"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 verify on pricing page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.plant.id/v3/identification -H \"Api-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"images\":[\"data:image/jpeg;base64,...\"]}'",
+    "response_snippet": "{\"access_token\":\"...\",\"result\":{\"classification\":{\"suggestions\":[{\"name\":\"...\",\"probability\":0.9}]}}}"
+  },
+  "use_cases": [
+    "identify a plant species from a photo",
+    "diagnose plant disease from leaf images",
+    "get plant taxonomy and common names",
+    "check plant health assessment from photos"
+  ],
+  "sources": [
+    "https://plant.id/docs"
+  ],
+  "researcher_confidence": "low"
+}

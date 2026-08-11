@@ -1,0 +1,52 @@
+{
+  "id": "2checkout",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.2checkout.com/rest/6.0/",
+      "source": "https://verifone.cloud/docs/2checkout/API-Integration/APIs-and-webhooks/REST-6.0-Reference"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://verifone.cloud/docs/2checkout/API-Integration/APIs-and-webhooks/REST-6.0-Reference",
+      "source": "https://verifone.cloud/docs/2checkout/API-Integration/APIs-and-webhooks/REST-6.0-Reference"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "basic",
+      "source": "https://verifone.cloud/docs/2checkout/API-Integration/APIs-and-webhooks/REST-6.0-Reference"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.2checkout.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://verifone.cloud/docs/2checkout/API-Integration/APIs-and-webhooks/REST-6.0-Reference"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Placeholder curl \u2014 not a real endpoint/method/headers from current docs",
+      "source": "https://verifone.cloud/docs/2checkout/API-Integration/APIs-and-webhooks/REST-6.0-Reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "docs_url and base_url 404; auth still researching; example is placeholder"
+}

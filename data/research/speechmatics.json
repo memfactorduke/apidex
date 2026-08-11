@@ -1,0 +1,42 @@
+{
+  "id": "speechmatics",
+  "status": "operational",
+  "name": "Speechmatics",
+  "category": "ai-ml",
+  "tagline": "Accurate multilingual speech-to-text with real-time and batch modes",
+  "description": "Speechmatics provides enterprise-grade automatic speech recognition (ASR) via REST and WebSocket APIs. Supports batch and real-time transcription, dozens of languages, speaker diarization, custom dictionaries, and translation. Developers authenticate with API keys and process audio for captions, call analytics, media workflows, and voice apps.",
+  "base_url": "https://asr.api.speechmatics.com/v2",
+  "docs_url": "https://docs.speechmatics.com/",
+  "signup_url": "https://portal.speechmatics.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer YOUR_API_KEY header (also used for WebSocket real-time sessions). Keys created in the Speechmatics portal after self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free trial / free usage credits available on signup; exact free-hour allotment varies by plan page \u2014 confirm on pricing portal",
+    "paid_plans": "Pay-as-you-go and enterprise plans billed per audio hour; batch and real-time pricing differ by language and features"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://asr.api.speechmatics.com/v2/jobs/\" -H \"Authorization: Bearer YOUR_API_KEY\" -F 'config={\"type\":\"transcription\",\"transcription_config\":{\"language\":\"en\"}}' -F data_file=@audio.wav",
+    "response_snippet": "{\"id\":\"abc123\",\"status\":\"running\",\"created_at\":\"2026-01-15T12:00:00.000Z\",\"data_name\":\"audio.wav\",\"duration\":12.5}"
+  },
+  "use_cases": [
+    "transcribe uploaded audio file to text (batch)",
+    "stream live microphone audio to real-time captions",
+    "diarize speakers in a meeting recording",
+    "generate subtitles for video in multiple languages",
+    "build call-center analytics from phone audio"
+  ],
+  "sources": [
+    "https://docs.speechmatics.com/",
+    "https://www.speechmatics.com/"
+  ],
+  "researcher_confidence": "low"
+}

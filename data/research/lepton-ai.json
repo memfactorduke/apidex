@@ -1,0 +1,38 @@
+{
+  "id": "lepton-ai",
+  "status": "operational",
+  "name": "Lepton AI",
+  "category": "ai-ml",
+  "tagline": "Python-first platform for deploying and calling ML inference APIs",
+  "description": "Lepton AI provides a simple path from Python models to hosted inference endpoints, with SDKs and REST APIs for running and managing ML services. Accuracy of endpoints, auth, and pricing is being verified against current official docs before finalizing this entry.",
+  "base_url": "https://api.lepton.ai",
+  "docs_url": "https://www.lepton.ai/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "unknown"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://api.lepton.ai/",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "deploy an ML model as an API",
+    "call a hosted inference endpoint"
+  ],
+  "sources": [
+    "https://www.lepton.ai/docs"
+  ],
+  "researcher_confidence": "low"
+}

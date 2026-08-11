@@ -1,0 +1,99 @@
+{
+  "id": "data-gov-sg",
+  "status": "operational",
+  "name": "data.gov.sg API",
+  "category": "government-open-data",
+  "tagline": "Singapore government open data for transport, environment, and the economy",
+  "description": "Public APIs from Singapore's national open-data platform cover real-time weather and traffic plus collection and dataset discovery and retrieval. They are accessible without an API key for testing; keys provide higher production limits. Current real-time APIs use api-open.data.gov.sg, while collection and dataset APIs use documented api-production.data.gov.sg and api-open.data.gov.sg routes.",
+  "base_url": "https://api-open.data.gov.sg/v2/real-time/api",
+  "docs_url": "https://guide.data.gov.sg/developer-guide/api-overview",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Many real-time endpoints require no authentication. Dataset/datastore APIs may use CKAN resource IDs; confirm per-dataset docs for any key requirements."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public open data; no paid plans published for core APIs",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://api-open.data.gov.sg/v2/real-time/api/two-hr-forecast'",
+    "response_snippet": "{\"code\":0,\"data\":{\"area_metadata\":[{\"name\":\"Ang Mo Kio\",\"label_location\":{\"longitude\":103.839,\"latitude\":1.375}}],\"items\":[{\"update_timestamp\":\"2026-08-11T23:36:00+08:00\",\"forecasts\":[{\"area\":\"Ang Mo Kio\",\"forecast\":\"Fair (Night)\"}]}]},\"errorMsg\":\"\"}"
+  },
+  "use_cases": [
+    "get 2-hour weather forecast for Singapore areas",
+    "fetch real-time air quality (PSI) readings",
+    "query traffic images or transport datasets",
+    "pull open economic or population statistics by resource ID"
+  ],
+  "sources": [
+    "https://data.gov.sg/developer",
+    "https://api-open.data.gov.sg/v1/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

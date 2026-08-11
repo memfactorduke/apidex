@@ -1,0 +1,40 @@
+{
+  "id": "stockdata-org",
+  "status": "operational",
+  "name": "Stockdata.org",
+  "category": "finance",
+  "tagline": "Simple equities and news market-data API for stocks and financial headlines",
+  "description": "Stockdata.org is a market-data API offering real-time and historical stock prices, company data, and financial news for equities. It targets developers who need a straightforward REST interface for tickers, quotes, and news without a heavy institutional data stack. A free developer plan is available with documented request limits.",
+  "base_url": "https://api.stockdata.org/v1",
+  "docs_url": "https://www.stockdata.org/documentation",
+  "signup_url": "https://www.stockdata.org/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter api_token (or Authorization header depending on plan docs); self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.stockdata.org/v1/data/quote?symbols=AAPL&api_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"meta\":{\"requested\":1,\"returned\":1},\"data\":[{\"ticker\":\"AAPL\",\"name\":\"Apple Inc\",\"price\":190.5}]}"
+  },
+  "use_cases": [
+    "get latest stock quote for a ticker",
+    "fetch historical EOD prices for a symbol",
+    "search recent financial news for a company",
+    "look up basic company/profile metadata for a stock"
+  ],
+  "sources": [
+    "https://www.stockdata.org/documentation"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "fortnite-api",
+  "status": "operational",
+  "name": "Fortnite-API",
+  "category": "games-comics",
+  "tagline": "Unofficial Fortnite cosmetics, shop, stats, and news endpoints for bots and tools",
+  "description": "Community-run Fortnite data API providing cosmetics, item shop, player stats, news, and map data commonly used by Discord bots and third-party trackers. Not affiliated with Epic Games.",
+  "base_url": "https://fortnite-api.com/v2",
+  "docs_url": "https://dash.fortnite-api.com/endpoints",
+  "signup_url": "https://dash.fortnite-api.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header (Bearer) or query param; free keys via dashboard signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://fortnite-api.com/v2/cosmetics/br/new'",
+    "response_snippet": "{\"status\":200,\"data\":{\"build\":\"...\",\"date\":\"...\",\"items\":[...]}}"
+  },
+  "use_cases": [
+    "get current Fortnite item shop",
+    "look up cosmetic by name or ID",
+    "fetch player stats by username",
+    "get Fortnite news feed",
+    "list new cosmetics for a season"
+  ],
+  "sources": [
+    "https://fortnite-api.com",
+    "https://dash.fortnite-api.com/endpoints"
+  ],
+  "researcher_confidence": "low"
+}

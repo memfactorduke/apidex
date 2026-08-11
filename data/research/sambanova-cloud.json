@@ -1,0 +1,40 @@
+{
+  "id": "sambanova-cloud",
+  "status": "operational",
+  "name": "SambaNova Cloud",
+  "category": "ai-ml",
+  "tagline": "High-throughput LLM inference on SambaNova RDU hardware",
+  "description": "SambaNova Cloud is a high-throughput generative AI inference platform that serves open-source and proprietary LLMs on SambaNova Reconfigurable Dataflow Units (RDUs). Developers call an OpenAI-compatible REST API for chat completions and related endpoints, with self-serve API keys, model selection, and enterprise-grade throughput for production workloads.",
+  "base_url": "https://api.sambanova.ai/v1",
+  "docs_url": "https://docs.sambanova.ai/cloud/docs/get-started/overview",
+  "signup_url": "https://cloud.sambanova.ai/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (OpenAI-compatible). Keys created in SambaNova Cloud console after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Usage-based and enterprise plans; see cloud.sambanova.ai pricing for current rates"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.sambanova.ai/v1/chat/completions \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\": \"Meta-Llama-3.1-8B-Instruct\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}]}'",
+    "response_snippet": "{\"id\": \"chatcmpl-...\", \"object\": \"chat.completion\", \"choices\": [{\"index\": 0, \"message\": {\"role\": \"assistant\", \"content\": \"Hello! How can I help?\"}, \"finish_reason\": \"stop\"}], \"usage\": {\"prompt_tokens\": 10, \"completion_tokens\": 8, \"total_tokens\": 18}}"
+  },
+  "use_cases": [
+    "run chat completions with OpenAI-compatible API against SambaNova models",
+    "stream high-throughput LLM responses for production apps",
+    "switch model IDs for Llama and other hosted open models",
+    "benchmark or offload inference to RDU-backed endpoints"
+  ],
+  "sources": [
+    "https://docs.sambanova.ai/cloud/docs/get-started/overview"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "cisa-kev",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  },
+  "notes": "All claims verified against official CISA sources. The JSON feed is live and public; no auth, no published rate limits. Description is accurate. Example request is a valid curl against the official feed URL. Response snippet uses placeholder CVE data (not a real entry) but request shape is correct."
+}

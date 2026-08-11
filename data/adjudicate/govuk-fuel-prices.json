@@ -1,0 +1,15 @@
+{
+  "id": "govuk-fuel-prices",
+  "base_url": "https://www.developer.fuel-finder.service.gov.uk/access-latest-fuelprices",
+  "docs_url": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email",
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS -H \"Authorization: Bearer $FUEL_FINDER_ACCESS_TOKEN\" -H \"Accept: application/json\" \"$FUEL_FINDER_RESOURCE_URL\"",
+  "example_response_snippet": "{\"data\":[{\"forecourtId\":\"example-id\",\"fuelType\":\"E10\",\"price\":139.9,\"lastUpdated\":\"2026-08-11T12:34:56Z\"}]}",
+  "description": "Fuel Finder provides UK-wide current retail fuel prices and forecourt details. Its twice-daily CSV can be downloaded or received by email; its REST JSON API requires OAuth 2.0 client-credentials authentication and GOV.UK One Login onboarding.",
+  "status": null,
+  "resolution_notes": "[1]=https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email. base_url: replaced legacy guidance with the developer entrypoint linked by [1]; the public page does not expose a runtime API root. docs_url: replaced with [1]. auth_type: oauth2 per [1]. example: authenticated GET template per [1], using the resource URL issued/documented after onboarding. description: corrected to distinguish twice-daily CSV from authenticated REST JSON API, per [1]."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "microlink",
+  "status": "operational",
+  "name": "Microlink",
+  "category": "utilities",
+  "tagline": "Unified API for URL metadata, screenshots, PDFs, and content extraction.",
+  "description": "Microlink turns any URL into structured metadata, screenshots, PDFs, and extracted content via a single REST endpoint. Developers pass a target URL plus optional flags (meta, screenshot, pdf, data extraction) and receive JSON with title, description, images, and generated assets. Useful for link previews, open-graph enrichment, and automated visual capture.",
+  "base_url": "https://api.microlink.io",
+  "docs_url": "https://microlink.io/docs/api/getting-started/overview",
+  "signup_url": "https://microlink.io",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-api-key header or apiKey query parameter; free tier works without a key with lower limits. Self-serve signup at microlink.io."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "50 requests/day free (unauthenticated); Pro plans for higher volume",
+    "paid_plans": "Pro and custom plans available; see microlink.io/pricing"
+  },
+  "rate_limits": "Free: ~50 req/day; authenticated Pro plans have higher daily/monthly quotas (see pricing)",
+  "example": {
+    "request": "curl \"https://api.microlink.io?url=https://example.com&meta=true\" -H \"x-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":\"success\",\"data\":{\"title\":\"Example Domain\",\"description\":\"Example Domain...\",\"url\":\"https://example.com\",\"image\":null,\"logo\":null},\"statusCode\":200}"
+  },
+  "use_cases": [
+    "fetch Open Graph and meta tags for a URL",
+    "generate a screenshot of a web page",
+    "create a PDF from a URL",
+    "extract structured content from an article",
+    "build rich link previews in an app"
+  ],
+  "sources": [
+    "https://microlink.io/docs/api/getting-started/overview",
+    "https://microlink.io/pricing",
+    "https://microlink.io/docs/api"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "mailjet",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://dev.mailjet.com/email/reference/overview/versioning/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://dev.mailjet.com/email/guides/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://dev.mailjet.com/email/reference/overview/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.mailjet.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "6,000 emails per month, 200 emails per day, and up to 1,000 contacts.",
+      "source": "https://www.mailjet.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "API-call rate limits apply per API key per second; exceeding them returns HTTP 429. Mailjet does not state universal numeric thresholds.",
+      "source": "https://dev.mailjet.com/email/reference/overview/rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://dev.mailjet.com/email/reference/contacts/contact/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Mailjet provides REST APIs for email and a v4 SMS API. Email endpoints use HTTPS Basic Auth with an API key and secret; SMS endpoints instead require Bearer-token authentication.",
+      "source": "https://dev.mailjet.com/email/reference/overview/authentication/"
+    }
+  },
+  "notes": "The API remains operational: official documentation still identifies v3 and the current contact endpoint matches the example. The unauthenticated v3 root returning HTTP 500 does not establish that the API is dead. The entry's Free-plan limits are known, and its authentication prose is overbroad because SMS uses Bearer tokens."
+}

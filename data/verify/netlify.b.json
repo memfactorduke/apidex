@@ -1,0 +1,40 @@
+{
+  "id": "netlify",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm"
+    },
+    "docs_url": {
+      "verdict": "confirm"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "300 credits per month; the Free plan has a fixed hard limit and projects pause until the next billing cycle when credits are exhausted",
+      "source": "https://www.netlify.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "500 requests per minute for most requests; API deploys are limited to 3 per minute and 100 per day; some operations have stricter limits",
+      "source": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "confirm"
+    },
+    "description": {
+      "verdict": "confirm"
+    }
+  },
+  "notes": "The API remains operational and v1 is the documented base. The supplied docs URL redirects to Netlify's current canonical guide. The entry fails because OAuth2 is misclassified as apiKey, while both the API rate limits and current Free-plan limit are explicitly published."
+}

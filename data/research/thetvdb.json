@@ -1,0 +1,45 @@
+{
+  "id": "thetvdb",
+  "status": "operational",
+  "name": "TheTVDB API",
+  "category": "entertainment",
+  "tagline": "TV series, episode, and artwork metadata API for media libraries and scrapers",
+  "description": "TheTVDB provides a v4 REST API for TV series, seasons, episodes, people, artwork, and related metadata widely used by media servers and scrapers. Developers authenticate with a project API key (Bearer JWT after login) via the Subscriber Portal. Free and paid subscriber tiers apply; exact free-tier request quotas should be confirmed on the current pricing/portal pages.",
+  "base_url": "https://api4.thetvdb.com/v4",
+  "docs_url": "https://thetvdb.github.io/v4-api/",
+  "signup_url": "https://thetvdb.com/dashboard/account/apikey",
+  "auth": {
+    "type": "apiKey",
+    "details": "Project API key via POST /login for a Bearer JWT; send Authorization: Bearer <token> on subsequent requests. Self-serve keys in Subscriber Portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown \u2014 free/user tiers exist via Subscriber Portal; concrete req/day limits not confirmed on public pricing page",
+    "paid_plans": "Subscriber tiers (user/commercial) via TheTVDB Subscriber Portal; exact plan names/prices not confirmed from public docs alone"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X POST 'https://api4.thetvdb.com/v4/login' -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{\"apikey\":\"YOUR_API_KEY\"}'",
+    "response_snippet": "{\"status\":\"success\",\"data\":{\"token\":\"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...\"}}"
+  },
+  "use_cases": [
+    "look up a TV series by name or TVDB id",
+    "list seasons and episodes for a series",
+    "fetch episode air dates and absolute numbers",
+    "get series artwork and posters for a media library",
+    "resolve people (actors/creators) linked to a show",
+    "search multilingual TV metadata for scrapers"
+  ],
+  "sources": [
+    "https://thetvdb.github.io/v4-api/",
+    "https://api4.thetvdb.com/v4",
+    "https://thetvdb.com/",
+    "https://thetvdb.com/api-information"
+  ],
+  "researcher_confidence": "medium"
+}

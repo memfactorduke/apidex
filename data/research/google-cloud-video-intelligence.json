@@ -1,0 +1,44 @@
+{
+  "id": "google-cloud-video-intelligence",
+  "status": "operational",
+  "name": "Google Cloud Video Intelligence API",
+  "category": "ai-ml",
+  "tagline": "AI-powered video analysis: labels, shots, objects, and more",
+  "description": "Google Cloud Video Intelligence API analyzes video content using machine learning. It detects labels, shot changes, objects, faces, logos, text, and speech; supports object tracking and explicit content detection; and works with files in Cloud Storage or as base64-encoded content. Designed for media indexing, moderation, and searchable video archives.",
+  "base_url": "https://videointelligence.googleapis.com/v1",
+  "docs_url": "https://cloud.google.com/video-intelligence/docs",
+  "signup_url": "https://console.cloud.google.com/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 access token (Bearer) via Application Default Credentials, service account, or user OAuth. API key supported for some calls. Cloud project with Video Intelligence API enabled required."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "First 1,000 minutes of video processed per month free (verify current pricing page)",
+    "paid_plans": "Pay-as-you-go after free tier; priced per minute by feature (label detection, shot change, object tracking, etc.)"
+  },
+  "rate_limits": "not published in full; default Cloud quotas apply \u2014 check Quotas page in Cloud Console",
+  "example": {
+    "request": "curl -X POST \"https://videointelligence.googleapis.com/v1/videos:annotate\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"inputUri\":\"gs://YOUR_BUCKET/video.mp4\",\"features\":[\"LABEL_DETECTION\"]}'",
+    "response_snippet": "{\"name\": \"projects/PROJECT_NUMBER/locations/LOCATION_ID/operations/OPERATION_ID\"}"
+  },
+  "use_cases": [
+    "detect object labels and scenes in a video file",
+    "find shot changes and scene boundaries in footage",
+    "track moving objects across video frames",
+    "detect explicit or unsafe content for moderation",
+    "extract speech transcripts from video audio",
+    "index video archives for searchable media libraries"
+  ],
+  "sources": [
+    "https://cloud.google.com/video-intelligence/docs",
+    "https://cloud.google.com/video-intelligence/pricing",
+    "https://cloud.google.com/video-intelligence/docs/reference/rest"
+  ],
+  "researcher_confidence": "medium"
+}

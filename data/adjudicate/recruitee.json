@@ -1,0 +1,15 @@
+{
+  "id": "recruitee",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": "No permanent free tier. The 18-day free trial permits up to 5 published jobs and 50 emails and excludes promotion on free job boards.",
+  "rate_limits": "1000 requests per minute per API token.",
+  "cors": null,
+  "example_request": "curl -X GET \"https://api.recruitee.com/c/YOUR_COMPANY_ID/admin\" -H \"Authorization: Bearer YOUR_API_TOKEN\" -H \"Accept: application/json\"",
+  "example_response_snippet": "{\"admin\":{\"id\":1804,\"company_id\":863,\"email\":\"john2785@recruitee.com\",\"first_name\":\"John\",\"last_name\":\"Doe\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: other; ATS API uses a personal bearer token, not X-Api-Key or OAuth2 (https://docs.recruitee.com/reference/getting-started). free_tier_limits: 18-day trial limits confirmed (https://support.recruitee.com/en/articles/4065422-what-does-our-free-trial-entail). rate_limits: 1000/min/token (https://docs.recruitee.com/reference/getting-started). example: corrected to the documented bearer-authenticated company admin endpoint and representative response (https://docs.recruitee.com/reference/getting-started; https://apidocs.recruitee.com/)."
+}

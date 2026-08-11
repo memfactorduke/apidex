@@ -1,0 +1,38 @@
+{
+  "id": "edx",
+  "status": "operational",
+  "name": "edX API",
+  "category": "education-reference",
+  "tagline": "Open edX / edX course catalog and learner platform APIs for MOOC integration",
+  "description": "Researching official endpoints, auth, pricing, and current docs for edX/Open edX public APIs used for course catalog and learner integration.",
+  "base_url": "https://courses.edx.org",
+  "docs_url": "https://docs.edx.org/en/latest/developers/references/apis.html",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Researching authentication methods from official documentation"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://courses.edx.org/api/courses/v1/courses/",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list edX courses",
+    "get course details"
+  ],
+  "sources": [
+    "https://docs.edx.org/en/latest/developers/references/apis.html"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "rome2rio",
+  "status": "operational",
+  "name": "Rome2Rio API",
+  "category": "transportation",
+  "tagline": "Multi-modal door-to-door routing across planes, trains, buses, and ferries worldwide.",
+  "description": "Rome2Rio provides a multi-modal transportation API for door-to-door journey planning across planes, trains, buses, ferries, and other transport modes worldwide. Developers can search routes, get schedules, and compare travel options between any two locations.",
+  "base_url": "https://api.rome2rio.com/v1",
+  "docs_url": "https://www.rome2rio.com/documentation/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication required. Self-serve signup available."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.rome2rio.com/v1/json/Search?key=YOUR_API_KEY&oName=London&dName=Paris\"",
+    "response_snippet": "{ \"routes\": [] }"
+  },
+  "use_cases": [
+    "find multi-modal routes between two cities",
+    "compare train vs flight travel options",
+    "get door-to-door journey plans with transfers",
+    "search bus and ferry connections worldwide"
+  ],
+  "sources": [
+    "https://www.rome2rio.com/documentation/"
+  ],
+  "researcher_confidence": "low"
+}

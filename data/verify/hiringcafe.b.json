@@ -1,0 +1,52 @@
+{
+  "id": "hiringcafe",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": null,
+      "source": "https://www.reddit.com/r/hiringcafe/comments/1pjzbvv/does_hiringcafe_plan_to_provide_an_api_for/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": null,
+      "source": "https://www.reddit.com/r/hiringcafe/comments/1pjzbvv/does_hiringcafe_plan_to_provide_an_api_for/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "not applicable \u2014 HiringCafe does not offer a public API",
+      "source": "https://www.reddit.com/r/hiringcafe/comments/1pjzbvv/does_hiringcafe_plan_to_provide_an_api_for/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false",
+      "source": "https://www.reddit.com/r/hiringcafe/comments/1pjzbvv/does_hiringcafe_plan_to_provide_an_api_for/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "not applicable \u2014 no public API is offered",
+      "source": "https://www.reddit.com/r/hiringcafe/comments/1pjzbvv/does_hiringcafe_plan_to_provide_an_api_for/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "not applicable \u2014 no public API is offered",
+      "source": "https://www.reddit.com/r/hiringcafe/comments/1pjzbvv/does_hiringcafe_plan_to_provide_an_api_for/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "not applicable \u2014 no public API is offered",
+      "source": "https://www.reddit.com/r/hiringcafe/comments/1pjzbvv/does_hiringcafe_plan_to_provide_an_api_for/"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No valid public-API request exists; GET https://hiring.cafe/api returns HTTP 404.",
+      "source": "https://hiring.cafe/api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "HiringCafe is a job-search engine that indexes jobs from company websites and provides rich search filters, but it does not offer a public API.",
+      "source": "https://hiringcafe.com/about"
+    }
+  },
+  "notes": "HiringCafe's website is operational, but this API entry is not. Co-founder Ali Mir stated that a public API was not available. The service has since migrated from hiring.cafe to hiringcafe.com, while the claimed /api URL returns 404. Third-party HiringCafe scrapers are not official HiringCafe APIs."
+}

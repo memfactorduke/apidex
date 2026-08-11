@@ -1,0 +1,15 @@
+{
+  "id": "microsoft-graph-calendar",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No generally available free tier. Standard Calendar API access has no added per-call charge with an applicable user license. Qualifying Developer Program members can receive a free 25-user E5 sandbox for development/testing, renewable while eligible and active.",
+  "rate_limits": "Per app ID and mailbox: 10,000 requests per 10 minutes, four concurrent requests, and 150 MB of uploads per five minutes. Global Graph limits also apply. On HTTP 429, wait for the duration specified by Retry-After.",
+  "cors": "yes",
+  "example_request": "curl -s 'https://graph.microsoft.com/v1.0/me/calendar/events?$top=5' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
+  "example_response_snippet": "{\n  \"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#users('user-id')/calendar/events\",\n  \"value\": [\n    {\n      \"id\": \"AAMkAGI2...\",\n      \"subject\": \"Team standup\",\n      \"start\": {\"dateTime\": \"2026-08-11T16:00:00.0000000\", \"timeZone\": \"UTC\"},\n      \"end\": {\"dateTime\": \"2026-08-11T16:30:00.0000000\", \"timeZone\": \"UTC\"},\n      \"isAllDay\": false,\n      \"showAs\": \"busy\"\n    }\n  ]\n}",
+  "description": "Microsoft Graph Calendar provides REST APIs for managing Outlook and Exchange Online calendars, events, attendees, and scheduling information, including free/busy queries. It uses Microsoft Entra ID authentication. A free Microsoft 365 E5 sandbox is available only to qualifying Developer Program members and is restricted to development and testing.",
+  "status": null,
+  "resolution_notes": "free_tier=false; free_tier_limits and description corrected: the free sandbox is qualifying-only; standard access needs applicable licenses. https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-get-started rate_limits corrected: https://learn.microsoft.com/en-us/graph/throttling-limits#outlook-service-limits cors=yes: https://learn.microsoft.com/en-us/training/modules/msgraph-access-user-events/6-exercise-configure-app-access-events example corrected for shell-safe $top: https://learn.microsoft.com/en-us/graph/api/user-list-events"
+}

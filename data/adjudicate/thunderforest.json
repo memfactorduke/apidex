@@ -1,0 +1,15 @@
+{
+  "id": "thunderforest",
+  "base_url": "https://api.thunderforest.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl --fail --output tile.png \"https://api.thunderforest.com/outdoors/10/511/340.png?apikey=YOUR_API_KEY\"",
+  "example_response_snippet": "HTTP 200 OK\nContent-Type: image/png\n(binary 256\u00d7256 PNG tile saved as tile.png)",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Verifiers are correct. The current official Map Tiles API template uses https://api.thunderforest.com: https://www.thunderforest.com/docs/map-tiles-api/. example: Verifiers are correct; the same documentation confirms the api.thunderforest.com XYZ URL and PNG format, while the official tile-numbering page confirms standard tiles are 256\u00d7256: https://www.thunderforest.com/docs/tile-numbering/."
+}

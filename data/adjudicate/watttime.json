@@ -1,0 +1,15 @@
+{
+  "id": "watttime",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Basic (free) includes all signals and endpoints for CAISO_NORTH, plus the CO2 percentile signal for all covered regions.",
+  "rate_limits": "3,000 requests per rolling 5-minute window per user (10 requests/second average); /login is limited to 100 requests per 5 minutes.",
+  "cors": null,
+  "example_request": "curl -H \"Authorization: Bearer YOUR_TOKEN\" \"https://api.watttime.org/v3/signal-index?region=CAISO_NORTH&signal_type=co2_moer\"",
+  "example_response_snippet": "{\"data\":[{\"point_time\":\"2026-08-11T12:00:00Z\",\"value\":42}],\"meta\":{\"region\":\"CAISO_NORTH\",\"signal_type\":\"co2_moer\",\"data_point_period_seconds\":300}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Corrected per https://watttime.org/docs-dev/data-plans/. rate_limits: Corrected; OpenAPI specifies 3,000 requests per rolling 5 minutes per user and 100 per 5 minutes for /login: https://docs.watttime.org/openapi.json. example: Corrected; OpenAPI documents GET /v3/signal-index and requires region plus signal_type=co2_moer; the original omitted signal_type: https://docs.watttime.org/openapi.json."
+}

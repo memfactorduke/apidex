@@ -1,0 +1,15 @@
+{
+  "id": "newswhip",
+  "base_url": null,
+  "docs_url": "https://developer.newswhip.com/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "100 requests per rolling 5 minutes, with no more than 5 requests per second.",
+  "cors": null,
+  "example_request": "curl -sS -X POST \"https://api.newswhip.com/v1/articles?key=YOUR_API_KEY\" -H \"Content-Type: application/json\" --data '{\"filters\":[\"climate\"],\"size\":1}'",
+  "example_response_snippet": "{\"articles\":[{\"headline\":\"Climate change policy draws renewed attention\",\"link\":\"https://example.com/climate-story\",\"publication_timestamp\":1786406400000,\"fb_data\":{\"total_engagement_count\":124},\"relatedStories\":[]}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: replace with the current official Developer Hub, https://developer.newswhip.com/. rate_limits: official docs specify 100 requests per rolling 5 minutes and at most 5 per second, https://developer.newswhip.com/docs/rate-limits. example: official reference specifies POST /v1/articles, API key in the query string, and a JSON body with required filters; response uses articles, headline, link, publication_timestamp, and fb_data, https://developer.newswhip.com/reference/articles."
+}

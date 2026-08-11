@@ -1,0 +1,52 @@
+{
+  "id": "bitpay",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://bitpay.com/api/v1",
+      "source": "https://developer.bitpay.com/reference"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bitpay.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "token",
+      "source": "https://developer.bitpay.com/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bitpay.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bitpay.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bitpay.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use facade tokens (not X-Api-Key) and correct v1 base path per docs",
+      "source": "https://developer.bitpay.com/reference"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bitpay.com/"
+    }
+  },
+  "notes": "Entry has multiple factual errors on auth and base URL."
+}

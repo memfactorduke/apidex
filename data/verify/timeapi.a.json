@@ -1,0 +1,52 @@
+{
+  "id": "timeapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://timeapi.io/api/Time/current/zone?timeZone=UTC"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://timeapi.io/swagger/index.html",
+      "source": "https://timeapi.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://timeapi.io/api/Time/current/zone?timeZone=UTC"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://timeapi.io/home/faqs"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "enabled for all endpoints",
+      "source": "https://timeapi.io/home/changelog"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://timeapi.io/swagger/index.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://timeapi.io/swagger/index.html"
+    }
+  },
+  "notes": "The /api prefix itself returns 404 because it is not a callable endpoint, but a live child endpoint returned JSON without credentials. The listed documentation URL is obsolete; the homepage links to Swagger. Official material gives no numerical free-tier or upstream rate limit. Microsoft's separate connector throttle was not treated as TimeAPI's limit."
+}

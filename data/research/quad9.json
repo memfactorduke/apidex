@@ -1,0 +1,44 @@
+{
+  "id": "quad9",
+  "status": "operational",
+  "name": "Quad9",
+  "category": "security-identity",
+  "tagline": "Threat-blocking recursive DNS with free DoH, DoT, and DNSCrypt endpoints for secure resolution.",
+  "description": "Quad9 is a free recursive DNS service that blocks malware and phishing domains via threat intelligence. Developers and apps use its public DNS-over-HTTPS (DoH), DNS-over-TLS (DoT), and DNSCrypt endpoints for secure name resolution without signup. Multiple endpoint variants offer different privacy and filtering policies; no API key is required for standard recursive use.",
+  "base_url": "https://dns.quad9.net/dns-query",
+  "docs_url": "https://www.quad9.net/support/faq/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public recursive DNS/DoH/DoT endpoints. Optional enterprise/logging variants may differ; standard endpoints are open."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "binary",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public recursive DNS/DoH with no published request quota for standard endpoints",
+    "paid_plans": "Enterprise/custom options via Quad9; standard public service is free"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H 'accept: application/dns-json' 'https://dns.quad9.net:5053/dns-query?name=example.com&type=A'",
+    "response_snippet": "{\"Status\":0,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"example.com.\",\"type\":1}],\"Answer\":[{\"name\":\"example.com.\",\"type\":1,\"TTL\":300,\"data\":\"93.184.215.14\"}]}"
+  },
+  "use_cases": [
+    "resolve a domain to A/AAAA records over DoH",
+    "check if a hostname is blocked as malware by Quad9",
+    "configure app DNS to use threat-blocking recursive resolvers",
+    "query DNS over HTTPS with application/dns-json",
+    "switch between Quad9 filtered and unfiltered endpoint variants"
+  ],
+  "sources": [
+    "https://www.quad9.net/support/faq/",
+    "https://www.quad9.net/",
+    "https://dns.quad9.net"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "honeycomb",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Up to 20M events and 100M metrics data points per month; includes 2 triggers; SLOs are not included.",
+  "rate_limits": "Most API responses expose limits through RateLimit and RateLimit-Policy headers. Create Query Result is limited to 10 requests per minute, or 1 request per minute when using relational fields.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Replace \"unknown.\" Honeycomb's current Free plan allows up to 20M events and 100M metrics data points monthly, includes 2 triggers, and lists no SLOs. https://www.honeycomb.io/pricing rate_limits: Replace \"not published.\" Honeycomb documents response-header reporting and endpoint-specific limits of 10 requests/minute for Create Query Result and 1 request/minute with relational fields. https://docs.honeycomb.io/api/rate-limit"
+}

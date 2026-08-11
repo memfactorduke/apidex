@@ -1,0 +1,15 @@
+{
+  "id": "thetvdb",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "jwt",
+  "free_tier": null,
+  "free_tier_limits": "Free project licensing applies when annual company revenue is under $50,000 and requires attribution. The public pricing page lists no numeric request allowance.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "TheTVDB provides a v4 REST API for TV series, seasons, episodes, movies, people, artwork, and related metadata. Developers create a project API key through their account dashboard, exchange it at POST /login for a one-month Bearer JWT, and send that token on later requests. Access is available through revenue-based project licensing or a separate subscriber-supported API-key/PIN model.",
+  "status": null,
+  "resolution_notes": "auth_type: jwt; the spec defines HTTP Bearer JWT after /login: https://raw.githubusercontent.com/thetvdb/v4-api/main/docs/swagger.yml. free_tier_limits: under $50k/year is free with attribution, with no request quota listed: https://thetvdb.com/api-information. description: corrected because the official repo separates licensed and user-subscription access and says keys come from the Dashboard: https://github.com/thetvdb/v4-api"
+}

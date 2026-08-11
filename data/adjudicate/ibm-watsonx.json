@@ -1,0 +1,15 @@
+{
+  "id": "ibm-watsonx",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free Toolbox: up to 300,000 foundation-model tokens, 20 compute usage hours, and 100 text-extraction documents per month.",
+  "rate_limits": "At least 2 inference requests/second for Lite and 8 requests/second for Essentials and Standard; actual limits can be higher.",
+  "cors": null,
+  "example_request": "curl -X POST \"https://us-south.ml.cloud.ibm.com/ml/v1/text/chat?version=2025-10-25\" -H \"Authorization: Bearer YOUR_IAM_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -H \"Accept: application/json\" -d '{\"model_id\":\"openai/gpt-oss-120b\",\"project_id\":\"YOUR_PROJECT_ID\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}],\"max_completion_tokens\":100}'",
+  "example_response_snippet": "{\"id\":\"chatcmpl-...\",\"object\":\"chat.completion\",\"model_id\":\"openai/gpt-oss-120b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help you today?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"completion_tokens\":10,\"prompt_tokens\":8,\"total_tokens\":18}}",
+  "description": "IBM watsonx.ai is an AI development studio and runtime for building, tuning, evaluating, deploying, and running foundation-model and machine-learning applications. Governance capabilities are provided by the separately provisioned watsonx.governance service within the broader watsonx platform.",
+  "status": null,
+  "resolution_notes": "auth_type: KEEP other; IAM bearer access token. https://cloud.ibm.com/apidocs/watsonx-ai | free_tier_limits: REPLACE; current allowances. https://www.ibm.com/products/watsonx-ai/pricing | rate_limits: REPLACE; 2/8/8 RPS by plan. https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/wml-plans.html?context=wx | example: REPLACE; chat endpoint/token/current model. https://cloud.ibm.com/apidocs/watsonx-ai | description: REPLACE; governance is separate. https://www.ibm.com/docs/en/watsonx/saas?topic=watsonx-platform-architecture"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "quodd",
+  "base_url": null,
+  "docs_url": "https://developer.quodd.com/",
+  "auth_type": "jwt",
+  "free_tier": true,
+  "free_tier_limits": "7-day trial; credits vary by service from 5 or 10 up to 250. One request may consume multiple hits depending on the symbols and data returned.",
+  "rate_limits": "All QUODD web services include unlimited usage with no per-call charges; technical concurrency and throughput limits are not publicly specified.",
+  "cors": null,
+  "example_request": "curl -sS -X POST \"https://api.quodd.com/universal/jobs\" -H \"Authorization: Bearer $TOKEN\" -H \"Accept: application/json\" -H \"Content-Type: application/json\" --data '{\"Template\":\"pricing\",\"Identifiers\":[\"MSFT\"],\"JobParameters\":{\"startDate\":\"2023-05-05\",\"endDate\":\"2023-06-02\"}}'",
+  "example_response_snippet": "{\"JobID\":\"1686927711346\",\"JobStatus\":\"Accepted\",\"Message\":\"Job Accepted\"}",
+  "description": "QUODD provides credentialed REST and gRPC market-data APIs, with public developer documentation covering equity snapshots, options data, ticker information, and related services. API access requires a trial or firm account, and a time-limited free trial is publicly offered.",
+  "status": null,
+  "resolution_notes": "docs_url: corrected; description: corrected (public REST/gRPC docs): https://developer.quodd.com/. auth_type: jwt (Bearer JWT): https://developer.quodd.com/docs/snap-grpc-api/. free_tier/free_tier_limits: true; 7-day trial, service credits 5/10-250: https://marketdata.quodd.com/free-trial and https://www.quodd.com/faqs/how-many-hits-do-i-get-with-my-free-trial. rate_limits: unlimited usage/no per-call charges; technical limits unpublished: https://marketdata.quodd.com/pricing. example: corrected official QX job request/response: https://www.quodd.com/qx-query-developer-guide."
+}

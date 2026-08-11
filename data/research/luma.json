@@ -1,0 +1,40 @@
+{
+  "id": "luma",
+  "status": "operational",
+  "name": "Luma API",
+  "category": "events-holidays",
+  "tagline": "Programmatic access to Luma events, calendars, and guest management.",
+  "description": "Luma (lu.ma) provides a REST API for modern event platforms used by tech communities. Developers can list and manage events, calendars, and guests for automated workflows and integrations.",
+  "base_url": "https://api.lu.ma",
+  "docs_url": "https://docs.lu.ma/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and self-serve signup path to be verified from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://api.lu.ma/v1/events",
+    "response_snippet": "{\"events\":[]}"
+  },
+  "use_cases": [
+    "list upcoming events for a calendar",
+    "get guest list for an event",
+    "create or update event details",
+    "check RSVP status for attendees"
+  ],
+  "sources": [
+    "https://docs.lu.ma/"
+  ],
+  "researcher_confidence": "low"
+}

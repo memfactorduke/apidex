@@ -1,0 +1,101 @@
+{
+  "id": "4r0u",
+  "status": "operational",
+  "name": "INSEE API (Sirene)",
+  "category": "government-open-data",
+  "tagline": "French national business register and statistics via SIREN/SIRET",
+  "description": "Public APIs from France's National Institute of Statistics and Economic Studies (INSEE). The flagship API Sirene provides access to the inter-administrative Sirene business register: legal units (SIREN), establishments (SIRET), succession links, and historical data since 1973. Free self-serve access via the developer portal after registration; open data under Licence Ouverte 2.0.",
+  "base_url": "https://api.insee.fr/api-sirene/3.11",
+  "docs_url": "https://portail-api.insee.fr/catalog/api/2ba0e549-5587-3ef1-9082-99cd865de66f",
+  "signup_url": "https://portail-api.insee.fr/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Free self-serve account on portail-api.insee.fr; create an application, subscribe to API Sirene (Public plan), then send the issued key in the X-INSEE-Api-Key-Integration request header. Key validity is unlimited until revoked."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free Public plan only; 30 requests/minute for open-data usage",
+    "paid_plans": null
+  },
+  "rate_limits": "30 requests per minute (open data)",
+  "example": {
+    "request": "curl -s -H \"X-INSEE-Api-Key-Integration: YOUR_API_KEY\" \"https://api.insee.fr/api-sirene/3.11/siren/552100554\"",
+    "response_snippet": "{\n  \"header\": { \"statut\": 200, \"message\": \"OK\", \"total\": 1 },\n  \"unitesLegales\": [{\n    \"siren\": \"552100554\",\n    \"statutDiffusionUniteLegale\": \"O\",\n    \"dateCreationUniteLegale\": \"1955-01-01\",\n    \"periodesUniteLegale\": [{\n      \"denominationUniteLegale\": \"ELECTRICITE DE FRANCE\",\n      \"categorieJuridiqueUniteLegale\": \"5599\",\n      \"activitePrincipaleUniteLegale\": \"35.11Z\"\n    }]\n  }]\n}"
+  },
+  "use_cases": [
+    "look up a French company by SIREN number",
+    "get establishment details from a SIRET",
+    "search businesses by NAF activity and commune code",
+    "check establishment succession/predecessor links",
+    "verify company legal form and headcount tranche",
+    "resolve company name and address from registry identifiers"
+  ],
+  "sources": [
+    "https://portail-api.insee.fr/",
+    "https://portail-api.insee.fr/catalog/api/2ba0e549-5587-3ef1-9082-99cd865de66f",
+    "https://portail-api.insee.fr/catalog/api/2ba0e549-5587-3ef1-9082-99cd865de66f/doc?page=85c5657d-b1a1-4466-8565-7db1a194667b",
+    "https://static.insee.fr/api-sirene/Insee_API_publique_modalites_connexion.pdf",
+    "https://www.data.gouv.fr/dataservices/api-sirene-open-data",
+    "https://book.utilitr.org/03_Fiches_thematiques/Fiche_api.html"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

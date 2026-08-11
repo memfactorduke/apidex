@@ -1,0 +1,52 @@
+{
+  "id": "traccar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/api-reference/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/api-reference/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/traccar-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/download/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Self-hosted Traccar is free and open source without software-use limits. Official hosted services are paid, starting at $9.95/month; their product pages describe a one-time 7-day trial rather than an ongoing hosted free tier. Public demo servers are intended for testing.",
+      "source": "https://www.traccar.org/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.traccar.org/configuration-file/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traccar.org/api-reference/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Traccar exposes REST endpoints for devices, positions, geofences, users, groups, and reports, plus a WebSocket endpoint for live updates. It supports direct HTTP Basic authentication, Bearer account tokens, and session cookies. A password-based session is created by POSTing form-encoded email and password to /api/session, not by a Basic Auth login to that endpoint.",
+      "source": "https://www.traccar.org/api-reference/"
+    }
+  },
+  "notes": "Checked current official API documentation (version 6.14.5), authentication guidance, configuration reference, and pricing pages. No official REST request-rate policy was located. CORS is deployment-configurable through web.origin, but the current demo server's effective policy could not be established."
+}

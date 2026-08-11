@@ -1,0 +1,15 @@
+{
+  "id": "cayenne-mydevices",
+  "base_url": null,
+  "docs_url": "https://github.com/myDevicesIoT/cayenne-docs",
+  "auth_type": "basic",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -i -X POST 'https://api.mydevices.com/things/<CLIENT_ID>/data' -u '<MQTT_USERNAME>:<MQTT_PASSWORD>' -H 'Content-Type: application/json' -d '[{\"channel\":1,\"value\":16.4,\"type\":\"temp\",\"unit\":\"c\"}]'",
+  "example_response_snippet": "HTTP/2 404",
+  "description": null,
+  "status": "defunct",
+  "resolution_notes": "base_url: original is the last documented REST base; https://community.mydevices.com/t/rest-api-endpoint/14675. docs_url: dead page replaced by the archived official repository; https://github.com/myDevicesIoT/cayenne-docs. auth_type: basic, using MQTT username/password for REST ingestion; same forum source. example: placeholder replaced with the documented POST, now expected to fail because Cayenne was discontinued. status: defunct; official EOL notice names 2023-09-18 and confirms discontinuation: https://community.mydevices.com/t/end-of-life-announcement-for-cayenne/18926."
+}

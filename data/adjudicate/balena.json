@@ -1,0 +1,15 @@
+{
+  "id": "balena",
+  "base_url": "https://api.balena-cloud.com/v7",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free for up to 10 total devices across all fleets; adding more devices requires upgrading to a paid plan.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X GET \"https://api.balena-cloud.com/v7/device?%24select=id,uuid,device_name,is_online,os_version\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+  "example_response_snippet": "{\"d\":[{\"id\":123,\"uuid\":\"7f66ec...\",\"device_name\":\"my-device\",\"is_online\":true,\"os_version\":\"balenaOS 6.6.49+rev1\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Replace v6 with v7; Balena states v7 is current, while v1-v6 are translated for compatibility: https://docs.balena.io/reference/api/overview/. free_tier_limits: Replace unknown; the official FAQ limits the free plan to 10 total devices across all fleets: https://www.balena.io/pricing. example: Replace with the documented current v7 device route and a response using current device fields: https://docs.balena.io/reference/api/overview/."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "xero",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/documentation/api/accounting/organisation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/documentation/api/accounting/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/documentation/guides/oauth2/overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Starter is free, with a maximum of 5 connections and 1,000 API calls per day per organisation. Standard limits also include 60 calls per minute per tenant, 5 concurrent calls, and 10,000 calls per minute across all tenants.",
+      "source": "https://developer.xero.com/documentation/guides/oauth2/limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits are 5 concurrent calls, 60 calls per minute per tenant, 1,000 calls per day per organisation on Starter or 5,000 on higher tiers, and 10,000 calls per minute app-wide across all tenants.",
+      "source": "https://developer.xero.com/documentation/guides/oauth2/limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/documentation/api/accounting/organisation"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The Accounting API supports invoices, contacts, payments, bank transactions, accounts, and reports, but it does not support reconciling bank statement lines or expose unreconciled bank statement data through the public Accounting API.",
+      "source": "https://developer.xero.com/documentation/api/accounting/bankstatements"
+    }
+  },
+  "notes": "Xero\u2019s official 2026 documentation remains live. The entry fails because rate limits and Starter limits are published, while its reconciliation claim is overbroad: bank reconciliation and unreconciled bank statement data are not available through the Accounting API. No authoritative CORS policy was located."
+}

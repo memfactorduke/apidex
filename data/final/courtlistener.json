@@ -1,0 +1,98 @@
+{
+  "id": "courtlistener",
+  "status": "operational",
+  "name": "CourtListener",
+  "category": "legal-compliance",
+  "tagline": "Free bulk + REST access to US case law, dockets, and RECAP PACER data",
+  "description": "CourtListener (Free Law Project) provides the largest free REST and bulk access to US federal and state case law, court dockets, opinions, and RECAP PACER filings. Developers can search and retrieve legal documents, citations, oral arguments, and related metadata for research, compliance, and legal-tech applications.",
+  "base_url": "https://www.courtlistener.com/api/rest/v4/",
+  "docs_url": "https://www.courtlistener.com/help/api/rest/",
+  "signup_url": "https://www.courtlistener.com/sign-in/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Token authentication via Authorization: Token YOUR_API_KEY header; free account required to obtain a token from the profile page"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free non-member access: 5 requests/minute, 50/hour, and 125/day. Higher limits require membership; commercial users need an agreement. Complimentary EDU and qualifying LSO memberships are available.",
+    "paid_plans": "Contact Free Law Project for commercial licensing"
+  },
+  "rate_limits": "Default authenticated limits are 5 requests/minute, 50/hour, and 125/day, applied concurrently on rolling windows. Membership tiers increase limits up to 25/minute, 300/hour, and 1,400/day; grandfathered or commercial limits may differ.",
+  "example": {
+    "request": "curl -H \"Authorization: Token YOUR_API_KEY\" \"https://www.courtlistener.com/api/rest/v4/search/?q=privacy&type=o\"",
+    "response_snippet": "{\"count\": 12345, \"next\": \"https://www.courtlistener.com/api/rest/v4/search/?cursor=...\", \"previous\": null, \"results\": [{\"id\": 123, \"caseName\": \"...\", \"court\": \"...\"}]}"
+  },
+  "use_cases": [
+    "search US federal and state court opinions by keyword",
+    "look up a docket by case number or court",
+    "retrieve RECAP PACER documents and filings",
+    "get citation network and related cases for an opinion",
+    "download oral argument audio metadata",
+    "bulk export case law for legal research pipelines"
+  ],
+  "sources": [
+    "https://www.courtlistener.com/help/api/rest/",
+    "https://www.courtlistener.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

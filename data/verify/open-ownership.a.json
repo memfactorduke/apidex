@@ -1,0 +1,52 @@
+{
+  "id": "open-ownership",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://bods-data-datasette.openownership.org",
+      "source": "https://bods-data.openownership.org/source/uk_version_0_4/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/",
+      "source": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://bods-data-datasette.openownership.org/uk_version_0_4/entity_statement.json?_size=1'",
+      "source": "https://docs.datasette.io/en/latest/json_api.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/"
+    }
+  },
+  "notes": "Open Ownership retired its former global Register in November 2024. Current BODS datasets are exposed through its data-analysis site and a Datasette JSON API, not api.openownership.org. Official materials confirm free querying but do not clearly publish authentication requirements, quotas, rate limits, or CORS configuration."
+}

@@ -1,0 +1,86 @@
+{
+  "id": "convertapi",
+  "status": "operational",
+  "name": "ConvertAPI",
+  "category": "utilities",
+  "tagline": "Document conversion REST API for PDF, Office, HTML, and image transforms",
+  "description": "ConvertAPI is a cloud document conversion service that transforms files between PDF, Office, HTML, image, and other formats via a simple REST API. Developers send files (or URLs) to conversion endpoints and receive converted output, with authentication via API secret or token. Common uses include PDF generation, office-to-PDF, OCR, and image processing in automated pipelines.",
+  "base_url": "https://v2.convertapi.com",
+  "docs_url": "https://www.convertapi.com/doc/getting-started",
+  "signup_url": "https://www.convertapi.com/a/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API secret via Authorization: Bearer YOUR_API_SECRET header, or query param Secret=YOUR_API_SECRET; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://v2.convertapi.com/convert/docx/to/pdf?Secret=YOUR_API_KEY\" -F \"File=@document.docx\"",
+    "response_snippet": "{\"ConversionCost\":1,\"Files\":[{\"FileName\":\"document.pdf\",\"FileSize\":12345,\"Url\":\"https://v2.convertapi.com/d/...\"}]}"
+  },
+  "use_cases": [
+    "convert DOCX to PDF via REST",
+    "convert HTML to PDF for invoices",
+    "merge or split PDF files programmatically",
+    "convert images between formats (PNG/JPG/WebP)",
+    "extract text or OCR from PDF/images"
+  ],
+  "sources": [
+    "https://www.convertapi.com/doc/getting-started"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

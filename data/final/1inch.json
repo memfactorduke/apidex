@@ -1,0 +1,97 @@
+{
+  "id": "1inch",
+  "status": "operational",
+  "name": "1inch",
+  "category": "crypto",
+  "tagline": "DEX aggregator for swap quotes and multi-chain routing",
+  "description": "1inch is a DEX aggregator API that finds optimal swap routes across decentralized exchanges. Used by wallets and trading UIs for quotes, token swaps, and liquidity routing on multiple chains.",
+  "base_url": "https://api.1inch.com",
+  "docs_url": "https://business.1inch.com/portal/documentation",
+  "signup_url": "https://portal.1inch.dev",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header (Bearer or API key); self-serve signup at portal.1inch.dev"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Dev (free): 100,000 API calls/month and 60 requests/minute.",
+    "paid_plans": null
+  },
+  "rate_limits": "Dev: 60 req/min, 100k calls/month; Startup: 10 req/s, 1M/month; Professional: 20 req/s, 3M/month; Business: 40 req/s, 7M/month. Exceeding a limit returns HTTP 429.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" -H \"accept: application/json\" \"https://api.1inch.com/swap/v6.1/1/quote?src=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&dst=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amount=1000000000000000000\"",
+    "response_snippet": "{\"srcToken\":{\"address\":\"0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\",\"symbol\":\"ETH\",\"decimals\":18},\"dstToken\":{\"address\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\",\"symbol\":\"USDC\",\"decimals\":6},\"dstAmount\":\"<current quote amount>\",\"protocols\":[{\"token\":\"0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\",\"hops\":[{\"part\":100,\"dst\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\",\"protocols\":[{\"name\":\"UNISWAP_V3\",\"part\":100}]}]}],\"gas\":100000}"
+  },
+  "use_cases": [
+    "get best swap quote for a token pair",
+    "build multi-hop swap transaction data",
+    "list supported tokens on a chain",
+    "check token allowance for swaps"
+  ],
+  "sources": [
+    "https://portal.1inch.dev/documentation",
+    "https://api.1inch.dev"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

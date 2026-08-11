@@ -1,0 +1,99 @@
+{
+  "id": "transit-app",
+  "status": "operational",
+  "name": "Transit App API",
+  "category": "transportation",
+  "tagline": "Multi-city public transit directions and realtime arrivals for developers.",
+  "description": "Transit App exposes multi-city public transit directions, schedules, and realtime vehicle/stop data for use in third-party applications. Coverage spans many North American and international cities where the consumer Transit app operates, with endpoints for trip planning and live arrivals. Access is typically partner or API-key based rather than fully self-serve for all features.",
+  "base_url": "https://external.transitapp.com",
+  "docs_url": "https://api-doc.transitapp.com/v4.html",
+  "signup_url": "https://transitapp.com/apis",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required; contact Transit for access. Exact header/query scheme not fully public on marketing page."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Up to 5 API calls per minute and 1,500 API calls per calendar month.",
+    "paid_plans": "Partner/commercial pricing; not publicly listed in detail"
+  },
+  "rate_limits": "Free access is limited to 5 API calls per minute and 1,500 API calls per calendar month; an API Agreement may specify different limits.",
+  "example": {
+    "request": "curl 'https://external.transitapp.com/v4/public/nearby_routes?lat=45.5017&lon=-73.5673' --header 'apiKey: YOUR_SECRET_TOKEN'",
+    "response_snippet": "{\"nearby_routes\":[{\"global_route_id\":\"1:897\",\"route_short_name\":\"55\",\"route_long_name\":\"Boulevard Saint-Laurent\"}]}"
+  },
+  "use_cases": [
+    "get nearby transit routes for a lat/lon",
+    "plan multi-modal transit trips between two points",
+    "fetch realtime arrivals at a stop",
+    "show live vehicle positions on a map",
+    "list agencies and coverage for a city"
+  ],
+  "sources": [
+    "https://transitapp.com/apis"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

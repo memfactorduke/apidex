@@ -1,0 +1,41 @@
+{
+  "id": "holidayapi",
+  "status": "operational",
+  "name": "HolidayAPI",
+  "category": "events-holidays",
+  "tagline": "Public holiday and observance data for countries and subdivisions worldwide",
+  "description": "HolidayAPI provides REST access to public holidays, observances, and related calendar data for many countries and subdivisions. Developers query by country, year, and optional filters such as language or observed dates. It offers a free tier plus paid plans for higher volume and full historical/future year coverage. Authentication is via API key. Suitable for calendar apps, scheduling systems, and localized date-aware features.",
+  "base_url": "https://holidayapi.com/v1",
+  "docs_url": "https://holidayapi.com/docs",
+  "signup_url": "https://holidayapi.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key passed as the key query parameter (self-serve signup at holidayapi.com)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://holidayapi.com/v1/holidays?pretty&key=YOUR_API_KEY&country=US&year=2026\"",
+    "response_snippet": "{\"status\":200,\"holidays\":[{\"name\":\"New Year's Day\",\"date\":\"2026-01-01\",\"observed\":\"2026-01-01\",\"public\":true,\"country\":\"US\",\"uuid\":\"...\",\"weekday\":{\"date\":{\"name\":\"Thursday\",\"numeric\":4}}}]}"
+  },
+  "use_cases": [
+    "list public holidays for a country and year",
+    "check if a given date is a public holiday",
+    "get observed vs official holiday dates for scheduling",
+    "localize holiday names for multi-country apps"
+  ],
+  "sources": [
+    "https://holidayapi.com/docs",
+    "https://holidayapi.com"
+  ],
+  "researcher_confidence": "low"
+}

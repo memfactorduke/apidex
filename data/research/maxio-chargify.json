@@ -1,0 +1,44 @@
+{
+  "id": "maxio-chargify",
+  "status": "operational",
+  "name": "Maxio Advanced Billing (Chargify)",
+  "category": "ecommerce-payments",
+  "tagline": "Subscription billing and revenue management API for SaaS and recurring commerce",
+  "description": "Maxio Advanced Billing (formerly Chargify) is a subscription billing and revenue management API for SaaS and recurring commerce. It covers customers, subscriptions, products, invoices, payments, dunning, usage metering, and reporting against a site-specific Advanced Billing subdomain.",
+  "base_url": "https://{subdomain}.chargify.com",
+  "docs_url": "https://developers.maxio.com/http/advanced-billing-api",
+  "signup_url": "https://www.maxio.com/",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with API key as username and empty (or 'x') password; keys created in Maxio Advanced Billing site settings. OAuth/token flows also documented for some integrations."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Commercial SaaS pricing via Maxio sales/self-serve; Advanced Billing is product-priced, not per-request API metering (confirm on maxio.com)."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_API_KEY:x -H 'Accept: application/json' 'https://subdomain.chargify.com/subscriptions.json'",
+    "response_snippet": "[{\"subscription\":{\"id\":123,\"state\":\"active\",\"balance_in_cents\":0,\"current_period_ends_at\":\"2026-09-01T00:00:00-04:00\",\"customer\":{\"id\":1,\"email\":\"user@example.com\"},\"product\":{\"id\":10,\"name\":\"Pro Plan\",\"price_in_cents\":9900}}}]"
+  },
+  "use_cases": [
+    "list active subscriptions for a billing site",
+    "create a customer and start a recurring subscription",
+    "record metered usage against a subscription component",
+    "fetch invoices and payment status for a customer",
+    "update product prices or coupon codes via API",
+    "cancel or reactivate a subscription with proration options"
+  ],
+  "sources": [
+    "https://developers.maxio.com/http/advanced-billing-api",
+    "https://www.maxio.com/"
+  ],
+  "researcher_confidence": "low"
+}

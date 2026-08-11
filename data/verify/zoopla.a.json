@@ -1,0 +1,52 @@
+{
+  "id": "zoopla",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No current public listings API base URL; commercial Zoopla data access is available only by arrangement.",
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.zoopla.co.uk/docs/getting-started",
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2 (client-credentials flow with Bearer tokens for currently documented member APIs); the former public listings API has no current authentication scheme because it is no longer publicly available",
+      "source": "https://support.zoopla.co.uk/hc/en-gb/articles/360015656838-Authentication-Tech-Documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "not applicable; there is no publicly available listings API or public free tier",
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zoopla.co.uk/docs/api-terms-of-use"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No valid current public-listings request exists; the documented property_listings.json API-key example targets a listings API that Zoopla states is no longer publicly available.",
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Zoopla's listings API is no longer publicly available. Organizations with commercial requirements may contact Zoopla to discuss data availability; current public documentation does not establish developer access to listings, valuations, and area statistics as described.",
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    }
+  },
+  "notes": "Official current documentation explicitly says the Zoopla listings API is no longer publicly available. The live documentation uses the plural developers.zoopla.co.uk hostname and covers commercial/member and Alto integrations, not the former public API-key property-search service. The base URL's 404 is consistent with this retirement."
+}

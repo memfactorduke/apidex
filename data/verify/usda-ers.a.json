@@ -1,0 +1,52 @@
+{
+  "id": "usda-ers",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.data.gov/docs/developer-manual/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The published api.data.gov defaults are 1,000 requests/hour for a registered key and, for DEMO_KEY, 30 requests/hour per IP address plus 50 requests/day per IP address. Limits may vary by service, but no authoritative ERS source supporting a limit of 10 was located.",
+      "source": "https://api.data.gov/docs/developer-manual/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://api.data.gov/docs/agency-manual/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    }
+  },
+  "notes": "Current ERS documentation confirms the REST root, /arms/year request, JSON and GraphQL access, ARMS subject matter, and free api.data.gov key registration. The claimed DEMO_KEY limit of 10 conflicts with the currently published 30/hour and 50/day defaults and lacks an ERS source. ERS does not publish a CORS policy; api.data.gov documents CORS as backend-specific configuration."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "zillow-bridge",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://bridgedataoutput.com/docs/platform/API/bridge",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true for test access; production access is approval-based and MLS licensing fees may apply",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Every application receives test-dataset access; Bridge charges no additional vendor or brokerage service fee, but individual MLS licensing fees may apply.",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default platform limits are 5,000 requests/hour and 334 requests/minute; Public Records additionally defaults to 1,000 requests/day.",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Browser access is supported using a Browser Token and configured Referrer Domain.",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://api.bridgedataoutput.com/api/v2/OData/test/Property?$top=1&access_token=YOUR_API_KEY'",
+      "source": "https://bridgedataoutput.com/docs/explorer/reso-web-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    }
+  },
+  "notes": "Official Bridge and Zillow materials show an active, approval-based API. The entry uses a stale documentation URL, omits published limits, oversimplifies pricing, and places $top inside double quotes, causing shell expansion. Browser-token documentation also makes CORS behavior determinable."
+}

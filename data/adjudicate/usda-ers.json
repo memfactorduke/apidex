@@ -1,0 +1,15 @@
+{
+  "id": "usda-ers",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Default: 1,000 requests/hour per API key across api.data.gov. DEMO_KEY: 30 requests/IP/hour and 50 requests/IP/day. Limits may vary by service; USDA ERS publishes no separate numeric limit.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Replace the original. The current official api.data.gov manual specifies 1,000 requests/hour by default and DEMO_KEY limits of 30/IP/hour and 50/IP/day; it says service limits may vary. ERS terms mention possible limits but publish no numeric ERS-specific limit. Evidence: https://api.data.gov/docs/developer-manual/ and https://www.ers.usda.gov/developer/api-terms-of-service"
+}

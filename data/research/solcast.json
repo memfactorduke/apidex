@@ -1,0 +1,41 @@
+{
+  "id": "solcast",
+  "status": "operational",
+  "name": "Solcast",
+  "category": "energy-utilities",
+  "tagline": "High-accuracy solar irradiance and PV power forecasts via REST API",
+  "description": "Solcast provides high-accuracy solar irradiance and photovoltaic (PV) power forecast and live data via a REST API. Developers use it for solar resource assessment, short-term PV power forecasting, and grid/energy management applications. A free tier is available for limited API use.",
+  "base_url": "https://api.solcast.com.au",
+  "docs_url": "https://docs.solcast.com.au/",
+  "signup_url": "https://toolkit.solcast.com.au/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or Authorization header; self-serve signup at Solcast Toolkit."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Limited free tier for hobbyist/academic use; exact limits require verification",
+    "paid_plans": "Commercial plans available"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.solcast.com.au/world_radiation/estimated_actuals?latitude=-33.856784&longitude=151.215297&hours=1&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"estimated_actuals\":[{\"ghi\":650,\"period_end\":\"2024-01-01T12:00:00.0000000Z\",\"period\":\"PT30M\"}]}"
+  },
+  "use_cases": [
+    "get live solar irradiance for a lat/lon",
+    "fetch PV power forecast for a site",
+    "retrieve historical solar radiation data",
+    "get satellite-based solar estimates"
+  ],
+  "sources": [
+    "https://docs.solcast.com.au/",
+    "https://solcast.com/"
+  ],
+  "researcher_confidence": "low"
+}

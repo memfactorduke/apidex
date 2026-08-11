@@ -1,0 +1,52 @@
+{
+  "id": "septa-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www3.septa.org/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.septa.org/",
+      "source": "https://api.septa.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.septa.org/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.septa.org/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.septa.org/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Public SEPTA APIs provide Regional Rail arrivals, TrainView and schedules; bus and trolley schedules, locations and detours; service alerts, elevator outages, and GTFS/GTFS-RT feeds. The documented real-time features do not apply uniformly to subway/elevated lines.",
+      "source": "https://api.septa.org/"
+    }
+  },
+  "notes": "The official documentation is now at api.septa.org; /api is its API base path, not the documentation page, explaining the 403 on the submitted docs URL. Recent official indexing shows SEPTA endpoints remain active, so the bare-base 403 is not evidence of shutdown. No official API-wide pricing, unlimited-use guarantee, quota, or CORS policy was found."
+}

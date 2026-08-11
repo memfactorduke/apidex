@@ -1,0 +1,52 @@
+{
+  "id": "keycloak",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.keycloak.org/docs-api/latest/rest-api/index.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.keycloak.org/docs-api/latest/rest-api/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.keycloak.org/docs/latest/server_admin/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/keycloak/keycloak/blob/main/LICENSE.txt"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.keycloak.org/docs-api/latest/rest-api/index.html"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Keycloak's Admin REST API manages realms, users, groups, clients, roles, sessions, and identity providers on an operator-hosted Keycloak server. Calls require a bearer access token with sufficient administrative roles or delegated permissions; the full realm-admin role is not required. Tokens may represent users or service accounts and can be obtained through supported OAuth 2.0/OpenID Connect flows.",
+      "source": "https://www.keycloak.org/docs/latest/server_admin/"
+    }
+  },
+  "notes": "The base URL is an official template, so HTTP 0 is expected until {host} is replaced. Current 2026 releases and documentation show the API remains active. The description incorrectly implies that every caller needs a realm-admin token; limited admin roles and delegated permissions are supported. No authoritative project documentation established global Admin REST quotas or CORS behavior."
+}

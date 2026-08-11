@@ -1,0 +1,15 @@
+{
+  "id": "ai21-labs",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "New accounts receive $10 in trial credit valid for three months, usable for the AI21 APIs, SDK, and playground.",
+  "rate_limits": "Jamba Large: 10 RPS and 200 RPM. Jamba Mini: 10 RPS and 200 RPM.",
+  "cors": null,
+  "example_request": "curl https://api.ai21.com/studio/v1/chat/completions --header \"Authorization: Bearer $AI21_API_KEY\" --header \"Content-Type: application/json\" --data '{\"model\":\"jamba-large\",\"max_tokens\":1024,\"messages\":[{\"role\":\"user\",\"content\":\"Hello, how are you?\"}]}'",
+  "example_response_snippet": "{\"id\":\"chatcmpl_example\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! I'm doing well. How can I help you today?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":9,\"completion_tokens\":13,\"total_tokens\":22}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier: true; official pricing grants new accounts trial credit: https://docs.ai21.com/docs/usage-cost. free_tier_limits: $10 for three months, per the same page. rate_limits: official table gives both Jamba Large and Mini 10 RPS/200 RPM: https://docs.ai21.com/reference/api-rate-limits. example: official curl uses the corrected endpoint, bearer header, JSON body, and current model aliases: https://docs.ai21.com/reference/jamba-1-6-api-ref; response structure: https://docs.ai21.com/reference/jamba-api-response."
+}

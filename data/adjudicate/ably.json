@@ -1,0 +1,15 @@
+{
+  "id": "ably",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "6,000,000 messages/month, 500 messages/second, 200 concurrent channels, and 200 concurrent connections.",
+  "rate_limits": "Published and plan-specific. Free: 25,000 HTTP API requests/hour and 50 requests/second; 500 messages/second account-wide; 50 publishes/second per channel; 50 inbound and outbound messages/second per connection.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: ORIGINAL 'unknown' is incorrect; Ably's current Free package documents 6M messages/month, 500 messages/second, 200 concurrent channels, and 200 concurrent connections. https://ably.com/docs/platform/pricing/free rate_limits: ORIGINAL 'not published' is incorrect; Ably publishes package-specific message, channel, connection, and HTTP API limits. https://ably.com/docs/platform/pricing/limits"
+}

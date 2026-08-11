@@ -1,0 +1,101 @@
+{
+  "id": "mempool-space",
+  "status": "operational",
+  "name": "Mempool.space",
+  "category": "crypto",
+  "tagline": "Open Bitcoin mempool, fee estimates, blocks, and address explorer API",
+  "description": "Public REST API for Bitcoin blockchain and mempool data from mempool.space: fee estimates, recommended fees, mempool stats, blocks, transactions, addresses, mining pools, and Lightning Network endpoints. Fully open source and self-hostable; the public instance is free to use with fair-use rate limits.",
+  "base_url": "https://mempool.space/api",
+  "docs_url": "https://mempool.space/docs/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public instance. Optional Enterprise API access may use keys; self-hosted instances need no public API key."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public instance free with fair-use rate limits; exact free quotas not published on a pricing page",
+    "paid_plans": "Enterprise / dedicated API available via mempool.space for higher rate limits; details via sales"
+  },
+  "rate_limits": "not published in detail for the public free API; fair-use limits apply; Enterprise plans offer higher limits",
+  "example": {
+    "request": "curl -s https://mempool.space/api/v1/fees/recommended",
+    "response_snippet": "{\"fastestFee\":15,\"halfHourFee\":12,\"hourFee\":8,\"economyFee\":5,\"minimumFee\":2}"
+  },
+  "use_cases": [
+    "get recommended Bitcoin transaction fee rates",
+    "fetch current mempool size and backlog stats",
+    "look up a Bitcoin address balance and transaction history",
+    "get details for a recent Bitcoin block by height or hash",
+    "inspect a transaction by txid including confirmation status",
+    "query Lightning Network node or channel data"
+  ],
+  "sources": [
+    "https://mempool.space/docs/api",
+    "https://mempool.space/api",
+    "https://mempool.space"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "description"
+    ]
+  }
+}

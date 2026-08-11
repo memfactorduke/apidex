@@ -1,0 +1,52 @@
+{
+  "id": "ifttt",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "There is no single IFTTT API base URL. The Connect API uses https://connect.ifttt.com/v2; Webhooks triggers use https://maker.ifttt.com/trigger/{event}/with/key/{webhooks_key}.",
+      "source": "https://ifttt.com/docs/connect_api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://ifttt.com/docs",
+      "source": "https://ifttt.com/docs"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey: Connect API service-authenticated requests use an IFTTT-Service-Key header; Webhooks use a private per-account key in the URL. User-authenticated Service APIs use OAuth 2.0.",
+      "source": "https://ifttt.com/docs/connect_api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.ifttt.com/hc/en-us/articles/115010230347-Webhooks-service-FAQ"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No free Webhooks tier. Webhooks triggers and the action require Pro; Webhooks queries require Pro+. IFTTT Platform developer tools are listed under Pro+.",
+      "source": "https://help.ifttt.com/hc/en-us/articles/115010230347-Webhooks-service-FAQ"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Webhooks are limited to 240 requests per minute on Pro and Pro+ and are unavailable on Free.",
+      "source": "https://help.ifttt.com/hc/en-us/articles/1260803229749-IFTTT-Service-Rate-Limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST -H \"Content-Type: application/json\" -d '{\"this\":[{\"is\":{\"some\":[\"test\",\"data\"]}}]}' 'https://maker.ifttt.com/trigger/{event}/json/with/key/{webhooks_key}'",
+      "source": "https://help.ifttt.com/hc/en-us/articles/115010230347-Webhooks-service-FAQ"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ifttt.com/docs"
+    }
+  },
+  "notes": "The entry conflates the Service API protocol, Connect API, and consumer Webhooks service. IFTTT remains operational, but the listed docs URL is dead, the homepage is not an API base URL, authentication is documented, and Webhooks pricing and limits are published."
+}

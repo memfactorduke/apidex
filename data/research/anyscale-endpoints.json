@@ -1,0 +1,43 @@
+{
+  "id": "anyscale-endpoints",
+  "status": "operational",
+  "name": "Anyscale Endpoints",
+  "category": "ai-ml",
+  "tagline": "OpenAI-compatible inference API for open models with production scaling",
+  "description": "Anyscale Endpoints provides OpenAI-compatible REST APIs for running open-source large language models at production scale. Developers can call chat completions, embeddings, and related inference endpoints with familiar OpenAI client libraries, while Anyscale handles autoscaling, infrastructure, and model hosting. The service targets teams that want open models without managing GPU clusters themselves.",
+  "base_url": "https://api.endpoints.anyscale.com/v1",
+  "docs_url": "https://docs.anyscale.com/endpoints/overview",
+  "signup_url": "https://console.anyscale.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Bearer token API key in Authorization header (Authorization: Bearer YOUR_API_KEY). Keys are created in the Anyscale console after account signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Usage-based pricing per model; check Anyscale pricing page for current rates"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.endpoints.anyscale.com/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\": \"meta-llama/Meta-Llama-3-8B-Instruct\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}], \"max_tokens\": 64}'",
+    "response_snippet": "{\"id\": \"chatcmpl-...\", \"object\": \"chat.completion\", \"choices\": [{\"index\": 0, \"message\": {\"role\": \"assistant\", \"content\": \"Hello! How can I help you today?\"}, \"finish_reason\": \"stop\"}], \"usage\": {\"prompt_tokens\": 10, \"completion_tokens\": 9, \"total_tokens\": 19}}"
+  },
+  "use_cases": [
+    "run OpenAI-compatible chat completions on open LLMs",
+    "swap open models into an existing OpenAI client with a base URL change",
+    "generate embeddings for RAG with hosted open models",
+    "scale open-model inference without managing GPU infrastructure",
+    "prototype multi-model inference backends behind one OpenAI-style API"
+  ],
+  "sources": [
+    "https://docs.anyscale.com/endpoints/overview",
+    "https://docs.anyscale.com/",
+    "https://www.anyscale.com/"
+  ],
+  "researcher_confidence": "low"
+}

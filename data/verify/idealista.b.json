@@ -1,0 +1,36 @@
+{
+  "id": "idealista",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "unverifiable"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://developers.idealista.com/access-request?action=main"
+    },
+    "auth_type": {
+      "verdict": "unverifiable"
+    },
+    "free_tier": {
+      "verdict": "unverifiable"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "unverifiable"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://www.idealista.com/data/servicios-instituciones-y-otros-perfiles/"
+    }
+  },
+  "notes": "Current official pages confirm an active Search API offered through an access-request process and API-based market data for Spain, Portugal, and Italy. Public first-party pages did not expose current endpoint, authentication, pricing, rate-limit, CORS, or request-method details. Older examples suggest POST plus an OAuth access token, making the submitted GET-style curl suspicious, but that was not enough for a current official-source contradiction."
+}

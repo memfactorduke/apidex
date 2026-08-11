@@ -1,0 +1,42 @@
+{
+  "id": "woodpecker-ci",
+  "status": "operational",
+  "name": "Woodpecker CI",
+  "category": "dev-tools",
+  "tagline": "HTTP API for self-hosted CI pipelines, repos, and secrets",
+  "description": "Woodpecker CI is a lightweight open-source continuous integration system (Drone fork lineage) that exposes an HTTP API for managing repositories, pipelines, secrets, and related resources on self-hosted instances. Developers authenticate with personal access tokens and call REST endpoints on their own server rather than a shared SaaS API host.",
+  "base_url": "https://YOUR_WOODPECKER_HOST/api",
+  "docs_url": "https://woodpecker-ci.org/docs/api",
+  "signup_url": "https://woodpecker-ci.org/docs/usage/project-settings#api-token",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal access token via Authorization: Bearer header (or token query param on some clients); generated in user settings on the self-hosted instance"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Open-source self-hosted software; no SaaS API quotas\u2014limits are your instance capacity",
+    "paid_plans": "No official paid API tiers; optional commercial support/hosting may exist from third parties"
+  },
+  "rate_limits": "not published (self-hosted; admin-configurable if any)",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://YOUR_WOODPECKER_HOST/api/user\"",
+    "response_snippet": "{\n  \"id\": 1,\n  \"login\": \"octocat\",\n  \"email\": \"octocat@github.com\",\n  \"avatar_url\": \"https://...\",\n  \"admin\": false\n}"
+  },
+  "use_cases": [
+    "list repositories registered on a Woodpecker instance",
+    "trigger or re-run a pipeline for a repo",
+    "fetch pipeline and build status for CI automation",
+    "create or update repository secrets",
+    "list recent pipeline runs and their steps"
+  ],
+  "sources": [
+    "https://woodpecker-ci.org/docs/api",
+    "https://woodpecker-ci.org/"
+  ],
+  "researcher_confidence": "medium"
+}

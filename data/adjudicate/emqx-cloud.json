@@ -1,0 +1,15 @@
+{
+  "id": "emqx-cloud",
+  "base_url": "https://{deployment-api-host}:8443/api/v5",
+  "docs_url": null,
+  "auth_type": "basic",
+  "free_tier": null,
+  "free_tier_limits": "Serverless: 1 million session minutes, 1 GB traffic, and 1 million rule actions per month; maximum 1,000 concurrent sessions.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -u \"APP_ID:APP_SECRET\" -X POST -H \"Content-Type: application/json\" -d '{\"topic\":\"t/a\",\"qos\":1,\"payload\":\"Hello EMQX\"}' \"https://YOUR_DEPLOYMENT_API_HOST:8443/api/v5/publish\"",
+  "example_response_snippet": "{ \"id\": \"000600D09A099053F445000014C30000\" }",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect; use the deployment-specific API endpoint, not fixed /v2 \u2014 https://docs.emqx.com/en/cloud/latest/api/api_overview.html; auth_type: basic; App ID/App Secret are HTTP Basic credentials \u2014 https://docs.emqx.com/en/cloud/latest/api/api_overview.html; free_tier_limits: incorrect; Serverless gets 1M session minutes, 1GB traffic, and 1M rule actions monthly \u2014 https://docs.emqx.com/en/cloud/latest/quick_start/introduction.html; example: incorrect; official POST /publish uses curl -u app_id:app_secret \u2014 https://docs.emqx.com/en/cloud/latest/api/publish_v5.html"
+}

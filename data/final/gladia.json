@@ -1,0 +1,95 @@
+{
+  "id": "gladia",
+  "status": "operational",
+  "name": "Gladia",
+  "category": "ai-ml",
+  "tagline": "Speech-to-text API for transcription, diarization, and translation.",
+  "description": "Gladia provides an AI speech API for audio and video transcription with speaker diarization, translation, and real-time streaming. Developers send audio to the API and receive structured transcripts with optional multilingual and post-processing features.",
+  "base_url": "https://api.gladia.io",
+  "docs_url": "https://docs.gladia.io/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-gladia-key header (self-serve signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "\u20ac50 in one-time free credits with no monthly reset; approximately 80+ hours of pre-recorded or 60+ hours of real-time transcription at current rates.",
+    "paid_plans": null
+  },
+  "rate_limits": "Starter: 25 concurrent async requests and 30 concurrent real-time requests; Growth: flexible concurrency; Enterprise: unlimited concurrency. Calls-per-hour limits also vary by tier, but numeric caps are not publicly stated.",
+  "example": {
+    "request": "curl -X POST https://api.gladia.io/v2/pre-recorded -H 'x-gladia-key: YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"audio_url\":\"https://example.com/audio.mp3\"}'",
+    "response_snippet": "{\"id\":\"...\",\"result_url\":\"https://api.gladia.io/v2/pre-recorded/...\"}"
+  },
+  "use_cases": [
+    "transcribe audio files to text",
+    "diarize speakers in a meeting recording",
+    "translate speech transcripts to another language",
+    "stream real-time speech transcription"
+  ],
+  "sources": [
+    "https://docs.gladia.io/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

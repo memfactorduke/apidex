@@ -1,0 +1,15 @@
+{
+  "id": "propublica-congress",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "None currently because the service is discontinued and new API keys are unavailable. Historical limit: 5,000 requests per day.",
+  "rate_limits": "No current rate limit because the service is discontinued. Historical documentation specified 5,000 requests per day.",
+  "cors": null,
+  "example_request": "curl -sS \"https://projects.propublica.org/api-docs/congress-api/\"",
+  "example_response_snippet": "ProPublica's Congress API is no longer available. This documentation should only be used as a historical reference.",
+  "description": "The ProPublica Congress API formerly provided structured U.S. congressional data, including members, bills, votes, committees, nominations, and statements. It is no longer available, new API keys cannot be obtained, and its documentation and endpoint examples are retained only as historical references.",
+  "status": "defunct",
+  "resolution_notes": "base_url: retain historical URL; auth_type: retain apiKey; free_tier: false; free_tier_limits: none current, 5,000/day historical; rate_limits: none current, 5,000/day historical; example: replace with live deprecation check; description/status: discontinued/defunct. Evidence for each: https://projects.propublica.org/api-docs/congress-api/ (unavailable, historical-only, no new keys, base URL); https://projects.propublica.org/api-docs/congress-api/api/ (X-API-Key, historical 5,000/day); https://projects.propublica.org/api-docs/congress-api/endpoints/ (historical example)."
+}

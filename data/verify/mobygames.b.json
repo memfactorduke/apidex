@@ -1,0 +1,52 @@
+{
+  "id": "mobygames",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mobygames.com/info/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mobygames.com/info/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mobygames.com/info/api/#authorization"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true; qualifying non-commercial researchers may apply for free API access",
+      "source": "https://www.mobygames.com/api/subscribe/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Non-commercial requests are limited to 720 per hour, with a maximum rate of 1 request per second",
+      "source": "https://www.mobygames.com/info/api/#limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published and plan-dependent; documentation gives non-commercial access 720 requests per hour with a 1 request-per-second maximum, while paid plans publish their own per-second limits",
+      "source": "https://www.mobygames.com/api/subscribe/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mobygames.com/info/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mobygames.com/api/subscribe/"
+    }
+  },
+  "notes": "The documentation URL remains the official current URL; its 403 appears to be automated-client blocking, not removal. The entry is wrong about free access and unpublished limits. Current paid subscriptions start at $9.99/month, while qualifying non-commercial research access is application-based. The docs explicitly document api_key as a query parameter but do not substantiate the entry's alternative header claim."
+}

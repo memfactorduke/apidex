@@ -1,0 +1,52 @@
+{
+  "id": "google-cloud-text-to-speech",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/text-to-speech/docs/reference/rest"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/text-to-speech/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/text-to-speech/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "0\u20134 million characters per month free, depending on voice type (Standard/WaveNet/Neural2/etc.) \u2014 see pricing page",
+      "source": "https://cloud.google.com/text-to-speech/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: e.g. 300\u20131000 QPM depending on method/region (see quotas page)",
+      "source": "https://cloud.google.com/text-to-speech/quotas"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/text-to-speech/docs/create-audio"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/text-to-speech/docs"
+    }
+  },
+  "notes": "Placeholder \u2014 will re-verify from official docs"
+}

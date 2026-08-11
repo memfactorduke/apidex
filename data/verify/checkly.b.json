@@ -1,0 +1,52 @@
+{
+  "id": "checkly",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checklyhq.com/docs/api-checks/request-settings/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checklyhq.com/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checklyhq.com/docs/api-checks/request-settings/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checklyhq.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Hobby: free forever \u2014 5k API check runs, 1k browser check runs, 5s max response time, 20s max browser runtime, 5 concurrent checks, 1 user, 5 alert channels, 2 dashboards (per current Checkly pricing page)",
+      "source": "https://www.checklyhq.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Account-level API request limits apply (e.g. Hobby 1000/min, Team 5000/min, Enterprise 10000/min per docs/changelog); not \"not published\"",
+      "source": "https://www.checklyhq.com/docs/account-and-billing/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://api.checklyhq.com/v1/checks\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"X-Checkly-Account: YOUR_ACCOUNT_ID\"",
+      "source": "https://developers.checklyhq.com/reference/getv1checks"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checklyhq.com/docs/api/"
+    }
+  },
+  "notes": "Main failures: free_tier_limits and rate_limits are published; example omits required X-Checkly-Account header. Auth is Bearer API key + account header. API is live."
+}

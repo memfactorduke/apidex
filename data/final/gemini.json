@@ -1,0 +1,99 @@
+{
+  "id": "gemini",
+  "status": "operational",
+  "name": "Gemini",
+  "category": "crypto",
+  "tagline": "US-regulated crypto exchange REST and WebSocket APIs for market data and trading",
+  "description": "Gemini provides REST and WebSocket APIs for market data, order placement, account balances, and custody-related trading on its US-regulated cryptocurrency exchange. Public endpoints cover symbols, tickers, order books, and trades; private endpoints require API-key authentication for order management and account history.",
+  "base_url": "https://api.gemini.com/v1",
+  "docs_url": "https://docs.gemini.com/",
+  "signup_url": "https://exchange.gemini.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key + secret via HMAC-SHA384 signed payload; X-GEMINI-APIKEY, X-GEMINI-PAYLOAD, X-GEMINI-SIGNATURE headers for private endpoints. Self-serve from account settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access free; trading fees apply per fee schedule",
+    "paid_plans": "Trading fee tiers based on 30-day volume; API itself not sold as a paid product"
+  },
+  "rate_limits": "Public REST: 120 requests/minute (recommended \u22641 request/second). Private REST: 600 requests/minute (recommended \u22645 requests/second). Some endpoints have stricter documented limits.",
+  "example": {
+    "request": "curl \"https://api.gemini.com/v1/pubticker/btcusd\"",
+    "response_snippet": "{\"bid\":\"65000.00\",\"ask\":\"65001.00\",\"last\":\"65000.50\",\"volume\":{\"BTC\":\"123.45\",\"USD\":\"8000000.00\",\"timestamp\":1710000000000}}"
+  },
+  "use_cases": [
+    "get BTC/USD ticker price and 24h volume",
+    "fetch order book depth for a trading pair",
+    "place and cancel limit orders on Gemini",
+    "stream live trades over WebSocket",
+    "list account balances and trade history",
+    "get recent public trade prints for a symbol"
+  ],
+  "sources": [
+    "https://docs.gemini.com/",
+    "https://docs.gemini.com/rest-api/",
+    "https://www.gemini.com/fees/api-fee-schedule"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

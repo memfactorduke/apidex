@@ -1,0 +1,40 @@
+{
+  "id": "realty-mole",
+  "status": "operational",
+  "name": "Realty Mole Property API",
+  "category": "real-estate-housing",
+  "tagline": "Property details, rent estimates, and comps via RapidAPI",
+  "description": "Property data API providing details, rent estimates, and comparable sales for US real estate. Hosted on RapidAPI and popular with indie builders for valuation, rental analysis, and property research.",
+  "base_url": "https://realty-mole-property-api.p.rapidapi.com",
+  "docs_url": "https://rapidapi.com/realtymole/api/realty-mole-property-api",
+  "signup_url": "https://rapidapi.com/realtymole/api/realty-mole-property-api",
+  "auth": {
+    "type": "apiKey",
+    "details": "RapidAPI key via X-RapidAPI-Key header plus X-RapidAPI-Host; self-serve signup on RapidAPI"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --request GET --url 'https://realty-mole-property-api.p.rapidapi.com/properties?address=5500%20Grand%20Lake%20Dr%2C%20San%20Antonio%2C%20TX%2C%2078244' --header 'X-RapidAPI-Key: YOUR_API_KEY' --header 'X-RapidAPI-Host: realty-mole-property-api.p.rapidapi.com'",
+    "response_snippet": "{\"address\":\"5500 Grand Lake Dr, San Antonio, TX 78244\",\"propertyType\":\"Single Family\",\"bedrooms\":3,\"bathrooms\":2,\"squareFootage\":1500,\"yearBuilt\":1985,\"lastSalePrice\":250000}"
+  },
+  "use_cases": [
+    "get property details by address",
+    "estimate rent for a residential property",
+    "find comparable sales for valuation",
+    "look up property ownership and parcel data"
+  ],
+  "sources": [
+    "https://rapidapi.com/realtymole/api/realty-mole-property-api"
+  ],
+  "researcher_confidence": "low"
+}

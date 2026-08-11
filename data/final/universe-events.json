@@ -1,0 +1,98 @@
+{
+  "id": "universe-events",
+  "status": "operational",
+  "name": "Universe API",
+  "category": "events-holidays",
+  "tagline": "Ticketmaster-owned event creation and ticketing API for independent organizers",
+  "description": "Universe's API lets organizers retrieve event details, attendee or guest-list data, and sales data. Documented write operations include creating discount codes and access keys and checking in tickets; current documentation does not substantiate API-based event creation or general ticket-inventory updates.",
+  "base_url": "https://www.universe.com/api/v2",
+  "docs_url": "https://developers.universe.com/",
+  "signup_url": "https://www.universe.com/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 access tokens; application registration required via developer portal"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "GraphQL API access is included with Starter. Accounts, event pages, and free events have no upfront or service fees; paid tickets incur service and payment-processing fees. No API-call quota is published.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer ACCESS_TOKEN\" \"https://www.universe.com/api/v2/listings?user_id=<host_id>\"",
+    "response_snippet": "{\"listings\":[],\"meta\":{\"limit\":10,\"offset\":0,\"count\":0}}"
+  },
+  "use_cases": [
+    "list events for an organizer",
+    "create a new ticketed event",
+    "fetch attendee lists for an event",
+    "update ticket inventory"
+  ],
+  "sources": [
+    "https://developers.universe.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

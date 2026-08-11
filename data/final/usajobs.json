@@ -1,0 +1,101 @@
+{
+  "id": "usajobs",
+  "status": "operational",
+  "name": "USAJOBS",
+  "category": "jobs-careers",
+  "tagline": "Official U.S. federal government job listings API for searching public sector openings.",
+  "description": "USAJOBS provides a free REST API for searching and retrieving U.S. federal job opportunity announcements. Developers register for an API key and call data.usajobs.gov endpoints with Host, User-Agent, and Authorization-Key headers. Responses are JSON and cover job titles, locations, agencies, pay, and application details for building job boards, alerts, and career tools.",
+  "base_url": "https://data.usajobs.gov/api",
+  "docs_url": "https://developer.usajobs.gov/",
+  "signup_url": "https://developer.usajobs.gov/APIRequest/Index",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization-Key header plus User-Agent (email) and Host headers; self-serve registration on developer.usajobs.gov."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Official pricing/free-tier terms are not published. API-token registration is required. Published access limits: Search Jobs\u201410,000 rows per query and 500 per page; Code List and Dynamic Search\u2014no limits.",
+    "paid_plans": null
+  },
+  "rate_limits": "Search Jobs: maximum 10,000 rows per query and 500 rows per page. Code List API and Dynamic Search: no limits. No requests-per-second or requests-per-day quota is published.",
+  "example": {
+    "request": "curl -X GET \"https://data.usajobs.gov/api/search?Keyword=engineer&ResultsPerPage=10\" -H \"Host: data.usajobs.gov\" -H \"User-Agent: YOUR_EMAIL@example.com\" -H \"Authorization-Key: YOUR_API_KEY\"",
+    "response_snippet": "{\"SearchResult\":{\"SearchResultCount\":10,\"SearchResultCountAll\":1234,\"SearchResultItems\":[{\"MatchedObjectId\":\"...\",\"MatchedObjectDescriptor\":{\"PositionTitle\":\"Software Engineer\",\"OrganizationName\":\"Department of ...\",\"PositionLocationDisplay\":\"Washington, District of Columbia\",\"PositionURI\":\"https://www.usajobs.gov/job/...\"}}]}}"
+  },
+  "use_cases": [
+    "search federal job openings by keyword and location",
+    "list recent vacancies for a specific agency or series",
+    "fetch job opportunity announcement details for a position",
+    "build alerts when new federal roles match a skill set",
+    "aggregate public-sector openings for a career board"
+  ],
+  "sources": [
+    "https://developer.usajobs.gov/",
+    "https://developer.usajobs.gov/API-Reference",
+    "https://developer.usajobs.gov/guides/search",
+    "https://data.usajobs.gov/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "cors",
+      "description"
+    ]
+  }
+}

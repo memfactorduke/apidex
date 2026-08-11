@@ -1,0 +1,52 @@
+{
+  "id": "soilgrids",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.isric.org/soilgrids/v2.0/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.isric.org/soilgrids/v2.0/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.isric.org/soilgrids/v2.0/docs"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The REST API is currently paused. When available, its published fair-use limit is 5 API calls per 1 minute period; ISRIC does not describe a nonnumeric quota.",
+      "source": "https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_02.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Fair use is explicitly defined as 5 API calls per 1 minute period.",
+      "source": "https://rest.isric.org/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.isric.org/soilgrids/v2.0/docs"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SoilGrids provides global modeled soil-property maps, but its beta REST API is currently paused with no estimated restoration date, so developers cannot presently rely on coordinate queries through this service.",
+      "source": "https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_02.html"
+    }
+  },
+  "notes": "ISRIC's current official documentation says the beta REST API has been temporarily paused because of service issues, with no restoration timeline. The published endpoint structure remains documented, but the directory's operational status is false. ISRIC also advises using WCS or WebDAV for stable access."
+}

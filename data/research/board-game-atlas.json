@@ -1,0 +1,42 @@
+{
+  "id": "board-game-atlas",
+  "status": "defunct",
+  "name": "Board Game Atlas API",
+  "category": "games-comics",
+  "tagline": "Board game search, prices, and Kickstarter data (service shut down).",
+  "description": "Board Game Atlas provided a modern REST API for searching board games, retrieving prices, Kickstarter campaign data, and game metadata as a complement to BoardGameGeek. The public API at api.boardgameatlas.com and the main product appear to have been shut down; documentation and endpoints no longer serve live product content as of 2025\u20132026.",
+  "base_url": "https://api.boardgameatlas.com/api",
+  "docs_url": "https://www.boardgameatlas.com/api/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Client ID (client_id query parameter) obtained from a Board Game Atlas developer account; historically self-serve via the site."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.boardgameatlas.com/api/search?name=Catan&client_id=YOUR_API_KEY\"",
+    "response_snippet": "{\"games\":[{\"id\":\"OIXt3DmJU0\",\"name\":\"Catan\",\"year_published\":1995,\"min_players\":3,\"max_players\":4,\"min_playtime\":60,\"max_playtime\":120,\"min_age\":10,\"price\":\"44.99\",\"msrp\":\"55.00\"}],\"count\":1}"
+  },
+  "use_cases": [
+    "search board games by name or filters",
+    "get retail price and MSRP for a board game",
+    "look up Kickstarter campaign data for games",
+    "fetch game metadata (players, playtime, age) for a catalog"
+  ],
+  "sources": [
+    "https://www.boardgameatlas.com/api/docs",
+    "https://www.boardgameatlas.com/",
+    "https://api.boardgameatlas.com/api/search?name=Catan&client_id=test"
+  ],
+  "researcher_confidence": "low"
+}

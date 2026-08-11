@@ -1,0 +1,97 @@
+{
+  "id": "seatgeek",
+  "status": "operational",
+  "name": "SeatGeek Platform API",
+  "category": "events-holidays",
+  "tagline": "Ticket marketplace API for events, venues, performers, and listings",
+  "description": "SeatGeek Platform API provides event, venue, performer, taxonomy, and recommendation data. Event records may include aggregate listing statistics such as listing count and average, lowest, and highest prices, but the public v2 API does not expose individual ticket listings; users must follow SeatGeek URLs to view tickets.",
+  "base_url": "https://api.seatgeek.com/2",
+  "docs_url": "https://platform.seatgeek.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Client ID via query parameter or header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.seatgeek.com/2/events?client_id=YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "search events by location",
+    "get venue details",
+    "list performers",
+    "get ticket listings for an event"
+  ],
+  "sources": [
+    "https://platform.seatgeek.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example"
+    ],
+    "corrected": [
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

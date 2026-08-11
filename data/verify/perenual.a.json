@@ -1,0 +1,52 @@
+{
+  "id": "perenual",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://perenual.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://perenual.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://perenual.com/docs/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.perenual.com/subscription-api-pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Personal plan: 100 requests/day; species data, hardiness maps, and care guides/FAQ for species 1-3000; plant-disease API entries 1-100.",
+      "source": "https://www.perenual.com/subscription-api-pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published daily allowances are 100 requests for Personal, 10,000 for Premium, and 100,000 for Supreme; Enterprise has custom limits.",
+      "source": "https://www.perenual.com/subscription-api-pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://perenual.com/api/v2/species-list?key=YOUR_API_KEY&page=1\"",
+      "source": "https://perenual.com/docs/api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "REST API providing plant species catalogs and details, care guides, hardiness maps, pest/disease listings, and other botanical data. A free Personal plan is available; plant identification is a separate beta API, and the documented disease endpoint lists diseases rather than identifying them.",
+      "source": "https://perenual.com/docs/api"
+    }
+  },
+  "notes": "The API is documented as active and online. The directory entry is outdated chiefly because its species-list example omits the current /v2 path and because Perenual now publishes plan-specific daily request allowances. No official CORS policy was located."
+}

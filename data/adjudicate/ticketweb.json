@@ -1,0 +1,15 @@
+{
+  "id": "ticketweb",
+  "base_url": "https://app.ticketmaster.com/discovery/v2/",
+  "docs_url": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/",
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": "Unknown as a free tier; the official current FAQ only identifies a default public-API quota of 5,000 requests per day and 2 requests per second.",
+  "rate_limits": "Default public-API quota: 5,000 requests per day and 2 requests per second.",
+  "cors": "yes",
+  "example_request": "curl -s 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&size=1&apikey=YOUR_API_KEY'",
+  "example_response_snippet": "{\"_embedded\":{\"events\":[{\"name\":\"Example Event\",\"type\":\"event\",\"id\":\"EVENT_ID\",\"url\":\"https://www.ticketmaster.com/event/EVENT_ID\"}]},\"page\":{\"size\":1,\"number\":0}}",
+  "description": "TicketWeb is a Ticketmaster-operated self-service ticketing, marketing, and event-management platform for independent venues and promoters. Custom website integrations use Ticketmaster's Discovery API, whose public datasets include TicketWeb-sourced listings across North American and international markets. Transactional offers and near-real-time inventory status are separate partner or authorized-client APIs.",
+  "status": null,
+  "resolution_notes": "base_url/docs_url/auth_type/example: corrected to the Discovery v2 root/docs, apikey query auth, and documented event-search curl. https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/ free_tier_limits: unknown as a free tier; rate_limits: current default public quota 5,000/day and 2/sec. https://developer.ticketmaster.com/support/faq/ cors: yes; Discovery docs show Access-Control-Allow-Origin: *. description: corrected; TicketWeb sends self-build clients to Event Discovery. https://info.ticketweb.com/client-website-services/ FAQ also identifies TicketWeb-sourced data."
+}

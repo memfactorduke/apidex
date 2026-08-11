@@ -1,0 +1,52 @@
+{
+  "id": "seatgeek",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://seatgeek.github.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://seatgeek.com/build"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://seatgeek.github.io/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://seatgeek.com/api-terms"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://seatgeek.com/api-terms"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://seatgeek.com/api-terms"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://seatgeek.github.io/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SeatGeek Platform API documents event, venue, and performer data plus event-level listing statistics such as listing count and prices; its public v2 reference does not document retrieval of individual ticket listings.",
+      "source": "https://seatgeek.github.io/"
+    }
+  },
+  "notes": "The legacy official reference still documents the v2 endpoint, client_id authentication, and example request. platform.seatgeek.com remains an official link but redirects to developer.seatgeek.com. Its old 2016 free-access statement is insufficient for current pricing: SeatGeek's 2025 terms allow gated access, fees, and unspecified technical limits. No authoritative CORS policy or numerical rate limit was located."
+}

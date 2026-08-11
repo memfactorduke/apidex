@@ -1,0 +1,52 @@
+{
+  "id": "blockcypher",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/bitcoin/#restful-resources"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/bitcoin/#rate-limits-and-tokens"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/bitcoin/#rate-limits-and-tokens"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "3 requests/sec and 200 requests/hour without a token; with free token higher limits (docs also describe paid tiers)",
+      "source": "https://www.blockcypher.com/dev/bitcoin/#rate-limits-and-tokens"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: free (no token) 3 req/s, 200 req/hr; free token higher; paid plans available \u2014 see rate limits docs",
+      "source": "https://www.blockcypher.com/dev/bitcoin/#rate-limits-and-tokens"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/bitcoin/#chain-endpoint"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/"
+    }
+  },
+  "notes": "Rate limits and free-tier caps are documented (not 'unknown'/'not published'). Example chain endpoint and base path match docs. CORS not stated. Signup not required for this check."
+}

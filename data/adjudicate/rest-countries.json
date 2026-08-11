@@ -1,0 +1,15 @@
+{
+  "id": "rest-countries",
+  "base_url": "https://api.restcountries.com/countries/v5",
+  "docs_url": "https://restcountries.com/docs/countries",
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": "Free plan: 500 requests/month, up to 100 objects/request, 24-hour data sync, and 2 API keys.",
+  "rate_limits": "Sustained traffic above 20 requests per 10 seconds is rejected with HTTP 429; monthly plan quotas also apply.",
+  "cors": "yes",
+  "example_request": "curl \"https://api.restcountries.com/countries/v5?q=Canada&response_fields=names.common,codes.alpha_2,flag.emoji&api-key=rc_live_demo&pretty=1\"",
+  "example_response_snippet": "{\"data\":{\"objects\":[{\"names\":{\"common\":\"Canada\"},\"codes\":{\"alpha_2\":\"CA\"},\"flag\":{\"emoji\":\"\ud83c\udde8\ud83c\udde6\"}}],\"meta\":{\"total\":1,\"count\":1,\"limit\":25,\"offset\":0,\"more\":false}}}",
+  "description": "Read-only JSON-over-HTTPS country-data API covering 90+ normalized fields, including names, codes, capitals, currencies, languages, borders, geography, and flags. The maintained public surface is v5 at api.restcountries.com and requires an API key; a restricted demo key is available without an account.",
+  "status": null,
+  "resolution_notes": "base_url: v5 confirmed, https://restcountries.com/docs/countries; docs_url: API docs, https://restcountries.com/docs/countries; auth_type: key required, https://restcountries.com/docs; free_tier_limits: plan limits, https://restcountries.com/plans and https://restcountries.com/docs/countries; rate_limits: >20/10s=429, https://restcountries.com/docs; cors: yes for key-allowlisted origins, https://restcountries.com/docs; example: demo key/shape, https://restcountries.com/docs/countries; description: read-only JSON v5 with 90+ fields, https://restcountries.com/docs"
+}

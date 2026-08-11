@@ -1,0 +1,43 @@
+{
+  "id": "sf-open-data",
+  "status": "operational",
+  "name": "SF Open Data API",
+  "category": "government-open-data",
+  "tagline": "Socrata SODA API for San Francisco open datasets and civic applications",
+  "description": "San Francisco's official open data portal exposes thousands of city datasets through the Socrata Open Data API (SODA). Developers can query tabular data, geospatial layers, and metadata for public services, transit, permits, crime, budgets, and more\u2014typically via REST endpoints on data.sfgov.org with optional application tokens for higher rate limits.",
+  "base_url": "https://data.sfgov.org/resource",
+  "docs_url": "https://dev.socrata.com/foundry/data.sfgov.org/",
+  "signup_url": "https://data.sfgov.org/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional app token via X-App-Token header (or app_token query param); unauthenticated access allowed at lower limits. Register an app on the portal for a token."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-App-Token: YOUR_API_KEY\" \"https://data.sfgov.org/resource/wg3w-h783.json?$limit=5\"",
+    "response_snippet": "[{\"incident_datetime\":\"2024-01-15T12:00:00.000\",\"incident_category\":\"Larceny Theft\",\"analysis_neighborhood\":\"Mission\"}]"
+  },
+  "use_cases": [
+    "query SF crime incidents by neighborhood and date",
+    "list recent building permits for a parcel or address",
+    "fetch city budget or department spending tables",
+    "get geospatial datasets for maps and civic apps"
+  ],
+  "sources": [
+    "https://dev.socrata.com/foundry/data.sfgov.org/",
+    "https://data.sfgov.org/"
+  ],
+  "researcher_confidence": "low"
+}

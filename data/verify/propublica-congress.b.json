@@ -1,0 +1,52 @@
+{
+  "id": "propublica-congress",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No operational base URL; the historical base URL was https://api.propublica.org/congress/v1, but the API is no longer available.",
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Not applicable because the API is discontinued and new API keys are unavailable. Historically it used an X-API-Key header.",
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false; there is no current service or obtainable API key.",
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable currently. The historical limit was 5,000 requests per day.",
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No current rate limit applies because the API is unavailable; historical documentation published a limit of 5,000 requests per day.",
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The path and X-API-Key header match the historical API specification, but the request is not a current working example because the API is no longer available.",
+      "source": "https://projects.propublica.org/api-docs/congress-api/endpoints/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The ProPublica Congress API formerly provided these datasets but is no longer available; its documentation is retained only as a historical reference.",
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    }
+  },
+  "notes": "ProPublica's official documentation explicitly says the Congress API is no longer available, the documentation is historical, and new API keys are unavailable. The entry's operational status and present-tense availability claims are therefore false."
+}

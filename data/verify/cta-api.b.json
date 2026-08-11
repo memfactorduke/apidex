@@ -1,0 +1,52 @@
+{
+  "id": "cta-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.transitchicago.com/developers/ (hub only; live endpoints are https://www.ctabustracker.com/bustime/api/v2/ and https://lapi.transitchicago.com/api/1.0/)",
+      "source": "https://www.transitchicago.com/developers/bustracker/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transitchicago.com/developers/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transitchicago.com/developers/bustracker/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transitchicago.com/developers/bustracker/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://www.ctabustracker.com/bustime/api/v2/getpredictions?key=YOUR_KEY&stpid=STOP_ID&format=json'",
+      "source": "https://www.transitchicago.com/developers/bustracker/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transitchicago.com/developers/"
+    }
+  },
+  "notes": "base_url is a docs hub, not an API base; example is placeholder; 403 likely bot-detection not dead API."
+}

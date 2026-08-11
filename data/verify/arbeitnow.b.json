@@ -1,0 +1,52 @@
+{
+  "id": "arbeitnow",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.arbeitnow.com/api/job-board-api",
+      "source": "https://www.arbeitnow.com/api/job-board-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.arbeitnow.com/api/job-board-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.arbeitnow.com/api/job-board-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.arbeitnow.com/api/job-board-api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free access with no published usage quota; rate limits not stated (do not claim unlimited)",
+      "source": "https://www.arbeitnow.com/api/job-board-api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.arbeitnow.com/api/job-board-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.arbeitnow.com/api/job-board-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.arbeitnow.com/api/job-board-api"
+    }
+  },
+  "notes": "base_url is too generic; docs show the live endpoint is /api/job-board-api. free_tier_limits overclaims unlimited when docs only imply free no-auth access without published quotas/limits."
+}

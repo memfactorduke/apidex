@@ -1,0 +1,106 @@
+{
+  "id": "philips-hue",
+  "status": "operational",
+  "name": "Philips Hue",
+  "category": "iot-devices",
+  "tagline": "Local and cloud CLIP v2 API for lights, rooms, scenes, and entertainment.",
+  "description": "Philips Hue is a smart lighting API that provides local and cloud CLIP v2 access for lights, rooms, scenes, and entertainment.",
+  "base_url": "https://<bridge-ip>/clip/v2/resource",
+  "docs_url": "https://developers.meethue.com/develop/hue-api-v2/",
+  "signup_url": "https://developers.meethue.com/develop/get-started-2/",
+  "auth": {
+    "type": "other",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No official 1,000-requests/day free-tier allowance is published; the remote API quota is 50,000 calls per day, without a published paid/free tier distinction.",
+    "paid_plans": null
+  },
+  "rate_limits": "Remote API: 50,000 calls/day; overage may cause throttling or revocation. Local guidance: about 10 commands/second for lights and 1 command/second for groups.",
+  "example": {
+    "request": "curl -k \"https://<bridge-ip>/clip/v2/resource/light\" -H \"hue-application-key: YOUR_APPLICATION_KEY\"",
+    "response_snippet": "{\"errors\":[],\"data\":[{\"id\":\"3883f8bf-30a3-445b-ac06-b047d50599df\",\"id_v1\":\"/lights/8\",\"owner\":{\"rid\":\"42edd1f5-9538-4180-9ced-2d9e07f26d0f\",\"rtype\":\"device\"},\"metadata\":{\"name\":\"Living Room\",\"archetype\":\"classic_bulb\"},\"on\":{\"on\":true},\"dimming\":{\"brightness\":75.0},\"type\":\"light\"}]}"
+  },
+  "use_cases": [
+    "turn lights on or off",
+    "adjust light brightness and color",
+    "list rooms and their assigned lights",
+    "activate a saved lighting scene",
+    "start an entertainment lighting session"
+  ],
+  "sources": [
+    "https://developers.meethue.com/develop/hue-api-v2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "cors"
+    ]
+  }
+}

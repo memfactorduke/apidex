@@ -1,0 +1,39 @@
+{
+  "id": "fal-ai",
+  "status": "operational",
+  "name": "Fal.ai",
+  "category": "ai-ml",
+  "tagline": "Serverless generative media API for image, video, and audio models.",
+  "description": "Fal.ai provides a serverless API platform for running generative AI models (image, video, audio) with queue-based and real-time endpoints, model gallery, and client SDKs.",
+  "base_url": "https://fal.run",
+  "docs_url": "https://fal.ai/docs",
+  "signup_url": "https://fal.ai",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Key YOUR_API_KEY header (or fal-key)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://fal.run/fal-ai/flux/dev -H \"Authorization: Key YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\":\"a cat\"}'",
+    "response_snippet": "{\"images\":[{\"url\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "generate images from text prompts",
+    "run video generation models",
+    "run audio/speech models serverless"
+  ],
+  "sources": [
+    "https://fal.ai/docs"
+  ],
+  "researcher_confidence": "low"
+}

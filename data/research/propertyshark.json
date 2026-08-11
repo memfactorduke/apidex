@@ -1,0 +1,38 @@
+{
+  "id": "propertyshark",
+  "status": "operational",
+  "name": "PropertyShark API",
+  "category": "real-estate-housing",
+  "tagline": "NYC property ownership, liens, and building data for investors and developers",
+  "description": "PropertyShark provides real estate data APIs focused on New York City and other markets, covering ownership records, liens, building information, sales history, and related property intelligence used by local investors and real estate professionals.",
+  "base_url": "https://www.propertyshark.com",
+  "docs_url": "https://www.propertyshark.com/mason/api",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Contact PropertyShark for API access; authentication method not publicly documented"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.propertyshark.com/mason/api\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "look up NYC property ownership by address",
+    "retrieve lien and building data for investment research"
+  ],
+  "sources": [
+    "https://www.propertyshark.com/mason/api"
+  ],
+  "researcher_confidence": "low"
+}

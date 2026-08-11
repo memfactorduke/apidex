@@ -1,0 +1,52 @@
+{
+  "id": "rightmove",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "There is no single documented generic base URL. The Commercial Listings API test base is https://api-services.adftest.rightmove.com; the residential Real Time Data Feed uses https://adfapi.rightmove.co.uk.",
+      "source": "https://api-docs.rightmove.co.uk/docs/property-feed-api-product/1/routes/v2/property/commercial/branch/get"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://api-docs.rightmove.co.uk/",
+      "source": "https://api-docs.rightmove.co.uk/docs/property-feed-api-product/1/overview"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://api-docs.rightmove.co.uk/authentication"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Requests are rate-limited; quotas reset every 60 seconds, while the allowed request count varies by environment and endpoint.",
+      "source": "https://api-docs.rightmove.co.uk/docs/property-feed-api-product/1/overview"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The official example first POSTs to https://api-services.adftest.rightmove.com/oauth/token using HTTP Basic credentials, application/x-www-form-urlencoded, and grant_type=client_credentials; authenticated listing operations then use documented /v2/property/commercial endpoints.",
+      "source": "https://api-docs.rightmove.co.uk/authentication"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Rightmove now publicly documents a Commercial Listings API for commercial agents and feed providers. It supports uploading, updating, retrieving, and removing commercial listings, uses OAuth2 credentials issued by the Data Feed Team, and directs residential listings to the separate Real Time Data Feed API.",
+      "source": "https://api-docs.rightmove.co.uk/docs/property-feed-api-product/1/overview"
+    }
+  },
+  "notes": "The API is operational, but the generic host and documentation URL are wrong. Current official documentation exposes concrete endpoints, OAuth2 authentication, and a 60-second quota window. The entry's XML format claim is also outdated: Rightmove's RTDF change log says XML support was removed in 2019."
+}

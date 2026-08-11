@@ -1,0 +1,43 @@
+{
+  "id": "electricity-maps",
+  "status": "operational",
+  "name": "Electricity Maps",
+  "category": "energy-utilities",
+  "tagline": "Real-time carbon intensity and power mix by electricity zone",
+  "description": "Electricity Maps provides real-time and historical carbon intensity, power breakdown, and electricity mix data by geographic zone. Developers use it to schedule workloads when grids are greener, estimate emissions of compute and energy use, and build sustainability dashboards.",
+  "base_url": "https://api.electricitymap.org/v3",
+  "docs_url": "https://static.electricitymaps.com/api/docs/index.html",
+  "signup_url": "https://www.electricitymaps.com/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via auth-token header; obtain from Electricity Maps account / API dashboard after signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"auth-token: YOUR_API_KEY\" \"https://api.electricitymap.org/v3/carbon-intensity/latest?zone=DE\"",
+    "response_snippet": "{\"zone\":\"DE\",\"carbonIntensity\":200,\"datetime\":\"2024-01-01T12:00:00.000Z\",\"updatedAt\":\"2024-01-01T12:05:00.000Z\",\"emissionFactorType\":\"lifecycle\",\"isEstimated\":false,\"estimationMethod\":null}"
+  },
+  "use_cases": [
+    "get current carbon intensity for a power grid zone",
+    "fetch historical carbon intensity for a zone and time range",
+    "get power generation mix breakdown by energy source for a zone",
+    "schedule batch jobs when grid carbon intensity is lowest",
+    "estimate CO2 emissions for electricity consumption in a region"
+  ],
+  "sources": [
+    "https://static.electricitymaps.com/api/docs/index.html",
+    "https://www.electricitymaps.com",
+    "https://www.electricitymaps.com/api"
+  ],
+  "researcher_confidence": "low"
+}

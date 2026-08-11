@@ -1,0 +1,52 @@
+{
+  "id": "fbi-crime-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.usa.gov/crime/fbi/sapi",
+      "source": "https://crime-data-explorer.app.cloud.gov/pages/docApi"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://crime-data-explorer.app.cloud.gov/pages/docApi",
+      "source": "https://crime-data-explorer.app.cloud.gov/pages/docApi"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crime-data-explorer.app.cloud.gov/pages/docApi"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crime-data-explorer.app.cloud.gov/pages/docApi"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.data.gov/docs/rate-limits/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "api.data.gov defaults: 1,000 requests/hour per key (and related burst/daily limits as published); unauthenticated limits may apply",
+      "source": "https://api.data.gov/docs/rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.usa.gov/crime/fbi/sapi/api/arrest/national/all?from=2019&to=2021&API_KEY=YOUR_API_KEY\" (path under /sapi, not /cde; confirm exact endpoints in current OpenAPI/docs)",
+      "source": "https://crime-data-explorer.app.cloud.gov/pages/docApi"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://crime-data-explorer.app.cloud.gov/pages/docApi"
+    }
+  },
+  "notes": "Automated curls returned 404 for both entry URLs. Official CDE host is crime-data-explorer.app.cloud.gov (not fr.cloud.gov). Base path is /crime/fbi/sapi, not /cde. Auth is api.data.gov API key; free with documented rate limits."
+}

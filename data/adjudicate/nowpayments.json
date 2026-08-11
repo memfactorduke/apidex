@@ -1,0 +1,15 @@
+{
+  "id": "nowpayments",
+  "base_url": null,
+  "docs_url": "https://documenter.getpostman.com/view/7907941/2s93JusNJt",
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No free live-payment allowance. Integration and sandbox testing are free; live payments incur a 0.5% service fee without exchange or 1% for multi-currency, fixed-rate, or fee-paid-by-user payments, plus network fees.",
+  "rate_limits": "GET /estimate: 7 requests/second; POST /payment (create payment): 3 requests/second.",
+  "cors": null,
+  "example_request": "curl -sS \"https://api.nowpayments.io/v1/status\"",
+  "example_response_snippet": "{\"message\":\"OK\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: replace with current Postman docs, https://documenter.getpostman.com/view/7907941/2s93JusNJt. free_tier: false; only integration/sandbox are free and live payments are fee-bearing, https://nowpayments.io/help. free_tier_limits: replace with fee details, https://nowpayments.io/help. rate_limits: replace with official 7-RPS estimate/3-RPS payment limits, https://nowpayments.zendesk.com/hc/en-us/articles/21395546303389-IPN-and-how-to-setup. example: remove x-api-key; status is public and returns OK, https://documenter.getpostman.com/view/7907941/2s93JusNJt."
+}

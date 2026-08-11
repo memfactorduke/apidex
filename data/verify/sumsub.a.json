@@ -1,0 +1,52 @@
+{
+  "id": "sumsub",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sumsub.com/reference/about-sumsub-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sumsub.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sumsub.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true (14-day free trial; no ongoing free plan)",
+      "source": "https://sumsub.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "14-day free trial with 50 free checks",
+      "source": "https://sumsub.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default limits: 300 GET requests per 5 seconds and 50 POST requests per 5 seconds; increases are available upon request.",
+      "source": "https://docs.sumsub.com/reference/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sumsub.com/reference/get-applicant-data-via-externaluserid"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Sumsub provides KYC/AML identity verification, liveness and face matching, transaction monitoring, and Travel Rule capabilities. Its signed REST API handles applicant, document, and result operations, while liveness and face authentication are performed through its WebSDK or MobileSDK.",
+      "source": "https://docs.sumsub.com/reference/face-authentication"
+    }
+  },
+  "notes": "The API host, documentation, authentication, and example endpoint are current. Pricing includes a time-limited 14-day trial with 50 checks, not a perpetual free plan. Published default rate limits contradict the entry. CORS is not documented. The description overstates REST coverage because liveness and face-authentication execution requires Sumsub's SDKs."
+}

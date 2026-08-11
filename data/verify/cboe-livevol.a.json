@@ -1,0 +1,52 @@
+{
+  "id": "cboe-livevol",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cdn.cboe.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cboe.com/delayed_quotes/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cboe.com/delayed_quotes/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cboe.com/delayed_quotes/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cboe.com/delayed_quotes/api/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cdn.cboe.com/api/global/delayed_quotes/options/_SPX.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cboe.com/delayed_quotes/api/"
+    }
+  },
+  "notes": "Verified against official Cboe delayed quotes API docs and CDN endpoints. Base URL, docs URL, unauthenticated public delayed quotes, and example request path all check out. Rate limits and CORS remain unpublished; free-tier wording is appropriately cautious."
+}

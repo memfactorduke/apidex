@@ -1,0 +1,42 @@
+{
+  "id": "huggingface-hub",
+  "status": "operational",
+  "name": "Hugging Face Hub API",
+  "category": "dev-tools",
+  "tagline": "REST API for the ML model, dataset, and Space registry on Hugging Face.",
+  "description": "The Hugging Face Hub API provides programmatic access to models, datasets, Spaces, and related repository metadata on huggingface.co. It is the primary machine-readable interface for listing, searching, downloading, and managing open AI artifacts and git-backed repos used across the ML ecosystem.",
+  "base_url": "https://huggingface.co/api",
+  "docs_url": "https://huggingface.co/docs/hub/api",
+  "signup_url": "https://huggingface.co/join",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional for public reads; Bearer token (HF access token) via Authorization header for private repos and write operations. Tokens created at https://huggingface.co/settings/tokens."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://huggingface.co/api/models/bert-base-uncased\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{ \"_id\": \"...\", \"id\": \"google-bert/bert-base-uncased\", \"modelId\": \"google-bert/bert-base-uncased\", \"private\": false, \"pipeline_tag\": \"fill-mask\", \"library_name\": \"transformers\", \"tags\": [\"transformers\", \"pytorch\", \"fill-mask\"], \"downloads\": 1234567, \"likes\": 1000 }"
+  },
+  "use_cases": [
+    "search Hugging Face models by task or library",
+    "get model card and metadata for a repo id",
+    "list files in a model or dataset repository",
+    "download or resolve artifact URLs for a revision",
+    "list or filter public datasets by modality",
+    "check Space status or configuration"
+  ],
+  "sources": [
+    "https://huggingface.co/docs/hub/api"
+  ],
+  "researcher_confidence": "low"
+}

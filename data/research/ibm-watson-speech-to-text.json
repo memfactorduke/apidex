@@ -1,0 +1,42 @@
+{
+  "id": "ibm-watson-speech-to-text",
+  "status": "operational",
+  "name": "IBM Watson Speech to Text",
+  "category": "ai-ml",
+  "tagline": "Streaming and batch speech recognition with customization for accurate audio-to-text conversion.",
+  "description": "IBM Watson Speech to Text converts audio into written text using machine learning models. It supports real-time streaming via WebSockets and batch processing of audio files, with options for language models, speaker diarization, and custom acoustic/language models. Commonly used for transcription, voice interfaces, and analytics. Access is via IBM Cloud with IAM API keys and region-specific endpoints.",
+  "base_url": "https://api.us-south.speech-to-text.watson.cloud.ibm.com",
+  "docs_url": "https://cloud.ibm.com/apidocs/speech-to-text",
+  "signup_url": "https://cloud.ibm.com/catalog/services/speech-to-text",
+  "auth": {
+    "type": "apiKey",
+    "details": "IBM Cloud IAM API key via Authorization: Bearer {token} or apikey:{api_key} Basic auth; create service instance and credentials in IBM Cloud."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Lite plan: 500 minutes/month free (verify current on IBM Cloud pricing)",
+    "paid_plans": "Plus and Premium plans with higher minutes and features; pricing varies by region and usage."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST -u \"apikey:YOUR_API_KEY\" --header \"Content-Type: audio/wav\" --data-binary @audio.wav \"https://api.us-south.speech-to-text.watson.cloud.ibm.com/v1/recognize\"",
+    "response_snippet": "{\"result_index\":0,\"results\":[{\"final\":true,\"alternatives\":[{\"transcript\":\"hello world\",\"confidence\":0.98}]}]}"
+  },
+  "use_cases": [
+    "transcribe uploaded audio file to text",
+    "stream microphone audio for live captions",
+    "recognize speech with custom language model",
+    "diarize multi-speaker meeting recordings",
+    "convert call-center audio to searchable transcripts"
+  ],
+  "sources": [
+    "https://cloud.ibm.com/apidocs/speech-to-text",
+    "https://cloud.ibm.com/catalog/services/speech-to-text"
+  ],
+  "researcher_confidence": "medium"
+}

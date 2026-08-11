@@ -1,0 +1,98 @@
+{
+  "id": "traveltime",
+  "status": "operational",
+  "name": "TravelTime",
+  "category": "geo-maps",
+  "tagline": "Isochrone and time-filter APIs for multi-modal reachability analysis",
+  "description": "TravelTime provides isochrone, time-filter, and routing APIs that compute travel times and reachable areas by transport mode (driving, public transport, walking, cycling). Developers use it for location intelligence: catchment analysis, site selection, delivery zones, and multi-destination reachability beyond simple point-to-point routing.",
+  "base_url": "https://api.traveltimeapp.com/v4",
+  "docs_url": "https://docs.traveltime.com/api/overview/introduction",
+  "signup_url": "https://account.traveltime.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Application ID and API key via X-Application-Id and X-Api-Key headers; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "2-week free trial: 60 hits/min. Afterward, non-paid access: 5 hits/min. Trial/free-restricted level of detail is capped at Medium (0); endpoint travel-time caps range from 2 to 12 hours.",
+    "paid_plans": null
+  },
+  "rate_limits": "60 hits/min during the 2-week trial; 5 hits/min afterward. One hit is one isochrone, route, or matrix search. Paid licences have custom or no concurrency limits.",
+  "example": {
+    "request": "curl -X POST 'https://api.traveltimeapp.com/v4/time-map' -H 'Content-Type: application/json' -H 'X-Application-Id: YOUR_APP_ID' -H 'X-Api-Key: YOUR_API_KEY' -d '{\"departure_searches\":[{\"id\":\"isochrone\",\"coords\":{\"lat\":51.5074,\"lng\":-0.1278},\"transportation\":{\"type\":\"public_transport\"},\"departure_time\":\"2026-08-10T09:00:00Z\",\"travel_time\":1800}]}'",
+    "response_snippet": "{\"results\":[{\"search_id\":\"isochrone\",\"shapes\":[{\"shell\":[{\"lat\":51.51,\"lng\":-0.13}],\"holes\":[]}]}]}"
+  },
+  "use_cases": [
+    "generate isochrones for multi-modal catchment analysis",
+    "filter locations by travel time from an origin",
+    "compute reachability matrices for many destinations",
+    "optimize site selection by drive-time or transit access",
+    "build delivery or service-area polygons by travel time"
+  ],
+  "sources": [
+    "https://docs.traveltime.com/api/overview/introduction"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

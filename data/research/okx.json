@@ -1,0 +1,42 @@
+{
+  "id": "okx",
+  "status": "operational",
+  "name": "OKX",
+  "category": "crypto",
+  "tagline": "Exchange REST and WebSocket API for spot, derivatives, and account trading.",
+  "description": "OKX provides a production trading API for market data and private account operations across spot and derivatives. Developers use REST for request/response workflows and WebSocket streams for real-time prices, order books, and account updates, with API-key based signing for authenticated trading.",
+  "base_url": "https://www.okx.com",
+  "docs_url": "https://www.okx.com/docs-v5/en/",
+  "signup_url": "https://www.okx.com/account/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key, secret, and passphrase; signed requests via OK-ACCESS-* headers (self-serve from account)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access included with account; trading fees apply; rate limits by VIP tier",
+    "paid_plans": "VIP tiers raise rate limits and may lower trading fees; no separate API subscription fee published"
+  },
+  "rate_limits": "Per-endpoint limits by VIP level; see OKX docs rate-limit tables",
+  "example": {
+    "request": "curl -s 'https://www.okx.com/api/v5/public/instruments?instType=SPOT'",
+    "response_snippet": "{\"code\":\"0\",\"msg\":\"\",\"data\":[{\"instType\":\"SPOT\",\"instId\":\"BTC-USDT\",\"baseCcy\":\"BTC\",\"quoteCcy\":\"USDT\",\"state\":\"live\"}]}"
+  },
+  "use_cases": [
+    "list tradable spot instruments",
+    "fetch ticker and order book market data",
+    "place and cancel spot or derivatives orders",
+    "stream live prices over WebSocket",
+    "query account balances and positions"
+  ],
+  "sources": [
+    "https://www.okx.com/docs-v5/en/",
+    "https://www.okx.com"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "walk-score",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.walkscore.com/professional/api-sign-up.php"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The Free Version permits 5,000 calls per day and is restricted to free consumer-facing applications.",
+      "source": "https://www.walkscore.com/professional/api-sign-up.php"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The published Free Version quota is 5,000 calls per day; paid-plan limits are not publicly quantified.",
+      "source": "https://www.walkscore.com/professional/api-sign-up.php"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Direct browser use is not supported as described: official documentation requires calls to be made from a server-side script.",
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The Score API returns Walk Score and optional Transit Score and Bike Score for supported locations in the United States and Canada. Its documented response does not include neighborhood details.",
+      "source": "https://www.walkscore.com/professional/api.php"
+    }
+  },
+  "notes": "The entry incorrectly claims worldwide coverage; official documentation limits the Score API to the United States and Canada. Pricing is also public: Premium starts at $115/month. The supplied response snippet was not validated as a live response, but the curl request itself matches the documented endpoint and parameters."
+}

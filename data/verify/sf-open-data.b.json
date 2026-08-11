@@ -1,0 +1,52 @@
+{
+  "id": "sf-open-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.socrata.com/hc/en-us/articles/202949298-Where-do-I-find-the-SODA-API-Endpoint"
+    },
+    "docs_url": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "none for public SODA 2.1 reads; an optional Socrata application token identifies the application and raises throttling limits but is not necessarily authentication",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.sfgov.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "App-token requests are currently not throttled unless abusive or malicious; anonymous requests share an IP-based pool and may be throttled. No fixed numeric cap is stated.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "A qualitative throttling policy is published: tokened requests are currently unthrottled unless abusive or malicious, while tokenless requests may be throttled by source IP; throttling returns HTTP 429.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported for public read-only SODA 2.1 requests; responses include Access-Control-Allow-Origin: *",
+      "source": "https://dev.socrata.com/docs/response-codes"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"X-App-Token: YOUR_APP_TOKEN\" \"https://data.sfgov.org/resource/wg3w-h783.json?$limit=5\"",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "San Francisco's official open-data portal contains hundreds of city datasets, not thousands. Public datasets are available through Socrata APIs, with optional application tokens providing higher throttling limits for SODA 2.1.",
+      "source": "https://data.sfgov.org/about"
+    }
+  },
+  "notes": "The portal and example dataset remain active in 2026, and SODA 2.1 remains supported. Material errors include calling the optional app token an API key, claiming thousands rather than hundreds of datasets, labeling documented CORS as unknown, and overlooking the published qualitative throttling policy."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ibm-watson-nlu",
+  "status": "operational",
+  "name": "IBM Watson Natural Language Understanding",
+  "category": "ai-ml",
+  "tagline": "Sentiment, entities, categories, and emotion analysis API from IBM Watson.",
+  "description": "IBM Watson Natural Language Understanding (NLU) analyzes text for sentiment, entities, categories, keywords, emotion, and more. Developers call a regional REST API with features selected per request. It is suited for content moderation, brand monitoring, support triage, and structured extraction from unstructured text.",
+  "base_url": "https://api.us-south.natural-language-understanding.watson.cloud.ibm.com",
+  "docs_url": "https://cloud.ibm.com/apidocs/natural-language-understanding",
+  "signup_url": "https://cloud.ibm.com/catalog/services/natural-language-understanding",
+  "auth": {
+    "type": "basic",
+    "details": "IBM Cloud IAM: API key as Basic auth username (password empty), or Bearer IAM access token. Instance URL is region-specific."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST -u \"apikey:YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"text\":\"IBM is an American multinational technology company.\",\"features\":{\"sentiment\":{},\"entities\":{\"sentiment\":true}}}' \"https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/YOUR_INSTANCE_ID/v1/analyze?version=2022-04-07\"",
+    "response_snippet": "{\"usage\":{\"text_units\":1,\"text_characters\":52,\"features\":2},\"sentiment\":{\"document\":{\"score\":0.0,\"label\":\"neutral\"}},\"entities\":[{\"type\":\"Company\",\"text\":\"IBM\",\"sentiment\":{\"score\":0.0,\"label\":\"neutral\"},\"relevance\":0.97,\"count\":1}]}"
+  },
+  "use_cases": [
+    "analyze sentiment of product reviews or support tickets",
+    "extract named entities and relations from news or documents",
+    "classify text into content categories for routing",
+    "detect emotion signals in customer feedback",
+    "extract keywords and concepts for tagging content"
+  ],
+  "sources": [
+    "https://cloud.ibm.com/apidocs/natural-language-understanding"
+  ],
+  "researcher_confidence": "low"
+}

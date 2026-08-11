@@ -1,0 +1,52 @@
+{
+  "id": "steamspy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/api.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/about"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/api.php?request=appdetails&appid=730"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/api.php?request=appdetails&appid=730"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/api.php?request=appdetails&appid=730"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SteamSpy provides public API access to estimated Steam ownership ranges, player counts, playtime, and related game metrics. Ownership must not be described as sales: SteamSpy explicitly states that owned copies include retail activations, bundles, gifts, promotions, and free weekends.",
+      "source": "https://steamspy.com/about"
+    }
+  },
+  "notes": "The official appdetails request was operational on 2026-08-11 and required no credentials. Its current values differ from the illustrative response, but the requested method, path, and parameters are valid. SteamSpy's official About page links api.php as its API documentation and explicitly warns that ownership does not mean sales. Current authoritative rate-limit and CORS evidence could not be established."
+}

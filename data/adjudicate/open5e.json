@@ -1,0 +1,15 @@
+{
+  "id": "open5e",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": "yes",
+  "example_request": "curl -s \"https://api.open5e.com/v2/spells/?name__iexact=fireball&document__key__in=srd-2024&fields=name,level\"",
+  "example_response_snippet": "{\"count\":1,\"next\":null,\"previous\":null,\"results\":[{\"name\":\"Fireball\",\"level\":3}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "cors: yes. The official server configuration enables CORS middleware and sets CORS_ORIGIN_ALLOW_ALL=True: https://github.com/open5e/open5e-api/blob/staging/server/settings.py#L203. example: replace the deprecated V1 example with V2. Current official docs identify V2 as actively maintained, document name__iexact filtering, document-key filtering, and field selection: https://open5e.com/api-docs. The added srd-2024 filter makes the snippet deterministic."
+}

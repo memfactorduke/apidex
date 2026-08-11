@@ -1,0 +1,52 @@
+{
+  "id": "stockdata-org",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests daily; 3 symbols per stock-price request; 1 symbol per intraday request; 2 articles per news request; 1 month each of intraday and EOD history.",
+      "source": "https://www.stockdata.org/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published daily quotas are 100 requests on Free, 2,500 on Basic, 10,000 on Standard, 25,000 on Pro, and 50,000 on Pro 50K; per-request limits also vary by plan.",
+      "source": "https://www.stockdata.org/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    }
+  },
+  "notes": "Official pages remain current in August 2026 and document the v1 quote endpoint. The material errors are the claims that free-tier and rate limits are unknown or unpublished; the official pricing page publishes both. No authoritative CORS policy was found."
+}

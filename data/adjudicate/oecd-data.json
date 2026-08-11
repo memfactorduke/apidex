@@ -1,0 +1,15 @@
+{
+  "id": "oecd-data",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free of charge; maximum 60 data downloads per hour. Excess requests are temporarily blocked. VPN/anonymized traffic is prohibited, and some parameters are restricted for specified large datasets.",
+  "rate_limits": "Maximum 60 data downloads per hour; excess requests are temporarily blocked.",
+  "cors": null,
+  "example_request": "curl -s \"https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_CLI/.M.LI...AA...H?startPeriod=2023-02&endPeriod=2023-02&dimensionAtObservation=AllDimensions&format=jsondata\"",
+  "example_response_snippet": "{\"data\":{\"dataSets\":[{\"action\":\"Information\",\"series\":{\"0:0:0:0:0:0:0:0\":{\"observations\":{\"0\":[...]}}}}],\"structures\":[{\"dimensions\":{\"observation\":[{\"id\":\"TIME_PERIOD\",\"values\":[{\"id\":\"2023-02\"}]}]}}]}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: replace; OECD states 60/hour, temporary blocking, VPN prohibition and parameter restrictions: https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html. rate_limits: replace; 60/hour and temporary blocking: same URL. example: replace; current OECD guide documents the DF_CLI query and JSON format: https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html."
+}

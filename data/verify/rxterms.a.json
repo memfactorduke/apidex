@@ -1,0 +1,52 @@
+{
+  "id": "rxterms",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://clinicaltables.nlm.nih.gov/api/rxterms/v3/search",
+      "source": "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/faq.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/faq.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for anyone; advised maximum rate is 25 requests/second (a soft limit), and users expecting more than 50,000 calls/day should contact NLM.",
+      "source": "https://clinicaltables.nlm.nih.gov/faq.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Advised maximum: 25 requests/second. This is a soft limit; the enforced limit may vary with system load. Clients should handle X-RateLimit-Limit, Retry-After, and possible HTTP 503 responses.",
+      "source": "https://clinicaltables.nlm.nih.gov/faq.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html"
+    }
+  },
+  "notes": "Official 2026 documentation supports the API purpose, fields, free access, no-registration model, and example request parameters. The directory omits /search from the documented base URL and incorrectly says rate limits and free-use guidance are unknown. No authoritative CORS statement was found. Per the supplied rule, the example verdict evaluates the request, not the response snippet."
+}

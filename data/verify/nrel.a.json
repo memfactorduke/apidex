@@ -1,0 +1,52 @@
+{
+  "id": "nrel",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.nrel.gov/docs/api-key/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.nrel.gov/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.nrel.gov/docs/api-key/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developer.nrel.gov/signup/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Default limit: 1,000 requests per hour per API key across developer.nrel.gov. Service-specific limits may vary. DEMO_KEY is limited to 30 requests per IP per hour and 50 per IP per day.",
+      "source": "https://developer.nrel.gov/docs/rate-limits/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published default: 1,000 requests per hour per API key; service-specific limits may vary. DEMO_KEY allows 30 requests per IP per hour and 50 per IP per day.",
+      "source": "https://developer.nrel.gov/docs/rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/all/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The NLR Developer Network, formerly the NREL Developer Network, provides API access to DOE laboratory web services covering solar, transportation, electricity, wind, and other energy topics. The listed services remain documented, but limits are published and vary by service; the utility-rates API contains 2012 data with no planned updates.",
+      "source": "https://developer.nrel.gov/docs/"
+    }
+  },
+  "notes": "Official pages now brand the service as the NLR Developer Network following DOE's December 2025 renaming of NREL. Current indexed documentation supports both submitted URLs and the example request. Direct fetches failed in this environment because developer.nrel.gov could not be resolved, so CORS could not be tested. The entry fails because it incorrectly says rate limits are unpublished and leaves the published default limits unknown."
+}

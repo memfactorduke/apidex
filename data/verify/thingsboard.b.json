@@ -1,0 +1,52 @@
+{
+  "id": "thingsboard",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/paas/reference/subscriptions/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Community Edition is free and open source. Since January 20, 2026, ThingsBoard Cloud has a $0/month Free plan with published limits, including 5 devices, 5 assets, 2 customers, 5 users, 5 dashboards, 3 rule chains, 0.5M transport messages/month, 1M transport data points/month, and 30-day storage TTL.",
+      "source": "https://thingsboard.io/docs/paas/reference/subscriptions/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "ThingsBoard Cloud publishes plan-specific rate limits. Free-plan REST limits are 100 requests/second and 1,000/minute per tenant, and 50/second and 500/minute per customer; paid-plan REST limits differ, and transport, device, gateway, and WebSocket limits are also published.",
+      "source": "https://thingsboard.io/docs/paas/reference/subscriptions/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "ThingsBoard provides the stated IoT management APIs, but current documentation recommends API-key authentication using X-Authorization: ApiKey. JWT login at /api/auth/login remains supported but is explicitly deprecated. Device transport APIs separately support device credentials such as access tokens.",
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    }
+  },
+  "notes": "Operational current documentation was found, with no shutdown notice. The login example still works according to the documentation, but JWT is deprecated in favor of API keys. The entry is materially outdated because it says rate limits are unpublished and does not describe the Cloud Free plan and its published 2026 limits."
+}

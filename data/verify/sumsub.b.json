@@ -1,0 +1,52 @@
+{
+  "id": "sumsub",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sumsub.com/reference/about-sumsub-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sumsub.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sumsub.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://sumsub.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "14-day free trial with 50 free checks; extra services may still be charged",
+      "source": "https://docs.sumsub.com/docs/self-service"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default limits: 300 GET requests per 5 seconds and 50 POST requests per 5 seconds; increases are available on request",
+      "source": "https://docs.sumsub.com/reference/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sumsub.com/reference/get-applicant-data-via-externaluserid"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Sumsub exposes REST APIs for applicant and document data, status/results, transaction monitoring, and Travel Rule workflows, but liveness and face authentication checks are performed through its WebSDK or MobileSDK rather than requested directly through the REST API.",
+      "source": "https://docs.sumsub.com/reference/face-authentication"
+    }
+  },
+  "notes": "Current official documentation remains active. The entry misses Sumsub's 14-day/50-check trial and published default rate limits. It also overstates REST coverage for biometric checks: face authentication requires the WebSDK or MobileSDK, though results can be retrieved by API. Official documentation did not establish a CORS policy."
+}

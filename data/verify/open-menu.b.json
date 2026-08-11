@@ -1,0 +1,52 @@
+{
+  "id": "open-menu",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.openmenu.com/api/v2/",
+      "source": "https://www.openmenu.com/api/docs/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.openmenu.com/api/docs/",
+      "source": "https://www.openmenu.com/api/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openmenu.com/api/docs/authentication.php"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://www.openmenu.com/api/v2/restaurant.php?key=YOUR_API_KEY&id=sample\"",
+      "source": "https://www.openmenu.com/api/docs/authentication.php"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openmenu.com/api/docs/"
+    }
+  },
+  "notes": "The submitted URL is an API overview page, not the v2 endpoint base or documentation URL. Authentication uses a key query parameter, so the Bearer-header example is invalid. Current official pages returned HTTP 403 to automated retrieval; pricing, quotas, and CORS were therefore not treated as verified."
+}

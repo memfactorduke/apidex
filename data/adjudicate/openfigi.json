@@ -1,0 +1,15 @@
+{
+  "id": "openfigi",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free API with no daily, weekly, or monthly limit. Mapping: 25 requests/minute without a key or 25 requests/6 seconds with a key. Search/filter: 5 requests/minute without a key or 20/minute with a key; maximum 15,000 results, 100 per page, and 150 pages.",
+  "rate_limits": "Mapping: 25 requests/minute without an API key or 25 requests/6 seconds with one. Search/filter: 5 requests/minute without an API key or 20 requests/minute with one.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "OpenFIGI provides a free, open API for mapping third-party financial-instrument identifiers to FIGIs and for searching and filtering instruments and Open Symbology metadata. Official sources do not offer or document paid API access.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: replace unknown; current official overview confirms no daily, weekly, or monthly limit, and documentation publishes request and result limits: https://www.openfigi.com/api and https://www.openfigi.com/api/documentation. rate_limits: replace not published with the documented endpoint-specific limits: https://www.openfigi.com/api/documentation. description: remove paid access; the API is described as free and open, while the FAQ states there are no hidden fees: https://www.openfigi.com/about/faq."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "uk-police-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api.gov.uk/ukp/police-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/docs/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/docs/api-call-limits/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "15 requests per second on average, with bursts up to 30; excess requests receive HTTP 429. Total calls over time are unlimited.",
+      "source": "https://data.police.uk/docs/api-call-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/docs/method/crime-street/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/"
+    }
+  },
+  "notes": "The API is operational and publishes current 2026 data. Its official documentation supports the endpoint, unauthenticated access, geographic coverage, crime/outcome data, and neighbourhood features. The entry fails because rate limits are explicitly published. Official documentation did not establish a CORS policy."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "vercel",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vercel.com/docs/rest-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vercel.com/docs/rest-api"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "bearer token (Vercel Access Token); OAuth 2.0 can also issue access tokens",
+      "source": "https://vercel.com/docs/rest-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vercel.com/docs/plans/hobby"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Published and resource-specific. Hobby limits include 200 projects, 100 deployments per day, 1 million function invocations, 100 GB Fast Data Transfer, and 6,000 build-execution minutes.",
+      "source": "https://vercel.com/docs/limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published and action-specific; limits vary by operation and scope, with remaining quota and reset information exposed through X-RateLimit response headers.",
+      "source": "https://vercel.com/docs/limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "no; Vercel directs integrations to call its REST API only from server-side code to avoid CORS issues and prevent token exposure",
+      "source": "https://vercel.com/docs/integrations/create-integration/vercel-api-integrations"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vercel.com/docs/sign-in-with-vercel/tokens"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://vercel.com/docs/rest-api"
+    }
+  },
+  "notes": "The API is operational, and its URL, documentation, capabilities, and sample request are current. The entry misclassifies bearer-token authentication, overlooks published Hobby limits and API rate limits, and leaves CORS unknown despite official server-side-only guidance. The unsupported claim that this is the primary programmatic surface prevents full confirmation of the description."
+}

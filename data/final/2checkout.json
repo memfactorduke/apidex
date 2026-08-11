@@ -1,0 +1,93 @@
+{
+  "id": "2checkout",
+  "status": "operational",
+  "name": "2Checkout / Verifone API",
+  "category": "ecommerce-payments",
+  "tagline": "Global checkout and subscription payments for digital goods",
+  "description": "Researching current 2Checkout/Verifone API endpoints, auth, pricing, and docs for a verified developer directory entry.",
+  "base_url": "https://api.2checkout.com/rest/6.0/",
+  "docs_url": "https://verifone.cloud/api-catalog/api-rest-documentation-1",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Researching..."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "now=$(date -u '+%Y-%m-%d %H:%M:%S'); src=\"${#MERCHANT_CODE}${MERCHANT_CODE}${#now}${now}\"; hash=$(printf %s \"$src\" | openssl dgst -sha256 -hmac \"$SECRET_KEY\" | awk '{print $2}'); curl -sS -H 'Accept: application/json' -H \"X-Avangate-Authentication: code=\\\"$MERCHANT_CODE\\\" date=\\\"$now\\\" hash=\\\"$hash\\\" algo=\\\"sha256\\\"\" 'https://api.2checkout.com/rest/6.0/productgroups/'",
+    "response_snippet": "[{\"Name\":\"Default\",\"Code\":\"12345678\",\"TemplateName\":\"Default Template\",\"Description\":\"Default product group\"}]"
+  },
+  "use_cases": [
+    "process payments",
+    "manage subscriptions"
+  ],
+  "sources": [
+    "https://verifone.cloud/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

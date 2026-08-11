@@ -1,0 +1,52 @@
+{
+  "id": "jawg-maps",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jawg.io/docs/apidocs/places/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jawg.io/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jawg.io/docs/apidocs/places/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jawg.io/en/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Basic free plan quotas are monthly: 25,000 map views; 5,000 each for static maps, place search, navigation, and elevation; and 1 custom style. It is restricted to non-commercial use on publicly available sites without login.",
+      "source": "https://www.jawg.io/en/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published default limits per account and IP: Maps 100 requests/second; Static Maps, Elevation, Places, and Routing 1 request/second each.",
+      "source": "https://www.jawg.io/docs/apidocs/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jawg.io/docs/apidocs/places/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Jawg provides raster/vector maps, geocoding, routing, static maps, place search, and elevation with access-token authentication. Its free Basic plan is limited to non-commercial use, so describing it generally as suitable for light production use is misleading.",
+      "source": "https://www.jawg.io/en/pricing/"
+    }
+  },
+  "notes": "Official 2026 documentation confirms the API domain, documented endpoint, token authentication, and product set. The entry fails because Jawg publishes exact free-plan quotas and rate limits, while the description omits the free plan's non-commercial-use restriction. No definitive official CORS statement was located."
+}

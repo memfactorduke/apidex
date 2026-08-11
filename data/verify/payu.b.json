@@ -1,0 +1,52 @@
+{
+  "id": "payu",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.payu.com/europe/docs/payment-flows/",
+      "source": "https://developers.payu.com/europe/docs/payment-flows/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/docs/payment-flows/auth-and-order/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/docs/get-started/set-up-account/register/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/docs/payment-flows/auth-and-order/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/api/"
+    }
+  },
+  "notes": "PayU Europe API 2.1 remains operational. Official documentation confirms the production host, OAuth client-credentials request, Bearer tokens, orders, payment methods, capture, and refunds. The submitted documentation path is obsolete; the current payment-flows page omits /overview/. No authoritative general rate-limit or CORS policy was found."
+}

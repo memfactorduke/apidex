@@ -1,0 +1,100 @@
+{
+  "id": "traccar",
+  "status": "operational",
+  "name": "Traccar",
+  "category": "iot-devices",
+  "tagline": "Open-source GPS tracking server with REST API for devices, positions, and geofences",
+  "description": "Traccar is an open-source GPS tracking platform with REST endpoints for devices, positions, geofences, users, groups, and reports, plus /api/socket WebSocket live updates. REST clients can use HTTP Basic authentication, Bearer account tokens, or session cookies. Create a password session by POSTing form-encoded email and password to /api/session, or a token session with GET /api/session?token=USER_TOKEN. It can be self-hosted or used through Traccar's hosted subscriptions.",
+  "base_url": "https://demo.traccar.org/api",
+  "docs_url": "https://www.traccar.org/api-reference/",
+  "signup_url": "https://www.traccar.org/",
+  "auth": {
+    "type": "other",
+    "details": "Session cookie after HTTP Basic Auth login to /api/session, or Authorization: Bearer <token> when tokens are enabled; self-hosted or Traccar Cloud account."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Self-hosting is free/open source with no default software limits. Public demo servers are free for testing with no feature or device-count limits, but lack preconfigured reverse geocoding/email and guarantee neither QoS nor full history. Hosted subscriptions start at $9.95/month.",
+    "paid_plans": "Traccar Cloud paid tiers available; self-host is free"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_EMAIL:YOUR_PASSWORD \"https://demo.traccar.org/api/devices\"",
+    "response_snippet": "[{\"id\":1,\"name\":\"Phone\",\"uniqueId\":\"123456\",\"status\":\"online\",\"lastUpdate\":\"2024-01-01T12:00:00.000+00:00\",\"positionId\":42,\"groupId\":0,\"phone\":null,\"model\":null,\"contact\":null,\"category\":null,\"disabled\":false}]"
+  },
+  "use_cases": [
+    "list GPS devices registered on a Traccar server",
+    "get latest position for a tracked device",
+    "create or update a geofence for a device group",
+    "fetch historical positions or trip reports for a device",
+    "register a new tracker by uniqueId"
+  ],
+  "sources": [
+    "https://www.traccar.org/api-reference/",
+    "https://www.traccar.org/",
+    "https://www.traccar.org/documentation/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

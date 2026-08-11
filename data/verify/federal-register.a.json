@@ -1,0 +1,52 @@
+{
+  "id": "federal-register",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.federalregister.gov/developers/documentation/api/v1"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.federalregister.gov/developers/documentation/api/v1"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.federalregister.gov/developers/documentation/api/v1"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.federalregister.gov/developers"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.federalregister.gov/developers"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.federalregister.gov/developers"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.federalregister.gov/developers/documentation/api/v1"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.federalregister.gov/developers/documentation/api/v1"
+    }
+  },
+  "notes": "Verified against current official Federal Register docs (2026). Base URL, docs, no-auth public access, free public API, unpublished rate limits, and documents.json example all match. CORS not stated in official docs. Description accurate: rules, notices, presidential docs, public inspection, JSON metadata/full text."
+}

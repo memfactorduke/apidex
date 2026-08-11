@@ -1,0 +1,52 @@
+{
+  "id": "hologram",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.hologram.io/api/v1"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.hologram.io/api/v1",
+      "source": "https://docs.hologram.io/release-notes/release-notes-2025"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.hologram.io/api/v1"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true \u2014 Hologram offers free pre-deployment Test Mode",
+      "source": "https://docs.hologram.io/guides/sims/test-mode"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Per SIM: up to 100 KB of free data and 10 device-originated SMS messages within 90 days; the SIM then automatically activates when any limit is reached",
+      "source": "https://docs.hologram.io/guides/sims/test-mode"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.hologram.io/api/v1"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.hologram.io/api/1/devices/get"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.hologram.io/api/v1"
+    }
+  },
+  "notes": "The REST API is currently operational according to Hologram's status page. The submitted documentation URL redirects to the superseded Apiary reference; Hologram's current official reference is docs.hologram.io/api/v1. The numeric request-rate threshold is not stated, though 429 handling and a 5\u201310 second retry delay are documented. No official CORS policy was located."
+}

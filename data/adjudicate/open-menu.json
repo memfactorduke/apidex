@@ -1,0 +1,15 @@
+{
+  "id": "open-menu",
+  "base_url": "https://www.openmenu.com/api/v2/",
+  "docs_url": "https://www.openmenu.com/api/docs/",
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": null,
+  "rate_limits": "Plan-based daily and monthly API-credit quotas; exact numeric quotas are not reliably published.",
+  "cors": null,
+  "example_request": "curl \"https://www.openmenu.com/api/v2/restaurant.php?key=YOUR_API_KEY&id=sample\"",
+  "example_response_snippet": "{\"restaurant\":{\"id\":\"sample\",\"name\":\"Sample Restaurant\",\"menus\":[]}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url=https://www.openmenu.com/api/v2/; evidence: https://www.openmenu.com/api/docs/. docs_url=https://www.openmenu.com/api/docs/. free_tier=true; evidence: https://www.openmenu.com/signup.php?at=developer. rate_limits are plan-based daily/monthly credit quotas; evidence: https://www.openmenu.com/api/docs/rate-limiting.php. example uses the documented key query parameter and id=sample sandbox; evidence: https://www.openmenu.com/api/docs/authentication.php."
+}

@@ -1,0 +1,157 @@
+{
+  "category": "geo-maps",
+  "apis": [
+    {
+      "name": "Nominatim",
+      "slug": "nominatim",
+      "base_domain": "nominatim.openstreetmap.org",
+      "docs_url": "https://nominatim.org/release-docs/latest/api/Overview/",
+      "why_notable": "OpenStreetMap's official geocoding API; free with usage policy for reverse/forward geocoding and search worldwide.",
+      "free_tier": true
+    },
+    {
+      "name": "OSRM",
+      "slug": "osrm",
+      "base_domain": "router.project-osrm.org",
+      "docs_url": "https://project-osrm.org/docs/v5.24.0/api/",
+      "why_notable": "Open Source Routing Machine; public demo server for car routing, distance matrices, and map matching on OSM data.",
+      "free_tier": true
+    },
+    {
+      "name": "Open-Meteo Geocoding",
+      "slug": "open-meteo-geocoding",
+      "base_domain": "geocoding-api.open-meteo.com",
+      "docs_url": "https://open-meteo.com/en/docs/geocoding-api",
+      "why_notable": "Free no-key geocoding for place search by name, with coordinates, population, and timezone metadata.",
+      "free_tier": true
+    },
+    {
+      "name": "ipdata",
+      "slug": "ipdata",
+      "base_domain": "api.ipdata.co",
+      "docs_url": "https://docs.ipdata.co/",
+      "why_notable": "IP geolocation with threat intel, ASN, currency, and timezone; self-serve API with free daily allowance.",
+      "free_tier": true
+    },
+    {
+      "name": "ipwhois",
+      "slug": "ipwhois",
+      "base_domain": "ipwho.is",
+      "docs_url": "https://ipwhois.io/documentation",
+      "why_notable": "Simple free IP geolocation API returning city, ISP, ASN, and security flags without mandatory signup.",
+      "free_tier": true
+    },
+    {
+      "name": "BigDataCloud",
+      "slug": "bigdatacloud",
+      "base_domain": "api.bigdatacloud.net",
+      "docs_url": "https://www.bigdatacloud.com/docs",
+      "why_notable": "Client-side and server IP geolocation, reverse geocoding, and network info APIs with generous free tiers.",
+      "free_tier": true
+    },
+    {
+      "name": "GeoJS",
+      "slug": "geojs",
+      "base_domain": "get.geojs.io",
+      "docs_url": "https://www.geojs.io/docs/v1/endpoints/",
+      "why_notable": "Lightweight free IP geolocation and country lookup via JSON/JSONP, popular for browser and CDN use.",
+      "free_tier": true
+    },
+    {
+      "name": "DB-IP",
+      "slug": "db-ip",
+      "base_domain": "api.db-ip.com",
+      "docs_url": "https://db-ip.com/api/doc.php",
+      "why_notable": "IP geolocation API and databases; free lite endpoint plus paid plans for commercial accuracy.",
+      "free_tier": true
+    },
+    {
+      "name": "IPLocate",
+      "slug": "iplocate",
+      "base_domain": "iplocate.io",
+      "docs_url": "https://www.iplocate.io/docs",
+      "why_notable": "IP geolocation with privacy detection (VPN/proxy/Tor), ASN, and company data via simple REST API.",
+      "free_tier": true
+    },
+    {
+      "name": "FreeIPAPI",
+      "slug": "freeipapi",
+      "base_domain": "freeipapi.com",
+      "docs_url": "https://docs.freeipapi.com/",
+      "why_notable": "No-key free IP geolocation returning location, timezone, currency, and ISP details for client IP or query.",
+      "free_tier": true
+    },
+    {
+      "name": "Thunderforest",
+      "slug": "thunderforest",
+      "base_domain": "tile.thunderforest.com",
+      "docs_url": "https://www.thunderforest.com/docs/",
+      "why_notable": "Specialized OSM map tiles (outdoors, cycle, transport) with REST tile URLs and free developer quota.",
+      "free_tier": true
+    },
+    {
+      "name": "OpenTopomap",
+      "slug": "opentopomap",
+      "base_domain": "tile.opentopomap.org",
+      "docs_url": "https://opentopomap.org/about",
+      "why_notable": "Free topographic map tile service based on OSM and SRTM elevation, widely used in outdoor apps.",
+      "free_tier": true
+    },
+    {
+      "name": "Jawg Maps",
+      "slug": "jawg-maps",
+      "base_domain": "api.jawg.io",
+      "docs_url": "https://www.jawg.io/docs/",
+      "why_notable": "French map platform with geocoding, directions, static maps, and vector tiles on OSM with free tier.",
+      "free_tier": true
+    },
+    {
+      "name": "TravelTime",
+      "slug": "traveltime",
+      "base_domain": "api.traveltimeapp.com",
+      "docs_url": "https://docs.traveltime.com/api/overview/introduction",
+      "why_notable": "Isochrone and time-filter APIs for reachability analysis by transport mode, not just point-to-point routing.",
+      "free_tier": true
+    },
+    {
+      "name": "Valhalla",
+      "slug": "valhalla",
+      "base_domain": "valhalla1.openstreetmap.de",
+      "docs_url": "https://valhalla.github.io/valhalla/api/",
+      "why_notable": "Open-source multimodal routing engine with public instances for route, matrix, isochrone, and elevation.",
+      "free_tier": true
+    },
+    {
+      "name": "Photon",
+      "slug": "photon",
+      "base_domain": "photon.komoot.io",
+      "docs_url": "https://github.com/komoot/photon",
+      "why_notable": "Komoot's OSM geocoder with autocomplete; public photon.komoot.io endpoint used heavily for place search.",
+      "free_tier": true
+    },
+    {
+      "name": "WorldTimeAPI",
+      "slug": "worldtimeapi",
+      "base_domain": "worldtimeapi.org",
+      "docs_url": "https://worldtimeapi.org/pages/api",
+      "why_notable": "Free timezone and current-time API by IANA zone or IP, no authentication required.",
+      "free_tier": true
+    },
+    {
+      "name": "TimeAPI",
+      "slug": "timeapi",
+      "base_domain": "timeapi.io",
+      "docs_url": "https://timeapi.io/documentation",
+      "why_notable": "Timezone conversion, current time by coordinate/IP, and DST-aware time arithmetic over HTTP.",
+      "free_tier": true
+    },
+    {
+      "name": "Geoapify",
+      "slug": "skip",
+      "base_domain": "skip",
+      "docs_url": "skip",
+      "why_notable": "skip",
+      "free_tier": false
+    }
+  ]
+}

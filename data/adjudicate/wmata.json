@@ -1,0 +1,15 @@
+{
+  "id": "wmata",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "10 calls/second and 50,000 calls/day on the free Default tier",
+  "rate_limits": "Free Default tier: 10 calls/second and 50,000 calls/day. The public demonstration key has a separate unspecified rate limit and may change at any time.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Corrected; WMATA's current Products page identifies the free Default-tier limits as 10 calls/second and 50,000 calls/day: https://developer.wmata.com/products. rate_limits: Corrected to the same Default-tier limits; that page separately warns that its public demonstration key is rate-limited and subject to change, without publishing the demo key's numerical limit: https://developer.wmata.com/products."
+}

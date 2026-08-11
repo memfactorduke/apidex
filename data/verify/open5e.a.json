@@ -1,0 +1,52 @@
+{
+  "id": "open5e",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.open5e.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open5e.com/api-docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/open5e/open5e-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/open5e"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes; the official server configuration allows all origins",
+      "source": "https://github.com/open5e/open5e-api/blob/staging/server/settings.py#L203"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.open5e.com/v1/spells/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open5e.com/api-docs"
+    }
+  },
+  "notes": "The API is live. Official documentation identifies V2 as current and V1 as deprecated, but the example's V1 spells endpoint and search parameter remain valid. No authoritative published quota or rate-limit statement was located. CORS is explicitly enabled for all origins, making the directory's unknown value incorrect."
+}

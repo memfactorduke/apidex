@@ -1,0 +1,39 @@
+{
+  "id": "human-phenotype-ontology",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://ontology.jax.org/api/hp/docs/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://ontology.jax.org/api/hp/docs/",
+      "source": "https://ontology.jax.org/api/hp/docs/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable"
+    },
+    "free_tier": {
+      "verdict": "unverifiable"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "unverifiable"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "JAX-hosted REST service for searching HPO terms and retrieving term details and ontology relationships. Disease and gene annotations are exposed through the separate Ontology Annotation Network API.",
+      "source": "https://ontology.jax.org/Annotations/"
+    }
+  },
+  "notes": "The current official Swagger page documents active GET routes under /api/hp, so a 404 at the bare prefix does not establish that the API is dead. The submitted documentation URL is obsolete. Official sources did not state authentication, pricing, limits, or CORS, and the available documentation extract did not establish that max=-1 is valid."
+}

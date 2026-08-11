@@ -1,0 +1,40 @@
+{
+  "id": "zillow-bridge",
+  "status": "operational",
+  "name": "Zillow Bridge API",
+  "category": "real-estate-housing",
+  "tagline": "MLS and public-record property data via Zillow\u2019s Bridge platform for licensed partners.",
+  "description": "Zillow Bridge (Bridge Data Output) provides licensed partners with MLS listing and public-record property data through a REST API. Access is partner-only; authentication and endpoints follow Bridge Data Output docs for property, listing, and assessment resources.",
+  "base_url": "https://api.bridgedataoutput.com/api/v2",
+  "docs_url": "https://bridgedataoutput.com/docs/zillow",
+  "signup_url": "https://bridgedataoutput.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via access_token query param or Authorization header; partner signup required (not fully self-serve)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Partner/commercial licensing; contact sales"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.bridgedataoutput.com/api/v2/OData/test/Property?$top=1&access_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"@odata.context\":\"...\",\"value\":[{\"ListingKey\":\"...\",\"StandardStatus\":\"Active\",\"ListPrice\":450000}]}"
+  },
+  "use_cases": [
+    "fetch MLS listings for a market",
+    "look up property public records by address",
+    "sync listing status and price changes",
+    "query property assessments and tax data"
+  ],
+  "sources": [
+    "https://bridgedataoutput.com/docs/zillow"
+  ],
+  "researcher_confidence": "low"
+}

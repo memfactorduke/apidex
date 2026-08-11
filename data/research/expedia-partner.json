@@ -1,0 +1,41 @@
+{
+  "id": "expedia-partner",
+  "status": "operational",
+  "name": "Expedia Group Partner API",
+  "category": "travel-hospitality",
+  "tagline": "Hotel, package, and lodging distribution APIs for Expedia Group partners",
+  "description": "Expedia Group Partner API provides B2B access to hotel, package, and lodging inventory through the official partner developer portal at developers.expediagroup.com. Partners integrate search, availability, booking, and content for Expedia's global lodging network after commercial onboarding; authentication and endpoints are partner-program specific rather than fully public self-serve.",
+  "base_url": "https://api.ean.com/v3",
+  "docs_url": "https://developers.expediagroup.com/",
+  "signup_url": "https://developers.expediagroup.com/",
+  "auth": {
+    "type": "other",
+    "details": "Partner credentials via API key and shared secret (EPS Rapid) or OAuth depending on product; commercial partner agreement required, not fully self-serve public keys."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Commercial partner contracts; pricing not publicly listed on developer portal"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.ean.com/v3/properties/content?language=en-US&supply_source=expedia\" -H \"Authorization: EAN apikey=YOUR_API_KEY,signature=YOUR_SIGNATURE,timestamp=YOUR_TIMESTAMP\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"property_id\":\"12345\",\"name\":\"Sample Hotel\",\"address\":{\"line_1\":\"1 Main St\",\"city\":\"Seattle\",\"country_code\":\"US\"},\"ratings\":{\"property\":{\"rating\":\"4.0\"}}}"
+  },
+  "use_cases": [
+    "search hotel availability by destination and dates",
+    "get property content and amenities for a hotel ID",
+    "check room rates and packages for lodging",
+    "book or hold a hotel reservation as a partner",
+    "retrieve booking confirmation and itinerary details"
+  ],
+  "sources": [
+    "https://developers.expediagroup.com/"
+  ],
+  "researcher_confidence": "low"
+}

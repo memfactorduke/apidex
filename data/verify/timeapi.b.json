@@ -1,0 +1,52 @@
+{
+  "id": "timeapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://timeapi.io/swagger/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://timeapi.io/swagger/",
+      "source": "https://timeapi.io/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://timeapi.io/home/faqs"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://timeapi.io/home/faqs"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "enabled for all endpoints",
+      "source": "https://timeapi.io/home/changelog"
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://timeapi.io/swagger/"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://timeapi.io/"
+    }
+  },
+  "notes": "The official site is live. /documentation is obsolete; its homepage links to the live Swagger UI at /swagger/. A 404 at bare /api does not alone invalidate an API prefix, but the JavaScript-rendered reference could not be fully extracted. The FAQ says the service is currently free but publishes no quota. No authoritative rate-limit statement was found. The official changelog explicitly says CORS is enabled for all endpoints."
+}

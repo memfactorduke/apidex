@@ -1,0 +1,15 @@
+{
+  "id": "jetbrains-space",
+  "base_url": "https://SPACE_INSTANCE/api/http",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No current public cloud free tier. Only previously licensed Space On-Premises instances that activated a perpetual license by May 31, 2025 may continue indefinitely for free.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s -H \"Authorization: Bearer YOUR_TOKEN\" -H \"Accept: application/json\" \"https://SPACE_INSTANCE/api/http/absences\"",
+  "example_response_snippet": "{\"next\":\"\",\"totalCount\":0,\"data\":[]}",
+  "description": "JetBrains Space Cloud and its hosted HTTP API were discontinued; cloud organizations were disabled June 1, 2025. The API remains usable only on previously licensed Space On-Premises installations that activated a perpetual license before the deadline. Requests use the installation's own host and can automate modules including projects, repositories, issues, packages, chats, and team-directory data.",
+  "status": "defunct",
+  "resolution_notes": "Sources: [1] https://blog.jetbrains.com/space/2024/11/27/discontinuation-of-the-spacecode-private-preview/ [2] https://space-support.jetbrains.com/hc/en-us/articles/19158484213138-What-will-happen-to-my-Space-instance-after-May-31-2025 [3] https://www.jetbrains.com/help/space/authentication-and-authorization.html. base_url: self-hosted only [1]. free_tier and limits: no cloud tier; legacy on-prem only [1][2]. example: instance host and documented /absences route [1][3]. description/status: hosted API discontinued [1][2]."
+}

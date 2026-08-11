@@ -1,0 +1,52 @@
+{
+  "id": "opentable",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opentable.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.opentable.com/",
+      "source": "https://docs.opentable.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://docs.opentable.com/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.opentable.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.opentable.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Online Booking APIs allow at most 1,000 requests per rolling 30-second window; other OpenTable APIs may have different limits.",
+      "source": "https://docs.opentable.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -sS \"https://platform.opentable.com/sync/v2/reservations?rid=<RID>\" -H \"Authorization: Bearer <TOKEN>\" -H \"Accept: application/json\"",
+      "source": "https://docs.opentable.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OpenTable provides approval-gated APIs for restaurant data, availability, bookings, reservations, guests, and integrations. Production access requires review and a formal agreement. OAuth 2.0 is the primary authorization mechanism, and current public documentation is hosted at docs.opentable.com.",
+      "source": "https://docs.opentable.com/"
+    }
+  },
+  "notes": "Official status reporting shows the Consumer, Network Access, and Restaurant Partner APIs operational. The entry nevertheless fails because its documentation URL, authentication classification, rate-limit claim, example request, and documentation-host statement are wrong. OpenTable publishes no universal self-serve price or free-tier entitlement; API cost and availability are communicated during approval and contracting."
+}

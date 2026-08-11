@@ -1,0 +1,40 @@
+{
+  "id": "eppo-global-database",
+  "status": "operational",
+  "name": "EPPO Global Database API",
+  "category": "agriculture",
+  "tagline": "Official pest and plant pathogen codes and taxonomy for plant health systems",
+  "description": "The EPPO Global Database API provides programmatic access to EPPO codes, taxonomy, pest and pathogen data, and related plant health information used across quarantine, phytosanitary, and agricultural systems. It enables lookup of pests, plants, and regulatory status by EPPO code or name.",
+  "base_url": "https://data.eppo.int/api",
+  "docs_url": "https://data.eppo.int/documentation",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required; exact header/param name and signup process need verification from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://data.eppo.int/api/v1/taxon/search?q=Xylella\"",
+    "response_snippet": "{\"results\":[{\"eppocode\":\"XYLEFA\",\"preferredname\":\"Xylella fastidiosa\"}]}"
+  },
+  "use_cases": [
+    "look up EPPO code for a pest or plant species",
+    "resolve pest taxonomy and preferred scientific name",
+    "check regulatory or quarantine status by EPPO code",
+    "search plant pathogens by common or scientific name"
+  ],
+  "sources": [
+    "https://data.eppo.int/documentation"
+  ],
+  "researcher_confidence": "low"
+}

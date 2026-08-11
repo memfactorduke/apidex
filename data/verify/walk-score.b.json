@@ -1,0 +1,52 @@
+{
+  "id": "walk-score",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.walkscore.com/professional/api-sign-up.php"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The free version permits 5,000 calls per day and is limited to free consumer-facing applications.",
+      "source": "https://www.walkscore.com/professional/api-sign-up.php"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "A daily quota is published: the free version permits 5,000 calls per day; higher-volume usage requires a paid plan.",
+      "source": "https://www.walkscore.com/professional/api-sign-up.php"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Direct browser use is unsupported; official documentation requires Walk Score API calls to be made from a server-side script.",
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.walkscore.com/professional/api.php"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The Score API returns Walk Score, Transit Score, and Bike Score for supported locations in the United States and Canada, not worldwide. Related premium APIs provide score details and public-transit data.",
+      "source": "https://www.walkscore.com/professional/api.php"
+    }
+  },
+  "notes": "Official pages were live and marked \u00a9 2026. The major errors are worldwide coverage, the supposedly unpublished free limit, and CORS uncertainty. The free API allows 5,000 calls/day for free consumer-facing apps; premium starts at $115/month. The documented curl method, endpoint, and parameters match the entry."
+}

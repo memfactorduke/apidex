@@ -1,0 +1,38 @@
+{
+  "id": "cta-api",
+  "status": "operational",
+  "name": "CTA Bus Tracker / Train Tracker",
+  "category": "transportation",
+  "tagline": "Chicago Transit Authority real-time bus and train tracking APIs",
+  "description": "CTA provides developer APIs for real-time bus tracking (Bus Tracker) and rail arrivals (Train Tracker), plus related schedule and service data for Chicago transit apps and tools.",
+  "base_url": "https://www.transitchicago.com/developers/",
+  "docs_url": "https://www.transitchicago.com/developers/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Research pending \u2014 verify from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl 'https://example.com'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "get real-time bus arrivals for a stop",
+    "get train arrival predictions by station"
+  ],
+  "sources": [
+    "https://www.transitchicago.com/developers/"
+  ],
+  "researcher_confidence": "low"
+}

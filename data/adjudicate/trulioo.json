@@ -1,0 +1,15 @@
+{
+  "id": "trulioo",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl --request GET --url 'https://api.trulioo.com/v3/connection/testauthentication' --header 'Accept: application/json' --header 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
+  "example_response_snippet": "HTTP/1.1 200 OK",
+  "description": "Trulioo provides APIs and SDKs for identity, document, business, fraud, and watchlist verification using global data sources for onboarding and compliance. Current Trulioo Platform and Normalized API v3 integrations use OAuth 2.0 client credentials and bearer tokens; legacy Normalized API v1 uses Basic Authentication.",
+  "status": null,
+  "resolution_notes": "auth_type=oauth2: Platform and NAPI v3 use OAuth 2.0; Basic is legacy v1 (https://developer.trulioo.com/reference/authentication-recipe). example: current reference specifies GET /v3/connection/testauthentication with Bearer auth and a 200 Success response (https://developer.trulioo.com/reference/get_v3-connection-testauthentication). description: service scope is identity, business, documents, fraud and watchlists; auth wording corrected (https://developer.trulioo.com/reference/overview-api-guides; https://developer.trulioo.com/reference/authentication-recipe)."
+}

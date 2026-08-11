@@ -1,0 +1,44 @@
+{
+  "id": "placeholder",
+  "status": "operational",
+  "name": "TVmaze",
+  "category": "entertainment",
+  "tagline": "Free TV show, episode, and schedule data API with no authentication required",
+  "description": "TVmaze provides a free, public REST API for TV show metadata: search by name, full show details, episode lists and air dates, cast and crew, network schedules, and people credits. No API key is required for standard access; responses are JSON. Widely used for media apps, episode trackers, and TV schedule tools.",
+  "base_url": "https://api.tvmaze.com",
+  "docs_url": "https://www.tvmaze.com/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public API. Optional API key support may exist for partners; standard developer access is unauthenticated HTTPS GET requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use; commercial use requires permission. Rate limited (see rate_limits).",
+    "paid_plans": null
+  },
+  "rate_limits": "At most 20 calls per 10 seconds (documented fair-use limit)",
+  "example": {
+    "request": "curl -s 'https://api.tvmaze.com/singlesearch/shows?q=girls'",
+    "response_snippet": "{\"id\":139,\"url\":\"https://www.tvmaze.com/shows/139/girls\",\"name\":\"Girls\",\"type\":\"Scripted\",\"language\":\"English\",\"genres\":[\"Drama\",\"Romance\"],\"status\":\"Ended\",\"runtime\":30,\"premiered\":\"2012-04-15\",\"rating\":{\"average\":6.7},\"network\":{\"id\":8,\"name\":\"HBO\"},\"summary\":\"<p>This Emmy winning series...</p>\"}"
+  },
+  "use_cases": [
+    "search TV shows by name and get primary match details",
+    "list all episodes for a show with air dates and numbers",
+    "get today's or a country's TV broadcast schedule",
+    "look up cast and crew for a show",
+    "resolve a show by IMDb or TVDB external ID",
+    "get person credits (acting/crew history) by people ID"
+  ],
+  "sources": [
+    "https://www.tvmaze.com/api",
+    "https://www.tvmaze.com/api#licensing",
+    "https://www.tvmaze.com/api#rate-limiting"
+  ],
+  "researcher_confidence": "medium"
+}

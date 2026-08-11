@@ -1,0 +1,43 @@
+{
+  "id": "osrm",
+  "status": "operational",
+  "name": "OSRM",
+  "category": "geo-maps",
+  "tagline": "Open Source Routing Machine for OSM-based car routing, matrices, and map matching",
+  "description": "OSRM (Open Source Routing Machine) is a high-performance routing engine for OpenStreetMap data. The public demo server at router.project-osrm.org exposes HTTP endpoints for route, nearest, table (distance/duration matrices), match, trip, and tile services\u2014primarily for car routing demos and development, not production use.",
+  "base_url": "https://router.project-osrm.org",
+  "docs_url": "https://project-osrm.org/docs/v5.24.0/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required on the public demo server; requests are unauthenticated HTTP GET. Self-hosting is recommended for production."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public demo is free with no paid plans; usage is best-effort and not for production",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://router.project-osrm.org/route/v1/driving/13.388860,52.517037;13.397634,52.529407;13.428555,52.523219?overview=false\"",
+    "response_snippet": "{\"code\":\"Ok\",\"routes\":[{\"legs\":[{\"steps\":[],\"distance\":1884.8,\"duration\":234.6,\"summary\":\"\",\"weight\":234.6},{\"steps\":[],\"distance\":2844.7,\"duration\":372.6,\"summary\":\"\",\"weight\":372.6}],\"distance\":4729.5,\"duration\":607.2,\"weight_name\":\"routability\",\"weight\":607.2}],\"waypoints\":[{\"hint\":\"...\",\"distance\":4.2,\"name\":\"Friedrichstra\u00dfe\",\"location\":[13.3888,52.5170]},{\"hint\":\"...\",\"distance\":2.1,\"name\":\"...\",\"location\":[13.3976,52.5294]},{\"hint\":\"...\",\"distance\":1.8,\"name\":\"...\",\"location\":[13.4285,52.5232]}]}"
+  },
+  "use_cases": [
+    "compute driving route distance and duration between coordinates",
+    "build a distance or duration matrix for many origin-destination pairs",
+    "snap GPS traces to roads with map matching",
+    "find the nearest road network point to a coordinate",
+    "solve traveling-salesman style trip optimization for a set of stops"
+  ],
+  "sources": [
+    "https://project-osrm.org/docs/v5.24.0/api/",
+    "https://project-osrm.org/",
+    "https://github.com/Project-OSRM/osrm-backend"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "kinde",
+  "status": "operational",
+  "name": "Kinde",
+  "category": "security-identity",
+  "tagline": "Auth and user management API with OAuth/OIDC and free tier",
+  "description": "Kinde provides authentication, authorization, and user-management APIs for modern applications. Developers use OAuth 2.0 / OpenID Connect for end-user login flows and machine-to-machine tokens or Management API credentials to manage users, organizations, roles, permissions, and feature flags programmatically via REST endpoints.",
+  "base_url": "https://api.kinde.com",
+  "docs_url": "https://docs.kinde.com/developer-tools/about/using-kinde-apis/",
+  "signup_url": "https://kinde.com/register",
+  "auth": {
+    "type": "oauth2",
+    "details": "Management API uses OAuth 2.0 client credentials (M2M application) for access tokens; end-user flows use OAuth/OIDC. Bearer token in Authorization header."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.kinde.com/api/v1/users\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"code\":\"OK\",\"message\":\"Success\",\"users\":[{\"id\":\"kp_...\",\"email\":\"user@example.com\",\"first_name\":\"Jane\",\"last_name\":\"Doe\"}]}"
+  },
+  "use_cases": [
+    "list users in a Kinde business",
+    "create or update a user via Management API",
+    "manage organizations and memberships",
+    "assign roles and permissions to users",
+    "manage feature flags programmatically"
+  ],
+  "sources": [
+    "https://docs.kinde.com/developer-tools/about/using-kinde-apis/",
+    "https://kinde.com"
+  ],
+  "researcher_confidence": "low"
+}

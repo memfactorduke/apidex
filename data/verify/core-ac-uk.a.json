@@ -1,0 +1,52 @@
+{
+  "id": "core-ac-uk",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://core.ac.uk/services/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://core.ac.uk/services/api"
+    }
+  },
+  "notes": "Verified against official CORE docs (api.core.ac.uk/docs/v3 and core.ac.uk/services/api). Base URL, Bearer auth, free access, and search endpoint match; rate limits and free-tier quotas not published on official pages (entry correctly marks unknown/not published). CORS not documented. Response snippet is illustrative, not a live sample."
+}

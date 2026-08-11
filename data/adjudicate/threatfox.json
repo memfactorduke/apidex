@@ -1,0 +1,15 @@
+{
+  "id": "threatfox",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free for authenticated not-for-profit use, subject to unpublished fair-use query-volume limits. Excessive use may be restricted or require a paid Spamhaus subscription; high-value contributors may receive discretionary access beyond the limits.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "ThreatFox is a community platform operated by abuse.ch in collaboration with Spamhaus for sharing and querying malware-related IOCs. Its Auth-Key API supports recent-IOC retrieval, lookup by IOC ID or value, searches by file hash, tag, or malware family, and submission of confirmed, vetted IOCs. Free use is limited to authenticated not-for-profit use under fair-use query limits; commercial use may require a paid Spamhaus subscription.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: CORRECTED \u2014 the current terms limit free access to authenticated not-for-profit use under non-numeric query-volume limits; excess or commercial use may require paid access: https://abuse.ch/terms-of-use/. description: CORRECTED \u2014 the docs list recent, ID, IOC-value, hash, tag, and malware-family queries plus vetted submission, but no IOC-type search: https://threatfox.abuse.ch/api/. The terms identify abuse.ch as operator and Spamhaus as collaborator."
+}

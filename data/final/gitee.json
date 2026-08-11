@@ -1,0 +1,96 @@
+{
+  "id": "gitee",
+  "status": "operational",
+  "name": "Gitee Open API",
+  "category": "dev-tools",
+  "tagline": "China-focused Git hosting REST API for repos, issues, PRs, and enterprises",
+  "description": "Gitee Open API (v5) is the public REST interface for Gitee, a major China-focused Git hosting platform. It covers repositories, issues, pull requests, users, organizations, and enterprise features as a regional alternative to GitHub. Developers authenticate primarily with OAuth2 or personal access tokens and call HTTPS endpoints under gitee.com/api/v5.",
+  "base_url": "https://gitee.com/api/v5",
+  "docs_url": "https://gitee.com/api/v5/swagger",
+  "signup_url": "https://gitee.com/signup",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth2 access tokens or personal access tokens (private_token query param or Authorization: token header); self-serve app registration at gitee.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://gitee.com/api/v5/user?access_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"id\":1,\"login\":\"oschina\",\"name\":\"OSChina\",\"email\":\"git@oschina.cn\",\"avatar_url\":\"https://gitee.com/assets/...\",\"html_url\":\"https://gitee.com/oschina\"}"
+  },
+  "use_cases": [
+    "list a user's public repositories on Gitee",
+    "create or update an issue on a Gitee repo",
+    "fetch pull request details and comments",
+    "search or list enterprise organization members",
+    "get file contents or commit history for a repo"
+  ],
+  "sources": [
+    "https://gitee.com/api/v5/swagger"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

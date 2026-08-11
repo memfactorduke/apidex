@@ -1,0 +1,15 @@
+{
+  "id": "chromatic",
+  "base_url": "https://index.chromatic.com/graphql",
+  "docs_url": "https://www.chromatic.com/docs/graphql",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free plan: 5,000 billed snapshots per month; testing and review pause when the allowance is exhausted. No separate API-call allowance is published.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST 'https://index.chromatic.com/graphql' -H 'Content-Type: application/json' -H 'Authorization: Bearer YOUR_PROJECT_TOKEN' --data '{\"query\":\"{ __typename }\"}'",
+  "example_response_snippet": "{\"data\":{\"__typename\":\"Query\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Changed to index.chromatic.com/graphql; current official addon docs identify that API endpoint: https://www.chromatic.com/docs/visual-tests-addon/. docs_url: Replaced the 404 graphql-api route with the verifier-supported official route: https://www.chromatic.com/docs/graphql. free_tier_limits: Official pricing confirms 5,000 billed snapshots/month: https://www.chromatic.com/pricing. example: Corrected endpoint; official CLI uses Authorization: Bearer <token>: https://github.com/chromaui/chromatic-cli/blob/main/node-src/io/graphqlClient.ts."
+}

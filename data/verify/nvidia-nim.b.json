@@ -1,0 +1,52 @@
+{
+  "id": "nvidia-nim",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.nvidia.com/nim/reference/llm-apis"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.nvidia.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.nvidia.com/nim/reference/meta-llama-3_1-8b-infer"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://build.nvidia.com/explore/discover?api-key=true"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.api.nvidia.com/nim/re/docs/faq"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://forums.developer.nvidia.com/t/api-rate-limit-increase-is-not-granted-by-requesting-it-here/368420"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST https://integrate.api.nvidia.com/v1/chat/completions -H \"Authorization: Bearer $NVIDIA_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"meta/llama-3.1-8b-instruct\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+      "source": "https://docs.api.nvidia.com/nim/reference/meta-llama-3_1-8b-infer"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.api.nvidia.com/nim/re/docs/api-quickstart"
+    }
+  },
+  "notes": "The hosted trial API remains live and current. The placeholder example is invalid. NVIDIA confirms free development access and trial credits but does not publish a stable universal allowance; rate limits vary by model, use case, and traffic. NGC keys for pulling self-hosted containers are distinct from hosted Developer API keys."
+}

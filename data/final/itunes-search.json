@@ -1,0 +1,101 @@
+{
+  "id": "itunes-search",
+  "status": "operational",
+  "name": "iTunes Search API",
+  "category": "entertainment",
+  "tagline": "Keyless catalog search for music, movies, TV, podcasts, and audiobooks from Apple.",
+  "description": "Apple's unauthenticated Search API searches the iTunes Store and Apple Books Store across documented media types, including music, movies, podcasts, audiobooks, TV shows, software, and ebooks. It supports term searches and ID-based lookups and returns JSON metadata such as artwork, previews, and store links, subject to Apple's promotional-content terms. It is distinct from the authenticated Apple Music API.",
+  "base_url": "https://itunes.apple.com",
+  "docs_url": "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public HTTPS endpoints accept unauthenticated GET requests; no API key or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no paid plans. Usage subject to rate limits (about 20 requests/minute).",
+    "paid_plans": null
+  },
+  "rate_limits": "Approximately 20 calls per minute (documented by Apple). Excess may return errors or empty results.",
+  "example": {
+    "request": "curl -s 'https://itunes.apple.com/search?term=jack+johnson&media=music&limit=5'",
+    "response_snippet": "{\"resultCount\":5,\"results\":[{\"wrapperType\":\"track\",\"kind\":\"song\",\"artistName\":\"Jack Johnson\",\"trackName\":\"Better Together\",\"collectionName\":\"In Between Dreams\",\"previewUrl\":\"https://...\",\"artworkUrl100\":\"https://...\",\"trackViewUrl\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "search Apple catalog for a song, album, or artist by name",
+    "look up podcast episodes or show metadata by term",
+    "find movie or TV episode store links and artwork",
+    "resolve an iTunes track/collection ID to full metadata",
+    "get preview audio URLs and cover art for media cards"
+  ],
+  "sources": [
+    "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html",
+    "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html",
+    "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/LookupExamples.html",
+    "https://performance-partners.apple.com/search-api"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example"
+    ],
+    "corrected": [
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

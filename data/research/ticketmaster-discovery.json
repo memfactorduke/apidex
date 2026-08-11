@@ -1,0 +1,41 @@
+{
+  "id": "ticketmaster-discovery",
+  "status": "operational",
+  "name": "Ticketmaster Discovery API",
+  "category": "events-holidays",
+  "tagline": "Search live events, venues, and attractions across Ticketmaster inventory worldwide",
+  "description": "Ticketmaster's Discovery API provides read-only access to event, venue, attraction, and classification data from Ticketmaster's global inventory. Developers can search and filter concerts, sports, arts, and other live events by keyword, location, date, classification, and more, with paginated JSON responses suitable for event discovery apps and aggregators.",
+  "base_url": "https://app.ticketmaster.com/discovery/v2",
+  "docs_url": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/",
+  "signup_url": "https://developer.ticketmaster.com/products-and-docs/apis/getting-started/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey query parameter (self-serve developer portal signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://app.ticketmaster.com/discovery/v2/events.json?apikey=YOUR_API_KEY&keyword=concert&size=1\"",
+    "response_snippet": "{\"_embedded\":{\"events\":[{\"name\":\"Example Concert\",\"type\":\"event\",\"id\":\"...\",\"url\":\"https://www.ticketmaster.com/...\",\"dates\":{\"start\":{\"localDate\":\"2026-09-15\"}}}]},\"page\":{\"size\":1,\"totalElements\":100,\"totalPages\":100,\"number\":0}}"
+  },
+  "use_cases": [
+    "search concerts near a city by keyword and date range",
+    "look up venue details and upcoming events at a venue",
+    "find attractions and related event listings",
+    "filter live events by classification (music, sports, arts)",
+    "paginate discovery results for an event finder app"
+  ],
+  "sources": [
+    "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+  ],
+  "researcher_confidence": "low"
+}

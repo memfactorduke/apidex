@@ -1,0 +1,52 @@
+{
+  "id": "newsapi-ai",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/documentation?tab=searchArticles"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Registration provides 2,000 tokens total for testing, marketed as 2,000 free searches; token consumption varies by operation.",
+      "source": "https://newsapi.ai/documentation"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Maximum 5 simultaneous requests; excess concurrent requests receive HTTP 429.",
+      "source": "https://newsapi.ai/documentation"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS enabled for all origins.",
+      "source": "https://newsapi.ai/plans"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/documentation?tab=searchArticles"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/plans"
+    }
+  },
+  "notes": "Official documentation supports API-key authentication through the apiKey URL parameter, but does not substantiate the entry's additional header-authentication claim. The example request is valid, although its illustrative response is internally inconsistent because it contains a result while reporting totalResults as zero."
+}

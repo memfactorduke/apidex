@@ -1,0 +1,15 @@
+{
+  "id": "isthereanydeal",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Default verified-email account limit: 1,000 requests per 5-minute window; the app setup page shows the account-specific limit and usage.",
+  "rate_limits": "Window-based throttling: 1,000 requests per 5 minutes by default for verified-email accounts. HTTP 429 responses include Retry-After.",
+  "cors": null,
+  "example_request": "curl -X POST \"https://api.isthereanydeal.com/games/overview/v2?country=US\" -H \"ITAD-API-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" --data '[\"018d937f-12e9-71ca-a5d5-f31985870694\"]'",
+  "example_response_snippet": "{\"prices\":[{\"id\":\"018d937f-12e9-71ca-a5d5-f31985870694\",\"current\":{\"shop\":{\"id\":61,\"name\":\"Steam\"},\"price\":{\"amount\":31.99,\"amountInt\":3199,\"currency\":\"USD\"}},\"bundled\":1}],\"bundles\":[]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected; official docs publish 1,000 requests per 5 minutes by default for verified-email accounts and say app setup shows current limits/usage. rate_limits: corrected; the same docs specify window throttling and HTTP 429 with Retry-After. example: corrected to documented POST /games/overview/v2, API-key header, JSON UUID array, and response shape. Evidence for all three: https://docs.isthereanydeal.com/"
+}

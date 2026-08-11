@@ -1,0 +1,98 @@
+{
+  "id": "umls-uts",
+  "status": "operational",
+  "name": "UMLS Terminology Services",
+  "category": "health-fitness",
+  "tagline": "NIH UMLS REST API for medical concepts, CUIs, and crosswalks",
+  "description": "The Unified Medical Language System (UMLS) Terminology Services REST API provides programmatic access to UMLS Metathesaurus data including concepts, CUIs, atoms, relations, and source vocabulary crosswalks. Developers authenticate with a UTS API key obtained after free UMLS license approval.",
+  "base_url": "https://uts-ws.nlm.nih.gov/rest",
+  "docs_url": "https://documentation.uts.nlm.nih.gov/rest/home.html",
+  "signup_url": "https://uts.nlm.nih.gov/uts/signup-login",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key obtained after free UMLS license approval; typically passed as ticket parameter or Authorization header depending on endpoint version"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "20 requests per second per IP address; NLM recommends caching results for 12\u201324 hours.",
+    "paid_plans": null
+  },
+  "rate_limits": "20 requests per second per IP address. Excess requests may not be serviced until the request rate falls below the limit.",
+  "example": {
+    "request": "curl -X GET 'https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?apiKey=YOUR_API_KEY'",
+    "response_snippet": "{\"pageSize\":25,\"pageNumber\":1,\"pageCount\":1,\"result\":{\"classType\":\"Concept\",\"ui\":\"C0009044\",\"name\":\"Closed fracture of carpal bone\",\"atoms\":\"...\",\"definitions\":\"...\",\"relations\":\"...\",\"semanticTypes\":[{\"name\":\"Injury or Poisoning\",\"uri\":\"...\"}]}}"
+  },
+  "use_cases": [
+    "look up a medical concept by CUI",
+    "search UMLS Metathesaurus for a term",
+    "crosswalk codes between source vocabularies",
+    "retrieve concept definitions and semantic types",
+    "get related concepts and hierarchical relations"
+  ],
+  "sources": [
+    "https://documentation.uts.nlm.nih.gov/rest/home.html"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

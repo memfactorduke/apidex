@@ -1,0 +1,42 @@
+{
+  "id": "netlify",
+  "status": "operational",
+  "name": "Netlify API",
+  "category": "dev-tools",
+  "tagline": "Jamstack hosting REST API for sites, deploys, forms, and edge functions",
+  "description": "REST API for Netlify's platform: manage sites, deploys, builds, forms, edge functions, DNS, and account resources. Used for CI automation, programmatic site management, and integrating Netlify into developer tooling and agent workflows.",
+  "base_url": "https://api.netlify.com/api/v1",
+  "docs_url": "https://docs.netlify.com/api/get-started/",
+  "signup_url": "https://app.netlify.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal access token (OAuth or user token) sent as Authorization: Bearer YOUR_API_KEY; create under User settings > Applications > Personal access tokens"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://api.netlify.com/api/v1/sites",
+    "response_snippet": "[{\"id\":\"...\",\"name\":\"...\",\"url\":\"https://...\",\"ssl_url\":\"https://...\",\"admin_url\":\"https://app.netlify.com/sites/...\",\"build_settings\":{}}]"
+  },
+  "use_cases": [
+    "list all sites on a Netlify account",
+    "trigger or inspect a site deploy",
+    "read form submissions for a Netlify form",
+    "manage DNS records for a Netlify domain",
+    "create or update environment variables for a site",
+    "check build and deploy status for CI automation"
+  ],
+  "sources": [
+    "https://docs.netlify.com/api/get-started/"
+  ],
+  "researcher_confidence": "low"
+}

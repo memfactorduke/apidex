@@ -1,0 +1,100 @@
+{
+  "id": "ecb-data-portal",
+  "status": "operational",
+  "name": "ECB Data Portal",
+  "category": "finance",
+  "tagline": "Official ECB SDMX REST API for euro-area rates, FX, and macro data.",
+  "description": "The European Central Bank Data Portal exposes statistical time series via an SDMX 2.1 REST API. Developers can query euro-area reference rates, exchange rates, monetary aggregates, and other official ECB statistics without authentication, with responses available in SDMX-ML, SDMX-JSON, and CSV formats.",
+  "base_url": "https://data-api.ecb.europa.eu/service",
+  "docs_url": "https://data.ecb.europa.eu/help/api/overview",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public read-only access to statistical series via SDMX REST endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no paid plans. No public rate-limit numbers are published.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?lastNObservations=1\" -H \"Accept: application/vnd.sdmx.data+json;version=1.0.0-wd\"",
+    "response_snippet": "{\"header\":{\"id\":\"...\",\"prepared\":\"...\",\"sender\":{\"id\":\"ECB\"}},\"dataSets\":[{\"action\":\"Information\",\"series\":{\"0:0:0:0:0\":{\"observations\":{\"0\":[1.0856]}}}}],\"structure\":{\"dimensions\":{\"series\":[{\"id\":\"FREQ\",\"values\":[{\"id\":\"D\"}]},{\"id\":\"CURRENCY\",\"values\":[{\"id\":\"USD\"}]}]}}"
+  },
+  "use_cases": [
+    "get latest EUR/USD ECB reference exchange rate",
+    "fetch historical euro-area interest rate time series",
+    "download HICP inflation series for a date range",
+    "query monetary aggregate M3 observations as SDMX-JSON",
+    "list available dataflows and dimensions for ECB datasets"
+  ],
+  "sources": [
+    "https://data.ecb.europa.eu/help/api/overview",
+    "https://data.ecb.europa.eu/help/api/data",
+    "https://data-api.ecb.europa.eu/service"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

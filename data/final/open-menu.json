@@ -1,0 +1,98 @@
+{
+  "id": "open-menu",
+  "status": "operational",
+  "name": "Open Menu",
+  "category": "food-drink",
+  "tagline": "Restaurant menu data API with structured dishes, prices, and venue metadata for US menus.",
+  "description": "Open Menu provides structured restaurant menu data including dishes, prices, and venue metadata for US restaurants. Developers can access menu information programmatically for food apps, delivery platforms, and restaurant discovery tools.",
+  "base_url": "https://www.openmenu.com/api/v2/",
+  "docs_url": "https://www.openmenu.com/api/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication required. Exact header/method details to be verified from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "Plan-based daily and monthly API-credit quotas; exact numeric quotas are not reliably published.",
+  "example": {
+    "request": "curl \"https://www.openmenu.com/api/v2/restaurant.php?key=YOUR_API_KEY&id=sample\"",
+    "response_snippet": "{\"restaurant\":{\"id\":\"sample\",\"name\":\"Sample Restaurant\",\"menus\":[]}}"
+  },
+  "use_cases": [
+    "look up restaurant menu by venue",
+    "get dish prices for a restaurant",
+    "search restaurants by menu items",
+    "retrieve structured menu metadata"
+  ],
+  "sources": [
+    "https://openmenu.com/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "cors"
+    ]
+  }
+}

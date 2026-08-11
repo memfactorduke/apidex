@@ -1,0 +1,52 @@
+{
+  "id": "fishwatch",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://www.fishwatch.gov/api/species\" returns a non-empty JSON array of species objects (not \"[]\"); path/method are valid",
+      "source": "https://www.fishwatch.gov/api/species"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    }
+  },
+  "notes": "Docs and live /api/species confirm public unauth JSON API; docs page has little formal auth/rate-limit text. Live endpoint works (HTTPS 200, large JSON array). Entry\u2019s response_snippet \"[]\" is wrong \u2014 API returns full species list. CORS not documented (unknown OK). free_tier_limits/rate_limits as unknown/not published match absence of published caps."
+}

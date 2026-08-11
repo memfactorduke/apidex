@@ -1,0 +1,15 @@
+{
+  "id": "onet",
+  "base_url": "https://api-v2.onetcenter.org",
+  "docs_url": null,
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": "Free after approved organization/project registration; attribution required. Personal use is unsupported. Access may be throttled or suspended above 5 requests/second or 50,000 requests/day.",
+  "rate_limits": "No maximum rate is currently imposed. Published guidance is 5 requests/second and 50,000 requests/day. During limited availability, HTTP 429 may occur; wait at least 200 milliseconds before retrying.",
+  "cors": "yes",
+  "example_request": "curl \"https://api-v2.onetcenter.org/online/occupations/17-2051.00/\" -H \"X-API-Key: YOUR_API_KEY\"",
+  "example_response_snippet": "{\"code\":\"17-2051.00\",\"title\":\"Civil Engineers\",\"tags\":{\"bright_outlook\":true},\"description\":\"Perform engineering duties in planning, designing, and overseeing construction and maintenance of building structures and facilities, such as roads, railroads, airports, bridges, harbors, channels, dams, irrigation projects, pipelines, power plants, and water and sewage systems.\"}",
+  "description": "O*NET Web Services is a REST API sponsored by the U.S. Department of Labor's Employment and Training Administration and developed by the National Center for O*NET Development. It provides occupational data and career-exploration services for more than 900 occupations, including access to the O*NET Database. Current v2 access requires approved organization/project registration, uses X-API-Key authentication, and returns JSON.",
+  "status": null,
+  "resolution_notes": "base_url=v2 host; auth_type=apiKey/X-API-Key (https://services.onetcenter.org/reference/start/migration); free_tier_limits=free+attribution, 5/s and 50k/day; rate_limits=no max now, 429 wait >=200ms (https://services.onetcenter.org/terms; https://services.onetcenter.org/reference/start/overview); cors=yes, official browser sample (https://github.com/onetcenter/web-services-v2-samples/tree/main/client-javascript); example=v2 endpoint/schema (https://services.onetcenter.org/reference/online/occupation); description=current sponsor/scope/auth/JSON (https://services.onetcenter.org/about)."
+}

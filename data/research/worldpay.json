@@ -1,0 +1,42 @@
+{
+  "id": "worldpay",
+  "status": "operational",
+  "name": "Worldpay API",
+  "category": "ecommerce-payments",
+  "tagline": "Enterprise card payments and access APIs from a long-standing global acquirer.",
+  "description": "Worldpay Access provides enterprise payment APIs for card processing, tokenization, 3DS, payouts, and related commerce flows. Developers integrate via REST over HTTPS against Access Worldpay endpoints, typically with Basic auth credentials from the Worldpay dashboard, supporting test and live environments for merchants and platforms.",
+  "base_url": "https://try.access.worldpay.com",
+  "docs_url": "https://developer.worldpay.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Authentication with username/password (or merchant credentials) issued via Worldpay; typically Authorization: Basic base64(username:password). Test credentials available on try.access.worldpay.com; production uses access.worldpay.com. Exact self-serve vs sales-led signup varies by product."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Enterprise merchant pricing; contact Worldpay sales (not published as self-serve API pricing)"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_API_KEY: https://try.access.worldpay.com/payments/authorizations -H 'Content-Type: application/vnd.worldpay.payments-v6+json' -H 'Accept: application/vnd.worldpay.payments-v6+json' -d '{\"transactionReference\":\"ref-001\",\"merchant\":{\"entity\":\"YOUR_ENTITY\"},\"instruction\":{\"method\":\"card\",\"paymentInstrument\":{\"type\":\"plain\",\"cardNumber\":\"4444333322221111\",\"expiryDate\":{\"month\":12,\"year\":2027},\"cvc\":\"123\"},\"value\":{\"currency\":\"GBP\",\"amount\":100}}}'",
+    "response_snippet": "{\"outcome\":\"authorized\",\"transactionReference\":\"ref-001\",\"authorization\":{\"status\":\"success\"}}"
+  },
+  "use_cases": [
+    "authorize a card payment",
+    "capture a previously authorized payment",
+    "refund a settled transaction",
+    "tokenize a card for recurring charges",
+    "run 3-D Secure authentication for a payment"
+  ],
+  "sources": [
+    "https://developer.worldpay.com/",
+    "https://try.access.worldpay.com"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "metro-transit-nextrip",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://svc.metrotransit.org/nextrip",
+      "source": "https://svc.metrotransit.org/swagger/docs/v2/nextrip"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://svc.metrotransit.org/swagger/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://svc.metrotransit.org/swagger/docs/v2/nextrip"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://svc.metrotransit.org/nextrip/routes\"",
+      "source": "https://metrotransit.readme.io/reference/get_nextrip-routes"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The current official specification and API reference use /nextrip, not /nextripv2. The documentation is live, lists unauthenticated GET endpoints for routes, directions, stops, departures, shapes, and vehicles, and indicates JSON responses. Official sources do not publish API pricing, quotas, or CORS policy. The claimed nearby-stop latitude/longitude capability is absent from the current NexTrip specification."
+}

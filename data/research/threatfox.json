@@ -1,0 +1,43 @@
+{
+  "id": "threatfox",
+  "status": "operational",
+  "name": "ThreatFox",
+  "category": "security-identity",
+  "tagline": "IOC-sharing API for malware C2, IPs, domains, and URLs",
+  "description": "ThreatFox is a free community platform from abuse.ch for sharing and querying indicators of compromise (IOCs) related to malware, including C2 servers, IP addresses, domains, and URLs. Developers can search recent IOCs, look up indicators by type, and submit new threat intelligence via a public REST API with free access.",
+  "base_url": "https://threatfox-api.abuse.ch/api/v1/",
+  "docs_url": "https://threatfox.abuse.ch/api/",
+  "signup_url": "https://auth.abuse.ch/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Auth-Key header (or optional api-key form field); free key from auth.abuse.ch after account signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free community use; rate-limited (exact free quota not stated as a daily request cap on docs)",
+    "paid_plans": null
+  },
+  "rate_limits": "not fully published as numeric quotas; abuse.ch enforces rate limiting (HTTP 429); check docs/status for current guidance",
+  "example": {
+    "request": "curl -X POST https://threatfox-api.abuse.ch/api/v1/ -H 'Auth-Key: YOUR_API_KEY' -d '{\"query\": \"get_iocs\", \"days\": 1}'",
+    "response_snippet": "{\"query_status\": \"ok\", \"data\": [{\"id\": \"123456\", \"ioc\": \"evil.example\", \"ioc_type\": \"domain\", \"threat_type\": \"botnet_cc\", \"malware\": \"win.emotet\", \"confidence_level\": 75, \"first_seen\": \"2024-01-15 12:00:00 UTC\"}]}"
+  },
+  "use_cases": [
+    "fetch recent malware C2 IOCs from the last N days",
+    "look up whether a domain, IP, or URL is a known threat IOC",
+    "search ThreatFox by malware family name",
+    "submit a new C2 or phishing IOC to the community feed",
+    "export IOCs in a format for SIEM or blocklist tooling"
+  ],
+  "sources": [
+    "https://threatfox.abuse.ch/api/",
+    "https://threatfox.abuse.ch/",
+    "https://auth.abuse.ch/"
+  ],
+  "researcher_confidence": "medium"
+}

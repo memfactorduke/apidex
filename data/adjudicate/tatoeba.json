@@ -1,0 +1,15 @@
+{
+  "id": "tatoeba",
+  "base_url": "https://api.tatoeba.org",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl --get 'https://api.tatoeba.org/v1/sentences' --data-urlencode 'lang=eng' --data-urlencode 'q=hello' --data-urlencode 'trans:lang=jpn'",
+  "example_response_snippet": "{\"data\":[{\"id\":373330,\"text\":\"Hello!\",\"lang\":\"eng\",\"script\":null,\"license\":\"CC BY 2.0 FR\",\"owner\":\"kroko\",\"is_unapproved\":false,\"translations\":[{\"text\":\"\u3053\u3093\u306b\u3061\u306f\u3002\",\"lang\":\"jpn\"}]}],\"paging\":{\"next\":\"...\"}}",
+  "description": "Collaborative, open multilingual dataset of sentences and translations exposed through a public read-only API; by default, sentence search may include unapproved or orphaned (likely unproofread) sentences unless filtered.",
+  "status": null,
+  "resolution_notes": "base_url: incorrect; the production server is https://api.tatoeba.org (https://api.tatoeba.org/openapi.json). example: incorrect; the 2026 migration guide maps v0 search to /v1/sentences, from to lang, query to q, and Japanese translations to trans:lang=jpn (https://en.wiki.tatoeba.org/articles/show/api-migration-v1); response shape follows https://api.tatoeba.org/openapi.json. description: incorrect; the API is public, unauthenticated and read-only, and its search docs warn that results include unapproved or orphaned sentences by default (https://api.tatoeba.org/openapi.json)."
+}

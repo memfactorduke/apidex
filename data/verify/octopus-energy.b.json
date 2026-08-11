@@ -1,0 +1,52 @@
+{
+  "id": "octopus-energy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.octopus.energy/guides/rest/rest-api-basics/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.octopus.energy/guides/rest/rest-api-basics/",
+      "source": "https://developer.octopus.energy/guides/rest/rest-api-basics/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.octopus.energy/guides/rest/rest-api-basics/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.octopus.energy/guides/rest/api-endpoints/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.octopus.energy/guides/rest/api-endpoints/"
+    }
+  },
+  "notes": "The submitted documentation URL is obsolete and returns 404. The API is operational: the official guide identifies /v1/ as its base, and the unauthenticated /v1/products/ request returned current JSON on 2026-08-11. A 404 from the bare API root does not indicate shutdown. Official REST documentation provides no API pricing, free-tier allowance, numeric REST rate limit, or CORS policy."
+}

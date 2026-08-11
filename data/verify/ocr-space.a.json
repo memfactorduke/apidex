@@ -1,0 +1,52 @@
+{
+  "id": "ocr-space",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Supported; the API currently returns Access-Control-Allow-Origin: *.",
+      "source": "https://forum.ui.vision/t/copyfish-on-edge-extension-down/29714"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OCR.space extracts text from images and PDFs, supports multiple languages and file formats, and offers table-oriented parsing and searchable-PDF creation; the documented API has no search/replace feature.",
+      "source": "https://ocr.space/ocrapi"
+    }
+  },
+  "notes": "Official 2026 documentation confirms the free POST endpoint, API-key authentication, 500 requests/day per IP, and 25,000 monthly requests. Engine 3 separately allows 2,500 free conversions. The entry fails because CORS is no longer unknown and the description invents search/replace functionality."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "astrobin",
+  "status": "operational",
+  "name": "AstroBin",
+  "category": "science-space",
+  "tagline": "Astrophotography image database with platesolving metadata for amateur astronomy apps",
+  "description": "AstroBin is a public API for searching and retrieving astrophotography images, deep-sky object data, and plate-solving metadata. It is widely used by amateur astronomy developers to power image galleries, object lookups, and equipment/acquisition metadata integrations.",
+  "base_url": "https://www.astrobin.com/api/v1/",
+  "docs_url": "https://welcome.astrobin.com/application-programming-interface",
+  "signup_url": "https://www.astrobin.com/accounts/register/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key and API secret via HTTP Basic Auth (username = API key, password = API secret); create keys in account settings after signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u \"YOUR_API_KEY:YOUR_API_SECRET\" \"https://www.astrobin.com/api/v1/image/?format=json&limit=1\"",
+    "response_snippet": "{\"meta\":{\"limit\":1,\"next\":null,\"offset\":0,\"previous\":null,\"total_count\":0},\"objects\":[]}"
+  },
+  "use_cases": [
+    "search astrophotography images by deep-sky object",
+    "fetch plate-solving metadata for an image",
+    "list public images by user or equipment",
+    "retrieve acquisition and processing metadata for an image"
+  ],
+  "sources": [
+    "https://www.astrobin.com/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "cors"
+    ]
+  }
+}

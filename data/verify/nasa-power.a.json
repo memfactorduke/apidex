@@ -1,0 +1,52 @@
+{
+  "id": "nasa-power",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://power.larc.nasa.gov/docs/services/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://power.larc.nasa.gov/api/temporal/daily/openapi.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://power.larc.nasa.gov/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free public access has documented operational constraints: point requests allow at most 20 parameters, regional requests one parameter, and redundant requests may be blocked.",
+      "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "NASA documents HTTP 429 rate limiting, warns that excessive synchronous requests may be blocked, and advises no more than five concurrent requests; no per-minute quota is stated.",
+      "source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://power.larc.nasa.gov/api/temporal/daily/openapi.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://power.larc.nasa.gov/docs/faqs/data/"
+    }
+  },
+  "notes": "Current OpenAPI v2.9.6 confirms the unauthenticated GET endpoint and request structure. The entry fails because documented request constraints and rate-limiting guidance contradict \u201cunknown\u201d and \u201cnot published.\u201d CORS was not documented and could not be established."
+}

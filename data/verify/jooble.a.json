@@ -1,0 +1,52 @@
+{
+  "id": "jooble",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.jooble.org/en/support/solutions/articles/60001448238-rest-api-documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.jooble.org/en/support/solutions/articles/60000922689-how-to-connect-to-the-jooble-rest-api-after-receiving-the-key"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.jooble.org/en/support/solutions/articles/60001448238-rest-api-documentation"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://jooble.org/api/about"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://jooble.org/api/about"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://help.jooble.org/en/support/solutions/articles/60001448238-rest-api-documentation"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.jooble.org/en/support/solutions/articles/60001448238-rest-api-documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://jooble.org/info/about"
+    }
+  },
+  "notes": "Official documentation confirms POST https://jooble.org/api/{api_Key}, JSON keyword/location parameters, path-based API-key authentication, and the response fields shown. The /api/about page remains Jooble's official registration/examples page. A 403 without a valid key is documented behavior, so the automated result does not show the API is dead. Official sources do not state API pricing, usage limits, or CORS policy."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "the-things-network",
+  "status": "operational",
+  "name": "The Things Network",
+  "category": "iot-devices",
+  "tagline": "Global community LoRaWAN network for low-power IoT device uplink and downlink",
+  "description": "The Things Network (TTN) is a global community LoRaWAN network that connects low-power sensors and devices through shared gateways. Developers use application-layer integrations (HTTP webhooks, MQTT, Storage API) on The Things Stack to receive uplinks, send downlinks, and manage end devices. Community coverage is free; enterprise and cloud offerings come from The Things Industries.",
+  "base_url": "https://eu1.cloud.thethings.network",
+  "docs_url": "https://www.thethingsindustries.com/docs/integrations/application-servers/http/",
+  "signup_url": "https://console.cloud.thethings.network/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key (Bearer token) from the Application Console; used as Authorization: Bearer NNSXS... for Storage API and as webhook secret or MQTT credentials depending on integration"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Community network free for fair-use LoRaWAN traffic; Storage Integration limited retention; paid plans via The Things Industries Cloud/Enterprise \u2014 exact API request quotas not published as a simple free-tier number",
+    "paid_plans": "The Things Industries Cloud and Enterprise for managed/private stacks"
+  },
+  "rate_limits": "not published as a single public API quota; Fair Use Policy applies to community network airtime and infrastructure",
+  "example": {
+    "request": "curl -X GET 'https://eu1.cloud.thethings.network/api/v3/as/applications/YOUR_APP_ID/packages/storage/uplink_message?limit=1' -H 'Authorization: Bearer YOUR_API_KEY' -H 'Accept: application/json'",
+    "response_snippet": "{\"result\":{\"end_device_ids\":{\"device_id\":\"dev1\",\"application_ids\":{\"application_id\":\"app1\"}},\"received_at\":\"2024-01-15T12:00:00Z\",\"uplink_message\":{\"f_port\":1,\"frm_payload\":\"AQID\",\"decoded_payload\":{\"temperature\":22.5}}}}"
+  },
+  "use_cases": [
+    "receive LoRaWAN sensor uplink payloads via HTTP webhook",
+    "send downlink commands to end devices",
+    "query recent device uplinks from Storage Integration API",
+    "list and manage application end devices via Network Server API",
+    "subscribe to live device traffic over MQTT"
+  ],
+  "sources": [
+    "https://www.thethingsindustries.com/docs/integrations/application-servers/http/",
+    "https://www.thethingsnetwork.org/",
+    "https://www.thethingsindustries.com/docs/"
+  ],
+  "researcher_confidence": "medium"
+}

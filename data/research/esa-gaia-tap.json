@@ -1,0 +1,48 @@
+{
+  "id": "esa-gaia-tap",
+  "status": "operational",
+  "name": "ESA Gaia Archive TAP",
+  "category": "science-space",
+  "tagline": "Query Gaia\u2019s billion-star catalog via Table Access Protocol",
+  "description": "ESA Gaia Archive exposes the Gaia mission\u2019s all-sky stellar catalog through IVOA Table Access Protocol (TAP) services at gea.esac.esa.int. Developers and researchers run ADQL queries for positions, parallaxes, proper motions, photometry, and related catalogs (e.g. DR3), with sync and async job endpoints for large result sets.",
+  "base_url": "https://gea.esac.esa.int/tap-server/tap",
+  "docs_url": "https://gea.esac.esa.int/archive-help/index.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public anonymous access for most catalog queries; optional user account for private tables, job history, and higher quotas via ESA Gaia Archive login."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; usage subject to archive fair-use / queue limits (exact free quota numbers not published as paid product tiers)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as fixed req/day; subject to fair-use and server capacity (async jobs recommended for large queries)",
+  "example": {
+    "request": "curl -s -X POST 'https://gea.esac.esa.int/tap-server/tap/sync' -d 'REQUEST=doQuery' -d 'LANG=ADQL' -d 'FORMAT=json' -d 'QUERY=SELECT TOP 1 source_id, ra, dec, parallax FROM gaiadr3.gaia_source'",
+    "response_snippet": "{\"metadata\":[{\"name\":\"source_id\",\"datatype\":\"long\"},{\"name\":\"ra\",\"datatype\":\"double\"},{\"name\":\"dec\",\"datatype\":\"double\"},{\"name\":\"parallax\",\"datatype\":\"double\"}],\"data\":[[5853498713190525696,45.0,0.0,1.0]]}"
+  },
+  "use_cases": [
+    "query Gaia DR3 star positions and parallaxes by sky region",
+    "resolve stellar proper motions and photometry for a source_id",
+    "run ADQL cone or box searches for nearby stars",
+    "export catalog subsets as VOTable/CSV/JSON for analysis pipelines",
+    "submit large async TAP jobs and poll job status/results"
+  ],
+  "sources": [
+    "https://gea.esac.esa.int/archive/",
+    "https://gea.esac.esa.int/archive-help/index.html",
+    "https://gea.esac.esa.int/tap-server/tap",
+    "https://www.cosmos.esa.int/web/gaia/data-release-3",
+    "https://gea.esac.esa.int/archive-help/adql/"
+  ],
+  "researcher_confidence": "medium"
+}

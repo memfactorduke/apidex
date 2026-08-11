@@ -1,0 +1,52 @@
+{
+  "id": "traveltime",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.traveltime.com/api/overview/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.traveltime.com/api/overview/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.traveltime.com/api/start/auth"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://account.traveltime.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "2-week free trial with a maximum of 60 hits per minute; after the trial, the limit is 5 hits per minute.",
+      "source": "https://docs.traveltime.com/api/overview/usage-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits: trial maximum 60 hits per minute; post-trial 5 hits per minute; paid licences have custom or no concurrency limits.",
+      "source": "https://docs.traveltime.com/api/overview/usage-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.traveltime.com/api/reference/isochrones"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.traveltime.com/en/articles/8508774-overview-of-the-api-endpoints"
+    }
+  },
+  "notes": "The API is live and its official status page reports API V4 operational. The entry fails because current documentation explicitly publishes free-access and request-rate limits, contradicting both \u201cunknown\u201d and \u201cnot published.\u201d Official documentation did not establish a CORS policy."
+}

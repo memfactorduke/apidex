@@ -1,0 +1,87 @@
+{
+  "id": "amadeus",
+  "status": "operational",
+  "name": "Amadeus for Developers",
+  "category": "travel-hospitality",
+  "tagline": "Self-serve travel APIs for flights, hotels, airports, and destinations",
+  "description": "Amadeus for Developers provides self-service REST APIs for flight offers, hotel search and booking, airport and city lookup, destination content, and related travel data. Developers authenticate with OAuth2 client credentials, use a free test environment with monthly call quotas, and move to production after approval. Documentation covers endpoints, SDKs, and sandbox vs production hosts.",
+  "base_url": "https://test.api.amadeus.com",
+  "docs_url": "https://developers.amadeus.com/self-service",
+  "signup_url": "https://developers.amadeus.com/register",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth2 client credentials: POST /v1/security/oauth2/token with grant_type=client_credentials, client_id, and client_secret; use Bearer access_token on API calls. Self-serve signup for test keys."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Test environment free with monthly free transaction quotas per API (varies by product; see pricing page); production billed after approval",
+    "paid_plans": "Pay-as-you-go production pricing per API after production access approval"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=PAR&maxPrice=200\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[{\"type\":\"flight-destination\",\"origin\":\"PAR\",\"destination\":\"MAD\",\"departureDate\":\"2026-09-01\",\"returnDate\":\"2026-09-08\",\"price\":{\"total\":\"134.81\"}}]}"
+  },
+  "use_cases": [
+    "search flight offers between two cities for given dates",
+    "look up airport or city codes by keyword",
+    "search hotel offers by city or geocode",
+    "get cheapest flight destinations from an origin",
+    "retrieve airline or airport reference data"
+  ],
+  "sources": [
+    "https://developers.amadeus.com/self-service",
+    "https://developers.amadeus.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "who-icd-api",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Accept: application/json\" -H \"Accept-Language: en\" -H \"API-Version: v2\" \"https://id.who.int/icd/entity/257068234\"",
+  "example_response_snippet": "{\n  \"@id\": \"http://id.who.int/icd/entity/257068234\",\n  \"title\": {\n    \"@language\": \"en\",\n    \"@value\": \"Cholera\"\n  }\n}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example_request: corrected. WHO's current v2.6 OpenAPI requires API-Version and Accept-Language and documents OAuth2 client-credentials authentication; WHO's v2 guide identifies entity 257068234 as Cholera. https://id.who.int/swagger/v2/swagger.json https://icd.who.int/docs/icd-api/APIDoc-Version2/ example_response_snippet: corrected to a realistic FoundationEntity response using the officially documented Cholera URI and the OpenAPI title/@id schema. https://id.who.int/swagger/v2/swagger.json"
+}

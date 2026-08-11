@@ -1,0 +1,52 @@
+{
+  "id": "hivemq-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.hivemq.cloud",
+      "source": "https://www.hivemq.com/blog/new-rest-api-host-for-hivemq-cloud-starter/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.hivemq.com/hivemq-cloud/rest-api.html",
+      "source": "https://docs.hivemq.com/hivemq-cloud/rest-api.html"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "bearer JWT token",
+      "source": "https://docs.hivemq.com/hivemq-cloud/rest-api.html"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false; REST API access is Starter-only, and Starter provides a 15-day trial rather than a permanent free tier",
+      "source": "https://docs.hivemq.com/hivemq-cloud/rest-api.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable: the permanent Serverless free plan does not include the REST API; the Starter plan has a 15-day trial",
+      "source": "https://docs.hivemq.com/hivemq-cloud/quick-start-guide.html"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -sS -H \"Authorization: Bearer YOUR_JWT_TOKEN\" \"https://api.hivemq.cloud/api/v2/orgs/YOUR_ORG_ID/clusters/YOUR_CLUSTER_ID/mqtt/credentials\"",
+      "source": "https://docs.hivemq.com/hivemq-cloud/rest-api/specification/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "HiveMQ Cloud is a managed MQTT platform whose REST API manages cluster-scoped MQTT credentials, roles, permissions, clients, and broker metrics. The current REST reference does not document provisioning, creating, or listing Cloud clusters.",
+      "source": "https://docs.hivemq.com/hivemq-cloud/rest-api/specification/"
+    }
+  },
+  "notes": "The REST API remains operational, but the entry mixes it with unsupported account-level cluster management. HiveMQ changed the preferred API host in May 2025, the submitted documentation path is obsolete, and /v1/clusters is absent from the current reference. Documented routes use /api/v2/orgs/{orgId}/clusters/{clusterId}/.... No authoritative REST rate-limit or CORS policy was located."
+}

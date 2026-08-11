@@ -1,0 +1,15 @@
+{
+  "id": "gotenberg",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Open-source self-hosting has no project-imposed usage quota. The official free live demo is limited to 2 requests/second per IP and a 5 MB request body.",
+  "rate_limits": "Self-hosted deployments have no project-wide request rate limit; operators control deployment limits. The official hosted demo allows 2 requests/second per IP and a 5 MB request body.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Corrected; the current installation guide documents an official hosted live demo and its 2 requests/second/IP and 5 MB body limits: https://gotenberg.dev/docs/getting-started/installation. rate_limits: Corrected; those limits apply to the official demo, while self-hosted API body, timeout, concurrency, and queue controls are deployment-configurable: https://gotenberg.dev/docs/getting-started/installation and https://gotenberg.dev/docs/configuration."
+}

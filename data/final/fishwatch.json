@@ -1,0 +1,94 @@
+{
+  "id": "fishwatch",
+  "status": "operational",
+  "name": "FishWatch",
+  "category": "agriculture",
+  "tagline": "US seafood species profiles and sustainability data from NOAA",
+  "description": "FishWatch provides free, public US seafood species profiles including sustainability, biology, nutrition, harvest methods, and fishery status. Built for fisheries apps, seafood education, and sustainability tools.",
+  "base_url": "https://www.fishwatch.gov/api",
+  "docs_url": "https://www.fishwatch.gov/developers",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public unauthenticated REST endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://www.fishwatch.gov/api/species\"",
+    "response_snippet": "[{\"Species Name\":\"Acadian Redfish\",\"Scientific Name\":\"Sebastes fasciatus\",\"Species Illustration Photo\":{\"src\":\"...\"},\"Population Status\":\"...\"}, ...]"
+  },
+  "use_cases": [
+    "list all US seafood species profiles",
+    "get sustainability data for a fish species",
+    "look up harvest methods and fishery status",
+    "fetch nutrition facts for seafood species"
+  ],
+  "sources": [
+    "https://www.fishwatch.gov/developers"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

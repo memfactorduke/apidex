@@ -1,0 +1,52 @@
+{
+  "id": "us-treasury-fiscal-data",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/fedspendingtransparency/fiscal-data/blob/master/src/pages/api-documentation/index.tsx"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/"
+    }
+  },
+  "notes": "The API is active: the official Debt to the Penny v2 endpoint returned data dated 2026-08-10, and Treasury's official frontend repository has a current 2026 release. Documentation supports the base URL, unauthenticated GET access, free unrestricted use, formats, parameters, and default pagination. It documents possible HTTP 429 responses but publishes no numeric quota. CORS could not be established from an authoritative source."
+}

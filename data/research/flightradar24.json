@@ -1,0 +1,40 @@
+{
+  "id": "flightradar24",
+  "status": "operational",
+  "name": "FlightRadar24 API",
+  "category": "transportation",
+  "tagline": "Commercial flight tracking API with live aircraft positions and historical flight data.",
+  "description": "FlightRadar24's commercial API provides live aircraft positions, flight status, airport and airline data, and historical flight information for developers integrating real-time and archived aviation tracking into applications.",
+  "base_url": "https://fr24api.flightradar24.com",
+  "docs_url": "https://fr24api.flightradar24.com/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization or X-Api-Key header; commercial signup required (verify on docs)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://fr24api.flightradar24.com/api/live/flight-positions/full?airports=LHR\"",
+    "response_snippet": "{\"data\":[{\"fr24_id\":\"...\",\"lat\":51.47,\"lon\":-0.46,\"alt\":0,\"callsign\":\"BA123\",\"origin\":\"LHR\"}]}"
+  },
+  "use_cases": [
+    "get live aircraft positions near an airport",
+    "look up flight status by callsign or flight number",
+    "query historical flights for a route or airport",
+    "track aircraft by registration or FR24 id"
+  ],
+  "sources": [
+    "https://fr24api.flightradar24.com/docs"
+  ],
+  "researcher_confidence": "low"
+}

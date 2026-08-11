@@ -1,0 +1,52 @@
+{
+  "id": "modal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Modal has no single documented public endpoint base URL. Deployed Web Functions use https://<source>--<label>.modal.run or a configured custom domain.",
+      "source": "https://modal.com/docs/guide/webhook-urls"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/docs/guide/webhook-proxy-auth"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "For a new account, the workspace limit is 200 Function calls or HTTP requests per second with a 5-second burst multiplier; excess requests return HTTP 429.",
+      "source": "https://modal.com/docs/guide/webhooks"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Web Functions created with @modal.fastapi_endpoint automatically have CORS enabled.",
+      "source": "https://modal.com/docs/sdk/py/latest/fastapi_endpoint"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/docs/guide/webhooks"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://modal.com/docs/guide"
+    }
+  },
+  "notes": "Modal's official status page reported all services online on August 11, 2026. The entry fails because api.modal.com is not the documented base for deployed public endpoints, a current default rate limit is published, and CORS is documented as automatically enabled for fastapi_endpoint Web Functions. The current decorator name is @modal.fastapi_endpoint; @modal.web_endpoint is deprecated."
+}

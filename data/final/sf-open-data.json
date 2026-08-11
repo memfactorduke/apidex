@@ -1,0 +1,100 @@
+{
+  "id": "sf-open-data",
+  "status": "operational",
+  "name": "SF Open Data API",
+  "category": "government-open-data",
+  "tagline": "Socrata SODA API for San Francisco open datasets and civic applications",
+  "description": "San Francisco's official open-data portal provides hundreds of city datasets through Socrata SODA, including tabular and geospatial civic data. Public SODA 2.1 resource reads require no authentication; an optional app token identifies the application and provides higher throttling limits. SODA 3 queries require an app token or user authentication.",
+  "base_url": "https://data.sfgov.org/resource",
+  "docs_url": "https://dev.socrata.com/foundry/data.sfgov.org/",
+  "signup_url": "https://data.sfgov.org/signup",
+  "auth": {
+    "type": "none",
+    "details": "Optional app token via X-App-Token header (or app_token query param); unauthenticated access allowed at lower limits. Register an app on the portal for a token."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public SODA 2.1 reads are free. No fixed numeric cap is published; app-token requests are currently unthrottled unless abusive or malicious, while anonymous requests use a lower shared-IP throttling pool.",
+    "paid_plans": null
+  },
+  "rate_limits": "No fixed numeric limit is published. App-token requests are currently unthrottled except for abusive or malicious use; anonymous requests may be throttled by source IP. Throttling returns HTTP 429.",
+  "example": {
+    "request": "curl 'https://data.sfgov.org/resource/wg3w-h783.json?$select=row_id,incident_datetime,incident_category,analysis_neighborhood&$limit=1'",
+    "response_snippet": "[{\"row_id\":\"152278216710\",\"incident_datetime\":\"2025-10-31T17:55:00.000\",\"incident_category\":\"Drug Offense\",\"analysis_neighborhood\":\"Mission\"}]"
+  },
+  "use_cases": [
+    "query SF crime incidents by neighborhood and date",
+    "list recent building permits for a parcel or address",
+    "fetch city budget or department spending tables",
+    "get geospatial datasets for maps and civic apps"
+  ],
+  "sources": [
+    "https://dev.socrata.com/foundry/data.sfgov.org/",
+    "https://data.sfgov.org/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "free_tier"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "docs_url"
+    ]
+  }
+}

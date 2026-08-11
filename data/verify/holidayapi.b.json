@@ -1,0 +1,52 @@
+{
+  "id": "holidayapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/holidayapi/holidayapi-node/blob/master/src/holidayapi.ts"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://holidayapi.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://holidayapi.com/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://holidayapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000,000 requests per month with no velocity throttling; free-plan offline storage is limited to 24 hours.",
+      "source": "https://holidayapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "A monthly request limit is published: 1,000,000 requests per month, with no additional velocity throttling; monthly limits reset on the first day of each month at 00:00 UTC.",
+      "source": "https://holidayapi.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://holidayapi.com/docs"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "HolidayAPI provides key-authenticated holiday and observance data with country, subdivision, date, language, and related filters. Paid plans add commercial use, broad year coverage, and subdivision access, but official pricing does not describe them as higher-volume plans because all plans advertise the same monthly request allowance.",
+      "source": "https://holidayapi.com/pricing"
+    }
+  },
+  "notes": "Official documentation and the active official client repository support the v1 base URL, query-string API key, and example request. The entry fails because published limits were labeled unknown/not published and the description incorrectly claims paid plans provide higher volume. CORS could not be established from an authoritative source."
+}

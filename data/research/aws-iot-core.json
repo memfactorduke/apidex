@@ -1,0 +1,41 @@
+{
+  "id": "aws-iot-core",
+  "status": "operational",
+  "name": "AWS IoT Core",
+  "category": "iot-devices",
+  "tagline": "Managed cloud service for connecting IoT devices via MQTT, HTTP, and WebSockets",
+  "description": "AWS IoT Core is a managed cloud service that lets connected devices interact with cloud applications and other devices. It supports MQTT, HTTPS, and MQTT over WebSockets, device shadows, jobs, fleets, and a full HTTP control-plane API for managing things, certificates, rules, and more.",
+  "base_url": "https://iot.<region>.amazonaws.com",
+  "docs_url": "https://docs.aws.amazon.com/iot/latest/apireference/Welcome.html",
+  "signup_url": "https://console.aws.amazon.com/iot/",
+  "auth": {
+    "type": "other",
+    "details": "AWS Signature Version 4 (SigV4) with IAM credentials or temporary credentials from STS; devices may use X.509 certificates for MQTT/data plane"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://iot.us-east-1.amazonaws.com/things\" -H \"Authorization: AWS4-HMAC-SHA256 Credential=YOUR_API_KEY/...\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list IoT things in an account",
+    "get device shadow state",
+    "create a thing and attach a certificate",
+    "publish a message to an MQTT topic",
+    "list IoT jobs for a fleet"
+  ],
+  "sources": [
+    "https://docs.aws.amazon.com/iot/latest/apireference/Welcome.html"
+  ],
+  "researcher_confidence": "low"
+}

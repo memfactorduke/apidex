@@ -1,0 +1,40 @@
+{
+  "id": "open-menu",
+  "status": "operational",
+  "name": "Open Menu",
+  "category": "food-drink",
+  "tagline": "Restaurant menu data API with structured dishes, prices, and venue metadata for US menus.",
+  "description": "Open Menu provides structured restaurant menu data including dishes, prices, and venue metadata for US restaurants. Developers can access menu information programmatically for food apps, delivery platforms, and restaurant discovery tools.",
+  "base_url": "https://openmenu.com/api/",
+  "docs_url": "https://openmenu.com/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication required. Exact header/method details to be verified from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://openmenu.com/api/\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "look up restaurant menu by venue",
+    "get dish prices for a restaurant",
+    "search restaurants by menu items",
+    "retrieve structured menu metadata"
+  ],
+  "sources": [
+    "https://openmenu.com/api/"
+  ],
+  "researcher_confidence": "low"
+}

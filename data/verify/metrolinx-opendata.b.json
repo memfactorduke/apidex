@@ -1,0 +1,52 @@
+{
+  "id": "metrolinx-opendata",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.openmetrolinx.com/OpenDataAPI",
+      "source": "https://www.metrolinx.com/en/about-us/open-data"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gotransit.com/en/partner-with-us/software-developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "GET https://api.openmetrolinx.com/OpenDataAPI/api/V1/Stop/NextService/{StopCode}; supply the registered Access Key with the call. The official public documentation does not identify x-api-key as the header name.",
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help/Api/en/GET-api-V1-Stop-NextService-StopCode"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help"
+    }
+  },
+  "notes": "The submitted API hostname contains an extra dot and does not match Metrolinx's current official API. The old documentation URL remains usable through a redirect. Official documentation confirms free access with registration and an Access Key, but gives no numerical usage threshold; it only warns that extensive calls may disable a key and documents HTTP 429."
+}

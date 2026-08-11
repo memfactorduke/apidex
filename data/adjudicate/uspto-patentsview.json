@@ -1,0 +1,15 @@
+{
+  "id": "uspto-patentsview",
+  "base_url": "unavailable",
+  "docs_url": "https://data.uspto.gov/support/transition-guide/patentsview",
+  "auth_type": "other",
+  "free_tier": false,
+  "free_tier_limits": "Not applicable while the PatentsView PatentSearch API is paused; current access is limited to datasets distributed through the USPTO Open Data Portal.",
+  "rate_limits": "No current limit because the API is paused. The legacy PatentSearch API limit was 45 requests per minute per API key.",
+  "cors": null,
+  "example_request": "curl -L -sS -o /dev/null -w \"HTTP %{http_code}\\n\" \"https://data.uspto.gov/bulkdata/datasets/pvgpatdis\"",
+  "example_response_snippet": "HTTP 200",
+  "description": "PatentsView enhances USPTO patent-grant and pre-grant-publication data into research-ready datasets. Its datasets and dictionaries are currently distributed through the USPTO Open Data Portal; PatentSearch API, search, visualization, and support functions have been paused since March 20, 2026 pending reintroduction in updated forms.",
+  "status": "degraded",
+  "resolution_notes": "base_url/auth_type/free_tier/free_tier_limits/example/description/status: PatentSearch is paused and only ODP downloads remain; ruled unavailable/other/false/N/A/ODP check/updated/degraded: https://www.uspto.gov/subscription-center/2026/patentsview-migrating-uspto-open-data-portal-march-20 . docs_url: current hub links the ODP guide: https://www.uspto.gov/ip-policy/economic-research/patentsview . rate_limits: 45 rpm was legacy only: https://search.patentsview.org/docs/docs/Search%20API/SearchAPIReference/"
+}

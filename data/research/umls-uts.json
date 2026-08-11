@@ -1,0 +1,41 @@
+{
+  "id": "umls-uts",
+  "status": "operational",
+  "name": "UMLS Terminology Services",
+  "category": "health-fitness",
+  "tagline": "NIH UMLS REST API for medical concepts, CUIs, and crosswalks",
+  "description": "The Unified Medical Language System (UMLS) Terminology Services REST API provides programmatic access to UMLS Metathesaurus data including concepts, CUIs, atoms, relations, and source vocabulary crosswalks. Developers authenticate with a UTS API key obtained after free UMLS license approval.",
+  "base_url": "https://uts-ws.nlm.nih.gov/rest",
+  "docs_url": "https://documentation.uts.nlm.nih.gov/rest/home.html",
+  "signup_url": "https://uts.nlm.nih.gov/uts/signup-login",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key obtained after free UMLS license approval; typically passed as ticket parameter or Authorization header depending on endpoint version"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET 'https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?apiKey=YOUR_API_KEY'",
+    "response_snippet": "{\"pageSize\":25,\"pageNumber\":1,\"pageCount\":1,\"result\":{\"classType\":\"Concept\",\"ui\":\"C0009044\",\"name\":\"Closed fracture of carpal bone\",\"atoms\":\"...\",\"definitions\":\"...\",\"relations\":\"...\",\"semanticTypes\":[{\"name\":\"Injury or Poisoning\",\"uri\":\"...\"}]}}"
+  },
+  "use_cases": [
+    "look up a medical concept by CUI",
+    "search UMLS Metathesaurus for a term",
+    "crosswalk codes between source vocabularies",
+    "retrieve concept definitions and semantic types",
+    "get related concepts and hierarchical relations"
+  ],
+  "sources": [
+    "https://documentation.uts.nlm.nih.gov/rest/home.html"
+  ],
+  "researcher_confidence": "low"
+}

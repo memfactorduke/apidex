@@ -1,0 +1,52 @@
+{
+  "id": "ibm-watson-speech-to-text",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/apidocs/speech-to-text"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/apidocs/speech-to-text"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/apidocs/speech-to-text"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-faq-pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-faq-pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The Plus plan permits a maximum of 100 concurrent transcription requests across HTTP and WebSocket interfaces combined.",
+      "source": "https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-faq-pricing"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-data-security"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-http"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "IBM Watson Speech to Text supports synchronous and asynchronous HTTP transcription, WebSocket streaming, speaker labels, and custom language models. Acoustic-model customization is unavailable for current next-generation and large speech models; it applied only to discontinued previous-generation models.",
+      "source": "https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-customization"
+    }
+  },
+  "notes": "The managed API is operational and received multiple 2026 updates. IBM still lists the stated Dallas URL as a base/default URL, although service credential URLs can append /instances/{instance_id}. The entry fails because CORS is documented as supported, a Plus concurrency limit is published, and acoustic customization is not available for current model generations."
+}

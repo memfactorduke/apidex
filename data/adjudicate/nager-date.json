@@ -1,0 +1,15 @@
+{
+  "id": "nager-date",
+  "base_url": "https://nagerholidays.com/api/v4",
+  "docs_url": "https://nagerholidays.com/scalar/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Hosted Web API use is permitted for private or non-profit projects; commercial use requires active sponsorship. It may not be used to publish or operate a holiday portal.",
+  "rate_limits": "No rate limits; unlimited queries.",
+  "cors": "yes",
+  "example_request": "curl -s \"https://nagerholidays.com/api/v4/Holidays/AT/2026\"",
+  "example_response_snippet": "[{\"date\":\"2026-01-01\",\"name\":\"New Year's Day\",\"countryCode\":\"AT\",\"nationalHoliday\":true,\"subdivisionCodes\":null,\"holidayTypes\":[\"Public\"]}]",
+  "description": "Nager.Date is a public JSON REST API providing holiday data for 200+ countries. Its hosted Web API may be used for private or non-profit projects; commercial use requires active sponsorship.",
+  "status": null,
+  "resolution_notes": "base_url: use https://nagerholidays.com/api/v4 [A]. docs_url: use https://nagerholidays.com/scalar/ [D]. free_tier_limits: private/non-profit projects; commercial use requires active sponsorship [T]. rate_limits: none; unlimited queries [A]. cors: yes, enabled [A]. example: use the live v4 request/schema [E]. description: update to 200+ countries and current use terms [A][T]. Sources: [A] https://nagerholidays.com/api [D] https://nagerholidays.com/scalar/ [T] https://nagerholidays.com/legal/termsofservice [E] https://nagerholidays.com/api/v4/Holidays/AT/2026"
+}

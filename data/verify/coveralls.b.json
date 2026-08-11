@@ -1,0 +1,45 @@
+{
+  "id": "coveralls",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://coveralls.io/api/v1",
+      "source": "https://docs.coveralls.io/api-introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://docs.coveralls.io/api-introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://docs.coveralls.io/api-introduction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://coveralls.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use documented endpoints (e.g. POST /api/v1/jobs with repo_token); Authorization header form and GET /api/v1/repos as shown are not supported by current official docs",
+      "source": "https://docs.coveralls.io/api-jobs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://docs.coveralls.io/api-introduction"
+    }
+  },
+  "notes": "Base URL should include /v1. Docs live at docs.coveralls.io. Auth is repo_token (form/JSON body), not Authorization: token. Free OSS tier exists; free limits and rate limits unpublished. Example path/header not in docs."
+}

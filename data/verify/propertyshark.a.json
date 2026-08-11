@@ -1,0 +1,52 @@
+{
+  "id": "propertyshark",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No current public API base URL is published; https://www.propertyshark.com is the website, not a documented API endpoint.",
+      "source": "https://support.propertyshark.com/hc/en-us/articles/360022586511-Overview-of-PropertyShark-Services-and-Features"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "No current API documentation URL was found. PropertyShark's legacy 2009 announcement instead referenced http://propertyshark.com/mason/psharkapi/.",
+      "source": "https://www.propertyshark.com/Real-Estate-Reports/2009/07/30/new-propertyshark-api-for-blogs-and-websites/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No current official curl example is published, and /mason/api is not documented as a JSON API endpoint.",
+      "source": "https://www.propertyshark.com/Real-Estate-Reports/2009/07/30/new-propertyshark-api-for-blogs-and-websites/"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://support.propertyshark.com/hc/en-us/articles/360022586511-Overview-of-PropertyShark-Services-and-Features"
+    }
+  },
+  "notes": "Current official pages document PropertyShark's website, free sample report, and paid subscription tools\u2014not an operational public API. The sole official API reference found is a 2009 legacy announcement using a different path. No current authentication, JSON contract, limits, CORS policy, or request examples were found; the 403s alone were not treated as proof."
+}

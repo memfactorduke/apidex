@@ -1,0 +1,52 @@
+{
+  "id": "chainalysis",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.chainalysis.com/api/kyt/v2 (product-specific; KYT is the documented public API host pattern \u2014 confirm exact host from current docs)",
+      "source": "https://developers.chainalysis.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.chainalysis.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Example curl uses invente Token header and root path; use product-specific endpoints and documented auth from official docs",
+      "source": "https://developers.chainalysis.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live docs now."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "loops",
+  "status": "operational",
+  "name": "Loops",
+  "category": "social-communication",
+  "tagline": "Transactional and marketing email API for startups",
+  "description": "Loops is a modern email platform for product-led startups, offering REST APIs for transactional emails, marketing campaigns, contact management, and event-driven messaging with simple endpoints.",
+  "base_url": "https://app.loops.so/api/v1",
+  "docs_url": "https://loops.so/docs/api-reference",
+  "signup_url": "https://app.loops.so/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization Bearer header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET https://app.loops.so/api/v1/contacts/find?email=test@example.com -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"success\":true}"
+  },
+  "use_cases": [
+    "send a transactional email",
+    "add or update a contact",
+    "trigger an event for a contact",
+    "list mailing lists"
+  ],
+  "sources": [
+    "https://loops.so/docs/api-reference"
+  ],
+  "researcher_confidence": "low"
+}

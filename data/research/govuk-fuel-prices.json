@@ -1,0 +1,41 @@
+{
+  "id": "govuk-fuel-prices",
+  "status": "operational",
+  "name": "GOV.UK Fuel Prices",
+  "category": "energy-utilities",
+  "tagline": "UK open data feed of petrol and diesel prices from major fuel retailers.",
+  "description": "Free UK government open data of forecourt petrol and diesel prices published by major retailers under CMA requirements. Offers downloadable JSON and CSV feeds (and related endpoints) so developers can build price comparison, mapping, and consumer tools without paid credentials.",
+  "base_url": "https://www.gov.uk/guidance/access-fuel-price-data",
+  "docs_url": "https://www.gov.uk/guidance/access-fuel-price-data",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public open-data feeds are downloadable without signup or API keys."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free open data; no paid plans or request quotas published on the guidance page.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sL \"https://www.gov.uk/guidance/access-fuel-price-data\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list current UK petrol and diesel prices by retailer",
+    "build a local fuel price comparison map",
+    "track diesel vs petrol price changes over time",
+    "power a consumer app with nearby forecourt prices"
+  ],
+  "sources": [
+    "https://www.gov.uk/guidance/access-fuel-price-data"
+  ],
+  "researcher_confidence": "low"
+}

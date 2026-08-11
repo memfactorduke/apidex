@@ -1,0 +1,15 @@
+{
+  "id": "onfido",
+  "base_url": "https://api.eu.onfido.com/v3.6",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Uncharged sandbox testing with predetermined results; no personal data may be uploaded. Sandbox limit: 120 requests/minute, up to 2/second with a burst of 4. Live verifications require valid billing information.",
+  "rate_limits": "Live: 400 requests/minute unless contractually agreed otherwise, up to 7/second with a burst of 14. Sandbox: 120 requests/minute, up to 2/second with a burst of 4.",
+  "cors": null,
+  "example_request": "curl -X GET \"https://api.eu.onfido.com/v3.6/applicants/\" -H \"Authorization: Token token=YOUR_API_TOKEN\" -H \"Accept: application/json\"",
+  "example_response_snippet": "{\"applicants\":[{\"id\":\"274630f2-dc9f-4f81-b960-3ef0a8c1c9f2\",\"created_at\":\"2019-10-09T16:52:42Z\",\"first_name\":\"Jane\",\"last_name\":\"Doe\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: corrected to EU v3.6; EU/US/CA are regional (https://documentation.identity.entrust.com/api/latest). free_tier: true; sandbox is uncharged (https://documentation.identity.entrust.com/getting-started/quick-start-guide). free_tier_limits: predetermined, no personal data, 120 rpm (https://documentation.identity.entrust.com/api/latest). rate_limits: published live/sandbox limits adopted (https://documentation.identity.entrust.com/api/latest). example: corrected to EU GET /v3.6/applicants/ and applicants wrapper (https://documentation.identity.entrust.com/api/latest)."
+}

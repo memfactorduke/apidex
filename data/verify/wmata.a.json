@@ -1,0 +1,52 @@
+{
+  "id": "wmata",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wmata.com/about/developers.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.wmata.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wmata.com/about/developers.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.wmata.com/license"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developer.wmata.com/products"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.wmata.com/products"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developer.wmata.com/apis"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.wmata.com/apis"
+    }
+  },
+  "notes": "WMATA's current portal is active and confirms free access, API-key authentication, and the listed rail, bus, incident, outage, and GTFS services. The public demo key is explicitly rate-limited, but no numeric quota was found. CORS is undocumented. The dynamically rendered official operation page was not available through search, so the exact curl example could not be authoritatively confirmed."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "tatoeba",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.tatoeba.org",
+      "source": "https://api.tatoeba.org/openapi.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wiki.tatoeba.org/articles/show/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.tatoeba.org/openapi.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wiki.tatoeba.org/articles/show/about-tatoeba"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://api.tatoeba.org/v1/sentences?lang=eng&q=hello&trans%3Alang=jpn'",
+      "source": "https://en.wiki.tatoeba.org/articles/show/api-migration-v1"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Collaborative, open multilingual sentence-and-translation dataset with a public read-only API; search results may include unapproved or orphaned, likely unproofread sentences unless filtered.",
+      "source": "https://api.tatoeba.org/openapi.json"
+    }
+  },
+  "notes": "The listed base URL and example use API v0, which Tatoeba now marks deprecated and warns will be switched off. Current stable endpoints use api.tatoeba.org/v1. No authoritative current publication of rate limits, quota limits, or CORS policy was located."
+}

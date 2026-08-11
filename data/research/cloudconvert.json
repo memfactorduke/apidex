@@ -1,0 +1,41 @@
+{
+  "id": "cloudconvert",
+  "status": "operational",
+  "name": "CloudConvert",
+  "category": "utilities",
+  "tagline": "File conversion API for 200+ formats including PDF, images, audio, and office documents.",
+  "description": "CloudConvert provides a REST API for converting files between 200+ formats. Developers create jobs with one or more tasks (import, convert, export), poll or use webhooks for completion, and download results. Supports PDF, images, audio/video, Office documents, ebooks, and more. Auth uses API keys or OAuth 2.0; free and paid plans are available with credit-based usage.",
+  "base_url": "https://api.cloudconvert.com/v2",
+  "docs_url": "https://cloudconvert.com/api/v2",
+  "signup_url": "https://cloudconvert.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (or OAuth 2.0). Create keys in the dashboard after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.cloudconvert.com/v2/tasks\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"data\":[{\"id\":\"...\",\"operation\":\"convert\",\"status\":\"finished\",\"...\"}]}"
+  },
+  "use_cases": [
+    "convert a PDF to DOCX or images",
+    "convert images between formats (PNG, JPG, WebP)",
+    "convert audio or video codecs/containers",
+    "merge or split PDF files via API jobs",
+    "watermark or compress documents programmatically"
+  ],
+  "sources": [
+    "https://cloudconvert.com/api/v2"
+  ],
+  "researcher_confidence": "low"
+}

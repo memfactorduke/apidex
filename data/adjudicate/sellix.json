@@ -1,0 +1,15 @@
+{
+  "id": "sellix",
+  "base_url": "No operational API base URL; service offline",
+  "docs_url": "https://github.com/Sellix/developers",
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "Not applicable; no service or pricing tier is currently available.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -L \"https://raw.githubusercontent.com/Sellix/developers/main/api-reference/openapi.json\"",
+  "example_response_snippet": "{\"openapi\":\"3.0.0\",\"servers\":[{\"description\":\"Sellix Developers API V1 endpoints\",\"url\":\"https://dev.sellix.io/v1\"}],\"info\":{\"description\":\"Sellix public API for developers to access merchant resources\",\"version\":\"1.0.0\",\"title\":\"Sellix Developers API\"}}",
+  "description": "Sellix formerly provided APIs for storefront, product, order, inventory, and payment operations, including cryptocurrency and card payments. The service is currently offline, so its archived API documentation is for historical reference only.",
+  "status": "defunct",
+  "resolution_notes": "base_url: no operational URL; Sellix says services await reinstatement (https://sellix.com/terms). docs_url: official archived repo (https://github.com/Sellix/developers). free_tier: false; free_tier_limits: N/A while offline (https://sellix.com/terms). example: replaced dead API call with working curl for the archived official OpenAPI (https://raw.githubusercontent.com/Sellix/developers/main/api-reference/openapi.json). description: changed to past tense/offline (https://sellix.com/terms)."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ably",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ably.com/docs/api/rest-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ably.com/docs/api/rest-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ably.com/docs/api/rest-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ably.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan includes 6M messages/month, 200 peak connections, 200 peak channels (verify current pricing page for exact numbers).",
+      "source": "https://ably.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are documented; not 'not published'. Check Ably limits docs for connection/message/channel limits by plan.",
+      "source": "https://ably.com/docs/general/limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ably.com/docs/api/rest-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ably.com/docs"
+    }
+  },
+  "notes": "free_tier_limits and rate_limits were marked unknown/not published but Ably publishes both; verify exact 2026 numbers on pricing/limits pages."
+}

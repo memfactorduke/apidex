@@ -1,0 +1,52 @@
+{
+  "id": "internet-archive",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://archive.org/developers/md-read.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://archive.org/developers/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "mixed: no authentication for most public reads; IA-S3 access/secret keys or session cookies for protected metadata and write operations, while some services require IA-S3 keys specifically",
+      "source": "https://archive.org/developers/metadata.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://archive.org/developers/tutorial-get-ia-credentials.html"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No fixed global numeric quota is stated, but current documentation requires descriptive User-Agent headers and directs automated clients to add delays, limit concurrency, and honor 429 responses and Retry-After headers; IAS3 writes may also receive 503 SlowDown responses during overload.",
+      "source": "https://archive.org/developers/bots.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s -H 'User-Agent: ExampleClient/1.0 (contact: you@example.com)' 'https://archive.org/metadata/goodytwoshoes00newyiala'",
+      "source": "https://archive.org/developers/bots.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://archive.org/developers/index-apis.html"
+    }
+  },
+  "notes": "The API and documented metadata endpoint remain operational. The entry understates authentication by labeling the whole API as none, omits the now-required User-Agent from its curl example, and inaccurately says rate-limit information is unpublished despite current qualitative guidance. No official API pricing-plan statement or definitive CORS policy was located."
+}

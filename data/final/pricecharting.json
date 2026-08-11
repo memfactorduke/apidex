@@ -1,0 +1,90 @@
+{
+  "id": "pricecharting",
+  "status": "operational",
+  "name": "PriceCharting API",
+  "category": "games-comics",
+  "tagline": "Video game, console, and TCG market prices with graded variants.",
+  "description": "Paid API for current collectible values across video games, consoles, trading cards, comics, and other supported categories. Returns product metadata and current prices for available grades and conditions; historical prices, sales, and trends are not available through the API.",
+  "base_url": "https://www.pricecharting.com",
+  "docs_url": "https://www.pricecharting.com/api-documentation",
+  "signup_url": "https://www.pricecharting.com/offers",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via t parameter on query string; obtained with a paid PriceCharting subscription."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Subscription required; exact tiers not fully confirmed from public pages."
+  },
+  "rate_limits": "1 API call per second; CSV downloads: 1 call every 10 minutes. Marketplace /api/offers requests to the same URL must be limited to 1 every 5 minutes.",
+  "example": {
+    "request": "curl \"https://www.pricecharting.com/api/product?t=YOUR_API_KEY&id=3911\"",
+    "response_snippet": "{\"status\":\"success\",\"product\":{\"id\":\"3911\",\"console-name\":\"Super Nintendo\",\"product-name\":\"Super Mario World\",\"loose-price\":2500,\"cib-price\":4500,\"new-price\":12000}}"
+  },
+  "use_cases": [
+    "look up current loose/CIB/new price for a video game",
+    "get graded card or game prices by product id",
+    "search products by name for inventory valuation",
+    "pull console and TCG market prices into a collection tracker"
+  ],
+  "sources": [
+    "https://www.pricecharting.com/api-documentation",
+    "https://www.pricecharting.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

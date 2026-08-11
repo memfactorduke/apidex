@@ -1,0 +1,15 @@
+{
+  "id": "sec-edgar",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": "no",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Public REST APIs from the U.S. Securities and Exchange Commission providing JSON company submission histories and extracted XBRL data, including company facts, company concepts, and reporting-period frames. No API key is required; automated access must follow the SEC's fair-access policy.",
+  "status": null,
+  "resolution_notes": "cors: Set to no. The SEC explicitly states that data.sec.gov does not support CORS: https://www.sec.gov/search-filings/edgar-application-programming-interfaces. description: Corrected. The same API documentation limits the public data APIs to filer submission histories and extracted XBRL data. The SEC lists Full-Text Search separately as a search tool, not part of these REST APIs, and does not document general market data in their scope: https://www.sec.gov/data-research/sec-data-resources."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "uk-carbon-intensity",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.carbonintensity.org.uk/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.carbonintensity.org.uk/",
+      "source": "https://www.carbonintensity.org.uk/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://carbon-intensity.github.io/api-definitions/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/carbon-intensity/terms"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Currently free, but not unlimited: NESO applies an unspecified rate limit, may block high-volume applications, and imposes usage restrictions.",
+      "source": "https://github.com/carbon-intensity/terms"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "NESO applies a rate limit and may block applications making many calls; the official terms do not state the numerical threshold.",
+      "source": "https://github.com/carbon-intensity/terms"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Supported for documented GET endpoints; successful responses include an Access-Control-Allow-Origin header.",
+      "source": "https://carbon-intensity.github.io/api-definitions/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://carbon-intensity.github.io/api-definitions/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The API is currently provided by the National Energy System Operator (NESO), not National Grid ESO. The remaining claims about forecast and estimated intensity, regional data, generation mix, regular updates, free access, and no authentication are supported.",
+      "source": "https://carbon-intensity.github.io/api-definitions/"
+    }
+  },
+  "notes": "The API is operational: /intensity returned current 2026 JSON during verification. The material errors are the outdated provider identity, wrong documentation URL, the unlimited-access claim, omission of the enforced rate limit, and CORS marked unknown despite official documentation listing Access-Control-Allow-Origin."
+}

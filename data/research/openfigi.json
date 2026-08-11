@@ -1,0 +1,40 @@
+{
+  "id": "openfigi",
+  "status": "operational",
+  "name": "OpenFIGI",
+  "category": "legal-compliance",
+  "tagline": "Bloomberg FIGI security identifier mapping for financial instruments",
+  "description": "OpenFIGI provides free and paid API access to map financial security identifiers (tickers, CUSIP, ISIN, SEDOL, etc.) to Bloomberg FIGIs, used widely in regulatory reporting and market data integration. Endpoints support single/batch mapping, search, and filter queries against a global instrument universe.",
+  "base_url": "https://api.openfigi.com/v3",
+  "docs_url": "https://www.openfigi.com/api",
+  "signup_url": "https://www.openfigi.com/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional API key via X-OPENFIGI-APIKEY header for higher rate limits; self-serve signup. Unauthenticated requests allowed at lower limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST 'https://api.openfigi.com/v3/mapping' -H 'Content-Type: application/json' -H 'X-OPENFIGI-APIKEY: YOUR_API_KEY' -d '[{\"idType\":\"TICKER\",\"idValue\":\"AAPL\",\"exchCode\":\"US\"}]'",
+    "response_snippet": "[{\"data\":[{\"figi\":\"BBG000B9XRY4\",\"name\":\"APPLE INC\",\"ticker\":\"AAPL\",\"exchCode\":\"US\",\"compositeFIGI\":\"BBG000B9XRY4\",\"securityType\":\"Common Stock\",\"marketSector\":\"Equity\",\"shareClassFIGI\":\"BBG001S5N8V8\",\"securityType2\":\"Common Stock\",\"securityDescription\":\"AAPL\"}]}]"
+  },
+  "use_cases": [
+    "map a ticker or ISIN to Bloomberg FIGI for regulatory reporting",
+    "batch-resolve CUSIP/SEDOL identifiers to FIGIs",
+    "search financial instruments by name or symbol",
+    "normalize security identifiers across market data feeds"
+  ],
+  "sources": [
+    "https://www.openfigi.com/api"
+  ],
+  "researcher_confidence": "low"
+}

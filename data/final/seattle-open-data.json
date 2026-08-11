@@ -1,0 +1,99 @@
+{
+  "id": "seattle-open-data",
+  "status": "operational",
+  "name": "Seattle Open Data API",
+  "category": "government-open-data",
+  "tagline": "SODA access to City of Seattle open datasets via data.seattle.gov",
+  "description": "The City of Seattle publishes open government datasets on data.seattle.gov, accessible through Socrata's SODA REST API. Developers can query hundreds of municipal datasets (crime, 911, permits, transportation, budgets, and more) as JSON, CSV, or other formats using SoQL filters, without scraping the portal UI.",
+  "base_url": "https://data.seattle.gov/resource",
+  "docs_url": "https://dev.socrata.com/foundry/data.seattle.gov/",
+  "signup_url": "https://data.seattle.gov/signup",
+  "auth": {
+    "type": "none",
+    "details": "Optional app token via X-App-Token header (or $$app_token query param); unauthenticated access allowed with stricter throttling. App tokens obtained from Socrata developer portal after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public SODA 2.1 reads are free. Anonymous requests use a lower shared IP-based pool; app-token requests have no fixed cap and are throttled only for abusive or malicious use. No numeric anonymous threshold is published.",
+    "paid_plans": null
+  },
+  "rate_limits": "Anonymous requests may be throttled mainly by source IP. App-token requests are currently unthrottled unless abusive or malicious. Throttling returns HTTP 429; no numeric threshold is published.",
+  "example": {
+    "request": "curl 'https://data.seattle.gov/resource/tazs-3rd5.json?$limit=1'",
+    "response_snippet": "[{\"report_number\":\"2014-174521\",\"report_date_time\":\"2014-06-02T21:14:00.000\",\"offense_id\":\"7699897715\",\"offense_date\":\"2014-06-02T17:00:00.000\",\"nibrs_group_a_b\":\"A\",\"nibrs_crime_against_category\":\"PROPERTY\",\"offense_sub_category\":\"MOTOR VEHICLE THEFT\"}]"
+  },
+  "use_cases": [
+    "query recent Seattle 911 or crime incidents by date and neighborhood",
+    "pull building permit applications for a Seattle address or district",
+    "list Seattle traffic camera or transportation dataset rows with SoQL filters",
+    "export Seattle budget or city department open data as JSON for analysis"
+  ],
+  "sources": [
+    "https://data.seattle.gov/",
+    "https://dev.socrata.com/foundry/data.seattle.gov/",
+    "https://dev.socrata.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

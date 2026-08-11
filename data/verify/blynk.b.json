@@ -1,0 +1,52 @@
+{
+  "id": "blynk",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blynk.cloud"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.blynk.io/en/blynk.cloud/device-https-api/https-api-overview",
+      "source": "https://docs.blynk.io/en/blynk.cloud/device-https-api/https-api-overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.blynk.io/en/blynk.cloud/device-https-api/https-api-overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blynk.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.blynk.io/en/blynk.cloud/device-https-api/https-api-overview"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.blynk.io/en/blynk.cloud/device-https-api/https-api-overview"
+    }
+  },
+  "notes": "docs_url 404: path moved under device-https-api. base_url/API example valid; free tier exists; rate limits/CORS not published; auth is token query param."
+}

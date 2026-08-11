@@ -1,0 +1,41 @@
+{
+  "id": "open5e",
+  "status": "operational",
+  "name": "Open5e",
+  "category": "games-comics",
+  "tagline": "Open 5e RPG content API for monsters, spells, and SRD material",
+  "description": "Open5e provides a free, open-content REST API for Dungeons & Dragons 5th Edition and related SRD material, including monsters, spells, classes, magic items, and third-party open content. Developers can query structured game data for character builders, encounter tools, and RPG apps without proprietary licensing barriers.",
+  "base_url": "https://api.open5e.com",
+  "docs_url": "https://open5e.com/api-docs",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.open5e.com/v1/spells/?search=fireball\"",
+    "response_snippet": "{\"count\":1,\"next\":null,\"previous\":null,\"results\":[{\"slug\":\"fireball\",\"name\":\"Fireball\",\"level\":3,\"school\":\"Evocation\",\"...\"}]}"
+  },
+  "use_cases": [
+    "look up 5e spell details by name",
+    "list monsters filtered by challenge rating",
+    "fetch magic item stats for inventory tools",
+    "search SRD classes and subclasses for character builders"
+  ],
+  "sources": [
+    "https://open5e.com/api-docs",
+    "https://api.open5e.com"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "osrm",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Project-OSRM/osrm-backend/wiki/Demo-server"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://project-osrm.org/docs/",
+      "source": "https://project-osrm.org/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Project-OSRM/osrm-backend"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The sponsored public demo is restricted to reasonable, non-commercial use, with a maximum of 1 request per second, no scraping or heavy usage, and no uptime, latency, or data-update guarantees. Official sources do not publish paid-plan information.",
+      "source": "https://github.com/Project-OSRM/osrm-backend/wiki/Demo-server"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Maximum 1 request per second; no scraping or heavy usage.",
+      "source": "https://routing.openstreetmap.de/about.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Project-OSRM/osrm-backend/blob/master/docs/http.md"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OSRM is a high-performance OpenStreetMap routing engine. Its public demo supports worldwide car, bicycle, and foot profiles and is restricted to reasonable, non-commercial use at no more than 1 request per second, without service guarantees.",
+      "source": "https://github.com/Project-OSRM/osrm-backend/wiki/Demo-server"
+    }
+  },
+  "notes": "The demo endpoint is live, but the entry misses its published 1 request/second cap and non-commercial/no-heavy-use rules. It also overemphasizes car routing despite official car, bike, and foot profiles. The v5.24 documentation still resolves but is obsolete; the current unversioned documentation URL should be used."
+}

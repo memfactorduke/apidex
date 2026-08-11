@@ -1,0 +1,38 @@
+{
+  "id": "open-ownership",
+  "status": "operational",
+  "name": "Open Ownership / BODS",
+  "category": "legal-compliance",
+  "tagline": "Beneficial ownership data standard and API for ultimate beneficial owner research",
+  "description": "Open Ownership provides beneficial ownership data following the Beneficial Ownership Data Standard (BODS), enabling developers to research ultimate beneficial owners of companies and other legal entities through a public API.",
+  "base_url": "https://api.openownership.org",
+  "docs_url": "https://api.openownership.org/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "unknown"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.openownership.org/",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "look up beneficial owners of a company",
+    "search entities by name for ownership research"
+  ],
+  "sources": [
+    "https://api.openownership.org/"
+  ],
+  "researcher_confidence": "low"
+}

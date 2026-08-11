@@ -1,0 +1,95 @@
+{
+  "id": "affinda",
+  "status": "operational",
+  "name": "Affinda Resume Parser",
+  "category": "jobs-careers",
+  "tagline": "AI resume and CV parsing API with structured skills and experience extraction",
+  "description": "Affinda provides an AI-powered document parsing API specializing in resumes and CVs. It extracts structured fields such as contact info, work experience, education, skills, and certifications from uploaded documents, returning JSON suitable for ATS, recruiting, and HR workflows.",
+  "base_url": "https://api.affinda.com/v3",
+  "docs_url": "https://docs.affinda.com/",
+  "signup_url": "https://app.affinda.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (self-serve signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://api.affinda.com/v3/documents\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: multipart/form-data\" -F \"file=@resume.pdf\" -F \"workspace=YOUR_WORKSPACE\"",
+    "response_snippet": "{\"data\":{\"name\":{\"raw\":\"Jane Doe\"},\"emails\":[\"jane@example.com\"],\"phoneNumbers\":[\"+1 555-0100\"],\"skills\":[{\"name\":\"Python\"}],\"workExperience\":[{\"jobTitle\":\"Engineer\",\"organization\":\"Acme\"}]}"
+  },
+  "use_cases": [
+    "parse a resume PDF into structured JSON",
+    "extract skills and work history from a CV",
+    "normalize candidate contact info from uploaded resumes",
+    "batch-parse applicant CVs for ATS ingestion"
+  ],
+  "sources": [
+    "https://docs.affinda.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

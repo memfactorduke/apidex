@@ -1,0 +1,95 @@
+{
+  "id": "cta-api",
+  "status": "operational",
+  "name": "CTA Bus Tracker / Train Tracker",
+  "category": "transportation",
+  "tagline": "Chicago Transit Authority real-time bus and train tracking APIs",
+  "description": "CTA provides developer APIs for real-time bus tracking (Bus Tracker) and rail arrivals (Train Tracker), plus related schedule and service data for Chicago transit apps and tools.",
+  "base_url": "https://lapi.transitchicago.com/api/1.0/ (Train Tracker); https://www.ctabustracker.com/bustime/api/v3/ (Bus Tracker)",
+  "docs_url": "https://www.transitchicago.com/developers/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Research pending \u2014 verify from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free API keys are required. Train Tracker: 50,000 transactions/day by default. Bus Tracker: 100,000 transactions/day by default. CTA may approve higher limits; DoS protection may temporarily time out heavy traffic.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl 'https://www.ctabustracker.com/bustime/api/v3/getpredictions?key=YOUR_KEY&rt=20&stpid=456&format=json'",
+    "response_snippet": "{\"bustime-response\":{\"prd\":[{\"tmstmp\":\"20250421 16:04\",\"typ\":\"A\",\"stpnm\":\"Madison & Jefferson\",\"stpid\":\"456\",\"vid\":\"8184\",\"rt\":\"20\",\"rtdir\":\"Westbound\",\"des\":\"Austin\",\"prdtm\":\"20250421 16:06\",\"dly\":false,\"prdctdn\":\"DUE\"}]}}"
+  },
+  "use_cases": [
+    "get real-time bus arrivals for a stop",
+    "get train arrival predictions by station"
+  ],
+  "sources": [
+    "https://www.transitchicago.com/developers/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ifttt",
+  "status": "operational",
+  "name": "IFTTT",
+  "category": "iot-devices",
+  "tagline": "Connect apps, devices, and services with applets and webhooks without custom middleware.",
+  "description": "IFTTT is a service integration platform that lets developers and end users connect apps, IoT devices, and web services through applets, webhooks, and service APIs. Developers can publish services, trigger events, and receive webhooks so devices and SaaS tools talk to each other without custom glue code.",
+  "base_url": "https://ifttt.com",
+  "docs_url": "https://ifttt.com/docs/api",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "unknown"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS 'https://ifttt.com/docs/api'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "trigger an IFTTT applet from a webhook",
+    "connect an IoT device event to another service"
+  ],
+  "sources": [
+    "https://ifttt.com/docs/api"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "openfigi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.openfigi.com/schema"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openfigi.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openfigi.com/api/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openfigi.com/api/overview"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free API with no daily, weekly, or monthly cap. Anonymous limits: mapping 25 requests/minute and search/filter 5 requests/minute. Free-key limits: mapping 25 requests/6 seconds and search/filter 20 requests/minute. Search/filter is capped at 15,000 results, 100 per page, and 150 pages.",
+      "source": "https://www.openfigi.com/api/documentation"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits: mapping 25 requests/minute without a key or 25 requests/6 seconds with a key; search/filter 5 requests/minute without a key or 20 requests/minute with a key.",
+      "source": "https://www.openfigi.com/api/documentation"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://api.openfigi.com/schema"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openfigi.com/api/documentation"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OpenFIGI provides a free, open API for mapping third-party identifiers to FIGIs and for instrument search and filtering; official sources do not describe paid API access and state that access has no hidden fees.",
+      "source": "https://www.openfigi.com/about/faq"
+    }
+  },
+  "notes": "The API and v3 endpoint are current and operational. Explicit rate limits are published. Official documentation is internally inconsistent about anonymous mapping jobs per request\u2014one table says 10 and the endpoint-specific table says 5\u2014so the corrections report only uncontested limits. CORS is not documented in the official schema or API pages."
+}

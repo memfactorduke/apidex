@@ -1,0 +1,43 @@
+{
+  "id": "google-cloud-natural-language",
+  "status": "operational",
+  "name": "Google Cloud Natural Language",
+  "category": "ai-ml",
+  "tagline": "Entity, sentiment, and syntax analysis without training models.",
+  "description": "Google Cloud Natural Language API provides pre-trained machine learning models for entity recognition, sentiment analysis, syntax analysis, and content classification without requiring model training. It supports multiple languages and integrates with other Google Cloud services for text analysis workflows.",
+  "base_url": "https://language.googleapis.com/v1",
+  "docs_url": "https://cloud.google.com/natural-language/docs",
+  "signup_url": "https://console.cloud.google.com/apis/library/language.googleapis.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter or OAuth2 access token via Authorization: Bearer header. Requires Google Cloud project with Natural Language API enabled."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "5,000 units/month free for entity analysis, sentiment analysis, and syntax analysis; 30,000 units/month free for content classification (verify on pricing page)",
+    "paid_plans": "Pay-as-you-go after free tier; pricing varies by feature (entity, sentiment, syntax, classification)"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://language.googleapis.com/v1/documents:analyzeSentiment?key=YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"document\":{\"type\":\"PLAIN_TEXT\",\"content\":\"Google Cloud Natural Language is powerful.\"},\"encodingType\":\"UTF8\"}'",
+    "response_snippet": "{\"documentSentiment\":{\"magnitude\":0.8,\"score\":0.8},\"language\":\"en\",\"sentences\":[{\"text\":{\"content\":\"Google Cloud Natural Language is powerful.\",\"beginOffset\":0},\"sentiment\":{\"magnitude\":0.8,\"score\":0.8}}]}"
+  },
+  "use_cases": [
+    "analyze sentiment of product reviews",
+    "extract named entities from news articles",
+    "parse syntax and parts of speech in text",
+    "classify content into categories",
+    "detect language of user-submitted text"
+  ],
+  "sources": [
+    "https://cloud.google.com/natural-language/docs",
+    "https://cloud.google.com/natural-language/pricing",
+    "https://cloud.google.com/natural-language/docs/reference/rest"
+  ],
+  "researcher_confidence": "medium"
+}

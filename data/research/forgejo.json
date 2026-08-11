@@ -1,0 +1,44 @@
+{
+  "id": "forgejo",
+  "status": "operational",
+  "name": "Codeberg Forgejo API",
+  "category": "dev-tools",
+  "tagline": "REST API for Codeberg, a free Forgejo-powered Git hosting platform",
+  "description": "Codeberg is a free, community-driven Git hosting service powered by Forgejo. It provides a Swagger-documented REST API for managing repositories, issues, pull requests, organizations, and user data\u2014serving as a FOSS alternative to GitHub for open-source projects.",
+  "base_url": "https://codeberg.org/api/v1",
+  "docs_url": "https://codeberg.org/api/swagger",
+  "signup_url": "https://codeberg.org/user/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal access token via Authorization: token YOUR_API_KEY header, or query parameter access_token. Self-serve signup at Codeberg; tokens created in user settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for public/open-source use; Codeberg is donation-funded. No paid API plans for standard hosting.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (Forgejo/Gitea-style rate limiting may apply; check response headers)",
+  "example": {
+    "request": "curl -H \"Authorization: token YOUR_API_KEY\" \"https://codeberg.org/api/v1/user\"",
+    "response_snippet": "{\"id\":1,\"login\":\"username\",\"full_name\":\"\",\"email\":\"user@example.com\",\"avatar_url\":\"https://codeberg.org/avatars/...\",\"language\":\"en-US\",\"is_admin\":false,\"last_login\":\"2026-01-01T00:00:00Z\",\"created\":\"2020-01-01T00:00:00Z\"}"
+  },
+  "use_cases": [
+    "list repositories for a Codeberg user or org",
+    "create or update issues on a Codeberg repo",
+    "fetch pull request details and reviews",
+    "star or watch a repository",
+    "search Codeberg repositories by keyword",
+    "get authenticated user profile and settings"
+  ],
+  "sources": [
+    "https://codeberg.org/api/swagger",
+    "https://codeberg.org/",
+    "https://forgejo.org/docs/"
+  ],
+  "researcher_confidence": "medium"
+}

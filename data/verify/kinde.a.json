@@ -1,0 +1,52 @@
+{
+  "id": "kinde",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://<your_subdomain>.kinde.com",
+      "source": "https://docs.kinde.com/developer-tools/kinde-api/access-token-for-api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.kinde.com/kinde-apis/",
+      "source": "https://docs.kinde.com/kinde-apis/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.kinde.com/developer-tools/kinde-api/access-token-for-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kinde.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 10,500 MAU, 5 monthly active organizations, 2,000 M2M tokens, 2 custom roles, 10 permissions, 10 feature flags, 5 custom properties, 1 webhook per environment, and 2 environments.",
+      "source": "https://www.kinde.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published guidance: requests may receive HTTP 429; GET endpoints using page_size allow up to 500 results per request, bulk POST/PATCH requests allow up to 100 objects, and RateLimit-Reset indicates seconds until reset. No universal requests-per-minute figure is stated.",
+      "source": "https://docs.kinde.com/developer-tools/kinde-api/api-rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl --request GET --url 'https://<your_subdomain>.kinde.com/api/v1/users' --header 'authorization: Bearer <m2m_access_token>' --header 'content-type: application/json'",
+      "source": "https://docs.kinde.com/developer-tools/kinde-api/access-token-for-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.kinde.com/kinde-apis/"
+    }
+  },
+  "notes": "Kinde's APIs are operational, but the directory entry uses an invalid global API host and a removed documentation URL. Management API requests are tenant-domain based. Current official pricing and rate-limit documentation provides concrete limits, so both corresponding unknown/not-published claims are outdated."
+}

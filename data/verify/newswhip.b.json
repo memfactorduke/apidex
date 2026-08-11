@@ -1,0 +1,45 @@
+{
+  "id": "newswhip",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://developer.newswhip.com/reference/articles"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.newswhip.com/",
+      "source": "https://developer.newswhip.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://developer.newswhip.com/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "source": "https://developer.newswhip.com/docs/guide-welcome"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "source": "https://developer.newswhip.com/docs/guide-welcome"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests per rolling 5 minutes, with no more than 5 requests per second.",
+      "source": "https://developer.newswhip.com/docs/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"https://api.newswhip.com/v1/articles?key=YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"filters\":[\"climate\"]}'",
+      "source": "https://developer.newswhip.com/reference/articles"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://developer.newswhip.com/docs/data-dictionary"
+    }
+  },
+  "notes": "The API is operational; a 404 at its bare host is not evidence of shutdown. The documentation moved to developer.newswhip.com. The submitted example incorrectly uses GET and unsupported q/from query parameters for /v1/articles, which is documented as POST with JSON body filters. Official documentation offers request-based trials, but does not clearly establish whether a permanent free tier exists."
+}

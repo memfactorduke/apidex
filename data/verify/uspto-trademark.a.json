@@ -1,0 +1,52 @@
+{
+  "id": "uspto-trademark",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tsdr.uspto.gov/faqview"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.uspto.gov/trademarks/apply/check-status-view-documents/trademark-bulk-data",
+      "source": "https://www.uspto.gov/trademarks/apply/check-status-view-documents/trademark-bulk-data"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.uspto.gov/sites/default/files/documents/tm-enterprise-api-user-guide-v2.pdf"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests per API key per minute; PDF/ZIP and multi-case PDF/ZIP downloads are limited to 4 per key per minute. From 10 p.m. to 5 a.m. ET, the respective limits are 120 and 12.",
+      "source": "https://www.uspto.gov/sites/default/files/documents/tm-enterprise-api-user-guide-v2.pdf"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests per API key per minute; PDF/ZIP and multi-case PDF/ZIP downloads are limited to 4 per key per minute. Published limits are higher during off-peak hours.",
+      "source": "https://tsdr.uspto.gov/faqview"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tsdr.uspto.gov/faqview"
+    }
+  },
+  "notes": "USPTO still publishes tsdrapi.uspto.gov endpoints and reports TSDR operational, so HTTP 0 is not sufficient evidence that the host is dead. The legacy Developer Hub catalog now redirects to the new Open Data Portal. Current official material confirms the API-key header and XML paths, but I could not authoritatively verify the example's exact JSON path."
+}

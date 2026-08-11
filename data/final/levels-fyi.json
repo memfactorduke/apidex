@@ -1,0 +1,97 @@
+{
+  "id": "levels-fyi",
+  "status": "operational",
+  "name": "Levels.fyi",
+  "category": "jobs-careers",
+  "tagline": "Tech compensation data API for salaries, levels, and offers",
+  "description": "Levels.fyi offers granular, real-time salary, compensation, and leveling data. API, MCP, or CLI access is request-based; Data Stream API access is listed with the paid Enterprise plan. Public pages do not document REST endpoints, authentication, or request examples.",
+  "base_url": "https://api.levels.fyi",
+  "docs_url": "https://www.levels.fyi/api-access/",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Access model unclear from public docs; community/partner access varies. Verify current auth before use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No free API tier is published. MCP/API access to the Data Stream is included in Enterprise at $4,000/month with an annual commitment.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sL \"https://www.levels.fyi/api-access/\"",
+    "response_snippet": "<!DOCTYPE html>...<title>Levels.fyi API, MCP & CLI \u2013 Real-time Compensation Data</title>..."
+  },
+  "use_cases": [
+    "look up typical total compensation for a tech role at a company",
+    "compare salary bands across levels at a company",
+    "benchmark an offer against market compensation data",
+    "find level titles and ranges for a company ladder"
+  ],
+  "sources": [
+    "https://www.levels.fyi/community/",
+    "https://www.levels.fyi/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "base_url",
+      "auth_type",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

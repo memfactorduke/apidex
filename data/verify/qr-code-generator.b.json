@@ -1,0 +1,52 @@
+{
+  "id": "qr-code-generator",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The policy is published: there is no request limit, but abusive or inappropriate requests may be rejected; users should notify the provider if their service regularly generates more than 10,000 requests per day.",
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Public HTTPS API from goqr.me that generates PNG, GIF, JPEG/JPG, SVG, or EPS QR-code images from submitted data without signup. The official create endpoint does not document additional output formats.",
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    }
+  },
+  "notes": "The API and documented v1 endpoint remain available. The decisive error is that rate limits are described as unpublished even though the official documentation publishes a no-request-limit policy, abuse exception, and 10,000-requests/day notification threshold. The description also overstates the documented image formats. CORS could not be established from official documentation."
+}

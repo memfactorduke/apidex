@@ -1,0 +1,52 @@
+{
+  "id": "sec-edgar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/about/privacy-information"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "unsupported",
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The documented data.sec.gov REST APIs provide JSON submissions histories and extracted XBRL data. EDGAR Full-Text Search is a separate SEC search tool, and market-price data is not part of the documented API scope.",
+      "source": "https://www.sec.gov/data-research/sec-data-resources"
+    }
+  },
+  "notes": "The automated 403 appears to be SEC bot filtering, not a bad documentation URL; the official page remains current. The entry fails because CORS is explicitly unsupported and the description incorrectly folds the separate Full-Text Search tool and unspecified market data into the documented data.sec.gov API."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "go-module-proxy",
+  "status": "operational",
+  "name": "Go Module Proxy",
+  "category": "dev-tools",
+  "tagline": "Official Go module download and checksum proxy for the go toolchain",
+  "description": "The official Go module proxy (proxy.golang.org) and related sum database endpoints used by every go toolchain install. Serves module zip/mod/info content and supports public, unauthenticated access for resolving Go module versions and source archives.",
+  "base_url": "https://proxy.golang.org",
+  "docs_url": "https://proxy.golang.org/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public module downloads"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sL https://proxy.golang.org/golang.org/x/text/@v/list",
+    "response_snippet": "v0.3.0\nv0.3.1\nv0.3.2"
+  },
+  "use_cases": [
+    "list available versions of a Go module",
+    "download a Go module zip for offline analysis",
+    "fetch go.mod contents for a specific module version",
+    "resolve latest version info for a Go package"
+  ],
+  "sources": [
+    "https://proxy.golang.org/"
+  ],
+  "researcher_confidence": "low"
+}

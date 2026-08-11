@@ -1,0 +1,45 @@
+{
+  "id": "lever",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://github.com/lever/postings-api#api-methods"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://hire.lever.co/developer"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://hire.lever.co/developer/support"
+    },
+    "free_tier": {
+      "verdict": "unverifiable"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Official sources do not state a free-tier allowance or no-cap policy. They publish a limit of 2 application POST requests per second; listing-GET limits are not stated.",
+      "source": "https://github.com/lever/postings-api#post-application-rate-limit"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Application POST requests are limited to 2 per second; exceeding this returns HTTP 429. No listing-GET limit is published.",
+      "source": "https://github.com/lever/postings-api#post-application-rate-limit"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is supported from the company's domains and subdomains, but not from origins outside them.",
+      "source": "https://github.com/lever/postings-api#introduction"
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://api.lever.co/v0/postings/leverdemo?mode=json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://github.com/lever/postings-api"
+    }
+  },
+  "notes": "The documented endpoint is operational and the supplied curl returned JSON during verification. Public listing reads require no authentication. Pricing/free-tier status is not explicitly documented. The entry fails because CORS is documented, and the API has a published application-POST rate limit."
+}

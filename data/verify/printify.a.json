@@ -1,0 +1,52 @@
+{
+  "id": "printify",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.printify.com/#api-basics"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.printify.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.printify.com/#authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://printify.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.printify.com/hc/en-us/articles/4483638151569-Does-Printify-cost-anything"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "600 requests per minute globally; Catalog endpoints additionally allow 100 requests per minute per integration, and product publishing allows 200 requests per 30 minutes. Error responses may not exceed 5% of total requests.",
+      "source": "https://developers.printify.com/#api-usage-guidelines"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is not supported; Printify requires API access through a server-side application.",
+      "source": "https://developers.printify.com/#api-basics"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" -H \"User-Agent: MyApp\" \"https://api.printify.com/v1/shops.json\"",
+      "source": "https://developers.printify.com/#create-a-personal-access-token"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Printify API lets developers browse catalog data and manage merchant-shop products and orders, including creating and publishing products, submitting orders, calculating shipping costs, receiving webhook events, and supporting fulfillment workflows.",
+      "source": "https://developers.printify.com/"
+    }
+  },
+  "notes": "V1 remains supported, although Printify recommends V2 for new integrations. The entry misses published rate limits, incorrectly leaves CORS unknown, and omits the mandatory User-Agent header. Its inventory-sync claim is not supported by the documented endpoints. OAuth 2.0 is also available for multi-merchant platforms."
+}

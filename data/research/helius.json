@@ -1,0 +1,42 @@
+{
+  "id": "helius",
+  "status": "operational",
+  "name": "Helius",
+  "category": "crypto",
+  "tagline": "Solana RPC, DAS NFT/token APIs, and webhooks for Solana apps",
+  "description": "Helius provides Solana-first infrastructure including high-performance RPC, Digital Asset Standard (DAS) APIs for NFTs and tokens, enhanced transactions, and webhooks. Developers use it to power wallets, marketplaces, indexers, and on-chain apps without running their own Solana nodes.",
+  "base_url": "https://api.helius.xyz",
+  "docs_url": "https://docs.helius.dev/",
+  "signup_url": "https://dashboard.helius.dev/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter ?api-key=YOUR_API_KEY or Authorization header; self-serve signup at dashboard.helius.dev"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier with limited credits (confirm on pricing page)",
+    "paid_plans": "Developer, Business, Professional, and Enterprise plans with higher credit allowances"
+  },
+  "rate_limits": "Credit-based limits vary by plan; not a simple fixed RPS for all endpoints",
+  "example": {
+    "request": "curl \"https://api.helius.xyz/v0/addresses/YOUR_WALLET/balances?api-key=YOUR_API_KEY\"",
+    "response_snippet": "{\"tokens\":[{\"mint\":\"...\",\"amount\":...,\"decimals\":...}],\"nativeBalance\":...}"
+  },
+  "use_cases": [
+    "fetch Solana wallet token balances",
+    "query NFT metadata via DAS API",
+    "subscribe to on-chain webhooks for transactions",
+    "get enhanced transaction history for a wallet",
+    "call Solana JSON-RPC methods with API key"
+  ],
+  "sources": [
+    "https://docs.helius.dev/",
+    "https://www.helius.dev/pricing"
+  ],
+  "researcher_confidence": "low"
+}

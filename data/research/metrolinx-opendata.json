@@ -1,0 +1,43 @@
+{
+  "id": "metrolinx-opendata",
+  "status": "operational",
+  "name": "GO Transit / Metrolinx Open Data",
+  "category": "transportation",
+  "tagline": "Greater Toronto GO Transit schedules and real-time GTFS feeds for developers",
+  "description": "Metrolinx Open Data provides GTFS schedule and real-time vehicle/trip update feeds for GO Transit and related regional transit services in the Greater Toronto and Hamilton Area. Developers use static GTFS files and GTFS-Realtime endpoints for trip planning, service alerts, and live vehicle positions.",
+  "base_url": "https://api.open.metrolinx.com",
+  "docs_url": "https://www.gotransit.com/en/information-resources/software-developers",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required for real-time Open Data endpoints; obtained via Metrolinx Open Data registration. Static GTFS may be downloadable without a key."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.open.metrolinx.com/OpenDataAPI/api/V1/Stop/NextService/UN\" -H \"x-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\"Metadata\":{\"ErrorCode\":\"200\",\"ErrorMessage\":\"OK\"},\"NextService\":{\"Lines\":[{\"StopCode\":\"UN\",\"LineCode\":\"LW\",\"LineDisplay\":\"Lakeshore West\",\"DirectionCode\":\"E\",\"DirectionName\":\"Eastbound\",\"ScheduledDeparture\":\"2026-08-10T14:30:00\",\"ComputedDeparture\":\"2026-08-10T14:32:00\"}]}}"
+  },
+  "use_cases": [
+    "get next GO train departures for a station",
+    "download GO Transit GTFS schedule for trip planning",
+    "fetch real-time vehicle positions for GO trains",
+    "check service alerts and delays for GO Transit lines",
+    "look up stop and route metadata for GTHA regional transit"
+  ],
+  "sources": [
+    "https://www.gotransit.com/en/information-resources/software-developers",
+    "https://www.metrolinx.com"
+  ],
+  "researcher_confidence": "low"
+}

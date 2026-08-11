@@ -1,0 +1,15 @@
+{
+  "id": "ifttt",
+  "base_url": "https://connect.ifttt.com",
+  "docs_url": "https://ifttt.com/docs/connect_api",
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": "No free API/Webhooks access. Webhooks triggers and action require Pro; Webhooks queries and IFTTT Platform developer tools require Pro+.",
+  "rate_limits": "Connect API limits are not published. Webhooks is unavailable on Free and limited to 240 requests per minute on Pro and Pro+.",
+  "cors": null,
+  "example_request": "curl -sS 'https://connect.ifttt.com/v2/me?user_id=YOUR_USER_ID' -H 'IFTTT-Service-Key: YOUR_SERVICE_KEY'",
+  "example_response_snippet": "{\"type\":\"me\",\"authentication_level\":\"channel\",\"service_id\":\"acme_social_network\",\"user_login\":\"example_user\"}",
+  "description": "IFTTT connects apps, devices, and web services through Applets and Webhooks. Developers and partners can build reviewed services using the Service API and use the Connect API to embed connections and invoke supported operations; integrations may require an IFTTT-compatible API layer or shim.",
+  "status": null,
+  "resolution_notes": "base_url=corrected; docs_url=corrected; auth_type=apiKey; example=corrected - https://ifttt.com/docs/connect_api. free_tier_limits=no Free access; Webhooks needs Pro and queries/Platform need Pro+ - https://ifttt.com/plans and https://help.ifttt.com/hc/en-us/articles/115010230347-Webhooks-service-FAQ. rate_limits=240/min on Pro/Pro+, unavailable on Free - https://help.ifttt.com/hc/en-us/articles/1260803229749-IFTTT-Service-Rate-Limits. description=corrected: integrations may need a shim - https://ifttt.com/docs."
+}

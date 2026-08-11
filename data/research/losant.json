@@ -1,0 +1,41 @@
+{
+  "id": "losant",
+  "status": "operational",
+  "name": "Losant",
+  "category": "iot-devices",
+  "tagline": "Industrial IoT platform API for devices, workflows, data tables, and experiences",
+  "description": "Losant is an industrial IoT application platform exposing a REST API for managing devices, applications, workflows, data tables, experiences, and related resources. Developers authenticate with API tokens and call versioned endpoints to provision devices, query telemetry, run workflows, and build multi-tenant experiences on the platform.",
+  "base_url": "https://api.losant.com",
+  "docs_url": "https://docs.losant.com/rest-api/overview/",
+  "signup_url": "https://accounts.losant.com/create-account",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via Authorization: Bearer header (or token query param); create tokens in application or user settings after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\" \"https://api.losant.com/applications\"",
+    "response_snippet": "{\n  \"count\": 1,\n  \"items\": [\n    {\n      \"id\": \"5a67b4d91ae13b0007b65b3b\",\n      \"name\": \"My Application\",\n      \"description\": \"...\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "list applications and devices in a Losant org",
+    "query device state or attributes for IoT assets",
+    "read or write data table rows for industrial data",
+    "trigger or inspect workflows for automation",
+    "manage experience users and endpoints for multi-tenant apps"
+  ],
+  "sources": [
+    "https://docs.losant.com/rest-api/overview/"
+  ],
+  "researcher_confidence": "low"
+}

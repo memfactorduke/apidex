@@ -1,0 +1,52 @@
+{
+  "id": "metalpriceapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests/month with daily updates on the Free plan. Basic is a paid plan with 10,000 requests/month.",
+      "source": "https://metalpriceapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/documentation"
+    }
+  },
+  "notes": "Official documentation and pricing are live. The free quota was mislabeled as Basic, and CORS is explicitly supported. Although auth_type is correctly apiKey, the unscored auth details should name the documented X-API-KEY header rather than Authorization. Paid plans begin with Essential, not Pro. No official per-second or per-minute limit was found."
+}

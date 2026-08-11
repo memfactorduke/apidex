@@ -1,0 +1,15 @@
+{
+  "id": "esa-sky",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sG \"https://sky.esa.int/esasky-tap/tap/sync\" --data-urlencode \"REQUEST=doQuery\" --data-urlencode \"LANG=ADQL\" --data-urlencode \"FORMAT=json\" --data-urlencode \"QUERY=SELECT table_name FROM TAP_SCHEMA.tables WHERE table_name='tap_schema.tables'\"",
+  "example_response_snippet": "{\"metadata\":[{\"name\":\"table_name\",\"datatype\":\"VARCHAR\"}],\"data\":[[\"tap_schema.tables\"]]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ORIGINAL is correct. ESA's current TAP+ home page identifies https://sky.esa.int/esasky-tap/tap as the service root and exposes sync and tables beneath it: https://sky.esa.int/esasky-tap/tap . example: corrected conservatively to query mandatory TAP_SCHEMA metadata instead of assuming ivoa.obscore; ESA documents ADQL table discovery and SELECT queries at https://www.cosmos.esa.int/web/esdc/esasky-interface and TAP sync parameters at https://www.cosmos.esa.int/web/gaia-users/archive/programmatic-access ."
+}

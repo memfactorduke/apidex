@@ -1,0 +1,46 @@
+{
+  "id": "screenshotone",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://screenshotone.com/docs/getting-started/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://screenshotone.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://screenshotone.com/docs/api-keys/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://screenshotone.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 screenshots per month",
+      "source": "https://screenshotone.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published and plan-dependent: Basic 40 requests/minute, Growth 80 requests/minute, and Scale 150 requests/minute.",
+      "source": "https://screenshotone.com/pricing/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://screenshotone.com/docs/getting-started/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://screenshotone.com/docs/options/"
+    }
+  },
+  "notes": "The API is operational. Although auth_type is correctly apiKey, the auth details are misleading: secret_key must not be sent as a request parameter; it is used locally to generate a signature. Paid plans are also currently published, so paid_plans:null is outdated."
+}

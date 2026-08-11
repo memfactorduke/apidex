@@ -1,0 +1,40 @@
+{
+  "id": "opensanctions",
+  "status": "operational",
+  "name": "OpenSanctions",
+  "category": "legal-compliance",
+  "tagline": "Consolidated global sanctions, PEPs, and watchlist matching API",
+  "description": "OpenSanctions provides a consolidated API for global sanctions lists, politically exposed persons (PEPs), and watchlist screening for AML and compliance workflows. It offers entity search, matching, and bulk data access across multiple official sources.",
+  "base_url": "https://api.opensanctions.org",
+  "docs_url": "https://www.opensanctions.org/docs/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and signup flow need verification from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://api.opensanctions.org/search/default?q=putin' -H 'Authorization: ApiKey YOUR_API_KEY'",
+    "response_snippet": "{\"results\":[]}"
+  },
+  "use_cases": [
+    "screen a person or company against global sanctions lists",
+    "match customer data against PEPs and watchlists",
+    "look up an entity by OpenSanctions ID",
+    "bulk-export sanctioned entities for offline screening"
+  ],
+  "sources": [
+    "https://www.opensanctions.org/docs/api/"
+  ],
+  "researcher_confidence": "low"
+}

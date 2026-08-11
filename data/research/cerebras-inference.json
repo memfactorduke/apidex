@@ -1,0 +1,41 @@
+{
+  "id": "cerebras-inference",
+  "status": "operational",
+  "name": "Cerebras Inference",
+  "category": "ai-ml",
+  "tagline": "Ultra-low-latency LLM inference on Cerebras wafer-scale chips",
+  "description": "Cerebras Inference provides ultra-low-latency large language model inference powered by Cerebras wafer-scale chips. It offers OpenAI-compatible APIs for chat completions and other LLM tasks, enabling developers to build high-performance AI applications with exceptional speed.",
+  "base_url": "https://api.cerebras.ai/v1",
+  "docs_url": "https://inference-docs.cerebras.ai/",
+  "signup_url": "https://cloud.cerebras.ai/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header, self-serve signup at cloud.cerebras.ai"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier available with rate limits; check current pricing for specifics",
+    "paid_plans": "Pay-as-you-go and enterprise plans available"
+  },
+  "rate_limits": "Varies by tier; check documentation for current limits",
+  "example": {
+    "request": "curl https://api.cerebras.ai/v1/chat/completions -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\": \"llama3.1-8b\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello!\"}]}'",
+    "response_snippet": "{\"id\": \"chatcmpl-...\", \"object\": \"chat.completion\", \"choices\": [{\"message\": {\"role\": \"assistant\", \"content\": \"Hello! How can I help you today?\"}}]}"
+  },
+  "use_cases": [
+    "generate chat completions with ultra-low latency",
+    "run LLM inference for production apps",
+    "prototype AI features with free tier",
+    "stream real-time token generation",
+    "build agents needing fast model responses"
+  ],
+  "sources": [
+    "https://inference-docs.cerebras.ai/"
+  ],
+  "researcher_confidence": "medium"
+}

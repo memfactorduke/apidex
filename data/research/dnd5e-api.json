@@ -1,0 +1,44 @@
+{
+  "id": "dnd5e-api",
+  "status": "operational",
+  "name": "D&D 5e API",
+  "category": "games-comics",
+  "tagline": "Open SRD REST API for D&D 5e monsters, spells, classes, and equipment",
+  "description": "Free, open REST API for Dungeons & Dragons 5th Edition SRD content. Provides JSON endpoints for monsters, spells, classes, races, equipment, conditions, and other game rules data. No authentication required. Hosted at dnd5eapi.co for tabletop apps, character builders, and game tools.",
+  "base_url": "https://www.dnd5eapi.co/api",
+  "docs_url": "https://www.dnd5eapi.co/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public open API with no API keys or signup."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no paid plans. Rate limits not published.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://www.dnd5eapi.co/api/monsters/adult-black-dragon",
+    "response_snippet": "{\n  \"index\": \"adult-black-dragon\",\n  \"name\": \"Adult Black Dragon\",\n  \"size\": \"Huge\",\n  \"type\": \"dragon\",\n  \"alignment\": \"chaotic evil\",\n  \"armor_class\": [{\"type\": \"natural\", \"value\": 19}],\n  \"hit_points\": 195,\n  \"hit_dice\": \"17d12\",\n  \"speed\": {\"walk\": \"40 ft.\", \"fly\": \"80 ft.\", \"swim\": \"40 ft.\"},\n  \"strength\": 23,\n  \"dexterity\": 14,\n  \"constitution\": 21,\n  \"challenge_rating\": 14,\n  \"xp\": 11500\n}"
+  },
+  "use_cases": [
+    "look up D&D 5e monster stats by name or index",
+    "fetch spell details including level, school, and description",
+    "list classes, races, or equipment for a character builder",
+    "get condition or rule reference text for an in-app rules lookup",
+    "search SRD content indexes for monsters, spells, or features"
+  ],
+  "sources": [
+    "https://www.dnd5eapi.co/",
+    "https://www.dnd5eapi.co/docs/",
+    "https://www.dnd5eapi.co/api",
+    "https://github.com/5e-bits/5e-srd-api"
+  ],
+  "researcher_confidence": "high"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "fannie-mae",
+  "status": "operational",
+  "name": "Fannie Mae API",
+  "category": "real-estate-housing",
+  "tagline": "GSE tools and data for single-family lending and underwriting workflows.",
+  "description": "Fannie Mae provides developer APIs and related digital tools that support single-family mortgage originations, underwriting, and servicing workflows\u2014covering areas such as pricing, eligibility, and loan data exchange for lenders and technology partners.",
+  "base_url": "https://api.fanniemae.com",
+  "docs_url": "https://www.fanniemae.com/singlefamily/api",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Partner/lender access; authentication method not fully confirmed from public docs without account."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://api.fanniemae.com/\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "check loan product eligibility for a single-family mortgage",
+    "retrieve underwriting or pricing-related data for GSE workflows",
+    "integrate Fannie Mae single-family lending tools into lender software"
+  ],
+  "sources": [
+    "https://www.fanniemae.com/singlefamily/api"
+  ],
+  "researcher_confidence": "low"
+}

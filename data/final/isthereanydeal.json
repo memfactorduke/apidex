@@ -1,0 +1,99 @@
+{
+  "id": "isthereanydeal",
+  "status": "operational",
+  "name": "IsThereAnyDeal API",
+  "category": "games-comics",
+  "tagline": "Cross-store PC game prices, deals, and history across digital storefronts.",
+  "description": "IsThereAnyDeal provides a public HTTP API for PC game pricing, deal discovery, and price history across many digital storefronts. Developers can look up games, compare current prices, inspect historical lows, and build tools for deal alerts and waitlists. Access typically requires an API key; check official docs for current auth, endpoints, and usage limits.",
+  "base_url": "https://api.isthereanydeal.com",
+  "docs_url": "https://docs.isthereanydeal.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required (see official docs for header/query placement and signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Default verified-email account limit: 1,000 requests per 5-minute window; the app setup page shows the account-specific limit and usage.",
+    "paid_plans": null
+  },
+  "rate_limits": "Window-based throttling: 1,000 requests per 5 minutes by default for verified-email accounts. HTTP 429 responses include Retry-After.",
+  "example": {
+    "request": "curl -X POST \"https://api.isthereanydeal.com/games/overview/v2?country=US\" -H \"ITAD-API-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" --data '[\"018d937f-12e9-71ca-a5d5-f31985870694\"]'",
+    "response_snippet": "{\"prices\":[{\"id\":\"018d937f-12e9-71ca-a5d5-f31985870694\",\"current\":{\"shop\":{\"id\":61,\"name\":\"Steam\"},\"price\":{\"amount\":31.99,\"amountInt\":3199,\"currency\":\"USD\"}},\"bundled\":1}],\"bundles\":[]}"
+  },
+  "use_cases": [
+    "compare current PC game prices across stores",
+    "fetch historical lowest prices for a game",
+    "list active deals on popular titles",
+    "look up game IDs for price tracking tools"
+  ],
+  "sources": [
+    "https://docs.isthereanydeal.com/",
+    "https://isthereanydeal.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "cors"
+    ]
+  }
+}

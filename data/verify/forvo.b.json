@@ -1,0 +1,52 @@
+{
+  "id": "forvo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/documentation/word-pronunciations/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/documentation/word-pronunciations/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "key_in_path",
+      "source": "https://api.forvo.com/documentation/word-pronunciations/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "500 requests/day free (API Free plan)",
+      "source": "https://api.forvo.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/documentation/word-pronunciations/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/"
+    }
+  },
+  "notes": "Auth is key-in-URL path (not X-Api-Key header). Free tier is 500 req/day not 1,000. use_cases are wrong weather placeholders but outside verdict schema."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "hologram",
+  "base_url": null,
+  "docs_url": "https://docs.hologram.io/api/v1",
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Limited-access Test Mode per SIM: 100 KB of free data and up to 10 device-originated SMS messages within 90 days. The SIM automatically activates on its preconfigured paid plan when the first limit is reached.",
+  "rate_limits": "Rate limiting applies to all API requests. Exceeding the unpublished numeric limit returns HTTP 429; Hologram recommends waiting 5\u201310 seconds before retrying.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: replace; /api redirects to the canonical /api/v1 page: https://docs.hologram.io/api/v1. free_tier: true; current pricing lists free test data: https://www.hologram.io/pricing/. free_tier_limits: replace with the stated 100 KB, 10 outbound SMS, and 90-day thresholds: https://docs.hologram.io/guides/sims/test-mode. rate_limits: replace; all requests are limited, HTTP 429 is returned, and retry after 5\u201310 seconds; no numeric quota is published: https://docs.hologram.io/api/v1."
+}

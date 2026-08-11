@@ -1,0 +1,52 @@
+{
+  "id": "insect-id",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documenter.getpostman.com/view/3802128/2s93sZ5YeU"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://insect.kindwise.com/docs",
+      "source": "https://admin.kindwise.com/public/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kindwise.com/handbook"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kindwise.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 free credits after registration; each successful identification costs one credit.",
+      "source": "https://www.kindwise.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Kindwise states that there are no limits or caps on the number of API requests, although SLA performance conditions apply.",
+      "source": "https://www.kindwise.com/faq"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"https://insect.kindwise.com/api/v1/identification\" -H \"Api-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" --data '{\"images\":[\"BASE64_ENCODED_IMAGE\"]}'",
+      "source": "https://github.com/flowerchecker/insect-id-examples"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The API is an active production product, but the entry uses the wrong documentation URL, omits the published 100-credit trial limit, misstates request limits as unpublished, and supplies an unsupported multipart upload example. Official materials support image-based insect identification and pest-related metadata, but not all asserted IPM and livestock-app usage claims."
+}

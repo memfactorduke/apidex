@@ -1,0 +1,44 @@
+{
+  "id": "pulumi-cloud",
+  "status": "operational",
+  "name": "Pulumi Cloud API",
+  "category": "dev-tools",
+  "tagline": "REST API for Pulumi Cloud stacks, updates, deployments, and org management",
+  "description": "Pulumi Cloud's REST API for Infrastructure as Code state and organization management. Manage stacks, deployments, updates, secrets, and org resources programmatically\u2014an alternative to Terraform Cloud for teams using Pulumi as code.",
+  "base_url": "https://api.pulumi.com",
+  "docs_url": "https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/",
+  "signup_url": "https://app.pulumi.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal access token via Authorization: token YOUR_API_KEY header (also accept Bearer). Create tokens in Pulumi Cloud account settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Individual free tier available; API rate limits and cloud feature quotas vary by plan\u2014see pricing page for current limits",
+    "paid_plans": "Team, Enterprise, and Business Critical plans with higher quotas"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: token YOUR_API_KEY\" -H \"Accept: application/vnd.pulumi+8\" \"https://api.pulumi.com/api/user\"",
+    "response_snippet": "{\"githubLogin\":\"example\",\"name\":\"Example User\",\"email\":\"user@example.com\",\"avatarUrl\":\"https://...\",\"organizations\":[...],\"id\":\"...\"}"
+  },
+  "use_cases": [
+    "list stacks in a Pulumi organization",
+    "get latest update status for a stack",
+    "trigger or inspect a stack deployment",
+    "read stack outputs and configuration",
+    "manage organization members and access",
+    "export or inspect stack state programmatically"
+  ],
+  "sources": [
+    "https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/",
+    "https://www.pulumi.com/pricing/",
+    "https://www.pulumi.com/docs/pulumi-cloud/"
+  ],
+  "researcher_confidence": "medium"
+}

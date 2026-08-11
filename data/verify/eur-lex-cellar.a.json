@@ -1,0 +1,52 @@
+{
+  "id": "eur-lex-cellar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://publications.europa.eu/webapi/rdf/sparql"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/cellar",
+      "source": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/cellar"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://publications.europa.eu/webapi/rdf/sparql"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://publications.europa.eu/webapi/rdf/sparql"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://publications.europa.eu/webapi/rdf/sparql"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://publications.europa.eu/webapi/rdf/sparql"
+    }
+  },
+  "notes": "Automated check reported docs_url HTTP 404; base_url returned 200. Verified SPARQL endpoint is live and public. docs_url needs a working official page (EU Vocabularies/CELLAR dataset or Publications Office SPARQL docs)."
+}

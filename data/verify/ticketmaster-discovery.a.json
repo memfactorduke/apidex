@@ -1,0 +1,52 @@
+{
+  "id": "ticketmaster-discovery",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The published default quota is 5,000 requests per day. Ticketmaster's FAQ states 2 requests per second, while its API reference states 5 requests per second.",
+      "source": "https://developer.ticketmaster.com/support/faq/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: 5,000 requests per day; the official FAQ says 2 requests per second, while the API reference says 5 requests per second.",
+      "source": "https://developer.ticketmaster.com/support/faq/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is documented with Access-Control-Allow-Origin: * in official response examples.",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    }
+  },
+  "notes": "The API is documented and operational. The entry fails because limits are published and CORS is documented. Ticketmaster's current official pages conflict on the per-second limit: the FAQ says 2 requests/second, while the API reference and getting-started page say 5. No official page located explicitly states that access is free of charge."
+}

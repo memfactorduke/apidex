@@ -1,0 +1,15 @@
+{
+  "id": "internet-archive",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "No fixed global numeric quota is published. Automated clients must use a descriptive User-Agent, add delays for bulk work, limit concurrency, and honor 429 responses and Retry-After headers. IAS3 writes can receive 503 SlowDown during overload.",
+  "cors": null,
+  "example_request": "curl -sS -H 'User-Agent: ExampleClient/1.0 (contact: you@example.com)' 'https://archive.org/metadata/xfetch'",
+  "example_response_snippet": "{\"created\":1616004182,\"d1\":\"ia600308.us.archive.org\",\"dir\":\"/21/items/xfetch\",\"files\":[{\"name\":\"xfetch.pdf\",\"source\":\"original\",\"format\":\"Text PDF\",\"size\":\"419170\"}],\"metadata\":{\"mediatype\":\"texts\",\"title\":\"XFETCH: Optimal Probabilistic Cache Stampede Prevention\"},\"server\":\"ia800308.us.archive.org\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: other (mixed); most reads are public, but protected reads and all metadata writes use IA-S3 keys or login cookies. Evidence: https://archive.org/developers/metadata.html. rate_limits: replaced; current bot guidance requires delays, limited concurrency, and handling 429/Retry-After. Evidence: https://archive.org/developers/bots.html. example: corrected with the required descriptive User-Agent and the documented xfetch endpoint/response. Evidence: https://archive.org/developers/bots.html and https://archive.org/developers/md-read.html."
+}

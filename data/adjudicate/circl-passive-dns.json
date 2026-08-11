@@ -1,0 +1,15 @@
+{
+  "id": "circl-passive-dns",
+  "base_url": "https://www.circl.lu/pdns/query/",
+  "docs_url": null,
+  "auth_type": "basic",
+  "free_tier": null,
+  "free_tier_limits": "Access is restricted to approved trusted partners; CIRCL publishes no numerical usage quota or general eligibility guarantee.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS --user 'USERNAME:PASSWORD' 'https://www.circl.lu/pdns/query/circl.lu'",
+  "example_response_snippet": "{\"rrtype\":\"A\",\"rrname\":\"185.194.93.14\",\"rdata\":\"circl.lu\",\"count\":\"19\",\"time_first\":\"1696798385\",\"time_last\":\"1697890824\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "Official docs https://www.circl.lu/services/passive-dns/: base_url\u2014use the /query/ stem; free_tier_limits\u2014access is approval-only for trusted partners, with no public quota; rate_limits\u2014keep \u201cnot published\u201d because only result-set limits/pagination are documented; example\u2014endpoint and NDJSON sample confirmed. Official client https://github.com/CIRCL/PyPDNS: auth_type\u2014HTTP Basic username/password, not API key; example\u2014curl must supply Basic credentials."
+}

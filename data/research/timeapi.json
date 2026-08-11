@@ -1,0 +1,41 @@
+{
+  "id": "timeapi",
+  "status": "operational",
+  "name": "TimeAPI",
+  "category": "geo-maps",
+  "tagline": "Timezone conversion, current time by coordinate/IP, and DST-aware time arithmetic over HTTP",
+  "description": "TimeAPI provides HTTP endpoints for current time by timezone, coordinates, or IP address, timezone conversion, and DST-aware date/time arithmetic. Developers use it to resolve local times, convert between zones, and compute offsets without maintaining IANA timezone data client-side.",
+  "base_url": "https://timeapi.io/api",
+  "docs_url": "https://timeapi.io/documentation",
+  "signup_url": "https://timeapi.io",
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints; requests work without an API key"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://timeapi.io/api/Time/current/zone?timeZone=America/New_York\"",
+    "response_snippet": "{\"year\":2026,\"month\":8,\"day\":10,\"hour\":12,\"minute\":0,\"seconds\":0,\"milliSeconds\":0,\"dateTime\":\"2026-08-10T12:00:00\",\"date\":\"08/10/2026\",\"time\":\"12:00\",\"timeZone\":\"America/New_York\",\"dayOfWeek\":\"Monday\",\"dstActive\":true}"
+  },
+  "use_cases": [
+    "get current local time for an IANA timezone",
+    "convert a datetime between two timezones",
+    "get current time from latitude/longitude",
+    "resolve current time from a client IP",
+    "add or subtract time with DST awareness"
+  ],
+  "sources": [
+    "https://timeapi.io/documentation"
+  ],
+  "researcher_confidence": "low"
+}

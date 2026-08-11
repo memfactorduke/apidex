@@ -1,0 +1,52 @@
+{
+  "id": "realtor-com",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.listhub.com/",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.listhub.com/mls-api-documentation/",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.listhub.com/publishers/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "3,000 requests per minute for /odata/Property and 3 requests per hour for /odata/Sync",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "* (the official documentation shows Access-Control-Allow-Origin: * on an API response)",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://api.listhub.com/odata/Property?$top=5' -H 'Authorization: Bearer <ACCESS_TOKEN>' -H 'Accept-Encoding: gzip'",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "ListHub's RESO Web API lets approved publishers download and import MLS-sourced listing data. It is not intended to serve live property searches directly.",
+      "source": "https://www.listhub.com/mls-api-documentation/"
+    }
+  },
+  "notes": "The claimed Realtor.com endpoints are not the official documented API surface. Realtor.com's current listing-data product is the ListHub Syndication API for publishers. Its docs provide public sandbox credentials, but they do not establish a free production tier or publish production pricing."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "ibm-watsonx",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://cloud.ibm.com/apidocs/watsonx-ai"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://cloud.ibm.com/apidocs/watsonx-ai"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://cloud.ibm.com/docs/account?topic=account-iamapikeysforservices"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.ibm.com/products/watsonx-ai/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The current free toolbox allowance is up to 300,000 foundation-model tokens, 20 compute usage hours, and 100 text-extraction documents per month.",
+      "source": "https://www.ibm.com/products/watsonx-ai/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "IBM publishes plan-level inference limits: 2 requests per second for Lite and 8 requests per second for Essentials and Standard.",
+      "source": "https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/wml-plans.html?context=wx"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The Authorization bearer value must be an IAM access token obtained by exchanging the API key, not the API key itself. The text-generation endpoint is now documented as legacy, and ibm/granite-13b-chat-v2 is unavailable; use Text Chat with a currently available model.",
+      "source": "https://cloud.ibm.com/apidocs/watsonx-ai"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "watsonx.ai is IBM's AI development studio and runtime for foundation-model and machine-learning workloads, with APIs for inference, tuning, deployment, and asset operations. Governance and compliance capabilities are supplied through the separately provisioned watsonx.governance service.",
+      "source": "https://www.ibm.com/docs/en/watsonx/saas?topic=governing-ai"
+    }
+  },
+  "notes": "The API and official reference remain operational. The submitted example uses a retired model and incorrectly labels a raw API key as the bearer credential. IBM now marks /ml/v1/text/generation as legacy and recommends Text Chat. No authoritative watsonx.ai CORS policy was located."
+}

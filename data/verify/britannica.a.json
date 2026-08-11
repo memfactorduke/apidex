@@ -1,0 +1,52 @@
+{
+  "id": "britannica",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://britannica.github.io/syndication-service/swagger/?host=syndication.api.eb.com&stage=production"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://encyclopediaapi.com/products/json"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://britannica.github.io/syndication-service/swagger/?host=syndication.api.eb.com&stage=production"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://encyclopediaapi.com/info/frequently-asked-questions"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://encyclopediaapi.com/info/frequently-asked-questions"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://syndication.api.eb.com/production/docs/swagger.yaml?stage=production"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://encyclopediaapi.com/info/frequently-asked-questions"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://britannica.github.io/syndication-service/swagger/?host=syndication.api.eb.com&stage=production"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://encyclopediaapi.com/"
+    }
+  },
+  "notes": "Verified against encyclopediaapi.com FAQ, products pages, and Britannica syndication Swagger/OpenAPI. base_url syndication.api.eb.com/production, x-api-key auth, free non-commercial 1000 q/day, CORS yes, example path/params match docs."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "lambdatest",
+  "status": "operational",
+  "name": "LambdaTest Automation API",
+  "category": "dev-tools",
+  "tagline": "REST API for cloud browser and device testing sessions",
+  "description": "LambdaTest provides a cloud-based cross-browser and real-device testing platform. Its Automation API lets developers manage Selenium/Appium/Cypress sessions, tunnels, builds, and Smart UI visual tests programmatically via REST.",
+  "base_url": "https://api.lambdatest.com",
+  "docs_url": "https://www.lambdatest.com/support/docs/api-doc/",
+  "signup_url": "https://accounts.lambdatest.com/register",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with username and access key (email:accessKey), obtained from LambdaTest account settings after self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u \"YOUR_USERNAME:YOUR_ACCESS_KEY\" \"https://api.lambdatest.com/automation/api/v1/sessions\"",
+    "response_snippet": "{\"data\":[{\"session_id\":\"...\",\"status\":\"completed\",\"browser\":\"Chrome\",\"browser_version\":\"120.0\",\"os\":\"Windows 11\"}],\"message\":\"\"}"
+  },
+  "use_cases": [
+    "list recent automation test sessions",
+    "fetch session video and logs by session id",
+    "manage LambdaTest tunnel configurations",
+    "trigger or query Smart UI visual regression builds",
+    "get build and test status for CI pipelines"
+  ],
+  "sources": [
+    "https://www.lambdatest.com/support/docs/api-doc/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "hotelbeds",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/hotels/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Evaluation-environment API keys are limited to 50 requests per day; exceeding the quota returns HTTP 403.",
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The evaluation environment has a published quota of 50 requests per day. Certification offers higher quotas, but their amounts are not publicly specified.",
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/hotels/"
+    }
+  },
+  "notes": "The API and documented test endpoint remain operational. The entry fails because Hotelbeds explicitly publishes the evaluation quota, so both the unknown free-tier limit and the claim that rate limits are unpublished are incorrect. CORS behavior is not documented in the official sources reviewed."
+}

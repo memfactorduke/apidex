@@ -1,0 +1,15 @@
+{
+  "id": "2checkout",
+  "base_url": "https://api.2checkout.com/rest/6.0/",
+  "docs_url": "https://verifone.cloud/api-catalog/api-rest-documentation-1",
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "now=$(date -u '+%Y-%m-%d %H:%M:%S'); src=\"${#MERCHANT_CODE}${MERCHANT_CODE}${#now}${now}\"; hash=$(printf %s \"$src\" | openssl dgst -sha256 -hmac \"$SECRET_KEY\" | awk '{print $2}'); curl -sS -H 'Accept: application/json' -H \"X-Avangate-Authentication: code=\\\"$MERCHANT_CODE\\\" date=\\\"$now\\\" hash=\\\"$hash\\\" algo=\\\"sha256\\\"\" 'https://api.2checkout.com/rest/6.0/productgroups/'",
+  "example_response_snippet": "[{\"Name\":\"Default\",\"Code\":\"12345678\",\"TemplateName\":\"Default Template\",\"Description\":\"Default product group\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: corrected to REST 6.0 root; https://verifone.cloud/docs/2checkout/API-Integration/REST-6.0-Reference. docs_url: corrected to the official current API catalog; https://verifone.cloud/api-catalog/api-rest-documentation-1. auth_type: other, not Basic; the catalog specifies a custom X-Avangate-Authentication header; https://verifone.cloud/api-catalog?field_api_category_target_id=1940. example: replaced the placeholder with a signed documented product-groups GET; https://verifone.cloud/api-catalog/api-rest-documentation-1."
+}

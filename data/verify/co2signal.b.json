@@ -1,0 +1,52 @@
+{
+  "id": "co2signal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.electricitymap.org",
+      "source": "https://docs.electricitymaps.com/electricity-maps-api/api-reference"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.electricitymaps.com/",
+      "source": "https://docs.electricitymaps.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey",
+      "source": "https://docs.electricitymaps.com/electricity-maps-api/api-reference"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://www.electricitymaps.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan available (historically ~30 requests/hour on CO2 Signal free tier; confirm current Electricity Maps free/trial limits on pricing page)",
+      "source": "https://www.electricitymaps.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plan-dependent; free tier is rate-limited (historical CO2 Signal free: ~30 req/hour). See Electricity Maps pricing/docs for current limits.",
+      "source": "https://www.electricitymaps.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "GET https://api.electricitymap.org/v3/carbon-intensity/latest?zone=DE with auth-token header",
+      "source": "https://docs.electricitymaps.com/electricity-maps-api/api-reference"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "CO2 Signal provides real-time carbon intensity (gCO2eq/kWh) by electricity zone; product is part of Electricity Maps (formerly co2signal.com).",
+      "source": "https://www.co2signal.com/"
+    }
+  },
+  "notes": "Entry is essentially empty stubs. CO2 Signal rebranded into Electricity Maps; API requires auth-token, free tier exists. Automated curl HTTP 0 is consistent with empty/wrong URLs, not proof the service is dead."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ipdata",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ipdata.co/docs/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ipdata.co/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ipdata.co/reference/lookup-client-ip-address"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipdata.co/pricing.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,500 requests daily; restricted to non-commercial use",
+      "source": "https://ipdata.co/pricing.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plan-based daily quotas are published: free 1,500; Personal 2,500; Lite 10,000; Startup 50,000; Business 100,000 requests daily; Enterprise custom",
+      "source": "https://ipdata.co/pricing.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Supported for client-side browser requests; paid users can restrict allowed domains using a whitelist",
+      "source": "https://docs.ipdata.co/docs/client-side-vs-server-side"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ipdata.co/docs/getting-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ipdata.co/docs/filtering-response-fields"
+    }
+  },
+  "notes": "Official status reports the service operational. Current Quick Start explicitly documents the unversioned example URL, although the API Reference also displays /v1/{ip}/. Official pages confirm query-parameter authentication; I did not find official support for the entry's separate Authorization-header claim."
+}

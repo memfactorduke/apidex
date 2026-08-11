@@ -1,0 +1,52 @@
+{
+  "id": "smartrecruiters",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/reference/jobsall-1"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/docs/authentication-api-key"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.smartrecruiters.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "not applicable; current pricing lists only paid plans, while SmartStart is archived",
+      "source": "https://www.smartrecruiters.com/legal/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Most endpoints allow 10 requests per second and 8 concurrent requests; documented exceptions have lower limits",
+      "source": "https://developers.smartrecruiters.com/docs/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/reference/jobsall-1"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/docs/customer-overview"
+    }
+  },
+  "notes": "The API and documented GET /jobs example are operational. API keys are supported, although OAuth 2.0 and unauthenticated access are also available for some resources. Current pricing is paid-only and the legal center identifies SmartStart as archived. No official CORS policy was located."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "imf-data",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -H \"Ocp-Apim-Subscription-Key: YOUR_IMF_API_KEY\" -H \"Accept: application/json\" \"https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/+/USA.NGDP_RPCH.A?startPeriod=2025&endPeriod=2025&format=jsondata\"",
+  "example_response_snippet": "{\"meta\":{\"id\":\"...\",\"prepared\":\"...\"},\"data\":{\"dataSets\":[{\"observations\":{\"0:0:0:0\":[2.1]}}],\"structure\":{\"dimensions\":{\"observation\":[{\"id\":\"TIME_PERIOD\",\"values\":[{\"id\":\"2025\"}]}]}}}}",
+  "description": "Official IMF Data Portal API for importing current catalogue datasets through SDMX 2.1 and 3.0. Access is managed through the beta API portal. It covers World Economic Outlook, balance of payments, prices, exchange rates, and other macroeconomic and financial datasets. IFS is no longer a single dataset; its indicators are organized by topic in successor datasets and can be identified with IMF_FLAG where applicable.",
+  "status": null,
+  "resolution_notes": "auth_type=apiKey: IMF requires beta-portal sign-in for API exploration and provides account signup: https://data.imf.org/en/Resource-Pages/IMF-API and https://portal.api.imf.org/signup. example: replaced the obsolete IFS flow with an authenticated SDMX 3.0 WEO query; IMF says IFS was discontinued as one dataset: https://data.imf.org/en/news/accessing. description: revised for SDMX 2.1/3.0 and the IFS migration using those same official pages."
+}

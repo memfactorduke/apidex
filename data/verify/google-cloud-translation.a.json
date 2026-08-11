@@ -1,0 +1,52 @@
+{
+  "id": "google-cloud-translation",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/translate/docs/reference/rest"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/translate/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/translate/docs/setup"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/translate/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/translate/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/translate/quotas"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/translate/docs/basic/translating-text"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/translate/docs"
+    }
+  },
+  "notes": "Entry is largely accurate against official Google Cloud Translation docs. base_url, docs_url, auth (API key + OAuth/service accounts), free tier existence, rate limits as not published, and v2 example curl are supported. free_tier_limits as \"unknown\" is acceptable given entry honesty; actual free quota exists on pricing page. cors unknown is correct. No incorrect fields found."
+}

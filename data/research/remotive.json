@@ -1,0 +1,40 @@
+{
+  "id": "remotive",
+  "status": "operational",
+  "name": "Remotive",
+  "category": "jobs-careers",
+  "tagline": "Free public JSON API for remote-only job listings from Remotive.",
+  "description": "Remotive is a remote-only job board that exposes a free public REST API for listing and filtering remote tech jobs. Developers can fetch job postings with optional category, company, and search filters without authentication for basic access, making it useful for job aggregators, career dashboards, and agent workflows that need current remote openings.",
+  "base_url": "https://remotive.com/api",
+  "docs_url": "https://remotive.com/api-documentation",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public job-list endpoints require no authentication. No API key signup for basic listing access."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://remotive.com/api/remote-jobs?category=software-dev&limit=5'",
+    "response_snippet": "{\"0-legal-notice\":\"...\",\"job-count\":5,\"jobs\":[{\"id\":123,\"url\":\"https://remotive.com/remote-jobs/...\",\"title\":\"Senior Engineer\",\"company_name\":\"Example\",\"category\":\"Software Development\",\"job_type\":\"full_time\",\"candidate_required_location\":\"Worldwide\",\"salary\":\"\",\"publication_date\":\"2024-01-01T00:00:00\"}]}"
+  },
+  "use_cases": [
+    "list current remote software jobs",
+    "filter remote openings by category or search term",
+    "build a remote-job aggregator or alert bot",
+    "enrich a careers page with live Remotive listings"
+  ],
+  "sources": [
+    "https://remotive.com/api-documentation"
+  ],
+  "researcher_confidence": "low"
+}

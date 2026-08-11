@@ -1,0 +1,52 @@
+{
+  "id": "fannie-mae",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No public general base URL documented as https://api.fanniemae.com; Fannie Mae Single Family APIs are partner-gated (e.g. technology.fanniemae.com / partner portals), not a single public API host.",
+      "source": "https://www.fanniemae.com/singlefamily/technology-applications"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.fanniemae.com/singlefamily/technology-applications (or partner docs via Fannie Mae Technology portal); https://www.fanniemae.com/singlefamily/api returns 404.",
+      "source": "https://www.fanniemae.com/singlefamily/technology-applications"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fanniemae.com/singlefamily/technology-applications"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No public curl example against https://api.fanniemae.com/ with Bearer token is documented; partner-only APIs require registered lender/tech-partner credentials and product-specific endpoints.",
+      "source": "https://www.fanniemae.com/singlefamily/technology-applications"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fanniemae.com/singlefamily/technology-applications"
+    }
+  },
+  "notes": "docs_url 404; base_url and example appear invented. Auth/pricing/rate/CORS cautious claims hold. Not a public free API\u2014partner access."
+}

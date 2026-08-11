@@ -1,0 +1,45 @@
+{
+  "id": "buildkite",
+  "status": "operational",
+  "name": "Buildkite API",
+  "category": "dev-tools",
+  "tagline": "REST API for pipelines, builds, agents, and CI analytics",
+  "description": "Buildkite provides a REST API for managing CI/CD resources: organizations, pipelines, builds, jobs, agents, teams, and test analytics. Pipeline-as-code workflows run on customer-hosted or Buildkite-managed agent fleets. Developers authenticate with personal API access tokens and call https://api.buildkite.com/v2.",
+  "base_url": "https://api.buildkite.com/v2",
+  "docs_url": "https://buildkite.com/docs/apis/rest-api",
+  "signup_url": "https://buildkite.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal API access token via Authorization: Bearer YOUR_API_TOKEN (or Token). Create tokens in user settings; scope permissions per token. GraphQL also supported."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan available for small teams; API access included. Exact request quotas not published on pricing page \u2014 limits are plan/usage based rather than a fixed free API request count.",
+    "paid_plans": "Paid plans (e.g. Business/Enterprise) scale by concurrent jobs/agents and seats; see buildkite.com/pricing. API itself is not separately metered by public fixed free request counts."
+  },
+  "rate_limits": "Published: REST API is rate-limited. Responses include RateLimit-Limit, RateLimit-Remaining, RateLimit-Reset headers. Default documented limit is typically 100 requests per minute per token (confirm in current docs); 429 on exceed. Exact numbers can vary \u2014 check response headers.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.buildkite.com/v2/user\"",
+    "response_snippet": "{\n  \"id\": \"abc123-...\",\n  \"name\": \"Jane Developer\",\n  \"email\": \"jane@example.com\",\n  \"created_at\": \"2020-01-15T12:00:00.000Z\",\n  \"avatar_url\": \"https://www.gravatar.com/avatar/...\"\n}"
+  },
+  "use_cases": [
+    "list pipelines in a Buildkite organization",
+    "trigger a new build on a pipeline with branch and commit",
+    "get build status and job logs for a specific build",
+    "list and inspect connected CI agents and their metadata",
+    "cancel or rebuild a failed build via API",
+    "fetch test analytics or annotations for a build"
+  ],
+  "sources": [
+    "https://buildkite.com/docs/apis/rest-api",
+    "https://buildkite.com/docs/apis/managing-api-tokens",
+    "https://buildkite.com/docs/apis/rest-api/user",
+    "https://buildkite.com/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

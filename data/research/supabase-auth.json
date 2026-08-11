@@ -1,0 +1,38 @@
+{
+  "id": "supabase-auth",
+  "status": "operational",
+  "name": "Supabase Auth",
+  "category": "security-identity",
+  "tagline": "GoTrue-based HTTP auth for signup, sessions, MFA, and OAuth",
+  "description": "Supabase Auth is a hosted GoTrue authentication API that handles user signup, login, session management, MFA, and OAuth for apps built on Supabase. Developers call project-scoped Auth endpoints with the anon or service role key to manage identities and JWTs.",
+  "base_url": "https://YOUR_PROJECT_REF.supabase.co/auth/v1",
+  "docs_url": "https://supabase.com/docs/reference/auth",
+  "signup_url": "https://supabase.com/dashboard",
+  "auth": {
+    "type": "apiKey",
+    "details": "Project API keys via apikey header and Authorization: Bearer <anon|service_role JWT>; self-serve project signup"
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes Auth with project limits; verify current MAU/bandwidth on pricing page",
+    "paid_plans": "Pro and higher with higher MAU and features"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl placeholder",
+    "response_snippet": "placeholder"
+  },
+  "use_cases": [
+    "sign up a user with email/password",
+    "exchange refresh token for session"
+  ],
+  "sources": [
+    "https://supabase.com/docs/reference/auth"
+  ],
+  "researcher_confidence": "low"
+}

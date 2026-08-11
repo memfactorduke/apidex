@@ -1,0 +1,98 @@
+{
+  "id": "tuya",
+  "status": "operational",
+  "name": "Tuya",
+  "category": "iot-devices",
+  "tagline": "Cloud API for white-label smart-home and IoT devices worldwide",
+  "description": "Tuya Cloud API lets developers control and manage millions of white-label consumer IoT devices (lights, plugs, locks, sensors, and more) via a multi-region REST platform. Apps and platforms use it for device linking, status, and remote control across Tuya-powered SKUs.",
+  "base_url": "https://openapi.tuyaus.com",
+  "docs_url": "https://developer.tuya.com/en/docs/cloud/",
+  "signup_url": "https://developer.tuya.com/",
+  "auth": {
+    "type": "oauth2",
+    "details": "Access ID and Access Secret from the Tuya IoT Platform; sign requests with HMAC-SHA256 (client_id, timestamp, nonce, signature headers). Token via GET /v1.0/token?grant_type=1."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Trial Edition: about 26,000 API calls and 68,000 messages monthly, adjustable allocation, 1 data center, 50 devices, and 10 controllable devices. Individual development/debugging only; no commercial use or overage. Service pauses until the next monthly refresh when exhausted.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published per endpoint and per cloud project. Examples: space creation 10 requests/second, device actions and property writes 4/second, and device shadow property queries 50/second.",
+  "example": {
+    "request": "curl -X GET \"https://openapi.tuyaus.com/v1.0/token?grant_type=1\" -H \"client_id: YOUR_CLIENT_ID\" -H \"sign: YOUR_SIGN\" -H \"t: YOUR_TIMESTAMP\" -H \"sign_method: HMAC-SHA256\" -H \"nonce: YOUR_NONCE\"",
+    "response_snippet": "{\"result\":{\"access_token\":\"...\",\"expire_time\":7200,\"refresh_token\":\"...\",\"uid\":\"...\"},\"success\":true,\"t\":...}"
+  },
+  "use_cases": [
+    "get OAuth access token for Tuya Cloud",
+    "list devices linked to a user",
+    "get real-time status of a smart device",
+    "send a control command to a Tuya-powered device",
+    "query device functions and data points (DPs)"
+  ],
+  "sources": [
+    "https://developer.tuya.com/en/docs/cloud/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

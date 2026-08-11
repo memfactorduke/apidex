@@ -1,0 +1,52 @@
+{
+  "id": "watttime",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.watttime.org/openapi.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.watttime.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.watttime.org/openapi.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://watttime.org/docs-dev/data-plans/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Basic (free) provides all signals and endpoints for CAISO_NORTH, plus the CO2 percentile signal for all covered regions.",
+      "source": "https://watttime.org/docs-dev/data-plans/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "3,000 requests per 5-minute rolling window per user (10 requests/second average); /login is limited to 100 requests per 5 minutes.",
+      "source": "https://docs.watttime.org/openapi.json"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_TOKEN\" \"https://api.watttime.org/v3/signal-index?region=CAISO_NORTH&signal_type=co2_moer\"",
+      "source": "https://docs.watttime.org/openapi.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.watttime.org/openapi.json"
+    }
+  },
+  "notes": "Official status reports the API operational. The sample omits the required signal_type=co2_moer parameter. Published free-plan restrictions and rate limits make both corresponding \"unknown/not published\" claims wrong. No authoritative CORS policy was found."
+}

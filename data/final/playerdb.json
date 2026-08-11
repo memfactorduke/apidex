@@ -1,0 +1,95 @@
+{
+  "id": "playerdb",
+  "status": "operational",
+  "name": "PlayerDB",
+  "category": "games-comics",
+  "tagline": "Cross-game player ID lookup for Minecraft, Steam, Xbox, and more",
+  "description": "PlayerDB is a free public API that resolves player usernames and IDs across multiple gaming platforms including Minecraft, Steam, Xbox Live, and others. Developers use it to look up profile data, convert between username and UUID/ID formats, and fetch platform-specific player metadata from a single endpoint family without managing multiple platform APIs.",
+  "base_url": "https://playerdb.co/api/player",
+  "docs_url": "https://playerdb.co/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public endpoints accept unauthenticated GET requests"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "Very generous non-numeric limits; HTTP 429 responses include a Retry-After header. Higher-volume users may contact the maintainer.",
+  "example": {
+    "request": "curl -s 'https://playerdb.co/api/player/minecraft/Notch'",
+    "response_snippet": "{\"code\":\"player.found\",\"message\":\"Successfully found player by given ID.\",\"data\":{\"player\":{\"meta\":{\"name_history\":[]},\"username\":\"Notch\",\"id\":\"069a79f4-44e9-4726-a5be-fca90e38aaf5\",\"raw_id\":\"069a79f444e94726a5befca90e38aaf5\",\"avatar\":\"https://crafthead.net/avatar/069a79f444e94726a5befca90e38aaf5\"}}}"
+  },
+  "use_cases": [
+    "resolve a Minecraft username to UUID",
+    "look up a Steam profile by vanity URL or SteamID",
+    "convert Xbox gamertag to XUID",
+    "fetch cross-platform player avatar and profile metadata",
+    "validate whether a game username exists on a platform"
+  ],
+  "sources": [
+    "https://playerdb.co/",
+    "https://playerdb.co/api/player/minecraft/Notch"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "example"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

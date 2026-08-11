@@ -1,0 +1,97 @@
+{
+  "id": "openholidays-api",
+  "status": "operational",
+  "name": "OpenHolidays API",
+  "category": "events-holidays",
+  "tagline": "Free open-data API for European public and school holidays",
+  "description": "OpenHolidays API is a free open-data REST API for public and school holidays in supported countries across Europe, the Americas, and Africa. It provides endpoints for countries, languages, subdivisions, groups, holidays, and localized names without documented authentication. Holiday range queries are limited to three years.",
+  "base_url": "https://openholidaysapi.org",
+  "docs_url": "https://www.openholidaysapi.org/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; free unrestricted public access with no API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for commercial use. Public- and school-holiday query date ranges may not exceed three years. No request-volume quota is documented.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://openholidaysapi.org/PublicHolidays?countryIsoCode=DE&validFrom=2026-01-01&validTo=2026-12-31'",
+    "response_snippet": "[{\"id\":\"...\",\"startDate\":\"2026-01-01\",\"endDate\":\"2026-01-01\",\"type\":\"Public\",\"name\":[{\"language\":\"EN\",\"text\":\"New Year's Day\"}],\"nationwide\":true}]"
+  },
+  "use_cases": [
+    "list public holidays for a European country and year",
+    "get school holidays by country or subdivision",
+    "check if a date is a public holiday",
+    "build localized holiday calendars for multi-country apps",
+    "populate HR or scheduling systems with regional holidays"
+  ],
+  "sources": [
+    "https://www.openholidaysapi.org/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "rate_limits"
+    ]
+  }
+}

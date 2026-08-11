@@ -1,0 +1,41 @@
+{
+  "id": "isthereanydeal",
+  "status": "operational",
+  "name": "IsThereAnyDeal API",
+  "category": "games-comics",
+  "tagline": "Cross-store PC game prices, deals, and history across digital storefronts.",
+  "description": "IsThereAnyDeal provides a public HTTP API for PC game pricing, deal discovery, and price history across many digital storefronts. Developers can look up games, compare current prices, inspect historical lows, and build tools for deal alerts and waitlists. Access typically requires an API key; check official docs for current auth, endpoints, and usage limits.",
+  "base_url": "https://api.isthereanydeal.com",
+  "docs_url": "https://docs.isthereanydeal.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required (see official docs for header/query placement and signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.isthereanydeal.com/v01/game/overview/?key=YOUR_API_KEY&region=us&country=US&plains=example\"",
+    "response_snippet": "{\"data\": {}, \"meta\": {}}"
+  },
+  "use_cases": [
+    "compare current PC game prices across stores",
+    "fetch historical lowest prices for a game",
+    "list active deals on popular titles",
+    "look up game IDs for price tracking tools"
+  ],
+  "sources": [
+    "https://docs.isthereanydeal.com/",
+    "https://isthereanydeal.com/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "uk-legislation",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/api/overview.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ckan.publishing.service.gov.uk/dataset/legislation-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/api/overview.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "3,000 requests in any 5-minute period; API requests must specify a User-Agent.",
+      "source": "https://legislation.github.io/data-documentation/fair-use.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "3,000 requests in any 5-minute period; exceeding the limit may cause requests to be blocked.",
+      "source": "https://legislation.github.io/data-documentation/fair-use.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is enabled for endpoints ending in /data.[ext], including /data.xml and /data.feed; /data.htm endpoints do not currently have CORS enabled.",
+      "source": "https://legislation.github.io/data-documentation/api/overview.html"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/api/overview.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/formats/overview.html"
+    }
+  },
+  "notes": "The API remains operational and free, but the entry misses the currently published fair-use limit and known CORS behavior. The data.xml path returns CLML XML; Akoma Ntoso is separately available through data.akn."
+}

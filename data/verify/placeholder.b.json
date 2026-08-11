@@ -1,0 +1,46 @@
+{
+  "id": "placeholder",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://www.tvmaze.com/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://www.tvmaze.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://www.tvmaze.com/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.tvmaze.com/api/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The free public API may be used commercially. It is licensed under CC BY-SA and requires attribution and compliance with ShareAlike; the free plan provides public endpoints with best-effort service.",
+      "source": "https://www.tvmaze.com/api#licensing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The API allows at least 20 calls every 10 seconds per IP address. Cached requests may not count, temporary stricter limits may apply, and clients should handle HTTP 429 with backoff.",
+      "source": "https://www.tvmaze.com/api#rate-limiting"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is enabled for all API endpoints.",
+      "source": "https://www.tvmaze.com/api#cors"
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://www.tvmaze.com/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://www.tvmaze.com/api"
+    }
+  },
+  "notes": "The documented endpoint is operational and returned JSON without credentials. The sample response data has drifted: the current Girls rating is 6.5 rather than 6.7. Also, although not represented by a required verdict field, paid_plans:null is outdated because TVmaze currently advertises Startup, Small Business, and Enterprise API plans."
+}

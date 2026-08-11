@@ -1,0 +1,52 @@
+{
+  "id": "chainalysis",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No public api.chainalysis.com root; product APIs use hostnames such as api.chainalysis.com/<product> or dedicated endpoints documented per product (e.g. KYT, Sanctions Screening). Confirm product-specific base URL in current docs \u2014 public developer portal does not advertise a single generic root.",
+      "source": "https://developers.chainalysis.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.chainalysis.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.chainalysis.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Placeholder curl against https://api.chainalysis.com/ with Token header is not a documented endpoint; use product-specific paths and auth from official docs.",
+      "source": "https://developers.chainalysis.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.chainalysis.com/"
+    }
+  },
+  "notes": "Adversarial check: docs portal exists; base_url and example are unsupported generic placeholders. Auth/pricing/rate limits largely unpublicized self-serve."
+}

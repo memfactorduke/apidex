@@ -1,0 +1,15 @@
+{
+  "id": "uspto-trademark",
+  "base_url": null,
+  "docs_url": "https://www.uspto.gov/sites/default/files/documents/tm-enterprise-api-user-guide-v2.pdf",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "60 requests/API key/minute; PDF/ZIP and multi-case PDF/ZIP: 4/key/minute. From 10 p.m. to 5 a.m. ET: 120 and 12/key/minute, respectively.",
+  "rate_limits": "60 requests/API key/minute; PDF/ZIP and multi-case PDF/ZIP: 4/key/minute. Off-peak (10 p.m.\u20135 a.m. ET): 120 and 12/key/minute, respectively. Limits may change with system availability and usage.",
+  "cors": null,
+  "example_request": "curl -H \"USPTO-API-KEY: YOUR_API_KEY\" -H \"Accept: application/json\" \"https://tsdrapi.uspto.gov/last-update/info.json?sn=78787878\"",
+  "example_response_snippet": "{\"caseUpdateInfo\":[{\"caseData\":{\"caseProsecutionData\":{\"lastModifiedDate\":\"2020-10-14\"}},\"serialNumber\":\"78787878\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: use the official detailed TSDR guide: https://www.uspto.gov/sites/default/files/documents/tm-enterprise-api-user-guide-v2.pdf. free_tier_limits: pp.4-5 specify 60/4 peak and 120/12 off-peak: same URL. rate_limits: corrected to those published limits: same URL. example: pp.6-7 document the last-update JSON request and response: same URL."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "losant",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.losant.com/rest-api/overview/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.losant.com/rest-api/overview/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Bearer API access token",
+      "source": "https://docs.losant.com/rest-api/overview/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.losant.com/iot-platform/sandbox"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Developer Sandbox: no cost and no credit card required, up to 10 connected devices, and 30 days of data storage.",
+      "source": "https://www.losant.com/iot-platform/sandbox"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Endpoint-specific throttles and limits are published, including 30 calls per 15 seconds per device for state/command operations and 100 calls per 10 seconds per workflow virtual button.",
+      "source": "https://docs.losant.com/rest-api/overview/#throttles-and-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.losant.com/rest-api/applications/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Losant is an industrial IoT application platform exposing a REST API for managing devices, applications, workflows, data tables, experiences, and related resources. Developers authenticate with API access tokens and call documented resource endpoints to provision devices, query telemetry, trigger workflows, and manage multi-tenant experiences.",
+      "source": "https://docs.losant.com/rest-api/overview/"
+    }
+  },
+  "notes": "The API and documentation are operational. The principal errors are calling Bearer-token authentication an apiKey, listing known Sandbox limits as unknown, claiming rate limits are unpublished, and describing the REST endpoints as versioned. Current docs specify the Authorization header; no official support was found for a token query parameter."
+}

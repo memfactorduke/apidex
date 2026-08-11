@@ -1,0 +1,96 @@
+{
+  "id": "apiflash",
+  "status": "operational",
+  "name": "Apiflash",
+  "category": "utilities",
+  "tagline": "Website screenshot API powered by AWS Lambda and Chrome/Firefox.",
+  "description": "Apiflash is a website screenshot API that captures web pages as images or PDFs using headless Chrome or Firefox on AWS Lambda. Developers send a URL and receive a screenshot or PDF, with options for viewport, full page, wait conditions, and more.",
+  "base_url": "https://api.apiflash.com/v1",
+  "docs_url": "https://apiflash.com/documentation",
+  "signup_url": "https://apiflash.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via access_key query parameter (self-serve signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.apiflash.com/v1/urltoimage?access_key=YOUR_API_KEY&url=https://example.com\"",
+    "response_snippet": "Binary image/PNG (or JSON error on failure)"
+  },
+  "use_cases": [
+    "capture a full-page screenshot of a URL",
+    "render a webpage to PDF",
+    "generate website thumbnails for a link preview",
+    "archive visual snapshots of web pages over time"
+  ],
+  "sources": [
+    "https://apiflash.com/documentation"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

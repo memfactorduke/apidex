@@ -1,0 +1,101 @@
+{
+  "id": "un-comtrade",
+  "status": "operational",
+  "name": "UN Comtrade API",
+  "category": "government-open-data",
+  "tagline": "UN official API for global merchandise trade statistics by country, product, and partner",
+  "description": "The UN Comtrade API provides official global trade statistics by reporter, partner, commodity classification, period, and trade flow. Tightly limited preview APIs work without an account or key. Registered free users can obtain a subscription key for broader Data API access, while premium subscriptions add bulk and asynchronous APIs, larger per-call limits, and higher daily quotas.",
+  "base_url": "https://comtradeapi.un.org",
+  "docs_url": "https://uncomtrade.org/docs/un-comtrade-api/",
+  "signup_url": "https://comtradedeveloper.un.org/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Primary key (subscription key) via Ocp-Apim-Subscription-Key header after free self-serve registration at comtradedeveloper.un.org; also accepted as subscription-key query parameter"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free Basic Individual: up to 500 API calls/day and 100,000 Data API records per call.",
+    "paid_plans": "Premium/enterprise products via UN Comtrade developer portal; contact UN for bulk/commercial licensing"
+  },
+  "rate_limits": "Free: ~500 requests/day; premium tiers higher \u2014 confirm exact product quotas on comtradedeveloper.un.org",
+  "example": {
+    "request": "curl -s \"https://comtradeapi.un.org/data/v1/get/C/A/HS?reporterCode=842&period=2022&partnerCode=0&cmdCode=TOTAL&flowCode=M&maxRecords=5\" -H \"Ocp-Apim-Subscription-Key: YOUR_API_KEY\"",
+    "response_snippet": "{\"elapsedTime\":\"0.12s\",\"count\":1,\"data\":[{\"typeCode\":\"C\",\"freqCode\":\"A\",\"refPeriodId\":2022,\"reporterCode\":842,\"partnerCode\":0,\"cmdCode\":\"TOTAL\",\"flowCode\":\"M\",\"primaryValue\":...}]}"
+  },
+  "use_cases": [
+    "get annual HS trade totals for a reporter country and partner",
+    "list merchandise import/export values by commodity code and year",
+    "pull multi-year trade series for economic research or dashboards",
+    "compare bilateral trade flows between two countries",
+    "export Comtrade query results as CSV for offline analysis"
+  ],
+  "sources": [
+    "https://uncomtrade.org/docs/api-access/",
+    "https://comtradeapi.un.org/",
+    "https://comtradedeveloper.un.org/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "cors",
+      "example"
+    ]
+  }
+}

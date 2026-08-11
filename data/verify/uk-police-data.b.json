@@ -1,0 +1,52 @@
+{
+  "id": "uk-police-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.api.gov.uk/ukp/police-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/docs/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/docs/api-call-limits/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "15 requests per second on average, with a burst allowance of 30; exceeding the limit returns HTTP 429.",
+      "source": "https://data.police.uk/docs/api-call-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/docs/method/crime-street/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.police.uk/"
+    }
+  },
+  "notes": "The API and documentation are current and show 2026 data activity. The decisive error is the claim that rate limits are unpublished: an official page specifies 15 requests/second with bursts of 30. Unlimited calls are permitted over time. Current CORS behavior could not be authoritatively verified."
+}

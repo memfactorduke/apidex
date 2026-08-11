@@ -1,0 +1,15 @@
+{
+  "id": "commerce-layer",
+  "base_url": "https://yourdomain.commercelayer.io/api",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -g -X GET 'https://yourdomain.commercelayer.io/api/skus' -H 'Accept: application/vnd.api+json' -H 'Authorization: Bearer your-access-token'",
+  "example_response_snippet": "{\"data\":[{\"id\":\"XAyRWNUzyN\",\"type\":\"skus\",\"links\":{\"self\":\"https://yourdomain.commercelayer.io/api/skus/XAyRWNUzyN\"},\"attributes\":{\"code\":\"TSHIRTMM000000FFFFFFXLXX\",\"name\":\"Men's Black T-shirt with White Logo (XL)\",\"description\":\"Lorem ipsum dolor sit amet.\"}}],\"meta\":{\"record_count\":140,\"page_count\":14}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ORIGINAL is incorrect. The current official API specification requires each organization's own https://yourdomain.commercelayer.io endpoint, and resource paths begin with /api: https://docs.commercelayer.io/core/api-specification . example: ORIGINAL is incorrect because it uses the generic api.commercelayer.io host. The official SKU-list example uses the organization-specific host, /api/skus, the JSON:API Accept header, and bearer authorization: https://docs.commercelayer.io/core/api-reference/skus/list"
+}

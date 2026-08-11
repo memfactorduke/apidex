@@ -1,0 +1,97 @@
+{
+  "id": "owntracks",
+  "status": "operational",
+  "name": "OwnTracks",
+  "category": "iot-devices",
+  "tagline": "Privacy-focused location tracking via HTTP and MQTT",
+  "description": "OwnTracks is an open-source location sharing protocol and ecosystem for personal and small-fleet tracking. Mobile apps publish location updates over MQTT or HTTP; backends and tools consume a documented JSON message format for live position, history, and geofencing.",
+  "base_url": "http[s]://recorder_host[:port]",
+  "docs_url": "https://owntracks.org/booklet/tech/json/",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Self-hosted: MQTT username/password or HTTP basic/auth as configured on your OwnTracks recorder or broker. No central OwnTracks cloud API key."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Open-source self-hosted software; no paid cloud API from OwnTracks. Costs are your own server/broker hosting.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (depends on self-hosted recorder/broker configuration)",
+  "example": {
+    "request": "curl -u YOUR_USERNAME:YOUR_PASSWORD -H 'Content-Type: application/json' -d '{\"_type\":\"location\",\"lat\":51.0,\"lon\":-0.1,\"tst\":1710000000,\"tid\":\"me\"}' 'https://RECORDER_HOST/pub?u=YOUR_USERNAME&d=YOUR_DEVICE'",
+    "response_snippet": "HTTP/1.1 200 OK\nContent-Type: application/json; charset=utf-8\n\n[]"
+  },
+  "use_cases": [
+    "publish a device location update to a self-hosted OwnTracks recorder over HTTP",
+    "parse OwnTracks JSON location messages from MQTT for a private map",
+    "ingest transition/geofence enter-leave events from OwnTracks apps",
+    "build a privacy-first family or fleet tracker without a third-party cloud"
+  ],
+  "sources": [
+    "https://owntracks.org/",
+    "https://owntracks.org/booklet/api/json/",
+    "https://owntracks.org/booklet/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,858 @@
+ok   17track: base=200 docs=200
+ok   1inch: base=401 docs=200
+FLAG 2checkout: base=404 docs=404 | docs_url bad (http 404)
+ok   ably: base=404 docs=200
+FLAG abs-statistics: base=0 docs=200 | base_url dead (http 0)
+FLAG abstract-email: base=400 docs=404 | docs_url bad (http 404)
+FLAG abstract-exchange-rates: base=200 docs=404 | docs_url bad (http 404)
+FLAG abstract-ip-geo: base=400 docs=404 | docs_url bad (http 404)
+ok   abuseipdb: base=404 docs=200
+FLAG accuweather: base=404 docs=403 | docs_url bad (http 403)
+ok   adafruit-io: base=404 docs=200
+ok   adsb-exchange: base=200 docs=200
+ok   advice-slip: base=200 docs=200
+ok   adyen: base=401 docs=200
+ok   adzuna: base=404 docs=200
+ok   aerodatabox: base=401 docs=200
+ok   affinda: base=404 docs=200
+FLAG afp-api: base=0 docs=404 | base_url dead (http 0); docs_url bad (http 404)
+ok   afterpay: base=404 docs=200
+FLAG aftership: base=401 docs=403 | docs_url bad (http 403)
+ok   agromonitoring: base=401 docs=200
+ok   ai21-labs: base=404 docs=200
+ok   airlabs: base=200 docs=200
+ok   airnow: base=200 docs=200
+FLAG aisstream: base=0 docs=200 | base_url dead (http 0); https flag inconsistent with base_url
+ok   alchemy: base=401 docs=200
+ok   aleph-alpha: base=401 docs=200
+ok   alienvault-otx: base=200 docs=200
+ok   alpaca: base=401 docs=200
+ok   alpha-vantage: base=200 docs=200
+FLAG amadeus: base=0 docs=200 | base_url dead (http 0)
+FLAG amazon-bedrock: base=0 docs=200 | base_url dead (http 0)
+ok   amazon-paapi: base=405 docs=200
+FLAG amazon-ses: base=0 docs=200 | base_url dead (http 0)
+FLAG amber-electric: base=0 docs=200 | base_url dead (http 0)
+FLAG amiiboapi: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+FLAG amtrak-statusmaps: base=301 docs=0 | docs_url bad (http 0)
+ok   anilist: base=404 docs=200
+ok   ankr: base=404 docs=200
+ok   anthropic: base=404 docs=200
+FLAG anyscale-endpoints: base=404 docs=404 | docs_url bad (http 404)
+FLAG apartment-list: base=404 docs=404 | docs_url bad (http 404)
+FLAG api-football: base=403 docs=403 | docs_url bad (http 403)
+ok   api-ninjas-exercises: base=404 docs=200
+ok   apiflash: base=404 docs=200
+ok   apify: base=404 docs=200
+ok   arbeitnow: base=200 docs=200
+ok   arxiv-api: base=200 docs=200
+FLAG arxiv: base=400 docs=200 | https flag inconsistent with base_url
+ok   ashby: base=401 docs=200
+ok   assemblyai: base=404 docs=200
+ok   associated-press: base=401 docs=200
+FLAG astrobin: base=200 docs=404 | docs_url bad (http 404)
+ok   astronomyapi: base=403 docs=200
+ok   attom-data: base=200 docs=200
+ok   auth0: base=200 docs=200
+ok   authorize-net: base=200 docs=200
+ok   avalara: base=401 docs=200
+FLAG aviation-edge: base=404 docs=404 | docs_url bad (http 404)
+ok   aviationstack: base=401 docs=200
+ok   awattar: base=404 docs=200
+FLAG aws-iot-core: base=0 docs=200 | base_url dead (http 0)
+FLAG aws-rekognition: base=0 docs=200 | base_url dead (http 0)
+FLAG aylien-news: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   azure-ai-translator: base=404 docs=200
+ok   azure-ai-vision: base=200 docs=200
+FLAG azure-devops: base=200 docs=200 | schema: pricing/free_tier_limits: 'Azure DevOps Services free tier: first 5 users free; free Basic plan includes u
+FLAG azure-iot-hub: base=0 docs=200 | base_url dead (http 0)
+ok   azure-maps: base=200 docs=200
+ok   azure-openai: base=200 docs=200
+ok   balena: base=404 docs=200
+ok   balldontlie: base=404 docs=200
+ok   bamboohr: base=200 docs=200
+ok   bandsintown: base=403 docs=200
+ok   barchart-ondemand: base=200 docs=200
+FLAG barcode-lookup: base=403 docs=403 | docs_url bad (http 403)
+ok   bart-api: base=403 docs=200
+ok   baseten: base=202 docs=200
+ok   batchdata: base=404 docs=200
+ok   bigcommerce: base=404 docs=200
+ok   bigdatacloud: base=200 docs=200
+ok   binance: base=451 docs=202
+FLAG binaryedge: base=403 docs=403 | docs_url bad (http 403)
+ok   bing-maps: base=401 docs=200
+ok   bing-news-search: base=404 docs=200
+ok   birdeye: base=200 docs=200
+ok   bitbucket: base=404 docs=200
+ok   bitpay: base=200 docs=200
+ok   bitquery: base=200 docs=200
+ok   bitstamp: base=404 docs=200
+FLAG blockchair: base=200 docs=401 | docs_url bad (http 401)
+ok   blockcypher: base=404 docs=200
+FLAG bls: base=404 docs=403 | docs_url bad (http 403)
+ok   bluesky: base=404 docs=200
+FLAG blynk: base=200 docs=404 | docs_url bad (http 404)
+FLAG bnb-api: base=0 docs=403 | base_url dead (http 0); docs_url bad (http 403)
+FLAG board-game-atlas: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0); researcher marked defunct
+FLAG boardgamegeek: base=401 docs=403 | docs_url bad (http 403)
+ok   booking-com: base=401 docs=200
+FLAG bored-api: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   braintree: base=403 docs=200
+ok   brave-search: base=422 docs=200
+ok   brawl-stars: base=403 docs=200
+ok   brevo: base=401 docs=200
+FLAG brewerydb: base=0 docs=404 | base_url dead (http 0); docs_url bad (http 404)
+ok   bright-data: base=404 docs=200
+ok   bright-sky: base=200 docs=200
+ok   britannica: base=400 docs=200
+ok   browserstack: base=404 docs=200
+ok   buildkite: base=404 docs=200
+ok   bybit: base=403 docs=200
+ok   calendarific: base=404 docs=200
+ok   calorieninjas: base=403 docs=200
+ok   canada-open-data: base=200 docs=200
+FLAG canvas-lms: base=0 docs=200 | base_url dead (http 0)
+FLAG careerjet: base=0 docs=200 | base_url dead (http 0)
+FLAG carmd: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   caselaw-access-project: base=200 docs=200
+ok   cat-facts: base=200 docs=200
+FLAG cayenne-mydevices: base=404 docs=404 | docs_url bad (http 404)
+ok   cboe-livevol: base=403 docs=200
+FLAG cdc-wonder: base=403 docs=403 | docs_url bad (http 403)
+ok   census-bureau: base=200 docs=200
+FLAG censys: base=403 docs=403 | docs_url bad (http 403)
+ok   cerebras-inference: base=404 docs=200
+ok   chainalysis: base=410 docs=200
+ok   chargebee: base=401 docs=200
+ok   cheapshark: base=200 docs=200
+ok   checkiday: base=200 docs=200
+ok   checkly: base=200 docs=200
+ok   checkout-com: base=404 docs=200
+FLAG chembl: base=0 docs=200 | base_url dead (http 0)
+ok   chess-com: base=404 docs=200
+ok   chicago-open-data: base=404 docs=200
+FLAG chromatic: base=400 docs=404 | docs_url bad (http 404)
+ok   chuck-norris-jokes: base=200 docs=200
+ok   circl-passive-dns: base=401 docs=200
+FLAG circl-vulnerability-lookup: base=200 docs=404 | docs_url bad (http 404)
+ok   circleci: base=404 docs=200
+ok   cisa-kev: base=200 docs=200
+ok   claimbuster: base=404 docs=200
+ok   clarifai: base=404 docs=200
+ok   clash-of-clans: base=403 docs=200
+ok   clerk: base=401 docs=200
+ok   clinicaltrials-gov: base=404 docs=200
+ok   cloudconvert: base=404 docs=200
+ok   cloudflare-doh: base=400 docs=200
+ok   cloudflare-workers-ai: base=404 docs=200
+FLAG co2signal: base=0 docs=0 | schema: tagline: '' is too short; description: '' is too short; base_url dead (http 0); docs_url bad (http 0); https flag inconsistent with base_url
+ok   codeclimate: base=200 docs=200
+ok   codecov: base=200 docs=200
+ok   codeship: base=404 docs=200
+ok   cohere: base=404 docs=200
+FLAG coinbase-commerce: base=503 docs=404 | base_url dead (http 503); docs_url bad (http 404)
+ok   coinbase: base=404 docs=200
+ok   coingecko: base=404 docs=200
+ok   coinmarketcap: base=404 docs=200
+ok   collegefootballdata: base=200 docs=200
+ok   comicvine: base=200 docs=200
+ok   commerce-layer: base=404 docs=200
+ok   companies-house: base=401 docs=200
+ok   complyadvantage: base=301 docs=200
+ok   congress-gov: base=403 docs=200
+ok   contextualweb-news: base=404 docs=200
+FLAG convertapi: base=200 docs=403 | docs_url bad (http 403)
+ok   core-ac-uk: base=404 docs=200
+ok   corelogic: base=404 docs=200
+ok   coursera: base=404 docs=200
+ok   courtlistener: base=200 docs=200
+FLAG covalent: base=404 docs=404 | docs_url bad (http 404)
+ok   coveralls: base=404 docs=200
+FLAG crates-io: base=404 docs=404 | docs_url bad (http 404)
+ok   crawlbase: base=400 docs=200
+ok   cricapi: base=404 docs=200
+ok   crossref: base=200 docs=200
+FLAG crt-sh: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+FLAG cryptocompare: base=401 docs=401 | docs_url bad (http 401)
+FLAG cta-api: base=403 docs=403 | docs_url bad (http 403)
+ok   currencyapi: base=401 docs=200
+ok   currents-api: base=404 docs=200
+ok   customer-io: base=404 docs=200
+ok   cve-program: base=404 docs=200
+FLAG cypress-cloud: base=404 docs=404 | docs_url bad (http 404)
+ok   dailymed: base=200 docs=200
+ok   data-gouv-fr: base=200 docs=200
+ok   data-gov-au: base=302 docs=200
+FLAG data-gov-sg: base=403 docs=404 | docs_url bad (http 404)
+ok   data-gov-uk: base=403 docs=200
+FLAG data-gov: base=404 docs=404 | docs_url bad (http 404)
+ok   data-world: base=404 docs=200
+ok   datadog: base=200 docs=200
+ok   datamuse: base=404 docs=200
+ok   db-ip: base=200 docs=200
+ok   dbpedia: base=200 docs=200
+ok   deck-of-cards: base=404 docs=200
+ok   deepgram: base=404 docs=200
+ok   deepinfra: base=404 docs=200
+ok   deepl: base=403 docs=200
+ok   deezer: base=200 docs=200
+FLAG defillama: base=404 docs=403 | docs_url bad (http 403)
+FLAG dehashed: base=200 docs=403 | docs_url bad (http 403)
+ok   deps-dev: base=200 docs=200
+ok   descope: base=404 docs=200
+ok   destatis-genesis: base=404 docs=200
+FLAG dice-fm: base=404 docs=0 | docs_url bad (http 0)
+ok   diffbot: base=401 docs=200
+FLAG discogs: base=200 docs=403 | docs_url bad (http 403)
+ok   discord: base=403 docs=200
+FLAG discourse: base=0 docs=200 | base_url dead (http 0)
+ok   disease-sh: base=404 docs=200
+ok   dnd5e-api: base=200 docs=200
+FLAG dns0-eu: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   docker-hub: base=404 docs=200
+ok   docraptor: base=404 docs=200
+ok   dog-ceo: base=404 docs=200
+ok   domain-com-au: base=404 docs=200
+ok   duffel: base=200 docs=200
+ok   dune-analytics: base=404 docs=200
+ok   duolingo: base=200 docs=200
+ok   easypost: base=404 docs=200
+FLAG ebay: base=404 docs=403 | docs_url bad (http 403)
+ok   ecb-data-portal: base=404 docs=200
+ok   edamam-recipe: base=401 docs=200
+FLAG eden-ai-resume: base=404 docs=404 | docs_url bad (http 404)
+FLAG edx: base=200 docs=404 | docs_url bad (http 404)
+ok   eia: base=403 docs=200
+ok   electricity-maps: base=404 docs=200
+ok   elevenlabs: base=404 docs=200
+FLAG emqx-cloud: base=0 docs=200 | base_url dead (http 0)
+ok   ensembl: base=200 docs=200
+FLAG entsoe-transparency: base=401 docs=400 | docs_url bad (http 400)
+ok   eodhd: base=404 docs=200
+ok   epo-ops: base=403 docs=200
+FLAG eppo-global-database: base=404 docs=404 | docs_url bad (http 404)
+FLAG epss-first: base=404 docs=404 | docs_url bad (http 404)
+ok   ergast-f1: base=200 docs=200
+FLAG esa-gaia-tap: base=200 docs=404 | docs_url bad (http 404)
+ok   esa-sky: base=200 docs=200
+ok   espn-api: base=403 docs=200
+ok   estated: base=404 docs=200
+ok   etherscan: base=200 docs=200
+FLAG eu-data-portal: base=404 docs=404 | docs_url bad (http 404)
+FLAG eur-lex-cellar: base=200 docs=404 | docs_url bad (http 404)
+ok   europeana: base=404 docs=200
+ok   eurostat: base=404 docs=200
+ok   event-registry: base=404 docs=200
+ok   eventbrite: base=404 docs=200
+ok   exa: base=404 docs=200
+ok   exchangerate-api: base=404 docs=200
+ok   exercisedb: base=401 docs=200
+ok   expedia-partner: base=403 docs=200
+ok   fal-ai: base=404 docs=200
+FLAG fanart-tv: base=404 docs=403 | docs_url bad (http 403)
+FLAG fannie-mae: base=403 docs=404 | docs_url bad (http 404)
+FLAG faostat: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   fatsecret: base=200 docs=200
+FLAG fbi-crime-data: base=404 docs=404 | docs_url bad (http 404)
+ok   federal-register: base=404 docs=200
+FLAG fever-up: base=0 docs=404 | base_url dead (http 0); docs_url bad (http 404)
+FLAG fhir-r4-examples: base=0 docs=200 | base_url dead (http 0)
+ok   financial-modeling-prep: base=401 docs=200
+ok   findwork: base=200 docs=200
+ok   fingerprint: base=200 docs=200
+ok   finnhub: base=401 docs=200
+ok   firecrawl: base=404 docs=200
+ok   fireworks-ai: base=404 docs=200
+ok   fishwatch: base=200 docs=200
+ok   fixer: base=200 docs=200
+FLAG flashscore: base=200 docs=200 | researcher marked defunct
+ok   flightaware-aeroapi: base=401 docs=200
+ok   flightradar24: base=200 docs=200
+ok   flutterwave: base=401 docs=200
+ok   football-data-org: base=404 docs=200
+ok   forgejo: base=404 docs=200
+FLAG fortnite-api: base=404 docs=404 | docs_url bad (http 404)
+ok   forvo: base=400 docs=200
+FLAG foursquare-places: base=404 docs=404 | docs_url bad (http 404)
+ok   frankfurter: base=200 docs=200
+FLAG fred: base=404 docs=0 | docs_url bad (http 0)
+ok   freddie-mac-pmms: base=200 docs=200
+ok   free-dictionary-api: base=404 docs=200
+ok   freeipapi: base=200 docs=200
+ok   freetogame: base=301 docs=200
+ok   freshbooks: base=404 docs=200
+ok   fueleconomy: base=404 docs=200
+FLAG fusionauth: base=0 docs=200 | base_url dead (http 0)
+ok   gbif: base=404 docs=200
+ok   gdelt: base=403 docs=200
+ok   gemini: base=404 docs=200
+ok   geoapify: base=401 docs=200
+ok   geojs: base=200 docs=200
+ok   geonames: base=401 docs=200
+FLAG giantbomb: base=403 docs=403 | docs_url bad (http 403)
+ok   giphy: base=404 docs=200
+ok   gitea: base=404 docs=200
+ok   gitee: base=404 docs=200
+ok   github: base=200 docs=200
+ok   gitlab: base=404 docs=200
+ok   gladia: base=404 docs=200
+ok   glassnode: base=401 docs=200
+ok   gleif: base=404 docs=200
+ok   gnews: base=404 docs=200
+ok   go-module-proxy: base=200 docs=200
+ok   google-books: base=404 docs=200
+FLAG google-cloud-iot: base=404 docs=200 | researcher marked defunct
+ok   google-cloud-natural-language: base=404 docs=200
+ok   google-cloud-speech: base=404 docs=200
+ok   google-cloud-text-to-speech: base=404 docs=200
+ok   google-cloud-translation: base=404 docs=200
+ok   google-cloud-video-intelligence: base=404 docs=200
+ok   google-cloud-vision: base=404 docs=200
+FLAG google-ct-log-list: base=404 docs=404 | docs_url bad (http 404)
+ok   google-fact-check: base=404 docs=200
+ok   google-gemini: base=404 docs=200
+ok   google-maps: base=404 docs=200
+ok   google-news-rss: base=200 docs=200
+FLAG gotenberg: base=0 docs=200 | base_url dead (http 0)
+ok   govinfo: base=200 docs=200
+ok   govuk-fuel-prices: base=200 docs=200
+ok   grafana-cloud: base=401 docs=200
+ok   graphhopper: base=400 docs=200
+ok   greenhouse: base=404 docs=200
+ok   greynoise: base=404 docs=200
+ok   grid-esports: base=404 docs=200
+FLAG gridstatus: base=200 docs=403 | docs_url bad (http 403)
+ok   groq: base=404 docs=200
+ok   guardian: base=401 docs=200
+ok   gumroad: base=404 docs=200
+ok   gutendex: base=200 docs=200
+ok   hacker-news: base=200 docs=200
+ok   harvard-art-museums: base=200 docs=200
+ok   haveibeenpwned: base=200 docs=200
+ok   hearthstonejson: base=200 docs=200
+ok   helius: base=404 docs=200
+ok   here: base=404 docs=200
+FLAG hex-pm: base=200 docs=404 | docs_url bad (http 404)
+ok   hipo-universities: base=200 docs=200
+FLAG hiringcafe: base=404 docs=404 | docs_url bad (http 404)
+FLAG hivemq-cloud: base=0 docs=404 | base_url dead (http 0); docs_url bad (http 404)
+ok   holidayapi: base=404 docs=200
+ok   hologram: base=404 docs=200
+FLAG home-assistant: base=0 docs=200 | base_url dead (http 0)
+ok   honeycomb: base=200 docs=200
+ok   hotelbeds: base=404 docs=200
+ok   housecanary: base=200 docs=200
+ok   howlongtobeat: base=200 docs=200
+FLAG hud-user: base=200 docs=200 | schema: tagline: 'Official Fair Market Rents, income limits, and HUD housing datasets from the U.
+ok   huggingface-hub: base=404 docs=200
+FLAG huggingface-inference: base=0 docs=200 | base_url dead (http 0)
+FLAG human-phenotype-ontology: base=404 docs=404 | docs_url bad (http 404)
+FLAG humane: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   hunter: base=404 docs=200
+ok   hypixel: base=200 docs=200
+ok   ibm-watson-nlu: base=401 docs=200
+ok   ibm-watson-speech-to-text: base=404 docs=200
+ok   ibm-watsonx: base=404 docs=200
+ok   icanhazdadjoke: base=200 docs=200
+ok   idealista: base=200 docs=200
+FLAG iex-cloud: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+FLAG ifttt: base=200 docs=404 | docs_url bad (http 404)
+ok   igdb: base=404 docs=200
+FLAG imf-data: base=404 docs=403 | docs_url bad (http 403)
+ok   imgflip: base=200 docs=200
+ok   inaturalist: base=200 docs=200
+ok   infura: base=401 docs=200
+ok   insect-id: base=404 docs=200
+ok   4r0u: base=401 docs=200
+ok   interactive-brokers: base=404 docs=200
+ok   intercom: base=403 docs=200
+ok   internet-archive: base=200 docs=200
+ok   intrinio: base=200 docs=200
+ok   invoice-ninja: base=404 docs=200
+ok   ip-api: base=200 docs=200
+ok   ip2location: base=200 docs=200
+ok   ipapi-is: base=200 docs=200
+ok   ipapi: base=200 docs=200
+ok   ipdata: base=401 docs=200
+ok   ipgeolocation-io: base=200 docs=200
+ok   ipinfo: base=200 docs=200
+ok   iplocate: base=403 docs=200
+ok   ipqualityscore: base=404 docs=200
+ok   ipwhois: base=200 docs=200
+FLAG iqair-airvisual: base=400 docs=429 | docs_url bad (http 429)
+ok   isthereanydeal: base=302 docs=200
+ok   itunes-search: base=200 docs=200
+ok   jawg-maps: base=404 docs=200
+FLAG jenkins: base=0 docs=200 | base_url dead (http 0)
+FLAG jetbrains-space: base=503 docs=200 | base_url dead (http 503)
+FLAG jikan: base=504 docs=200 | base_url dead (http 504)
+FLAG jina-ai: base=404 docs=404 | docs_url bad (http 404)
+ok   jokeapi: base=200 docs=200
+ok   jolpica-f1: base=200 docs=200
+FLAG jooble: base=403 docs=403 | docs_url bad (http 403)
+ok   jpl-horizons: base=200 docs=200
+ok   jsearch: base=401 docs=200
+ok   jupiter: base=404 docs=200
+ok   kaggle: base=200 docs=200
+ok   kanye-rest: base=200 docs=200
+FLAG keycloak: base=0 docs=200 | base_url dead (http 0)
+ok   khan-academy: base=400 docs=200
+FLAG kinde: base=202 docs=404 | docs_url bad (http 404)
+ok   kitsu: base=404 docs=200
+ok   klarna: base=404 docs=200
+ok   klaviyo: base=403 docs=200
+ok   kraken: base=404 docs=200
+ok   kucoin: base=404 docs=200
+ok   la-open-data: base=404 docs=200
+ok   lambdatest: base=403 docs=200
+ok   lastfm: base=400 docs=200
+ok   launch-library-2: base=200 docs=200
+FLAG launchdarkly: base=200 docs=404 | docs_url bad (http 404)
+FLAG leakix: base=200 docs=404 | docs_url bad (http 404)
+ok   lemon-squeezy: base=403 docs=200
+FLAG lepton-ai: base=0 docs=404 | base_url dead (http 0); docs_url bad (http 404)
+ok   levels-fyi: base=200 docs=200
+ok   lever: base=404 docs=200
+ok   libretranslate: base=200 docs=200
+ok   lichess: base=200 docs=200
+ok   lingua-robot: base=401 docs=200
+ok   linkedin: base=401 docs=200
+ok   listen-notes: base=200 docs=200
+ok   loc-gov: base=200 docs=200
+ok   locationiq: base=403 docs=200
+ok   loops: base=401 docs=200
+ok   lorem-picsum: base=200 docs=200
+ok   losant: base=200 docs=200
+FLAG lseg-news: base=200 docs=404 | docs_url bad (http 404)
+FLAG ludopedia: base=404 docs=403 | docs_url bad (http 403)
+ok   luma: base=200 docs=200
+ok   magicthegathering: base=404 docs=200
+FLAG mailchimp: base=0 docs=200 | base_url dead (http 0)
+ok   mailgun: base=200 docs=200
+FLAG mailjet: base=500 docs=200 | base_url dead (http 500)
+ok   malwarebazaar: base=401 docs=200
+ok   mapbox: base=200 docs=200
+ok   mapquest: base=404 docs=200
+ok   marinetraffic: base=404 docs=200
+ok   marketaux: base=404 docs=200
+ok   marketstack: base=401 docs=200
+FLAG marvel-comics: base=500 docs=200 | base_url dead (http 500)
+ok   massive: base=404 docs=200
+FLAG mastodon: base=0 docs=200 | base_url dead (http 0)
+ok   matrix: base=404 docs=200
+ok   maven-central: base=400 docs=200
+ok   maxio-chargify: base=401 docs=200
+ok   maxmind-geoip: base=404 docs=200
+ok   mbta-v3: base=200 docs=200
+ok   mediastack: base=401 docs=200
+ok   mediawiki: base=200 docs=200
+ok   medlineplus-connect: base=200 docs=200
+FLAG medusa: base=0 docs=200 | base_url dead (http 0); https flag inconsistent with base_url
+ok   meetup: base=404 docs=200
+ok   memegen: base=200 docs=200
+FLAG memfault: base=404 docs=404 | docs_url bad (http 404)
+ok   mempool-space: base=200 docs=200
+ok   mercado-pago: base=404 docs=200
+FLAG merriam-webster: base=404 docs=404 | docs_url bad (http 404)
+FLAG messagebird: base=200 docs=200 | schema: pricing/free_tier_limits: 'Pay-as-you-go starts free (no card for trial usage); SMS billed per message by 
+ok   messari: base=200 docs=200
+ok   met-museum: base=404 docs=200
+ok   meta-graph: base=400 docs=200
+ok   metalpriceapi: base=200 docs=200
+ok   meteoblue: base=404 docs=200
+ok   meteostat: base=401 docs=200
+ok   metro-transit-nextrip: base=404 docs=200
+FLAG metrolinx-opendata: base=0 docs=200 | base_url dead (http 0)
+ok   microlink: base=200 docs=200
+ok   microsoft-graph-calendar: base=200 docs=200
+ok   minor-planet-center: base=200 docs=200
+ok   mistral-ai: base=404 docs=200
+ok   mlb-stats: base=404 docs=200
+FLAG mobygames: base=200 docs=403 | docs_url bad (http 403)
+ok   modal: base=200 docs=200
+FLAG mojang: base=404 docs=0 | docs_url bad (http 0)
+ok   mollie: base=404 docs=200
+FLAG moodle: base=0 docs=200 | base_url dead (http 0)
+FLAG moralis: base=404 docs=403 | docs_url bad (http 403)
+FLAG mozilla-observatory: base=502 docs=200 | base_url dead (http 502)
+ok   mta-bustime: base=404 docs=200
+ok   musicbrainz: base=200 docs=200
+FLAG myfitnesspal: base=404 docs=200 | schema: auth/details: 'Partner-issued OAuth 2.0 client_id + client_secret (no self-serve). Authorizati
+ok   nager-date: base=404 docs=200
+ok   nansen: base=200 docs=200
+ok   nasa-ads: base=404 docs=202
+ok   nasa-exoplanet-archive: base=404 docs=200
+ok   nasa-open-data: base=200 docs=200
+ok   nasa-power: base=404 docs=200
+ok   nasdaq-data-link: base=404 docs=200
+ok   navitia: base=200 docs=200
+FLAG nba-stats: base=404 docs=200 | schema: example/request: "curl -s 'https://stats.nba.com/stats/leaguedashplayerstats?Conference=&DateFrom
+FLAG ncbi-eutils: base=0 docs=0 | schema: tagline: '' is too short; description: '' is too short; base_url dead (http 0); docs_url bad (http 0); https flag inconsistent with base_url
+ok   netlify: base=401 docs=200
+FLAG new-relic: base=200 docs=404 | docs_url bad (http 404)
+ok   newsapi-ai: base=404 docs=200
+ok   newsapi: base=404 docs=200
+FLAG newscatcher: base=0 docs=200 | base_url dead (http 0)
+ok   newsdata-io: base=200 docs=200
+FLAG newswhip: base=404 docs=0 | docs_url bad (http 0)
+ok   nhl-api: base=404 docs=200
+ok   nhl-edge: base=404 docs=200
+ok   nhtsa-vpic: base=200 docs=200
+ok   noaa-cdo: base=400 docs=200
+ok   noaa-ncei: base=400 docs=200
+ok   nominatim: base=200 docs=200
+ok   nowpayments: base=404 docs=200
+ok   npi-registry: base=200 docs=200
+ok   npm: base=200 docs=200
+FLAG nrel: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   nuget: base=200 docs=200
+ok   numbeo: base=404 docs=200
+FLAG numbers-api: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0); https flag inconsistent with base_url
+FLAG nutritionix: base=404 docs=0 | docs_url bad (http 0)
+FLAG nvd-nist: base=404 docs=0 | docs_url bad (http 0)
+ok   nvidia-nim: base=404 docs=200
+ok   nws-weather-gov: base=200 docs=200
+ok   nyc-open-data: base=404 docs=200
+ok   nytimes: base=404 docs=200
+ok   ocr-space: base=200 docs=200
+FLAG octopus-energy: base=404 docs=404 | docs_url bad (http 404)
+FLAG oecd-data: base=404 docs=403 | docs_url bad (http 403)
+ok   ofac-sanctions: base=404 docs=200
+ok   official-joke-api: base=200 docs=200
+FLAG okta: base=0 docs=200 | base_url dead (http 0)
+ok   okx: base=200 docs=200
+ok   omdb: base=200 docs=200
+ok   onet: base=401 docs=200
+ok   onfido: base=403 docs=200
+ok   ons-uk: base=200 docs=200
+ok   open-brewery-db: base=404 docs=200
+FLAG open-charge-map: base=403 docs=0 | docs_url bad (http 0)
+ok   open-exchange-rates: base=405 docs=200
+ok   open-food-facts: base=200 docs=200
+ok   open-library: base=200 docs=200
+ok   open-menu: base=200 docs=200
+ok   open-meteo-geocoding: base=404 docs=200
+ok   open-meteo: base=404 docs=200
+ok   open-notify: base=200 docs=200
+FLAG open-ownership: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   open-textbook-library: base=404 docs=200
+ok   open5e: base=200 docs=200
+ok   openai: base=404 docs=200
+ok   openalex: base=200 docs=200
+ok   openaq: base=404 docs=200
+ok   opencage: base=400 docs=200
+FLAG opencorporates: base=401 docs=404 | docs_url bad (http 404)
+ok   opendota: base=200 docs=200
+ok   openei-urdb: base=403 docs=200
+ok   openfda: base=404 docs=200
+ok   openfec: base=403 docs=200
+ok   openfigi: base=404 docs=200
+FLAG openflights: base=404 docs=404 | docs_url bad (http 404)
+ok   openholidays-api: base=404 docs=200
+ok   openligadb: base=200 docs=200
+ok   openrouter: base=200 docs=200
+ok   openrouteservice: base=200 docs=200
+ok   opensanctions: base=200 docs=200
+ok   opensea: base=404 docs=200
+ok   opensecrets: base=200 docs=200
+ok   opensky-network: base=404 docs=200
+ok   opentable: base=200 docs=200
+ok   opentdb: base=200 docs=200
+ok   opentopomap: base=200 docs=200
+ok   opentripmap: base=401 docs=200
+ok   opentripplanner: base=403 docs=200
+ok   openuv: base=403 docs=200
+ok   openweathermap: base=401 docs=200
+FLAG openxbl: base=404 docs=404 | docs_url bad (http 404)
+ok   osrm: base=400 docs=200
+ok   osv-dev: base=404 docs=200
+ok   overpass: base=404 docs=200
+FLAG owntracks: base=0 docs=404 | base_url dead (http 0); docs_url bad (http 404)
+ok   oxford-dictionaries: base=401 docs=200
+ok   packagist: base=200 docs=200
+ok   paddle: base=404 docs=200
+ok   pagerduty: base=200 docs=200
+ok   pandascore: base=200 docs=200
+ok   particle: base=200 docs=200
+FLAG passport-index: base=403 docs=403 | docs_url bad (http 403)
+ok   paypal: base=406 docs=200
+FLAG paystack: base=200 docs=403 | docs_url bad (http 403)
+FLAG payu: base=200 docs=403 | docs_url bad (http 403)
+ok   pdf-co: base=404 docs=200
+ok   pdfshift: base=404 docs=200
+ok   pelias: base=200 docs=200
+ok   perenual: base=200 docs=200
+ok   perigon: base=404 docs=200
+ok   perplexity: base=404 docs=200
+ok   persona: base=404 docs=200
+ok   personio: base=404 docs=200
+ok   perspective-api: base=404 docs=200
+ok   philips-hue: base=200 docs=200
+ok   phishtank: base=200 docs=200
+ok   photon: base=200 docs=200
+ok   pinecone-inference: base=401 docs=200
+ok   pinterest: base=404 docs=200
+FLAG pirate-weather: base=404 docs=404 | docs_url bad (http 404)
+ok   placeholder: base=200 docs=200
+FLAG placekitten: base=521 docs=521 | base_url dead (http 521); docs_url bad (http 521)
+ok   plaid: base=200 docs=200
+ok   plant-id: base=404 docs=200
+ok   playerdb: base=404 docs=200
+ok   podcast-index: base=403 docs=200
+ok   pokeapi: base=200 docs=200
+FLAG pokemontcg: base=502 docs=200 | base_url dead (http 502)
+ok   polygon-io: base=404 docs=200
+ok   positionstack: base=401 docs=200
+ok   posthog: base=404 docs=200
+ok   postmark: base=200 docs=200
+FLAG predicthq: base=401 docs=200 | schema: description: 'Placeholder - researching' is too short
+ok   pricecharting: base=404 docs=200
+ok   printful: base=200 docs=200
+ok   printify: base=404 docs=200
+FLAG propertyshark: base=403 docs=403 | docs_url bad (http 403)
+ok   propublica-congress: base=403 docs=200
+ok   pubchem: base=400 docs=200
+ok   pulsedive: base=200 docs=200
+ok   pulumi-cloud: base=404 docs=200
+FLAG punk-api: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+FLAG pusher: base=0 docs=200 | base_url dead (http 0)
+ok   pvoutput: base=200 docs=200
+ok   pypi: base=200 docs=200
+ok   qr-code-generator: base=400 docs=200
+ok   quad9: base=400 docs=200
+ok   quickbooks: base=400 docs=200
+ok   quicknode: base=401 docs=200
+ok   quodd: base=200 docs=200
+FLAG quotable: base=0 docs=200 | base_url dead (http 0)
+ok   radar: base=404 docs=200
+ok   randomuser: base=200 docs=200
+FLAG rawg: base=522 docs=522 | base_url dead (http 522); docs_url bad (http 522)
+ok   razorpay: base=404 docs=200
+ok   rcsb-pdb: base=200 docs=200
+FLAG realtor-com: base=0 docs=404 | schema: description: 'Placeholder' is too short; base_url dead (http 0); docs_url bad (http 404)
+ok   realty-mole: base=404 docs=200
+ok   recruitee: base=401 docs=200
+ok   recurly: base=200 docs=200
+ok   reddit: base=403 docs=200
+ok   redfin-data: base=404 docs=200
+ok   reed: base=404 docs=200
+ok   regulations-gov: base=403 docs=200
+ok   remotive: base=404 docs=200
+ok   render: base=404 docs=200
+ok   rentcast: base=401 docs=200
+ok   replicate: base=401 docs=200
+ok   resend: base=200 docs=200
+FLAG reso-web-api: base=0 docs=200 | base_url dead (http 0); https flag inconsistent with base_url
+ok   rest-countries: base=200 docs=200
+ok   rev-ai: base=404 docs=200
+ok   rightmove: base=404 docs=200
+FLAG riot-games: base=0 docs=200 | base_url dead (http 0)
+FLAG rome2rio: base=403 docs=403 | docs_url bad (http 403)
+ok   ron-swanson-quotes: base=200 docs=200
+ok   rubygems: base=404 docs=200
+ok   rxnorm: base=200 docs=200
+ok   rxterms: base=404 docs=200
+ok   sambanova-cloud: base=405 docs=200
+ok   sample-apis-coffee: base=404 docs=200
+ok   sauce-labs: base=404 docs=200
+ok   scrapingbee: base=400 docs=200
+ok   screenshotapi-net: base=404 docs=200
+ok   screenshotone: base=404 docs=200
+ok   scryfall: base=400 docs=200
+ok   seatgeek: base=301 docs=200
+ok   seattle-open-data: base=404 docs=200
+FLAG sec-edgar: base=200 docs=403 | docs_url bad (http 403)
+ok   securitytrails: base=401 docs=200
+FLAG sellix: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   semantic-scholar: base=200 docs=200
+ok   semaphore-ci: base=200 docs=200
+ok   sendgrid: base=401 docs=200
+ok   sentry: base=301 docs=200
+FLAG septa-api: base=403 docs=403 | docs_url bad (http 403)
+ok   serpapi: base=401 docs=200
+ok   sf-open-data: base=404 docs=200
+ok   shipengine: base=404 docs=200
+ok   shippo: base=401 docs=200
+ok   shodan: base=404 docs=200
+ok   shopify: base=200 docs=200
+ok   simbad: base=200 docs=200
+FLAG skip: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0); researcher marked defunct
+ok   skyscanner: base=404 docs=200
+ok   slack: base=200 docs=200
+ok   smartrecruiters: base=200 docs=200
+ok   smartthings: base=404 docs=200
+FLAG smithsonian: base=404 docs=403 | docs_url bad (http 403)
+ok   snipcart: base=404 docs=200
+ok   snyk: base=204 docs=200
+ok   socrata: base=404 docs=200
+FLAG sofascore: base=403 docs=403 | docs_url bad (http 403); researcher marked defunct
+ok   soilgrids: base=404 docs=200
+FLAG solar-system-opendata: base=200 docs=200 | schema: example/response_snippet: '{\n  "id": "terre",\n  "name": "La Terre",\n  "englishName": "Earth",\n  "isPla
+ok   solcast: base=200 docs=200
+ok   sonarcloud: base=200 docs=200
+ok   sourcegraph: base=404 docs=200
+ok   spaceflight-news: base=200 docs=200
+FLAG spacex-api: base=525 docs=200 | base_url dead (http 525)
+ok   spamhaus: base=404 docs=200
+ok   sparkpost: base=404 docs=200
+ok   speechmatics: base=200 docs=200
+ok   spoonacular: base=405 docs=200
+ok   sportmonks: base=200 docs=200
+ok   sportradar: base=403 docs=200
+ok   sportsdataio: base=401 docs=200
+ok   spotify: base=410 docs=200
+ok   square: base=404 docs=200
+ok   ssllabs: base=404 docs=200
+ok   stability-ai: base=200 docs=200
+ok   stadia-maps: base=404 docs=200
+ok   statcan: base=404 docs=200
+FLAG state-dept-advisories: base=403 docs=403 | docs_url bad (http 403)
+ok   steam-web-api: base=404 docs=200
+ok   steamgriddb: base=200 docs=200
+ok   steamspy: base=200 docs=200
+ok   stock-news-api: base=404 docs=200
+ok   stockdata-org: base=404 docs=200
+ok   stormglass: base=404 docs=200
+ok   stream-chat: base=404 docs=200
+ok   stripe: base=404 docs=200
+ok   stytch: base=404 docs=200
+ok   sumsub: base=200 docs=200
+FLAG supabase-auth: base=0 docs=200 | base_url dead (http 0)
+FLAG swapi: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0); researcher marked defunct
+ok   tatoeba: base=200 docs=200
+ok   tavily: base=200 docs=200
+ok   taxjar: base=404 docs=200
+ok   tcgdex: base=404 docs=200
+ok   tcgplayer: base=404 docs=200
+ok   telegram-bot: base=200 docs=200
+ok   tenderly: base=200 docs=200
+ok   tenor: base=404 docs=200
+ok   terraform-cloud: base=404 docs=200
+ok   tfl-unified: base=200 docs=200
+ok   the-graph: base=404 docs=200
+ok   the-muse: base=404 docs=200
+ok   the-odds-api: base=404 docs=200
+FLAG the-things-network: base=200 docs=404 | docs_url bad (http 404)
+ok   the-trivia-api: base=404 docs=200
+FLAG theaudiodb: base=200 docs=404 | docs_url bad (http 404)
+ok   thecatapi: base=200 docs=200
+ok   thecocktaildb: base=403 docs=200
+ok   themealdb: base=403 docs=200
+ok   thenewsapi: base=404 docs=200
+ok   thesportsdb: base=403 docs=200
+ok   thetvdb: base=401 docs=200
+ok   they-said-so: base=200 docs=200
+ok   thingsboard: base=200 docs=200
+ok   thispersondoesnotexist: base=200 docs=200
+ok   threatfox: base=401 docs=200
+ok   thunderforest: base=200 docs=200
+ok   tibber: base=400 docs=200
+ok   ticketmaster-discovery: base=401 docs=200
+FLAG ticketweb: base=200 docs=506 | docs_url bad (http 506)
+ok   tiingo: base=200 docs=200
+FLAG timeapi: base=404 docs=404 | docs_url bad (http 404)
+ok   timezonedb: base=404 docs=200
+ok   tinyurl: base=200 docs=200
+ok   tmdb: base=204 docs=200
+ok   together-ai: base=404 docs=200
+ok   tomorrow-io: base=404 docs=200
+ok   tomtom: base=200 docs=200
+ok   traccar: base=404 docs=200
+FLAG trackingmore: base=404 docs=404 | docs_url bad (http 404)
+ok   tradier: base=200 docs=200
+ok   trakt: base=412 docs=200
+ok   transit-app: base=404 docs=200
+ok   transitland: base=404 docs=200
+FLAG travel-advisory: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   traveltime: base=404 docs=200
+ok   travis-ci: base=200 docs=200
+ok   trefle: base=200 docs=200
+FLAG tripadvisor: base=403 docs=403 | docs_url bad (http 403)
+ok   trulioo: base=404 docs=200
+ok   tumblr: base=404 docs=200
+ok   tuya: base=200 docs=200
+ok   tvmaze: base=200 docs=200
+ok   twelve-data: base=404 docs=200
+ok   twilio: base=200 docs=200
+ok   ubidots: base=404 docs=200
+FLAG udemy: base=403 docs=403 | docs_url bad (http 403)
+ok   uk-carbon-intensity: base=200 docs=200
+ok   uk-legislation: base=200 docs=200
+FLAG uk-parliament: base=404 docs=403 | docs_url bad (http 403)
+ok   uk-police-data: base=404 docs=200
+ok   umls-uts: base=401 docs=200
+FLAG un-comtrade: base=404 docs=404 | docs_url bad (http 404)
+FLAG un-data: base=500 docs=200 | base_url dead (http 500)
+ok   uniprot: base=403 docs=200
+ok   universe-events: base=404 docs=200
+ok   untappd: base=404 docs=200
+ok   urlhaus: base=401 docs=200
+ok   urlscan-io: base=404 docs=200
+ok   us-treasury-fiscal-data: base=404 docs=200
+ok   usajobs: base=404 docs=200
+ok   usaspending: base=404 docs=200
+ok   usda-ers: base=404 docs=200
+ok   usda-fooddata-central: base=403 docs=200
+ok   usda-nass-quick-stats: base=200 docs=200
+ok   uselessfacts: base=200 docs=200
+FLAG usgs-earthquake: base=301 docs=200 | schema: example/response_snippet: '{"type":"FeatureCollection","metadata":{"generated":1704153600000,"url":"https:
+ok   usgs-water: base=404 docs=200
+FLAG uspto-patentsview: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+FLAG uspto-trademark: base=0 docs=200 | base_url dead (http 0)
+ok   valhalla: base=404 docs=200
+ok   valorant-api: base=404 docs=200
+FLAG vatlayer: base=200 docs=200 | https flag inconsistent with base_url
+ok   vercel: base=200 docs=200
+ok   vesselfinder: base=200 docs=200
+ok   virustotal: base=404 docs=200
+ok   visual-crossing: base=200 docs=200
+ok   vonage: base=404 docs=200
+ok   voyage-ai: base=404 docs=200
+ok   walk-score: base=200 docs=200
+FLAG waqi: base=0 docs=200 | base_url dead (http 0)
+ok   watttime: base=200 docs=200
+ok   weatherapi: base=404 docs=200
+ok   weatherbit: base=400 docs=200
+ok   weatherstack: base=200 docs=200
+ok   webzio: base=200 docs=200
+ok   wger: base=200 docs=200
+ok   what3words: base=401 docs=200
+ok   wheretheiss-at: base=401 docs=200
+ok   who-gho: base=200 docs=200
+ok   who-icd-api: base=404 docs=200
+ok   wikidata: base=200 docs=200
+ok   wikimedia-rest: base=404 docs=200
+ok   wikipedia: base=200 docs=200
+ok   wiktionary: base=200 docs=200
+ok   wmata: base=404 docs=200
+FLAG woocommerce: base=0 docs=200 | base_url dead (http 0)
+FLAG woodpecker-ci: base=0 docs=404 | base_url dead (http 0); docs_url bad (http 404)
+ok   wordnik: base=404 docs=200
+ok   wordsapi: base=401 docs=200
+ok   workable: base=404 docs=200
+ok   workos: base=200 docs=200
+ok   world-bank: base=404 docs=200
+ok   world-news-api: base=405 docs=200
+ok   world-weather-online: base=403 docs=200
+FLAG worldpay: base=200 docs=200 | schema: auth/details: 'HTTP Basic Authentication with username/password (or merchant credentials) issu
+FLAG worldtimeapi: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   x-twitter: base=404 docs=200
+ok   xai: base=404 docs=200
+ok   xero: base=401 docs=200
+FLAG y-y: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0); researcher marked defunct
+ok   yahoo-finance: base=404 docs=200
+ok   yelp-fusion: base=400 docs=200
+ok   yesno-api: base=200 docs=200
+ok   ygoprodeck: base=404 docs=200
+FLAG yomomma-api: base=0 docs=0 | base_url dead (http 0); docs_url bad (http 0)
+ok   you-com: base=403 docs=200
+ok   zenquotes: base=200 docs=200
+FLAG zenrows: base=400 docs=404 | docs_url bad (http 404)
+ok   zerion: base=200 docs=200
+ok   zerobounce: base=404 docs=200
+ok   zillow-bridge: base=403 docs=200
+ok   zomato: base=200 docs=200
+FLAG zoopla: base=404 docs=0 | docs_url bad (http 0)
+
+856 checked, 196 flagged -> data/rework-queue.txt

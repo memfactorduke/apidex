@@ -1,0 +1,52 @@
+{
+  "id": "fever-up",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No confirmed public API base URL; automated check returned HTTP 0 for https://api.feverup.com and no official docs publish this host",
+      "source": "https://feverup.com"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "No public developer docs page at https://feverup.com/en/developers (HTTP 404); partner access is not self-serve documented",
+      "source": "https://feverup.com"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Example endpoint/path/auth are not supported by any public Fever docs; no documented /v1/plans API",
+      "source": "https://feverup.com"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Claim of public developer documentation for partner/integration access is unsupported \u2014 the cited developers URL 404s and no current official public API docs were found",
+      "source": "https://feverup.com"
+    }
+  },
+  "notes": "docs_url and base_url fail live checks (404 / HTTP 0). No authoritative public API surface found; treat as non-public/partner-only without published endpoints."
+}

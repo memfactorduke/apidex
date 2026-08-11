@@ -1,0 +1,52 @@
+{
+  "id": "huggingface-hub",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/inference-providers/en/hub-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/hub/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/hub/security-tokens"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/hub/rate-limits"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free users receive 1,000 Hub API requests, 5,000 resolver requests, and 200 page requests per 5-minute fixed window. These limits may change with platform health.",
+      "source": "https://huggingface.co/docs/hub/rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Main rate limits are published by plan and use 5-minute fixed windows. Anonymous users receive 500 API requests; Free 1,000; PRO 2,500; Team 3,000; Enterprise 6,000; and Enterprise Plus 10,000. Separate resolver and page quotas also apply. Some granular action limits remain unpublished.",
+      "source": "https://huggingface.co/docs/hub/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/api/models/bert-base-uncased"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/hub/api"
+    }
+  },
+  "notes": "The API and example endpoint are operational; the example's legacy model ID redirects to google-bert/bert-base-uncased. Hugging Face moved its detailed endpoint reference to a live OpenAPI specification. The entry fails because exact plan-based rate limits are now published, making both rate-limit claims stale. No current official CORS policy was located."
+}

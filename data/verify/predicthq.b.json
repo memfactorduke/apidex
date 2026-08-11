@@ -1,0 +1,52 @@
+{
+  "id": "predicthq",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.predicthq.com/api/overview/authenticating"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.predicthq.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.predicthq.com/api/overview/authenticating"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.predicthq.com/webapp-support/getting-started/what-happens-at-the-end-of-my-free-trial"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No ongoing free tier. PredictHQ offers a 14-day free trial, after which API access ends unless the user upgrades to a paid plan.",
+      "source": "https://docs.predicthq.com/webapp-support/getting-started/what-happens-at-the-end-of-my-free-trial"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plan-specific requests per second, measured over a one-second window and applied organization-wide; excess requests may receive HTTP 429.",
+      "source": "https://docs.predicthq.com/api/overview/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://api.predicthq.com/v1/events/\" -H \"Authorization: Bearer $ACCESS_TOKEN\"",
+      "source": "https://docs.predicthq.com/api/overview/authenticating"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "PredictHQ provides structured real-world event data and demand-aware features for forecasting, machine learning, and AI systems.",
+      "source": "https://docs.predicthq.com/"
+    }
+  },
+  "notes": "The API is active; an unauthenticated HTTP 401 is expected and does not indicate downtime. Current official documentation and OpenAPI materials still use https://api.predicthq.com and /v1 endpoints. No official shutdown or replacement notice was found. Authentication uses an API token/key as an HTTP Bearer credential. CORS behavior was not documented authoritatively."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "modal",
+  "base_url": "https://<source>--<label>.modal.run",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "$30/month in free compute credits on the $0 Starter plan; usage beyond included credits is billed at published compute rates.",
+  "rate_limits": "New accounts: workspace-wide limit of 200 Function calls or HTTP requests per second, with a 5-second burst multiplier; excess requests return HTTP 429.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: replace; Web Function URLs use the default pattern shown here: https://modal.com/docs/guide/webhook-urls. free_tier_limits: replace; Starter includes recurring $30/month free credits, not new-user-only: https://modal.com/pricing. rate_limits: replace; new accounts get 200 calls or HTTP requests/s, a 5-second burst, then 429: https://modal.com/docs/guide/webhooks. cors: yes for @modal.fastapi_endpoint Web Functions: https://modal.com/docs/sdk/py/latest/fastapi_endpoint"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "housecanary",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.housecanary.com/resources/developer-tools"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.housecanary.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "HTTP Basic authentication using the API Key as username and API Secret as password",
+      "source": "https://www.housecanary.com/resources/developer-tools"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.housecanary.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "not applicable; HouseCanary does not publish a free API tier",
+      "source": "https://www.housecanary.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.housecanary.com/blog/data-explorer-api-quick-start-guide"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -G 'https://api.housecanary.com/v2/property/value' -d 'address=43 Valmonte Plaza' -d 'zipcode=90274' -u 'API_KEY:API_SECRET'",
+      "source": "https://www.housecanary.com/resources/developer-tools"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.housecanary.com/products/data-explorer"
+    }
+  },
+  "notes": "The API and documentation remain current. The material error is authentication: HouseCanary requires an API Key and Secret through HTTP Basic authentication, not a bare Authorization API-key header. Public fixed rate-limit numbers are absent because limits are contractual and shown in the authenticated Developer Center. CORS behavior was not documented."
+}

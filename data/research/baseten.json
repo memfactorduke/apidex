@@ -1,0 +1,38 @@
+{
+  "id": "baseten",
+  "status": "operational",
+  "name": "Baseten",
+  "category": "ai-ml",
+  "tagline": "Deploy and call custom ML models via a simple HTTP inference API.",
+  "description": "Baseten is a platform for deploying and serving custom machine learning models with a production-ready HTTP inference API. Developers can deploy models, manage endpoints, and call predictions over REST with API-key authentication, making it suitable for model hosting, custom LLM serving, and production ML inference workloads.",
+  "base_url": "https://api.baseten.co",
+  "docs_url": "https://docs.baseten.co/",
+  "signup_url": "https://app.baseten.co/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication (exact header and signup flow to verify from docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://api.baseten.co/\" -H \"Authorization: Api-Key YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "deploy a custom ML model for HTTP inference",
+    "call a hosted model prediction endpoint"
+  ],
+  "sources": [
+    "https://docs.baseten.co/"
+  ],
+  "researcher_confidence": "low"
+}

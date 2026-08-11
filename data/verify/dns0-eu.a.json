@@ -1,0 +1,52 @@
+{
+  "id": "dns0-eu",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dns0.eu/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dns0.eu/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dns0.eu/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dns0.eu/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dns0.eu/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dns0.eu/api"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s 'https://dns0.eu/dns-query?name=example.com&type=A' -H 'accept: application/dns-json' (DoH JSON); or use documented api.dns0.eu paths from /api docs if present",
+      "source": "https://www.dns0.eu/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dns0.eu/"
+    }
+  },
+  "notes": "Automated curl HTTP 0 likely network/bot issues; official site and docs exist. Public free DNS/DoH; API docs at www.dns0.eu/api. Auth none for basic use. Exact free_tier_limits and rate limits not published. Example path '/' alone is weak/empty."
+}

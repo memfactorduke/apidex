@@ -1,0 +1,50 @@
+{
+  "id": "govuk-fuel-prices",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "The submitted URL is withdrawn legacy guidance, not an API base URL. Current API access begins through the Fuel Finder developer portal linked from the replacement guidance; the accessible official page does not disclose the API root.",
+      "source": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email",
+      "source": "https://www.gov.uk/guidance/access-fuel-price-data"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "OAuth 2.0 client credentials; a GOV.UK One Login is also required.",
+      "source": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.gov.uk/government/consultations/empowering-drivers-and-boosting-competition-in-the-road-fuel-retail-market/outcome/consultation-on-open-data-scheme-and-ongoing-monitoring-function-for-road-fuel-prices-government-response"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "source": "https://www.gov.uk/government/consultations/empowering-drivers-and-boosting-competition-in-the-road-fuel-retail-market/outcome/consultation-on-open-data-scheme-and-ongoing-monitoring-function-for-road-fuel-prices-government-response"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The curl command retrieves a withdrawn HTML guidance page, not API data. Current API reads use authenticated GET requests to Fuel Finder resource URLs with an OAuth 2.0 access token.",
+      "source": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Fuel Finder provides free UK-wide retail fuel-price and forecourt data. CSV data is downloadable or available by email; JSON data is provided through an API requiring OAuth 2.0 client-credentials authentication and GOV.UK One Login.",
+      "source": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email"
+    }
+  },
+  "notes": "The listed page was withdrawn on 1 May 2026 when the voluntary retailer-feed scheme closed. Its replacement is the statutory Fuel Finder service. Data remains free, but API access is not anonymous. Official accessible guidance did not establish CORS behavior or a rate-limit figure."
+}

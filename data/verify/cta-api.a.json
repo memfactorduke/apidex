@@ -1,0 +1,52 @@
+{
+  "id": "cta-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://lapi.transitchicago.com/api/1.0/ (Train Tracker); https://www.ctabustracker.com/bustime/api/v2/ (Bus Tracker) \u2014 developer hub: https://www.transitchicago.com/developers/",
+      "source": "https://www.transitchicago.com/developers/ttdocs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transitchicago.com/developers/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transitchicago.com/developers/ttdocs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transitchicago.com/developers/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free registration required; specific numeric free-tier quotas not clearly published as a single limit string \u2014 Train Tracker and Bus Tracker each require a free API key; usage terms apply (see CTA developer registration).",
+      "source": "https://www.transitchicago.com/developers/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transitchicago.com/developers/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=YOUR_KEY&mapid=40380&outputType=JSON'",
+      "source": "https://www.transitchicago.com/developers/ttdocs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.transitchicago.com/developers/"
+    }
+  },
+  "notes": "Developer hub returns 403 to automated clients but is valid. Base URL is a portal, not API endpoint. Example is a placeholder. Auth is API key via free registration. Free tier exists; exact numeric free_tier_limits remain poorly published. CORS not documented."
+}

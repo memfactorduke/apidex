@@ -1,0 +1,102 @@
+{
+  "id": "la-open-data",
+  "status": "operational",
+  "name": "LA Open Data API",
+  "category": "government-open-data",
+  "tagline": "City of Los Angeles open datasets via the Socrata SODA API (crime, permits, budget, services).",
+  "description": "City of Los Angeles public datasets are queryable through Socrata SODA. The listed /resource base is the fully supported SODA 2.1 API: public reads may be anonymous, while an optional app token identifies the application and provides a separate request pool. SODA3 is now the platform default and requires an app token or authenticated identity for queries.",
+  "base_url": "https://data.lacity.org/resource",
+  "docs_url": "https://dev.socrata.com/foundry/data.lacity.org/",
+  "signup_url": "https://data.lacity.org/signup",
+  "auth": {
+    "type": "other",
+    "details": "Optional app token via X-App-Token header (or $$app_token query param); self-serve at Socrata/Tyler developer portal. Unauthenticated access allowed with lower throttling."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; app tokens raise rate limits (exact free quotas not always published per-domain)",
+    "paid_plans": null
+  },
+  "rate_limits": "Anonymous SODA 2.x requests share an IP-based pool and may be throttled at an unspecified threshold. App-token requests are currently not throttled unless deemed abusive, malicious, or monopolizing; no numeric token quota is published.",
+  "example": {
+    "request": "curl 'https://data.lacity.org/resource/2nrs-mtv8.json?$limit=1'",
+    "response_snippet": "[{\"dr_no\":\"211507896\",\"date_rptd\":\"2021-04-11T00:00:00.000\",\"date_occ\":\"2020-11-07T00:00:00.000\",\"time_occ\":\"0845\",\"area\":\"15\",\"area_name\":\"N Hollywood\",\"crm_cd\":\"354\",\"crm_cd_desc\":\"THEFT OF IDENTITY\",\"status\":\"IC\",\"status_desc\":\"Invest Cont\"}]"
+  },
+  "use_cases": [
+    "query recent LAPD crime incidents by area or date",
+    "fetch building permit records for an address or ZIP",
+    "pull city budget or expenditure open datasets",
+    "filter 311 / service request data with SoQL",
+    "export LA open dataset rows as CSV for analysis"
+  ],
+  "sources": [
+    "https://dev.socrata.com/foundry/data.lacity.org/",
+    "https://data.lacity.org/",
+    "https://dev.socrata.com/docs/app-tokens.html",
+    "https://dev.socrata.com/docs/endpoints.html"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "free_tier",
+      "free_tier_limits"
+    ],
+    "corrected": [
+      "auth_type",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

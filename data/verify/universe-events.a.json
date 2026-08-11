@@ -1,0 +1,52 @@
+{
+  "id": "universe-events",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.universe.com/docs/frequently-asked-questions"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.universe.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.universe.com/docs/authorizing-with-oauth"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.universe.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://www.universe.com/api/v2/listings?user_id=<host_id>\"",
+      "source": "https://developers.universe.com/docs/frequently-asked-questions"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The portal and REST v2 base remain live, although current guidance emphasizes GraphQL. OAuth 2.0 Bearer tokens are documented. Starter includes API access and free events carry no service fees. The submitted /events example is not documented; REST event records are called listings. Official documentation supports retrieving event and attendee data and some mutations, but did not substantiate API-based event creation, request-rate limits, or CORS behavior."
+}

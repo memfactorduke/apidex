@@ -1,0 +1,52 @@
+{
+  "id": "go-module-proxy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://proxy.golang.org/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://proxy.golang.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://go.dev/ref/mod#goproxy-protocol"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://go.dev/ref/mod#goproxy-protocol"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Google-operated public Go module mirror used by the go command by default since Go 1.13, but it can be disabled or replaced. It serves module version lists, metadata, go.mod files, and source archives; the checksum database is a separate service at sum.golang.org.",
+      "source": "https://proxy.golang.org/"
+    }
+  },
+  "notes": "The service is operational and documented as ready for production use. The claim that every Go toolchain install uses it is false: official documentation says it is the default since Go 1.13 and explicitly permits opting out or selecting another proxy. No current official pricing, quota, rate-limit, or CORS documentation was located."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "ably",
+  "status": "operational",
+  "name": "Ably",
+  "category": "iot-devices",
+  "tagline": "Realtime messaging platform for pub/sub, presence, and IoT event fan-out",
+  "description": "Ably provides a realtime messaging platform with REST and realtime APIs for pub/sub messaging, presence, history, and push notifications. It supports protocols including MQTT and WebSockets and is commonly used for IoT event fan-out, live updates, and multiplayer-style synchronization. Developers authenticate with API keys and can use official SDKs or the REST API directly.",
+  "base_url": "https://rest.ably.io",
+  "docs_url": "https://ably.com/docs/api/rest-api",
+  "signup_url": "https://ably.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic Auth (key name as username, key secret as password) or Authorization: Bearer; self-serve signup at ably.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_API_KEY: 'https://rest.ably.io/channels/example/messages'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "publish a message to a realtime channel",
+    "retrieve message history for a channel",
+    "check channel presence occupancy",
+    "send MQTT-compatible IoT device events via REST"
+  ],
+  "sources": [
+    "https://ably.com/docs/api/rest-api"
+  ],
+  "researcher_confidence": "low"
+}

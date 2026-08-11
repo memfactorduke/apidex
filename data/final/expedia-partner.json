@@ -1,0 +1,97 @@
+{
+  "id": "expedia-partner",
+  "status": "operational",
+  "name": "Expedia Group Partner API",
+  "category": "travel-hospitality",
+  "tagline": "Hotel, package, and lodging distribution APIs for Expedia Group partners",
+  "description": "Expedia Group Partner API provides B2B access to hotel, package, and lodging inventory through the official partner developer portal at developers.expediagroup.com. Partners integrate search, availability, booking, and content for Expedia's global lodging network after commercial onboarding; authentication and endpoints are partner-program specific rather than fully public self-serve.",
+  "base_url": "https://api.ean.com/v3",
+  "docs_url": "https://developers.expediagroup.com/",
+  "signup_url": "https://developers.expediagroup.com/",
+  "auth": {
+    "type": "other",
+    "details": "Partner credentials via API key and shared secret (EPS Rapid) or OAuth depending on product; commercial partner agreement required, not fully self-serve public keys."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Commercial partner contracts; pricing not publicly listed on developer portal"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "ts=$(date +%s); sig=$(printf '%s' \"${API_KEY}${SHARED_SECRET}${ts}\" | openssl dgst -sha512 -hex | awk '{print $2}'); curl -sS --compressed \"https://api.ean.com/v3/properties/content?language=en-US&supply_source=expedia&property_id=1337&include=name\" -H \"Accept: application/json\" -H \"Authorization: EAN APIKey=${API_KEY},Signature=${sig},timestamp=${ts}\"",
+    "response_snippet": "{\"1337\":{\"property_id\":\"1337\",\"name\":\"Hyatt Regency Paris Etoile\"}}"
+  },
+  "use_cases": [
+    "search hotel availability by destination and dates",
+    "get property content and amenities for a hotel ID",
+    "check room rates and packages for lodging",
+    "book or hold a hotel reservation as a partner",
+    "retrieve booking confirmation and itinerary details"
+  ],
+  "sources": [
+    "https://developers.expediagroup.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "microsoft-graph-calendar",
+  "status": "operational",
+  "name": "Microsoft Graph Calendar",
+  "category": "events-holidays",
+  "tagline": "Outlook and Exchange calendars via Microsoft Graph REST API",
+  "description": "Microsoft Graph Calendar is the REST surface for Outlook and Exchange Online calendars. Developers list calendars, create and update events, check free/busy, and manage attendees through the Graph API using Microsoft Entra ID authentication. A free Microsoft 365 developer tenant is available for building and testing without production paid mailboxes.",
+  "base_url": "https://graph.microsoft.com/v1.0",
+  "docs_url": "https://learn.microsoft.com/en-us/graph/api/resources/calendar",
+  "signup_url": "https://developer.microsoft.com/en-us/microsoft-365/dev-program",
+  "auth": {
+    "type": "oauth2",
+    "details": "Microsoft Entra ID OAuth 2.0 / OpenID Connect. Register an app in Entra ID, request calendar permissions (e.g. Calendars.Read, Calendars.ReadWrite), and send Authorization: Bearer YOUR_ACCESS_TOKEN. Delegated or application (client credentials) flows supported."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Microsoft Graph is included with Microsoft 365 / Entra ID tenancy; free Microsoft 365 Developer Program sandbox tenant for development. No per-call Graph fee for standard calendar endpoints; usage subject to tenant licensing and Graph throttling.",
+    "paid_plans": "Requires appropriate Microsoft 365 / Exchange Online licenses for user mailboxes; Azure AD app registration free. Enterprise Microsoft 365 plans apply for production tenants."
+  },
+  "rate_limits": "Service-specific throttling; calendar/Outlook commonly limited (e.g. tens of thousands of requests per 10 minutes per app per tenant patterns documented). Honor Retry-After on HTTP 429. Exact fixed public quota for calendar varies by resource \u2014 see Graph throttling guidance.",
+  "example": {
+    "request": "curl -s -X GET \"https://graph.microsoft.com/v1.0/me/calendar/events?$top=5\" -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\n  \"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#users('user')/calendar/events\",\n  \"value\": [\n    {\n      \"id\": \"AAMkAGI2...\",\n      \"subject\": \"Team standup\",\n      \"start\": { \"dateTime\": \"2026-08-11T09:00:00.0000000\", \"timeZone\": \"Pacific Standard Time\" },\n      \"end\": { \"dateTime\": \"2026-08-11T09:30:00.0000000\", \"timeZone\": \"Pacific Standard Time\" },\n      \"isAllDay\": false,\n      \"showAs\": \"busy\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "list upcoming Outlook calendar events for the signed-in user",
+    "create a meeting with attendees on an Exchange Online calendar",
+    "check free/busy availability for scheduling",
+    "update or cancel an existing calendar event",
+    "list a user's calendars and switch default calendar",
+    "find events in a date range via calendarView"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/graph/api/resources/calendar",
+    "https://learn.microsoft.com/en-us/graph/api/user-list-events",
+    "https://learn.microsoft.com/en-us/graph/throttling",
+    "https://learn.microsoft.com/en-us/graph/auth/",
+    "https://developer.microsoft.com/en-us/microsoft-365/dev-program",
+    "https://learn.microsoft.com/en-us/graph/use-the-api"
+  ],
+  "researcher_confidence": "medium"
+}

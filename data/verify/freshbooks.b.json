@@ -1,0 +1,52 @@
+{
+  "id": "freshbooks",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/start"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/start"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 no permanent free plan; only a time-limited free trial then paid Lite/Plus/Premium/Select",
+      "source": "https://www.freshbooks.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No permanent free tier. 30-day free trial with full features; after trial, API access is only via a paid FreshBooks subscription (Lite/Plus/Premium/Select). No separate per-request API pricing.",
+      "source": "https://support.freshbooks.com/hc/en-us/articles/360006873232-What-is-the-pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Documented at /api/limits: no daily request cap; short-window rate limiting applies (HTTP 429); list endpoints return max 100 results per page regardless of per_page.",
+      "source": "https://www.freshbooks.com/api/limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "open (Access-Control-Allow-Origin: *)",
+      "source": "https://api.freshbooks.com/auth/api/v1/users/me"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/identity_model"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/start"
+    }
+  },
+  "notes": "API is live. free_tier true is wrong (trial only). rate_limits are documented at /api/limits, not 'not published'. CORS responds with ACAO *. Example path/headers match /me docs; YOUR_API_KEY is OAuth bearer wording only."
+}

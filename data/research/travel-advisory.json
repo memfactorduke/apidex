@@ -1,0 +1,40 @@
+{
+  "id": "travel-advisory",
+  "status": "operational",
+  "name": "Travel Advisory API",
+  "category": "travel-hospitality",
+  "tagline": "Country travel risk scores for trip safety checks.",
+  "description": "Public API providing aggregated country travel risk scores (0-5 scale) based on official government travel advisories, primarily useful for trip safety checks and travel risk assessment.",
+  "base_url": "https://www.travel-advisory.info/api",
+  "docs_url": "https://www.travel-advisory.info/data-api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.travel-advisory.info/api\"",
+    "response_snippet": "{\"api_status\":{\"request\":{\"item\":\"all\"},\"reply\":{\"code\":200,\"status\":\"ok\"}},\"data\":{\"AD\":{\"iso_alpha2\":\"AD\",\"name\":\"Andorra\",\"continent\":\"EU\",\"advisory\":{\"score\":1.0,\"message\":\"Andorra - Level 1: Exercise Normal Precautions\",\"updated\":\"2024-01-01 00:00:00\"}}}}"
+  },
+  "use_cases": [
+    "get travel risk score for a country by ISO code",
+    "list all country travel advisories",
+    "check if a destination is high-risk before booking",
+    "compare risk levels across multiple countries"
+  ],
+  "sources": [
+    "https://www.travel-advisory.info/data-api"
+  ],
+  "researcher_confidence": "low"
+}

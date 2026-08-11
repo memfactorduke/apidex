@@ -1,0 +1,15 @@
+{
+  "id": "co2signal",
+  "base_url": "https://api.electricitymaps.com",
+  "docs_url": "https://app.electricitymaps.com/api/docs/quick-start",
+  "auth_type": "apiKey",
+  "free_tier": true,
+  "free_tier_limits": "14-day free API trial with no payment information required; access is limited to the regions and signals included in the trial.",
+  "rate_limits": "Default limit: 150 API requests per minute; Electricity Maps may vary this by commercial agreement.",
+  "cors": null,
+  "example_request": "curl -sS \"https://api.electricitymaps.com/v4/carbon-intensity/latest?zone=DE\" -H \"auth-token: YOUR_API_TOKEN\"",
+  "example_response_snippet": "{\"zone\":\"DE\",\"carbonIntensity\":302,\"datetime\":\"2018-04-25T18:07:00.350Z\",\"updatedAt\":\"2018-04-25T18:07:01.000Z\",\"emissionFactorType\":\"lifecycle\",\"isEstimated\":false,\"estimationMethod\":null,\"temporalGranularity\":\"hourly\"}",
+  "description": "CO2 Signal has been incorporated into Electricity Maps. Its current API provides real-time, historical, and forecast electricity-grid data, including zone-level carbon intensity measured in gCO2eq/kWh.",
+  "status": null,
+  "resolution_notes": "Docs evidence (https://app.electricitymaps.com/api/docs/reference): base_url=https://api.electricitymaps.com; docs_url=current Developer Hub; auth_type=apiKey; example=v4 carbon-intensity/latest; description=current Electricity Maps scope. Pricing evidence (https://www.electricitymaps.com/pricing): free_tier=true and free_tier_limits=14-day trial. Terms evidence (https://help.electricitymaps.com/en/articles/11750446-terms-of-service): rate_limits=150 requests/minute by default."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "imf-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://browser.sdmx.io/agencies/IMF"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.imf.org/en/Resource-Pages/IMF-API"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Account-backed API access through the IMF beta API portal, rather than auth type none; the official page requires users to sign in to access the API explorer.",
+      "source": "https://data.imf.org/en/Resource-Pages/IMF-API"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://data.imf.org/en/Resource-Pages/IMF-API"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://data.imf.org/en/Resource-Pages/IMF-API"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://data.imf.org/en/Resource-Pages/IMF-API"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://data.imf.org/en/Resource-Pages/IMF-API"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The legacy standalone IFS flow used in this request is not a valid current example. Former IFS series are now distributed among current datasets and queried using the IMF_FLAG component; current requests should be generated from the signed-in Swagger portal.",
+      "source": "https://data.imf.org/en/news/accessing"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The official portal provides current catalogue data through SDMX 2.1 and 3.0 APIs. Former IFS content is now distributed across other datasets and identified with IMF_FLAG, and the public documentation does not establish unrestricted no-auth API access or API pricing.",
+      "source": "https://data.imf.org/en/news/accessing"
+    }
+  },
+  "notes": "The documentation URL is current; its automated 403 appears access-control or bot-related rather than evidence of a bad URL. A 404 at the bare SDMX service root likewise does not invalidate the registered endpoint. The material errors are the no-auth claim and the obsolete standalone IFS example. Pricing, limits, and CORS are not disclosed on the accessible official pages."
+}

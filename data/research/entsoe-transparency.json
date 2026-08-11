@@ -1,0 +1,46 @@
+{
+  "id": "entsoe-transparency",
+  "status": "operational",
+  "name": "ENTSO-E Transparency Platform",
+  "category": "energy-utilities",
+  "tagline": "European electricity market data: generation, load, prices, and cross-border flows",
+  "description": "Official ENTSO-E REST API for European power-system transparency data under EU Regulation 543/2013. Covers actual and forecast generation, load, day-ahead and imbalance prices, transmission outages, and cross-border physical flows. Access is free with a self-serve security token; responses are typically XML (with optional JSON for some document types).",
+  "base_url": "https://web-api.tp.entsoe.eu/api",
+  "docs_url": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html",
+  "signup_url": "https://transparency.entsoe.eu/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Security token as query parameter securityToken=YOUR_API_KEY (or Authorization: Bearer YOUR_API_KEY on some clients). Free self-serve registration on the Transparency Platform; request a token from account settings after email verification."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free with registered security token; no published paid plans. Practical limits are rate-based (see rate_limits), not request quotas per day.",
+    "paid_plans": null
+  },
+  "rate_limits": "400 requests per minute per IP (documented community/ops guidance; official Guide emphasizes fair use). Large historical queries may time out or need pagination by period.",
+  "example": {
+    "request": "curl -s \"https://web-api.tp.entsoe.eu/api?securityToken=YOUR_API_KEY&documentType=A65&processType=A16&outBiddingZone_Domain=10Y1001A1001A83F&periodStart=202601010000&periodEnd=202601020000\"",
+    "response_snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<GL_MarketDocument xmlns=\"urn:iec62325.351:tc57wg16:451-6:generationloaddocument:3:0\">\n  <mRID>...</mRID>\n  <type>A65</type>\n  <process.processType>A16</process.processType>\n  <time_Period.timeInterval>\n    <start>2026-01-01T00:00Z</start>\n    <end>2026-01-02T00:00Z</end>\n  </time_Period.timeInterval>\n  <TimeSeries>...</TimeSeries>\n</GL_MarketDocument>"
+  },
+  "use_cases": [
+    "fetch day-ahead electricity prices for a bidding zone",
+    "get actual total load for a control area over a period",
+    "list generation by production type for a country",
+    "query cross-border physical flows between zones",
+    "retrieve planned and unplanned generation outages",
+    "pull imbalance prices for settlement analysis"
+  ],
+  "sources": [
+    "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html",
+    "https://transparency.entsoe.eu/",
+    "https://github.com/EnergieID/entsoe-py",
+    "https://www.entsoe.eu/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "hivemq-cloud",
+  "base_url": "https://api.hivemq.cloud",
+  "docs_url": "https://docs.hivemq.com/hivemq-cloud/rest-api.html",
+  "auth_type": "jwt",
+  "free_tier": false,
+  "free_tier_limits": "No permanent free REST API tier. REST API access requires Starter, which has a 15-day trial without a credit card. The free Serverless broker allows 100 connections and 10 GB/month but excludes the REST API.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS -H \"Authorization: Bearer YOUR_JWT_TOKEN\" \"https://api.hivemq.cloud/api/v2/orgs/YOUR_ORG_ID/clusters/YOUR_CLUSTER_ID/mqtt/credentials\"",
+  "example_response_snippet": "{\"_links\":null,\"items\":[]}",
+  "description": "HiveMQ Cloud is a fully managed MQTT platform. Its REST API provides cluster-scoped management of MQTT credentials, permissions, roles, clients, and broker metrics; it does not document provisioning or listing Cloud clusters.",
+  "status": null,
+  "resolution_notes": "base_url=https://api.hivemq.cloud: https://www.hivemq.com/blog/new-rest-api-host-for-hivemq-cloud-starter/; docs_url corrected: https://docs.hivemq.com/hivemq-cloud/rest-api.html; auth_type=jwt and description limited to cluster credentials, permissions, roles, clients, metrics: https://docs.hivemq.com/hivemq-cloud/rest-api.html; free_tier=false and free_tier_limits=no permanent API tier, Starter trial is 15 days: https://www.hivemq.com/products/mqtt-cloud-broker/; example uses documented v2 credentials endpoint: https://docs.hivemq.com/hivemq-cloud/rest-api/specification/."
+}

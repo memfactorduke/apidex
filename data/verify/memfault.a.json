@@ -1,0 +1,52 @@
+{
+  "id": "memfault",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.memfault.com/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.memfault.com/api",
+      "source": "https://docs.memfault.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.memfault.com/docs/ci/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://memfault.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Developer plan: free for up to 10 development devices, exclusively for teams building on Nordic low-power wireless solutions; usage beyond 10 devices is pay-as-you-go.",
+      "source": "https://memfault.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published and endpoint-specific: heartbeat ingestion and Latest Release calls are limited to 100 per device per 24 hours; Custom Data Recordings to 1 per device per 24 hours and 16 MB; session limits depend on the plan.",
+      "source": "https://docs.memfault.com/docs/platform/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer $ORGANIZATION_AUTH_TOKEN\" https://api.memfault.com/api/v0/organizations/<ORG_SLUG>/projects",
+      "source": "https://docs.memfault.com/docs/ci/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.memfault.com/api"
+    }
+  },
+  "notes": "The API is operational and the api.memfault.com host is official, but its bare root is not a documented operation, so a root 404 does not invalidate the base URL. The submitted documentation URL is obsolete and currently returns 404; the current REST API documentation is at /api."
+}

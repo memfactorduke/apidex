@@ -1,0 +1,52 @@
+{
+  "id": "canvas-lms",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/file.oauth.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.instructure.com/canvas"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/file.throttling.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/courses.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/"
+    }
+  },
+  "notes": "All claims match official Canvas API docs; base_url is a per-instance template (curl HTTP 0 is expected). Auth OAuth2/token, throttling via cost headers, no standalone free SaaS tier."
+}

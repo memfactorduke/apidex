@@ -1,0 +1,97 @@
+{
+  "id": "fbi-crime-data",
+  "status": "operational",
+  "name": "FBI Crime Data Explorer API",
+  "category": "government-open-data",
+  "tagline": "US crime statistics (UCR/NIBRS) from the FBI Crime Data Explorer for research and apps.",
+  "description": "The FBI Crime Data Explorer API provides public access to Uniform Crime Reporting (UCR) and National Incident-Based Reporting System (NIBRS) statistics for the United States. It supports research, data analysis, and applications that need official FBI crime data by jurisdiction, offense type, and time period. Developers use it to query aggregated crime counts, clearance rates, and related datasets published through the Crime Data Explorer.",
+  "base_url": "https://api.usa.gov/crime/fbi/cde",
+  "docs_url": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or header; self-serve signup on api.data.gov if required for higher limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Registered API keys: default 1,000 requests/hour. DEMO_KEY: 30 requests/hour and 50 requests/day per IP. Service-specific limits may vary; higher limits may be requested.",
+    "paid_plans": null
+  },
+  "rate_limits": "Default 1,000 requests/hour per registered API key; DEMO_KEY is limited to 30 requests/hour and 50 requests/day per IP. Limits use rolling counters and may vary by service.",
+  "example": {
+    "request": "curl \"https://api.usa.gov/crime/fbi/cde/summarized/state/CA/V?from=01-2024&to=12-2024&API_KEY=YOUR_API_KEY\"",
+    "response_snippet": "{\"offenses\":{\"rates\":{\"State Offenses\":{\"01-2024\":494.6,\"...\":\"...\"}},\"actuals\":{\"State Offenses\":{\"01-2024\":16122,\"...\":\"...\"},\"State Clearances\":{\"01-2024\":4150,\"...\":\"...\"}}},\"populations\":{\"population\":{\"State\":{\"01-2024\":38965193,\"...\":\"...\"}}}}"
+  },
+  "use_cases": [
+    "get national crime arrest totals by year",
+    "compare state-level UCR offense counts over time",
+    "look up NIBRS incident statistics for a jurisdiction",
+    "build dashboards of FBI crime trends for research apps"
+  ],
+  "sources": [
+    "https://crime-data-explorer.fr.cloud.gov/pages/docApi"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

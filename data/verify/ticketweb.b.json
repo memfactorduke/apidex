@@ -1,0 +1,52 @@
+{
+  "id": "ticketweb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://app.ticketmaster.com/discovery/v2/",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/",
+      "source": "https://info.ticketweb.com/client-website-services/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey supplied through the apikey query parameter",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/getting-started/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The public API quota is 5,000 requests per day and 2 requests per second.",
+      "source": "https://developer.ticketmaster.com/support/faq/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: 5,000 requests per day; the current FAQ says 2 requests per second, while the Discovery API page still says 5 requests per second.",
+      "source": "https://developer.ticketmaster.com/support/faq/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/getting-started/"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=YOUR_API_KEY\"",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "TicketWeb is a ticketing platform for venues and promoters. TicketWeb-sourced event listings are exposed through Ticketmaster's global Discovery API; transactional offer and inventory capabilities are separate partner-only APIs.",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/getting-started/"
+    }
+  },
+  "notes": "TicketWeb's official client page sends non-WordPress integrations to Ticketmaster's developer portal. Ticketmaster confirms that Discovery products include TicketWeb data. No official 2026 TicketWeb API documentation supports api.ticketweb.com, the submitted developers URL, bearer authentication, or the root-path example. Official pages conflict on the per-second limit, but both contradict 'not published.'"
+}

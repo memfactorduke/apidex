@@ -1,0 +1,86 @@
+{
+  "id": "agromonitoring",
+  "status": "operational",
+  "name": "Agromonitoring",
+  "category": "agriculture",
+  "tagline": "Satellite NDVI, soil, and weather data for farm polygons",
+  "description": "OpenWeather's agricultural API for monitoring crop health via satellite imagery (NDVI, EVI), soil moisture/temperature, accumulated precipitation and temperature, weather history and forecasts, and UV index \u2014 all scoped to user-defined field polygons. Free tier available with signup; paid plans for higher limits and more history.",
+  "base_url": "https://api.agromonitoring.com/agro/1.0",
+  "docs_url": "https://agromonitoring.com/api",
+  "signup_url": "https://agromonitoring.com/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key as appid query parameter (self-serve signup on agromonitoring.com)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.agromonitoring.com/agro/1.0/weather?lat=35&lon=139&appid=YOUR_API_KEY\"",
+    "response_snippet": "{\"dt\":1609459200,\"weather\":[{\"id\":800,\"main\":\"Clear\",\"description\":\"clear sky\"}],\"main\":{\"temp\":288.15,\"humidity\":60},\"wind\":{\"speed\":3.1}}"
+  },
+  "use_cases": [
+    "get current weather for a farm polygon",
+    "fetch NDVI satellite imagery for a field",
+    "get soil moisture and temperature for coordinates",
+    "retrieve accumulated precipitation for a polygon",
+    "create and manage farm field polygons"
+  ],
+  "sources": [
+    "https://agromonitoring.com/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

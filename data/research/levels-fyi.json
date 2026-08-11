@@ -1,0 +1,41 @@
+{
+  "id": "levels-fyi",
+  "status": "operational",
+  "name": "Levels.fyi",
+  "category": "jobs-careers",
+  "tagline": "Tech compensation data API for salaries, levels, and offers",
+  "description": "Levels.fyi provides salary and total compensation benchmarks for tech roles, companies, and levels. Public developer API access is limited or partner/community oriented; verify current auth and endpoint availability before production use.",
+  "base_url": "https://api.levels.fyi",
+  "docs_url": "https://www.levels.fyi/community/",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Access model unclear from public docs; community/partner access varies. Verify current auth before use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.levels.fyi/\"",
+    "response_snippet": "{\"error\":\"Authentication required or endpoint not publicly documented\"}"
+  },
+  "use_cases": [
+    "look up typical total compensation for a tech role at a company",
+    "compare salary bands across levels at a company",
+    "benchmark an offer against market compensation data",
+    "find level titles and ranges for a company ladder"
+  ],
+  "sources": [
+    "https://www.levels.fyi/community/",
+    "https://www.levels.fyi/"
+  ],
+  "researcher_confidence": "low"
+}

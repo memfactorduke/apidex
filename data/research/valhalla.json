@@ -1,0 +1,43 @@
+{
+  "id": "valhalla",
+  "status": "operational",
+  "name": "Valhalla",
+  "category": "geo-maps",
+  "tagline": "Open-source multimodal routing engine (route, matrix, isochrone, elevation)",
+  "description": "Valhalla is an open-source routing engine built on OpenStreetMap data. Public instances and self-hosted deployments expose REST endpoints for routes, time-distance matrices, isochrones, map matching, and elevation. Common uses include turn-by-turn navigation, catchment analysis, and logistics ETA/distance calculations.",
+  "base_url": "https://valhalla1.openstreetmap.de",
+  "docs_url": "https://valhalla.github.io/valhalla/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public OSM.de instance requires no API key; self-hosted and commercial hosts may add their own auth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public demo instance is free with fair-use rate limits; no paid product from the open-source project itself",
+    "paid_plans": null
+  },
+  "rate_limits": "not published for the public OSM.de demo; treat as fair-use / community-hosted",
+  "example": {
+    "request": "curl -s 'https://valhalla1.openstreetmap.de/route' -H 'Content-Type: application/json' --data '{\"locations\":[{\"lat\":52.5200,\"lon\":13.4050},{\"lat\":52.5163,\"lon\":13.3777}],\"costing\":\"auto\"}'",
+    "response_snippet": "{\"trip\":{\"locations\":[...],\"legs\":[{\"summary\":{\"time\":...\"length\":...},\"maneuvers\":[...]}],\"summary\":{\"time\":...,\"length\":...},\"status_message\":\"Found route between points\",\"status\":0}}"
+  },
+  "use_cases": [
+    "compute driving or walking routes between two points",
+    "build a travel-time matrix for multiple origins and destinations",
+    "generate isochrone polygons for reachability analysis",
+    "map-match GPS traces to the road network",
+    "sample elevation along a path or at coordinates"
+  ],
+  "sources": [
+    "https://valhalla.github.io/valhalla/api/",
+    "https://valhalla1.openstreetmap.de",
+    "https://github.com/valhalla/valhalla"
+  ],
+  "researcher_confidence": "medium"
+}

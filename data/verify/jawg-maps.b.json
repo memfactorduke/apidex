@@ -1,0 +1,45 @@
+{
+  "id": "jawg-maps",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://www.jawg.io/docs/apidocs/places/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://www.jawg.io/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://www.jawg.io/docs/integration/places-js/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.jawg.io/en/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Basic plan: 25,000 map views and 5,000 each for static maps, place search, navigation, and elevation per month; one custom style; non-commercial use only on publicly available sites without login.",
+      "source": "https://www.jawg.io/en/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Per account and IP: Maps 100 requests/second; Static Maps, Elevation, Places, and Routing each 1 request/second.",
+      "source": "https://www.jawg.io/docs/apidocs/"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://www.jawg.io/docs/apidocs/places/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The listed services are current, but the free Basic plan is limited to non-commercial use on publicly available websites without login, rather than general light production use.",
+      "source": "https://www.jawg.io/en/pricing/"
+    }
+  },
+  "notes": "Official docs currently show access-token as a query parameter. I found no official support for the entry's separate Authorization: Bearer claim, although auth_type=apiKey remains appropriate. The API and documentation appear active in 2026."
+}

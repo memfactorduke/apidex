@@ -1,0 +1,48 @@
+{
+  "id": "recruitee",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://docs.recruitee.com/reference/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://docs.recruitee.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Personal API token sent as Authorization: Bearer <token>",
+      "source": "https://docs.recruitee.com/reference/getting-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://recruitee.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No permanent free tier. The 18-day trial allows up to five published jobs and 50 emails and excludes free-job-board promotion.",
+      "source": "https://support.recruitee.com/en/articles/4065422-what-does-our-free-trial-entail"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "1000 requests per minute per API token",
+      "source": "https://docs.recruitee.com/reference/getting-started"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET https://api.recruitee.com/c/{company_id}/admin -H \"Authorization: Bearer YOUR_API_TOKEN\"",
+      "source": "https://docs.recruitee.com/reference/getting-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://docs.recruitee.com/reference/intro-to-careers-site-api"
+    }
+  },
+  "notes": "The API is operational, but the entry mixes the authenticated ATS API with the unauthenticated Careers Site API. Its X-Api-Key authentication, root-path example, unpublished-rate-limit claim, and unknown trial limits are wrong. Official documentation specifies Bearer authentication and 1000 requests per minute per token."
+}

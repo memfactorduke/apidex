@@ -1,0 +1,38 @@
+{
+  "id": "bigdatacloud",
+  "status": "operational",
+  "name": "BigDataCloud",
+  "category": "geo-maps",
+  "tagline": "Client-side and server IP geolocation with reverse geocoding APIs",
+  "description": "BigDataCloud provides IP geolocation, reverse geocoding, and network intelligence APIs designed for both browser and server use. Offerings include free client-side IP lookup, paid server-side geolocation, reverse geocode, and related network data endpoints with self-serve API keys.",
+  "base_url": "https://api.bigdatacloud.net",
+  "docs_url": "https://www.bigdatacloud.com/docs",
+  "signup_url": "https://www.bigdatacloud.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter or header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.bigdatacloud.net/data/ip-geolocation?key=YOUR_API_KEY\"",
+    "response_snippet": "{\"ip\":\"8.8.8.8\",\"location\":{\"city\":\"Mountain View\"}}"
+  },
+  "use_cases": [
+    "geolocate a visitor IP address",
+    "reverse-geocode coordinates to a place name"
+  ],
+  "sources": [
+    "https://www.bigdatacloud.com/docs"
+  ],
+  "researcher_confidence": "low"
+}

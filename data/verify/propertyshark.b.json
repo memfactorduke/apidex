@@ -1,0 +1,52 @@
+{
+  "id": "propertyshark",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.propertyshark.com/mason/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": null,
+      "source": "https://www.propertyshark.com/Real-Estate-Reports/2009/07/30/new-propertyshark-api-for-blogs-and-websites/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No valid current API request example is available; remove this example.",
+      "source": "https://www.propertyshark.com/Real-Estate-Reports/2009/07/30/new-propertyshark-api-for-blogs-and-websites/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "PropertyShark is a nationwide real-estate data platform and web application offering property reports and research tools; no current public API was verified.",
+      "source": "https://support.propertyshark.com/hc/en-us/articles/360022586511-Overview-of-PropertyShark-Services-and-Features"
+    }
+  },
+  "notes": "Current official materials describe a subscription web application, not a public API. The only official API reference found is a 2009 announcement pointing to /mason/psharkapi/, not /mason/api; that historical page is now unreachable. No current API docs, authentication, limits, CORS policy, or JSON example were found. The 403 alone was not treated as proof of shutdown."
+}

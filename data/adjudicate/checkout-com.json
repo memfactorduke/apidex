@@ -1,0 +1,15 @@
+{
+  "id": "checkout-com",
+  "base_url": "https://{prefix}.api.checkout.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Default: 100 RPS total for GET operations and 100 RPS total for POST, PUT, and DELETE operations, calculated across the entire API. Custom limits may be requested.",
+  "cors": null,
+  "example_request": "curl --request GET \"https://YOUR_PREFIX.api.checkout.com/payments/YOUR_PAYMENT_ID\" --header \"Authorization: Bearer YOUR_SECRET_API_KEY\" --header \"Accept: application/json\"",
+  "example_response_snippet": "{\"id\":\"pay_mbabizu24mvu3mela5njyhpit4\",\"amount\":6540,\"currency\":\"USD\",\"approved\":true,\"status\":\"Authorized\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Incorrect; production uses a merchant-specific prefixed host, and sandbox uses https://{prefix}.api.sandbox.checkout.com. Evidence: https://www.checkout.com/docs/developer-resources/api/api-endpoints. rate_limits: Incorrect; current documented defaults are 100 RPS for GET and 100 RPS for POST/PUT/DELETE API-wide. Evidence: https://www.checkout.com/docs/developer-resources/api/api-rate-limits. example: Incorrect; the bare host is invalid, and GET /payments requires a reference. Replaced it with documented GET /payments/{id}. Evidence: https://api-reference.checkout.com/tag/Payments/"
+}

@@ -1,0 +1,105 @@
+{
+  "id": "screenshotapi-net",
+  "status": "operational",
+  "name": "ScreenshotAPI.net",
+  "category": "utilities",
+  "tagline": "URL-to-screenshot API with full page, viewport control, and multi-format output",
+  "description": "REST API that renders any URL (or custom HTML) in headless Chromium and returns PNG, JPG, WebP, PDF, or video. Supports full-page capture, viewport sizing, ad/cookie-banner blocking, lazy-load waiting, CSS/JS injection, text/HTML/Markdown extraction, bulk and scheduled captures. Authenticate with a dashboard API token as a query parameter.",
+  "base_url": "https://shot.screenshotapi.net/v3",
+  "docs_url": "https://www.screenshotapi.net/docs/renderScreenshot",
+  "signup_url": "https://app.screenshotapi.net/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via token query parameter (e.g. ?token=YOUR_API_KEY). Key obtained from self-serve dashboard signup; can be rolled from Settings."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "7-day free trial with 100 screenshots; no credit card required.",
+    "paid_plans": "Essential $9/mo (1,000 screenshots, 20 RPM); Startup $29/mo (10,000, 40 RPM); Business $175/mo (100,000, 80 RPM); enterprise/custom available"
+  },
+  "rate_limits": "20 RPM on Essential, 40 RPM on Startup, and 80 RPM on Business. The error docs list screenshots_limit_reached as HTTP 429 for RPM excess and HTTP 403 for usage-quota exhaustion.",
+  "example": {
+    "request": "curl \"https://shot.screenshotapi.net/v3/screenshot?token=YOUR_API_KEY&url=https%3A%2F%2Fexample.com&file_type=png&full_page=true&output=image\" --output screenshot.png",
+    "response_snippet": "With output=image: raw PNG binary body. With default output=json: {\"screenshot\":\"https://.../shot.png\",\"text\":\"https://.../content.txt\",\"extract_markdown\":\"https://.../content.md\", ...} (hosted file URLs + metadata; exact keys vary by options)."
+  },
+  "use_cases": [
+    "capture a full-page PNG of any public URL",
+    "convert a live webpage to PDF with ads and cookie banners blocked",
+    "screenshot a site at mobile, tablet, and desktop viewports for visual QA",
+    "extract rendered page text or Markdown for an AI agent or RAG pipeline",
+    "run scheduled or bulk competitor page captures from a URL list"
+  ],
+  "sources": [
+    "https://www.screenshotapi.net/docs/renderScreenshot",
+    "https://www.screenshotapi.net/docs/getStarted",
+    "https://www.screenshotapi.net/pricing",
+    "https://www.screenshotapi.net/help",
+    "https://www.screenshotapi.net/playground",
+    "https://www.screenshotapi.net/",
+    "https://www.screenshotapi.net/blog/feed-web-pages-to-ai-agents-with-screenshotapi"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

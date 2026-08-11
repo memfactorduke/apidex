@@ -1,0 +1,52 @@
+{
+  "id": "opencorporates",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.opencorporates.com/2025/02/13/getting-started-with-the-opencorporates-api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.opencorporates.com/documentation/API-Reference",
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://knowledge.opencorporates.com/knowledge-base/api-authentication-authorisation/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Default limit is 50 requests per day and 200 requests per month; limits vary by account and plan. Free API accounts are restricted to qualifying open-data projects under share-alike licence terms.",
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published default usage limits are 50 requests per day and 200 requests per month; account-specific limits vary, and throttling is applied according to the commercial package.",
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://knowledge.opencorporates.com/knowledge-base/api-walk-through-company-search/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.opencorporates.com/2025/02/13/getting-started-with-the-opencorporates-api/"
+    }
+  },
+  "notes": "The API remains operational and v0.4 is current; HTTP 401 is expected without valid authentication. The documentation URL is genuinely wrong because the current slug uses API-Reference, not API_Reference. Free access is conditional on open-data/share-alike use, and official limits are published."
+}

@@ -1,0 +1,45 @@
+{
+  "id": "paystack",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://paystack.com/docs/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://paystack.com/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://paystack.com/docs/api/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://paystack.com/docs/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "source": "https://paystack.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits: most endpoints allow 600 requests per 60 seconds in live mode and 100 per 60 seconds in test mode. Live-mode extended limits include 3,000 per 60 seconds for transaction verification and endpoint-specific limits for other critical operations.",
+      "source": "https://paystack.com/docs/api/rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://paystack.com/docs/api/transaction/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://paystack.com/docs/api/"
+    }
+  },
+  "notes": "The docs URL is current and accessible through normal web retrieval; the automated 403 is consistent with bot filtering rather than a broken URL. Paystack added documented standard and extended API rate limits in June 2026, making the entry's rate-limit claim outdated. No authoritative CORS policy was located."
+}

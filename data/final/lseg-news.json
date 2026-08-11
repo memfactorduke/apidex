@@ -1,0 +1,98 @@
+{
+  "id": "lseg-news",
+  "status": "operational",
+  "name": "LSEG News API",
+  "category": "news-media",
+  "tagline": "Professional financial and corporate news wire access via LSEG Data Platform",
+  "description": "LSEG News API (formerly Refinitiv) delivers market-moving financial journalism, corporate announcements, and real-time news content for professional applications. Part of the LSEG/Refinitiv Data Platform, it provides structured access to news wires used in trading, compliance, and research workflows.",
+  "base_url": "https://api.refinitiv.com",
+  "docs_url": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news-API",
+  "signup_url": null,
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth2 client credentials via LSEG/Refinitiv Data Platform; access token used as Bearer authorization (confirm against current docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Accept: application/json\" \"https://api.refinitiv.com/data/news/v1/headlines?query=LEN%20and%20R:MSFT.O&limit=100\"",
+    "response_snippet": "{\"data\":[{\"newsItem\":{\"itemMeta\":{\"firstCreated\":\"2025-04-04T06:08:20.000Z\"}}}],\"meta\":{\"count\":100,\"pageLimit\":100,\"next\":\"...\"}}"
+  },
+  "use_cases": [
+    "fetch market-moving financial news headlines",
+    "search corporate announcements by company",
+    "monitor real-time news for trading signals",
+    "retrieve news stories for compliance screening"
+  ],
+  "sources": [
+    "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

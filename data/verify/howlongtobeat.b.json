@@ -1,0 +1,52 @@
+{
+  "id": "howlongtobeat",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://howlongtobeat.com"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "No official documentation exists, and the linked wrapper is outdated. A maintained current wrapper is https://github.com/RedSkiesReaperr/howlongtobeat",
+      "source": "https://github.com/ckatzorke/howlongtobeat/issues/63"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "dynamic site-issued token",
+      "source": "https://github.com/RedSkiesReaperr/howlongtobeat/blob/main/client.go"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Fetch a token and anti-bot values from GET /api/find/init, then POST to /api/find with Origin, Referer, x-auth-token, x-hp-key, and x-hp-val; /api/search is obsolete.",
+      "source": "https://www.browser-skills.sh/skills/howlongtobeat"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The linked ckatzorke package is stale and its open issue reports that the search URL changed. Current 2026 clients discover a rotating endpoint and obtain a token plus anti-bot values. The sample is also mismatched: game_id 10270 identifies The Witcher 3, not Zelda. HLTB publishes no official API documentation, pricing, quota, or CORS policy."
+}

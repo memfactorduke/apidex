@@ -1,0 +1,15 @@
+{
+  "id": "coveralls",
+  "base_url": "https://coveralls.io/api/v1",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST https://coveralls.io/api/v1/jobs -F 'json_file=@/path/to/coverage.json'",
+  "example_response_snippet": "{\"message\":\"Job #6F97449D268333D87EE1D263482E8AFCCC4693A5.2\",\"url\":\"https://coveralls.io/jobs/116403628\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Corrected to https://coveralls.io/api/v1; the current official API introduction identifies /api/v1/repos and /api/v1/jobs as its endpoint URIs: https://docs.coveralls.io/api-introduction. example: Corrected because the original undocumented collection GET and invented response are not supported by the cited docs. The replacement request and response are the official working POST /jobs examples; coverage.json must contain repo_token and coverage data: https://docs.coveralls.io/api-jobs-endpoint."
+}

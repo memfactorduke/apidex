@@ -1,0 +1,52 @@
+{
+  "id": "personio",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.personio.de/v1.0/reference/get_company-employees"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.personio.de/docs"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://developer.personio.de/reference/post_v2-auth-token"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.personio.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable: Personio has no ongoing free tier. Its terms describe a 14-day trial, while API access is listed under the paid Core Pro plan.",
+      "source": "https://www.personio.com/terms/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits include a global v1 limit of 2,000 requests per minute per IP; endpoint-specific limits also apply.",
+      "source": "https://developer.personio.de/v1.0/docs/tos-api-security-1"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Personio uses CORS to prevent browsers from retrieving data directly from its APIs.",
+      "source": "https://developer.personio.de/docs/getting-started-with-the-personio-api"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.personio.de/v1.0/reference/get_company-employees"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.personio.de/docs/getting-started-with-the-personio-api"
+    }
+  },
+  "notes": "The v1 employee example remains documented and operational, although Personio now also offers v2 APIs. Authentication varies by API generation: v2 uses OAuth 2.0 client credentials, while legacy v1 personnel endpoints exchange Personio credentials for a bearer token and legacy recruiting uses a separate token."
+}

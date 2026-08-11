@@ -1,0 +1,52 @@
+{
+  "id": "apartment-list",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No public API base URL confirmed; https://api.apartmentlist.com returns 404 and is not documented",
+      "source": "https://www.apartmentlist.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.apartmentlist.com/partners returns 404; use partner/contact pages on apartmentlist.com if a working partner URL is found",
+      "source": "https://www.apartmentlist.com/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No public docs support /v1/listings or Bearer auth example; invented endpoint",
+      "source": null
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Automated checks showed base_url and docs_url 404. Need live official sources before finalizing."
+}

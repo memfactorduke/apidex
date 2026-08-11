@@ -1,0 +1,52 @@
+{
+  "id": "home-assistant",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.home-assistant.io/docs/api/rest/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.home-assistant.io/docs/api/rest/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.home-assistant.io/docs/auth_api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.home-assistant.io/faq/is-it-free/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nabucasa.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Configurable: administrators can allow specific origins using the HTTP server's CORS allowed origins setting; arbitrary origins are not allowed by default.",
+      "source": "https://www.home-assistant.io/integrations/http/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.home-assistant.io/docs/api/rest/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.home-assistant.io/integrations/http/"
+    }
+  },
+  "notes": "The base URL is an official instance-local template, so HTTP 0 for the literal IP_ADDRESS placeholder does not indicate a dead API. Home Assistant 2026.8 changed only new Home Assistant OS installations to port 80; existing installations and containers retain 8123. No official REST API request limit was found."
+}

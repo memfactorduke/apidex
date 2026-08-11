@@ -1,0 +1,52 @@
+{
+  "id": "losant",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.losant.com/rest-api/applications/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.losant.com/rest-api/overview/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.losant.com/rest-api/overview/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.losant.com/iot-platform/sandbox"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Developer Sandbox: up to 10 devices and 30 days of data storage; additional Sandbox resource and payload limits apply.",
+      "source": "https://www.losant.com/iot-platform/sandbox"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Losant publishes endpoint-specific throttles and limits rather than one global limit; for example, Device Send State is limited to 30 calls per 15 seconds per device.",
+      "source": "https://docs.losant.com/rest-api/overview/#throttles-and-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s -H \"Content-Type: application/json\" -H \"Accept: application/json\" -H \"Authorization: Bearer YOUR_API_ACCESS_TOKEN\" \"https://api.losant.com/applications\"",
+      "source": "https://docs.losant.com/rest-api/applications/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Losant is an industrial IoT application platform exposing a REST API for managing applications, devices, workflows, data tables, experiences, and related resources. Developers use API access tokens with documented resource endpoints; the API URLs are not globally version-prefixed.",
+      "source": "https://docs.losant.com/rest-api/overview/"
+    }
+  },
+  "notes": "Losant remains active after its 2026 SUSE acquisition, and its official status page reports the API operational. The entry invents an unpublished-rate-limits claim and overlooks published Sandbox limits. Official REST documentation only describes Bearer-header authentication, not a token query parameter."
+}

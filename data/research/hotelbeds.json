@@ -1,0 +1,42 @@
+{
+  "id": "hotelbeds",
+  "status": "operational",
+  "name": "Hotelbeds API",
+  "category": "travel-hospitality",
+  "tagline": "B2B hotel bedbank booking and content APIs for accommodations worldwide",
+  "description": "Hotelbeds provides B2B hotel APIs for searching availability, booking accommodations, and retrieving hotel content (descriptions, images, facilities). Developers integrate with Hotel and Content APIs using API-Key and X-Signature authentication to power travel platforms, OTAs, and booking engines with live inventory from a major global bedbank.",
+  "base_url": "https://api.test.hotelbeds.com",
+  "docs_url": "https://developer.hotelbeds.com/documentation/hotels/",
+  "signup_url": "https://developer.hotelbeds.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API-Key header plus X-Signature (SHA-256 of apiKey + secret + timestamp); self-serve developer portal signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.test.hotelbeds.com/hotel-api/1.0/status\" -H \"Api-key: YOUR_API_KEY\" -H \"X-Signature: YOUR_SIGNATURE\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"status\":\"OK\",\"auditData\":{\"processTime\":\"0\",\"timestamp\":\"2024-01-01T00:00:00.000Z\",\"requestHost\":\"...\",\"serverId\":\"...\",\"environment\":\"TEST\",\"release\":\"...\"}}"
+  },
+  "use_cases": [
+    "search hotel availability by destination and dates",
+    "book a hotel room with guest details",
+    "get hotel content descriptions and images",
+    "check booking status or cancel a reservation",
+    "list hotels in a destination for content catalog"
+  ],
+  "sources": [
+    "https://developer.hotelbeds.com/documentation/hotels/",
+    "https://developer.hotelbeds.com/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "azure-iot-hub",
+  "status": "operational",
+  "name": "Azure IoT Hub",
+  "category": "iot-devices",
+  "tagline": "Microsoft cloud hub for device management, twins, and bi-directional messaging.",
+  "description": "Azure IoT Hub is Microsoft's managed service for connecting, monitoring, and managing IoT devices at scale. It provides device identity, twin state, direct methods, cloud-to-device and device-to-cloud messaging, plus service APIs for jobs and bulk operations. Developers use REST (and SDKs) against a per-hub hostname under Azure Active Directory or shared access signatures.",
+  "base_url": "https://YOUR_IOT_HUB_NAME.azure-devices.net",
+  "docs_url": "https://learn.microsoft.com/en-us/rest/api/iothub/",
+  "signup_url": "https://portal.azure.com/",
+  "auth": {
+    "type": "other",
+    "details": "Shared Access Signature (SAS) tokens via Authorization header, or Azure AD (Microsoft Entra ID) bearer tokens; connection strings from hub Access Control."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X GET \"https://YOUR_IOT_HUB_NAME.azure-devices.net/devices?api-version=2021-04-12\" -H \"Authorization: YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"value\":[{\"deviceId\":\"myDevice\",\"generationId\":\"...\",\"etag\":\"...\",\"status\":\"enabled\",\"connectionState\":\"Disconnected\"}]}"
+  },
+  "use_cases": [
+    "list registered IoT devices on a hub",
+    "read or update a device twin desired/reported properties",
+    "send a cloud-to-device message to a device",
+    "invoke a direct method on a connected device",
+    "create a job to update many device twins",
+    "query devices by twin properties"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/rest/api/iothub/"
+  ],
+  "researcher_confidence": "low"
+}

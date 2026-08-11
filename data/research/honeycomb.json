@@ -1,0 +1,37 @@
+{
+  "id": "honeycomb",
+  "status": "operational",
+  "name": "Honeycomb API",
+  "category": "dev-tools",
+  "tagline": "Observability platform API for datasets, queries, triggers, and SLOs",
+  "description": "Honeycomb API for managing observability data including datasets, queries, triggers, and SLOs with strong OpenTelemetry and high-cardinality support.",
+  "base_url": "https://api.honeycomb.io",
+  "docs_url": "https://docs.honeycomb.io/api/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Honeycomb-Team header"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-Honeycomb-Team: YOUR_API_KEY\" https://api.honeycomb.io/1/auth",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list datasets",
+    "run queries"
+  ],
+  "sources": [
+    "https://docs.honeycomb.io/api/"
+  ],
+  "researcher_confidence": "low"
+}

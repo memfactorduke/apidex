@@ -1,0 +1,52 @@
+{
+  "id": "open-ownership",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://bods-data-datasette.openownership.org/",
+      "source": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/",
+      "source": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use a dataset-specific Datasette JSON endpoint, for example: curl 'https://bods-data-datasette.openownership.org/gleif_version_0_4/entity_statement.json?_size=1'",
+      "source": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/"
+    }
+  },
+  "notes": "The original Register was retired on 29 November 2024, so api.openownership.org is not a current API or documentation host. Open Ownership still publishes BODS-aligned datasets through its data-analysis site and dataset-specific Datasette API. The current tools are not a direct continuation of the former unified Register API."
+}

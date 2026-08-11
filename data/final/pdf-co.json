@@ -1,0 +1,98 @@
+{
+  "id": "pdf-co",
+  "status": "operational",
+  "name": "PDF.co",
+  "category": "utilities",
+  "tagline": "PDF generation, editing, OCR, barcode, and document conversion REST API suite.",
+  "description": "PDF.co is a cloud REST API platform for generating, editing, converting, and processing PDF and other documents. Developers use it for PDF creation from HTML/templates, merge/split, OCR text extraction, barcode reading/generation, and format conversion via authenticated HTTPS endpoints.",
+  "base_url": "https://api.pdf.co/v1",
+  "docs_url": "https://apidocs.pdf.co/",
+  "signup_url": "https://app.pdf.co/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-api-key header (or query string); self-serve signup at app.pdf.co."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "10,000 credits for a 1-month free trial; no credit card required.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.pdf.co/v1/account/credit/balance\" -H \"x-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\"credits\": 100, \"error\": false}"
+  },
+  "use_cases": [
+    "convert HTML to PDF",
+    "merge multiple PDFs",
+    "OCR extract text from PDF",
+    "generate barcode image",
+    "convert PDF to images"
+  ],
+  "sources": [
+    "https://apidocs.pdf.co/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

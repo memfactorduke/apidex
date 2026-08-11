@@ -1,0 +1,15 @@
+{
+  "id": "ipwhois",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1,000 requests per day per client IP address; CORS requests are counted per domain, with the daily limit shared across that domain's traffic.",
+  "rate_limits": "The free endpoint allows 1,000 requests per day. Exceeding the limit returns HTTP 429 with a Retry-After header; access is restored automatically after 24 hours.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "IPWhois provides unauthenticated IP geolocation, ISP, ASN, and timezone lookups. Its free endpoint allows commercial use and 1,000 requests per day but excludes security data. Paid plans offer higher quotas; proxy, VPN, Tor, and hosting flags require Business or Unlimited and the security=1 parameter.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected per https://ipwhois.io/documentation (1,000/day per client IP; CORS counted per domain). rate_limits: corrected per the same URL (HTTP 429, Retry-After, restored after 24 hours). cors: corrected to yes; the docs explicitly describe CORS requests and browser fetch. description: corrected per https://ipwhois.io/documentation and https://ipwhois.io/pricing; free use is commercial but excludes Security Data, which requires Business/Unlimited and security=1."
+}

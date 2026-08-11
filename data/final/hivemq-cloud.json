@@ -1,0 +1,97 @@
+{
+  "id": "hivemq-cloud",
+  "status": "operational",
+  "name": "HiveMQ Cloud",
+  "category": "iot-devices",
+  "tagline": "Enterprise MQTT broker cloud with REST management for clusters, credentials, and traffic control",
+  "description": "HiveMQ Cloud is a fully managed MQTT platform. Its REST API provides cluster-scoped management of MQTT credentials, permissions, roles, clients, and broker metrics; it does not document provisioning or listing Cloud clusters.",
+  "base_url": "https://api.hivemq.cloud",
+  "docs_url": "https://docs.hivemq.com/hivemq-cloud/rest-api.html",
+  "signup_url": "https://console.hivemq.cloud/",
+  "auth": {
+    "type": "jwt",
+    "details": "API token authentication; exact header and self-serve details verified from official docs when available"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No permanent free REST API tier. REST API access requires Starter, which has a 15-day trial without a credit card. The free Serverless broker allows 100 connections and 10 GB/month but excludes the REST API.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS -H \"Authorization: Bearer YOUR_JWT_TOKEN\" \"https://api.hivemq.cloud/api/v2/orgs/YOUR_ORG_ID/clusters/YOUR_CLUSTER_ID/mqtt/credentials\"",
+    "response_snippet": "{\"_links\":null,\"items\":[]}"
+  },
+  "use_cases": [
+    "list HiveMQ Cloud clusters for an account",
+    "create or rotate MQTT client credentials",
+    "inspect cluster connection details for device onboarding",
+    "manage MQTT access control for IoT fleets"
+  ],
+  "sources": [
+    "https://docs.hivemq.com/hivemq-cloud/rest-api/rest-api.html"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

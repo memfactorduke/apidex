@@ -1,0 +1,42 @@
+{
+  "id": "commerce-layer",
+  "status": "operational",
+  "name": "Commerce Layer API",
+  "category": "ecommerce-payments",
+  "tagline": "Headless commerce API for multi-market catalogs, orders, prices, and tax/shipping rules.",
+  "description": "Commerce Layer is a headless commerce platform API for multi-market catalogs, orders, prices, promotions, tax, and shipping. Developers integrate via REST (JSON:API) with OAuth2 client credentials for backend and sales channel tokens for storefronts.",
+  "base_url": "https://api.commercelayer.io/api",
+  "docs_url": "https://docs.commercelayer.io/core",
+  "signup_url": "https://dashboard.commercelayer.io/sign_up",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth2 client credentials (application) for backend integrations; sales channel and integration tokens for storefronts. Bearer token in Authorization header. Self-serve signup via dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.commercelayer.io/api/skus\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/vnd.api+json\"",
+    "response_snippet": "{\"data\":[{\"id\":\"...\",\"type\":\"skus\",\"attributes\":{\"code\":\"TSHIRTMS000000FFFFFFLXXX\",\"name\":\"Black Men T-Shirt with White Logo (L)\",\"description\":null}}]}"
+  },
+  "use_cases": [
+    "list SKUs and products for a multi-market catalog",
+    "create and update customer orders",
+    "fetch market-specific prices and price lists",
+    "apply promotions and coupons to carts",
+    "calculate tax and shipping for an order",
+    "manage inventory stock locations"
+  ],
+  "sources": [
+    "https://docs.commercelayer.io/core"
+  ],
+  "researcher_confidence": "low"
+}

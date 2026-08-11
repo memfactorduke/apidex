@@ -1,0 +1,15 @@
+{
+  "id": "buildkite",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Default limits are 200 REST API requests per minute per organization and 50 per minute per authenticated user; both apply, and plan-specific limits may vary. Responses include organization and user RateLimit headers; exceeding either returns HTTP 429.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: ORIGINAL is incorrect. Current official docs specify 200 requests/minute per organization plus a 50 requests/minute per-user default, with both enforced and HTTP 429 on exceed. Evidence: https://buildkite.com/docs/apis/rest-api/rate-limits and https://buildkite.com/docs/platform/limits"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "glassnode",
+  "status": "operational",
+  "name": "Glassnode",
+  "category": "crypto",
+  "tagline": "On-chain market intelligence metrics for institutional crypto analysis",
+  "description": "Glassnode provides REST APIs delivering institutional-grade on-chain and market intelligence metrics across Bitcoin, Ethereum, and major crypto assets\u2014including supply dynamics, exchange flows, profitability indicators, network activity, and derivatives data for quantitative research and trading systems.",
+  "base_url": "https://api.glassnode.com",
+  "docs_url": "https://docs.glassnode.com/",
+  "signup_url": "https://studio.glassnode.com/settings/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (also accepted as X-Api-Key header per docs); self-serve from Glassnode Studio account settings"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes limited metrics and rate limits (exact quota varies by plan; check studio for current allotment)",
+    "paid_plans": "Standard, Professional, and Enterprise tiers with expanded metric catalogs and higher rate limits"
+  },
+  "rate_limits": "Plan-dependent; not fully published without account\u2014check Glassnode Studio/API settings for your tier",
+  "example": {
+    "request": "curl \"https://api.glassnode.com/v1/metrics/market/price_usd_close?a=BTC&api_key=YOUR_API_KEY\"",
+    "response_snippet": "[{\"t\":1609459200,\"v\":29374.15},{\"t\":1609545600,\"v\":32127.27}]"
+  },
+  "use_cases": [
+    "fetch Bitcoin USD closing price history for backtests",
+    "get exchange netflow metrics for on-chain flow analysis",
+    "query realized profit/loss indicators by asset",
+    "pull active address and network activity time series",
+    "export on-chain supply metrics as CSV for quant models"
+  ],
+  "sources": [
+    "https://docs.glassnode.com/",
+    "https://docs.glassnode.com/basic-api/api"
+  ],
+  "researcher_confidence": "medium"
+}

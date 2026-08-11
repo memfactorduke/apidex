@@ -1,0 +1,52 @@
+{
+  "id": "duffel",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api/overview/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api/overview/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api/airports/get-airports"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api"
+    }
+  },
+  "notes": "Verified against official Duffel docs and site. base_url, auth Bearer with test_/live_ keys, Duffel-Version header, and airport lookup path match current docs. free_tier true with unknown limits and rate_limits not published are conservative and consistent with public materials. cors unknown is appropriate. No shutdown or migration found."
+}

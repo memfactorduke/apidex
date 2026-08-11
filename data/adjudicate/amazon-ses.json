@@ -1,0 +1,15 @@
+{
+  "id": "amazon-ses",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "New AWS customers get up to $200 in AWS Free Tier credits for six months. The SES-specific 3,000 message-charges/month offer ended for new customers July 21, 2026; existing participants retain it for the remainder of their 12-month term.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl --request POST 'https://email.us-east-1.amazonaws.com/v2/email/outbound-emails' --aws-sigv4 'aws:amz:us-east-1:ses' --user \"${AWS_ACCESS_KEY_ID}:${AWS_SECRET_ACCESS_KEY}\" --header 'Content-Type: application/json' --data '{\"FromEmailAddress\":\"verified-sender@example.com\",\"Destination\":{\"ToAddresses\":[\"recipient@example.com\"]},\"Content\":{\"Simple\":{\"Subject\":{\"Data\":\"Hello\",\"Charset\":\"UTF-8\"},\"Body\":{\"Text\":{\"Data\":\"Test from Amazon SES\",\"Charset\":\"UTF-8\"}}}}}'",
+  "example_response_snippet": "{\"MessageId\":\"0100018f2a7b3c4d-12345678-abcd-4ef0-9123-abcdef123456-000000\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected; AWS ended the SES-specific offer for new customers on July 21, 2026. Evidence: https://aws.amazon.com/blogs/messaging-and-targeting/introducing-amazon-simple-email-service-ses-pricing-plans/ example: corrected; SES v2 uses a SigV4-signed POST to /v2/email/outbound-emails and returns MessageId. Evidence: https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_SendEmail.html"
+}

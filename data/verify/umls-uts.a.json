@@ -1,0 +1,46 @@
+{
+  "id": "umls-uts",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://documentation.uts.nlm.nih.gov/rest/home.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://documentation.uts.nlm.nih.gov/rest/home.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://documentation.uts.nlm.nih.gov/rest/authentication.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.nlm.nih.gov/research/umls/index.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "20 requests per second per IP address; NLM recommends caching results for 12\u201324 hours.",
+      "source": "https://documentation.uts.nlm.nih.gov/terms-of-service.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "20 requests per second per IP address; requests exceeding the limit may not be serviced until the rate falls below it.",
+      "source": "https://documentation.uts.nlm.nih.gov/terms-of-service.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://documentation.uts.nlm.nih.gov/rest/concept/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://documentation.uts.nlm.nih.gov/rest/home.html"
+    }
+  },
+  "notes": "The API is operational and the documented request is current. NLM charges nothing for the UMLS license, although some vocabulary uses may require separate vendor agreements. The auth details should omit the claimed Authorization-header alternative: current documentation uses the apiKey query parameter, while ticket-based authentication is deprecated."
+}

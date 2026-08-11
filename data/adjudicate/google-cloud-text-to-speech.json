@@ -1,0 +1,15 @@
+{
+  "id": "google-cloud-text-to-speech",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Monthly: 4M characters for WaveNet and Standard; 1M for Chirp 3 HD, Studio, Neural2, and Polyglot. No free usage for Gemini-TTS or Instant Custom Voice. Billing must be enabled.",
+  "rate_limits": "Per project: Chirp 3 200 RPM; voice cloning 30 RPM; voice-cloning keys 10 RPM; long-audio synthesis and queries 100 RPM each; Neural2, Polyglot, and general requests 1,000 RPM; Studio 500 RPM. Gemini 2.5 Flash/Pro: 150/125 QPM; Gemini 3.1 uses dynamic throughput.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: ORIGINAL is incorrect. Google's current pricing table publishes model-specific monthly allowances, ranging from none to 4M characters: https://cloud.google.com/text-to-speech/pricing. rate_limits: ORIGINAL is incorrect. Google publishes per-project request quotas and Gemini-TTS limits; the quota page was updated 2026-07-29: https://docs.cloud.google.com/text-to-speech/quotas."
+}

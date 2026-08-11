@@ -1,0 +1,52 @@
+{
+  "id": "screenshotapi-net",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/docs/renderScreenshot"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/docs/renderScreenshot"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/docs/renderScreenshot"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Current pricing specifies a 7-day free trial with 100 screenshots. The homepage says no credit card is required; the help page's monthly-reset language conflicts with the current trial terms.",
+      "source": "https://www.screenshotapi.net/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plans allow 20, 40, or 80 requests per minute. Official help documents screenshot_limit_reached as HTTP 403 for monthly quota exhaustion, not HTTP 429 for exceeding the per-minute rate.",
+      "source": "https://www.screenshotapi.net/help"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/docs/renderScreenshot"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.screenshotapi.net/features"
+    }
+  },
+  "notes": "Official documentation and the live site remain available, with the v3 screenshot endpoint still documented. The material errors are the claimed 429 response and the suggestion that the free allowance resets monthly despite current pricing defining a 7-day trial. CORS is not documented clearly enough to confirm."
+}

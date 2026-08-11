@@ -1,0 +1,43 @@
+{
+  "id": "magicthegathering",
+  "status": "operational",
+  "name": "Magic: The Gathering API",
+  "category": "games-comics",
+  "tagline": "Community MTG card catalog with sets, types, and multiverse IDs",
+  "description": "A free, public REST API for Magic: The Gathering card data including cards, sets, types, subtypes, supertypes, and formats. Returns multiverse IDs, mana costs, rules text, and set metadata\u2014useful as a complement to Scryfall for classic multiverse-ID workflows and set/type lookups.",
+  "base_url": "https://api.magicthegathering.io/v1",
+  "docs_url": "https://docs.magicthegathering.io/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public endpoints accept unauthenticated HTTP requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no paid plans. Rate limited (see rate_limits).",
+    "paid_plans": null
+  },
+  "rate_limits": "Published as 5000 requests/hour per IP (RateLimit headers returned).",
+  "example": {
+    "request": "curl -s \"https://api.magicthegathering.io/v1/cards?name=Lightning%20Bolt&pageSize=1\"",
+    "response_snippet": "{\"cards\":[{\"name\":\"Lightning Bolt\",\"manaCost\":\"{R}\",\"cmc\":1,\"type\":\"Instant\",\"rarity\":\"Common\",\"set\":\"LEA\",\"setName\":\"Limited Edition Alpha\",\"text\":\"Lightning Bolt deals 3 damage to any target.\",\"multiverseid\":1610,\"id\":\"...\"}]}"
+  },
+  "use_cases": [
+    "look up MTG card details by name or multiverse ID",
+    "list cards in a specific set by set code",
+    "fetch legal card types, subtypes, and supertypes",
+    "search cards by color, rarity, or mana cost filters",
+    "get MTG set metadata and release information"
+  ],
+  "sources": [
+    "https://docs.magicthegathering.io/",
+    "https://api.magicthegathering.io/v1/cards?pageSize=1",
+    "https://github.com/MagicTheGathering/mtg-api"
+  ],
+  "researcher_confidence": "medium"
+}

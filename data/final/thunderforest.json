@@ -1,0 +1,102 @@
+{
+  "id": "thunderforest",
+  "status": "operational",
+  "name": "Thunderforest",
+  "category": "geo-maps",
+  "tagline": "Specialized OSM map tiles for outdoors, cycling, transport, and more",
+  "description": "Thunderforest provides raster map tile services built on OpenStreetMap data, with styles including Outdoors, Cycle, Transport, Landscape, Pioneer, Mobile Atlas, and Neighbourhood. Developers request PNG tiles over HTTPS via standard XYZ tile URLs with an API key, for use in web maps, mobile apps, and GIS tools. A free developer plan includes a monthly tile quota; higher commercial plans are available.",
+  "base_url": "https://api.thunderforest.com",
+  "docs_url": "https://www.thunderforest.com/docs/",
+  "signup_url": "https://www.thunderforest.com/pricing/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key as `apikey` query parameter on tile URLs (e.g. `?apikey=YOUR_API_KEY`). Obtain free via account signup on thunderforest.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "150,000 tiles/month free (Hobby project plan); attribution required",
+    "paid_plans": "Paid plans from ~$14/month with higher tile quotas; commercial licensing available \u2014 see pricing page"
+  },
+  "rate_limits": "not published separately from monthly tile quotas",
+  "example": {
+    "request": "curl --fail --output tile.png \"https://api.thunderforest.com/outdoors/10/511/340.png?apikey=YOUR_API_KEY\"",
+    "response_snippet": "HTTP 200 OK\nContent-Type: image/png\n(binary 256\u00d7256 PNG tile saved as tile.png)"
+  },
+  "use_cases": [
+    "render outdoor hiking/trail basemap tiles in a web or mobile map",
+    "display cycling-oriented map tiles for bike route apps",
+    "show public transport map style for transit-focused UIs",
+    "add landscape or pioneer basemap tiles to a GIS viewer",
+    "swap OSM raster tile styles with an API key on standard XYZ URLs"
+  ],
+  "sources": [
+    "https://www.thunderforest.com/docs/",
+    "https://www.thunderforest.com/pricing/",
+    "https://www.thunderforest.com/",
+    "https://www.thunderforest.com/maps/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

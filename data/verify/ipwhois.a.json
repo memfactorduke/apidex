@@ -1,0 +1,52 @@
+{
+  "id": "ipwhois",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 requests per day per client IP address; CORS requests are counted per domain.",
+      "source": "https://ipwhois.io/documentation"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The free endpoint has a published limit of 1,000 requests per day. Exceeding it returns HTTP 429, with access restored after 24 hours and a Retry-After header provided.",
+      "source": "https://ipwhois.io/documentation"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://ipwhois.io/documentation"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/documentation"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "IPWhois provides unauthenticated geolocation, ISP, ASN, and timezone lookups through its free endpoint, limited to 1,000 requests per day with commercial use allowed. Paid plans provide higher limits and advanced features; security flags require a Business or Unlimited plan and the security=1 parameter.",
+      "source": "https://ipwhois.io/documentation"
+    }
+  },
+  "notes": "The API is live and returned JSON during review. The free curl request is valid, but its displayed security object is not part of the free response; threat data requires Business or Unlimited access with security=1."
+}

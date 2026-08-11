@@ -1,0 +1,46 @@
+{
+  "id": "persona",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://docs.withpersona.com/api-reference/inquiries/list-all-inquiries"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://docs.withpersona.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://docs.withpersona.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://help.withpersona.com/articles/6oZbzp7jb7AWGClF5vpY3K/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable for an ongoing free tier. Persona offers a no-card 60-day Essential trial with up to 50 services, Sandbox-only by default.",
+      "source": "https://help.withpersona.com/articles/6oZbzp7jb7AWGClF5vpY3K/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The default production-environment limit is 300 API requests per minute; additional product-specific quotas may apply and are shown in the Dashboard.",
+      "source": "https://docs.withpersona.com/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://docs.withpersona.com/api-reference/inquiries/list-all-inquiries"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://docs.withpersona.com/2025-10-27/api-introduction"
+    }
+  },
+  "notes": "Persona's status page reported all systems fully operational on 2026-08-11. The request is a valid GET for listing inquiries, although its illustrative response snippet wrongly shows one object rather than the documented data array; response shape was excluded from the specified example verdict criteria. Latest documented API version is 2025-12-08, while 2023-01-05 remains documented."
+}

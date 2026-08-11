@@ -1,0 +1,94 @@
+{
+  "id": "weatherstack",
+  "status": "operational",
+  "name": "Weatherstack",
+  "category": "weather-environment",
+  "tagline": "Researching Weatherstack API for accurate directory entry",
+  "description": "Placeholder while researching official documentation, pricing, and endpoints.",
+  "base_url": "https://api.weatherstack.com",
+  "docs_url": "https://weatherstack.com/documentation",
+  "auth": {
+    "type": "apiKey",
+    "details": "Researching"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "100 API calls per month; real-time weather and HTTPS are included."
+  },
+  "rate_limits": "Monthly quotas: Free 100; Standard 50,000; Professional 300,000; Business 1,000,000 calls. No fixed per-second or per-minute limit is published. Malicious or technically erroneous traffic may be throttled.",
+  "example": {
+    "request": "curl 'https://api.weatherstack.com/current?access_key=YOUR_ACCESS_KEY&query=New%20York'",
+    "response_snippet": "{\"request\":{\"type\":\"City\",\"query\":\"New York, United States of America\",\"language\":\"en\",\"unit\":\"m\"},\"location\":{\"name\":\"New York\",\"country\":\"United States of America\"},\"current\":{\"observation_time\":\"01:36 PM\",\"temperature\":18,\"weather_descriptions\":[\"Sunny\"]}}"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "fetch historical weather data"
+  ],
+  "sources": [
+    "https://weatherstack.com/documentation"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors",
+      "description"
+    ]
+  }
+}

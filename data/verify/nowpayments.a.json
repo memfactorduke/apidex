@@ -1,0 +1,52 @@
+{
+  "id": "nowpayments",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nowpayments.zendesk.com/hc/en-us/articles/21345824322717-API-and-endpoint-description"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://documenter.getpostman.com/view/7907941/2s93JusNJt",
+      "source": "https://nowpayments.io/help/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nowpayments.zendesk.com/hc/en-us/articles/21345824322717-API-and-endpoint-description"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false",
+      "source": "https://nowpayments.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "N/A: there is no free transaction allowance. API-key issuance and integration are free, but processed payments incur a 0.5% service fee without conversion or 1% with autoconversion/fixed-rate features, plus applicable network fees.",
+      "source": "https://nowpayments.io/help"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits include 7 requests/second for GET /estimate and 3 requests/second for POST /payment.",
+      "source": "https://nowpayments.zendesk.com/hc/en-us/articles/21395546303389-IPN-and-how-to-setup"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://api.nowpayments.io/v1/status\"",
+      "source": "https://documenter.getpostman.com/view/7907941/2s93JusNJt"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documenter.getpostman.com/view/7907941/2s93JusNJt"
+    }
+  },
+  "notes": "The API is operational and the core endpoint/authentication description is current. The listed Postman URL has been superseded, endpoint-specific rate limits are officially published, and the status endpoint is documented without an API-key header. NOWPayments provides a free API key and free integration, but not a free processing tier."
+}

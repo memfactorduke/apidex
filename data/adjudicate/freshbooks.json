@@ -1,0 +1,15 @@
+{
+  "id": "freshbooks",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No permanent free tier. FreshBooks offers a 30-day trial; continued API use requires a paid plan. No separate per-request API price is published.",
+  "rate_limits": "No daily request cap. Short-window rate limiting applies when too many calls are made; thresholds are unspecified. List methods return at most 100 results per page.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier=false: official pricing lists paid plans plus a 30-day trial, not a permanent free plan: https://www.freshbooks.com/pricing. free_tier_limits corrected: official support confirms all accounts start with a 30-day trial: https://support.freshbooks.com/hc/en-us/articles/360006873232-What-is-the-pricing. rate_limits corrected per https://www.freshbooks.com/api/limits. cors=yes: the official identity endpoint returns Access-Control-Allow-Origin: *: https://api.freshbooks.com/auth/api/v1/users/me."
+}

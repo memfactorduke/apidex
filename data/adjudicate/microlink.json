@@ -1,0 +1,15 @@
+{
+  "id": "microlink",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "25 requests/day on the unauthenticated public endpoint (approximately 1,500/month); no credit card required.",
+  "rate_limits": "Free: soft limit of 25 requests/day, resetting daily, with limited/shared concurrency. Pro: unlimited daily quota and 46,000\u2013420,000 requests/month. Enterprise: millions+. Quota exhaustion returns HTTP 429 with code ERATE.",
+  "cors": null,
+  "example_request": "curl -G \"https://api.microlink.io\" -d \"url=https://www.youtube.com/watch?v=9P6rdqiybaw\" -d \"meta=true\"",
+  "example_response_snippet": "{\"status\":\"success\",\"data\":{\"title\":\"Wormholes Explained \u2013 Breaking Spacetime\",\"description\":\"Are wormholes real or are they just magic disguised as physics and maths?...\",\"lang\":\"en\",\"publisher\":\"YouTube\",\"url\":\"https://www.youtube.com/watch?v=9P6rdqiybaw\"}}",
+  "description": "Microlink turns URLs into normalized metadata and can generate screenshots, PDFs, HTML, Markdown, text, media, and structured data. Its REST API uses GET requests through two endpoints: api.microlink.io for unauthenticated free use and pro.microlink.io for authenticated plans.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: 50/day is wrong; Free is 25/day: https://microlink.io/pricing. rate_limits: pricing and 429 behavior confirmed at https://microlink.io/pricing and https://microlink.io/docs/guides/common/production-patterns. example: free endpoint must omit x-api-key; current curl/response are documented at https://microlink.io/docs/api/parameters/meta. description: \u201csingle endpoint\u201d is wrong; two GET endpoints are documented at https://microlink.io/docs/api/basics/endpoint."
+}

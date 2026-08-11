@@ -1,0 +1,98 @@
+{
+  "id": "blockcypher",
+  "status": "operational",
+  "name": "BlockCypher",
+  "category": "crypto",
+  "tagline": "Multi-chain blockchain API for Bitcoin, Ethereum, and more",
+  "description": "BlockCypher provides REST APIs for multi-chain blockchain data including Bitcoin, Ethereum, Litecoin, Dogecoin, and Dash. Developers can query addresses, transactions, blocks, generate wallets, and receive webhook notifications for chain events.",
+  "base_url": "https://api.blockcypher.com/v1",
+  "docs_url": "https://www.blockcypher.com/dev/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via query parameter token= or X-API-Token header; free tier available without token at lower limits"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 requests/day; 100 requests/hour; 3 requests/second; 100 stored webhooks; 100 webhook/WebSocket deliveries/hour; 10 confidence lookups/hour.",
+    "paid_plans": null
+  },
+  "rate_limits": "Free tier, with or without a token: 3 classic requests/second and 100/hour; pricing also caps usage at 1,000/day. Exceeding a limit returns HTTP 429. Paid tiers have higher limits.",
+  "example": {
+    "request": "curl \"https://api.blockcypher.com/v1/btc/main\"",
+    "response_snippet": "{\"name\":\"BTC.main\",\"height\":800000,\"hash\":\"...\",\"time\":\"...\",\"latest_url\":\"...\",\"previous_hash\":\"...\",\"previous_url\":\"...\",\"peer_count\":0,\"unconfirmed_count\":0}"
+  },
+  "use_cases": [
+    "get Bitcoin address balance and transaction history",
+    "look up a transaction by hash on BTC or ETH",
+    "create a webhook for new payments to an address",
+    "generate a multi-address HD wallet",
+    "broadcast a signed raw transaction"
+  ],
+  "sources": [
+    "https://www.blockcypher.com/dev/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "fortnite-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://fortnite-api.com (versioned paths like /v2/... are appended to the host; the API base is the site root, not exclusively /v2)",
+      "source": "https://fortnite-api.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.fortnite-api.com/",
+      "source": "https://docs.fortnite-api.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dash.fortnite-api.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dash.fortnite-api.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.fortnite-api.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.fortnite-api.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fortnite-api.com/"
+    }
+  },
+  "notes": "docs_url is wrong (dash endpoints 404). Correct docs are docs.fortnite-api.com. Automated 404 on base_url may be host-only path issue; /v2 cosmetics endpoints still documented and used."
+}

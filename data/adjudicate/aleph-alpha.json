@@ -1,0 +1,15 @@
+{
+  "id": "aleph-alpha",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS -X POST \"$BASE_URL/v1/responses\" -H \"Authorization: Bearer $AA_TOKEN\" -H \"Content-Type: application/json\" -d '{\"model\":\"qwen3-32b-tool\",\"input\":\"What is the capital of Germany?\"}'",
+  "example_response_snippet": "{\"id\":\"resp_abc123\",\"object\":\"response\",\"model\":\"qwen3-32b-tool\",\"status\":\"completed\",\"output\":[{\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"output_text\",\"text\":\"The capital of Germany is Berlin.\"}]}],\"usage\":{\"input_tokens\":12,\"output_tokens\":8,\"total_tokens\":20}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: INCORRECT. The current official guide defines POST $BASE_URL/v1/responses with model qwen3-32b-tool and provides the corresponding response structure; BASE_URL must be the customer's Aleph Alpha deployment URL. The original luminous-base /complete example is not the current documented surface. Evidence: https://docs.aleph-alpha.com/phariaai-dev-guide/latest/responses-api/getting-started.html and https://docs.aleph-alpha.com/phariaai-dev-guide/latest/responses-api/index.html"
+}

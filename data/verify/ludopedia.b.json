@@ -1,0 +1,52 @@
+{
+  "id": "ludopedia",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ludopedia.com.br/api/v1/colecao"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://ludopedia.com.br/api/documentacao.html",
+      "source": "https://ludopedia.com.br/api/documentacao.html"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://ludopedia.com.br/topico/48099/api-ludopedia-acesso-alpha?id_topico=48099&pagina=1"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ludopedia.com.br/aplicativo"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for non-commercial use with Ludopedia attribution and a link; clone sites are prohibited, and Ludopedia may block access. No numerical request quota is published there.",
+      "source": "https://ludopedia.com.br/aplicativo"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The API appears operational: an official /api/v1 endpoint returned 401, showing the router exists despite the bare base URL's 404. The submitted documentation URL is wrong, and Ludopedia explicitly describes OAuth 2.0 rather than apiKey authentication. Accessible official material confirms game search, game details, collections, and free non-commercial access, but not every description or example detail."
+}

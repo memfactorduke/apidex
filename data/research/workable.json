@@ -1,0 +1,41 @@
+{
+  "id": "workable",
+  "status": "operational",
+  "name": "Workable",
+  "category": "jobs-careers",
+  "tagline": "ATS REST API for jobs, candidates, and hiring workflows",
+  "description": "Workable is a popular applicant tracking system (ATS) with a REST API for managing jobs, candidates, and hiring workflows. Developers can integrate with Workable to automate recruitment processes, sync candidate data, and manage job postings programmatically.",
+  "base_url": "https://api.workable.com/v1",
+  "docs_url": "https://workable.readme.io/reference/generate-an-access-token",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.workable.com/v1/jobs\" -H \"X-Api-Key: YOUR_API_KEY\"",
+    "response_snippet": "{\"jobs\": [{\"id\": \"job_id\", \"title\": \"Software Engineer\", \"status\": \"published\"}]}"
+  },
+  "use_cases": [
+    "list open job postings from a Workable account",
+    "fetch candidate applications for a job",
+    "create or update candidate records",
+    "sync hiring pipeline stages",
+    "export recruitment data for reporting"
+  ],
+  "sources": [
+    "https://workable.readme.io/reference/generate-an-access-token"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "smartthings",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Published and endpoint-specific. Limits vary by operation; responses include X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset headers, and exceeding a limit returns HTTP 429.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "SmartThings is Samsung's smart-home platform API for managing devices, locations, rooms, scenes, and automation rules. Resource requests use OAuth 2.0 bearer access tokens. Short-lived personal access tokens are intended for testing and personal use; long-term production integrations use the OAuth 2.0 authorization flow to obtain access and refresh tokens. App client credentials participate in that flow but do not directly authenticate resource requests.",
+  "status": null,
+  "resolution_notes": "rate_limits: Replace original; SmartThings publishes endpoint-specific numeric limits, rate-limit headers, and HTTP 429 behavior: https://developer.smartthings.com/docs/getting-started/rate-limits . description: Replace original; PATs are short-lived for testing/personal use, while long-term production integrations require OAuth 2.0 access and refresh tokens: https://developer.smartthings.com/docs/getting-started/quickstart"
+}

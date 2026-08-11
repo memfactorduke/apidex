@@ -1,0 +1,15 @@
+{
+  "id": "septa-api",
+  "base_url": null,
+  "docs_url": "https://api.septa.org/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s 'https://www3.septa.org/api/TrainView/index.php'",
+  "example_response_snippet": "[{\"lat\":\"39.9538889\",\"lon\":\"-75.1677778\",\"trainno\":\"1084\",\"service\":\"LOCAL\",\"dest\":\"Suburban Sta\",\"currentstop\":\"Gray 30th Street\",\"nextstop\":\"Suburban Station\",\"line\":\"Manayunk/Norristown\",\"late\":0}]",
+  "description": "Public SEPTA developer APIs for Regional Rail arrivals, TrainView, Next-to-Arrive, and schedules; bus and trolley locations, detours, schedules, and stops; service alerts, elevator outages, and GTFS/GTFS-RT feeds. The documentation does not claim uniform real-time vehicle coverage for subway/elevated lines.",
+  "status": null,
+  "resolution_notes": "base_url\u2014keep original: official JSON is live at https://www3.septa.org/api/TrainView/index.php and SEPTA's catalog uses www3 endpoints. docs_url\u2014change: the current documentation is https://api.septa.org/. example\u2014replace with the working TrainView curl and live-format response from https://www3.septa.org/api/TrainView/index.php. description\u2014change: https://api.septa.org/ lists Regional Rail, bus/trolley, alerts, elevator, and GTFS endpoints, but no general subway/elevated vehicle-location API."
+}

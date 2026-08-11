@@ -1,0 +1,96 @@
+{
+  "id": "sparkpost",
+  "status": "operational",
+  "name": "SparkPost",
+  "category": "social-communication",
+  "tagline": "Enterprise email delivery API with analytics",
+  "description": "SparkPost's email-delivery engine is now Bird Email, owned by Bird (formerly MessageBird), not Sinch. Existing SparkPost customers retain their service, while new projects use the Bird Email API. It supports transactional and marketing email, templates, and delivery and engagement analytics.",
+  "base_url": "https://api.sparkpost.com/api/v1",
+  "docs_url": "https://developers.sparkpost.com/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 emails per month, capped at 50 per day (reset at midnight UTC); one sending domain; no credit card required; no overage\u2014sending pauses at the daily or monthly cap.",
+    "paid_plans": null
+  },
+  "rate_limits": "Dynamic per-API limits return HTTP 429; retry after 1\u20135 seconds with backoff. POST /transmissions is exempt from this API throttling, but DELETE is limited. Separate daily or monthly sending quotas may return HTTP 420.",
+  "example": {
+    "request": "curl -X POST 'https://api.sparkpost.com/api/v1/transmissions' -H 'Authorization: YOUR_API_KEY' -H 'Content-Type: application/json' --data '{\"recipients\":[{\"address\":\"recipient@example.com\"}],\"content\":{\"from\":\"sender@your-verified-domain.example\",\"subject\":\"Hello\",\"text\":\"Hello from SparkPost\"}}'",
+    "response_snippet": "{\"results\":{\"total_rejected_recipients\":0,\"total_accepted_recipients\":1,\"id\":\"11668787484950529\"}}"
+  },
+  "use_cases": [
+    "send transactional email",
+    "check delivery metrics"
+  ],
+  "sources": [
+    "https://developers.sparkpost.com/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

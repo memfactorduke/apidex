@@ -1,0 +1,52 @@
+{
+  "id": "particle",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.particle.io/reference/cloud-apis/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.particle.io/reference/cloud-apis/api/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://docs.particle.io/reference/cloud-apis/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.particle.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 100 devices and 100,000 Data Operations per month.",
+      "source": "https://www.particle.io/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "General API limit: 10,000 requests per 5 minutes per source IP. Several routes have lower limits, including 100 requests per 5 minutes for token operations and event subscriptions, 100 simultaneous event-stream connections, and 50 serial-number lookups per hour.",
+      "source": "https://docs.particle.io/reference/cloud-apis/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl https://api.particle.io/v1/devices -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\"",
+      "source": "https://docs.particle.io/reference/cloud-apis/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.particle.io/reference/cloud-apis/api/"
+    }
+  },
+  "notes": "The API and documentation are operational. The example's endpoint and GET method are valid, but query-string authentication is deprecated and unavailable to accounts created after December 4, 2024; the documented Bearer header should be used. No explicit official CORS policy was located."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "zerion",
+  "status": "operational",
+  "name": "Zerion",
+  "category": "crypto",
+  "tagline": "Wallet portfolio, DeFi positions, and transaction history API across many chains.",
+  "description": "Zerion API provides multi-chain wallet portfolio data, DeFi positions, transaction history, and related crypto data for developers building wallet and DeFi applications.",
+  "base_url": "https://api.zerion.io",
+  "docs_url": "https://developers.zerion.io/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication required; details to be verified from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Developer plan: 2,000 requests per day and 3 requests per second. DeFi Positions, Wallet Portfolio Chart, and Wallet P&L endpoints are capped at 25% of the plan quota and are not covered by overages.",
+    "paid_plans": null
+  },
+  "rate_limits": "Plan-based: Developer 3 RPS, Builder 10 RPS, Startup 25 RPS, and Enterprise 1,000+ RPS. Their quotas are 2,000/day, 250,000/month, 1,000,000/month, and 2,500,000+/month, respectively. Responses include limit, remaining-quota, and reset headers.",
+  "example": {
+    "request": "curl --request GET --user \"YOUR_API_KEY:\" --header \"accept: application/json\" \"https://api.zerion.io/v1/wallets/0x42b9df65b219b3dd36ff330a4dd8f327a6ada990/positions/\"",
+    "response_snippet": "{\"links\":{\"self\":\"https://api.zerion.io/v1/wallets/0x42b9df65b219b3dd36ff330a4dd8f327a6ada990/positions/\"},\"data\":[{\"type\":\"positions\",\"id\":\"0x111c47865ade3b172a928df8f990bc7f2a3b9aaa-polygon-asset-none-\",\"attributes\":{\"name\":\"Asset\",\"quantity\":{\"int\":\"12345678\",\"decimals\":5,\"float\":123.45678,\"numeric\":\"123.45678\"},\"value\":5.384656557642683,\"price\":0.043615722}}]}"
+  },
+  "use_cases": [
+    "get wallet portfolio balances across chains",
+    "list DeFi positions for an address",
+    "fetch transaction history for a wallet"
+  ],
+  "sources": [
+    "https://developers.zerion.io/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "newswhip",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.newswhip.com/reference/articles"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.newswhip.com/",
+      "source": "https://developer.newswhip.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.newswhip.com/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests per rolling 5 minutes, with no more than 5 requests per second.",
+      "source": "https://developer.newswhip.com/docs/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use POST https://api.newswhip.com/v1/articles?key=YOUR_API_KEY with a JSON body such as {\"filters\":[\"climate\"],\"from\":<Unix timestamp in milliseconds>,\"to\":<Unix timestamp in milliseconds>} and Content-Type: application/json.",
+      "source": "https://developer.newswhip.com/reference/articles"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.newswhip.com/newswhip-api/"
+    }
+  },
+  "notes": "The API host is valid despite its root returning 404; documented endpoints use that host. The documentation has moved to developer.newswhip.com. Official pages offer sales-requested trials and describe paid subscriptions, but do not explicitly establish whether a continuing free tier exists. No authoritative CORS policy was found."
+}

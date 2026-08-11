@@ -1,0 +1,41 @@
+{
+  "id": "numbeo",
+  "status": "operational",
+  "name": "Numbeo API",
+  "category": "travel-hospitality",
+  "tagline": "Cost-of-living and travel indices for city and country comparison",
+  "description": "Numbeo provides programmatic access to crowd-sourced cost-of-living, property, crime, healthcare, pollution, traffic, and quality-of-life indices for cities and countries. Developers use it to compare destinations, estimate travel and relocation budgets, and enrich apps with local price and quality metrics.",
+  "base_url": "https://www.numbeo.com/api",
+  "docs_url": "https://www.numbeo.com/common/api.jsp",
+  "signup_url": "https://www.numbeo.com/common/api.jsp",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter api_key; commercial license required (contact Numbeo for access)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Commercial API access by arrangement; contact Numbeo for pricing"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.numbeo.com/api/city_prices?api_key=YOUR_API_KEY&query=London\"",
+    "response_snippet": "{\"name\":\"London\",\"currency\":\"GBP\",\"contributors\":...,\"prices\":[{\"item_id\":1,\"item_name\":\"Meal, Inexpensive Restaurant\",\"average_price\":...}]}"
+  },
+  "use_cases": [
+    "compare cost of living between two cities",
+    "get restaurant and grocery price estimates for a destination",
+    "fetch quality-of-life or crime index for a city",
+    "estimate monthly living costs for relocation planning",
+    "list available cities or currencies for index lookups"
+  ],
+  "sources": [
+    "https://www.numbeo.com/common/api.jsp"
+  ],
+  "researcher_confidence": "medium"
+}

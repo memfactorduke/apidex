@@ -1,0 +1,15 @@
+{
+  "id": "ons-uk",
+  "base_url": "https://api.beta.ons.gov.uk/v1",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "120 requests per 10 seconds and 200 per minute for all site and API assets; 15 per 10 seconds for high-demand site assets. Exceeding limits returns 429 with Retry-After; ignoring it may trigger a block of up to one hour. Limits may change without notice.",
+  "cors": null,
+  "example_request": "curl -s \"https://api.beta.ons.gov.uk/v1/datasets?limit=1\"",
+  "example_response_snippet": "{\"items\":[{\"id\":\"wellbeing-quarterly\",\"title\":\"Quarterly personal well-being estimates\",\"state\":\"published\",\"links\":{\"self\":{\"href\":\"https://api.beta.ons.gov.uk/v1/datasets/wellbeing-quarterly\"}}}],\"count\":1,\"offset\":0,\"limit\":1,\"total_count\":337}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: verifier correction accepted; the official introduction names https://api.beta.ons.gov.uk/v1 (https://developer.ons.gov.uk/). rate_limits: verifier correction accepted, including 429, Retry-After, possible one-hour block, and change-without-notice terms (https://developer.ons.gov.uk/bots/). example: corrected to the documented base and /datasets route; the endpoint returned JSON in the current check (https://developer.ons.gov.uk/tour/getting-started/; https://api.beta.ons.gov.uk/v1/datasets)."
+}

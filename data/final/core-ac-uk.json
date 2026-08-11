@@ -1,0 +1,98 @@
+{
+  "id": "core-ac-uk",
+  "status": "operational",
+  "name": "CORE API",
+  "category": "education-reference",
+  "tagline": "Search and retrieve open-access research papers and full text worldwide",
+  "description": "CORE aggregates open-access research from repositories and journals worldwide and exposes it via REST APIs for discovery, full-text search, metadata retrieval, and bulk access. Developers use it to find papers by query, fetch works by identifier, and build scholarly search and analytics tools on open research content.",
+  "base_url": "https://api.core.ac.uk/v3",
+  "docs_url": "https://api.core.ac.uk/docs/v3",
+  "signup_url": "https://core.ac.uk/services#api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer YOUR_API_KEY header; obtain key after free registration on CORE"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1 batch request or 5 single requests per 10 seconds; free access is available without registration, subject to CORE's terms.",
+    "paid_plans": null
+  },
+  "rate_limits": "Free access: 1 batch request or 5 single requests per 10 seconds. Registered users receive better performance; faster/VIP rates are available by contacting CORE.",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.core.ac.uk/v3/search/works?q=open+access&limit=1\"",
+    "response_snippet": "{\"totalHits\":12345,\"limit\":1,\"offset\":0,\"results\":[{\"id\":123,\"doi\":\"10.1234/example\",\"title\":\"Example Open Access Paper\",\"authors\":[{\"name\":\"A. Researcher\"}],\"abstract\":\"...\",\"downloadUrl\":\"https://...\",\"publishedDate\":\"2020-01-01\"}]}"
+  },
+  "use_cases": [
+    "search open-access papers by topic or keywords",
+    "fetch metadata and abstract for a paper by CORE id or DOI",
+    "retrieve full-text download links for open research works",
+    "find related scholarly works for a research query",
+    "bulk-discover papers from a repository or journal"
+  ],
+  "sources": [
+    "https://core.ac.uk/services/api",
+    "https://api.core.ac.uk/docs/v3"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "lseg-news",
+  "status": "operational",
+  "name": "LSEG News API",
+  "category": "news-media",
+  "tagline": "Professional financial and corporate news wire access via LSEG Data Platform",
+  "description": "LSEG News API (formerly Refinitiv) delivers market-moving financial journalism, corporate announcements, and real-time news content for professional applications. Part of the LSEG/Refinitiv Data Platform, it provides structured access to news wires used in trading, compliance, and research workflows.",
+  "base_url": "https://api.refinitiv.com",
+  "docs_url": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news",
+  "signup_url": null,
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth2 client credentials via LSEG/Refinitiv Data Platform; access token used as Bearer authorization (confirm against current docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.refinitiv.com/\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "fetch market-moving financial news headlines",
+    "search corporate announcements by company",
+    "monitor real-time news for trading signals",
+    "retrieve news stories for compliance screening"
+  ],
+  "sources": [
+    "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news"
+  ],
+  "researcher_confidence": "low"
+}

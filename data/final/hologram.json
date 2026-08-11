@@ -1,0 +1,97 @@
+{
+  "id": "hologram",
+  "status": "operational",
+  "name": "Hologram",
+  "category": "iot-devices",
+  "tagline": "Cellular IoT connectivity platform for SIM, messaging, and device management",
+  "description": "Hologram provides cellular IoT connectivity with a REST API for managing SIMs, devices, messaging, and connectivity. Developers use it to provision SIMs, send/receive data, monitor usage, and control device fleets over cellular networks.",
+  "base_url": "https://dashboard.hologram.io/api/1",
+  "docs_url": "https://docs.hologram.io/api/v1",
+  "signup_url": "https://dashboard.hologram.io/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication for REST endpoints; self-serve signup via Hologram dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Limited-access Test Mode per SIM: 100 KB of free data and up to 10 device-originated SMS messages within 90 days. The SIM automatically activates on its preconfigured paid plan when the first limit is reached.",
+    "paid_plans": null
+  },
+  "rate_limits": "Rate limiting applies to all API requests. Exceeding the unpublished numeric limit returns HTTP 429; Hologram recommends waiting 5\u201310 seconds before retrying.",
+  "example": {
+    "request": "curl -u apikey:YOUR_API_KEY \"https://dashboard.hologram.io/api/1/devices\"",
+    "response_snippet": "{\"success\":true,\"data\":[{\"id\":12345,\"name\":\"device\",\"type\":\"Unknown\",\"tags\":[]}]} "
+  },
+  "use_cases": [
+    "list cellular IoT devices and SIMs",
+    "send messages to IoT devices over cellular",
+    "check SIM data usage and connectivity status",
+    "activate or pause IoT SIMs programmatically"
+  ],
+  "sources": [
+    "https://www.hologram.io/references/http"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

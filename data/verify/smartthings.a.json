@@ -1,0 +1,52 @@
+{
+  "id": "smartthings",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.smartthings.com/docs/service-integrations/api-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.smartthings.com/docs/api/public"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.smartthings.com/docs/getting-started/authorization-and-permissions"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.smartthings.com/smartthings-updates/a-new-enhanced-smartthings-api-experience/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.smartthings.com/smartthings-updates/a-new-enhanced-smartthings-api-experience/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published and vary by endpoint; SmartThings also returns X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset headers.",
+      "source": "https://developer.smartthings.com/docs/getting-started/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.smartthings.com/docs/service-integrations/query-and-list-devices"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SmartThings resource requests authenticate with OAuth 2.0 bearer access tokens. PATs are intended for short-term testing and personal use; production integrations use OAuth 2.0 access and refresh tokens. App client credentials obtain tokens but do not directly authenticate resource requests.",
+      "source": "https://developer.smartthings.com/docs/getting-started/quickstart"
+    }
+  },
+  "notes": "The API and reference are operational. Free API access remains available through Q3 2026, with paid commercial tiers and a $4.99/month individual plan targeted for October 2026; final tier limits remain forthcoming. The entry fails because rate limits are published and its description incorrectly implies app credentials directly authenticate REST resource calls."
+}

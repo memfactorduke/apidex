@@ -1,0 +1,52 @@
+{
+  "id": "zerion",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zerion.io/endpoints-and-schema"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zerion.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zerion.io/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://zerion.io/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Developer plan: 2,000 requests/day and 3 requests/second. DeFi Positions, Wallet Portfolio Chart, and Wallet P&L endpoints are limited to 25% of the plan quota.",
+      "source": "https://zerion.io/api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published and plan-dependent. The Developer plan allows 2,000 requests/day at 3 RPS; Zerion also publishes quota and RPS limits for paid plans and returns rate-limit headers with API responses.",
+      "source": "https://developers.zerion.io/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -u \"YOUR_API_KEY:\" \"https://api.zerion.io/v1/wallets/{address}/positions/\"",
+      "source": "https://developers.zerion.io/api-reference/wallets/get-wallet-fungible-positions"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zerion.io/introduction"
+    }
+  },
+  "notes": "The API and v1 wallet endpoints remain documented and operational. The principal error is authentication syntax: API-key requests use HTTP Basic authentication, not Bearer. Zerion also now supports optional x402 and MPP pay-per-request authentication."
+}

@@ -1,0 +1,103 @@
+{
+  "id": "nrel",
+  "status": "operational",
+  "name": "NREL Developer Network",
+  "category": "energy-utilities",
+  "tagline": "US DOE open energy APIs for solar, wind, EV charging, and utility rates",
+  "description": "The NLR Developer Network provides API-key-authenticated access to National Laboratory of the Rockies web services covering buildings, climate, electricity, energy optimization, solar, transportation, wave, and wind. Services include PVWatts and AFDC station data. The former developer.nrel.gov domain is retired. Utility Rates v3 remains available but returns 2012 data with no planned updates.",
+  "base_url": "https://developer.nlr.gov/api",
+  "docs_url": "https://developer.nlr.gov/docs/",
+  "signup_url": "https://developer.nrel.gov/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Free API key from self-serve signup; pass as query param api_key=YOUR_API_KEY (primary). Some docs also accept X-Api-Key header."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Default: 1,000 requests per hour per API key across developer.nlr.gov; service-specific limits may vary. DEMO_KEY: 30 requests per IP per hour and 50 per IP per day.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published default: 1,000 requests per hour per API key across developer.nlr.gov; service-specific limits may vary. DEMO_KEY permits 30 requests per IP per hour and 50 per IP per day.",
+  "example": {
+    "request": "curl \"https://developer.nlr.gov/api/alt-fuel-stations/v1/446595.json?api_key=DEMO_KEY\"",
+    "response_snippet": "{\"alt_fuel_station\":{\"access_code\":\"public\",\"fuel_type_code\":\"ELEC\",\"id\":446595,\"station_name\":\"Kwik Trip #1205\",\"city\":\"Baraboo\",\"state\":\"WI\",\"status_code\":\"E\",\"ev_connector_types\":[\"J1772COMBO\",\"TESLA\"],\"ev_dc_fast_num\":4}}"
+  },
+  "use_cases": [
+    "find EV charging stations near a US zip code or lat/lon",
+    "estimate PV system energy production with PVWatts for a site",
+    "get solar resource / irradiance data for a location (NSRDB)",
+    "look up utility electricity rates for a US address or utility",
+    "query wind resource or related renewable datasets for modeling"
+  ],
+  "sources": [
+    "https://developer.nrel.gov/docs/",
+    "https://developer.nrel.gov/",
+    "https://developer.nrel.gov/signup/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "cors"
+    ]
+  }
+}

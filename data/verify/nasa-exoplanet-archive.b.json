@@ -1,0 +1,52 @@
+{
+  "id": "nasa-exoplanet-archive",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html",
+      "source": "https://exoplanetarchive.ipac.caltech.edu/docs/program_interfaces.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://exoplanetarchive.ipac.caltech.edu/applications/Login/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://exoplanetarchive.ipac.caltech.edu/docs/intro.html"
+    }
+  },
+  "notes": "Current 2026 official pages show TAP remains operational. The submitted docs URL is the legacy API guide; it warns that its examples may no longer work and directs TAP users to the dedicated TAP guide. Official materials establish public data access but do not publish pricing tiers, tier limits, request-rate quotas, or a CORS policy. The description's core catalog claims are supported, but 'widely used' and user-facing catalog joins were not explicitly verified."
+}

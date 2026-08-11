@@ -1,0 +1,52 @@
+{
+  "id": "ipapi-is",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/pricing.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests per client IP per UTC day anonymously with a reduced response; 1,000 requests per day with a free account and API key, with the full response.",
+      "source": "https://ipapi.is/developers.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits include 100 anonymous requests per client IP per UTC day and 1,000 requests per day for free accounts; anonymous over-limit requests receive HTTP 429.",
+      "source": "https://ipapi.is/developers.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    }
+  },
+  "notes": "Official documentation was updated August 1, 2026. The API-key type is correct, but the Authorization-header claim is not documented; current docs specify the key query parameter or JSON body. The API is operational and paid daily quotas are published on the pricing page."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "pdf-co",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pdf.co/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apidocs.pdf.co/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pdf.co/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pdf.co/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "10,000 credits for a 1-month free trial.",
+      "source": "https://pdf.co/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developer.pdf.co/api-reference/response-codes"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pdf.co/api/account-balance-info"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pdf.co/"
+    }
+  },
+  "notes": "Official docs are live. The balance request is current, but the documented response uses remainingCredits, not the supplied response snippet; per the prompt, example checks only request construction. Current docs disclose HTTP 429 but no live general numeric threshold. An older 6,000/minute KB result now resolves to 404, so it was not treated as current."
+}

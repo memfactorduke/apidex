@@ -1,0 +1,15 @@
+{
+  "id": "quad9",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl --http2 -sS -H 'accept: application/dns-message' 'https://dns.quad9.net/dns-query?dns=AAABAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE' | hexdump -C",
+  "example_response_snippet": "00000000  00 00 81 a0 00 01 00 06  00 00 00 00 07 65 78 61\n00000010  6d 70 6c 65 03 63 6f 6d  00 00 01 00 01 c0 0c 00\n(binary RFC 8484 DNS response; answer addresses and TTLs may vary)",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: CORRECTED. Quad9\u2019s official retirement notice says its JSON service on port 5053 was retired May 5, 2025 and directs users to standards-based DoH on port 443: https://quad9.net/news/blog/quad9-json-based-dns-service-retires-5-may-2025/ . Current docs list https://dns.quad9.net/dns-query: https://docs.quad9.net/services/ . Quad9\u2019s 2026 update confirms the same endpoint supports HTTP/2 and HTTP/3: https://quad9.net/news/blog/quad9-enables-dns-over-http-3-and-dns-over-quic/"
+}

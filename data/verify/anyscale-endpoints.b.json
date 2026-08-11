@@ -1,0 +1,52 @@
+{
+  "id": "anyscale-endpoints",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.endpoints.anyscale.com/v1 is dead/deprecated; product shut down Apr 30 2025 \u2014 no replacement public base URL",
+      "source": "https://docs.anyscale.com/llm/serving/overview"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.anyscale.com/llm/serving/overview (Endpoints product deprecated; docs moved)",
+      "source": "https://docs.anyscale.com/llm/serving/overview"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Example targets shut-down Endpoints API; no longer valid",
+      "source": "https://docs.anyscale.com/llm/serving/overview"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Anyscale Endpoints as a hosted OpenAI-compatible SaaS was deprecated/shut down; Anyscale now focuses on self-managed LLM serving on their platform, not a public Endpoints product",
+      "source": "https://docs.anyscale.com/llm/serving/overview"
+    }
+  },
+  "notes": "Product appears shut down. Both base_url and docs_url 404. Need authoritative confirmation of deprecation."
+}

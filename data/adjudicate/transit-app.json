@@ -1,0 +1,15 @@
+{
+  "id": "transit-app",
+  "base_url": "https://external.transitapp.com",
+  "docs_url": "https://api-doc.transitapp.com/v4.html",
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Up to 5 API calls per minute and 1,500 API calls per calendar month.",
+  "rate_limits": "Free access is limited to 5 API calls per minute and 1,500 API calls per calendar month; an API Agreement may specify different limits.",
+  "cors": null,
+  "example_request": "curl 'https://external.transitapp.com/v4/public/nearby_routes?lat=45.5017&lon=-73.5673' --header 'apiKey: YOUR_SECRET_TOKEN'",
+  "example_response_snippet": "{\"nearby_routes\":[{\"global_route_id\":\"1:897\",\"route_short_name\":\"55\",\"route_long_name\":\"Boulevard Saint-Laurent\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: corrected; stable v4 docs list https://external.transitapp.com. docs_url: corrected to the stable v4 docs. example: corrected to the v4 path, apiKey header, and nearby_routes response. Evidence: https://api-doc.transitapp.com/v4.html. free_tier: true. free_tier_limits: 5/min and 1,500/calendar month. rate_limits: those free limits apply unless an API Agreement differs. Evidence: https://transitapp.com/partners/apis and https://transitapp.com/reports/API_terms.pdf."
+}

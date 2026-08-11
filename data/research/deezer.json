@@ -1,0 +1,41 @@
+{
+  "id": "deezer",
+  "status": "operational",
+  "name": "Deezer API",
+  "category": "entertainment",
+  "tagline": "Full music catalog search, albums, artists, and playlists with a generous free public API.",
+  "description": "The Deezer API provides access to Deezer's full music catalog, including search, albums, artists, tracks, playlists, charts, and radio. It offers a generous free public API for developers to integrate music discovery and metadata into their applications.",
+  "base_url": "https://api.deezer.com",
+  "docs_url": "https://developers.deezer.com/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Many public endpoints require no authentication. OAuth 2.0 is used for user-specific data and actions (e.g., managing playlists, user library)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.deezer.com/search?q=eminem\"",
+    "response_snippet": "{ \"data\": [ { \"id\": 3135556, \"readable\": true, \"title\": \"Lose Yourself\", \"title_short\": \"Lose Yourself\", \"link\": \"https://www.deezer.com/track/3135556\", \"duration\": 326, \"rank\": 956777, \"explicit_lyrics\": true, \"preview\": \"https://cdns-preview-1.dzcdn.net/...\", \"artist\": { \"id\": 13, \"name\": \"Eminem\" }, \"album\": { \"id\": 103248, \"title\": \"8 Mile\" } } ], \"total\": 300, \"next\": \"https://api.deezer.com/search?q=eminem&index=25\" }"
+  },
+  "use_cases": [
+    "search tracks by title or artist name",
+    "fetch album metadata and track list",
+    "get artist discography and related artists",
+    "retrieve playlist contents by ID",
+    "get chart rankings for a country"
+  ],
+  "sources": [
+    "https://developers.deezer.com/api"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "ubidots",
+  "status": "operational",
+  "name": "Ubidots",
+  "category": "iot-devices",
+  "tagline": "IoT data visualization and analytics platform with REST for devices, variables, and dashboards.",
+  "description": "Ubidots is an IoT platform that lets developers connect devices, store time-series data, and build dashboards. Its REST API covers devices, variables, values, events, and more for remote monitoring and automation.",
+  "base_url": "https://industrial.api.ubidots.com/api/v2.0",
+  "docs_url": "https://ubidots.com/docs/api/",
+  "signup_url": "https://industrial.ubidots.com/accounts/signup/",
+  "auth": {
+    "type": "other",
+    "details": "API token via X-Auth-Token header (or token query param); create tokens in account settings after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "STEM (non-commercial only): 3 devices; 1 dashboard/10 widgets; 10 variables/device; 1 plugin/10,000 executions/month; 4,000 dots in/day; 500,000 dots out/day; 1 request/s; 1-month retention.",
+    "paid_plans": null
+  },
+  "rate_limits": "Commercial tokens: up to 4 requests/s/token and 10,000 bytes/request; device tokens are fixed at 4 requests/s, with plan-specific account throughput. STEM: 1 request/s/token and 4,000 dots/day.",
+  "example": {
+    "request": "curl -X GET 'https://industrial.api.ubidots.com/api/v2.0/devices/' -H 'X-Auth-Token: YOUR_API_KEY' -H 'Content-Type: application/json'",
+    "response_snippet": "{\"count\": 1, \"next\": null, \"previous\": null, \"results\": [{\"id\": \"...\", \"label\": \"weather-station\", \"name\": \"Weather Station\"}]}"
+  },
+  "use_cases": [
+    "list IoT devices in an account",
+    "read latest sensor variable values",
+    "send telemetry data points to a device",
+    "create or update device variables",
+    "query historical time-series data for a sensor"
+  ],
+  "sources": [
+    "https://ubidots.com/docs/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

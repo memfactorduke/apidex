@@ -1,0 +1,52 @@
+{
+  "id": "photon",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/komoot/photon#demo-server"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/komoot/photon"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://photon.komoot.io/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/komoot/photon#demo-server"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://photon.komoot.io/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Photon is an open-source geocoder started by Komoot, built for OpenStreetMap data and currently based on OpenSearch. It supports forward and reverse geocoding, search-as-you-type, a public demo at photon.komoot.io, and self-hosting.",
+      "source": "https://github.com/komoot/photon"
+    }
+  },
+  "notes": "The official 2026 documentation says Photon is based on OpenSearch, so the description's Elasticsearch claim is outdated. The demo has a qualitative fair-use policy: extensive usage may be throttled or banned, with self-hosting recommended for larger workloads. Official sources do not explicitly characterize access as a free pricing tier, document paid plans, or state the demo server's CORS configuration."
+}

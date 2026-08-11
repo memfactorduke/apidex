@@ -1,0 +1,98 @@
+{
+  "id": "nager-date",
+  "status": "operational",
+  "name": "Nager.Date",
+  "category": "events-holidays",
+  "tagline": "Free public holiday API for 100+ countries with no API key required",
+  "description": "Nager.Date is a public JSON REST API providing holiday data for 200+ countries. Its hosted Web API may be used for private or non-profit projects; commercial use requires active sponsorship.",
+  "base_url": "https://nagerholidays.com/api/v4",
+  "docs_url": "https://nagerholidays.com/scalar/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public API; endpoints are open over HTTPS with no API key or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Hosted Web API use is permitted for private or non-profit projects; commercial use requires active sponsorship. It may not be used to publish or operate a holiday portal.",
+    "paid_plans": null
+  },
+  "rate_limits": "No rate limits; unlimited queries.",
+  "example": {
+    "request": "curl -s \"https://nagerholidays.com/api/v4/Holidays/AT/2026\"",
+    "response_snippet": "[{\"date\":\"2026-01-01\",\"name\":\"New Year's Day\",\"countryCode\":\"AT\",\"nationalHoliday\":true,\"subdivisionCodes\":null,\"holidayTypes\":[\"Public\"]}]"
+  },
+  "use_cases": [
+    "list public holidays for a country and year",
+    "check if a date is a public holiday in a country",
+    "get available country codes for holiday data",
+    "find long weekends for a country and year",
+    "build a multi-country holiday calendar feed"
+  ],
+  "sources": [
+    "https://date.nager.at/Api",
+    "https://date.nager.at/",
+    "https://github.com/nager/Nager.Date"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

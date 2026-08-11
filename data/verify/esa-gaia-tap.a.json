@@ -1,0 +1,52 @@
+{
+  "id": "esa-gaia-tap",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gea.esac.esa.int/tap-server/tap"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.cosmos.esa.int/web/gaia-users/archive",
+      "source": "https://www.cosmos.esa.int/web/gaia-users/archive"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gea.esac.esa.int/archive-help/index.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gea.esac.esa.int/archive/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gea.esac.esa.int/archive-help/index.html"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gea.esac.esa.int/archive-help/index.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gea.esac.esa.int/archive-help/adql/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gea.esac.esa.int/archive/"
+    }
+  },
+  "notes": "docs_url returned 404 in automated checks; replaced with cosmos.esa.int Gaia users archive page. base_url and TAP sync example verified live."
+}

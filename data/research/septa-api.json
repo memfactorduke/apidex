@@ -1,0 +1,42 @@
+{
+  "id": "septa-api",
+  "status": "operational",
+  "name": "SEPTA API",
+  "category": "transportation",
+  "tagline": "Real-time and schedule data for Philadelphia regional transit",
+  "description": "Public API from the Southeastern Pennsylvania Transportation Authority providing real-time arrivals, schedules, trainviews, bus/trolley locations, and service alerts for SEPTA's regional rail, bus, trolley, and subway/elevated lines in the greater Philadelphia area.",
+  "base_url": "https://www3.septa.org/api",
+  "docs_url": "https://www3.septa.org/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public endpoints are openly accessible without API keys or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unlimited free public access; no published quotas",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://www3.septa.org/api/Arrivals/index.php?station=30th%20Street%20Station&results=5'",
+    "response_snippet": "{\n  \"30th Street Station\": [\n    {\n      \"Northbound\": [\n        {\n          \"direction\": \"N\",\n          \"path\": \"R2\",\n          \"train_id\": \"412\",\n          \"origin\": \"Airport Terminal E-F\",\n          \"destination\": \"Warminster\",\n          \"status\": \"On Time\",\n          \"sched_time\": \"2026-03-15 14:32:00.000\",\n          \"depart_time\": \"2026-03-15 14:32:00.000\",\n          \"track\": \"3\",\n          \"track_change\": null,\n          \"platform\": \"\"\n        }\n      ]\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "get next regional rail arrivals for a SEPTA station",
+    "track live bus or trolley vehicle locations on a route",
+    "look up train schedule between two regional rail stations",
+    "fetch current SEPTA service alerts and detours",
+    "get real-time train positions on the regional rail network"
+  ],
+  "sources": [
+    "https://www3.septa.org/api/",
+    "https://www3.septa.org/"
+  ],
+  "researcher_confidence": "medium"
+}

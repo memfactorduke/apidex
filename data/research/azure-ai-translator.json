@@ -1,0 +1,44 @@
+{
+  "id": "azure-ai-translator",
+  "status": "operational",
+  "name": "Azure AI Translator",
+  "category": "ai-ml",
+  "tagline": "Cloud translation for text and documents across 100+ languages",
+  "description": "Microsoft Azure AI Translator provides neural machine translation for text, documents, and custom models. It supports 100+ languages with features like language detection, transliteration, dictionary lookup, and custom translation via Custom Translator. Developers call regional or global endpoints with subscription keys or Microsoft Entra ID.",
+  "base_url": "https://api.cognitive.microsofttranslator.com",
+  "docs_url": "https://learn.microsoft.com/en-us/azure/ai-services/translator/",
+  "signup_url": "https://portal.azure.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Subscription key via Ocp-Apim-Subscription-Key header (or Authorization Bearer for Entra ID); region via Ocp-Apim-Subscription-Region for multi-service resources"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free (F0): 2 million characters/month",
+    "paid_plans": "Standard S1 pay-as-you-go by character volume; commitment tiers and custom models available"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=es\" -H \"Ocp-Apim-Subscription-Key: YOUR_API_KEY\" -H \"Ocp-Apim-Subscription-Region: YOUR_REGION\" -H \"Content-Type: application/json\" -d '[{\"Text\":\"Hello, world!\"}]'",
+    "response_snippet": "[{\"detectedLanguage\":{\"language\":\"en\",\"score\":1.0},\"translations\":[{\"text\":\"\u00a1Hola, mundo!\",\"to\":\"es\"}]}]"
+  },
+  "use_cases": [
+    "translate user-generated text between languages",
+    "detect language of incoming messages",
+    "batch-translate localization strings for an app",
+    "translate uploaded documents (PDF, DOCX)",
+    "transliterate text between scripts",
+    "look up dictionary translations for a word"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/ai-services/translator/",
+    "https://learn.microsoft.com/en-us/azure/ai-services/translator/reference/v3-0-reference",
+    "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/translator/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "fannie-mae",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.fanniemae.com is not a documented public API host; no confirmed public base URL found (likely partner/lender-only portals).",
+      "source": "https://www.fanniemae.com/singlefamily"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.fanniemae.com/singlefamily/api returns 404; use single-family technology/API partner pages such as https://www.fanniemae.com/singlefamily or Technology Integration Center materials if available.",
+      "source": "https://www.fanniemae.com/singlefamily"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fanniemae.com/singlefamily"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No public curl example; Bearer against https://api.fanniemae.com/ is not documented.",
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after live verification."
+}

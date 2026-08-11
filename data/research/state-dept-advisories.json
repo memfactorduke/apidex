@@ -1,0 +1,41 @@
+{
+  "id": "state-dept-advisories",
+  "status": "operational",
+  "name": "US State Department Travel Advisories",
+  "category": "travel-hospitality",
+  "tagline": "Official US government travel advisory levels and country risk guidance",
+  "description": "Official travel advisory data from the US Department of State, covering country-level risk levels (1\u20134), safety summaries, and related travel guidance for US citizens. Used by travel apps, risk platforms, and agents that need authoritative government advisory status rather than third-party risk scores.",
+  "base_url": "https://travel.state.gov",
+  "docs_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public HTML/JSON endpoints; no API key required for published advisory feeds"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "html"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public government data; no published request quotas",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html'",
+    "response_snippet": "Travel Advisories list with country names and Level 1\u20134 designations (HTML/JSON feed shape varies by endpoint)"
+  },
+  "use_cases": [
+    "get current US travel advisory level for a country",
+    "list all countries currently at Level 3 or Level 4",
+    "summarize official safety guidance before trip planning",
+    "monitor advisory changes for traveler alert workflows"
+  ],
+  "sources": [
+    "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "screenshotapi-net",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "7-day free trial with 100 screenshots; no credit card required.",
+  "rate_limits": "20 RPM on Essential, 40 RPM on Startup, and 80 RPM on Business. The error docs list screenshots_limit_reached as HTTP 429 for RPM excess and HTTP 403 for usage-quota exhaustion.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Corrected. Current pricing specifies a 7-day trial with 100 screenshots; the homepage says no card is required. https://www.screenshotapi.net/pricing and https://www.screenshotapi.net/ rate_limits: Corrected the error name and distinguished both documented cases. Pricing confirms 20/40/80 RPM; error docs assign screenshots_limit_reached to both 429 RPM excess and 403 quota exhaustion. https://www.screenshotapi.net/pricing and https://www.screenshotapi.net/docs/errors"
+}

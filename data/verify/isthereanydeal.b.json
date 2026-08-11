@@ -1,0 +1,52 @@
+{
+  "id": "isthereanydeal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.isthereanydeal.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.isthereanydeal.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.isthereanydeal.com/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Default verified-email account limit: 1,000 requests per 5-minute window; account-specific limits are shown on the app setup page.",
+      "source": "https://docs.isthereanydeal.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: 1,000 requests per 5-minute window by default for verified-email accounts; throttled requests return HTTP 429 with Retry-After.",
+      "source": "https://docs.isthereanydeal.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"https://api.isthereanydeal.com/games/overview/v2?country=US\" -H \"ITAD-API-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '[\"GAME_UUID\"]'",
+      "source": "https://docs.isthereanydeal.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.isthereanydeal.com/"
+    }
+  },
+  "notes": "The API and official v2.10.0 documentation are current. The supplied example uses an obsolete v01 GET route and legacy plains/region parameters; the documented overview endpoint is POST /games/overview/v2 with UUIDs in a JSON body. Official sources do not explicitly state API pricing or CORS policy."
+}

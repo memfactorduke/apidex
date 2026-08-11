@@ -1,0 +1,52 @@
+{
+  "id": "sec-edgar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/about/privacy-information"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "not supported",
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The documented data.sec.gov REST APIs expose JSON company submission histories and extracted XBRL data. SEC full-text search is a separate web search service, and the documented APIs do not provide general market data.",
+      "source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    }
+  },
+  "notes": "The documentation URL is current and reachable through SEC's official site; the automated 403 is consistent with SEC bot controls, not a bad URL. SEC requires declared automated clients and limits users to 10 requests per second. The entry fails because CORS is explicitly unsupported and the description overstates the documented API scope."
+}

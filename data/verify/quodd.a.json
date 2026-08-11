@@ -1,0 +1,52 @@
+{
+  "id": "quodd",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quodd.com/qx-query-developer-guide"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.quodd.com/",
+      "source": "https://developer.quodd.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "bearer",
+      "source": "https://developer.quodd.com/docs/snap-grpc-api/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true (time-limited free trial)",
+      "source": "https://www.quodd.com/faqs/does-quodd-offer-a-free-market-data-api-trial"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "7-day license with 250 API calls",
+      "source": "https://www.quodd.com/faqs/does-quodd-offer-a-free-market-data-api-trial"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Unlimited API usage with no per-call charges for QUODD web services; technical concurrency or throughput limits are not specified publicly.",
+      "source": "https://marketdata.quodd.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -sS \"https://api.quodd.com/universal/jobs\" -H \"Authorization: Bearer $TOKEN\" -H \"Accept: application/json\"",
+      "source": "https://www.quodd.com/qx-query-developer-guide"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "QUODD provides publicly accessible REST and gRPC developer documentation for credentialed market-data APIs, including equities and options services.",
+      "source": "https://developer.quodd.com/"
+    }
+  },
+  "notes": "Official documentation is live in 2026 and confirms api.quodd.com, documented Bearer-token authentication, REST and gRPC services, and public examples. The entry is materially outdated about documentation, authentication, trial availability, usage limits, and the sample request."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "gumroad",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gumroad.com/help/article/280-create-application-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gumroad.com/api"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2 \u2014 OAuth 2.0 access tokens, with manually generated access tokens available for the seller's own account",
+      "source": "https://gumroad.com/help/article/280-create-application-api"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://gumroad.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No monthly charge; Gumroad charges 10% + $0.50 per direct/profile sale and 30% per Discover marketplace sale",
+      "source": "https://gumroad.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported \u2014 Gumroad states that API requests to api.gumroad.com can be made from a browser",
+      "source": "https://gumroad.com/help/article/76-license-keys.html"
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gumroad.com/api"
+    }
+  },
+  "notes": "The API remains documented and its v2 host is used in current official examples. Authentication is OAuth-based access-token authentication, not a conventional API key scheme. Gumroad publishes transaction pricing rather than free-tier limits. No official rate-limit statement was found, and the exact /v2/user example could not be confirmed from an inspectable official endpoint reference."
+}

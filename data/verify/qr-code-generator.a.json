@@ -1,0 +1,52 @@
+{
+  "id": "qr-code-generator",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The policy is published: there is no request limit, but requests may be rejected, especially when considered abusive or inappropriate. Services regularly making more than 10,000 requests per day should notify the operator.",
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The documented create endpoint supports PNG, GIF, JPEG/JPG, SVG, and EPS. The phrase \"or other formats\" is unsupported by the endpoint documentation.",
+      "source": "https://goqr.me/api/doc/create-qr-code/"
+    }
+  },
+  "notes": "The official documentation is live, and its linked sample image endpoint fetched successfully. CORS is not documented and could not be established from accessible response headers. JSON is documented for the separate read-qr-code endpoint, not as an output format of create-qr-code."
+}

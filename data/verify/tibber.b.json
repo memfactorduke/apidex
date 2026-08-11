@@ -1,0 +1,52 @@
+{
+  "id": "tibber",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tibber.com/docs/guides/calling-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tibber.com/docs/overview"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2; requests use a Bearer access token, obtained either as a personal access token for the user's own data or through an OAuth client for third-party apps",
+      "source": "https://developer.tibber.com/docs/guides/calling-api"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No numeric HTTP request quota is stated, but Tibber publishes a maximum of two open WebSockets and requires backoff; it also recommends querying today/tomorrow prices only once daily.",
+      "source": "https://developer.tibber.com/docs/guides/calling-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST https://api.tibber.com/v1-beta/gql -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -H \"User-Agent: MyApp/1.0.0\" -d '{\"query\":\"{ viewer { name homes { id address { address1 city } } } }\"}'",
+      "source": "https://developer.tibber.com/docs/guides/calling-api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The GraphQL API exposes prices, consumption, production, home metadata, and Pulse/Watty live measurements. Its current schema does not expose operations for controlling EV chargers or smart plugs; Tibber's separate Data API handles device identity, state, and history.",
+      "source": "https://developer.tibber.com/docs/reference"
+    }
+  },
+  "notes": "The API remains documented and operational, but the entry conflates Tibber's older GraphQL API with its separate device-focused Data API. It also misclassifies Bearer access-token authentication, invents device-control capability, omits a required User-Agent header, and overlooks published WebSocket/backoff limits. Official sources do not establish a standalone free pricing tier."
+}

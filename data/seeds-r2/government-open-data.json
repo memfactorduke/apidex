@@ -1,0 +1,205 @@
+{
+  "category": "government-open-data",
+  "apis": [
+    {
+      "name": "Census Bureau API",
+      "slug": "us-census",
+      "base_domain": "api.census.gov",
+      "docs_url": "https://www.census.gov/data/developers/data-sets.html",
+      "why_notable": "Primary US demographic, economic, and ACS data API; free key; core for population and socioeconomic analysis.",
+      "free_tier": true
+    },
+    {
+      "name": "data.gov Catalog API",
+      "slug": "data-gov",
+      "base_domain": "catalog.data.gov",
+      "docs_url": "https://catalog.data.gov/api/1",
+      "why_notable": "US federal open-data catalog (CKAN); discovery layer for thousands of government datasets.",
+      "free_tier": true
+    },
+    {
+      "name": "Federal Register API",
+      "slug": "federal-register",
+      "base_domain": "www.federalregister.gov",
+      "docs_url": "https://www.federalregister.gov/developers/documentation/api/v1",
+      "why_notable": "Official US Federal Register documents, rules, and notices as structured JSON.",
+      "free_tier": true
+    },
+    {
+      "name": "GovInfo API",
+      "slug": "govinfo",
+      "base_domain": "api.govinfo.gov",
+      "docs_url": "https://api.govinfo.gov/docs/",
+      "why_notable": "GPO access to bills, statutes, CFR, Congressional Record, and official publications.",
+      "free_tier": true
+    },
+    {
+      "name": "FBI Crime Data Explorer API",
+      "slug": "fbi-crime-data",
+      "base_domain": "api.usa.gov",
+      "docs_url": "https://crime-data-explorer.fr.cloud.gov/pages/docApi",
+      "why_notable": "US crime statistics (UCR/NIBRS) from FBI Crime Data Explorer for research and apps.",
+      "free_tier": true
+    },
+    {
+      "name": "USGS Earthquake Hazards API",
+      "slug": "usgs-earthquakes",
+      "base_domain": "earthquake.usgs.gov",
+      "docs_url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+      "why_notable": "Real-time and historical earthquake feeds (FDSN Event Web Service); no key required.",
+      "free_tier": true
+    },
+    {
+      "name": "NWS API",
+      "slug": "nws-weather",
+      "base_domain": "api.weather.gov",
+      "docs_url": "https://www.weather.gov/documentation/services-web-api",
+      "why_notable": "National Weather Service forecasts, alerts, and observations; free with User-Agent.",
+      "free_tier": true
+    },
+    {
+      "name": "NASA Open APIs",
+      "slug": "nasa-open-apis",
+      "base_domain": "api.nasa.gov",
+      "docs_url": "https://api.nasa.gov/",
+      "why_notable": "Government space/Earth science APIs (imagery, NEOs, Mars, etc.); free demo key.",
+      "free_tier": true
+    },
+    {
+      "name": "World Bank Open Data API",
+      "slug": "world-bank",
+      "base_domain": "api.worldbank.org",
+      "docs_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation",
+      "why_notable": "Country development indicators and statistics used worldwide for research and apps.",
+      "free_tier": true
+    },
+    {
+      "name": "Eurostat API",
+      "slug": "eurostat",
+      "base_domain": "ec.europa.eu",
+      "docs_url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started/api-catalogue",
+      "why_notable": "EU official statistics (JSON-stat/SDMX); core source for European socioeconomic data.",
+      "free_tier": true
+    },
+    {
+      "name": "ONS API",
+      "slug": "ons-uk",
+      "base_domain": "api.ons.gov.uk",
+      "docs_url": "https://developer.ons.gov.uk/",
+      "why_notable": "UK Office for National Statistics datasets: economy, population, labour market.",
+      "free_tier": true
+    },
+    {
+      "name": "INSEE API",
+      "slug": "insee-fr",
+      "base_domain": "api.insee.fr",
+      "docs_url": "https://api.insee.fr/catalogue/",
+      "why_notable": "French national statistics and business register (SIRENE); free self-serve keys.",
+      "free_tier": true
+    },
+    {
+      "name": "Destatis GENESIS API",
+      "slug": "destatis-genesis",
+      "base_domain": "www-genesis.destatis.de",
+      "docs_url": "https://www-genesis.destatis.de/genesis/online?Menu=Ergebnistabelle&language=en",
+      "why_notable": "German Federal Statistical Office GENESIS web service for official statistics.",
+      "free_tier": true
+    },
+    {
+      "name": "data.gov.au CKAN API",
+      "slug": "data-gov-au",
+      "base_domain": "data.gov.au",
+      "docs_url": "https://data.gov.au/data/api/1/util/snippet/api_info.html?resource_id=",
+      "why_notable": "Australian federal open-data portal CKAN API for dataset discovery and resources.",
+      "free_tier": true
+    },
+    {
+      "name": "data.gov.sg API",
+      "slug": "data-gov-sg",
+      "base_domain": "api.data.gov.sg",
+      "docs_url": "https://data.gov.sg/developer",
+      "why_notable": "Singapore government open data: transport, environment, economy; developer-friendly.",
+      "free_tier": true
+    },
+    {
+      "name": "SF Open Data API",
+      "slug": "sf-open-data",
+      "base_domain": "data.sfgov.org",
+      "docs_url": "https://dev.socrata.com/foundry/data.sfgov.org/",
+      "why_notable": "San Francisco Socrata open data; widely used city portal for civic apps.",
+      "free_tier": true
+    },
+    {
+      "name": "LA Open Data API",
+      "slug": "la-open-data",
+      "base_domain": "data.lacity.org",
+      "docs_url": "https://dev.socrata.com/foundry/data.lacity.org/",
+      "why_notable": "City of Los Angeles open data (Socrata); crime, permits, budget, services.",
+      "free_tier": true
+    },
+    {
+      "name": "Seattle Open Data API",
+      "slug": "seattle-open-data",
+      "base_domain": "data.seattle.gov",
+      "docs_url": "https://dev.socrata.com/foundry/data.seattle.gov/",
+      "why_notable": "Seattle city open data portal via Socrata SODA API.",
+      "free_tier": true
+    },
+    {
+      "name": "data.police.uk API",
+      "slug": "uk-police-data",
+      "base_domain": "data.police.uk",
+      "docs_url": "https://data.police.uk/docs/",
+      "why_notable": "UK street-level crime, outcomes, and neighbourhood policing data; free, no key.",
+      "free_tier": true
+    },
+    {
+      "name": "legislation.gov.uk API",
+      "slug": "uk-legislation",
+      "base_domain": "www.legislation.gov.uk",
+      "docs_url": "https://www.legislation.gov.uk/developer",
+      "why_notable": "UK primary and secondary legislation as structured data (Akoma Ntoso/XML).",
+      "free_tier": true
+    },
+    {
+      "name": "OpenSecrets CRP API",
+      "slug": "opensecrets",
+      "base_domain": "www.opensecrets.org",
+      "docs_url": "https://www.opensecrets.org/api/",
+      "why_notable": "US campaign finance and lobbying data (Center for Responsive Politics); free key.",
+      "free_tier": true
+    },
+    {
+      "name": "ProPublica Congress API",
+      "slug": "propublica-congress",
+      "base_domain": "api.propublica.org",
+      "docs_url": "https://projects.propublica.org/api-docs/congress-api/",
+      "why_notable": "Legislative votes, members, bills; popular third-party Congress data layer.",
+      "free_tier": true
+    },
+    {
+      "name": "UN Comtrade API",
+      "slug": "un-comtrade",
+      "base_domain": "comtradeapi.un.org",
+      "docs_url": "https://uncomtrade.org/docs/api-access/",
+      "why_notable": "UN international trade statistics; free tier with registration for global trade data.",
+      "free_tier": true
+    },
+    {
+      "name": "IMF Data API",
+      "slug": "imf-data",
+      "base_domain": "www.imf.org",
+      "docs_url": "https://data.imf.org/en/Resource-Pages/IMF-API",
+      "why_notable": "IMF macroeconomic and financial statistics (IFS, WEO, etc.) via SDMX/API.",
+      "free_tier": true
+    },
+    {
+      "name": "OECD Data API",
+      "slug": "oecd-data",
+      "base_domain": "sdmx.oecd.org",
+      "docs_url": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+      "why_notable": "OECD country statistics and indicators via SDMX REST API; free access.",
+      "free_tier": true
+    }
+  ]
+}

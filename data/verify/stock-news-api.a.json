@@ -1,0 +1,52 @@
+{
+  "id": "stock-news-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stocknewsapi.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stocknewsapi.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stocknewsapi.com/termsandconditions"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 there is no ongoing free plan, only a 5-day free trial with 100 calls",
+      "source": "https://stocknewsapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "5-day free trial with 100 API calls and access to all features; paid subscription follows unless canceled",
+      "source": "https://stocknewsapi.com/termsandconditions"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Basic: 20,000 calls/month; Premium: 50,000 calls/month; Business: custom monthly allowance. The Tickers DB endpoint is limited to once per day for non-trial accounts.",
+      "source": "https://stocknewsapi.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stocknewsapi.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Stock News API provides structured stock-market and company-ticker news with ticker, topic, sentiment, and date filtering. Its official FAQ directs crypto news users to the separate Crypto News API.",
+      "source": "https://stocknewsapi.com/faq"
+    }
+  },
+  "notes": "Official pages are live and current in 2026. The endpoint, documentation URL, token authentication, and sample GET request are supported. The entry incorrectly presents a temporary trial as a free tier, overlooks published monthly call limits, and conflates this stock product with the separate Crypto News API. No authoritative CORS policy was found."
+}

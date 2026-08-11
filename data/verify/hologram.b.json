@@ -1,0 +1,52 @@
+{
+  "id": "hologram",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.hologram.io/api/v1"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.hologram.io/api/v1",
+      "source": "https://docs.hologram.io/release-notes/release-notes-2025"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.hologram.io/api/v1"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true \u2014 limited free Test Mode exists, although it is not an ongoing free production plan",
+      "source": "https://docs.hologram.io/guides/sims/test-mode"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 KB of data and up to 10 device-originated SMS messages within 90 days; reaching any limit automatically activates the paid plan",
+      "source": "https://docs.hologram.io/guides/sims/test-mode"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limiting is enforced on all API requests; exceeding it returns HTTP 429, and clients should wait 5\u201310 seconds before retrying. No numeric request quota is stated.",
+      "source": "https://docs.hologram.io/api/v1"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.hologram.io/api/1/devices/get"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.hologram.io/guides/rest-api/beginners-guide-to-the-hologram-rest-api"
+    }
+  },
+  "notes": "The API remains active and retains its v1 base URL. The submitted documentation URL leads to the legacy Apiary site; Hologram announced its replacement in October 2025. Current detailed documentation gives 90-day Test Mode limits, while a marketing page says testing may last up to 12 months, possibly reflecting contracted configurations."
+}

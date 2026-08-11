@@ -1,0 +1,52 @@
+{
+  "id": "la-open-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.socrata.com/hc/en-us/articles/202949298-Where-do-I-find-the-SODA-API-Endpoint"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/foundry/data.lacity.org/2nrs-mtv8"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.socrata.com/hc/en-us/articles/34730618169623-Introducing-the-new-SODA3-API"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Anonymous SODA 2.x requests share an IP-based pool and may be throttled. App-token requests are currently not throttled unless considered abusive or malicious; there is no higher numerical published quota.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported for read-only access to public datasets",
+      "source": "https://dev.socrata.com/docs/cors-and-jsonp"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"X-App-Token: YOUR_APP_TOKEN\" 'https://data.lacity.org/resource/2nrs-mtv8.json?$limit=5'",
+      "source": "https://support.socrata.com/hc/en-us/articles/202949268-How-to-query-more-than-1000-rows-of-a-dataset"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The legacy SODA 2.1 endpoint remains supported and permits anonymous public reads with an optional app token. The default SODA 3 query API generally requires identification through an app token or user authentication.",
+      "source": "https://support.socrata.com/hc/en-us/articles/34730618169623-Introducing-the-new-SODA3-API"
+    }
+  },
+  "notes": "The entry mixes fully supported legacy SODA 2.1 behavior with the current SODA 3 default. Its curl also uses double quotes around $limit, causing ordinary shells to expand the parameter name. Dataset 2nrs-mtv8 remains available but is now historical and no longer updated."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "anyscale-endpoints",
+  "base_url": "unknown",
+  "docs_url": "https://docs.anyscale.com/llm/serving",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl \"https://YOUR_SERVICE_URL/v1/chat/completions\" -H \"Authorization: Bearer YOUR_SERVICE_TOKEN\" -H \"Content-Type: application/json\" -d '{\"model\":\"my-llama\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}],\"max_tokens\":64}'",
+  "example_response_snippet": "{\"id\":\"chatcmpl-...\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help you?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":5,\"completion_tokens\":7,\"total_tokens\":12}}",
+  "description": "The legacy Anyscale Endpoints hosted-model API is no longer operational. Anyscale now supports OpenAI-compatible inference through Anyscale Services: customers deploy and operate their own Ray Serve and vLLM applications on Anyscale-managed infrastructure, receiving a deployment-specific service URL rather than using a shared public inference base URL.",
+  "status": "defunct",
+  "resolution_notes": "base_url: incorrect; current services receive deployment-specific URLs: https://docs.anyscale.com/services/query. docs_url: incorrect; current guide: https://docs.anyscale.com/llm/serving. example: incorrect; use a deployed service URL and bearer token: https://docs.anyscale.com/services/query. description: incorrect; current offering is customer-deployed Ray Serve/vLLM services: https://docs.anyscale.com/llm/serving. The legacy API and original docs return 404, so this directory entry is defunct."
+}

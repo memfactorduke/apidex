@@ -1,0 +1,52 @@
+{
+  "id": "canvas-lms",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/file.oauth.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.instructure.com/canvas"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/file.throttling.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/courses.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://canvas.instructure.com/doc/api/"
+    }
+  },
+  "notes": "docs-first verification against official Canvas API docs; base_url is a template not a fixed host (HTTP 0 expected); auth OAuth2/tokens, per-instance throttling headers, institutional licensing all confirmed."
+}

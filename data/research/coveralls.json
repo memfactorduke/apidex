@@ -1,0 +1,40 @@
+{
+  "id": "coveralls",
+  "status": "operational",
+  "name": "Coveralls API",
+  "category": "dev-tools",
+  "tagline": "REST API for coverage jobs, repos, and badge data from Coveralls",
+  "description": "Coveralls is a coverage reporting service used with CI. Its REST API exposes jobs, repositories, and badge-related data so tools can submit coverage, inspect build status, and pull repo metrics. Auth is typically token-based for CI integrations and account access.",
+  "base_url": "https://coveralls.io/api",
+  "docs_url": "https://docs.coveralls.io/api-introduction",
+  "signup_url": "https://coveralls.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Repo/token or account API token via Authorization header or form params; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: token YOUR_API_KEY\" https://coveralls.io/api/v1/repos",
+    "response_snippet": "{\"repos\":[{\"name\":\"org/repo\",\"covered_percent\":85.2}]}"
+  },
+  "use_cases": [
+    "submit coverage report from CI",
+    "get repo coverage percentage",
+    "list recent coverage jobs",
+    "fetch coverage badge data"
+  ],
+  "sources": [
+    "https://docs.coveralls.io/api-introduction"
+  ],
+  "researcher_confidence": "low"
+}

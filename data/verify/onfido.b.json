@@ -1,0 +1,52 @@
+{
+  "id": "onfido",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Use the regional v3.6 endpoint: https://api.eu.onfido.com/v3.6 for EU, https://api.us.onfido.com/v3.6 for US, or https://api.ca.onfido.com/v3.6 for Canada.",
+      "source": "https://documentation.identity.entrust.com/api/latest/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.onfido.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.identity.entrust.com/api/latest/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "Free, uncharged sandbox testing is available; production verifications require billing information.",
+      "source": "https://documentation.identity.entrust.com/getting-started/quick-start-guide/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The free sandbox returns templated results, must not receive real personal data, and is limited to 120 requests per minute.",
+      "source": "https://documentation.identity.entrust.com/api/latest/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Normally 400 requests per minute for live use, up to 7 requests per second with a burst of 14; sandbox is 120 per minute, up to 2 per second with a burst of 4.",
+      "source": "https://documentation.identity.entrust.com/api/latest/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use GET https://api.eu.onfido.com/v3.6/applicants/ with the documented Authorization header, substituting the appropriate regional host.",
+      "source": "https://documentation.identity.entrust.com/api/latest/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.entrust.com/products/identity-verification"
+    }
+  },
+  "notes": "Onfido is now part of Entrust, but the API remains operational as v3.6. The material errors are the obsolete generic EU hostname, the claim that limits are unpublished, and the denial of free sandbox access. Current public materials do not establish browser CORS behavior."
+}

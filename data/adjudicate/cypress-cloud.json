@@ -1,0 +1,15 @@
+{
+  "id": "cypress-cloud",
+  "base_url": "https://cloud.cypress.io/enterprise-reporting/report",
+  "docs_url": "https://docs.cypress.io/cloud/integrations/data-extract-api",
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": "Starter: 500 test results/month, 50 users, and 30-day retention. The Data Extract API itself requires an Enterprise plan.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS -G \"https://cloud.cypress.io/enterprise-reporting/report\" --data-urlencode \"token=YOUR_API_KEY\" --data-urlencode \"report_id=project-list\" --data-urlencode \"export_format=json\" --data-urlencode \"start_date=2026-08-01\"",
+  "example_response_snippet": "[{\"project_name\":\"My Cypress Project\",\"id\":\"a7bq2k\"}]",
+  "description": "Enterprise-only HTTP Data Extract API for exporting Cypress Cloud Enterprise Reporting data, including projects, runs, test results, failures, replay links, UI coverage, and accessibility metrics, in JSON, CSV, or XLSX. It is not a general REST API at api.cypress.io; read-oriented run debugging on other plans is provided through the cy-cloud CLI.",
+  "status": null,
+  "resolution_notes": "base_url: changed to the documented Data Extract endpoint; docs_url: replaced the 404; auth_type: API key passed as token; example: documented project-list JSON query; description: narrowed to the Enterprise Data Extract API. Evidence for all five: https://docs.cypress.io/cloud/integrations/data-extract-api. free_tier_limits: Starter has 500 results/month, 50 users, and 30-day retention, while Data Extract requires Enterprise. Evidence: https://www.cypress.io/pricing"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "memfault",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.memfault.com/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.memfault.com/api",
+      "source": "https://docs.memfault.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.memfault.com/docs/ci/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://memfault.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Developer plan is free for eligible teams building on Nordic low-power wireless solutions, covering up to 10 development devices; usage beyond 10 development or production devices is pay-as-you-go.",
+      "source": "https://memfault.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published and vary by operation; heartbeat ingestion and Latest Release calls are each limited to 100 per device per 24 hours, while session limits depend on the plan and other payload-specific limits apply.",
+      "source": "https://docs.memfault.com/docs/platform/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer $ORGANIZATION_AUTH_TOKEN\" https://api.memfault.com/api/v0/organizations/<ORG_SLUG>/projects",
+      "source": "https://docs.memfault.com/docs/ci/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.memfault.com/api"
+    }
+  },
+  "notes": "The API remains active in current official documentation. A 404 at the bare API host is expected because it is a base host, not a documented resource. The submitted documentation URL is obsolete; the current REST API reference is /api. No platform shutdown notice was found."
+}

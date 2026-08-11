@@ -1,0 +1,52 @@
+{
+  "id": "eppo-global-database",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.eppo.int/api/rest/1.0",
+      "source": "https://data.eppo.int/documentation"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.eppo.int/documentation",
+      "source": "https://data.eppo.int/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.eppo.int/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.eppo.int/documentation"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.eppo.int/documentation"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.eppo.int/documentation"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"x-auth-token: YOUR_API_KEY\" \"https://data.eppo.int/api/rest/1.0/taxon/search?kw=Xylella\"",
+      "source": "https://data.eppo.int/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.eppo.int/documentation"
+    }
+  },
+  "notes": "Automated 404s match wrong paths. Official API base is /api/rest/1.0 with x-auth-token header, not Bearer or /api/v1. Free keys exist; limits/rate not published on docs."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "chromatic",
+  "status": "operational",
+  "name": "Chromatic GraphQL API",
+  "category": "dev-tools",
+  "tagline": "GraphQL API for visual regression builds, tests, and review state in Storybook CI.",
+  "description": "Chromatic is a visual testing and review platform for UI components, typically paired with Storybook. Its GraphQL API lets developers and agents query builds, tests, and review status for component CI workflows.",
+  "base_url": "https://www.chromatic.com/graphql",
+  "docs_url": "https://www.chromatic.com/docs/graphql-api",
+  "signup_url": "https://www.chromatic.com/start",
+  "auth": {
+    "type": "apiKey",
+    "details": "Project token or personal access token (verify exact header/body method from official docs)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://www.chromatic.com/graphql -H 'Content-Type: application/json' -H 'Authorization: Bearer YOUR_API_KEY' -d '{\"query\":\"{ __typename }\"}'",
+    "response_snippet": "{\"data\":{\"__typename\":\"Query\"}}"
+  },
+  "use_cases": [
+    "list recent Chromatic builds for a project",
+    "get visual test results for a build",
+    "check review/approval state of a component set",
+    "query build status in a CI pipeline"
+  ],
+  "sources": [
+    "https://www.chromatic.com/docs/graphql-api"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "dns0-eu",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.dns0.eu",
+      "source": "https://www.dns0.eu/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.dns0.eu/",
+      "source": "https://www.dns0.eu/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use DoH endpoints such as https://dns0.eu/dns-query or check official docs \u2014 curl to https://api.dns0.eu/ is not documented as a public API root",
+      "source": "https://www.dns0.eu/"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Automated curl returned HTTP 0 for both base and docs URLs. Verification incomplete pending live fetch of official site; preliminary suspicion of invented api.dns0.eu path."
+}

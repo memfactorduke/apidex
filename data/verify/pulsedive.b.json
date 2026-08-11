@@ -1,0 +1,52 @@
+{
+  "id": "pulsedive",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pulsedive.com/api/quickstart"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pulsedive.com/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pulsedive.com/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pulsedive.com/about/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free registered accounts: 1 request/second, 50 requests/day, 500 requests/month, 10 Analyze scans/day, 100 Analyze scans/month, and 50 Explore results.",
+      "source": "https://pulsedive.com/about/api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published and plan-based. The API also returns remaining-request headers and HTTP 429 when hard limits are exceeded.",
+      "source": "https://docs.pulsedive.com/api/limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://pulsedive.com/api/indicator.php?indicator=pulsedive.com\"",
+      "source": "https://docs.pulsedive.com/api/indicator/get-by-value"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The API and documentation are active in 2026. The submitted docs URL currently redirects to the official docs site. API-key authentication is supported but optional; anonymous requests have stricter limits. The entry fails because published free-tier and rate-limit details were labeled unknown or unpublished, and its example is only a placeholder."
+}

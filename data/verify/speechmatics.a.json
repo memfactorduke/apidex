@@ -1,0 +1,52 @@
+{
+  "id": "speechmatics",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Batch API endpoints are region-specific: https://eu1.asr.api.speechmatics.com/v2, https://us1.asr.api.speechmatics.com/v2, or https://au1.asr.api.speechmatics.com/v2.",
+      "source": "https://docs.speechmatics.com/get-started/authentication"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.speechmatics.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.speechmatics.com/get-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.speechmatics.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "New accounts receive $100 in credit with no card required. Service pauses when the credit is exhausted unless a payment card is added.",
+      "source": "https://www.speechmatics.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits include 1 batch job/second and 2 concurrent realtime sessions on Free; 10 batch jobs/second and 50 realtime sessions on Pro. Batch guidance also limits status checks to 50/second and applies a 20,000-concurrent-job backstop.",
+      "source": "https://docs.speechmatics.com/speech-to-text/batch/limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"https://eu1.asr.api.speechmatics.com/v2/jobs\" -H \"Authorization: Bearer YOUR_API_KEY\" -F 'config={\"type\":\"transcription\",\"transcription_config\":{\"language\":\"en\"}}' -F data_file=@audio.wav",
+      "source": "https://docs.speechmatics.com/get-started/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.speechmatics.com/"
+    }
+  },
+  "notes": "The service and documentation are operational. The major defects are the obsolete unprefixed Batch host, vague/outdated free-tier wording, and the false claim that rate limits are unpublished. Current pricing was updated July 31, 2026."
+}

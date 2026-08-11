@@ -1,0 +1,52 @@
+{
+  "id": "vercel",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vercel.com/docs/rest-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vercel.com/docs/rest-api"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Bearer access token",
+      "source": "https://vercel.com/docs/rest-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vercel.com/docs/plans/hobby"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The free Hobby plan has published resource-specific limits, including 200 projects, 100 deployments per day, one concurrent build, and usage caps for compute, bandwidth, and other services.",
+      "source": "https://vercel.com/docs/limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published and vary by operation and scope; API responses expose X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset headers.",
+      "source": "https://vercel.com/docs/limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Vercel directs integrations to call the REST API only from server-side code to avoid CORS issues and prevent token exposure.",
+      "source": "https://vercel.com/docs/integrations/create-integration/vercel-api-integrations"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vercel.com/docs/sign-in-with-vercel/tokens"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://vercel.com/docs/rest-api"
+    }
+  },
+  "notes": "The API is operational and GET /v2/user remains documented. The entry incorrectly treats bearer access-token authentication as apiKey, says published free-plan limits are unknown, and says rate limits are unpublished. Official guidance also resolves browser CORS usage as server-side-only."
+}

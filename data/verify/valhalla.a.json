@@ -1,0 +1,52 @@
+{
+  "id": "valhalla",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/valhalla/valhalla/master/docs/docs/api/openapi.yaml"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valhalla.github.io/valhalla/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/valhalla/valhalla/master/docs/docs/api/openapi.yaml"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The public demo is documented as limited to 1 call per user per second and 100 calls per second total; fair-use also applies.",
+      "source": "https://github.com/valhalla/valhalla/discussions/3373"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/valhalla/valhalla/master/docs/docs/api/openapi.yaml"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valhalla.github.io/valhalla/api/"
+    }
+  },
+  "notes": "The current official OpenAPI specification supports the host, unauthenticated POST /route JSON request, and service description. The project calls the server public and fair-use, but does not explicitly document a free pricing tier or substantiate the full no-paid-product claim. CORS is undocumented."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "checkly",
+  "status": "operational",
+  "name": "Checkly API",
+  "category": "dev-tools",
+  "tagline": "Synthetic monitoring API for API and browser checks as code",
+  "description": "REST API for Checkly synthetic monitoring: create and manage API/browser checks, groups, alert channels, and dashboards. Dev-centric alternative to legacy APM with monitoring-as-code workflows.",
+  "base_url": "https://api.checklyhq.com",
+  "docs_url": "https://www.checklyhq.com/docs/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication (details pending verification from official docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://api.checklyhq.com/v1/checks",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list synthetic monitoring checks",
+    "create API uptime checks programmatically"
+  ],
+  "sources": [
+    "https://www.checklyhq.com/docs/api/"
+  ],
+  "researcher_confidence": "low"
+}

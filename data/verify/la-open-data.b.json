@@ -1,0 +1,52 @@
+{
+  "id": "la-open-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.socrata.com/hc/en-us/articles/202949298-Where-do-I-find-the-SODA-API-Endpoint"
+    },
+    "docs_url": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "appToken (optional identification for public SODA 2.1 reads); Socrata API keys are separate key-and-secret authentication credentials",
+      "source": "https://support.socrata.com/hc/en-us/articles/210138558-Generating-App-Tokens-and-API-Keys"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.socrata.com/hc/en-us/articles/34730618169623-Introducing-the-new-SODA3-API"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Anonymous SODA 2.1 requests use a shared IP-based pool and may be throttled at an unspecified threshold. App-token requests are currently not throttled unless abusive or malicious; there is no published numeric higher quota.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes; Socrata supports CORS for read-only access to public datasets",
+      "source": "https://dev.socrata.com/docs/cors-and-jsonp.html"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"X-App-Token: YOUR_APP_TOKEN\" \"https://data.lacity.org/resource/2nrs-mtv8.json?$limit=5\"",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "City of Los Angeles datasets are available through Socrata SODA. The listed /resource endpoint is the fully supported SODA 2.1 API, where public reads may be anonymous and an optional app token provides a separate request pool. SODA3 is now the platform default and generally requires an app token or authenticated identity for queries.",
+      "source": "https://support.socrata.com/hc/en-us/articles/34730618169623-Introducing-the-new-SODA3-API"
+    }
+  },
+  "notes": "The legacy SODA 2.1 endpoint is live and remains officially supported, although SODA3 is now the default. The example dataset is historical: LAPD stopped updating it after moving to NIBRS datasets. The clearest errors are conflating app tokens with API keys, claiming published higher limits, and leaving CORS unknown."
+}

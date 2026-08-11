@@ -1,0 +1,52 @@
+{
+  "id": "zerion",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zerion.io/endpoints-and-schema"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zerion.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zerion.io/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://zerion.io/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "2,000 requests per day and 3 requests per second.",
+      "source": "https://zerion.io/api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are plan-based and published. Current listed limits are 3 RPS for Developer, 10 RPS for Builder, 25 RPS for Startup, 50 RPS for Growth, and 1,000+ RPS for Enterprise; request quotas also vary by plan.",
+      "source": "https://zerion.io/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl --request GET --url https://api.zerion.io/v1/wallets/{address}/positions/ --header 'Authorization: Basic <base64-encoded-API-key-and-colon>'",
+      "source": "https://developers.zerion.io/api-reference/wallets/get-wallet-fungible-positions"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.zerion.io/endpoints-and-schema"
+    }
+  },
+  "notes": "The API and documented endpoint remain operational. The main defects are the Bearer-auth example and the claims that free-tier limits are unknown and rate limits are unpublished. Zerion currently documents API-key access through HTTP Basic Auth; it also supports x402 and MPP pay-per-request authentication."
+}

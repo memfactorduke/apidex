@@ -1,0 +1,52 @@
+{
+  "id": "nasa-exoplanet-archive",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html",
+      "source": "https://exoplanetarchive.ipac.caltech.edu/docs/program_interfaces.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://exoplanetarchive.ipac.caltech.edu/applications/Login/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://science.data.nasa.gov/blog/exoplanet-archive-spotlight"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html"
+    }
+  },
+  "notes": "The current TAP guide confirms the endpoint, tables, ADQL, formats, and request structure. NASA states that the archive's astronomer-vetted data are open to anyone, and the archive says all data are public. The submitted docs URL is the legacy API guide and explicitly directs TAP users to the dedicated TAP guide. No official usage-limit, rate-limit, or CORS policy was located. The illustrative response row was not treated as real query output."
+}

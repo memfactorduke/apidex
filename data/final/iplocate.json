@@ -1,0 +1,93 @@
+{
+  "id": "iplocate",
+  "status": "operational",
+  "name": "IPLocate",
+  "category": "geo-maps",
+  "tagline": "IP geolocation with privacy, ASN, and company data via REST",
+  "description": "IPLocate is a REST API for IP geolocation that returns location, network, and privacy signals such as VPN/proxy/Tor detection, plus ASN and company data for enrichment use cases.",
+  "base_url": "https://iplocate.io/api/",
+  "docs_url": "https://www.iplocate.io/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or header; verify current method on official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 requests per day with a free API key; 50 requests per day per IP address without an API key",
+    "paid_plans": null
+  },
+  "rate_limits": "Up to 100 requests per second from a single IP address, within plan limits",
+  "example": {
+    "request": "curl \"https://www.iplocate.io/api/lookup/8.8.8.8?apikey=YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "geolocate a client IP address",
+    "detect VPN/proxy/Tor for an IP"
+  ],
+  "sources": [
+    "https://www.iplocate.io/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

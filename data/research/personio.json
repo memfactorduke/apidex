@@ -1,0 +1,40 @@
+{
+  "id": "personio",
+  "status": "operational",
+  "name": "Personio",
+  "category": "jobs-careers",
+  "tagline": "European HR API for recruiting, employees, and absences",
+  "description": "Personio provides a REST API for European HR operations: employees, absences, attendance, recruiting, and documents. Developers integrate HRIS data into internal tools, payroll sync, and candidate workflows.",
+  "base_url": "https://api.personio.de/v1",
+  "docs_url": "https://developer.personio.de/docs",
+  "signup_url": "https://www.personio.com/",
+  "auth": {
+    "type": "other",
+    "details": "OAuth2 client credentials or company-specific API credentials; verify current method in developer portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.personio.de/v1/company/employees\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"success\":true,\"data\":[]}"
+  },
+  "use_cases": [
+    "list company employees",
+    "fetch employee absences",
+    "sync recruiting candidates",
+    "export attendance records"
+  ],
+  "sources": [
+    "https://developer.personio.de/docs"
+  ],
+  "researcher_confidence": "low"
+}

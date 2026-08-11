@@ -1,0 +1,38 @@
+{
+  "id": "memfault",
+  "status": "operational",
+  "name": "Memfault",
+  "category": "iot-devices",
+  "tagline": "Device observability and OTA for embedded fleets",
+  "description": "REST API for device observability, issue tracking, metrics, and software releases for embedded and IoT fleets.",
+  "base_url": "https://api.memfault.com",
+  "docs_url": "https://docs.memfault.com/docs/platform/http-api",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "unknown"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.memfault.com",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list device issues",
+    "fetch fleet metrics"
+  ],
+  "sources": [
+    "https://docs.memfault.com/docs/platform/http-api"
+  ],
+  "researcher_confidence": "low"
+}

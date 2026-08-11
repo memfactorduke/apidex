@@ -1,0 +1,52 @@
+{
+  "id": "nrel",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.nlr.gov/api",
+      "source": "https://developer.nlr.gov/docs/nlr-domain-transition/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.nlr.gov/docs/",
+      "source": "https://developer.nlr.gov/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.nlr.gov/docs/api-key/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Default limit: 1,000 requests per hour per API key, although service-specific limits may vary. DEMO_KEY is limited to 30 requests per IP per hour and 50 per IP per day.",
+      "source": "https://developer.nlr.gov/docs/rate-limits/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: the default is 1,000 requests per hour per API key, with possible service-specific limits.",
+      "source": "https://developer.nlr.gov/docs/rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://developer.nlr.gov/api/alt-fuel-stations/v1.json?fuel_type=ELEC&state=CO&limit=1&api_key=YOUR_API_KEY\"",
+      "source": "https://developer.nlr.gov/docs/nlr-domain-transition/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The NLR Developer Network provides API-key-authenticated access to National Laboratory of the Rockies energy data services, including NSRDB, PVWatts, AFDC station data, utility-rate services, and wind-resource tools. The former NREL name and developer.nrel.gov domain are obsolete.",
+      "source": "https://developer.nlr.gov/docs/nlr-domain-transition/"
+    }
+  },
+  "notes": "The HTTP 0 results reflect a real shutdown: developer.nrel.gov was retired May 29, 2026, after NREL became NLR. Current documentation and API calls use developer.nlr.gov. The official site publishes limits, contradicting both unknown/not-published claims. Utility Rates v3 remains available but serves 2012 data with no planned updates."
+}

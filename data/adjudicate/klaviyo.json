@@ -1,0 +1,15 @@
+{
+  "id": "klaviyo",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Up to 250 active profiles; 500 email sends/month; $5 of mobile messages/month (region/carrier dependent); and 10,000 Composer credits free for 90 days or until used.",
+  "rate_limits": "Published per endpoint. Standard burst/steady tiers: XS 1/s, 15/m; S 3/s, 60/m; M 10/s, 150/m; L 75/s, 700/m; XL 350/s, 3,500/m. GET /accounts is 1/s and 15/m.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Original \"unknown\" is incorrect. Current limits are 250 active profiles, 500 emails/month, $5 mobile messaging/month, and 10,000 Composer credits with a 90-day expiry. Evidence: https://www.klaviyo.com/pricing and https://help.klaviyo.com/hc/en-us/articles/52308742314779. rate_limits: Original \"not published\" is incorrect; endpoint-specific and standard tiers are published. Evidence: https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling and https://developers.klaviyo.com/en/reference/get_accounts"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "howlongtobeat",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ckatzorke/howlongtobeat/blob/master/src/main/hltbsearch.ts"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/ckatzorke/howlongtobeat"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "dynamic website-issued token (x-auth-token; no developer signup or API key)",
+      "source": "https://raw.githubusercontent.com/RedSkiesReaperr/howlongtobeat/main/client.go"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The static POST /api/search request with only Content-Type is stale. Current clients dynamically discover the internal search path, fetch an initialization token, and supply the required website headers and token.",
+      "source": "https://github.com/RedSkiesReaperr/howlongtobeat"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "HLTB publishes no official public API documentation, pricing, authentication, CORS, or rate-limit policy. The linked ckatzorke wrapper exists but newer package documentation calls it abandoned and nonfunctional after HLTB API changes. The sample response is also internally wrong: game_id 10270 identifies The Witcher 3, not Breath of the Wild."
+}

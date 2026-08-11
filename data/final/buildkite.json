@@ -1,0 +1,102 @@
+{
+  "id": "buildkite",
+  "status": "operational",
+  "name": "Buildkite API",
+  "category": "dev-tools",
+  "tagline": "REST API for pipelines, builds, agents, and CI analytics",
+  "description": "Buildkite provides a REST API for managing CI/CD resources: organizations, pipelines, builds, jobs, agents, teams, and test analytics. Pipeline-as-code workflows run on customer-hosted or Buildkite-managed agent fleets. Developers authenticate with personal API access tokens and call https://api.buildkite.com/v2.",
+  "base_url": "https://api.buildkite.com/v2",
+  "docs_url": "https://buildkite.com/docs/apis/rest-api",
+  "signup_url": "https://buildkite.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal API access token via Authorization: Bearer YOUR_API_TOKEN (or Token). Create tokens in user settings; scope permissions per token. GraphQL also supported."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan available for small teams; API access included. Exact request quotas not published on pricing page \u2014 limits are plan/usage based rather than a fixed free API request count.",
+    "paid_plans": "Paid plans (e.g. Business/Enterprise) scale by concurrent jobs/agents and seats; see buildkite.com/pricing. API itself is not separately metered by public fixed free request counts."
+  },
+  "rate_limits": "Default limits are 200 REST API requests per minute per organization and 50 per minute per authenticated user; both apply, and plan-specific limits may vary. Responses include organization and user RateLimit headers; exceeding either returns HTTP 429.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.buildkite.com/v2/user\"",
+    "response_snippet": "{\n  \"id\": \"abc123-...\",\n  \"name\": \"Jane Developer\",\n  \"email\": \"jane@example.com\",\n  \"created_at\": \"2020-01-15T12:00:00.000Z\",\n  \"avatar_url\": \"https://www.gravatar.com/avatar/...\"\n}"
+  },
+  "use_cases": [
+    "list pipelines in a Buildkite organization",
+    "trigger a new build on a pipeline with branch and commit",
+    "get build status and job logs for a specific build",
+    "list and inspect connected CI agents and their metadata",
+    "cancel or rebuild a failed build via API",
+    "fetch test analytics or annotations for a build"
+  ],
+  "sources": [
+    "https://buildkite.com/docs/apis/rest-api",
+    "https://buildkite.com/docs/apis/managing-api-tokens",
+    "https://buildkite.com/docs/apis/rest-api/user",
+    "https://buildkite.com/pricing"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

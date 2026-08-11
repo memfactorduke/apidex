@@ -1,0 +1,44 @@
+{
+  "id": "itunes-search",
+  "status": "operational",
+  "name": "iTunes Search API",
+  "category": "entertainment",
+  "tagline": "Keyless catalog search for music, movies, TV, podcasts, and audiobooks from Apple.",
+  "description": "Apple's free, unauthenticated Search API for discovering content in the iTunes Store and Apple Music catalog. Query by term, artist, or collection across media types (music, movie, podcast, audiobook, TV, software, etc.) and receive JSON metadata with artwork URLs, previews, and store links. No API key or signup required. Widely used for media lookup and storefront-aware search.",
+  "base_url": "https://itunes.apple.com",
+  "docs_url": "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public HTTPS endpoints accept unauthenticated GET requests; no API key or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free; no paid plans. Usage subject to rate limits (about 20 requests/minute).",
+    "paid_plans": null
+  },
+  "rate_limits": "Approximately 20 calls per minute (documented by Apple). Excess may return errors or empty results.",
+  "example": {
+    "request": "curl -s 'https://itunes.apple.com/search?term=jack+johnson&media=music&limit=5'",
+    "response_snippet": "{\"resultCount\":5,\"results\":[{\"wrapperType\":\"track\",\"kind\":\"song\",\"artistName\":\"Jack Johnson\",\"trackName\":\"Better Together\",\"collectionName\":\"In Between Dreams\",\"previewUrl\":\"https://...\",\"artworkUrl100\":\"https://...\",\"trackViewUrl\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "search Apple catalog for a song, album, or artist by name",
+    "look up podcast episodes or show metadata by term",
+    "find movie or TV episode store links and artwork",
+    "resolve an iTunes track/collection ID to full metadata",
+    "get preview audio URLs and cover art for media cards"
+  ],
+  "sources": [
+    "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html",
+    "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html",
+    "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/LookupExamples.html",
+    "https://performance-partners.apple.com/search-api"
+  ],
+  "researcher_confidence": "high"
+}

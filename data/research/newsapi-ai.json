@@ -1,0 +1,40 @@
+{
+  "id": "newsapi-ai",
+  "status": "operational",
+  "name": "News API AI",
+  "category": "news-media",
+  "tagline": "Semantic news search, event clustering, and concept extraction by Event Registry.",
+  "description": "Event Registry's developer API for searching news articles, detecting and clustering world events, extracting concepts and entities, and retrieving structured news analytics. Provides semantic search over a large multilingual news corpus with filtering by source, language, category, and time.",
+  "base_url": "https://eventregistry.org/api/v1",
+  "docs_url": "https://newsapi.ai/documentation",
+  "signup_url": "https://newsapi.ai/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apiKey query parameter or header; self-serve signup on newsapi.ai"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://eventregistry.org/api/v1/article/getArticles?apiKey=YOUR_API_KEY&keyword=climate&articlesCount=5\"",
+    "response_snippet": "{\"articles\":{\"results\":[{\"uri\":\"...\",\"title\":\"...\",\"body\":\"...\",\"source\":{\"title\":\"...\"}}],\"totalResults\":0}}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword or concept",
+    "detect and list clustered world events",
+    "extract entities and concepts from news text",
+    "filter news by source, language, or category"
+  ],
+  "sources": [
+    "https://newsapi.ai/documentation"
+  ],
+  "researcher_confidence": "low"
+}

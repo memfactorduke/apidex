@@ -1,0 +1,40 @@
+{
+  "id": "leakix",
+  "status": "operational",
+  "name": "LeakIX",
+  "category": "security-identity",
+  "tagline": "Open-index API for leaked services, misconfigured hosts, and credential-exposure findings",
+  "description": "LeakIX provides a search API over an open index of internet-facing services, misconfigurations, and credential-exposure findings. Developers can query hosts, services, and leak data for security research, threat hunting, and exposure monitoring. Authentication is typically API-key based; free-tier and rate limits should be verified from official docs before production use.",
+  "base_url": "https://leakix.net",
+  "docs_url": "https://leakix.net/api",
+  "signup_url": "https://leakix.net",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication (details to verify from official docs; often header-based)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"api-key: YOUR_API_KEY\" \"https://leakix.net/api/v1/search?q=apache\"",
+    "response_snippet": "{\"Services\":[...],\"Leaks\":[...]}"
+  },
+  "use_cases": [
+    "search for exposed services by technology or product",
+    "find hosts with known misconfigurations or open databases",
+    "look up leak/credential exposure findings for a domain or host",
+    "monitor attack surface for newly indexed exposed services"
+  ],
+  "sources": [
+    "https://leakix.net/api"
+  ],
+  "researcher_confidence": "low"
+}

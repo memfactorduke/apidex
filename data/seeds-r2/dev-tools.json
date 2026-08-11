@@ -1,0 +1,205 @@
+{
+  "category": "dev-tools",
+  "apis": [
+    {
+      "name": "Azure DevOps REST API",
+      "slug": "azure-devops",
+      "base_domain": "dev.azure.com",
+      "docs_url": "https://learn.microsoft.com/en-us/rest/api/azure/devops/",
+      "why_notable": "Microsoft\u2019s full DevOps platform API: repos, pipelines, boards, artifacts, and work items for cloud and on-prem Azure DevOps.",
+      "free_tier": true
+    },
+    {
+      "name": "Buildkite API",
+      "slug": "buildkite",
+      "base_domain": "api.buildkite.com",
+      "docs_url": "https://buildkite.com/docs/apis/rest-api",
+      "why_notable": "Pipeline-as-code CI with agent fleets; REST API for pipelines, builds, agents, and test analytics.",
+      "free_tier": true
+    },
+    {
+      "name": "CloudBees CodeShip API",
+      "slug": "codeship",
+      "base_domain": "api.codeship.com",
+      "docs_url": "https://docs.cloudbees.com/docs/cloudbees-codeship/latest/api-overview/",
+      "why_notable": "CloudBees-hosted CI; project and build management via REST for teams still on CodeShip Pro/Basic.",
+      "free_tier": false
+    },
+    {
+      "name": "CodeClimate Quality API",
+      "slug": "codeclimate",
+      "base_domain": "api.codeclimate.com",
+      "docs_url": "https://developer.codeclimate.com/",
+      "why_notable": "Automated code review and maintainability metrics; org/repo analysis status and test coverage via API.",
+      "free_tier": true
+    },
+    {
+      "name": "Coveralls API",
+      "slug": "coveralls",
+      "base_domain": "coveralls.io",
+      "docs_url": "https://docs.coveralls.io/api-introduction",
+      "why_notable": "Coverage reporting service with REST for jobs, repos, and badge data; widely used with open-source CI.",
+      "free_tier": true
+    },
+    {
+      "name": "Cypress Cloud API",
+      "slug": "cypress-cloud",
+      "base_domain": "api.cypress.io",
+      "docs_url": "https://docs.cypress.io/api/cloud/introduction",
+      "why_notable": "Cypress Dashboard/Cloud HTTP API for runs, specs, and test results from E2E browser test suites.",
+      "free_tier": true
+    },
+    {
+      "name": "Gitea API",
+      "slug": "gitea",
+      "base_domain": "gitea.com",
+      "docs_url": "https://docs.gitea.com/api/1.22/",
+      "why_notable": "Self-hostable Git forge (Go); OpenAPI for repos, issues, PRs, and orgs\u2014GitHub-like surface without GitHub lock-in.",
+      "free_tier": true
+    },
+    {
+      "name": "Gitee Open API",
+      "slug": "gitee",
+      "base_domain": "gitee.com",
+      "docs_url": "https://gitee.com/api/v5/swagger",
+      "why_notable": "Major China-focused Git hosting; v5 REST for repos, issues, PRs, and enterprises\u2014regional alternative to GitHub.",
+      "free_tier": true
+    },
+    {
+      "name": "Honeycomb API",
+      "slug": "honeycomb",
+      "base_domain": "api.honeycomb.io",
+      "docs_url": "https://docs.honeycomb.io/api/",
+      "why_notable": "Observability platform API for datasets, queries, triggers, and SLOs; strong OpenTelemetry / high-cardinality focus.",
+      "free_tier": true
+    },
+    {
+      "name": "Hugging Face Hub API",
+      "slug": "huggingface-hub",
+      "base_domain": "huggingface.co",
+      "docs_url": "https://huggingface.co/docs/hub/api",
+      "why_notable": "ML model/dataset/space registry REST; the de facto package hub for open AI artifacts and git-backed repos.",
+      "free_tier": true
+    },
+    {
+      "name": "JetBrains Space API",
+      "slug": "jetbrains-space",
+      "base_domain": "jetbrains.space",
+      "docs_url": "https://www.jetbrains.com/help/space/api.html",
+      "why_notable": "JetBrains all-in-one DevOps (git, CI, issues, packages); HTTP API for automation across Space projects.",
+      "free_tier": true
+    },
+    {
+      "name": "LambdaTest Automation API",
+      "slug": "lambdatest",
+      "base_domain": "api.lambdatest.com",
+      "docs_url": "https://www.lambdatest.com/support/docs/api-doc/",
+      "why_notable": "Cross-browser/device cloud testing competitor to BrowserStack/Sauce; REST for sessions, tunnels, and smart UI.",
+      "free_tier": true
+    },
+    {
+      "name": "NuGet Gallery API",
+      "slug": "nuget",
+      "base_domain": "api.nuget.org",
+      "docs_url": "https://learn.microsoft.com/en-us/nuget/api/overview",
+      "why_notable": "Official .NET package protocol (v3): search, metadata, package content\u2014primary registry for NuGet packages.",
+      "free_tier": true
+    },
+    {
+      "name": "Pulumi Cloud API",
+      "slug": "pulumi-cloud",
+      "base_domain": "api.pulumi.com",
+      "docs_url": "https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/",
+      "why_notable": "IaC state and org management REST for stacks, updates, and deployments\u2014Terraform Cloud alternative in code.",
+      "free_tier": true
+    },
+    {
+      "name": "Render API",
+      "slug": "render",
+      "base_domain": "api.render.com",
+      "docs_url": "https://api-docs.render.com/reference/introduction",
+      "why_notable": "PaaS deploy platform with full REST for services, deploys, jobs, and databases\u2014popular Git-to-prod path.",
+      "free_tier": true
+    },
+    {
+      "name": "Semaphore CI API",
+      "slug": "semaphore-ci",
+      "base_domain": "api.semaphoreci.com",
+      "docs_url": "https://docs.semaphoreci.com/reference/api-v1alpha",
+      "why_notable": "Fast CI/CD with API for projects, pipelines, promotions, and secrets; strong for monorepos and promotions.",
+      "free_tier": true
+    },
+    {
+      "name": "Snyk API",
+      "slug": "snyk",
+      "base_domain": "api.snyk.io",
+      "docs_url": "https://docs.snyk.io/snyk-api/snyk-api",
+      "why_notable": "Developer security platform API for SCA, container, IaC, and code scans; org projects and issues via REST.",
+      "free_tier": true
+    },
+    {
+      "name": "Vercel API",
+      "slug": "vercel",
+      "base_domain": "api.vercel.com",
+      "docs_url": "https://vercel.com/docs/rest-api",
+      "why_notable": "Frontend cloud REST for deployments, projects, domains, and env vars\u2014default Git deploy surface for Next.js.",
+      "free_tier": true
+    },
+    {
+      "name": "Woodpecker CI API",
+      "slug": "woodpecker-ci",
+      "base_domain": "woodpecker-ci.org",
+      "docs_url": "https://woodpecker-ci.org/docs/api",
+      "why_notable": "Lightweight open-source CI (Drone fork lineage); HTTP API for repos, pipelines, and secrets on self-hosted instances.",
+      "free_tier": true
+    },
+    {
+      "name": "codeberg / Forgejo API",
+      "slug": "forgejo",
+      "base_domain": "codeberg.org",
+      "docs_url": "https://codeberg.org/api/swagger",
+      "why_notable": "Forgejo-powered free Git hosting (Codeberg); Swagger REST for repos and issues\u2014FOSS community alternative to GitHub.",
+      "free_tier": true
+    },
+    {
+      "name": "pkg.go.dev / proxy.golang.org",
+      "slug": "go-module-proxy",
+      "base_domain": "proxy.golang.org",
+      "docs_url": "https://proxy.golang.org/",
+      "why_notable": "Official Go module proxy and sumdb endpoints used by every `go` toolchain install\u2014package registry for Go.",
+      "free_tier": true
+    },
+    {
+      "name": "Chromatic GraphQL API",
+      "slug": "chromatic",
+      "base_domain": "www.chromatic.com",
+      "docs_url": "https://www.chromatic.com/docs/graphql-api",
+      "why_notable": "Visual regression / Storybook cloud; GraphQL for builds, tests, and review state in UI component CI.",
+      "free_tier": true
+    },
+    {
+      "name": "Checkly API",
+      "slug": "checkly",
+      "base_domain": "api.checklyhq.com",
+      "docs_url": "https://www.checklyhq.com/docs/api/",
+      "why_notable": "API & browser synthetic monitoring as code; REST for checks, groups, and alerting\u2014dev-centric alternative to legacy APM.",
+      "free_tier": true
+    },
+    {
+      "name": "Netlify API",
+      "slug": "netlify",
+      "base_domain": "api.netlify.com",
+      "docs_url": "https://docs.netlify.com/api/get-started/",
+      "why_notable": "Jamstack hosting REST for sites, deploys, forms, and edge functions\u2014long-standing Git-based deploy platform.",
+      "free_tier": true
+    },
+    {
+      "name": "deps.dev API",
+      "slug": "deps-dev",
+      "base_domain": "api.deps.dev",
+      "docs_url": "https://docs.deps.dev/api/",
+      "why_notable": "Google Open Source Insights public API: package versions, advisories, and dependency graphs across ecosystems.",
+      "free_tier": true
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "bitpay",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://bitpay.com",
+      "source": "https://developer.bitpay.com/reference/environments"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bitpay.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "API token (query/body `token` param), not X-Api-Key; merchant/payout facades require BitAuth ECDSA signing via X-Identity and X-Signature headers",
+      "source": "https://developer.bitpay.com/reference/concepts"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bitpay.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.bitpay.com/hc/en-us/articles/203324073-What-fees-will-I-pay-to-use-BitPay-for-payment-processing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bitpay.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://bitpay.com/invoices/YOUR_INVOICE_ID?token=YOUR_TOKEN\" -H \"Content-Type: application/json\" -H \"X-Accept-Version: 2.0.0\" (merchant facade also needs X-Identity/X-Signature; path is /invoices not /api/v2/invoices; no X-Api-Key)",
+      "source": "https://developer.bitpay.com/reference/retrieve-an-invoice"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.bitpay.com/reference/concepts"
+    }
+  },
+  "notes": "Multiple hard errors: base URL is https://bitpay.com (not /api/v2; version is X-Accept-Version: 2.0.0 header). Auth is capability tokens + optional BitAuth signing, not X-Api-Key. Example URL and headers invent a non-existent auth scheme. Pricing tiers (1\u20132%+25\u00a2) are public; rate limits not documented. API is live/operational."
+}

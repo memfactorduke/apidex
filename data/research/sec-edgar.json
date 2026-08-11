@@ -1,0 +1,47 @@
+{
+  "id": "sec-edgar",
+  "status": "operational",
+  "name": "SEC EDGAR",
+  "category": "finance",
+  "tagline": "Official US SEC filings and company facts APIs for 10-K/10-Q, XBRL, and insider data",
+  "description": "Public REST APIs from the U.S. Securities and Exchange Commission that expose EDGAR filing metadata, full-text search, company submissions, XBRL company facts, and related market data. No API key is required; callers must identify themselves with a descriptive User-Agent and respect fair-access rate limits.",
+  "base_url": "https://data.sec.gov",
+  "docs_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or OAuth. Requests must include a descriptive User-Agent identifying the application and a contact email (e.g. SampleCompany name@samplecompany.com). Undeclared or blocked User-Agents may be denied."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "html",
+    "xml",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public data; fair access ~10 requests/second",
+    "paid_plans": null
+  },
+  "rate_limits": "Fair access: max 10 requests per second across data.sec.gov and related EDGAR hosts; higher rates risk temporary blocks",
+  "example": {
+    "request": "curl -H \"User-Agent: ExampleApp contact@example.com\" -H \"Accept: application/json\" \"https://data.sec.gov/submissions/CIK0000320193.json\"",
+    "response_snippet": "{\n  \"cik\": \"0000320193\",\n  \"entityType\": \"operating\",\n  \"sic\": \"3571\",\n  \"sicDescription\": \"Electronic Computers\",\n  \"name\": \"Apple Inc.\",\n  \"tickers\": [\"AAPL\"],\n  \"exchanges\": [\"Nasdaq\"],\n  \"filings\": { \"recent\": { \"accessionNumber\": [\"...\"], \"form\": [\"10-K\", \"10-Q\"], \"filingDate\": [\"...\"] } }\n}"
+  },
+  "use_cases": [
+    "fetch a company's recent SEC form filings by CIK",
+    "look up XBRL company facts and financial tags for a filer",
+    "get company submissions history and filing metadata",
+    "search EDGAR full-text for keywords in filings",
+    "retrieve insider transaction (Form 4) related filing lists"
+  ],
+  "sources": [
+    "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+    "https://www.sec.gov/os/accessing-edgar-data",
+    "https://www.sec.gov/edgar/sec-api-documentation",
+    "https://data.sec.gov"
+  ],
+  "researcher_confidence": "high"
+}

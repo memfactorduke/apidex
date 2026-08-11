@@ -1,0 +1,52 @@
+{
+  "id": "lepton-ai",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No single global base URL. Workspace APIs use https://gateway.dgxc-lepton.nvidia.com/api/v2/workspaces/<WORKSPACE_ID>, while inference uses the deployed endpoint's own URL.",
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/features/utilities/fine-tuning/sdk-reference/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.nvidia.com/dgx-cloud/lepton/",
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Bearer token (user or workspace token) in the Authorization header; individual inference endpoints may instead be public or protected by endpoint tokens/IP allowlists.",
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/features/workspace/token/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use the deployed endpoint URL and its documented route, for example: curl -X POST \"<ENDPOINT_URL>/v1/chat/completions\" -H \"content-type: application/json\" -H \"accept: application/json\" -d '<request JSON>'. Add Authorization: Bearer <token> when token protection is enabled.",
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/examples/endpoint/deploy-gpt-oss/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "NVIDIA DGX Cloud Lepton is a fully managed platform for developing, training, and deploying AI models. It provides hosted endpoints, REST API support, and a Python SDK for workspace operations.",
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/reference/api/index.html"
+    }
+  },
+  "notes": "Lepton AI is now NVIDIA DGX Cloud Lepton. The legacy website redirects to NVIDIA, and the submitted docs URL is obsolete. Current access is workspace- and endpoint-specific; no official current evidence was found for a free tier, its limits, request-rate limits, or CORS behavior."
+}

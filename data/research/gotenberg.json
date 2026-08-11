@@ -1,0 +1,42 @@
+{
+  "id": "gotenberg",
+  "status": "operational",
+  "name": "Gotenberg",
+  "category": "utilities",
+  "tagline": "Self-hostable HTTP API for PDF generation from HTML, Markdown, Office, and URLs",
+  "description": "Gotenberg is a Docker-based API that converts HTML, Markdown, Office documents, and web pages into PDFs using Chromium and LibreOffice. Developers typically self-host it and call local or private HTTP endpoints for document conversion workflows.",
+  "base_url": "http://localhost:3000",
+  "docs_url": "https://gotenberg.dev/docs/getting-started/introduction",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No built-in authentication by default; secure via reverse proxy, network isolation, or optional API key middleware if configured."
+  },
+  "https": false,
+  "cors": "unknown",
+  "formats": [
+    "binary",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Open-source self-hosted; no SaaS free tier or paid plans from the project",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (self-hosted; operator-defined)",
+  "example": {
+    "request": "curl --request POST http://localhost:3000/forms/chromium/convert/html --form files=@index.html -o result.pdf",
+    "response_snippet": "Binary PDF file (application/pdf) written to result.pdf"
+  },
+  "use_cases": [
+    "convert HTML to PDF for invoices or reports",
+    "render a URL to PDF via Chromium",
+    "convert Markdown documents to PDF",
+    "convert Office files (DOCX, XLSX) to PDF",
+    "merge or manipulate PDFs in an automated pipeline"
+  ],
+  "sources": [
+    "https://gotenberg.dev/docs/getting-started/introduction"
+  ],
+  "researcher_confidence": "low"
+}

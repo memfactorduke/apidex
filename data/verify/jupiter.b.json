@@ -1,0 +1,52 @@
+{
+  "id": "jupiter",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.jup.ag/docs/portal/setup"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.jup.ag/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.jup.ag/docs/portal/setup"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.jup.ag/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.jup.ag/docs/portal/plans"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.jup.ag/docs/portal/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.jup.ag/docs/swap/v1/get-quote"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.jup.ag/docs/changelog"
+    }
+  },
+  "notes": "Current official docs support the host, authentication options, pricing, limits, products, and request example. Swap V1 remains documented and operational but is deprecated, no longer actively maintained, and superseded by Swap V2. Official docs discuss browser/client-side API-key use but do not explicitly publish a CORS policy, so CORS was not confirmed."
+}

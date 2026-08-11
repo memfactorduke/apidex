@@ -1,0 +1,52 @@
+{
+  "id": "pinecone-inference",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pinecone.io/reference/api/2026-04/inference/generate-embeddings"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.pinecone.io/reference/api/introduction",
+      "source": "https://docs.pinecone.io/guides/inference/understanding-inference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pinecone.io/reference/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pinecone.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Starter includes 5,000,000 embedding tokens per month per model and 500 rerank requests per month for each supported Starter reranking model.",
+      "source": "https://docs.pinecone.io/reference/api/database-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits include 100 inference requests/second and 2,000/minute per project, plus model-specific embedding-token and rerank-request limits.",
+      "source": "https://docs.pinecone.io/reference/api/database-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"https://api.pinecone.io/embed\" -H \"Api-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -H \"X-Pinecone-Api-Version: 2026-04\" -d '{\"model\":\"multilingual-e5-large\",\"parameters\":{\"input_type\":\"query\"},\"inputs\":[{\"text\":\"What is the capital of France?\"}]}'",
+      "source": "https://docs.pinecone.io/reference/api/2026-04/inference/generate-embeddings"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pinecone.io/reference/api/introduction"
+    }
+  },
+  "notes": "The API is operational, but the guide URL now redirects to a general overview. The sample uses an outdated API version, supplies inputs in the wrong REST shape, and omits multilingual-e5-large's required input_type parameter. Published free allowances and rate limits replace both unknown claims."
+}

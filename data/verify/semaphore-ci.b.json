@@ -1,0 +1,52 @@
+{
+  "id": "semaphore-ci",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://<organization-url>.semaphoreci.com/api/v1alpha",
+      "source": "https://docs.semaphore.io/reference/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.semaphoreci.com/reference/api-v1alpha"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.semaphore.io/reference/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://semaphore.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "$15 free credits per month (approximately 2,000 Ubuntu x64 2-vCPU minutes), plus 20 GB/month artifact egress and 100 GB/month artifact storage",
+      "source": "https://semaphore.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Token YOUR_API_KEY\" -H \"User-Agent: SemaphoreCI v2.0 Client\" \"https://<organization-url>.semaphoreci.com/api/v1alpha/pipelines?project_id=<project_id>\"",
+      "source": "https://docs.semaphore.io/reference/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.semaphore.io/reference/api"
+    }
+  },
+  "notes": "The service is operational, but the API is organization-scoped rather than hosted at api.semaphoreci.com. The old documentation URL currently redirects to the canonical docs.semaphore.io page. Current pricing publishes specific free allowances. No authoritative CORS or API rate-limit policy was located."
+}

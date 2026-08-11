@@ -1,0 +1,15 @@
+{
+  "id": "realty-mole",
+  "base_url": "https://api.rentcast.io/v1",
+  "docs_url": "https://developers.rentcast.io/reference/realty-mole-migration-guide",
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "None; Realty Mole is defunct. Its legacy Basic plan offered 50 requests/month; replacement RentCast offers a free Developer plan with 50 requests/month.",
+  "rate_limits": "Not applicable to defunct Realty Mole. Replacement RentCast has a hard limit of 20 requests/second per API key.",
+  "cors": null,
+  "example_request": "curl --request GET --url 'https://api.rentcast.io/v1/properties?address=5500%20Grand%20Lake%20Dr%2C%20San%20Antonio%2C%20TX%2078244' --header 'Accept: application/json' --header 'X-Api-Key: YOUR_API_KEY'",
+  "example_response_snippet": "[{\"id\":\"5500-Grand-Lake-Dr,-San-Antonio,-TX-78244\",\"formattedAddress\":\"5500 Grand Lake Dr, San Antonio, TX 78244\",\"propertyType\":\"Single Family\",\"bedrooms\":3,\"bathrooms\":2,\"squareFootage\":1878,\"yearBuilt\":1973,\"lastSalePrice\":270000}]",
+  "description": "Legacy US property-data API formerly hosted on RapidAPI, providing property records, valuations, rent estimates, and comparable properties. It was permanently shut down on March 1, 2025 and replaced by RentCast.",
+  "status": "defunct",
+  "resolution_notes": "base_url: RentCast successor; docs_url: migration guide; free_tier: false; free_tier_limits: none current, legacy 50/month; description/status: shut down 2025-03-01 \u2014 https://developers.rentcast.io/reference/realty-mole-migration-guide. rate_limits: N/A; successor is 20/second/key \u2014 https://developers.rentcast.io/reference/rate-limits. example: RentCast /properties with X-Api-Key \u2014 https://developers.rentcast.io/reference/getting-started-guide"
+}

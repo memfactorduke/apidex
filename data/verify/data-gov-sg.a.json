@@ -1,0 +1,52 @@
+{
+  "id": "data-gov-sg",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api-open.data.gov.sg/v1",
+      "source": "https://api-open.data.gov.sg/v1/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.gov.sg/datasets?formats=API",
+      "source": "https://data.gov.sg/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.sg/datasets?formats=API"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.sg/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.sg/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s 'https://api-open.data.gov.sg/v1/environment/2-hour-weather-forecast'",
+      "source": "https://api-open.data.gov.sg/v1/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Public REST APIs from Singapore's national open-data platform covering real-time transport, weather, environment, and economic datasets. Developers can query many endpoints without a key; some collections use CKAN-style datastore APIs and dataset-specific paths under api-open.data.gov.sg (not api.data.gov.sg).",
+      "source": "https://api-open.data.gov.sg/v1/"
+    }
+  },
+  "notes": "Automated checks: base_url 403, docs_url 404. Official host is api-open.data.gov.sg; /developer is gone. Auth none and free public data confirmed; rate limits unpublished; CORS untested."
+}

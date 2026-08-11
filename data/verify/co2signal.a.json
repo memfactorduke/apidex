@@ -1,0 +1,52 @@
+{
+  "id": "co2signal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.co2signal.com/v1",
+      "source": "https://docs.co2signal.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.co2signal.com/",
+      "source": "https://docs.co2signal.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey",
+      "source": "https://docs.co2signal.com/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://www.co2signal.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier available (Electricity Maps / CO2 Signal); exact quota should be confirmed on signup/dashboard",
+      "source": "https://www.co2signal.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits apply per API key; see Electricity Maps / CO2 Signal account dashboard",
+      "source": "https://docs.co2signal.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "GET https://api.co2signal.com/v1/latest?countryCode=XX with auth-token header",
+      "source": "https://docs.co2signal.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "CO2 Signal provides real-time carbon intensity data for electricity grids worldwide",
+      "source": "https://docs.co2signal.com/"
+    }
+  },
+  "notes": "Entry was essentially empty; fields marked incorrect because blank/wrong values contradict official CO2 Signal docs. Verify live endpoints and pricing limits on co2signal.com / electricitymaps.com."
+}

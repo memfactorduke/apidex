@@ -1,0 +1,15 @@
+{
+  "id": "skyscanner",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "No monetary or usage-based free-tier quota is published. Approved commercial partners pay no booking, monthly, or yearly fees and operate under revenue share; per-key rate limits still apply.",
+  "rate_limits": "Default Flights Live Pricing limits: create 100 requests/second and 100/minute; poll 100/second and 500/minute. Actual limits are customized per API key and may differ under partner agreements.",
+  "cors": "no",
+  "example_request": "curl -X POST 'https://partners.api.skyscanner.net/apiservices/v3/flights/live/search/create' -H 'x-api-key: YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"query\":{\"market\":\"UK\",\"locale\":\"en-GB\",\"currency\":\"GBP\",\"queryLegs\":[{\"originPlaceId\":{\"iata\":\"LHR\"},\"destinationPlaceId\":{\"iata\":\"JFK\"},\"date\":{\"year\":2026,\"month\":9,\"day\":1}}],\"adults\":1}}'",
+  "example_response_snippet": "{\"sessionToken\":\"eyJ...\",\"status\":\"RESULT_STATUS_INCOMPLETE\",\"action\":\"RESULT_ACTION_REPLACED\",\"content\":{\"results\":{\"itineraries\":{},\"legs\":{},\"segments\":{},\"places\":{},\"carriers\":{},\"agents\":{}}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Replace unknown; access is free of booking/monthly/yearly fees but approval and commercial revenue share are required. https://skyscannerpartnersupport.zendesk.com/hc/en-us/articles/4524639452573-How-much-does-it-cost-to-use-the-Skyscanner-Flights-API; rate_limits: Replace with published defaults. https://developers.skyscanner.net/docs/getting-started/rate-limits; cors: Replace unknown with no. https://developers.skyscanner.net/docs/faqs; example: Add required adults:1. https://developers.skyscanner.net/docs/flights-live-prices/overview"
+}

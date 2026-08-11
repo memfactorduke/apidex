@@ -1,0 +1,15 @@
+{
+  "id": "google-cloud-speech",
+  "base_url": "https://speech.googleapis.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Speech-to-Text V1: 60 audio minutes per month per account at $0 for Standard models, with or without data logging. V2 has no recurring free allotment in the current pricing table; new customers may separately qualify for Google Cloud trial credits.",
+  "rate_limits": "V1 defaults per developer project: 900 recognition requests per 60 seconds, 10 adaptation-resource requests per 60 seconds, and 480 audio-processing hours per day. Most quotas can be adjusted through Google Cloud.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Corrected; the REST reference names https://speech.googleapis.com as the service endpoint: https://cloud.google.com/speech-to-text/docs/reference/rest. free_tier_limits: Corrected to the current V1 60-minute allotment; V2 charges from minute 0: https://cloud.google.com/speech-to-text/pricing. rate_limits: Corrected because V1 publishes explicit quotas: https://cloud.google.com/speech-to-text/docs/v1/quotas."
+}

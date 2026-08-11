@@ -1,0 +1,52 @@
+{
+  "id": "recruitee",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.recruitee.com/reference/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.recruitee.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "bearerToken for the ATS API, sent as Authorization: Bearer <token>; the Careers Site API requires no authentication",
+      "source": "https://docs.recruitee.com/reference/getting-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.recruitee.com/en/articles/4065422-what-does-our-free-trial-entail"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable because there is no ongoing free tier. The 18-day free trial allows at most 5 published jobs and 50 emails and does not allow promotion on free job boards.",
+      "source": "https://support.recruitee.com/en/articles/4065422-what-does-our-free-trial-entail"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "1000 requests per minute per API token",
+      "source": "https://docs.recruitee.com/reference/getting-started"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET https://api.recruitee.com/c/{company_id}/admin -H \"Authorization: Bearer YOUR_API_TOKEN\"",
+      "source": "https://docs.recruitee.com/reference/getting-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.recruitee.com/en/articles/1066282-api-documentation"
+    }
+  },
+  "notes": "Official documentation contradicts the stated authentication, rate-limit, and example fields. ATS calls require a company-scoped path and Bearer token. Recruitee offers an 18-day trial rather than a continuing free plan, and its trial limits are published. No authoritative CORS policy was located."
+}

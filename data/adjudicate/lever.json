@@ -1,0 +1,15 @@
+{
+  "id": "lever",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "No official free-tier allowance or GET usage cap is published. Application POST requests are limited to 2 per second.",
+  "rate_limits": "Application POST requests are limited to 2 per second; exceeding this returns HTTP 429. Lever may change the limit without warning. No numeric limit is documented for listing GET requests.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Corrected; Lever's pricing page offers custom quotes and states no free allowance, while the API docs specify only the POST limit: https://www.lever.co/pricing and https://github.com/lever/postings-api#post-application-rate-limit. rate_limits: Corrected to 2 application POSTs/second; no GET limit is documented: https://github.com/lever/postings-api#post-application-rate-limit. cors: Set to yes, but restricted to the customer's own domains/subdomains: https://github.com/lever/postings-api#introduction."
+}

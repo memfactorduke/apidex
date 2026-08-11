@@ -1,0 +1,52 @@
+{
+  "id": "tibber",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tibber.com/docs/guides/calling-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tibber.com/docs/overview"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2/Bearer access token; personal access tokens are available for personal use, while distributed apps require an OAuth client",
+      "source": "https://developer.tibber.com/docs/guides/calling-api"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developer.tibber.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Maximum 2 open WebSocket connections; the official guide also requires retry backoff and recommends querying prices only once daily",
+      "source": "https://developer.tibber.com/docs/guides/calling-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Add a User-Agent header, for example -H \"User-Agent: MyApp/1.0.0\". The endpoint, POST method, Bearer header, Content-Type, JSON body, and queried fields are otherwise consistent with the documentation.",
+      "source": "https://developer.tibber.com/docs/guides/calling-api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The GraphQL API exposes authenticated account/home metadata, electricity prices, historical consumption/production, and supported Pulse/Watty live measurements. The current schema does not document control of EV chargers or smart plugs.",
+      "source": "https://developer.tibber.com/docs/reference"
+    }
+  },
+  "notes": "Official documentation is active. API pricing and CORS policy were not established by official sources. Access is stated to be available to Tibber customers, but no explicit free tier or limits are published. The schema exposes only liveMeasurement and testMeasurement subscriptions, not live price subscriptions."
+}

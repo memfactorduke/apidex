@@ -1,0 +1,52 @@
+{
+  "id": "cerebras-inference",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://inference-docs.cerebras.ai/api-reference/chat-completions"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://inference-docs.cerebras.ai/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://inference-docs.cerebras.ai/api-reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cerebras.ai/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier is real but limits are published (e.g. model-specific RPM/TPM); vague 'check pricing' is not accurate \u2014 docs list concrete free-tier rate limits",
+      "source": "https://inference-docs.cerebras.ai/support/rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://inference-docs.cerebras.ai/support/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://inference-docs.cerebras.ai/api-reference/chat-completions"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://inference-docs.cerebras.ai/"
+    }
+  },
+  "notes": "Verified against Cerebras inference docs and pricing (2026). base_url, docs, Bearer API key auth, free tier, OpenAI-compatible chat completions example, and wafer-scale low-latency claims hold. free_tier_limits is too vague given published tier tables; cors not documented."
+}

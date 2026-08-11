@@ -1,0 +1,15 @@
+{
+  "id": "tuya",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": "Trial Edition: about 26,000 API calls and 68,000 messages monthly, adjustable allocation, 1 data center, 50 devices, and 10 controllable devices. Individual development/debugging only; no commercial use or overage. Service pauses until the next monthly refresh when exhausted.",
+  "rate_limits": "Published per endpoint and per cloud project. Examples: space creation 10 requests/second, device actions and property writes 4/second, and device shadow property queries 50/second.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: oauth2; Tuya states its cloud APIs use OAuth 2.0, including token-based Simple mode with client_id/secret signing. https://developer.tuya.com/en/docs/iot/authentication-method?id=Ka49gbaxjygox free_tier_limits: corrected to current Trial Edition allowances and restrictions. https://developer.tuya.com/en/docs/iot/membership-service?id=K9m8k45jwvg9j rate_limits: corrected because Tuya publishes project-level, endpoint-specific limits. https://developer.tuya.com/en/docs/iot/frequency-control?id=Kcojz2r2dg1f6"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "iplocate",
+  "base_url": "https://iplocate.io/api/",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1,000 requests per day with a free API key; 50 requests per day per IP address without an API key",
+  "rate_limits": "Up to 100 requests per second from a single IP address, within plan limits",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: corrected; official docs specify https://iplocate.io/api/ (https://www.iplocate.io/docs/ip-intelligence-api). free_tier_limits: corrected; the quota table confirms 1,000/day with a free key and 50/day per IP without one (https://www.iplocate.io/docs/getting-started/quota-rate-limits). rate_limits: corrected; the same page states 100 requests/second per source IP within plan limits. cors: yes; the official guide documents direct client-side browser fetch calls (https://www.iplocate.io/docs/guides/country-based-redirects)."
+}

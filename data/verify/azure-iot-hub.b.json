@@ -1,0 +1,52 @@
+{
+  "id": "azure-iot-hub",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/rest/api/iothub/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/rest/api/iothub/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false",
+      "source": "https://azure.microsoft.com/en-us/pricing/details/iot-hub/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No free tier; Free edition was retired. Basic/Standard paid tiers only.",
+      "source": "https://azure.microsoft.com/en-us/pricing/details/iot-hub/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Documented per-operation throttling limits (e.g. device registry reads, twin ops) vary by unit/SKU; see IoT Hub quotas and throttling.",
+      "source": "https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-quotas-throttling"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Authorization must be a SAS token or Entra ID bearer, not YOUR_API_KEY; path/api-version pattern is otherwise valid for Device Registry list.",
+      "source": "https://learn.microsoft.com/en-us/rest/api/iothub/service/devices/get-devices"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-identity-registry"
+    }
+  },
+  "notes": "Placeholder base_url host pattern is correct (per-hub *.azure-devices.net); HTTP 0 is expected without a real hub. Free F1 edition was retired \u2014 free_tier true is wrong. Throttling quotas are published. Example auth header is wrong."
+}

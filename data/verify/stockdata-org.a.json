@@ -1,0 +1,52 @@
+{
+  "id": "stockdata-org",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests daily; 3 symbols per stock-price request; 1 symbol per intraday request; 2 articles per news request; 1 month each of intraday and EOD history.",
+      "source": "https://www.stockdata.org/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "A per-60-second rate limit is documented. Exceeding it returns HTTP 429; the limit and remaining requests are reported in X-RateLimit-Limit. The public documentation does not state a fixed numeric cap.",
+      "source": "https://www.stockdata.org/documentation"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.stockdata.org/documentation"
+    }
+  },
+  "notes": "Official pages are live and current. The documented authentication method is api_token as a GET query parameter; no official support for the entry's claimed Authorization-header alternative was found. The sample curl method, endpoint, and parameters match the quote documentation."
+}

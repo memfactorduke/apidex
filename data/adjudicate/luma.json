@@ -1,0 +1,15 @@
+{
+  "id": "luma",
+  "base_url": "https://public-api.luma.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "No free API tier; API access requires an active Luma Plus subscription for the calendar.",
+  "rate_limits": "200 requests per minute per calendar for calendar API keys and OAuth tokens; 500 requests per minute per organization for organization API keys.",
+  "cors": null,
+  "example_request": "curl -H \"x-luma-api-key: YOUR_API_KEY\" https://public-api.luma.com/v1/users/get-self",
+  "example_response_snippet": "{\"user\":{\"api_id\":\"usr-example\",\"name\":\"Example User\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: corrected; official base URL is https://public-api.luma.com (https://docs.luma.com/reference/getting-started-with-your-api). free_tier_limits: corrected; Luma Plus is required for API access (same URL; https://luma.com/pricing). rate_limits: corrected to current per-minute limits (https://docs.luma.com/reference/rate-limits). example: corrected to Luma's documented get-self curl using x-luma-api-key (https://docs.luma.com/reference/getting-started-with-your-api)."
+}

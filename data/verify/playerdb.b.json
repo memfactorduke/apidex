@@ -1,0 +1,52 @@
+{
+  "id": "playerdb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://playerdb.co/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://playerdb.co/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nodecraft.com/blog/service-updates/lookup-hytale-player-uuids-with-hytaleid-com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nodecraft.com/blog/development/nodecraft-empowers-minecraft-ugc-with-1-billion-api-requests-per-month"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://playerdb.co/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Very generous non-numeric rate limits; limited requests receive HTTP 429 with a Retry-After header, and higher-volume users may contact the maintainer.",
+      "source": "https://playerdb.co/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://playerdb.co/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nodecraft.com/blog/development/nodecraft-empowers-minecraft-ugc-with-1-billion-api-requests-per-month"
+    }
+  },
+  "notes": "PlayerDB is operational according to Nodecraft's current status page, and no shutdown or migration notice was found. The main defect is that rate-limit information is published, although no numeric quota is given. CORS is not documented and could not be independently tested."
+}

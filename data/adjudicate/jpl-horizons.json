@@ -1,0 +1,15 @@
+{
+  "id": "jpl-horizons",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "No numeric hourly quota is published. Fair-use policy requires submitting only one API request at a time; simultaneous requests are prohibited.",
+  "cors": "no",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Replace the unsupported ~1200 requests/hour claim; current official policy permits only one request at a time: https://ssd-api.jpl.nasa.gov/doc/index.php. cors: Set to no; the same official policy states these APIs may not be embedded in websites under NASA's CORS policy: https://ssd-api.jpl.nasa.gov/doc/index.php."
+}

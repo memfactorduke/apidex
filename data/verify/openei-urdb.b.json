@@ -1,0 +1,52 @@
+{
+  "id": "openei-urdb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apps.openei.org/services/doc/rest/util_rates/?version=7"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apps.openei.org/services/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apps.openei.org/services/doc/rest/util_rates/?version=7"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apps.openei.org/services/doc/rest/util_rates/?version=7"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The published api.data.gov default is 1,000 requests per hour per API key; DEMO_KEY is limited to 30 requests per IP per hour and 50 per IP per day. Service-specific limits may vary.",
+      "source": "https://api.data.gov/docs/developer-manual/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published default: 1,000 requests per hour per API key. DEMO_KEY: 30 requests per IP per hour and 50 per IP per day. Service-specific limits may vary.",
+      "source": "https://api.data.gov/docs/developer-manual/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apps.openei.org/services/doc/rest/util_rates/?version=7"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.openei.org/submissions/5"
+    }
+  },
+  "notes": "Current official documentation still lists the endpoint and required version, format, and api_key parameters. No shutdown notice was found. The entry fails because it labels request limits as unknown or unpublished even though the government API-key platform publishes default and DEMO_KEY quotas. CORS could not be established from official documentation."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "rxterms",
+  "status": "operational",
+  "name": "RxTerms",
+  "category": "health-fitness",
+  "tagline": "NLM Clinical Tables autocomplete for prescription drug names and related RxTerms data.",
+  "description": "RxTerms is part of the National Library of Medicine Clinical Tables API. It provides free, no-auth autocomplete and lookup for prescription drug names, strengths, and related RxTerms fields used in clinical and medication UIs. Developers typically call it for typeahead drug name suggestions and structured medication display strings.",
+  "base_url": "https://clinicaltables.nlm.nih.gov/api/rxterms/v3",
+  "docs_url": "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public NLM Clinical Tables endpoints are open without API keys or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://clinicaltables.nlm.nih.gov/api/rxterms/v3/search?terms=lipitor&ef=STRENGTHS_AND_FORMS,RXCUIS&maxList=5\"",
+    "response_snippet": "[5, [\"Lipitor (Oral Pill)\", \"atorvastatin (Oral Pill)\"], null, [[\"Lipitor (Oral Pill)\"], [\"atorvastatin (Oral Pill)\"]], {\"STRENGTHS_AND_FORMS\":[[\"10 mg Tab\",\"20 mg Tab\"],[\"10 mg Tab\",\"20 mg Tab\",\"40 mg Tab\"]],\"RXCUIS\":[[\"261549\",\"261550\"],[\"83367\",\"83368\",\"83369\"]]}]"
+  },
+  "use_cases": [
+    "autocomplete prescription drug names as a user types",
+    "look up strengths and dosage forms for a selected drug name",
+    "map drug display names to RxCUI identifiers for medication records",
+    "populate medication pickers in clinical or pharmacy workflows"
+  ],
+  "sources": [
+    "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html"
+  ],
+  "researcher_confidence": "medium"
+}

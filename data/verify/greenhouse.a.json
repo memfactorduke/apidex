@@ -1,0 +1,52 @@
+{
+  "id": "greenhouse",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.greenhouse.io/job-board.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.greenhouse.io/job-board.html"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "None for GET endpoints; HTTP Basic Auth using a Job Board API key is required for application-submission POST requests.",
+      "source": "https://developers.greenhouse.io/job-board.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.greenhouse.io/job-board.html"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.greenhouse.io/job-board.html"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Greenhouse Job Board API provides unauthenticated public GET endpoints for boards, jobs, offices, departments, and application fields. It is not entirely read-only or unauthenticated: submitting an application uses POST and requires HTTP Basic Auth with a Job Board API key.",
+      "source": "https://developers.greenhouse.io/job-board.html"
+    }
+  },
+  "notes": "Official 2026 documentation confirms the HTTPS base path, GET listing pattern, JSON data, and public unauthenticated reads. The entry incorrectly characterizes the whole API as read-only and auth-free even though application submission is an authenticated POST. No authoritative Job Board documentation publishing CORS behavior, rate limits, or free-use limits was found."
+}

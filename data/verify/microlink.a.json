@@ -1,0 +1,52 @@
+{
+  "id": "microlink",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://microlink.io/docs/api/basics/endpoint"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://microlink.io/docs/api/getting-started/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://microlink.io/docs/api/basics/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://microlink.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "25 requests per day on the free plan, not 50 requests per day.",
+      "source": "https://microlink.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 25 requests/day. Pro: unlimited daily quota with monthly quotas currently ranging from 46,000 to 420,000 requests; Enterprise supports millions-plus.",
+      "source": "https://microlink.io/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -G \"https://pro.microlink.io\" -H \"x-api-key: YOUR_API_KEY\" -d \"url=https://example.com\" -d \"meta=true\"",
+      "source": "https://microlink.io/docs/api/basics/authentication"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Microlink exposes two REST endpoints: api.microlink.io for unauthenticated free requests and pro.microlink.io for authenticated requests. Both use GET requests with a target URL and parameters supporting metadata, screenshots, PDFs, and structured extraction.",
+      "source": "https://microlink.io/docs/api/basics/endpoint"
+    }
+  },
+  "notes": "Current official pricing contradicts the claimed 50-request free allowance. Authentication is header-based, but current docs require the Pro endpoint; they do not document an apiKey query parameter for REST authentication. No explicit current official CORS statement was located."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "govuk-fuel-prices",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.gov.uk/government/collections/fuel-finder",
+      "source": "https://www.gov.uk/guidance/access-fuel-price-data"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email",
+      "source": "https://www.gov.uk/guidance/access-fuel-price-data"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gov.uk/government/consultations/empowering-drivers-and-boosting-competition-in-the-road-fuel-retail-market/outcome/consultation-on-open-data-scheme-and-ongoing-monitoring-function-for-road-fuel-prices-government-response"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use an authenticated GET request to a documented Fuel Finder API resource URL with OAuth 2.0 client-credentials authentication; fetching the GOV.UK guidance page returns HTML, not fuel-price JSON.",
+      "source": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Fuel Finder is the permanent statutory UK scheme. Motor fuel traders report data to the central service; users can obtain a twice-daily CSV or access current JSON data through an OAuth 2.0-authenticated REST API.",
+      "source": "https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email"
+    }
+  },
+  "notes": "The cited interim retailer-feed scheme closed and its guidance was withdrawn on 1 May 2026. Fuel Finder replaced it. The old retailer links were removed; the replacement offers a twice-daily CSV and a REST API whose access requires GOV.UK One Login and OAuth 2.0 client credentials. No authoritative API quota or CORS policy was located."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "housecanary",
+  "base_url": "https://api.housecanary.com/v2",
+  "docs_url": null,
+  "auth_type": "basic",
+  "free_tier": null,
+  "free_tier_limits": "Not applicable; HouseCanary does not offer a free API tier. Core API access begins on paid plans and incurs usage-based charges.",
+  "rate_limits": "Contractual organization-level limits are shown in each customer's Developer Center; no universal public request limit is stated.",
+  "cors": null,
+  "example_request": "curl -G 'https://api.housecanary.com/v2/property/value' --data-urlencode 'address=43 Valmonte Plaza' --data-urlencode 'zipcode=90274' --user 'API_KEY:API_SECRET'",
+  "example_response_snippet": "[{\"property/value\":{\"api_code\":0,\"api_code_description\":\"ok\",\"result\":{\"value\":{\"price_mean\":1450632.0,\"price_lwr\":1326125.0,\"price_upr\":1575138.0,\"fsd\":0.086}}}}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: /v2; rate_limits: contractual organization limits shown in Developer Center\u2014https://www.housecanary.com/blog/data-explorer-api-quick-start-guide. auth_type: basic using key as username and secret as password; example: corrected to official -u key:secret pattern\u2014https://www.housecanary.com/resources/developer-tools. free_tier_limits: not applicable because API access is paid with usage charges\u2014https://www.housecanary.com/pricing."
+}

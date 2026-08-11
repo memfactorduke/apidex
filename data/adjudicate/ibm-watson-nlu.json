@@ -1,0 +1,15 @@
+{
+  "id": "ibm-watson-nlu",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "30,000 NLU items per month and 1 free custom model. Lite plan service instances are deleted after 30 days of inactivity.",
+  "rate_limits": "Analyze requests: 5 requests/second on Lite and 150 requests/second on Standard. All other requests: 5 requests/second. IBM can increase the Standard analyze limit through a support ticket.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Corrected. IBM lists 30,000 NLU items/month, 1 custom model, and deletion after 30 days of inactivity: https://cloud.ibm.com/catalog/services/natural-language-understanding. rate_limits: Corrected. IBM documents Lite at 5 analyze requests/second, Standard at 150, all other requests at 5/second, with Standard increases available through support: https://cloud.ibm.com/docs/natural-language-understanding?topic=natural-language-understanding-usage-limits"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ipapi-is",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/pricing.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 anonymous requests per client IP per UTC day with a minimal response; 1,000 requests per day for a free account using an API key with the full response.",
+      "source": "https://ipapi.is/developers.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Limits are published: 100 anonymous requests per client IP per UTC day, followed by HTTP 429; free accounts receive 1,000 requests per day, and paid plans have higher published daily quotas.",
+      "source": "https://ipapi.is/developers.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipapi.is/developers.html"
+    }
+  },
+  "notes": "The live endpoint returned JSON during verification, and no shutdown or migration notice was found. The entry's separate auth-details prose should remove \u201cAuthorization header\u201d: current official documentation only describes the key parameter in the query string or JSON request body."
+}

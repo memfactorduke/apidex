@@ -1,0 +1,40 @@
+{
+  "id": "gladia",
+  "status": "operational",
+  "name": "Gladia",
+  "category": "ai-ml",
+  "tagline": "Speech-to-text API for transcription, diarization, and translation.",
+  "description": "Gladia provides an AI speech API for audio and video transcription with speaker diarization, translation, and real-time streaming. Developers send audio to the API and receive structured transcripts with optional multilingual and post-processing features.",
+  "base_url": "https://api.gladia.io",
+  "docs_url": "https://docs.gladia.io/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-gladia-key header (self-serve signup)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.gladia.io/v2/pre-recorded -H 'x-gladia-key: YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"audio_url\":\"https://example.com/audio.mp3\"}'",
+    "response_snippet": "{\"id\":\"...\",\"result_url\":\"https://api.gladia.io/v2/pre-recorded/...\"}"
+  },
+  "use_cases": [
+    "transcribe audio files to text",
+    "diarize speakers in a meeting recording",
+    "translate speech transcripts to another language",
+    "stream real-time speech transcription"
+  ],
+  "sources": [
+    "https://docs.gladia.io/"
+  ],
+  "researcher_confidence": "low"
+}

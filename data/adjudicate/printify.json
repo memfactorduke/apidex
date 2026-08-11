@@ -1,0 +1,15 @@
+{
+  "id": "printify",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "600 requests/minute globally per integration/account; Catalog endpoints: 100 requests/minute; product publishing: 200 requests/30 minutes. Product/mockup generation also has an unspecified daily limit. Error responses may not exceed 5% of requests.",
+  "cors": "no",
+  "example_request": "curl -sS -X GET -H \"Authorization: Bearer YOUR_API_KEY\" -H \"User-Agent: YourApplicationName\" \"https://api.printify.com/v1/shops.json\"",
+  "example_response_snippet": "[\n  {\n    \"id\": 5432,\n    \"title\": \"My new store\",\n    \"sales_channel\": \"My Sales Channel\"\n  },\n  {\n    \"id\": 9876,\n    \"title\": \"My other new store\",\n    \"sales_channel\": \"disconnected\"\n  }\n]",
+  "description": "Printify API lets developers browse catalog data and manage merchant-shop products and orders, including creating and publishing products, submitting orders, calculating shipping costs, receiving webhook events, and supporting fulfillment workflows.",
+  "status": null,
+  "resolution_notes": "rate_limits: corrected per https://developers.printify.com/#api-usage-guidelines. cors: corrected to no; frontend requests are not processed and server-side access is required: https://developers.printify.com/#api-basics. example: corrected to add the mandatory User-Agent header; https://developers.printify.com/#create-a-personal-access-token. description: corrected to remove unsupported inventory-sync wording and distinguish catalog browsing from product/order management; https://developers.printify.com/"
+}

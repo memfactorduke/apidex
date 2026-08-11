@@ -1,0 +1,43 @@
+{
+  "id": "ibm-watsonx",
+  "status": "operational",
+  "name": "IBM watsonx.ai",
+  "category": "ai-ml",
+  "tagline": "Enterprise foundation-model inference with IBM governance tooling.",
+  "description": "IBM watsonx.ai is a platform for building and deploying AI applications using foundation models, with enterprise-grade governance, security, and compliance features. It provides REST APIs for model inference, fine-tuning, and management of AI assets, integrated with IBM Cloud services.",
+  "base_url": "https://us-south.ml.cloud.ibm.com/ml/v1",
+  "docs_url": "https://cloud.ibm.com/apidocs/watsonx-ai",
+  "signup_url": "https://cloud.ibm.com/registration",
+  "auth": {
+    "type": "other",
+    "details": "IBM Cloud IAM bearer token via Authorization: Bearer header. Obtain token using API key with IAM token endpoint (https://iam.cloud.ibm.com/identity/token)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Lite plan with limited monthly capacity (varies by model; check IBM Cloud catalog). Free trial credits often available for new accounts.",
+    "paid_plans": "Pay-as-you-go based on tokens processed; enterprise plans available. Pricing varies by model and region."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2024-05-31\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -H \"Accept: application/json\" -d '{\"model_id\": \"ibm/granite-13b-chat-v2\", \"input\": \"Hello\", \"parameters\": {\"max_new_tokens\": 50}, \"project_id\": \"YOUR_PROJECT_ID\"}'",
+    "response_snippet": "{\"model_id\": \"ibm/granite-13b-chat-v2\", \"created_at\": \"2024-...\", \"results\": [{\"generated_text\": \"Hello! How can I help you today?\", \"generated_token_count\": 12, \"input_token_count\": 2, \"stop_reason\": \"eos_token\"}]}"
+  },
+  "use_cases": [
+    "generate text completions with enterprise foundation models",
+    "run chat-style inference against IBM Granite or third-party models",
+    "score or classify text with hosted models under IBM governance",
+    "embed documents for RAG pipelines in regulated environments",
+    "deploy and call fine-tuned models with project-scoped access control"
+  ],
+  "sources": [
+    "https://cloud.ibm.com/apidocs/watsonx-ai",
+    "https://cloud.ibm.com/docs/watsonx",
+    "https://www.ibm.com/products/watsonx-ai"
+  ],
+  "researcher_confidence": "medium"
+}

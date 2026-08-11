@@ -1,0 +1,52 @@
+{
+  "id": "un-comtrade",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uncomtrade.org/docs/un-comtrade-api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://uncomtrade.org/docs/un-comtrade-api/",
+      "source": "https://uncomtrade.org/docs/un-comtrade-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uncomtrade.org/docs/api-subscription-keys/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uncomtrade.org/docs/subscriptions/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free Basic Individual: up to 500 API calls/day and 100,000 Data API records per call, not 100,000 records/month.",
+      "source": "https://uncomtrade.org/docs/subscriptions/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uncomtrade.org/docs/subscriptions/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": "The documented form places the key in the query string: curl -s \"https://comtradeapi.un.org/data/v1/get/C/A/HS?reporterCode=842&period=2022&partnerCode=0&cmdCode=TOTAL&flowCode=M&maxRecords=5&subscription-key=YOUR_API_KEY\"",
+      "source": "https://uncomtrade.org/docs/un-comtrade-api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "UN Comtrade offers limited keyless preview APIs. Registered free users can obtain a subscription key for broader free API access, while premium subscriptions provide bulk APIs and higher limits.",
+      "source": "https://uncomtrade.org/docs/un-comtrade-api/"
+    }
+  },
+  "notes": "The API is live on documented endpoint paths even though the host root returns 404. The submitted docs URL is obsolete. Official limits are per call and per day, not per month. The sample path and parameters are documented, but official sources found use the subscription-key query parameter and do not verify the stated header. Keyless preview endpoints contradict the claim that all access requires registration."
+}

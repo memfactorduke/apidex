@@ -1,0 +1,15 @@
+{
+  "id": "predicthq",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "No ongoing free tier. The 14-day trial includes API access, limits exports to fewer than 1,000 records, and defaults to 90 days of future event visibility plus historical data. API access ends after the trial unless upgraded.",
+  "rate_limits": "Plan-specific requests per second, measured across a one-second window for the entire organization regardless of IP address or API token. Excess requests may receive HTTP 429 until the next window.",
+  "cors": null,
+  "example_request": "curl -X GET \"https://api.predicthq.com/v1/events/?q=katy%20perry&limit=1\" -H \"Accept: application/json\" -H \"Authorization: Bearer $ACCESS_TOKEN\"",
+  "example_response_snippet": "{\"count\":1,\"overflow\":false,\"previous\":null,\"next\":null,\"results\":[{\"id\":\"3B9mLBbp36VUL4GbAu\",\"title\":\"Katy Perry\",\"description\":\"See Katy Perry in concert [...]\",\"category\":\"concerts\",\"labels\":[\"concert\",\"music\"],\"rank\":73,\"local_rank\":87,\"phq_attendance\":13833}]}",
+  "description": "PredictHQ is an API-first real-world context platform providing structured, deduplicated event data and demand-aware features for forecasting, machine-learning, analytics, and AI systems.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: replace; trial terms: https://docs.predicthq.com/webapp-support/api-plans-pricing-and-billing/learn-about-our-14-day-trial and https://docs.predicthq.com/webapp-support/getting-started/what-happens-at-the-end-of-my-free-trial. rate_limits: replace: https://docs.predicthq.com/api/overview/rate-limits. example: replace: https://docs.predicthq.com/api/events/search-events. description: replace: https://docs.predicthq.com/getting-started/api-quickstart."
+}

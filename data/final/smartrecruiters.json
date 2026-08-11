@@ -1,0 +1,99 @@
+{
+  "id": "smartrecruiters",
+  "status": "operational",
+  "name": "SmartRecruiters",
+  "category": "jobs-careers",
+  "tagline": "Enterprise talent acquisition REST API for jobs, candidates, and hiring workflows",
+  "description": "SmartRecruiters provides a mature public REST API for its enterprise talent acquisition platform. Developers can programmatically manage jobs, candidates, applications, and related hiring data. Authentication uses API keys; docs and endpoint details should be verified against current official sources before production use.",
+  "base_url": "https://api.smartrecruiters.com",
+  "docs_url": "https://developers.smartrecruiters.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and signup flow to be confirmed from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "Not applicable; no free plan is currently listed.",
+    "paid_plans": null
+  },
+  "rate_limits": "Customer API: 10 requests/second and 8 concurrent requests per API user. Exceptions: job-publication POST/DELETE endpoints allow 2 requests/second; GET /candidates and the deprecated Analytics API allow 1 concurrent request.",
+  "example": {
+    "request": "curl -H \"X-SmartToken: YOUR_API_KEY\" \"https://api.smartrecruiters.com/jobs\"",
+    "response_snippet": "{\"content\":[{\"id\":\"...\",\"title\":\"...\",\"status\":\"...\"}],\"totalFound\":0}"
+  },
+  "use_cases": [
+    "list open jobs from a SmartRecruiters company account",
+    "fetch candidate application details by ID",
+    "create or update job postings programmatically",
+    "sync hiring pipeline data into an ATS or HRIS",
+    "search candidates matching role criteria"
+  ],
+  "sources": [
+    "https://developers.smartrecruiters.com/",
+    "https://api.smartrecruiters.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

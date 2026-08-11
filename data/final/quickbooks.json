@@ -1,0 +1,97 @@
+{
+  "id": "quickbooks",
+  "status": "operational",
+  "name": "QuickBooks Online API",
+  "category": "ecommerce-payments",
+  "tagline": "Intuit accounting API for invoices, customers, payments, and sales data",
+  "description": "QuickBooks Online API (Intuit) is the dominant US SMB accounting platform API. Developers use OAuth 2.0 to access company data for invoices, customers, payments, sales receipts, bills, and related accounting entities via REST over HTTPS.",
+  "base_url": "https://quickbooks.api.intuit.com",
+  "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/invoice",
+  "signup_url": "https://developer.intuit.com/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 authorization code flow; Bearer access token in Authorization header. App registration required on Intuit Developer portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Builder tier: no monthly program fee; Core API calls are unmetered and uncharged; up to 500,000 CorePlus calls per workspace per month. Further CorePlus calls are blocked. Sandbox calls are not metered.",
+    "paid_plans": null
+  },
+  "rate_limits": "REST (sandbox and production): 500 requests/minute per realm ID and 10 requests/second per realm ID/app. Batch: 40 requests/minute per realm ID/app and 120/minute per realm ID.",
+  "example": {
+    "request": "curl -X GET 'https://quickbooks.api.intuit.com/v3/company/YOUR_REALM_ID/invoice/123' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' -H 'Accept: application/json'",
+    "response_snippet": "{\"Invoice\":{\"Id\":\"123\",\"SyncToken\":\"0\",\"DocNumber\":\"1001\",\"TotalAmt\":150.00,\"CustomerRef\":{\"value\":\"1\",\"name\":\"Customer\"}}}"
+  },
+  "use_cases": [
+    "create or update a customer invoice in QuickBooks",
+    "list unpaid invoices for a company",
+    "record a customer payment against an invoice",
+    "sync customers and sales receipts from QuickBooks"
+  ],
+  "sources": [
+    "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/invoice"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors",
+      "description"
+    ]
+  }
+}

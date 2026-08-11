@@ -1,0 +1,95 @@
+{
+  "id": "steamgriddb",
+  "status": "operational",
+  "name": "Steam Grid DB API",
+  "category": "games-comics",
+  "tagline": "Community artwork for Steam grids, heroes, logos, and icons",
+  "description": "Steam Grid DB provides a community-driven artwork API for game grids, heroes, logos, and icons used by custom launchers, skins, and Steam library tools. Developers can search games and fetch high-quality assets with filtering by style, dimension, and type.",
+  "base_url": "https://www.steamgriddb.com/api/v2",
+  "docs_url": "https://www.steamgriddb.com/api/v2",
+  "signup_url": "https://www.steamgriddb.com/profile/preferences/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; self-serve from profile preferences after login"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://www.steamgriddb.com/api/v2/search/autocomplete/Portal\"",
+    "response_snippet": "{\"success\":true,\"data\":[{\"id\":620,\"name\":\"Portal\",\"types\":[\"game\"],\"verified\":true}]}"
+  },
+  "use_cases": [
+    "search games by name for artwork matching",
+    "download grid covers for a Steam AppID",
+    "fetch hero banners for a launcher theme",
+    "get logos and icons for game library skins"
+  ],
+  "sources": [
+    "https://www.steamgriddb.com/api/v2"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

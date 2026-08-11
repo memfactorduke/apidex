@@ -1,0 +1,15 @@
+{
+  "id": "libretranslate",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No hosted free tier or free low-volume API key; self-hosting remains free.",
+  "rate_limits": "Hosted Pro: bursts up to 80 translations/minute; Business: bursts up to 200 translations/minute. Higher custom request/minute or character limits are available from support.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier=false and free_tier_limits: the official portal says there is no free trial or free low-volume API key; users may self-host instead (https://portal.libretranslate.com/). rate_limits: the portal publishes Pro at 80 and Business at 200 translations/minute, with custom higher limits available (https://portal.libretranslate.com/). cors=yes: current official source adds Access-Control-Allow-Origin: * and permits GET and POST (https://github.com/LibreTranslate/LibreTranslate/blob/main/libretranslate/app.py)."
+}

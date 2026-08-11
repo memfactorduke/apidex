@@ -1,0 +1,52 @@
+{
+  "id": "xero",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/documentation/api/accounting/organisation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/documentation/api/accounting/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/documentation/guides/oauth2/overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Starter tier: no charge, maximum 5 connections, 1,000 API calls per day per organisation, and unlimited data access.",
+      "source": "https://developer.xero.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "5 concurrent calls per tenant; 60 calls per minute per tenant; 1,000 calls per day per tenant on Starter or 5,000 on higher tiers; 10,000 calls per minute app-wide.",
+      "source": "https://developer.xero.com/documentation/best-practices/api-call-efficiencies/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.xero.com/documentation/api/accounting/organisation"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Xero Accounting API provides OAuth 2.0 access to invoices, contacts, payments, bank transactions, and reports across connected organisations. It does not expose unreconciled bank-statement data or support bank-statement reconciliation through the Accounting API.",
+      "source": "https://developer.xero.com/documentation/api/accounting/bankstatements"
+    }
+  },
+  "notes": "The API is operational, but the entry incorrectly says rate limits are unpublished and omits known Starter limits. It also overstates reconciliation access: Xero says unreconciled bank-statement data is not exposed and reconciliation must occur inside Xero."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "screenshotone",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://screenshotone.com/docs/getting-started/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://screenshotone.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://screenshotone.com/docs/api-keys/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://screenshotone.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 free screenshots per month",
+      "source": "https://screenshotone.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published plan limits are 40 requests/minute for Basic, 80 for Growth, and 150 for Scale.",
+      "source": "https://screenshotone.com/pricing/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://screenshotone.com/docs/getting-started/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://screenshotone.com/docs/options/"
+    }
+  },
+  "notes": "The official status page currently reports all services online. Although auth_type is correctly apiKey, auth.details is misleading: the secret key must not be sent as a query parameter; it is used locally to generate a signature, while access_key authenticates requests."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "urlhaus",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlhaus-api.abuse.ch/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlhaus-api.abuse.ch/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlhaus-api.abuse.ch/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlhaus.abuse.ch/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The Community API is free under abuse.ch fair-use principles. Commercial or for-profit use may require a paid enhanced-API subscription; the official wording does not say that all commercial use necessarily requires payment or permission.",
+      "source": "https://urlhaus.abuse.ch/api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Some endpoint-specific limits are published: database dumps should not be fetched more often than every 5 minutes, and recent-URL and recent-payload queries return at most 1,000 entries. No single global requests-per-minute quota is stated.",
+      "source": "https://urlhaus.abuse.ch/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlhaus-api.abuse.ch/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "URLhaus is a malware-URL sharing platform operated by abuse.ch and Spamhaus, with APIs for querying, downloading, and submitting URLs directly used to distribute malware. Phishing sites and phishing kits are explicitly outside its submission scope.",
+      "source": "https://urlhaus.abuse.ch/api/"
+    }
+  },
+  "notes": "The official API documentation is live and documents the v1 URL-query endpoint. The entry incorrectly includes phishing in both its description and a use case; URLhaus explicitly says phishing is not malware and should not be submitted. Commercial-use and rate-limit language also needs qualification."
+}

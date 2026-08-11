@@ -1,0 +1,52 @@
+{
+  "id": "render",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://render.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.render.com/reference/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.render.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://render.com/docs/free"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits include 750 free web-service instance hours per workspace each month; one free Postgres database per workspace with 1 GB storage and a 30-day lifetime; and one nonpersistent free Key Value instance per workspace.",
+      "source": "https://render.com/docs/free"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published endpoint-specific limits include 20/hour for listed service-management operations, 10/minute/service for deploy hooks, 50/hour for custom-domain operations, 100/minute for job creation, 30/minute for log reads and other writes, and 400/minute for other GET requests.",
+      "source": "https://api-docs.render.com/reference/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.render.com/reference/list-services"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://render.com/docs/api"
+    }
+  },
+  "notes": "The API and documentation are operational. The example request is valid under the request-only criterion, but its response snippet is inaccurate: the current paginated response is an array of objects containing sibling cursor and service fields, not an object containing a services array. Render does not appear to publish an official CORS policy for this API."
+}

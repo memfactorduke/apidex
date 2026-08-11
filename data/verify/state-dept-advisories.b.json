@@ -1,0 +1,52 @@
+{
+  "id": "state-dept-advisories",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://travel.state.gov/en.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://travel.state.gov/en/international-travel/travel-advisories.html"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -sS 'https://travel.state.gov/en/international-travel/travel-advisories.html'",
+      "source": "https://travel.state.gov/en/international-travel/travel-advisories.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://travel.state.gov/en/international-travel/travel-advisories.html"
+    }
+  },
+  "notes": "The legacy docs URL currently redirects to the canonical advisory page, so the observed 403 appears access-control related rather than a dead URL. The example is wrong because curl lacks redirect following yet claims advisory HTML. No official JSON endpoint, pricing tier, quota, rate-limit, or CORS documentation was found; the cataloged machine-readable feed is XML."
+}

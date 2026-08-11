@@ -1,0 +1,52 @@
+{
+  "id": "checkout-com",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-reference.checkout.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checkout.com/docs/developer-resources/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-reference.checkout.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checkout.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checkout.com/docs/developer-resources/api"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-reference.checkout.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checkout.com/docs/developer-resources/api"
+    }
+  },
+  "notes": "All fields checked against official Checkout.com docs and API reference. Base URL, Bearer auth, and payments endpoints match current docs; free tier false is appropriate for a merchant payments processor; rate limits not publicly published; CORS unknown is correct for server-side API keys."
+}

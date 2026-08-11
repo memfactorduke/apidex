@@ -1,0 +1,41 @@
+{
+  "id": "data-gov-sg",
+  "status": "operational",
+  "name": "data.gov.sg API",
+  "category": "government-open-data",
+  "tagline": "Singapore government open data for transport, environment, and the economy",
+  "description": "Public REST APIs from Singapore's national open-data platform covering real-time transport, weather, environment, and economic datasets. Developers can query many endpoints without a key; some collections use CKAN-style datastore APIs and dataset-specific paths under api.data.gov.sg.",
+  "base_url": "https://api.data.gov.sg/v1",
+  "docs_url": "https://data.gov.sg/developer",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Many real-time endpoints require no authentication. Dataset/datastore APIs may use CKAN resource IDs; confirm per-dataset docs for any key requirements."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public open data; no paid plans published for core APIs",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://api.data.gov.sg/v1/environment/2-hour-weather-forecast'",
+    "response_snippet": "{\"api_info\":{\"status\":\"healthy\"},\"area_metadata\":[{\"name\":\"Ang Mo Kio\",\"label_location\":{\"latitude\":1.375,\"longitude\":103.839}}],\"items\":[{\"update_timestamp\":\"...\",\"forecasts\":[{\"area\":\"Ang Mo Kio\",\"forecast\":\"Partly Cloudy (Day)\"}]}]}"
+  },
+  "use_cases": [
+    "get 2-hour weather forecast for Singapore areas",
+    "fetch real-time air quality (PSI) readings",
+    "query traffic images or transport datasets",
+    "pull open economic or population statistics by resource ID"
+  ],
+  "sources": [
+    "https://data.gov.sg/developer",
+    "https://api-open.data.gov.sg/v1/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "metalpriceapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests/month on the Free plan, with daily updates. Basic is a paid plan with 10,000 requests/month and 10-minute updates.",
+      "source": "https://metalpriceapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://metalpriceapi.com/"
+    }
+  },
+  "notes": "The official status page reports the API online. Although auth_type is correctly apiKey, the auth details are partly wrong: the documented header is X-API-KEY, not Authorization. The official signup path is /register. Free-plan data is daily, non-commercial, and requires attribution."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "codeship",
+  "status": "operational",
+  "name": "CloudBees CodeShip API",
+  "category": "dev-tools",
+  "tagline": "REST API for CloudBees CodeShip CI project and build management",
+  "description": "CloudBees CodeShip provides a REST API for managing CI projects, builds, deployments, and team resources on CodeShip Basic and Pro. Developers authenticate to obtain a short-lived token, then call versioned endpoints under api.codeship.com to list projects, trigger builds, inspect build status, and automate pipeline workflows for teams still on CodeShip.",
+  "base_url": "https://api.codeship.com/v2",
+  "docs_url": "https://docs.cloudbees.com/docs/cloudbees-codeship/latest/api-overview/",
+  "signup_url": "https://app.codeship.com/",
+  "auth": {
+    "type": "other",
+    "details": "POST /auth with HTTP Basic (email:password) returns a short-lived access_token; send as Authorization: Bearer <token> on subsequent requests. Token expires (typically ~1 hour)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown \u2014 API access tied to CodeShip product plan; free API quota not separately published",
+    "paid_plans": "CodeShip Basic and Pro subscription plans; API included with product access"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST -u \"YOUR_EMAIL:YOUR_PASSWORD\" https://api.codeship.com/v2/auth",
+    "response_snippet": "{\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...\",\"expires_at\":1234567890,\"organizations\":[{\"uuid\":\"...\",\"name\":\"...\"}]}"
+  },
+  "use_cases": [
+    "authenticate and list CodeShip organizations for a user",
+    "list CI projects in an organization",
+    "trigger a new build for a project",
+    "get build status and details for a pipeline",
+    "list recent builds for a project"
+  ],
+  "sources": [
+    "https://docs.cloudbees.com/docs/cloudbees-codeship/latest/api-overview/",
+    "https://docs.cloudbees.com/docs/cloudbees-codeship/latest/api-overview/authentication",
+    "https://docs.cloudbees.com/docs/cloudbees-codeship/latest/basic-builds-and-configuration/codeship-api"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "google-cloud-translation",
+  "status": "operational",
+  "name": "Google Cloud Translation",
+  "category": "ai-ml",
+  "tagline": "Neural machine translation for app localization and multilingual content.",
+  "description": "Google Cloud Translation is a neural machine translation API that translates text between languages for apps, websites, and content workflows. It offers Basic (v2) and Advanced (v3) APIs with support for batch translation, glossaries, and custom models. Developers call REST endpoints under translation.googleapis.com using API keys or OAuth/service accounts.",
+  "base_url": "https://translation.googleapis.com",
+  "docs_url": "https://cloud.google.com/translate/docs",
+  "signup_url": "https://console.cloud.google.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query param key= or OAuth2/service account Bearer token; enable Cloud Translation API in Google Cloud Console."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://translation.googleapis.com/language/translate/v2?key=YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"q\":\"Hello world\",\"target\":\"es\",\"source\":\"en\"}'",
+    "response_snippet": "{\"data\":{\"translations\":[{\"translatedText\":\"Hola mundo\",\"detectedSourceLanguage\":\"en\"}]}}"
+  },
+  "use_cases": [
+    "translate user-facing strings for app localization",
+    "detect language of incoming user text",
+    "batch-translate product catalog descriptions",
+    "localize help center articles into multiple languages",
+    "translate chat messages in real time"
+  ],
+  "sources": [
+    "https://cloud.google.com/translate/docs"
+  ],
+  "researcher_confidence": "low"
+}

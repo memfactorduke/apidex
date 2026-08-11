@@ -1,0 +1,52 @@
+{
+  "id": "openxbl",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.xbl.io/api/v2",
+      "source": "https://xbl.io/blog/getting-started-xbox-live-api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://xbl.io/console",
+      "source": "https://xbl.io/console"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/OpenXBL/Docs/main/openapi.yaml"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://xbl.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "150 requests per hour, permanently, with no credit card required",
+      "source": "https://xbl.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published hourly limits: Free 150, Small 500, Medium 2,500, Large 5,000, and Enterprise custom. Limits reset hourly; excess requests return HTTP 429. Separate Microsoft per-user/per-title throttling can also apply.",
+      "source": "https://xbl.io/pricing"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://xbl.io/getting-started"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://api.xbl.io/api/v2/account\" -H \"X-Authorization: YOUR_API_KEY\" -H \"Accept: application/json\"",
+      "source": "https://xbl.io/blog/getting-started-xbox-live-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://xbl.io/about"
+    }
+  },
+  "notes": "OpenXBL appears operational and has current 2026 pricing and terms pages. The entry uses the wrong API hostname, points to a dead documentation route, and incorrectly says quotas are unpublished and CORS is unknown. The working Swagger console is the best replacement documentation URL."
+}

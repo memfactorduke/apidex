@@ -1,0 +1,44 @@
+{
+  "id": "google-cloud-speech",
+  "status": "operational",
+  "name": "Google Cloud Speech-to-Text",
+  "category": "ai-ml",
+  "tagline": "Production speech recognition with streaming and many languages",
+  "description": "Google Cloud Speech-to-Text converts audio to text using machine learning models. It supports batch and streaming recognition, many languages and dialects, speaker diarization, word-level timestamps, and automatic punctuation. Developers call the Cloud Speech-to-Text API over HTTPS (and gRPC) under speech.googleapis.com with Google Cloud authentication.",
+  "base_url": "https://speech.googleapis.com/v1",
+  "docs_url": "https://cloud.google.com/speech-to-text/docs",
+  "signup_url": "https://console.cloud.google.com/apis/library/speech.googleapis.com",
+  "auth": {
+    "type": "other",
+    "details": "Google Cloud OAuth2 access token or service account credentials (Bearer token). API keys are also supported for some REST methods when restricted. Enable Speech-to-Text API in a GCP project."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "grpc"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X POST \"https://speech.googleapis.com/v1/speech:recognize?key=YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"config\":{\"encoding\":\"LINEAR16\",\"sampleRateHertz\":16000,\"languageCode\":\"en-US\"},\"audio\":{\"uri\":\"gs://cloud-samples-data/speech/brooklyn_bridge.raw\"}}'",
+    "response_snippet": "{\"results\":[{\"alternatives\":[{\"transcript\":\"how old is the Brooklyn Bridge\",\"confidence\":0.98}]}]}"
+  },
+  "use_cases": [
+    "transcribe a short audio file to text",
+    "stream microphone audio for live captions",
+    "detect spoken language in an audio clip",
+    "get word-level timestamps for subtitles",
+    "diarize speakers in a meeting recording"
+  ],
+  "sources": [
+    "https://cloud.google.com/speech-to-text/docs",
+    "https://cloud.google.com/speech-to-text/docs/reference/rest",
+    "https://cloud.google.com/speech-to-text/pricing"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "itunes-search",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://performance-partners.apple.com/search-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://performance-partners.apple.com/search-api"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://performance-partners.apple.com/search-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://performance-partners.apple.com/search-api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Apple's Search API searches the iTunes Store and Apple Books Store for books, movies, podcasts, music, music videos, audiobooks, and TV shows, and supports ID-based lookups. It returns JSON metadata and promotional assets subject to Apple's usage terms.",
+      "source": "https://performance-partners.apple.com/search-api"
+    }
+  },
+  "notes": "Apple's current page confirms the endpoint, unauthenticated request structure, JSON responses, supported parameters, and approximately 20 calls/minute. It does not document pricing, paid-plan availability, CORS, or what happens after exceeding the limit. The description incorrectly characterizes the source as the Apple Music catalog; Apple documents the iTunes Store and Apple Books Store."
+}

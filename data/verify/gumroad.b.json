@@ -1,0 +1,52 @@
+{
+  "id": "gumroad",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gumroad.com/help/article/280-create-application-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gumroad.com/api"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://gumroad.com/help/article/280-create-application-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gumroad.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://gumroad.com/help/article/76-license-keys.html"
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gumroad.com/api"
+    }
+  },
+  "notes": "Gumroad uses OAuth 2 access tokens, not API-key authentication. Its official license documentation explicitly permits browser API requests, so CORS is supported rather than unknown. No monthly fee exists, but sales incur current transaction fees. Also, Gumroad says product creation and content upload via API are unavailable, contradicting the entry's separate create-product use case."
+}

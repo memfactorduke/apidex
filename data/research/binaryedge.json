@@ -1,0 +1,41 @@
+{
+  "id": "binaryedge",
+  "status": "operational",
+  "name": "BinaryEdge",
+  "category": "security-identity",
+  "tagline": "Internet-wide scanning and threat-intel API for host, CVE, and service exposure research.",
+  "description": "BinaryEdge provides an Internet-wide scanning and threat-intelligence API for researching host, CVE, and service exposure. Developers can use it to gather data on open ports, services, and vulnerabilities across the internet, supporting security research and threat analysis.",
+  "base_url": "https://api.binaryedge.io/v2",
+  "docs_url": "https://docs.binaryedge.io/",
+  "signup_url": "https://app.binaryedge.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Key header, self-serve signup at app.binaryedge.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier available with limited requests; exact limits vary by plan (see pricing page)",
+    "paid_plans": "Paid plans available with higher rate limits and more features"
+  },
+  "rate_limits": "Varies by plan; free tier has lower limits",
+  "example": {
+    "request": "curl -H \"X-Key: YOUR_API_KEY\" \"https://api.binaryedge.io/v2/query/ip/8.8.8.8\"",
+    "response_snippet": "{\"total\":1,\"query\":\"8.8.8.8\",\"events\":[{\"origin\":{\"type\":\"service-simple\",\"module\":\"grabber\",\"ts\":1234567890},\"target\":{\"ip\":\"8.8.8.8\",\"port\":53,\"protocol\":\"tcp\"}}]}"
+  },
+  "use_cases": [
+    "look up open ports and services on an IP address",
+    "search for hosts exposing a specific service or CVE",
+    "get threat intelligence on internet-facing assets",
+    "research service banners and software versions at scale"
+  ],
+  "sources": [
+    "https://docs.binaryedge.io/",
+    "https://www.binaryedge.io/"
+  ],
+  "researcher_confidence": "medium"
+}

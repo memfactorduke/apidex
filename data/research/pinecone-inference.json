@@ -1,0 +1,40 @@
+{
+  "id": "pinecone-inference",
+  "status": "operational",
+  "name": "Pinecone Inference",
+  "category": "ai-ml",
+  "tagline": "Managed embeddings and reranking via Pinecone Inference API",
+  "description": "Pinecone Inference provides managed embedding generation and reranking through the Pinecone API, letting developers convert text into vectors and rerank search results without running their own models. It integrates with Pinecone's vector database for RAG and semantic search pipelines.",
+  "base_url": "https://api.pinecone.io",
+  "docs_url": "https://docs.pinecone.io/guides/inference/understanding-inference",
+  "signup_url": "https://app.pinecone.io",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Api-Key header (or Authorization Bearer); self-serve signup at app.pinecone.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://api.pinecone.io/embed\" -H \"Api-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -H \"X-Pinecone-API-Version: 2025-01\" -d '{\"model\":\"multilingual-e5-large\",\"inputs\":[\"What is the capital of France?\"]}'",
+    "response_snippet": "{\"model\":\"multilingual-e5-large\",\"data\":[{\"values\":[0.1,0.2]}],\"usage\":{\"total_tokens\":10}}"
+  },
+  "use_cases": [
+    "generate text embeddings for semantic search",
+    "rerank retrieval results for RAG",
+    "embed documents before upserting to a Pinecone index",
+    "batch-embed query strings for similarity search"
+  ],
+  "sources": [
+    "https://docs.pinecone.io/guides/inference/understanding-inference"
+  ],
+  "researcher_confidence": "low"
+}

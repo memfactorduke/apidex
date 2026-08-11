@@ -1,0 +1,52 @@
+{
+  "id": "gridstatus",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gridstatus.io/developers"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.gridstatus.io/",
+      "source": "https://docs.gridstatus.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gridstatus.io/developers"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gridstatus.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "API access to 50 popular datasets, with up to 250 API requests/month and 500,000 rows/month.",
+      "source": "https://www.gridstatus.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published plan quotas include 250 requests/month on Free and 1,000 requests/month on Starter; Enterprise limits are custom.",
+      "source": "https://www.gridstatus.io/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gridstatus.io/developers"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gridstatus.io/developers/concepts/recipes"
+    }
+  },
+  "notes": "The API is operational and its base URL and curl request match current official documentation. The submitted docs URL is obsolete; the canonical documentation is on docs.gridstatus.io. Current pricing publishes concrete free and paid API quotas, so both unknown free-tier limits and not-published rate limits are inaccurate."
+}

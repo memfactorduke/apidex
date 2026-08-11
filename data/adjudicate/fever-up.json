@@ -1,0 +1,15 @@
+{
+  "id": "fever-up",
+  "base_url": "https://data-search.apigw.feverup.com/mcp/",
+  "docs_url": "https://developer.feverup.com/en/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS -X POST 'https://data-search.apigw.feverup.com/mcp/' -H 'Authorization: Bearer YOUR_OAUTH_ACCESS_TOKEN' -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -H 'MCP-Protocol-Version: 2025-06-18' --data-raw '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"search_events\",\"arguments\":{\"city_code\":\"MAD\",\"locale\":\"en\",\"page_size\":10}}}'",
+  "example_response_snippet": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"count\\\":10,\\\"next\\\":1,\\\"previous\\\":null,\\\"results\\\":[{\\\"id\\\":\\\"...\\\",\\\"name\\\":\\\"...\\\",\\\"price\\\":\\\"From 25.00 EUR\\\",\\\"location\\\":\\\"Madrid, Spain\\\"}]}\"}]}}",
+  "description": "Fever provides a public OAuth 2.0 MCP server for searching cities, events, activities, and experiences with real-time data. Fever also offers approved business partners API access for catalog integration, real-time availability and pricing, and booking management. The MCP service is currently free; broader transactional integrations require partner onboarding.",
+  "status": null,
+  "resolution_notes": "base_url: replaced with Fever's published MCP endpoint. docs_url: replaced the 404 URL with the current developer portal. example: replaced undocumented /v1/plans with the documented search_events MCP tool and OAuth 2.0. Evidence: https://developer.feverup.com/en/ description: corrected to distinguish public MCP discovery from approved-partner transactional access. Evidence: https://business.feverup.com/en/partner-programs/experience-distribution-platform/"
+}

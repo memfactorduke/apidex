@@ -1,0 +1,52 @@
+{
+  "id": "buildkite",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/rest-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/rest-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/managing-api-tokens"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/rest-api#rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/rest-api/user"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/rest-api"
+    }
+  },
+  "notes": "Verified against official Buildkite REST API docs, token docs, user endpoint, and pricing (2026). Base URL, Bearer token auth, free plan, rate-limit headers, and GET /v2/user example match docs. CORS not documented publicly."
+}

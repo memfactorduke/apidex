@@ -1,0 +1,52 @@
+{
+  "id": "deps-dev",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/v3/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.deps.dev/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.deps.dev/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/v3/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/google/deps.dev/issues/33"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "* (Access-Control-Allow-Origin: *)",
+      "source": "https://api.deps.dev/v3/systems/npm/packages/react"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/v3/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/v3/"
+    }
+  },
+  "notes": "API is live (HTTP 200 on GetPackage for npm/react). Official blog: free, unauthenticated, no API key. Docs: base https://api.deps.dev, JSON over HTTP, ecosystems GO/RUBYGEMS/NPM/CARGO/MAVEN/PYPI/NUGET. No published free-tier quotas or formal rate limits (maintainers note 429 when overloaded). Live response sends Access-Control-Allow-Origin: *, so cors \"unknown\" is wrong."
+}

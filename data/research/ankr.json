@@ -1,0 +1,40 @@
+{
+  "id": "ankr",
+  "status": "operational",
+  "name": "Ankr",
+  "category": "crypto",
+  "tagline": "Multi-chain public RPC and Advanced API for balances, NFTs, and tokens",
+  "description": "Ankr provides free and premium multi-chain JSON-RPC endpoints plus an Advanced API for token balances, NFT data, and blockchain queries across many networks.",
+  "base_url": "https://rpc.ankr.com",
+  "docs_url": "https://www.ankr.com/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Public RPC works without a key at path endpoints; Advanced API and higher limits use an API key from the Ankr dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://rpc.ankr.com/eth -H 'Content-Type: application/json' -d '{\"jsonrpc\":\"2.0\",\"method\":\"eth_blockNumber\",\"params\":[],\"id\":1}'",
+    "response_snippet": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"0x12a05f1\"}"
+  },
+  "use_cases": [
+    "call eth_blockNumber on Ethereum via public RPC",
+    "query token balances across chains",
+    "fetch NFT metadata for a wallet",
+    "send multi-chain JSON-RPC requests"
+  ],
+  "sources": [
+    "https://www.ankr.com/docs/"
+  ],
+  "researcher_confidence": "low"
+}

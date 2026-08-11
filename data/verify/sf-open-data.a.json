@@ -1,0 +1,52 @@
+{
+  "id": "sf-open-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.socrata.com/hc/en-us/articles/202949298-Where-do-I-find-the-SODA-API-Endpoint"
+    },
+    "docs_url": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Public SODA 2.1 reads require no authentication; an optional app token identifies the application but is not itself authentication. Current SODA 3 queries require an app token or authentication through HTTP Basic or OAuth 2.0.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.sfgov.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "App-token requests are currently not throttled unless abusive or malicious. Anonymous SODA 2.1 requests use a lower, unspecified shared-IP throttling pool.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No fixed numeric limit is stated, but Socrata publishes its policy: app-token requests are generally unthrottled except for abusive or malicious use, while anonymous requests have lower shared-IP throttling.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is supported for read-only access to public datasets; Socrata drops authentication and authorization from CORS requests.",
+      "source": "https://dev.socrata.com/docs/cors-and-jsonp.html"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.sfgov.org/resource/wg3w-h783.json?$limit=5"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SF OpenData's official description says the portal contains hundreds of city datasets, not thousands.",
+      "source": "https://data.sfgov.org/about"
+    }
+  },
+  "notes": "The legacy SODA 2.1 /resource endpoint and example remain operational and supported. However, the portal now defaults to SODA 3 at /api/v3/views/{id}/query.json, where most queries require app-token identification or user authentication. The directory entry also misclassifies an app token as authentication and overlooks published throttling and CORS policies."
+}

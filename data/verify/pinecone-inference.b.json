@@ -1,0 +1,52 @@
+{
+  "id": "pinecone-inference",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pinecone.io/reference/api/2026-04/inference/generate-embeddings"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.pinecone.io/reference/api/introduction",
+      "source": "https://docs.pinecone.io/reference/api/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pinecone.io/reference/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pinecone.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Starter includes 5,000,000 embedding tokens per month per model; bge-reranker-v2-m3 and pinecone-rerank-v0 each allow 500 rerank requests per month.",
+      "source": "https://docs.pinecone.io/reference/api/database-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Inference is limited to 100 requests/second and 2,000 requests/minute per project. Starter embedding and reranking limits are also model-specific.",
+      "source": "https://docs.pinecone.io/reference/api/database-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Direct cross-origin browser requests can fail because Pinecone responses may omit the Access-Control-Allow-Origin header.",
+      "source": "https://docs.pinecone.io/troubleshooting/cors-issues"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"https://api.pinecone.io/embed\" -H \"Api-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -H \"X-Pinecone-Api-Version: 2026-04\" -d '{\"model\":\"multilingual-e5-large\",\"parameters\":{\"input_type\":\"query\"},\"inputs\":[{\"text\":\"What is the capital of France?\"}]}'",
+      "source": "https://docs.pinecone.io/reference/api/2026-04/inference/generate-embeddings"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pinecone.io/reference/api/introduction"
+    }
+  },
+  "notes": "The submitted guide URL now redirects to a general overview. The example uses an obsolete API version, supplies strings instead of input objects, and omits multilingual-e5-large's required input_type parameter. Api-Key is correct for Inference; Bearer access tokens documented elsewhere are for Admin API operations."
+}

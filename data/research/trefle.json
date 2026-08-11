@@ -1,0 +1,41 @@
+{
+  "id": "trefle",
+  "status": "operational",
+  "name": "Trefle",
+  "category": "agriculture",
+  "tagline": "Plant species encyclopedia with taxonomy and distribution data",
+  "description": "Trefle is a plant species encyclopedia API providing taxonomic data, growth habits, and geographic distribution for plants. It enables developers to search and retrieve structured botanical information for gardening, agriculture, and environmental applications.",
+  "base_url": "https://trefle.io/api/v1",
+  "docs_url": "https://docs.trefle.io/",
+  "signup_url": "https://trefle.io/users/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via query parameter token=YOUR_API_KEY or Authorization header; free self-serve signup required"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://trefle.io/api/v1/plants?token=YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[{\"id\":190129,\"common_name\":\"beach strawberry\",\"slug\":\"fragaria-chiloensis\",\"scientific_name\":\"Fragaria chiloensis\",\"year\":1768,\"bibliography\":\"Sp. Pl.: 495 (1753)\",\"author\":\"(L.) Mill.\",\"status\":\"accepted\",\"rank\":\"species\",\"family_common_name\":\"Rose family\",\"genus_id\":2500,\"image_url\":\"https://bs.plantnet.org/image/o/...\",\"synonyms\":[],\"genus\":\"Fragaria\",\"family\":\"Rosaceae\",\"links\":{\"self\":\"/api/v1/species/fragaria-chiloensis\",\"plant\":\"/api/v1/plants/fragaria-chiloensis\",\"genus\":\"/api/v1/genus/fragaria\"}}],\"links\":{\"self\":\"/api/v1/plants\",\"first\":\"/api/v1/plants?page=1\",\"next\":\"/api/v1/plants?page=2\",\"last\":\"/api/v1/plants?page=100\"},\"meta\":{\"total\":391910}}"
+  },
+  "use_cases": [
+    "look up plant species by scientific or common name",
+    "get plant taxonomy genus and family for a species",
+    "retrieve growth habit and distribution data for a plant",
+    "search plants by filters for gardening apps"
+  ],
+  "sources": [
+    "https://docs.trefle.io/",
+    "https://trefle.io/"
+  ],
+  "researcher_confidence": "low"
+}

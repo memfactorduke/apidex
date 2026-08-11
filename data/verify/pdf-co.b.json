@@ -1,0 +1,52 @@
+{
+  "id": "pdf-co",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pdf.co/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://apidocs.pdf.co/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pdf.co/api"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false; PDF.co offers a time-limited free trial, not a permanent free tier",
+      "source": "https://pdf.co/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "10,000 credits for a 1-month free trial",
+      "source": "https://pdf.co/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developer.pdf.co/api/response-codes"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pdf.co/api/account-balance-info"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.pdf.co/"
+    }
+  },
+  "notes": "Current balance responses use remainingCredits, not the entry's {credits,error} snippet; the example verdict follows the instructed request-only scope. apidocs.pdf.co redirects to current documentation. Current docs disclose HTTP 429 but no numeric cap; a removed older KB page stated 6,000 requests/minute, so the current limit is unverifiable. Pricing lists paid plans plus a 10,000-credit, one-month trial."
+}

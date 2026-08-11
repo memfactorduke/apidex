@@ -1,0 +1,15 @@
+{
+  "id": "openxbl",
+  "base_url": "https://api.xbl.io/api/v2",
+  "docs_url": "https://xbl.io/console",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "150 requests per hour indefinitely; no credit card required.",
+  "rate_limits": "Free 150/hour; Small 500/hour; Medium 2,500/hour; Large 5,000/hour; Enterprise custom. Limits reset hourly; excess returns HTTP 429. Microsoft per-user/per-title FGRL also applies.",
+  "cors": "yes",
+  "example_request": "curl -s \"https://api.xbl.io/api/v2/account\" -H \"X-Authorization: YOUR_API_KEY\" -H \"Accept: application/json\"",
+  "example_response_snippet": "{\"profileUsers\":[{\"id\":\"2533274798129181\",\"settings\":[{\"id\":\"Gamertag\",\"value\":\"xTACTICSx\"},{\"id\":\"Gamerscore\",\"value\":\"19165\"}]}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url=https://api.xbl.io/api/v2 (https://xbl.io/blog/getting-started-xbox-live-api); docs_url=https://xbl.io/console, the Swagger console (https://xbl.io/console); free_tier_limits=150/hour, permanent/no card (https://xbl.io/pricing); rate_limits=published tiers, hourly reset, 429, plus Microsoft FGRL (https://xbl.io/pricing); cors=yes (https://xbl.io/getting-started); example=corrected account curl; response follows the official profileUsers schema (https://raw.githubusercontent.com/OpenXBL/Docs/main/openapi.yaml)."
+}

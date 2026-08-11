@@ -1,0 +1,15 @@
+{
+  "id": "memfault",
+  "base_url": null,
+  "docs_url": "https://docs.memfault.com/api",
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Developer plan is free for eligible teams building on Nordic low-power wireless solutions: up to 10 development devices; beyond 10 development and/or production devices is pay-as-you-go.",
+  "rate_limits": "Published, endpoint-specific: heartbeats and Latest Release are each 100/device/24h; Custom Data Recordings are 1/device/24h and max 16 MB; session limits depend on plan; other payload-specific limits apply.",
+  "cors": null,
+  "example_request": "curl --fail --silent --show-error -H \"Accept: application/json\" -H \"Authorization: Bearer $ORGANIZATION_AUTH_TOKEN\" \"https://api.memfault.com/api/v0/organizations/$ORG_SLUG/projects\"",
+  "example_response_snippet": "{\"data\":[{\"api_key\":\"b8e7e2c93e944440b4245e78c9b3e082\",\"count_devices\":0,\"created_date\":\"2019-05-21T21:08:54.32353+00:00\",\"id\":13,\"name\":\"Smart Sink\",\"os\":\"FreeRTOS\",\"platform\":\"nRF52\",\"slug\":\"smart-sink\",\"updated_date\":\"2019-05-21T21:08:54.396858+00:00\"}],\"paging\":{\"item_count\":1,\"page\":1,\"page_count\":1,\"per_page\":100,\"total_count\":1}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: replace with API index (https://docs.memfault.com/api). free_tier: true; Developer is Free/month (https://memfault.com/pricing/). free_tier_limits: Nordic eligibility, 10-device cap, then pay-as-you-go (https://memfault.com/pricing/). rate_limits: published per operation (https://docs.memfault.com/docs/platform/rate-limiting). example: official bearer-token List Projects curl and sample response (https://docs.memfault.com/docs/ci/authentication; https://docs.memfault.com/api/list-projects)."
+}

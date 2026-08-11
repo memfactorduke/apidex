@@ -1,0 +1,41 @@
+{
+  "id": "careerjet",
+  "status": "operational",
+  "name": "Careerjet",
+  "category": "jobs-careers",
+  "tagline": "International job search API with affiliate monetization",
+  "description": "Careerjet provides a long-running international job search API that aggregates listings across many country sites and pairs them with an affiliate program for monetization. Developers can query jobs by keywords, location, and filters, then deep-link users into Careerjet result pages. Suitable for job boards, career tools, and agent workflows that need multi-country job search without building a full scrape pipeline.",
+  "base_url": "https://public.api.careerjet.net",
+  "docs_url": "https://www.careerjet.com/partners/api/",
+  "signup_url": "https://www.careerjet.com/partners/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Affiliate ID (affid) required as a query parameter on each request; obtained via Careerjet partners/affiliate signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://public.api.careerjet.net/search?affid=YOUR_API_KEY&keywords=python+developer&location=London&user_ip=1.2.3.4&user_agent=Mozilla/5.0&pagesize=10\"",
+    "response_snippet": "{\"type\":\"JOBS\",\"hits\":1234,\"response_time\":0.05,\"pages\":124,\"jobs\":[{\"title\":\"Python Developer\",\"location\":\"London\",\"company\":\"Example Corp\",\"date\":\"2026-08-01\",\"description\":\"...\",\"url\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "search jobs by keyword and city across countries",
+    "paginate international job results for a career tool",
+    "build affiliate job links with country-specific locales",
+    "filter openings by location for relocation or remote roles"
+  ],
+  "sources": [
+    "https://www.careerjet.com/partners/api/",
+    "https://public.api.careerjet.net"
+  ],
+  "researcher_confidence": "medium"
+}

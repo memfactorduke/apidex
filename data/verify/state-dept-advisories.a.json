@@ -1,0 +1,52 @@
+{
+  "id": "state-dept-advisories",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://travel.state.gov/en.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://travel.state.gov/en/international-travel/travel-advisories.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://travel.state.gov/en/international-travel/travel-advisories.html"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://travel.state.gov/en/international-travel/travel-advisories.html"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://travel.state.gov/en/international-travel/travel-advisories.html"
+    }
+  },
+  "notes": "The reported 403s appear to be bot-detection artifacts: official web access succeeded. The supplied advisory URL redirects to the current canonical page, which publicly lists destinations, Levels 1\u20134, risks, dates, and guidance without login. No official JSON API documentation, pricing terms, quotas, CORS policy, or evidence for the claimed third-party uses was located; the Department separately documents RSS feeds."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "holidayapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://holidayapi.com/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://holidayapi.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://holidayapi.com/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://holidayapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://holidayapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plans have monthly request limits with no additional request-velocity throttling. The published paid plans include 1,000,000 requests per month, resetting at midnight UTC on the first of each month.",
+      "source": "https://holidayapi.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://holidayapi.com/docs"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "HolidayAPI provides REST holiday and observance data for countries and paid-plan subdivisions. Documented optional filters include month, day, public, subdivisions, search, language, previous, and upcoming; no observed-date request filter is documented.",
+      "source": "https://holidayapi.com/docs"
+    }
+  },
+  "notes": "Official documentation confirms the v1 endpoint, GET request, key query parameter, country/year parameters, JSON response fields, and free-key availability. The official pricing page discloses paid-plan limits and a 24-hour free-plan data-storage restriction, but the complete current free-tier request and year limits could not be verified from accessible official material."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "zoopla",
+  "status": "operational",
+  "name": "Zoopla API",
+  "category": "real-estate-housing",
+  "tagline": "UK property listings, valuations, and area statistics for developers",
+  "description": "Zoopla provides UK property market data including listings, valuations, and area statistics through a developer program. The public developer API surface and commercial access terms should be verified against current official documentation before integration.",
+  "base_url": "https://api.zoopla.co.uk",
+  "docs_url": "https://developer.zoopla.co.uk",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header or query parameter name and self-serve signup flow should be confirmed in current official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.zoopla.co.uk/api/v1/property_listings.json?area=London&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"listing\":[{\"listing_id\":\"...\",\"displayable_address\":\"...\",\"price\":\"...\"}]}"
+  },
+  "use_cases": [
+    "search UK property listings by area or postcode",
+    "fetch property valuation estimates",
+    "get local area market statistics",
+    "integrate Zoopla listing data into property apps"
+  ],
+  "sources": [
+    "https://developer.zoopla.co.uk",
+    "https://api.zoopla.co.uk"
+  ],
+  "researcher_confidence": "low"
+}

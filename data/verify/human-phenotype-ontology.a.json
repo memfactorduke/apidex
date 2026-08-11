@@ -1,0 +1,52 @@
+{
+  "id": "human-phenotype-ontology",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ontology.jax.org/api/hp/docs/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://ontology.jax.org/api/hp/docs/",
+      "source": "https://github.com/TheJacksonLaboratory/ontology-service/blob/main/README.md"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/TheJacksonLaboratory/ontology-service/blob/main/build.gradle"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "enabled",
+      "source": "https://github.com/TheJacksonLaboratory/ontology-service/blob/main/src/main/resources/application.yml"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s 'https://ontology.jax.org/api/hp/search?q=seizure&limit=-1'",
+      "source": "https://github.com/TheJacksonLaboratory/ontology-service/blob/main/src/main/java/org/jacksonlaboratory/controller/SearchController.java"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "JAX REST service for searching HPO terms, retrieving term records, and traversing ancestor, parent, child, and descendant relationships. Annotation-network functionality is provided through a separate API.",
+      "source": "https://ontology.jax.org/api/hp/docs/"
+    }
+  },
+  "notes": "The base URL is a valid API prefix even though requesting the prefix itself returns 404. The submitted documentation URL is obsolete. Current search parameters are q, page, and limit\u2014not max. The official configuration enables CORS. Pricing and rate-limit terms are not documented. Disease and other annotation data belong to JAX's separate ontology-annotation-network service."
+}

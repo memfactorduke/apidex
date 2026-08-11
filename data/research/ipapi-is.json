@@ -1,0 +1,40 @@
+{
+  "id": "ipapi-is",
+  "status": "operational",
+  "name": "ipapi.is",
+  "category": "security-identity",
+  "tagline": "IP intelligence API with hosting, VPN, proxy, and abuse signals for security decisions",
+  "description": "ipapi.is is an IP intelligence API that enriches IP addresses with geolocation, ASN, company, and risk signals including hosting, VPN, proxy, Tor, and abuser detection for security and fraud decisions. It offers free and paid plans with JSON responses suitable for server-side threat scoring and access control.",
+  "base_url": "https://api.ipapi.is",
+  "docs_url": "https://ipapi.is/developers.html",
+  "signup_url": "https://ipapi.is/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or Authorization header; free tier available without key for limited use (verify current docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.ipapi.is/?q=8.8.8.8&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"ip\":\"8.8.8.8\",\"rir\":\"ARIN\",\"is_bogon\":false,\"is_mobile\":false,\"is_satellite\":false,\"is_crawler\":false,\"is_datacenter\":true,\"is_tor\":false,\"is_proxy\":false,\"is_vpn\":false,\"is_abuser\":false}"
+  },
+  "use_cases": [
+    "check if an IP is a VPN or proxy",
+    "detect hosting/datacenter IPs for fraud scoring",
+    "enrich login IPs with ASN and company data",
+    "flag abuser or Tor exit nodes in access control"
+  ],
+  "sources": [
+    "https://ipapi.is/developers.html"
+  ],
+  "researcher_confidence": "low"
+}

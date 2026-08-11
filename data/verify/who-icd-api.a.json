@@ -1,0 +1,52 @@
+{
+  "id": "who-icd-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://icd.who.int/docs/icd-api/ICDAPI-LocalDeployment/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://icd.who.int/docs/icd-api/APIDoc-Version2/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://icd.who.int/docs/icd-api/API-Authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.who.int/standards/classifications/frequently-asked-questions/icd-11-implementation"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Accept: application/json\" -H \"Accept-Language: en\" -H \"API-Version: v2\" \"https://id.who.int/icd/entity/257068234\"",
+      "source": "https://id.who.int/swagger/v2/swagger.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://id.who.int/swagger/v2/swagger.json"
+    }
+  },
+  "notes": "WHO's current OpenAPI reports v2.6.0. The example omits the required Accept-Language header and calls an OAuth access token an API key. WHO's token instructions require Basic authentication with the client ID and secret, plus grant_type=client_credentials and scope=icdapi_access. No official usage quotas, rate limits, or CORS policy were located."
+}

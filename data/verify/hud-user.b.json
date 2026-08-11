@@ -1,0 +1,52 @@
+{
+  "id": "hud-user",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Official terms publish a maximum of 60 API queries per minute; the reviewed official pages do not explicitly state pricing.",
+      "source": "https://www.huduser.gov/portal/dataset/api-terms-of-service.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 queries per minute",
+      "source": "https://www.huduser.gov/portal/dataset/api-terms-of-service.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    }
+  },
+  "notes": "The API and documentation remain current, including FY 2026 FMR material. The curl request is documented, but its supplied response snippet is inaccurate: HUD's example nests rents under basicdata and shows different FY 2024 values. Free access and CORS were not explicitly documented."
+}

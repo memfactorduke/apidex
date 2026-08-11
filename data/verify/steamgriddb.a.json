@@ -1,0 +1,52 @@
+{
+  "id": "steamgriddb",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/SteamGridDB/node-steamgriddb/blob/master/src/index.ts"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.steamgriddb.com/api/v1"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/SteamGridDB/node-steamgriddb/blob/master/src/index.ts"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/SteamGridDB/node-steamgriddb/blob/master/src/index.ts"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/SteamGridDB/node-steamgriddb"
+    }
+  },
+  "notes": "The official client confirms the v2 base URL, Bearer API key, autocomplete GET path, asset categories, and filters. The official v1 page redirects readers to /api/v2. The current v2 reference is partially broken because its linked /static/openapi.yml returns 404, so pricing, limits, and CORS could not be verified authoritatively."
+}

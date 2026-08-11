@@ -1,0 +1,43 @@
+{
+  "id": "cisa-kev",
+  "status": "operational",
+  "name": "CISA Known Exploited Vulnerabilities (KEV)",
+  "category": "security-identity",
+  "tagline": "Authoritative machine-readable catalog of vulnerabilities known to be exploited in the wild",
+  "description": "CISA maintains the Known Exploited Vulnerabilities (KEV) catalog \u2014 a living list of CVEs with evidence of active exploitation. The catalog is published as free, public JSON (and CSV) for automated vulnerability triage, patch prioritization, and compliance workflows. No API key or signup is required; the feed is a static file hosted on cisa.gov that is updated when new KEVs are added.",
+  "base_url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+  "docs_url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. The KEV catalog is a public JSON/CSV feed downloadable without an API key or account."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public feed; no request quotas or paid plans",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json\"",
+    "response_snippet": "{\n  \"title\": \"CISA Catalog of Known Exploited Vulnerabilities\",\n  \"catalogVersion\": \"2024.12.19\",\n  \"dateReleased\": \"2024-12-19T12:00:00.0000Z\",\n  \"count\": 1200,\n  \"vulnerabilities\": [\n    {\n      \"cveID\": \"CVE-2024-XXXX\",\n      \"vendorProject\": \"Example Vendor\",\n      \"product\": \"Example Product\",\n      \"vulnerabilityName\": \"Example RCE\",\n      \"dateAdded\": \"2024-01-15\",\n      \"shortDescription\": \"...\",\n      \"requiredAction\": \"Apply updates per vendor instructions.\",\n      \"dueDate\": \"2024-02-05\",\n      \"knownRansomwareCampaignUse\": \"Known\",\n      \"notes\": \"\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "check if a CVE is on the CISA KEV list",
+    "download the full known-exploited vulnerabilities catalog as JSON",
+    "prioritize patching by KEV due dates and ransomware flags",
+    "filter KEVs by vendor or product for asset inventory triage",
+    "alert when new CVEs are added to the KEV catalog"
+  ],
+  "sources": [
+    "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+  ],
+  "researcher_confidence": "high"
+}

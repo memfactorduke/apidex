@@ -1,0 +1,99 @@
+{
+  "id": "hotelbeds",
+  "status": "operational",
+  "name": "Hotelbeds API",
+  "category": "travel-hospitality",
+  "tagline": "B2B hotel bedbank booking and content APIs for accommodations worldwide",
+  "description": "Hotelbeds provides B2B hotel APIs for searching availability, booking accommodations, and retrieving hotel content (descriptions, images, facilities). Developers integrate with Hotel and Content APIs using API-Key and X-Signature authentication to power travel platforms, OTAs, and booking engines with live inventory from a major global bedbank.",
+  "base_url": "https://api.test.hotelbeds.com",
+  "docs_url": "https://developer.hotelbeds.com/documentation/hotels/",
+  "signup_url": "https://developer.hotelbeds.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API-Key header plus X-Signature (SHA-256 of apiKey + secret + timestamp); self-serve developer portal signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Evaluation-environment API keys are limited to 50 requests per day; exceeding the quota returns HTTP 403.",
+    "paid_plans": null
+  },
+  "rate_limits": "Evaluation: 50 requests per day. Certification provides higher quotas, but the public documentation does not specify their amounts.",
+  "example": {
+    "request": "curl -X GET \"https://api.test.hotelbeds.com/hotel-api/1.0/status\" -H \"Api-key: YOUR_API_KEY\" -H \"X-Signature: YOUR_SIGNATURE\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"status\":\"OK\",\"auditData\":{\"processTime\":\"0\",\"timestamp\":\"2024-01-01T00:00:00.000Z\",\"requestHost\":\"...\",\"serverId\":\"...\",\"environment\":\"TEST\",\"release\":\"...\"}}"
+  },
+  "use_cases": [
+    "search hotel availability by destination and dates",
+    "book a hotel room with guest details",
+    "get hotel content descriptions and images",
+    "check booking status or cancel a reservation",
+    "list hotels in a destination for content catalog"
+  ],
+  "sources": [
+    "https://developer.hotelbeds.com/documentation/hotels/",
+    "https://developer.hotelbeds.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

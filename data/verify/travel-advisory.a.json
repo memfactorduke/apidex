@@ -1,0 +1,52 @@
+{
+  "id": "travel-advisory",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.traveladvisory.io",
+      "source": "https://www.traveladvisory.io/dev/api/docs"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.traveladvisory.io/dev/api/docs",
+      "source": "https://www.traveladvisory.io/dev/api"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Bearer API token in the Authorization header",
+      "source": "https://www.traveladvisory.io/dev/api/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.traveladvisory.io/dev/api/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "250 lifetime requests that do not reset; 10 requests per minute",
+      "source": "https://www.traveladvisory.io/dev/api/docs"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published tier limits: Free 10 requests/minute, Builder 60, Pro 200, and Scale 500",
+      "source": "https://www.traveladvisory.io/dev/api/docs"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.traveladvisory.io/v1/advisory?code=AD\"",
+      "source": "https://www.traveladvisory.io/dev/api/docs"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "REST API providing structured country risk profiles for 195 countries, including U.S. State Department advisory levels 1-4 and data from CDC, World Bank, safety, and climate sources.",
+      "source": "https://www.traveladvisory.io/dev/api/docs"
+    }
+  },
+  "notes": "The listed travel-advisory.info endpoint and documentation were unreachable. Current TravelAdvisory documentation uses traveladvisory.io, requires an API key, publishes tier limits, and documents a materially different request and data model. No official CORS policy was located."
+}

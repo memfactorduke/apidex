@@ -1,0 +1,52 @@
+{
+  "id": "personio",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.personio.de/v1.0/reference/get_company-employees"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.personio.de/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.personio.de/docs/getting-started-with-the-personio-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.personio.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable: Personio has no ongoing free tier, and custom API access is listed under the paid Core Pro plan.",
+      "source": "https://www.personio.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits exist; GET /v1/company/employees is limited to 300 requests per minute with a 15-requests-per-second burst limit.",
+      "source": "https://developer.personio.de/changelog/rate-limits-on-get-employees-endpoint-may-6-2024"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "no; Personio uses CORS to prevent browsers from retrieving data directly from its APIs.",
+      "source": "https://developer.personio.de/docs/getting-started-with-the-personio-api"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.personio.de/v1.0/reference/get_company-employees"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.personio.de/docs/getting-started-with-the-personio-api"
+    }
+  },
+  "notes": "Operational as checked on 2026-08-11. Personio now also exposes substantial v2 APIs using OAuth 2.0 client credentials. The cited v1 employee endpoint remains current, but v1 attendance and projects are scheduled for deprecation on 2027-01-31, so presenting /v1 as the only API generation is incomplete."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "ocr-space",
+  "status": "operational",
+  "name": "OCR.space",
+  "category": "utilities",
+  "tagline": "Free OCR API for image and PDF text extraction",
+  "description": "OCR.space extracts text from images and PDFs through an HTTP API, returning JSON. It supports multiple OCR languages and image formats, table-oriented parsing, and searchable-PDF creation with Engines 1 and 2. The documented API does not provide a search/replace feature.",
+  "base_url": "https://api.ocr.space",
+  "docs_url": "https://ocr.space/ocrapi",
+  "signup_url": "https://ocr.space/ocrapi",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey header or form field; free key available after signup at ocr.space"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "25,000 requests/month free (PRO plan has higher limits)",
+    "paid_plans": "PRO plans available with higher limits and priority processing"
+  },
+  "rate_limits": "Free tier: 500 requests/day, 25,000/month; rate limited per IP/key",
+  "example": {
+    "request": "curl -H \"apikey: YOUR_API_KEY\" -F \"url=https://example.com/image.jpg\" -F \"language=eng\" -F \"isOverlayRequired=false\" https://api.ocr.space/parse/image",
+    "response_snippet": "{\"ParsedResults\":[{\"ParsedText\":\"Hello World\",\"TextOverlay\":{\"Lines\":[],\"HasOverlay\":false},\"FileParseExitCode\":1}],\"OCRExitCode\":1,\"IsErroredOnProcessing\":false,\"ProcessingTimeInMilliseconds\":\"312\"}"
+  },
+  "use_cases": [
+    "extract text from uploaded image files",
+    "OCR PDF documents to searchable text",
+    "multi-language text recognition from screenshots",
+    "batch process receipt or invoice images for data entry",
+    "convert scanned documents to plain text"
+  ],
+  "sources": [
+    "https://ocr.space/ocrapi",
+    "https://ocr.space"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example"
+    ],
+    "corrected": [
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

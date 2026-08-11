@@ -1,0 +1,99 @@
+{
+  "id": "spamhaus",
+  "status": "operational",
+  "name": "Spamhaus DBL/API",
+  "category": "security-identity",
+  "tagline": "DNSBL and threat-list APIs for domain and IP reputation used in mail and abuse pipelines.",
+  "description": "Spamhaus provides DNSBL and threat-list APIs for checking domain and IP reputation, used by mail servers, security tools, and abuse pipelines to identify spam sources, malware domains, and other threats. The DBL (Domain Block List) and related APIs offer real-time reputation data for filtering and threat intelligence.",
+  "base_url": "https://apibl.spamhaus.net/lookup/v1/",
+  "docs_url": "https://docs.spamhaus.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via header or query parameter; requires registration and account approval for commercial use."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free DQS is limited to eligible non-commercial small organizations and individuals whose usage does not consistently exceed 100,000 queries per day.",
+    "paid_plans": null
+  },
+  "rate_limits": "Free DQS usage must not consistently exceed 100,000 queries per day. WQS returns HTTP 429 when rate limiting is in effect; no general per-second limit is published.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_DQS_KEY\" -H \"Accept: application/json\" \"https://apibl.spamhaus.net/lookup/v1/DBL/test\"",
+    "response_snippet": "{\"resp\":[2002],\"status\":200}"
+  },
+  "use_cases": [
+    "check if a domain is listed on Spamhaus DBL",
+    "look up IP reputation against Spamhaus blocklists",
+    "validate sender domains in mail filtering pipelines",
+    "enrich threat intelligence with domain blocklist status"
+  ],
+  "sources": [
+    "https://docs.spamhaus.com/",
+    "https://www.spamhaus.org/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

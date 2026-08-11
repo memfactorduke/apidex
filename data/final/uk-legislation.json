@@ -1,0 +1,98 @@
+{
+  "id": "uk-legislation",
+  "status": "operational",
+  "name": "legislation.gov.uk API",
+  "category": "government-open-data",
+  "tagline": "UK primary and secondary legislation as structured XML and data",
+  "description": "Official API for UK legislation from legislation.gov.uk, providing access to primary and secondary legislation as structured data (including Akoma Ntoso/XML). Supports retrieval of acts, statutory instruments, and related legislative content for legal research and applications.",
+  "base_url": "https://www.legislation.gov.uk",
+  "docs_url": "https://legislation.github.io/data-documentation/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public access."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml",
+    "html",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "3,000 requests in any 5-minute period; non-browser clients must send a legitimate identifying User-Agent.",
+    "paid_plans": null
+  },
+  "rate_limits": "3,000 requests in any 5-minute period. Excess requests may be blocked; the service may temporarily reduce the limit.",
+  "example": {
+    "request": "curl -s \"https://www.legislation.gov.uk/ukpga/2023/1/data.xml\"",
+    "response_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Legislation>...</Legislation>"
+  },
+  "use_cases": [
+    "fetch full text of a UK Act by year and chapter",
+    "retrieve statutory instrument as structured XML",
+    "list legislation by type and year",
+    "get table of contents for an Act",
+    "access revised legislation versions"
+  ],
+  "sources": [
+    "https://www.legislation.gov.uk/developer"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

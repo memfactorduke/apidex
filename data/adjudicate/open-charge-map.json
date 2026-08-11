@@ -1,0 +1,15 @@
+{
+  "id": "open-charge-map",
+  "base_url": null,
+  "docs_url": "https://www.openchargemap.org/develop/api",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "No published numeric quota. Free basic access is subject to fair use: throttle requests, avoid duplicate or excessive queries, and self-host or import the data for high-volume use. Administrators may block abusive callers.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Open Charge Map provides a free API for querying its global registry of electric-vehicle charging locations. Developers can search by location, filter by connector type and operator/network, and retrieve detailed site, equipment, access, and status data. A free API key is required. No numerical quota is published; qualitative fair-use rules apply, and excessive or indiscriminate callers may be blocked.",
+  "status": null,
+  "resolution_notes": "docs_url: corrected; the old /site/develop/api route now redirects to sign-in, while the official documentation is https://www.openchargemap.org/develop/api. free_tier_limits: corrected; that page publishes qualitative fair-use rules and discretionary blocking, not a numeric quota. description: corrected to remove the unsupported claim of documented rate limits; evidence: https://www.openchargemap.org/develop/api."
+}

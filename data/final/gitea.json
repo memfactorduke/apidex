@@ -1,0 +1,101 @@
+{
+  "id": "gitea",
+  "status": "operational",
+  "name": "Gitea API",
+  "category": "dev-tools",
+  "tagline": "GitHub-compatible REST API for self-hosted Git forge management",
+  "description": "Gitea is a lightweight, self-hostable Git forge written in Go. Its REST API (OpenAPI-documented) covers repositories, issues, pull requests, organizations, users, and more\u2014providing a GitHub-like surface without vendor lock-in. Hosted instances (e.g. gitea.com) and self-hosted servers both expose the same API under /api/v1.",
+  "base_url": "https://gitea.com/api/v1",
+  "docs_url": "https://docs.gitea.com/api/",
+  "signup_url": "https://gitea.com/user/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal access token via Authorization: token YOUR_API_KEY header, or query param ?token=. Create tokens in user Settings > Applications. Basic auth and OAuth2 also supported."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Self-hosted: unlimited free (open source). gitea.com hosted: free public accounts; paid plans for private/org features\u2014exact hosted quotas not centrally published as API rate cards.",
+    "paid_plans": "Self-hosted is free (MIT). Commercial support and hosted plans via Gitea Ltd / Cloudron / third parties; check gitea.com and company site for current hosted pricing."
+  },
+  "rate_limits": "No fixed requests-per-minute/hour default is documented for the current Gitea API. Self-hosted operators may impose deployment-level controls; built-in QoS overload protection is separate and disabled by default. gitea.com's service-specific quota is not publicly documented.",
+  "example": {
+    "request": "curl -s -H \"Authorization: token YOUR_API_KEY\" \"https://gitea.com/api/v1/user\"",
+    "response_snippet": "{\"id\":1,\"login\":\"username\",\"full_name\":\"\",\"email\":\"user@example.com\",\"avatar_url\":\"https://gitea.com/avatars/...\",\"language\":\"en-US\",\"is_admin\":false,\"last_login\":\"2024-01-01T00:00:00Z\",\"created\":\"2020-01-01T00:00:00Z\",\"restricted\":false,\"active\":true,\"prohibit_login\":false,\"location\":\"\",\"website\":\"\",\"description\":\"\",\"visibility\":\"public\",\"followers_count\":0,\"following_count\":0,\"starred_repos_count\":0}"
+  },
+  "use_cases": [
+    "list repositories for a user or organization",
+    "create or update issues and pull requests",
+    "manage org teams and repo collaborators",
+    "clone/push automation via repo metadata and deploy keys",
+    "search users, repos, and issues on a Gitea instance",
+    "mirror or sync repo settings across self-hosted forges"
+  ],
+  "sources": [
+    "https://docs.gitea.com/api/1.22/",
+    "https://gitea.com",
+    "https://docs.gitea.com/",
+    "https://github.com/go-gitea/gitea"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

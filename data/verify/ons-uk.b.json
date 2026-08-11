@@ -1,0 +1,52 @@
+{
+  "id": "ons-uk",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.beta.ons.gov.uk/v1",
+      "source": "https://developer.ons.gov.uk/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ons.gov.uk/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ons.gov.uk/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://digitalblog.ons.gov.uk/2021/02/15/how-to-access-data-from-the-ons-beta-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://digitalblog.ons.gov.uk/2021/02/15/how-to-access-data-from-the-ons-beta-api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "120 requests per 10 seconds and 200 requests per minute for all site and API assets; 15 requests per 10 seconds for high-demand assets. Limits may change, and excessive traffic can be blocked for up to one hour.",
+      "source": "https://developer.ons.gov.uk/bots/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://api.beta.ons.gov.uk/v1/datasets\"",
+      "source": "https://developer.ons.gov.uk/dataset/datasets/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ons.gov.uk/"
+    }
+  },
+  "notes": "The API is operational but remains officially labeled Beta. The entry uses the wrong host: current v1 documentation specifies api.beta.ons.gov.uk, while api.ons.gov.uk is associated with legacy v0 endpoints being retired. The example therefore also targets the wrong URL, and the claimed absence of published rate limits is false."
+}

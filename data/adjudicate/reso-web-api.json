@@ -1,0 +1,15 @@
+{
+  "id": "reso-web-api",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' 'https://api.example-mls.com/odata/Property?$top=1'",
+  "example_response_snippet": "{\n  \"@odata.context\": \"https://api.example-mls.com/odata/$metadata#Property\",\n  \"value\": [\n    {\n      \"ListingKey\": \"123456789\",\n      \"ListPrice\": 450000,\n      \"StandardStatus\": \"Active\"\n    }\n  ]\n}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: oauth2. The ratified RESO Web API Core requires OAuth2 Bearer Token or Client Credentials authentication: https://transport.reso.org/proposals/web-api-core/. example: corrected because a Bearer value is an OAuth access token, not an API key; RESO's current reference-server guide demonstrates Authorization: Bearer and Property queries: https://tools.reso.org/guides/reso-reference-server/."
+}

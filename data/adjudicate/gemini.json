@@ -1,0 +1,15 @@
+{
+  "id": "gemini",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Public REST: 120 requests/minute (recommended \u22641 request/second). Private REST: 600 requests/minute (recommended \u22645 requests/second). Some endpoints have stricter documented limits.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Corrected. Gemini\u2019s current official rate-limit page specifies 120 requests/minute for public API entry points and 600 requests/minute for private entry points, with recommended pacing of 1 and 5 requests/second respectively. Certain endpoint pages document stricter exceptions. Evidence: https://developer.gemini.com/rate-limit"
+}

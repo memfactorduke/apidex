@@ -1,0 +1,15 @@
+{
+  "id": "opentable",
+  "base_url": null,
+  "docs_url": "https://docs.opentable.com/",
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Online Booking APIs allow at most 1,000 requests across all endpoints per rolling 30-second window (about 33 requests/second sustained); other OpenTable APIs or endpoints may have different limits.",
+  "cors": null,
+  "example_request": "curl -sS \"https://platform.opentable.com/sync/v2/reservations?rid=${RID}\" -H \"Authorization: Bearer ${ACCESS_TOKEN}\" -H \"Accept: application/json\"",
+  "example_response_snippet": "{\"sequence_id\":101112,\"guest_id\":\"guest-123\",\"confirmation_id\":34567,\"state\":\"Confirmed\",\"scheduled_time\":\"2024-12-19T19:00:00\",\"party_size\":4,\"rid\":6789}",
+  "description": "OpenTable provides approval-gated APIs for restaurant directory data, availability and booking, reservations, guests, CRM, and operational integrations. Production access requires review and a formal agreement. OAuth 2.0 is the primary authorization mechanism, and the current public documentation is hosted at docs.opentable.com.",
+  "status": null,
+  "resolution_notes": "docs_url: replace; official docs are https://docs.opentable.com/. auth_type: oauth2; OAuth 2.0 is primary: https://docs.opentable.com/. rate_limits: replace; Booking limit is 1,000/rolling 30s and others may differ: https://docs.opentable.com/. example: replace; Sync docs specify this GET endpoint, rid, Bearer token, and response fields: https://docs.opentable.com/. description: replace; approval, agreement, and API coverage are documented at https://docs.opentable.com/."
+}

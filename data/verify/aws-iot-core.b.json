@@ -1,0 +1,52 @@
+{
+  "id": "aws-iot-core",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/general/latest/gr/iot-core.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/iot/latest/apireference/Welcome.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/iot/latest/developerguide/security-iam.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aws.amazon.com/iot-core/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "12 months free: 250,000 messages (512-byte metering), 250,000 registry or Device Shadow operations, 250,000 rules triggered, and 250,000 actions executed; always-free FreeRTOS not applicable. Limits and meter size vary by region (e.g. messages metered in 5 KB increments in some regions).",
+      "source": "https://aws.amazon.com/iot-core/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Documented per-account, per-region API throttling quotas (e.g. DescribeEndpoint 10 TPS default; many control-plane APIs have published default quotas). See Service Quotas / IoT Core quotas docs \u2014 not \"not published\".",
+      "source": "https://docs.aws.amazon.com/general/latest/gr/iot-core.html#limits_iot"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "ListThings is GET /things but requires proper SigV4 signing (not a raw Authorization header with YOUR_API_KEY). Endpoint must be the account-specific control-plane endpoint from DescribeEndpoint (or regional iot.<region>.amazonaws.com with correct signing). Path exists; example auth form is misleading/incomplete.",
+      "source": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListThings.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html"
+    }
+  },
+  "notes": "Base URL pattern is valid for control plane; data plane uses different hostnames (*.iot.<region>.amazonaws.com). Free-tier limits and API quotas are published. Example understates SigV4 requirements."
+}

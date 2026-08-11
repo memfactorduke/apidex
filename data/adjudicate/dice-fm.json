@@ -1,0 +1,15 @@
+{
+  "id": "dice-fm",
+  "base_url": "https://partners-endpoint.dice.fm/graphql",
+  "docs_url": "https://partners-endpoint.dice.fm/graphql/docs/index.html",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST -H \"Content-Type: application/json\" -H \"Authorization: Bearer YOUR_API_TOKEN\" --data '{\"query\":\"query { viewer { events(first: 1) { totalCount edges { node { id name } } } } }\"}' \"https://partners-endpoint.dice.fm/graphql\"",
+  "example_response_snippet": "{\"data\":{\"viewer\":{\"events\":{\"totalCount\":42,\"edges\":[{\"node\":{\"id\":\"1234\",\"name\":\"Example Event\"}}]}}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: replace; DICE's official Ticket Holders API docs specify the GraphQL endpoint shown. docs_url: replace with the live official API documentation page. example: replace the undocumented GET /events request with the documented authenticated GraphQL POST pattern and viewer.events query. Evidence for all three: https://partners-endpoint.dice.fm/graphql/docs/index.html"
+}

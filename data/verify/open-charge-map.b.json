@@ -1,0 +1,46 @@
+{
+  "id": "open-charge-map",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.openchargemap.org/develop/api",
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://www.openchargemap.org/develop/api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Open Charge Map provides a free API with qualitative fair-use rules and discretionary blocking for excessive use, but it does not publish a numerical rate limit.",
+      "source": "https://www.openchargemap.org/develop/api"
+    }
+  },
+  "notes": "The current official documentation identifies API v3.1 and the submitted base URL. The legacy /site/develop/api documentation URL could not be fetched and has been replaced by the current canonical page. Recent official community reports show the API operating, while Cloudflare protections can return 403 challenges. No authoritative current CORS statement was found."
+}

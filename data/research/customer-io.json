@@ -1,0 +1,41 @@
+{
+  "id": "customer-io",
+  "status": "operational",
+  "name": "Customer.io",
+  "category": "social-communication",
+  "tagline": "Behavioral messaging platform REST API for people, events, and transactional messages",
+  "description": "Customer.io provides REST APIs for managing people (customers), tracking events, and sending transactional messages across channels. Developers use site ID and API key (or App API keys) to identify users, trigger campaigns, and deliver personalized messages from backend systems.",
+  "base_url": "https://track.customer.io/api/v1",
+  "docs_url": "https://docs.customer.io/api/",
+  "signup_url": "https://fly.customer.io/signup",
+  "auth": {
+    "type": "basic",
+    "details": "Track API uses Basic auth: site_id as username, API key as password (or Bearer). App API uses Bearer token with app API key. Region-specific hosts (US/EU)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://track.customer.io/api/v1/customers/USER_ID -u YOUR_SITE_ID:YOUR_API_KEY -H 'Content-Type: application/json' -d '{\"email\":\"user@example.com\"}'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "identify or update a person by ID",
+    "track a custom event for a user",
+    "send a transactional email or message",
+    "delete a person from the workspace",
+    "trigger a campaign via event"
+  ],
+  "sources": [
+    "https://docs.customer.io/api/"
+  ],
+  "researcher_confidence": "low"
+}

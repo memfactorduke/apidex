@@ -1,0 +1,52 @@
+{
+  "id": "chromatic",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://index.chromatic.com/graphql",
+      "source": "https://www.chromatic.com/docs/graphql"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.chromatic.com/docs/graphql",
+      "source": "https://www.chromatic.com/docs/graphql"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.chromatic.com/docs/graphql"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.chromatic.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 5,000 snapshots/month (Storybook), limited seats; exact API-specific free limits not separately published \u2014 product free tier is snapshot-based",
+      "source": "https://www.chromatic.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.chromatic.com/docs/graphql"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST https://index.chromatic.com/graphql -H 'Content-Type: application/json' -H 'Authorization: Bearer YOUR_PROJECT_TOKEN' -d '{\"query\":\"{ __typename }\"}' (endpoint is index.chromatic.com; auth is project token \u2014 confirm header name from docs)",
+      "source": "https://www.chromatic.com/docs/graphql"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.chromatic.com/docs/graphql"
+    }
+  },
+  "notes": "docs_url 404 and base_url wrong host; GraphQL lives at index.chromatic.com and docs at /docs/graphql. Auth is project token (apiKey-style). Free product tier exists (snapshot quotas); GraphQL rate limits not published. CORS unknown."
+}

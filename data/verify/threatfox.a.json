@@ -1,0 +1,52 @@
+{
+  "id": "threatfox",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://threatfox.abuse.ch/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://threatfox.abuse.ch/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://threatfox.abuse.ch/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://abuse.ch/terms-of-use/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://abuse.ch/terms-of-use/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://auth.abuse.ch/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://threatfox.abuse.ch/api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "ThreatFox is a community platform from abuse.ch and Spamhaus for sharing and querying malware-related IOCs. Its authenticated API supports recent-IOC queries, searches for specific IOCs, malware-family queries, and submission of vetted IOCs. Community access is free for eligible users under fair-use limits; commercial use may require a paid subscription.",
+      "source": "https://threatfox.abuse.ch/api/"
+    }
+  },
+  "notes": "The documented API has no operation for filtering or looking up IOCs by IOC type, making that description claim unsupported. Auth-Key is required. Official pages confirm qualitative query-volume limits and temporary restrictions, but they do not document HTTP 429 specifically. No official CORS policy was found."
+}

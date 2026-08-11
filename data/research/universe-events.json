@@ -1,0 +1,40 @@
+{
+  "id": "universe-events",
+  "status": "operational",
+  "name": "Universe API",
+  "category": "events-holidays",
+  "tagline": "Ticketmaster-owned event creation and ticketing API for independent organizers",
+  "description": "Universe provides an API for independent event organizers to create events, manage tickets, and access attendee data. Owned by Ticketmaster, it focuses on self-service event management for small to mid-size organizers.",
+  "base_url": "https://www.universe.com/api/v2",
+  "docs_url": "https://developers.universe.com/",
+  "signup_url": "https://www.universe.com/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 access tokens; application registration required via developer portal"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://www.universe.com/api/v2/events\"",
+    "response_snippet": "{ \"events\": [] }"
+  },
+  "use_cases": [
+    "list events for an organizer",
+    "create a new ticketed event",
+    "fetch attendee lists for an event",
+    "update ticket inventory"
+  ],
+  "sources": [
+    "https://developers.universe.com/"
+  ],
+  "researcher_confidence": "low"
+}

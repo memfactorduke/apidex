@@ -1,0 +1,41 @@
+{
+  "id": "screenshotone",
+  "status": "operational",
+  "name": "ScreenshotOne",
+  "category": "utilities",
+  "tagline": "Website screenshot API with full-page capture, caching, and signed URLs",
+  "description": "ScreenshotOne is a modern website screenshot API that captures screenshots of web pages programmatically. It supports full-page capture, caching, signed URLs for secure client-side use, custom viewport sizes, blocking ads/cookie banners, and various image formats. Designed for developers who need reliable, automated website screenshots for monitoring, previews, thumbnails, or documentation.",
+  "base_url": "https://api.screenshotone.com",
+  "docs_url": "https://screenshotone.com/docs/",
+  "signup_url": "https://screenshotone.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Access key and secret key via query params (access_key, secret_key) or signed URLs; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.screenshotone.com/take?access_key=YOUR_API_KEY&url=https%3A%2F%2Fexample.com\"",
+    "response_snippet": "(binary image data)"
+  },
+  "use_cases": [
+    "capture a full-page screenshot of a URL",
+    "generate website preview thumbnails",
+    "create signed screenshot URLs for client-side embedding",
+    "monitor visual changes on a web page"
+  ],
+  "sources": [
+    "https://screenshotone.com/docs/"
+  ],
+  "researcher_confidence": "low"
+}

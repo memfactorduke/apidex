@@ -1,0 +1,52 @@
+{
+  "id": "medusa",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.medusajs.com/api/admin"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.medusajs.com/api/admin"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.medusajs.com/api/admin"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/medusajs/medusa"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medusajs.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Configurable per deployment through http.adminCors; the documented local default allows http://localhost:9000.",
+      "source": "https://docs.medusajs.com/resources/troubleshooting/cors-errors"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"http://localhost:9000/admin/products\" -H \"Authorization: Basic YOUR_SECRET_API_KEY\"",
+      "source": "https://docs.medusajs.com/resources/commerce-modules/api-key/concepts"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.medusajs.com/api/admin"
+    }
+  },
+  "notes": "The localhost HTTP base is the official development URL, so HTTP 0 merely means no Medusa instance was running. Production uses each deployment's URL. The entry's https=true flag is not universally valid and conflicts with its HTTP development URL. Secret API keys require Basic authentication; Bearer is for JWTs. Current Cloud plans start at $29/month."
+}

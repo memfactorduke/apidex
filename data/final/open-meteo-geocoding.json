@@ -1,0 +1,93 @@
+{
+  "id": "open-meteo-geocoding",
+  "status": "operational",
+  "name": "Open-Meteo Geocoding",
+  "category": "geo-maps",
+  "tagline": "Free, no-key place search with coordinates, population, and timezone metadata",
+  "description": "Open-Meteo Geocoding is a free public API that converts place names into geographic coordinates and metadata. Search by city or location name to get latitude, longitude, elevation, population, country codes, and timezone\u2014without an API key for non-commercial use.",
+  "base_url": "https://geocoding-api.open-meteo.com/v1",
+  "docs_url": "https://open-meteo.com/en/docs/geocoding-api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for non-commercial use. Commercial use requires an API key from Open-Meteo customer dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free/Open-Access, non-commercial use: 600 calls/minute, 5,000/hour, 10,000/day, and 300,000/month.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published Free/Open-Access limits: 600 calls/minute, 5,000/hour, 10,000/day, and 300,000/month.",
+  "example": {
+    "request": "curl \"https://geocoding-api.open-meteo.com/v1/search?name=Berlin&count=1\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "resolve a city name to lat/lon for weather lookups",
+    "autocomplete place names in a location search UI"
+  ],
+  "sources": [
+    "https://open-meteo.com/en/docs/geocoding-api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

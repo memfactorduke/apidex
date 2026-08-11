@@ -1,0 +1,47 @@
+{
+  "id": "la-open-data",
+  "status": "operational",
+  "name": "LA Open Data API",
+  "category": "government-open-data",
+  "tagline": "City of Los Angeles open datasets via the Socrata SODA API (crime, permits, budget, services).",
+  "description": "Public API for City of Los Angeles open data on data.lacity.org, powered by Socrata SODA. Developers query published datasets (JSON, CSV, and more) for crime, building permits, budget, city services, and other municipal records using dataset-specific endpoints, SoQL filtering, and optional app-token authentication for higher rate limits.",
+  "base_url": "https://data.lacity.org/resource",
+  "docs_url": "https://dev.socrata.com/foundry/data.lacity.org/",
+  "signup_url": "https://data.lacity.org/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional app token via X-App-Token header (or $$app_token query param); self-serve at Socrata/Tyler developer portal. Unauthenticated access allowed with lower throttling."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; app tokens raise rate limits (exact free quotas not always published per-domain)",
+    "paid_plans": null
+  },
+  "rate_limits": "Without app token: low anonymous throttling; with app token: higher published Socrata limits (verify current on Socrata docs)",
+  "example": {
+    "request": "curl -H \"X-App-Token: YOUR_API_KEY\" \"https://data.lacity.org/resource/2nrs-mtv8.json?$limit=5\"",
+    "response_snippet": "[{\"dr_no\":\"190326475\",\"date_rptd\":\"2020-03-01T00:00:00.000\",\"date_occ\":\"2020-03-01T00:00:00.000\",\"time_occ\":\"2130\",\"area\":\"07\",\"area_name\":\"Wilshire\",\"crm_cd\":\"510\",\"crm_cd_desc\":\"VEHICLE - STOLEN\"}]"
+  },
+  "use_cases": [
+    "query recent LAPD crime incidents by area or date",
+    "fetch building permit records for an address or ZIP",
+    "pull city budget or expenditure open datasets",
+    "filter 311 / service request data with SoQL",
+    "export LA open dataset rows as CSV for analysis"
+  ],
+  "sources": [
+    "https://dev.socrata.com/foundry/data.lacity.org/",
+    "https://data.lacity.org/",
+    "https://dev.socrata.com/docs/app-tokens.html",
+    "https://dev.socrata.com/docs/endpoints.html"
+  ],
+  "researcher_confidence": "medium"
+}

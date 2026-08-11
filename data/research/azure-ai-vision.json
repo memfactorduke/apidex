@@ -1,0 +1,41 @@
+{
+  "id": "azure-ai-vision",
+  "status": "operational",
+  "name": "Azure AI Vision",
+  "category": "ai-ml",
+  "tagline": "Cloud image analysis, OCR, and spatial analysis via Azure Cognitive Services",
+  "description": "Azure AI Vision (Computer Vision) provides REST APIs for image analysis, optical character recognition (OCR/Read), object detection, image tagging, and related vision capabilities. Developers call a regional Cognitive Services resource endpoint with a subscription key or Microsoft Entra token. Face-related features may require separate Face API access; product branding has consolidated under Azure AI Vision / Azure AI Services.",
+  "base_url": "https://{resource}.cognitiveservices.azure.com",
+  "docs_url": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/",
+  "signup_url": "https://portal.azure.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Subscription key via Ocp-Apim-Subscription-Key header (or query key), or Microsoft Entra ID bearer token; create a Vision/Cognitive Services resource in Azure Portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://YOUR_RESOURCE.cognitiveservices.azure.com/vision/v3.2/analyze?visualFeatures=Categories,Description,Color\" -H \"Ocp-Apim-Subscription-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"url\":\"https://learn.microsoft.com/azure/ai-services/computer-vision/media/quickstarts/presentation.png\"}'",
+    "response_snippet": "{\"description\":{\"tags\":[\"text\",\"person\"],\"captions\":[{\"text\":\"a person standing in front of a screen\",\"confidence\":0.9}]},\"requestId\":\"...\",\"metadata\":{\"width\":1038,\"height\":692,\"format\":\"Jpeg\"}}"
+  },
+  "use_cases": [
+    "extract text from images or PDFs with OCR",
+    "generate image captions and tags for accessibility",
+    "detect objects and brands in product photos",
+    "analyze image color and adult content flags",
+    "read handwritten or printed documents at scale"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/"
+  ],
+  "researcher_confidence": "low"
+}

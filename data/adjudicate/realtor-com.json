@@ -1,0 +1,15 @@
+{
+  "id": "realtor-com",
+  "base_url": "https://api.listhub.com/",
+  "docs_url": "https://www.listhub.com/mls-api-documentation/",
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "3,000 requests per minute for /odata/Property; 3 requests per hour for /odata/Sync.",
+  "cors": "yes",
+  "example_request": "curl 'https://api.listhub.com/odata/Property?$top=5' -H 'Authorization: Bearer <ACCESS_TOKEN>' -H 'Accept-Encoding: gzip'",
+  "example_response_snippet": "{\"@odata.context\":\"http://api.listhub.com/odata/$metadata#Property\",\"value\":[{\"ListingKey\":\"3yd-FAKE1-0\",\"ListingId\":\"1\",\"PropertyType\":\"Residential\",\"ListPrice\":499000},{\"ListingKey\":\"3yd-FAKE1-1\",\"ListingId\":\"2\",\"PropertyType\":\"Residential\",\"ListPrice\":525000}]}",
+  "description": "ListHub's Syndication API is a RESO-certified Web API for approved publishers to download MLS-sourced listing data into their own systems. It is intended for data-import workflows, not live end-user property searches.",
+  "status": null,
+  "resolution_notes": "base_url: ListHub endpoint confirmed: https://www.listhub.com/mls-api-documentation/ docs_url: current official page: https://www.listhub.com/mls-api-documentation/ auth_type: OAuth 2 client credentials/JWT: https://www.listhub.com/mls-api-documentation/ rate_limits: 3000/min and 3/hour: https://www.listhub.com/mls-api-documentation/ cors: yes; official response shows ACAO *: https://www.listhub.com/mls-api-documentation/ example: documented bearer GET: https://www.listhub.com/mls-api-documentation/ description: publisher import, not live search: https://www.listhub.com/mls-api-documentation/"
+}

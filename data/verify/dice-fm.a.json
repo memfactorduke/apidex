@@ -1,0 +1,52 @@
+{
+  "id": "dice-fm",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.dice.fm (unconfirmed as public partner API host; automated 404). Official partner surface is partners.dice.fm / partner portal \u2014 no confirmed public REST base path from docs.",
+      "source": "https://partners.dice.fm/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://partners.dice.fm/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No public docs confirm GET /events with Bearer token at api.dice.fm; do not use invented endpoints.",
+      "source": "https://partners.dice.fm/"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Placeholder - will replace after research"
+}

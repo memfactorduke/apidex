@@ -1,0 +1,52 @@
+{
+  "id": "thetvdb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/thetvdb/v4-api/refs/heads/main/docs/swagger.yml"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thetvdb.github.io/v4-api/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "bearer (HTTP Bearer JWT obtained by exchanging a project API key at POST /login)",
+      "source": "https://raw.githubusercontent.com/thetvdb/v4-api/refs/heads/main/docs/swagger.yml"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thetvdb.com/api-information"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free project licensing applies below $50,000 in annual company/project revenue and requires attribution; no numeric requests-per-day allowance is published.",
+      "source": "https://thetvdb.com/api-information"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thetvdb.com/tos"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/thetvdb/v4-api/refs/heads/main/docs/swagger.yml"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "API keys are managed through the account Dashboard. Revenue-based project licensing and the separate end-user subscription/PIN model should not be described collectively as free and paid subscriber tiers.",
+      "source": "https://github.com/thetvdb/v4-api"
+    }
+  },
+  "notes": "The official OpenAPI specification confirms the base URL, POST /login payload, Bearer JWT security scheme, response shape, and listed resource families. The entry misclassifies operation authentication as apiKey and omits the published revenue condition for free licensing. No authoritative CORS statement was found; numeric rate limits remain unpublished, although excessive calls are prohibited."
+}

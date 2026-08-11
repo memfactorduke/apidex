@@ -1,0 +1,15 @@
+{
+  "id": "personio",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "No ongoing free tier. Custom API access requires the paid Core Pro plan. Personio offers a one-time 14-day software trial, not an ongoing API free tier.",
+  "rate_limits": "v1 has a global limit of 2,000 requests/minute/IP. GET /v1/company/employees is limited to 300 requests/minute with a 15-requests/second burst. Other endpoint-specific limits may apply.",
+  "cors": "no",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type=other kept; cors=no: entry is v1; docs use client credentials and a separate Recruiting token; browser calls are blocked (https://developer.personio.de/docs/getting-started-with-the-personio-api). free_tier_limits=No ongoing free tier; API is Core Pro; trial is 14 days (https://www.personio.com/pricing/; https://www.personio.com/terms/). rate_limits=v1 2,000/min/IP globally; Employees 300/min, 15/sec burst (https://developer.personio.de/changelog/ip-address-based-rate-limiting-v1-endpoints; https://developer.personio.de/changelog/rate-limits-on-get-employees-endpoint-may-6-2024)."
+}

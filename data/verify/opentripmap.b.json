@@ -1,0 +1,52 @@
+{
+  "id": "opentripmap",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://dev.opentripmap.org/docs",
+      "source": "https://opentripmap.com/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.opentripmap.org/price"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Non-commercial use; 5,000 requests per day; 10 requests per second",
+      "source": "https://dev.opentripmap.org/price"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "10 requests per second on the Free plan",
+      "source": "https://dev.opentripmap.org/price"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The API remains represented by the official .com site and .org developer portal, but the submitted .io site and docs redirect to a parked domain. The current official price page publishes Free as non-commercial, with 5,000 requests/day and 10 requests/second. Available official documentation did not expose enough detail to verify the base URL, API-key scheme, CORS, exact curl, or every description claim."
+}

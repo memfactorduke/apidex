@@ -1,0 +1,48 @@
+{
+  "id": "tcgplayer",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://docs.tcgplayer.com/docs/welcome"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://docs.tcgplayer.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "OAuth 2.0 client-credentials grant yielding a Bearer access token",
+      "source": "https://docs.tcgplayer.com/docs/getting-started"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.tcgplayer.com/docs/getting-started"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.tcgplayer.com/docs/getting-started"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "source": "https://help.tcgplayer.com/hc/en-us/articles/360061115874-TCGplayer-API-Terms-Conditions"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl --request GET --header \"Accept: application/json\" --header \"Authorization: bearer BEARER_TOKEN\" \"https://api.tcgplayer.com/v1.39.0/catalog/categories\"",
+      "source": "https://docs.tcgplayer.com/docs/getting-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://docs.tcgplayer.com/docs/welcome"
+    }
+  },
+  "notes": "The API remains documented for existing key holders, but TCGplayer explicitly says it is no longer granting new API access. Current version is v1.39.0. No official tier pricing, numeric rate limit, or CORS policy was found. Usage is approval-restricted and subject to unspecified reasonable-volume limits."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "zillow-bridge",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://bridgedataoutput.com/docs/platform/API/zg-data",
+      "source": "https://bridgedataoutput.com/docs/platform/API/zg-data"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "Conditional/provider-specific: Bridge charges no additional service fees, but MLS or data-provider licensing fees may apply.",
+      "source": "https://www.bridgeinteractive.com/developers/bridge-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No universal paid-only rule or free-tier allowance; Bridge service fees are zero, while provider licensing fees and conditions vary.",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default platform limits are 5,000 requests/hour and 334 requests/minute; Zillow Public Records is additionally limited to 1,000 requests/day by default.",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Supported for direct browser requests using a Browser Token and configured Referrer Domain.",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://bridgedataoutput.com/docs/explorer/reso-web-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://bridgedataoutput.com/docs/platform/API/bridge"
+    }
+  },
+  "notes": "The API remains operational, but the entry uses a stale/non-current documentation URL, misstates pricing as paid-only, misses published hourly, burst, and Public Records limits, and leaves browser access/CORS unknown despite documented Browser Tokens for direct website requests."
+}

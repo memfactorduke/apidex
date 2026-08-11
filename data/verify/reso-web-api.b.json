@@ -1,0 +1,52 @@
+{
+  "id": "reso-web-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reso.org/reso-web-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reso.org/reso-web-api/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://transport.reso.org/proposals/web-api-core/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transport.reso.org/proposals/web-api-core/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transport.reso.org/proposals/web-api-core/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reso.org/reso-web-api/"
+    }
+  },
+  "notes": "RESO defines a decentralized standard and does not supply MLS data, so the base_url HTTP 0 result is expected for the descriptive placeholder. Current Web API Core requires OAuth 2 bearer-token or client-credentials authentication, making auth.type \"other\" incorrect. RESO specifies discretionary HTTP 429 handling but no global numeric quota. Pricing and CORS depend on individual providers and could not be established globally."
+}

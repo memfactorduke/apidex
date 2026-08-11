@@ -1,0 +1,52 @@
+{
+  "id": "lever",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lever/postings-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lever/postings-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://hire.lever.co/developer/support"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No official free-tier or GET usage-cap statement was located. Lever does publish a limit of 2 application POST requests per second.",
+      "source": "https://github.com/lever/postings-api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Application creation is limited to 2 POST requests per second; Lever warns that this limit may change without notice. No numeric limit is documented for listing GET requests.",
+      "source": "https://github.com/lever/postings-api"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "restricted: CORS is supported only from the Lever customer's own domains and subdomains, not arbitrary origins",
+      "source": "https://github.com/lever/postings-api"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.lever.co/v0/postings/leverdemo?mode=json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/lever/postings-api"
+    }
+  },
+  "notes": "The documented v0 endpoint remains operational in 2026, and the example currently returns JSON without authentication. No official shutdown or v0 deprecation notice was found. Pricing/free-tier language is not documented authoritatively, while CORS restrictions and the application POST rate limit are explicit."
+}

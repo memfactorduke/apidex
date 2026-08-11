@@ -1,0 +1,15 @@
+{
+  "id": "smartrecruiters",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Not applicable; no free plan is currently listed.",
+  "rate_limits": "Customer API: 10 requests/second and 8 concurrent requests per API user. Exceptions: job-publication POST/DELETE endpoints allow 2 requests/second; GET /candidates and the deprecated Analytics API allow 1 concurrent request.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Incorrect; official 2026 pricing lists only paid plans, with Essential starting at $14,995. https://www.smartrecruiters.com/pricing/ rate_limits: Incorrect; official throttling documentation confirms 10 requests/second and 8 concurrent requests per API user, with the stated endpoint exceptions. https://developers.smartrecruiters.com/docs/throttling-policies"
+}

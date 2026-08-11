@@ -1,0 +1,15 @@
+{
+  "id": "eppo-global-database",
+  "base_url": "https://api.eppo.int/gd/v2",
+  "docs_url": "https://data.eppo.int/ui/#/docs/GDAPI",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -H \"X-Api-Key: YOUR_API_KEY\" -H \"Accept: application/json\" \"https://api.eppo.int/gd/v2/taxons/taxon/XYLEFA/overview\"",
+  "example_response_snippet": "{\"eppocode\":\"XYLEFA\",\"prefname\":\"Xylella fastidiosa\",\"is_active\":true}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: replace with https://api.eppo.int/gd/v2; EPPO announced API v2 and the current client uses this base: https://www.eppo.int/MEETINGS/2025_meetings/webinar_eppo_codes and https://openefsa.github.io/eppoPynder/guide/. docs_url: replace with https://data.eppo.int/ui/#/docs/GDAPI; current client cites it: https://rdrr.io/cran/eppoFindeR/man/tools.html. example: replace; current v2 uses /taxons/taxon/{code}/overview and X-Api-Key: https://rdrr.io/cran/eppoFindeR/src/R/buildRequest.R and https://rdrr.io/cran/eppoFindeR/src/tests/testthat/test-query.R."
+}

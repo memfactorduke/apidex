@@ -1,0 +1,52 @@
+{
+  "id": "usajobs",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.usajobs.gov/tutorials/search-jobs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.usajobs.gov/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.usajobs.gov/guides/authentication"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Official pricing is not stated. Published access limits are 10,000 rows per Search Jobs query and 500 rows per page; Code List and Dynamic Search are listed as having no limits.",
+      "source": "https://developer.usajobs.gov/guides/rate-limiting"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Search Jobs: maximum 10,000 rows per query and 500 rows per page. Code List and Dynamic Search: no limits.",
+      "source": "https://developer.usajobs.gov/guides/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.usajobs.gov/api-reference/get-api-search"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The official portal and API documentation are live. The endpoint, GET method, query parameters, required headers, API-key flow, JSON responses, and job fields are documented. The entry fails because it says limits are unpublished, while USAJOBS publishes data-access limits. No official pricing statement or CORS policy was located, so the claims that access is free and that the full description is verified cannot be confirmed."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "remotive",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Public API listings are delayed by 24 hours. Remotive advises no more than 4 requests per day and blocks clients exceeding 2 requests per minute.",
+  "rate_limits": "Maximum 4 requests per day is advised; more than 2 requests per minute will be blocked.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Remotive provides a public unauthenticated JSON GET API for active remote job listings, with category, company_name, search, and limit filters. Results are delayed by 24 hours. Reuse requires Remotive attribution and backlinks, and submitting listings to third-party job sites is prohibited.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected; the public API has a 24-hour delay and documented request constraints (https://remotive.com/remote-jobs/api, https://github.com/remotive-com/remote-jobs-api#request-rate-limiting). rate_limits: corrected to the official 4/day guidance and >2/minute blocking rule (https://github.com/remotive-com/remote-jobs-api#request-rate-limiting). description: corrected to disclose delayed data, supported filters, attribution/backlink requirements, and the third-party job-site restriction (https://remotive.com/api-documentation)."
+}

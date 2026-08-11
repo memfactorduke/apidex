@@ -1,0 +1,40 @@
+{
+  "id": "skyscanner",
+  "status": "operational",
+  "name": "Skyscanner Flights Live Prices",
+  "category": "travel-hospitality",
+  "tagline": "Live flight price search for comparison and booking flows.",
+  "description": "Skyscanner's Flights Live Prices API provides real-time flight search results including itineraries, prices, carriers, and booking options for comparison shopping and travel applications.",
+  "base_url": "https://partners.api.skyscanner.net/apiservices",
+  "docs_url": "https://developers.skyscanner.net/docs/flights-live-prices/overview",
+  "signup_url": "https://developers.skyscanner.net/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-api-key header after partner signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST 'https://partners.api.skyscanner.net/apiservices/v3/flights/live/search/create' -H 'x-api-key: YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"query\":{\"market\":\"UK\",\"locale\":\"en-GB\",\"currency\":\"GBP\",\"queryLegs\":[{\"originPlaceId\":{\"iata\":\"LHR\"},\"destinationPlaceId\":{\"iata\":\"JFK\"},\"date\":{\"year\":2026,\"month\":9,\"day\":1}}]}}'",
+    "response_snippet": "{\"sessionToken\":\"...\",\"status\":\"RESULT_STATUS_COMPLETE\",\"content\":{\"results\":{\"itineraries\":{},\"legs\":{},\"segments\":{},\"places\":{},\"carriers\":{},\"agents\":{}}}}"
+  },
+  "use_cases": [
+    "search live one-way flight prices between airports",
+    "compare multi-city flight itinerary prices",
+    "poll a live flight search session for complete results",
+    "get carrier and agent details for booking deep links"
+  ],
+  "sources": [
+    "https://developers.skyscanner.net/docs/flights-live-prices/overview"
+  ],
+  "researcher_confidence": "low"
+}

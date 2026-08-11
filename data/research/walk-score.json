@@ -1,0 +1,44 @@
+{
+  "id": "walk-score",
+  "status": "operational",
+  "name": "Walk Score",
+  "category": "real-estate-housing",
+  "tagline": "Walk, transit, and bike scores for any location worldwide.",
+  "description": "Walk Score API returns location-quality scores \u2014 Walk Score, Transit Score, and Bike Score \u2014 plus optional neighborhood and transit details. Used by real-estate sites and apps to rank listings by walkability and transit access. Authenticated with an API key; endpoints are HTTP GET over HTTPS.",
+  "base_url": "https://api.walkscore.com",
+  "docs_url": "https://www.walkscore.com/professional/api.php",
+  "signup_url": "https://www.walkscore.com/professional/api-sign-up.php",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via wsapikey query parameter on each request; request access via Walk Score professional signup (not fully self-serve)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free trial available on request; public free tier limits not published on the pricing page.",
+    "paid_plans": "Commercial plans require contacting Walk Score sales; pricing not listed publicly."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.walkscore.com/score?format=json&address=1119%208th%20Avenue%20Seattle%20WA%2098101&lat=47.6085&lon=-122.3295&transit=1&bike=1&wsapikey=YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":1,\"walkscore\":98,\"description\":\"Walker's Paradise\",\"updated\":\"2024-01-15 12:00:00.000000\",\"logo_url\":\"https://cdn.walk.sc/images/api-logo.png\",\"more_info_icon\":\"https://cdn.walk.sc/images/api-more-info.gif\",\"more_info_link\":\"https://www.walkscore.com/how-it-works/\",\"ws_link\":\"https://www.walkscore.com/score/loc/lat=47.6085/lng=-122.3295/?utm_source=api\",\"help_link\":\"https://www.walkscore.com/how-it-works/\",\"snapped_lat\":47.6085,\"snapped_lon\":-122.3295,\"transit\":{\"score\":100,\"description\":\"Rider's Paradise\"},\"bike\":{\"score\":68,\"description\":\"Bikeable\"}}"
+  },
+  "use_cases": [
+    "get Walk Score for a listing address or lat/lon",
+    "fetch Transit Score and Bike Score for a property",
+    "rank real-estate search results by walkability",
+    "show location quality badges on listing detail pages",
+    "compare walkability across candidate neighborhoods"
+  ],
+  "sources": [
+    "https://www.walkscore.com/professional/api.php",
+    "https://www.walkscore.com/professional/api-sign-up.php",
+    "https://www.walkscore.com/professional/"
+  ],
+  "researcher_confidence": "medium"
+}

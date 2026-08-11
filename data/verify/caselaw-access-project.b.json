@@ -1,0 +1,52 @@
+{
+  "id": "caselaw-access-project",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.case.law/v1/ (trailing slash; service still at this host but bulk of CAP data is frozen/archived \u2014 prefer current docs for status)",
+      "source": "https://case.law/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://case.law/docs/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "none for many public endpoints; optional/apiKey historically for higher limits \u2014 verify current CAP auth docs",
+      "source": "https://case.law/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://case.law/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Search param and empty results example may not match current API; check /cases/ query params in current docs",
+      "source": "https://case.law/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://case.law/"
+    }
+  },
+  "notes": "Placeholder pending live verification"
+}

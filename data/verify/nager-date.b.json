@@ -1,0 +1,52 @@
+{
+  "id": "nager-date",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://nagerholidays.com/api/v4",
+      "source": "https://nagerholidays.com/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://nagerholidays.com/scalar/",
+      "source": "https://nagerholidays.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nagerholidays.com/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nagerholidays.com/legal/termsofservice"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The hosted Web API may be used for private or non-profit projects; commercial use requires active sponsorship.",
+      "source": "https://nagerholidays.com/legal/termsofservice"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No rate limits; unlimited queries.",
+      "source": "https://nagerholidays.com/api"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "enabled",
+      "source": "https://nagerholidays.com/api"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://nagerholidays.com/api/v4/Holidays/US/2026\"",
+      "source": "https://nagerholidays.com/api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The hosted API is unauthenticated and covers 200+ countries, but free use is restricted to private or non-profit projects; commercial use requires active sponsorship.",
+      "source": "https://nagerholidays.com/legal/termsofservice"
+    }
+  },
+  "notes": "The project moved its canonical site and API to nagerholidays.com and launched Community WebApi v4 on 2026-06-30. v3 remains supported only through 2027-01-31, so existing v3 integrations are not yet dead, but the entry's domain, documentation, example, limits, CORS status, and unrestricted-free description are outdated."
+}

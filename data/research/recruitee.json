@@ -1,0 +1,38 @@
+{
+  "id": "recruitee",
+  "status": "operational",
+  "name": "Recruitee",
+  "category": "jobs-careers",
+  "tagline": "Collaborative hiring ATS with public API for offers and candidates.",
+  "description": "Collaborative hiring ATS with public API for offers and candidates.",
+  "base_url": "https://api.recruitee.com",
+  "docs_url": "https://docs.recruitee.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-Api-Key: YOUR_API_KEY\" https://api.recruitee.com/",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list open job offers",
+    "fetch candidate applications"
+  ],
+  "sources": [
+    "https://docs.recruitee.com/"
+  ],
+  "researcher_confidence": "low"
+}

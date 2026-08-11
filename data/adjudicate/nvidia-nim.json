@@ -1,0 +1,15 @@
+{
+  "id": "nvidia-nim",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Limits vary by model and concurrent usage; check the applicable limits in the signed-in account menu on build.nvidia.com.",
+  "cors": null,
+  "example_request": "curl -sS -X POST 'https://integrate.api.nvidia.com/v1/chat/completions' -H \"Authorization: Bearer $NVIDIA_API_KEY\" -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{\"model\":\"meta/llama-3.3-70b-instruct\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}],\"max_tokens\":32,\"stream\":false}'",
+  "example_response_snippet": "{\"id\":\"chatcmpl-...\",\"object\":\"chat.completion\",\"created\":1780000000,\"model\":\"meta/llama-3.3-70b-instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I assist you today?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":5,\"completion_tokens\":9,\"total_tokens\":14}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: replace; NVIDIA's NIM FAQ says rates vary by model and concurrent users and directs users to their signed-in account: https://forums.developer.nvidia.com/t/nvidia-nim-faq/300317. example: replace placeholder; the current reference documents POST /v1/chat/completions, Bearer credentials, JSON responses, and meta/llama-3.3-70b-instruct: https://docs.api.nvidia.com/nim/reference/meta-llama-3_3-70b-instruct-infer"
+}

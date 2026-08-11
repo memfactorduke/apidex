@@ -1,0 +1,41 @@
+{
+  "id": "uspto-trademark",
+  "status": "operational",
+  "name": "USPTO Trademark APIs",
+  "category": "legal-compliance",
+  "tagline": "Official USPTO APIs for trademark status, assignments, and bulk trademark data.",
+  "description": "Public USPTO developer APIs covering Trademark Status and Document Retrieval (TSDR), trademark assignment records, and bulk trademark data products for monitoring registration status, ownership changes, and large-scale trademark research.",
+  "base_url": "https://tsdrapi.uspto.gov",
+  "docs_url": "https://developer.uspto.gov/api-catalog",
+  "signup_url": "https://developer.uspto.gov",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via request header after self-serve signup on developer.uspto.gov (confirm exact header name from current docs)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"USPTO-API-KEY: YOUR_API_KEY\" \"https://tsdrapi.uspto.gov/ts/cd/casestatus/sn/88779999/info.json\"",
+    "response_snippet": "{ \"trademarks\": [{ \"status\": { \"status\": \"Live/Registered\" } }] }"
+  },
+  "use_cases": [
+    "check trademark registration status by serial number",
+    "retrieve trademark assignment ownership history",
+    "download bulk trademark data for analysis",
+    "monitor trademark application progress"
+  ],
+  "sources": [
+    "https://developer.uspto.gov/api-catalog"
+  ],
+  "researcher_confidence": "low"
+}

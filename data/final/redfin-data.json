@@ -1,0 +1,98 @@
+{
+  "id": "redfin-data",
+  "status": "operational",
+  "name": "Redfin Data Center",
+  "category": "real-estate-housing",
+  "tagline": "Market metrics and downloadable housing data from Redfin; limited programmatic access.",
+  "description": "Redfin Data Center publishes housing market metrics and downloadable datasets (city, ZIP, neighborhood, and metro-level). It is primarily a data download portal rather than a full self-serve developer API; programmatic access is limited and not a documented public REST product for general app use.",
+  "base_url": "https://www.redfin.com/news/data-center/downloads/",
+  "docs_url": "https://www.redfin.com/news/data-center/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No public self-serve developer API key; Data Center offers free CSV/Excel downloads. Unofficial/internal endpoints may not require auth but are unsupported and subject to blocking."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "csv",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public downloads of market data files; no documented request quotas for a developer API",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sL 'https://www.redfin.com/news/data-center/downloads/' | grep -o 'Redfin Data Center Download Hub' | head -1",
+    "response_snippet": "Redfin Data Center Download Hub"
+  },
+  "use_cases": [
+    "download monthly housing market metrics by city or metro",
+    "track median sale prices and inventory trends over time",
+    "compare housing demand metrics across ZIP codes",
+    "pull Redfin housing market CSVs for offline analysis"
+  ],
+  "sources": [
+    "https://www.redfin.com/news/data-center/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

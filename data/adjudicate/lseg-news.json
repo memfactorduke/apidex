@@ -1,0 +1,15 @@
+{
+  "id": "lseg-news",
+  "base_url": null,
+  "docs_url": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news-API",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Accept: application/json\" \"https://api.refinitiv.com/data/news/v1/headlines?query=LEN%20and%20R:MSFT.O&limit=100\"",
+  "example_response_snippet": "{\"data\":[{\"newsItem\":{\"itemMeta\":{\"firstCreated\":\"2025-04-04T06:08:20.000Z\"}}}],\"meta\":{\"count\":100,\"pageLimit\":100,\"next\":\"...\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: INCORRECT; the original returns 404, while the current official catalog is https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news-API. example: INCORRECT; the original calls only the API root and uses an API-key placeholder. LSEG's official 2025 pagination article documents the corrected Bearer-token headlines request, parameters, and response metadata: https://developers.lseg.com/en/article-catalog/article/lseg-data-library-for-python--news-pagination"
+}

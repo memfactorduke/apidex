@@ -1,0 +1,15 @@
+{
+  "id": "workable",
+  "base_url": "https://{subdomain}.workable.com/spi/v3",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "15-day trial with Standard-plan features; afterward, a restricted Free plan cannot post jobs or interact with candidates and can only view existing candidate data.",
+  "rate_limits": "10 requests per 10 seconds; exceeding the limit returns HTTP 429.",
+  "cors": "no",
+  "example_request": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://YOUR_SUBDOMAIN.workable.com/spi/v3/jobs\"",
+  "example_response_snippet": "{\"jobs\":[{\"id\":\"2b7f4a9c\",\"title\":\"Software Engineer\",\"shortcode\":\"ABC123\",\"state\":\"published\",\"confidential\":false}],\"paging\":{\"next\":null}}",
+  "description": "Workable is an ATS with a REST API for retrieving jobs and account data and managing candidates, employees, requisitions, and hiring workflows. Current job endpoints retrieve postings; the official API scopes do not document creating or updating job postings.",
+  "status": null,
+  "resolution_notes": "base_url/example: replace; SPI v3 subdomain URL and Bearer curl: https://workable.readme.io/reference/generate-an-access-token. auth_type/rate_limits/cors: keep apiKey; Bearer + API key, 10 requests/10 seconds, and browser AJAX unsupported: https://help.workable.com/hc/en-us/articles/4903195036183. free_tier/free_tier_limits: true; 15-day trial then restricted Free plan: https://help.workable.com/hc/en-us/articles/115011955988. description: replace; job scope is read-only, while write scopes cover candidates, employees and requisitions: https://help.workable.com/hc/en-us/articles/115015785428"
+}

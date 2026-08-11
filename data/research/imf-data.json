@@ -1,0 +1,42 @@
+{
+  "id": "imf-data",
+  "status": "operational",
+  "name": "IMF Data API",
+  "category": "government-open-data",
+  "tagline": "Macroeconomic and financial statistics from the International Monetary Fund via SDMX.",
+  "description": "Official IMF Data API providing access to macroeconomic and financial statistics including International Financial Statistics (IFS), World Economic Outlook (WEO), Balance of Payments, and other datasets. Uses SDMX (Statistical Data and Metadata eXchange) standards with REST endpoints for data queries, metadata, and structure definitions. Free public access for developers building economic analysis tools, dashboards, and research applications.",
+  "base_url": "https://api.imf.org/external/sdmx/2.1",
+  "docs_url": "https://data.imf.org/en/Resource-Pages/IMF-API",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public data access. Some endpoints may have rate limiting."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.imf.org/external/sdmx/2.1/data/IFS/A.US.PMP_IX\"",
+    "response_snippet": "{\"header\":{\"id\":\"...\",\"test\":false,\"prepared\":\"...\",\"sender\":{\"id\":\"IMF\"}},\"dataSets\":[...],\"structure\":{...}}"
+  },
+  "use_cases": [
+    "fetch IFS exchange rates or CPI for a country",
+    "pull WEO GDP growth forecasts",
+    "query balance of payments time series",
+    "list available IMF datasets and dimensions",
+    "build economic dashboards with official IMF statistics"
+  ],
+  "sources": [
+    "https://data.imf.org/en/Resource-Pages/IMF-API"
+  ],
+  "researcher_confidence": "low"
+}

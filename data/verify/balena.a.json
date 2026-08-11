@@ -1,0 +1,52 @@
+{
+  "id": "balena",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.balena-cloud.com",
+      "source": "https://docs.balena.io/reference/api/overview/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.balena.io/reference/api/overview/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.balena.io/learn/manage/account/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.balena.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for up to 10 devices (balenaCloud free tier); beyond that paid plans apply",
+      "source": "https://www.balena.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.balena.io/reference/api/overview/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://api.balena-cloud.com/v7/device\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" (or current documented version path; verify against live docs)",
+      "source": "https://docs.balena.io/reference/api/overview/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.balena.io/reference/api/overview/"
+    }
+  },
+  "notes": "Placeholder \u2014 will replace after verifying all fields against official docs."
+}

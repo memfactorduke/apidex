@@ -1,0 +1,15 @@
+{
+  "id": "maxio-chargify",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Free Developer Account: test sites only; up to 10 test sites; each test site allows 500 products, customers, subscriptions, and coupons; up to 10 users. Inactive accounts are warned at 90 days and purged at 120 days.",
+  "rate_limits": "Maximum 4 concurrent API requests per subdomain. Excess concurrency may be queued, throttled, or return HTTP 429. All requests have a 120-second timeout.",
+  "cors": "no",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier=true and free_tier_limits corrected: free developer accounts are test-only with documented limits. Evidence: https://docs.maxio.com/hc/en-us/articles/24183916903309-Understand-Merchant-Limits. rate_limits corrected to 4 concurrent requests per subdomain plus 120-second timeout. Evidence: https://developers.maxio.com/http/getting-started/about-the-api/error-handling-rate-limiting. cors=no; Maxio says CORS is not enabled. Evidence: https://developers.maxio.com/http/getting-started/about-the-api/tips-and-best-practices"
+}

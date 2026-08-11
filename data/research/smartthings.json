@@ -1,0 +1,41 @@
+{
+  "id": "smartthings",
+  "status": "operational",
+  "name": "SmartThings",
+  "category": "iot-devices",
+  "tagline": "Samsung smart-home cloud REST API for devices, locations, scenes, and rules",
+  "description": "SmartThings is Samsung's smart-home platform API for managing devices, locations, rooms, scenes, and automation rules. Developers authenticate with OAuth 2.0 personal access tokens or app credentials and call the public REST API to list devices, read status, execute commands, and run scenes. Official docs cover the public API surface used for cloud integrations.",
+  "base_url": "https://api.smartthings.com",
+  "docs_url": "https://developer.smartthings.com/docs/api/public",
+  "signup_url": "https://developer.smartthings.com",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 Bearer token (Personal Access Token or installed-app token) in Authorization header; create PATs at developer.smartthings.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.smartthings.com/v1/devices\"",
+    "response_snippet": "{\"items\":[{\"deviceId\":\"...\",\"name\":\"Living Room Light\",\"label\":\"Living Room Light\",\"manufacturerName\":\"Samsung Electronics\",\"presentationId\":\"...\",\"locationId\":\"...\",\"components\":[{\"id\":\"main\",\"capabilities\":[{\"id\":\"switch\",\"version\":1}]}]}],\"_links\":{}}"
+  },
+  "use_cases": [
+    "list devices in a SmartThings location",
+    "read device capability status (switch, temperature, lock)",
+    "execute a device command (turn on/off, set level)",
+    "run a scene by scene ID",
+    "list locations and rooms for an account"
+  ],
+  "sources": [
+    "https://developer.smartthings.com/docs/api/public"
+  ],
+  "researcher_confidence": "low"
+}

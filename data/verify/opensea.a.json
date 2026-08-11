@@ -1,0 +1,52 @@
+{
+  "id": "opensea",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/list_collections"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/api-overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/api-keys"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "600 read requests/hour, 30 write requests/hour, 5 fulfillment requests/minute; instant free-tier keys expire after 7 days.",
+      "source": "https://docs.opensea.io/reference/api-keys"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published for instant free-tier keys, and authenticated responses provide X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset headers.",
+      "source": "https://docs.opensea.io/reference/api-keys"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/list_collections"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/api-overview"
+    }
+  },
+  "notes": "OpenSea's official status page currently reports the API operational. The entry fails because current official documentation publishes concrete free-tier and rate-limit information, contradicting both limit claims. No authoritative CORS policy was located."
+}

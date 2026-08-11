@@ -1,0 +1,43 @@
+{
+  "id": "sumsub",
+  "status": "operational",
+  "name": "Sumsub",
+  "category": "legal-compliance",
+  "tagline": "Global KYC/AML identity verification and compliance API",
+  "description": "Sumsub provides a KYC/AML platform API for identity verification, biometric liveness checks, transaction monitoring, and Travel Rule compliance. Developers integrate applicant onboarding, document and face verification, and ongoing monitoring via a REST API with signed app-token authentication.",
+  "base_url": "https://api.sumsub.com",
+  "docs_url": "https://docs.sumsub.com/",
+  "signup_url": "https://sumsub.com/",
+  "auth": {
+    "type": "other",
+    "details": "App token + HMAC-SHA256 request signature: X-App-Token header and X-App-Access-Ts / X-App-Access-Sig headers; tokens from dashboard"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET 'https://api.sumsub.com/resources/applicants/-;externalUserId=USER_ID/one' -H 'X-App-Token: YOUR_API_KEY' -H 'X-App-Access-Ts: TIMESTAMP' -H 'X-App-Access-Sig: SIGNATURE' -H 'Accept: application/json'",
+    "response_snippet": "{\"id\":\"5b594ade0a975a36c9349e66\",\"createdAt\":\"2018-07-26 12:00:00\",\"externalUserId\":\"USER_ID\",\"info\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"review\":{\"reviewStatus\":\"completed\",\"reviewResult\":{\"reviewAnswer\":\"GREEN\"}}}"
+  },
+  "use_cases": [
+    "create a KYC applicant and start identity verification",
+    "check applicant verification status by external user id",
+    "submit ID document images for verification",
+    "run liveness/face match checks for onboarding",
+    "monitor transactions for AML and Travel Rule compliance"
+  ],
+  "sources": [
+    "https://docs.sumsub.com/",
+    "https://docs.sumsub.com/reference/about-sumsub-api",
+    "https://docs.sumsub.com/docs/get-started-with-api"
+  ],
+  "researcher_confidence": "low"
+}

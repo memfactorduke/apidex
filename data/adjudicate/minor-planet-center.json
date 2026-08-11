@@ -1,0 +1,15 @@
+{
+  "id": "minor-planet-center",
+  "base_url": "https://data.minorplanetcenter.net/api",
+  "docs_url": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free public access, subject to a maximum of 5 requests per second.",
+  "rate_limits": "Maximum 5 requests per second; excess requests may return HTTP 429, and the requesting IP address may be blocked.",
+  "cors": null,
+  "example_request": "curl -sS -X GET -H 'Content-Type: application/json' -d '{\"desigs\":[\"Bennu\"],\"output_format\":[\"OBS80\"]}' 'https://data.minorplanetcenter.net/api/get-obs'",
+  "example_response_snippet": "[{\"OBS80\":\"A1955J99R36Q* C1999 09 11.40624 01 37 54.90 -27 04 27.5          15.1  aa6197704\\nA1955J99R36Q  C1999 09 11.42149 01 38 00.18 -27 03 59.6          15.1  aa6197704\\n...\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: corrected; official endpoints use this prefix: https://docs.minorplanetcenter.net/mpc-ops-docs/apis/get-obs/. docs_url: corrected to official index: https://docs.minorplanetcenter.net/mpc-ops-docs/apis/. free_tier_limits: corrected; public data and 5 rps cap: https://docs.minorplanetcenter.net/mpc-ops-docs/faqs/. rate_limits: corrected; same FAQ documents 5 rps, 429, and IP blocking. example: corrected to the official curl and documented OBS80 response: https://docs.minorplanetcenter.net/mpc-ops-docs/apis/get-obs/."
+}

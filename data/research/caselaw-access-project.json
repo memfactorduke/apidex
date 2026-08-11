@@ -1,0 +1,40 @@
+{
+  "id": "caselaw-access-project",
+  "status": "operational",
+  "name": "Caselaw Access Project",
+  "category": "legal-compliance",
+  "tagline": "Harvard CAP API for millions of digitized US court opinions with structured metadata",
+  "description": "The Caselaw Access Project (CAP) API from Harvard Law School Library provides programmatic access to millions of digitized US court opinions with structured metadata. Developers can search and retrieve case law data for legal research, analytics, and application integration.",
+  "base_url": "https://api.case.law/v1",
+  "docs_url": "https://case.law/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication required for most endpoints"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.case.law/v1/cases/?search=contract\"",
+    "response_snippet": "{\"count\": 0, \"next\": null, \"previous\": null, \"results\": []}"
+  },
+  "use_cases": [
+    "search US court opinions by keyword",
+    "retrieve case metadata and full text by ID",
+    "list cases by jurisdiction or court",
+    "bulk export of caselaw data for research"
+  ],
+  "sources": [
+    "https://case.law/docs/"
+  ],
+  "researcher_confidence": "low"
+}

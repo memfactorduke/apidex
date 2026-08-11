@@ -1,0 +1,52 @@
+{
+  "id": "woodpecker-ci",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ci.woodpecker-ci.org/swagger/index.html"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://woodpecker-ci.org/api",
+      "source": "https://woodpecker-ci.org/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woodpecker-ci.org/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woodpecker-ci.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woodpecker-ci.org/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woodpecker-ci.org/migrations"
+    }
+  },
+  "notes": "The project and API are active. The automated base-URL failure is caused by the intentional self-hosted placeholder; official Swagger uses /api. The submitted documentation URL is obsolete and returns 404; the site's current API link is /api. No official incoming-API rate-limit or CORS policy was found. The signup URL resolves, but its #api-token anchor appears stale."
+}

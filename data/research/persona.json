@@ -1,0 +1,40 @@
+{
+  "id": "persona",
+  "status": "operational",
+  "name": "Persona",
+  "category": "legal-compliance",
+  "tagline": "Identity verification and KYC/KYB API for compliance workflows",
+  "description": "Persona provides identity verification, KYC/KYB, and watchlist screening APIs for modern compliance workflows. Developers use it to verify individuals and businesses, run risk checks, and manage verification sessions programmatically.",
+  "base_url": "https://api.withpersona.com/api/v1",
+  "docs_url": "https://docs.withpersona.com/",
+  "signup_url": "https://app.withpersona.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization Bearer header (self-serve signup)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.withpersona.com/api/v1/inquiries -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Persona-Version: 2023-01-05\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"data\":{\"type\":\"inquiry\",\"id\":\"inq_...\",\"attributes\":{...}}}"
+  },
+  "use_cases": [
+    "create identity verification inquiry for a user",
+    "retrieve inquiry status and verification results",
+    "run watchlist or sanctions screening",
+    "verify business (KYB) identity documents"
+  ],
+  "sources": [
+    "https://docs.withpersona.com/"
+  ],
+  "researcher_confidence": "low"
+}

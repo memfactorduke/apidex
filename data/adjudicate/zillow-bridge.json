@@ -1,0 +1,15 @@
+{
+  "id": "zillow-bridge",
+  "base_url": null,
+  "docs_url": "https://bridgedataoutput.com/docs/platform/API/zg-data",
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Automatic access is limited to a synthetic test dataset. Production datasets require provider approval; Bridge charges no service fee, but MLS or data-provider licensing fees and conditions may apply.",
+  "rate_limits": "No general cap on total or concurrent API requests is published currently. Zillow Public Records has a default limit of 1,000 requests per day.",
+  "cors": "yes",
+  "example_request": "curl --get 'https://api.bridgedataoutput.com/api/v2/OData/test/Properties' --data-urlencode '$top=1' --data-urlencode 'access_token=YOUR_API_KEY'",
+  "example_response_snippet": "{\"@odata.context\":\"https://api.bridgedataoutput.com/api/v2/OData/test/$metadata#Properties\",\"value\":[{\"ListingKey\":\"...\",\"StandardStatus\":\"Active\",\"ListPrice\":450000}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: use Zillow Group Data docs [https://bridgedataoutput.com/docs/platform/API/zg-data]. free_tier: true for automatic test data [https://bridgedataoutput.com/docs/platform/Introduction/Signing-up-with-Bridge-API]. free_tier_limits: provider terms vary [https://www.bridgeinteractive.com/developers/bridge-api/]. rate_limits: no general cap; Public Records is 1,000/day [https://bridgedataoutput.com/docs/platform/API/bridge]. cors: yes via Browser Token and Referrer Domain [same URL]. example: plural Properties and $top are documented [same URL]."
+}

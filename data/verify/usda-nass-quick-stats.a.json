@@ -1,0 +1,52 @@
+{
+  "id": "usda-nass-quick-stats",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quickstats.nass.usda.gov/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quickstats.nass.usda.gov/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quickstats.nass.usda.gov/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nass.usda.gov/Publications/2026_Products_and_Services_Guide.pdf"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free with an API key; NASS publishes a rate limit of 100 calls within five minutes and a maximum of 50,000 records per response. No daily-call quota is specified.",
+      "source": "https://data.nass.usda.gov/Education_and_Outreach/Meeting/2025/2025%20Spring%20Data%20Users%20Meeting%20Question%20and%20Answer%20Summary%20with%20Slides.pdf"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "100 calls within five minutes.",
+      "source": "https://data.nass.usda.gov/Education_and_Outreach/Meeting/2025/2025%20Spring%20Data%20Users%20Meeting%20Question%20and%20Answer%20Summary%20with%20Slides.pdf"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quickstats.nass.usda.gov/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quickstats.nass.usda.gov/api"
+    }
+  },
+  "notes": "The official API documentation is live. The material error is the limit information: NASS publishes 100 calls per five minutes, not an unspecified daily limit. API responses are separately capped at 50,000 records. Official documentation does not state CORS behavior."
+}

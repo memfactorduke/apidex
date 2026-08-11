@@ -1,0 +1,52 @@
+{
+  "id": "tuya",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tuya.com/en/docs/iot/api-request?id=Ka4a8uuo1j4t4"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tuya.com/en/docs/cloud/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tuya.com/en/docs/developer/apply-cloud-api-key?id=Kff30z8sv62ah"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tuya.com/en/docs/IoT%20Device%20Management/iot-device-management-quick-start?id=Karozipkebot7"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Trial Edition includes 26,000 API calls and 68,000 messages per month, one data center, up to 50 devices, and up to 10 controllable devices. It is restricted to individual development/debugging, prohibits commercial use, and suspends service when the allowance is exhausted until the next monthly refresh.",
+      "source": "https://developer.tuya.com/en/docs/iot/membership-service?id=K9m8k45jwvg9j"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Tuya publishes per-project, per-endpoint frequency limits. Examples include 10 requests/second for space creation, 4/second for sending device actions or properties, and 50/second for querying device properties.",
+      "source": "https://developer.tuya.com/en/docs/iot/frequency-control?id=Kcojz2r2dg1f6"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tuya.com/en/docs/cloud/6c1636a9bd?id=Ka7kjumkoa53v"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.tuya.com/en/docs/cloud/api-overview?id=Kcdjai799dst5"
+    }
+  },
+  "notes": "The API and documentation are live. The listed base URL is specifically the Western America endpoint; Tuya publishes separate endpoints for six other data-center regions. The entry fails because both the trial limits and endpoint-specific rate limits are officially published, contrary to the supplied values."
+}

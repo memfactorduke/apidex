@@ -1,0 +1,94 @@
+{
+  "id": "honeycomb",
+  "status": "operational",
+  "name": "Honeycomb API",
+  "category": "dev-tools",
+  "tagline": "Observability platform API for datasets, queries, triggers, and SLOs",
+  "description": "Honeycomb API for managing observability data including datasets, queries, triggers, and SLOs with strong OpenTelemetry and high-cardinality support.",
+  "base_url": "https://api.honeycomb.io",
+  "docs_url": "https://docs.honeycomb.io/api/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Honeycomb-Team header"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Up to 20M events and 100M metrics data points per month; includes 2 triggers; SLOs are not included.",
+    "paid_plans": null
+  },
+  "rate_limits": "Most API responses expose limits through RateLimit and RateLimit-Policy headers. Create Query Result is limited to 10 requests per minute, or 1 request per minute when using relational fields.",
+  "example": {
+    "request": "curl -H \"X-Honeycomb-Team: YOUR_API_KEY\" https://api.honeycomb.io/1/auth",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list datasets",
+    "run queries"
+  ],
+  "sources": [
+    "https://docs.honeycomb.io/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

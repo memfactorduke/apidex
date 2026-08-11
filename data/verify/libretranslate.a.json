@@ -1,0 +1,52 @@
+{
+  "id": "libretranslate",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.libretranslate.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://libretranslate.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.libretranslate.com/guides/api_usage/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false for the hosted libretranslate.com API; self-hosting is free, but the managed service has no free trial or free low-volume API key",
+      "source": "https://portal.libretranslate.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No hosted free tier; therefore no free-tier limits apply",
+      "source": "https://portal.libretranslate.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published burst limits are up to 80 translations per minute for Pro and 200 translations per minute for Business; higher custom limits are available by contacting support",
+      "source": "https://portal.libretranslate.com/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes; the official implementation adds Access-Control-Allow-Origin: * and permits GET and POST",
+      "source": "https://github.com/LibreTranslate/LibreTranslate/blob/main/libretranslate/app.py"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.libretranslate.com/guides/api_usage/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.libretranslate.com/"
+    }
+  },
+  "notes": "The hosted service requires a paid API key. Self-hosting remains free, and official mirrors include some keyless third-party instances, but neither constitutes a free tier on libretranslate.com. The portal publishes current plan prices and burst limits, while the official source code confirms permissive CORS support."
+}

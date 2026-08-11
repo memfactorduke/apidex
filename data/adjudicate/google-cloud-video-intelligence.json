@@ -1,0 +1,15 @@
+{
+  "id": "google-cloud-video-intelligence",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST \"https://videointelligence.googleapis.com/v1/videos:annotate\" -H \"Authorization: Bearer $(gcloud auth application-default print-access-token)\" -H \"Content-Type: application/json; charset=utf-8\" --data '{\"inputUri\":\"gs://YOUR_BUCKET/video.mp4\",\"features\":[\"LABEL_DETECTION\"]}'",
+  "example_response_snippet": "{\"name\":\"projects/PROJECT_NUMBER/locations/LOCATION_ID/operations/OPERATION_ID\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: INCORRECT. The endpoint and body are valid, but YOUR_API_KEY cannot be used as the Bearer credential; the method requires the cloud-platform OAuth scope. Google's current curl example obtains an OAuth access token with gcloud and returns an operation name. Evidence: https://docs.cloud.google.com/video-intelligence/docs/annotate-video-command-line and https://docs.cloud.google.com/video-intelligence/docs/reference/rest/v1/videos/annotate"
+}

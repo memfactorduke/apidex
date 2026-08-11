@@ -1,0 +1,52 @@
+{
+  "id": "propublica-congress",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://projects.propublica.org/api-docs/congress-api/api/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false; the API is discontinued and new API keys are unavailable, so no current free tier exists",
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No current free-tier limit because the API is unavailable; the historical limit was 5,000 requests per day",
+      "source": "https://projects.propublica.org/api-docs/congress-api/api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The historical documentation published a limit of 5,000 requests per day; no current rate limit applies because the API is unavailable",
+      "source": "https://projects.propublica.org/api-docs/congress-api/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://projects.propublica.org/api-docs/congress-api/endpoints/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The ProPublica Congress API is discontinued. Its documentation and endpoint examples remain available solely as historical references, and new API keys are unavailable.",
+      "source": "https://projects.propublica.org/api-docs/congress-api/"
+    }
+  },
+  "notes": "Official ProPublica documentation checked in August 2026 says the API is no longer available, the documentation is historical only, and new keys are unavailable. The directory entry should be retired rather than marked operational. Its legacy base URL, API-key header, and example syntax are documented accurately."
+}

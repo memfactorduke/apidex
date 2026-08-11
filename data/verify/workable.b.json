@@ -1,0 +1,52 @@
+{
+  "id": "workable",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://{subdomain}.workable.com/spi/v3",
+      "source": "https://workable.readme.io/reference/jobs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://workable.readme.io/reference/generate-an-access-token"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Bearer access token in the Authorization header",
+      "source": "https://workable.readme.io/reference/generate-an-access-token"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://help.workable.com/hc/en-us/articles/115011955988-Workable-plans-packages-and-pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "A Free plan is available after ending a subscription or trial; it cannot post jobs or interact with candidates and can only view existing candidate data.",
+      "source": "https://help.workable.com/hc/en-us/articles/115011955988-Workable-plans-packages-and-pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "10 requests per 10 seconds",
+      "source": "https://help.workable.com/hc/en-us/articles/4903195036183-Troubleshooting-API-issues"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "not supported",
+      "source": "https://workable.readme.io/reference/generate-an-access-token"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" \"https://<account_subdomain>.workable.com/spi/v3/jobs\"",
+      "source": "https://workable.readme.io/reference/generate-an-access-token"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Workable provides a REST API for retrieving jobs and account data and for managing candidates, employees, and recruiting workflows; current documentation does not describe creating or updating job postings through the API.",
+      "source": "https://workable.readme.io/reference/generate-an-access-token"
+    }
+  },
+  "notes": "The API is operational, but the submitted entry uses an obsolete-looking global v1 URL and the wrong authentication header. Current endpoints are account-subdomain-specific under /spi/v3. Workable also publishes a 10-per-10-seconds limit, explicitly does not support CORS, and documents a restricted Free plan."
+}

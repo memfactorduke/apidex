@@ -1,0 +1,52 @@
+{
+  "id": "predicthq",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.predicthq.com/api/overview/authenticating"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.predicthq.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.predicthq.com/api/overview/authenticating"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.predicthq.com/webapp-support/getting-started/what-happens-at-the-end-of-my-free-trial"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No ongoing free tier. A free 14-day trial provides API access; trial exports are limited to fewer than 1,000 records, and default future event visibility is 90 days.",
+      "source": "https://docs.predicthq.com/webapp-support/api-plans-pricing-and-billing/learn-about-our-14-day-trial"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plan-specific requests per second, measured across a one-second window for the entire organization; exceeding the limit can return HTTP 429.",
+      "source": "https://docs.predicthq.com/api/overview/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://api.predicthq.com/v1/events/?q=taylor%20swift\" -H \"Accept: application/json\" -H \"Authorization: Bearer $ACCESS_TOKEN\"",
+      "source": "https://docs.predicthq.com/getting-started/api-quickstart"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "PredictHQ provides APIs for structured, deduplicated real-world event data that can be integrated into forecasting, machine-learning, and AI systems.",
+      "source": "https://docs.predicthq.com/getting-started/api-quickstart"
+    }
+  },
+  "notes": "The API is operational: an unauthenticated HTTP 401 is expected because all endpoints require a bearer API token. The entry fails because its description and example are placeholders, known trial terms are labeled unknown, and the rate-limit policy is documented."
+}

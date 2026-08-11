@@ -1,0 +1,52 @@
+{
+  "id": "onfido",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.eu.onfido.com/v3.6",
+      "source": "https://documentation.identity.entrust.com/api/latest/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.onfido.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.identity.entrust.com/api/latest/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://documentation.identity.entrust.com/getting-started/quick-start-guide/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Uncharged sandbox requests with templated results; live verifications require valid billing information.",
+      "source": "https://documentation.identity.entrust.com/getting-started/quick-start-guide/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "400 requests per minute for live clients unless contractually agreed otherwise, with up to 7 requests per second and a burst of 14; sandbox: 120 requests per minute, up to 2 requests per second with a burst of 4.",
+      "source": "https://documentation.identity.entrust.com/api/latest/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://api.eu.onfido.com/v3.6/applicants/\" -H \"Authorization: Token token=YOUR_API_TOKEN\" -H \"Accept: application/json\"",
+      "source": "https://documentation.identity.entrust.com/api/latest/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.identity.entrust.com/getting-started/quick-start-guide/"
+    }
+  },
+  "notes": "Onfido is now branded as Entrust Identity Verification. The legacy documentation URL redirects to the current official portal. API v3.6 requires a regional host; EU, US, and Canada have distinct base URLs. Official documentation does not establish a general REST API CORS policy."
+}

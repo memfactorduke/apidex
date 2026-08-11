@@ -1,0 +1,15 @@
+{
+  "id": "traveltime",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "2-week free trial: 60 hits/min. Afterward, non-paid access: 5 hits/min. Trial/free-restricted level of detail is capped at Medium (0); endpoint travel-time caps range from 2 to 12 hours.",
+  "rate_limits": "60 hits/min during the 2-week trial; 5 hits/min afterward. One hit is one isochrone, route, or matrix search. Paid licences have custom or no concurrency limits.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: original \"unknown\" is incorrect; official 2026 docs publish the trial, post-trial, travel-time, and level-of-detail limits: https://docs.traveltime.com/api/overview/usage-limits. rate_limits: original \"not published\" is incorrect; the same official page specifies 60 hits/min during trial, 5 afterward, and custom or no limits for paid licences."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "opencorporates",
+  "status": "operational",
+  "name": "OpenCorporates",
+  "category": "data-analytics",
+  "tagline": "World's largest open database of companies and corporate ownership networks",
+  "description": "OpenCorporates provides programmatic access to company registry data, officers, filings, and corporate ownership relationships across many jurisdictions. Developers use it for KYC, due diligence, entity resolution, and graph-style linkage of companies and people. The API returns structured company records with registry identifiers, status, registered addresses, and related entities.",
+  "base_url": "https://api.opencorporates.com/v0.4",
+  "docs_url": "https://api.opencorporates.com/documentation/API_Reference",
+  "signup_url": "https://opencorporates.com/users/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via api_token query parameter (or account signup); free accounts limited; paid plans for higher volume"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.opencorporates.com/v0.4/companies/search?q=Apple&api_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"results\":{\"companies\":[{\"company\":{\"name\":\"APPLE INC.\",\"company_number\":\"C0806592\",\"jurisdiction_code\":\"us_ca\",\"incorporation_date\":\"1977-01-03\",\"company_type\":\"Domestic Stock\",\"current_status\":\"Active\",\"registered_address_in_full\":\"...\"}}]}}"
+  },
+  "use_cases": [
+    "search companies by name across global registries",
+    "look up a company by jurisdiction and company number",
+    "list officers and directors for a company",
+    "trace corporate ownership and network relationships",
+    "enrich KYC or due-diligence workflows with registry status"
+  ],
+  "sources": [
+    "https://api.opencorporates.com/documentation/API_Reference"
+  ],
+  "researcher_confidence": "low"
+}

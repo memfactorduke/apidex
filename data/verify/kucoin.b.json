@@ -1,0 +1,52 @@
+{
+  "id": "kucoin",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/docs-new/rest/spot-trading/market-data/get-ticker"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/docs/beginners/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/docs-new/authentication"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Weight-based quotas reset every 30 seconds and vary by VIP level and resource pool. At global VIP0, Public is 2,000/30s, Spot/Margin is 4,000/30s, and Futures is 2,000/30s; public limits are IP-based and private limits are UID-based.",
+      "source": "https://www.kucoin.com/docs-new/rate-limit"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/docs-new/rest/spot-trading/market-data/get-ticker"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/docs-new"
+    }
+  },
+  "notes": "Official docs are active and the changelog was updated in August 2026. The supplied docs URL redirects to /docs-new. The rate-limit characterization is false: public limits are not generally higher than private trading limits. KuCoin does not publish a clear standalone API pricing/free-tier policy, so both pricing claims remain unverifiable."
+}

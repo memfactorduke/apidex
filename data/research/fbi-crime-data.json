@@ -1,0 +1,40 @@
+{
+  "id": "fbi-crime-data",
+  "status": "operational",
+  "name": "FBI Crime Data Explorer API",
+  "category": "government-open-data",
+  "tagline": "US crime statistics (UCR/NIBRS) from the FBI Crime Data Explorer for research and apps.",
+  "description": "The FBI Crime Data Explorer API provides public access to Uniform Crime Reporting (UCR) and National Incident-Based Reporting System (NIBRS) statistics for the United States. It supports research, data analysis, and applications that need official FBI crime data by jurisdiction, offense type, and time period. Developers use it to query aggregated crime counts, clearance rates, and related datasets published through the Crime Data Explorer.",
+  "base_url": "https://api.usa.gov/crime/fbi/cde",
+  "docs_url": "https://crime-data-explorer.fr.cloud.gov/pages/docApi",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or header; self-serve signup on api.data.gov if required for higher limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.usa.gov/crime/fbi/cde/arrest/national/all?from=2019&to=2021&API_KEY=YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[{\"data_year\":2019,\"offense\":\"all\",\"count\":0}],\"pagination\":{\"count\":0,\"page\":0,\"pages\":0,\"per_page\":0}}"
+  },
+  "use_cases": [
+    "get national crime arrest totals by year",
+    "compare state-level UCR offense counts over time",
+    "look up NIBRS incident statistics for a jurisdiction",
+    "build dashboards of FBI crime trends for research apps"
+  ],
+  "sources": [
+    "https://crime-data-explorer.fr.cloud.gov/pages/docApi"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "kucoin",
+  "status": "operational",
+  "name": "KuCoin",
+  "category": "crypto",
+  "tagline": "Global crypto exchange API for market data, trading, and account management",
+  "description": "KuCoin provides REST and WebSocket APIs for public market data and authenticated trading on a major global cryptocurrency exchange. Developers can access spot markets, futures, account balances, order management, and real-time market streams with broad altcoin coverage.",
+  "base_url": "https://api.kucoin.com",
+  "docs_url": "https://www.kucoin.com/docs/beginners/introduction",
+  "signup_url": "https://www.kucoin.com/account/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key, secret, and passphrase via KC-API-KEY, KC-API-SIGN, KC-API-TIMESTAMP, KC-API-PASSPHRASE, KC-API-KEY-VERSION headers; self-serve from account API management"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access included with exchange account; rate limits apply by endpoint/weight, not a separate paid API product",
+    "paid_plans": null
+  },
+  "rate_limits": "Weight-based; public market data typically higher limits than private trading; exact limits published per endpoint in docs",
+  "example": {
+    "request": "curl -s 'https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT'",
+    "response_snippet": "{\"code\":\"200000\",\"data\":{\"time\":...,\"sequence\":\"...\",\"price\":\"...\",\"size\":\"...\",\"bestBid\":\"...\",\"bestBidSize\":\"...\",\"bestAsk\":\"...\",\"bestAskSize\":\"...\"}}"
+  },
+  "use_cases": [
+    "get ticker or order book for a KuCoin spot pair",
+    "place or cancel spot orders programmatically",
+    "list account balances and trade history",
+    "stream real-time trades and order book via WebSocket",
+    "fetch historical candlestick/OHLCV data"
+  ],
+  "sources": [
+    "https://www.kucoin.com/docs/beginners/introduction",
+    "https://api.kucoin.com"
+  ],
+  "researcher_confidence": "medium"
+}

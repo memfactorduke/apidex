@@ -1,0 +1,52 @@
+{
+  "id": "baseten",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.baseten.co/reference/training-api/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.baseten.co/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.baseten.co/inference/calling-your-model"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.baseten.co/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "New accounts get free credits (Baseten materials cite $30); Basic plan is $0/mo pay-as-you-go. Model API defaults: Basic unverified 15 RPM / 100k TPM; Basic verified 120 RPM / 500k TPM.",
+      "source": "https://docs.baseten.co/inference/model-apis/rate-limits-and-budgets"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published. Model APIs: Basic unverified 15 RPM / 100k TPM; Basic verified 120 RPM / 500k TPM; Pro 120 RPM / 1M TPM; Enterprise custom. Management API has per-key limits (e.g. 20/min on activate endpoints).",
+      "source": "https://docs.baseten.co/inference/model-apis/rate-limits-and-budgets"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Dedicated deployment endpoints do not include CORS response headers; browser-based calls may be blocked (server-side calls recommended).",
+      "source": "https://docs.baseten.co/inference/calling-your-model"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST https://model-YOUR_MODEL_ID.api.baseten.co/environments/production/predict -H \"Authorization: Bearer $BASETEN_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\": \"Hello, world!\"}' (or Model APIs: https://inference.baseten.co/v1/chat/completions). Bare POST to https://api.baseten.co/ is not a valid inference call.",
+      "source": "https://docs.baseten.co/inference/calling-your-model"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.baseten.co/"
+    }
+  },
+  "notes": "API is live. Failures: rate_limits are published (not \"not published\"); example path/host is wrong; CORS is documented as absent on dedicated endpoints; free_tier_limits are knowable (credits + tier RPM/TPM). Note multi-host: api.baseten.co (mgmt), inference.baseten.co (Model APIs), model-*.api.baseten.co (deployed)."
+}

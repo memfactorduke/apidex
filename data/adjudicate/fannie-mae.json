@@ -1,0 +1,15 @@
+{
+  "id": "fannie-mae",
+  "base_url": null,
+  "docs_url": "https://developer.fanniemae.com/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS \"https://api.fanniemae.com/singlefamily/originating/properties/propertydata/api/health\" -H \"Accept: application/json\" -H \"x-fnma-channel: api\" -H \"x-fnma-access-token: YOUR_ACCESS_TOKEN\" -H \"x-fnma-api-key: YOUR_API_KEY\"",
+  "example_response_snippet": "{\"status\":\"UP\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: KEEP ORIGINAL. Fannie Mae's official Mission Score guide names https://api.fanniemae.com as its production environment: https://singlefamily.fanniemae.com/media/38606/display. docs_url: REPLACE; the current official API catalog and documentation portal is https://developer.fanniemae.com/. example: REPLACE; Fannie Mae documents the product-specific production health endpoint and required token/key headers at https://singlefamily.fanniemae.com/media/document/pdf/property-data-api-technical-specifications."
+}

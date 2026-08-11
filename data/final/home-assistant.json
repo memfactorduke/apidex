@@ -1,0 +1,105 @@
+{
+  "id": "home-assistant",
+  "status": "operational",
+  "name": "Home Assistant",
+  "category": "iot-devices",
+  "tagline": "Self-hosted REST and WebSocket APIs for smart-home states, services, and automations",
+  "description": "Home Assistant exposes a RESTful JSON API on the same host and port as its web frontend (documented default port 8123; Home Assistant OS 2026.8+ may default to 80 for OS installs). Endpoints under /api/ let you read entity states, call services (lights, switches, climate), fire events, fetch history and logbook data, render templates, and more. Authentication uses a long-lived access token as a Bearer header. A WebSocket API is also available for real-time updates. Fully free and open source on your own hardware\u2014there is no central multi-tenant cloud API host.",
+  "base_url": "http://IP_ADDRESS:8123/api",
+  "docs_url": "https://developers.home-assistant.io/docs/api/rest/",
+  "signup_url": "https://www.home-assistant.io/installation/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Long-lived access token via Authorization: Bearer TOKEN. Create under user Profile \u2192 Long-Lived Access Tokens (valid 10 years). OAuth2/IndieAuth also available for third-party apps."
+  },
+  "https": false,
+  "cors": "no",
+  "formats": [
+    "json",
+    "text",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Unlimited on self-hosted instance (open source). No paid API metering. Optional Nabu Casa Cloud (~$6.50/mo US) is separate and not required for local API access.",
+    "paid_plans": "Optional Nabu Casa Cloud: $6.50/mo or $65/yr (US) for remote access/voice; core local REST/WebSocket API remains free"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" http://localhost:8123/api/",
+    "response_snippet": "{\n  \"message\": \"API running.\"\n}"
+  },
+  "use_cases": [
+    "get current state of a light, sensor, or switch entity",
+    "turn on or off lights and switches via service calls",
+    "list all entity states on a Home Assistant instance",
+    "push external sensor readings into Home Assistant as entity states",
+    "pull entity history or logbook entries for a time range",
+    "call climate, cover, or media_player services from scripts"
+  ],
+  "sources": [
+    "https://developers.home-assistant.io/docs/api/rest/",
+    "https://developers.home-assistant.io/docs/auth_api",
+    "https://www.home-assistant.io/integrations/api/",
+    "https://www.home-assistant.io/integrations/http/",
+    "https://www.home-assistant.io/cloud/",
+    "https://www.nabucasa.com/pricing/",
+    "https://status.home-assistant.io/"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "rate_limits"
+    ]
+  }
+}

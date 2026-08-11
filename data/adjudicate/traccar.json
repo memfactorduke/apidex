@@ -1,0 +1,15 @@
+{
+  "id": "traccar",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Self-hosting is free/open source with no default software limits. Public demo servers are free for testing with no feature or device-count limits, but lack preconfigured reverse geocoding/email and guarantee neither QoS nor full history. Hosted subscriptions start at $9.95/month.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Traccar is an open-source GPS tracking platform with REST endpoints for devices, positions, geofences, users, groups, and reports, plus /api/socket WebSocket live updates. REST clients can use HTTP Basic authentication, Bearer account tokens, or session cookies. Create a password session by POSTing form-encoded email and password to /api/session, or a token session with GET /api/session?token=USER_TOKEN. It can be self-hosted or used through Traccar's hosted subscriptions.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: Corrected. Pricing confirms free open-source software and hosting from $9.95/month; the demo page documents its limits: https://www.traccar.org/pricing/ and https://www.traccar.org/demo-server/. description: Corrected. The API guide and current OpenAPI spec distinguish Basic/Bearer auth from form-based session creation and document WebSockets: https://www.traccar.org/traccar-api/ and https://www.traccar.org/api-reference/openapi.yaml"
+}

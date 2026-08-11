@@ -1,0 +1,49 @@
+{
+  "id": "philips-hue",
+  "status": "operational",
+  "name": "Philips Hue",
+  "category": "iot-devices",
+  "tagline": "Local and cloud CLIP v2 API for lights, rooms, scenes, and entertainment.",
+  "description": "Philips Hue is a smart lighting API that provides local and cloud CLIP v2 access for lights, rooms, scenes, and entertainment.",
+  "base_url": "https://api.meethue.com/v2",
+  "docs_url": "https://developers.meethue.com/develop/hue-api-v2/",
+  "signup_url": "https://developers.meethue.com/develop/get-started-2/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 req/day free",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.meethue.com/v2/lights\" -H \"X-Api-Key: YOUR_API_KEY\"",
+    "response_snippet": "{ \"lights\": [ { \"id\": \"1\", \"name\": \"Living Room\", \"state\": { \"on\": true, \"bri\": 254, \"hue\": 0, \"sat\": 0, \"ct\": 0, \"xy\": [0.0, 0.0], \"alert\": \"none\", \"effect\": \"none\", \"colormode\": \"hs\", \"reachable\": true } } ] }"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "get current weather for a city",
+    "get current weather for a city",
+    "get current weather for a city",
+    "get current weather for a city",
+    "get current weather for a city"
+  ],
+  "sources": [
+    "https://developers.meethue.com/develop/hue-api-v2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/",
+    "https://developers.meethue.com/develop/get-started-2/"
+  ],
+  "researcher_confidence": "high"
+}

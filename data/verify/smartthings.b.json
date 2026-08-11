@@ -1,0 +1,52 @@
+{
+  "id": "smartthings",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.smartthings.com/docs/service-integrations/api-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.smartthings.com/docs/api/public"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.smartthings.com/docs/getting-started/authorization-and-permissions"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.smartthings.com/smartthings-updates/a-new-enhanced-smartthings-api-experience/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published and endpoint-specific; SmartThings documents numeric limits and X-RateLimit response headers.",
+      "source": "https://developer.smartthings.com/docs/getting-started/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.smartthings.com/docs/service-integrations/query-and-list-devices"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Requests use Bearer access tokens. PATs are short-lived tokens for testing or personal use; production integrations must obtain access tokens through OAuth 2.0 API Access Apps, rather than authenticate API calls directly with app credentials.",
+      "source": "https://developer.smartthings.com/docs/getting-started/quickstart"
+    }
+  },
+  "notes": "Free API access remains available through Q3 2026, but SmartThings plans to phase it out beginning in October 2026 and introduce a $4.99/month individual plan plus commercial tiers. The auth details also give an outdated PAT location: current PATs are created at account.smartthings.com/tokens and normally expire after 24 hours."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "valorant-api",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valorant-api.com/v1/agents"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valorant-api.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valorant-api.com/v1/agents"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valorant-api.com/v1/agents"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valorant-api.com/v1/agents"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valorant-api.com/"
+    }
+  },
+  "notes": "The agents endpoint currently returns HTTPS JSON with status 200 without credentials, and the official homepage links to the listed dashboard. No shutdown or v1 migration notice was found. The dashboard produced a client-side loading error in the web fetcher, and no authoritative pricing, quota, rate-limit, or CORS statement was located."
+}

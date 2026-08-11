@@ -1,0 +1,52 @@
+{
+  "id": "uspto-patentsview",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No operational PatentsView API base URL is currently published; API functions have been paused since March 20, 2026 during migration to the USPTO Open Data Portal.",
+      "source": "https://www.uspto.gov/subscription-center/2026/patentsview-migrating-uspto-open-data-portal-march-20"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.uspto.gov/support/transition-guide/patentsview",
+      "source": "https://www.uspto.gov/ip-policy/economic-research/patentsview"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The last officially published PatentSearch API limit was 45 requests per minute per API key; the API is currently paused.",
+      "source": "https://patentsview.org/forum/7/topic/781"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No current working curl example is available because the search.patentsview.org PatentSearch API is paused during the ODP transition.",
+      "source": "https://www.uspto.gov/subscription-center/2026/patentsview-migrating-uspto-open-data-portal-march-20"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "PatentsView currently provides enhanced USPTO patent datasets and bulk downloads through ODP; its search and API functions are temporarily paused pending reintroduction in updated forms.",
+      "source": "https://www.uspto.gov/ip-policy/economic-research/patentsview"
+    }
+  },
+  "notes": "The entry is not operational in August 2026. USPTO announced that PatentsView APIs would pause on March 20, and its June 2026 hub lists current bulk-data products but no restored API. The old documentation returns 502, and the old key-request page redirects to the ODP transition guide."
+}

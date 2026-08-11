@@ -1,0 +1,96 @@
+{
+  "id": "ludopedia",
+  "status": "operational",
+  "name": "Ludopedia",
+  "category": "games-comics",
+  "tagline": "Brazilian board-game catalog, ratings, and collection API",
+  "description": "Public API for Ludopedia, Brazil's main board-game community platform. Exposes games, ratings, user collections, and catalog data for Brazilian and international titles, with Portuguese-language coverage and regional ranking context.",
+  "base_url": "https://ludopedia.com.br/api/v1",
+  "docs_url": "https://ludopedia.com.br/api/documentacao.html",
+  "signup_url": null,
+  "auth": {
+    "type": "oauth2",
+    "details": "Application token via access_token query param or Authorization header after OAuth-style app registration"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use; requires Ludopedia attribution and a link where data is used; clone sites are prohibited; access may be blocked. No numerical request quota is published.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://ludopedia.com.br/api/v1/jogos?search=Catan&access_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"jogos\":[{\"id_jogo\":1,\"nm_jogo\":\"Catan\",\"thumb\":\"...\",\"link\":\"...\",\"ano_publicacao\":1995,\"nota\":8.5}]}"
+  },
+  "use_cases": [
+    "search Brazilian board-game catalog by name",
+    "fetch game details and community ratings",
+    "read a user's game collection",
+    "list top-ranked games on Ludopedia"
+  ],
+  "sources": [
+    "https://ludopedia.com.br/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "free_tier"
+    ],
+    "corrected": [
+      "docs_url",
+      "auth_type",
+      "free_tier_limits"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "cors",
+      "example"
+    ]
+  }
+}

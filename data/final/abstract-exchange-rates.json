@@ -1,0 +1,98 @@
+{
+  "id": "abstract-exchange-rates",
+  "status": "operational",
+  "name": "Abstract Exchange Rates",
+  "category": "finance",
+  "tagline": "Live and historical currency conversion with simple REST endpoints",
+  "description": "Abstract Exchange Rates is a REST API for live and historical foreign-exchange rates and currency conversion. It returns JSON with base currency, target rates, timestamps, and conversion helpers. Developers authenticate with a free API key and can call live, convert, and historical endpoints for apps that need multi-currency pricing or FX display.",
+  "base_url": "https://exchange-rates.abstractapi.com/v1",
+  "docs_url": "https://docs.abstractapi.com/api/exchange-rates",
+  "signup_url": "https://app.abstractapi.com/users/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (self-serve signup at Abstract). Example: ?api_key=YOUR_API_KEY"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan with limited monthly requests (confirm exact quota on Abstract pricing; historically free monthly allowance)",
+    "paid_plans": "Paid plans available via Abstract API dashboard for higher volume"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://exchange-rates.abstractapi.com/v1/live/?api_key=YOUR_API_KEY&base=USD&target=EUR,GBP\"",
+    "response_snippet": "{\"base\":\"USD\",\"last_updated\":1712345678,\"exchange_rates\":{\"EUR\":0.92,\"GBP\":0.79}}"
+  },
+  "use_cases": [
+    "get live FX rate from USD to EUR",
+    "convert an amount between two currencies",
+    "fetch historical exchange rate for a past date",
+    "list multi-target rates for a base currency"
+  ],
+  "sources": [
+    "https://docs.abstractapi.com/exchange-rates",
+    "https://www.abstractapi.com/api/exchange-rates-api"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

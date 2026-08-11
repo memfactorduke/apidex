@@ -1,0 +1,52 @@
+{
+  "id": "rightmove",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No single universal base URL is documented. The Commercial Listings test API uses https://api-services.adftest.rightmove.com; production network details are issued separately.",
+      "source": "https://api-docs.rightmove.co.uk/docs/property-feed-api-product/1/overview"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://api-docs.rightmove.co.uk/",
+      "source": "https://api-docs.rightmove.co.uk/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2 (Client Credentials Grant)",
+      "source": "https://api-docs.rightmove.co.uk/authentication"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Requests are rate-limited. Exceeding the quota returns HTTP 429; quotas reset every 60 seconds, while the exact allowance varies by environment and endpoint.",
+      "source": "https://api-docs.rightmove.co.uk/docs/property-feed-api-product/1/overview"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"https://api-services.adftest.rightmove.com/oauth/token\" -H \"Authorization: Basic <base64_encoded_client_id_and_secret>\" -H \"Content-Type: application/x-www-form-urlencoded\" -d \"grant_type=client_credentials\"",
+      "source": "https://api-docs.rightmove.co.uk/authentication"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Rightmove publicly documents a Commercial Listings API for Commercial Agents and Feed Providers to upload, update, retrieve, and remove commercial listings. Residential listings use the separate Real Time Data Feed. Test and production credentials are issued separately by Rightmove's Data Feed Team.",
+      "source": "https://api-docs.rightmove.co.uk/docs/property-feed-api-product/1/overview"
+    }
+  },
+  "notes": "The API is operational, but the entry uses an unsupported host and obsolete documentation URL, misstates authentication, omits published rate-limit behavior, and supplies an invalid example. Official sources do not establish API pricing, a free tier, or CORS behavior."
+}

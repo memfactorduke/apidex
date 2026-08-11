@@ -1,0 +1,98 @@
+{
+  "id": "freddie-mac-pmms",
+  "status": "operational",
+  "name": "Freddie Mac PMMS",
+  "category": "real-estate-housing",
+  "tagline": "Weekly U.S. mortgage rate benchmarks from Freddie Mac's Primary Mortgage Market Survey.",
+  "description": "Freddie Mac publishes the Primary Mortgage Market Survey (PMMS), the industry-standard weekly snapshot of U.S. average mortgage rates for 30-year fixed, 15-year fixed, and other products. Data is used by lenders, housing apps, and financial models as a rate benchmark; access is typically via downloadable series or third-party/open data feeds rather than a classic self-serve developer API key product.",
+  "base_url": "https://www.freddiemac.com/pmms",
+  "docs_url": "https://www.freddiemac.com/pmms",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public web pages and downloadable data files; no self-serve developer API key product confirmed on official PMMS pages."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "html",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public survey data pages and historical downloads appear free for typical use; commercial API terms not published on official PMMS pages",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sL \"https://www.freddiemac.com/pmms\"",
+    "response_snippet": "HTML marketing/data page for Primary Mortgage Market Survey (PMMS) with current weekly rate highlights and links to historical series downloads."
+  },
+  "use_cases": [
+    "get latest weekly 30-year fixed mortgage rate benchmark",
+    "pull historical PMMS rate series for charts or models",
+    "compare current rates to prior week for housing market dashboards",
+    "benchmark lender quotes against Freddie Mac PMMS averages"
+  ],
+  "sources": [
+    "https://www.freddiemac.com/pmms"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

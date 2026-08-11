@@ -1,0 +1,15 @@
+{
+  "id": "insect-id",
+  "base_url": null,
+  "docs_url": "https://insect.kindwise.com/docs",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "100 free API credits after registration; each successful identification costs 1 credit.",
+  "rate_limits": "No request-count limits or caps are imposed. Requests exceeding SLA traffic conditions may be queued or processed more slowly, and performance guarantees may not apply.",
+  "cors": null,
+  "example_request": "IMAGE_B64=\"$(base64 < insect.jpg | tr -d '\\n')\" && curl -X POST \"https://insect.kindwise.com/api/v1/identification\" -H \"Api-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" --data \"{\\\"images\\\":[\\\"${IMAGE_B64}\\\"]}\"",
+  "example_response_snippet": "{\"access_token\":\"UC5...\",\"model_version\":\"insect_id:1.2.2\",\"result\":{\"classification\":{\"suggestions\":[{\"id\":\"5e7e11c01cc2d1a1\",\"name\":\"Harmonia axyridis\",\"probability\":0.9648}]}},\"status\":\"COMPLETED\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: replace; Kindwise lists https://insect.kindwise.com/docs in its official directory: https://admin.kindwise.com/public/docs. free_tier_limits: replace; 100 credits after registration and 1 credit per identification: https://www.kindwise.com/pricing. rate_limits: replace; no request caps, subject to SLA conditions: https://www.kindwise.com/faq. example: replace multipart with JSON containing base64 images: https://github.com/flowerchecker/insect-id-examples."
+}

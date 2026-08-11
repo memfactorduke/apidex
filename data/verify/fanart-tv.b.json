@@ -1,0 +1,52 @@
+{
+  "id": "fanart-tv",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.fanart.tv/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.fanart.tv/",
+      "source": "https://docs.fanart.tv/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.fanart.tv/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fanart.tv/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.fanart.tv/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.fanart.tv/"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.fanart.tv/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.fanart.tv/"
+    }
+  },
+  "notes": "docs_url is wrong (fanart.tv/api-docs returns 403; official docs are at docs.fanart.tv). base_url webservice.fanart.tv/v3 is still correct per docs. Automated 404 on base without path is expected for root."
+}

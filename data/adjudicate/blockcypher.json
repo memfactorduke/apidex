@@ -1,0 +1,15 @@
+{
+  "id": "blockcypher",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1,000 requests/day; 100 requests/hour; 3 requests/second; 100 stored webhooks; 100 webhook/WebSocket deliveries/hour; 10 confidence lookups/hour.",
+  "rate_limits": "Free tier, with or without a token: 3 classic requests/second and 100/hour; pricing also caps usage at 1,000/day. Exceeding a limit returns HTTP 429. Paid tiers have higher limits.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Corrected from the current Free plan card at https://www.blockcypher.com/pricing.html. Its FAQ's 2,000/day claim conflicts with the card, so the conservative structured limit of 1,000/day controls. rate_limits: Corrected; official docs confirm that the free tier, with or without a token, allows 3 classic requests/sec and 100/hr and returns HTTP 429 when exceeded: https://www.blockcypher.com/dev/bitcoin/#rate-limits-and-tokens."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ankr",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ankr.com/docs/rpc-service/chains/chains-list/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ankr.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ankr.com/docs/rpc-service/getting-started/auth-methods/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ankr.com/docs/rpc-service/service-plans/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 30 req/s, ~200M API credits/month (public endpoints); Premium free tier higher; check current plans",
+      "source": "https://www.ankr.com/docs/rpc-service/service-plans/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 30 req/s; Premium tiers have higher limits (published on service plans page)",
+      "source": "https://www.ankr.com/docs/rpc-service/service-plans/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ankr.com/docs/rpc-service/chains/chains-list/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ankr.com/docs/"
+    }
+  },
+  "notes": "Rate limits and free-tier limits ARE published (not unknown/not published). Public RPC may require API key path now\u2014verify auth carefully. Base URL pattern still rpc.ankr.com/{chain}."
+}

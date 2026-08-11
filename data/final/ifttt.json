@@ -1,0 +1,96 @@
+{
+  "id": "ifttt",
+  "status": "operational",
+  "name": "IFTTT",
+  "category": "iot-devices",
+  "tagline": "Connect apps, devices, and services with applets and webhooks without custom middleware.",
+  "description": "IFTTT connects apps, devices, and web services through Applets and Webhooks. Developers and partners can build reviewed services using the Service API and use the Connect API to embed connections and invoke supported operations; integrations may require an IFTTT-compatible API layer or shim.",
+  "base_url": "https://connect.ifttt.com",
+  "docs_url": "https://ifttt.com/docs/connect_api",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "unknown"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No free API/Webhooks access. Webhooks triggers and action require Pro; Webhooks queries and IFTTT Platform developer tools require Pro+.",
+    "paid_plans": null
+  },
+  "rate_limits": "Connect API limits are not published. Webhooks is unavailable on Free and limited to 240 requests per minute on Pro and Pro+.",
+  "example": {
+    "request": "curl -sS 'https://connect.ifttt.com/v2/me?user_id=YOUR_USER_ID' -H 'IFTTT-Service-Key: YOUR_SERVICE_KEY'",
+    "response_snippet": "{\"type\":\"me\",\"authentication_level\":\"channel\",\"service_id\":\"acme_social_network\",\"user_login\":\"example_user\"}"
+  },
+  "use_cases": [
+    "trigger an IFTTT applet from a webhook",
+    "connect an IoT device event to another service"
+  ],
+  "sources": [
+    "https://ifttt.com/docs/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "free_tier"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

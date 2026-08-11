@@ -1,0 +1,105 @@
+{
+  "id": "estated",
+  "status": "operational",
+  "name": "Estated API",
+  "category": "real-estate-housing",
+  "tagline": "U.S. parcel-level property, owner, tax, and deed data via a simple REST lookup",
+  "description": "Estated Property Data API v4 returns a single property record (address, parcel, structure, taxes, assessments, valuation, owner, deeds, optional boundary) for a U.S. address or FIPS+APN. Estated is part of ATTOM Data Solutions; production still runs at apis.estated.com and existing API keys remain valid during migration, while Estated docs and account portal are being deprecated in favor of ATTOM.",
+  "base_url": "https://apis.estated.com/v4",
+  "docs_url": "https://estated.com/developers/docs/v4",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key as query param token= on every GET (e.g. ?token=YOUR_API_KEY). Separate sandbox key required for https://sandbox.estated.com/v4/property. Keys managed in Estated account (login); migrating to ATTOM Developer Portal. Self-serve /register and /account/signup currently 404."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free Sandbox API for integration tests only (120 curated properties; separate sandbox key; not billed). Production free-tier limits not currently published; public pricing page is gone and self-serve signup URLs return 404 as of Aug 2026.",
+    "paid_plans": "Not publicly listed on estated.com now (pricing page 404). Marketing: flexible volume-based pricing via ATTOM; contact ATTOM. Successful property matches are billable per docs."
+  },
+  "rate_limits": "not published (docs define RE04 when requests are throttled for high volume; no numeric RPM/RPD in current docs)",
+  "example": {
+    "request": "curl \"https://apis.estated.com/v4/property?token=YOUR_API_KEY&combined_address=151%20Battle%20Green%20Dr%2C%20Rochester%2C%20NY%2014624\"",
+    "response_snippet": "{\n  \"data\": {\n    \"metadata\": { \"attom_id\": 12345678, \"publishing_date\": \"2019-12-04\" },\n    \"address\": { \"formatted_street_address\": \"151 Battle Green Dr\", \"city\": \"Rochester\", \"state\": \"NY\", \"zip_code\": \"14624\" },\n    \"parcel\": { \"apn_original\": \"...\", \"fips_code\": \"36055\", \"area_sq_ft\": 8500 },\n    \"structure\": { \"year_built\": 1985, \"beds_count\": 3, \"baths\": 2.0 },\n    \"owner\": { \"name\": \"...\", \"owner_occupied\": \"YES\" },\n    \"valuation\": { \"value\": 250000, \"high\": 275000, \"low\": 225000 },\n    \"taxes\": [{ \"year\": 2019, \"amount\": 4500 }],\n    \"deeds\": [{ \"sale_price\": 200000, \"recording_date\": \"2015-06-01\" }]\n  },\n  \"metadata\": { \"timestamp\": \"2019-12-04T22:22:10.009910Z\", \"version\": \"0.4.2-1.8.2\" },\n  \"warnings\": []\n}"
+  },
+  "use_cases": [
+    "look up parcel, structure, and tax data for a U.S. street address",
+    "get current assessed owner and mailing address for a property",
+    "fetch recent deed/sale history for an address or FIPS+APN",
+    "enrich an address with valuation and assessment values",
+    "resolve FIPS and APN candidates when an address matches multiple parcels",
+    "run integration tests against the free Sandbox property endpoint"
+  ],
+  "sources": [
+    "https://estated.com/developers/docs/v4",
+    "https://estated.com/developers/docs/v4/property/overview",
+    "https://estated.com/developers/docs/v4/property/schema",
+    "https://estated.com/developers/docs/v4/sandbox/api",
+    "https://estated.com/",
+    "https://estated.com/account/home",
+    "https://apis.estated.com/v4/property (live probe Aug 2026)",
+    "https://www.attomdata.com/news/company-news/attom-company-announcement-10/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "propublica-congress",
+  "status": "operational",
+  "name": "ProPublica Congress API",
+  "category": "government-open-data",
+  "tagline": "Congressional members, bills, votes, and committees via ProPublica data layer",
+  "description": "ProPublica Congress API provides structured access to U.S. congressional data including members, bills, votes, committees, and statements. Long a popular third-party layer over legislative data, it is widely used for vote tracking, member lookups, and bill research. Authentication uses an API key header; endpoints return JSON. Verify current operational status and free-tier limits against official docs before production use.",
+  "base_url": "https://api.propublica.org/congress/v1",
+  "docs_url": "https://projects.propublica.org/api-docs/congress-api/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-API-Key header; historically self-serve signup (verify current availability)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-API-Key: YOUR_API_KEY\" \"https://api.propublica.org/congress/v1/members/senate/NY/current.json\"",
+    "response_snippet": "{ \"status\": \"OK\", \"results\": [ { \"id\": \"...\", \"name\": \"...\", \"party\": \"D\", \"state\": \"NY\" } ] }"
+  },
+  "use_cases": [
+    "look up current senators or representatives for a state",
+    "get recent votes for a member of Congress",
+    "fetch bill details and cosponsors by bill ID",
+    "list recent bills introduced in a chamber",
+    "retrieve committee membership for a Congress session"
+  ],
+  "sources": [
+    "https://projects.propublica.org/api-docs/congress-api/",
+    "https://api.propublica.org"
+  ],
+  "researcher_confidence": "low"
+}

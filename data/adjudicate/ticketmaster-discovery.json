@@ -1,0 +1,15 @@
+{
+  "id": "ticketmaster-discovery",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Default Public API access: 5,000 requests per day and 2 requests per second.",
+  "rate_limits": "5,000 requests per day and 2 requests per second by default. The Discovery API reference inconsistently states 5 requests per second; the lower Discovery-specific FAQ limit is used conservatively.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: 5,000/day and 2/second per the current Discovery FAQ: https://developer.ticketmaster.com/support/faq/ . rate_limits: same; the v2 reference conflicts at 5/second, so the lower FAQ figure controls: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/ . cors: yes; official getting-started documentation explicitly supports CORS, and v2 responses show Access-Control-Allow-Origin:*: https://developer.ticketmaster.com/products-and-docs/apis/getting-started/"
+}

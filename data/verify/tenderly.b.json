@@ -1,0 +1,52 @@
+{
+  "id": "tenderly",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tenderly.co/api-reference/simulator/simulate-transaction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tenderly.co/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tenderly.co/api-reference/simulator/simulate-transaction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tenderly.co/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Tenderly Free provides browser-based Explorer, Debugger, and single-transaction simulation. It has no API or Node RPC access, so it does not include monthly API/RPC units.",
+      "source": "https://tenderly.co/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Node RPC documentation publishes Tenderly Unit costs per method, but account capacity and limits must be discussed with sales; no current general plan/dashboard quota schedule is published.",
+      "source": "https://docs.tenderly.co/node-rpc/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.tenderly.co/api-reference/simulator/simulate-transaction"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Tenderly currently calls its forked testing product Virtual Environments. REST access tokens are tied to a personal account or organization, not scoped to a project, although many REST paths contain account and project slugs.",
+      "source": "https://docs.tenderly.co/platform/account/projects/api-tokens"
+    }
+  },
+  "notes": "The service and documented REST simulation endpoint remain operational. The entry's main failure is outdated commercial information: Free is now browser-only with no API or Node RPC access. Its project-scoped-key wording and Virtual TestNets terminology are also outdated."
+}

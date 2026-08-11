@@ -1,0 +1,44 @@
+{
+  "id": "destatis-genesis",
+  "status": "operational",
+  "name": "Destatis GENESIS API",
+  "category": "government-open-data",
+  "tagline": "Official German federal statistics via GENESIS-Online web service",
+  "description": "The Destatis GENESIS API (Webservice) provides programmatic access to official statistics from the German Federal Statistical Office (Statistisches Bundesamt). Developers can query table data, metadata, time series, and statistical results from GENESIS-Online using REST-style and SOAP endpoints with username/password or token authentication.",
+  "base_url": "https://www-genesis.destatis.de/genesisWS/rest/2020",
+  "docs_url": "https://www-genesis.destatis.de/genesis/online?operation=previous&levelindex=0&levelid=&levelid=0&levelid=0",
+  "signup_url": "https://www-genesis.destatis.de/genesis/online",
+  "auth": {
+    "type": "other",
+    "details": "Username/password or temporary token via query params or form fields; free registration on GENESIS-Online required for full access"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free registration; usage limits apply (verify current quotas)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://www-genesis.destatis.de/genesisWS/rest/2020/data/table?username=YOUR_USERNAME&password=YOUR_API_KEY&name=12411-0001&area=all&compress=false&transpose=false&contents=&startyear=&endyear=&timeslices=&regionalvariable=&regionalkey=&classifyingvariable1=&classifyingkey1=&classifyingvariable2=&classifyingkey2=&classifyingvariable3=&classifyingkey3=&format=json&language=en'",
+    "response_snippet": "{\"Ident\":{\"Service\":\"GENESIS-Statistics\",\"Method\":\"Tabellen\",\"Version\":\"3.0\"},\"Status\":{\"Code\":0,\"Content\":\"erfolgreich\",\"Type\":\"Information\"},\"Object\":{\"Code\":\"12411-0001\",\"Content\":\"...\"}}"
+  },
+  "use_cases": [
+    "fetch official German population statistics by table ID",
+    "query time series for economic indicators from Destatis",
+    "list available statistical tables and metadata",
+    "export regional statistical data as JSON or CSV",
+    "look up variable classifications and regional keys"
+  ],
+  "sources": [
+    "https://www-genesis.destatis.de/",
+    "https://www.destatis.de/"
+  ],
+  "researcher_confidence": "low"
+}

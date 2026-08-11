@@ -1,0 +1,52 @@
+{
+  "id": "seatgeek",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://seatgeek.github.io/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://seatgeek.com/build"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://seatgeek.github.io/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://seatgeek.github.io/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SeatGeek's Public Catalog API is catalog-information-only; it does not include price information or support viewing, creating, or purchasing event listings, and access requires approval.",
+      "source": "https://docs.google.com/forms/d/13gfeUdfbZQpnT3XNd12pyi7P2A4W7vDoB4bSwIdlG9k/viewform"
+    }
+  },
+  "notes": "Current official access materials contradict the listing-data claim and require weekly-reviewed approval. The official legacy documentation still says the API is free, but that notice dates to 2016; no current official pricing or numerical quota was found. The tagline and listing-related use case are also misleading."
+}

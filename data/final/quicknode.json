@@ -1,0 +1,97 @@
+{
+  "id": "quicknode",
+  "status": "operational",
+  "name": "QuickNode",
+  "category": "crypto",
+  "tagline": "Multi-chain RPC and marketplace APIs for tokens, NFTs, and on-chain analytics",
+  "description": "QuickNode provides high-performance multi-chain blockchain RPC endpoints and marketplace add-ons for Ethereum, Solana, and many other networks. Developers use it for wallet/dApp backends, token and NFT metadata, real-time streams, and analytics as an alternative to Alchemy and Infura. Access is via per-endpoint HTTPS URLs and optional authenticated marketplace APIs.",
+  "base_url": "https://YOUR_ENDPOINT.quiknode.pro/YOUR_TOKEN/",
+  "docs_url": "https://www.quicknode.com/docs",
+  "signup_url": "https://www.quicknode.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Endpoint token embedded in HTTPS RPC URL path (https://{name}.quiknode.pro/{token}/); marketplace/API keys via dashboard for add-on APIs. Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "One-month free trial: 10 million API credits, no additional API credits, 15 requests per second, and one endpoint.",
+    "paid_plans": "Build, Scale, and Enterprise plans with higher RPS, more chains, and marketplace credits"
+  },
+  "rate_limits": "Plan-based RPS limits; exact numbers depend on subscription tier",
+  "example": {
+    "request": "curl -X POST https://YOUR_ENDPOINT.quiknode.pro/YOUR_API_KEY/ -H 'Content-Type: application/json' -d '{\"jsonrpc\":\"2.0\",\"method\":\"eth_blockNumber\",\"params\":[],\"id\":1}'",
+    "response_snippet": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"0x12a05f1\"}"
+  },
+  "use_cases": [
+    "get latest block number on Ethereum via JSON-RPC",
+    "fetch token balances and transfers for a wallet address",
+    "query NFT metadata and ownership on supported chains",
+    "stream real-time blockchain events via WebSockets",
+    "call Solana RPC methods for account and transaction data"
+  ],
+  "sources": [
+    "https://www.quicknode.com/docs",
+    "https://www.quicknode.com/pricing"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

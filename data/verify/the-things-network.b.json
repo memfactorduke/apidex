@@ -1,0 +1,52 @@
+{
+  "id": "the-things-network",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thethingsindustries.com/docs/concepts/ttn/addresses/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.thethingsindustries.com/docs/integrations/webhooks/",
+      "source": "https://www.thethingsindustries.com/docs/integrations/webhooks/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thethingsindustries.com/docs/api/concepts/auth/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thethingsindustries.com/docs/concepts/ttn/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thethingsindustries.com/docs/integrations/storage/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thethingsindustries.com/docs/api/concepts/errors/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -G 'https://eu1.cloud.thethings.network/api/v3/as/applications/YOUR_APP_ID/packages/storage/uplink_message' -H 'Authorization: Bearer YOUR_API_KEY' -H 'Accept: text/event-stream' -d 'limit=1'",
+      "source": "https://www.thethingsindustries.com/docs/integrations/storage/retrieve/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thethingsindustries.com/docs/concepts/ttn/"
+    }
+  },
+  "notes": "The Sandbox and eu1 API endpoint remain operational. The supplied documentation URL is obsolete and returns 404. The Storage API path, GET method, limit parameter, and Bearer authentication remain valid, but its documented response media type is text/event-stream with newline-delimited JSON, not application/json."
+}

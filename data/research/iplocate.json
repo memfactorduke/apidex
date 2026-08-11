@@ -1,0 +1,38 @@
+{
+  "id": "iplocate",
+  "status": "operational",
+  "name": "IPLocate",
+  "category": "geo-maps",
+  "tagline": "IP geolocation with privacy, ASN, and company data via REST",
+  "description": "IPLocate is a REST API for IP geolocation that returns location, network, and privacy signals such as VPN/proxy/Tor detection, plus ASN and company data for enrichment use cases.",
+  "base_url": "https://www.iplocate.io/api",
+  "docs_url": "https://www.iplocate.io/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or header; verify current method on official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.iplocate.io/api/lookup/8.8.8.8?apikey=YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "geolocate a client IP address",
+    "detect VPN/proxy/Tor for an IP"
+  ],
+  "sources": [
+    "https://www.iplocate.io/docs"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "trefle",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/docs/guides/getting-started/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/docs/guides/getting-started/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trefle.io/about"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests per minute",
+      "source": "https://trefle.io/about"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests per minute for free access; 600 requests per minute for sponsors",
+      "source": "https://trefle.io/about"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/docs/examples/snippets/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/docs/advanced/plants-fields/"
+    }
+  },
+  "notes": "The live pricing page says 60 requests/minute and 600 for sponsors, while the getting-started page, last updated December 11, 2022, still says 120/minute; the current pricing page was used. Official docs support query-parameter token authentication, but I found no official support for the entry's Authorization-header alternative. CORS remains inconclusive."
+}

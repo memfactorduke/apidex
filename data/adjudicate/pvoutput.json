@@ -1,0 +1,15 @@
+{
+  "id": "pvoutput",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Registered non-donation accounts: 60 requests/hour per API key for most request types; Get Statistic: 12/hour. Donation mode raises these to 300/hour and 60/hour respectively.",
+  "rate_limits": "Per API key: 60 requests/hour normally or 300/hour in Donation mode. Get Statistic separately allows 12/hour normally or 60/hour in Donation mode.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Original is incorrect because exact quotas are published; the current official specification states 60/hour generally and 12/hour for Get Statistic, rising to 300 and 60 in Donation mode. https://pvoutput.org/help/api_specification.html rate_limits: Verifiers' correction is confirmed by the same current specification; the official donations page also confirms the general increase from 60 to 300/hour. https://pvoutput.org/help/api_specification.html https://pvoutput.org/help/donations.html"
+}

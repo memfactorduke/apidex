@@ -1,0 +1,51 @@
+{
+  "id": "ifttt",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://connect.ifttt.com",
+      "source": "https://ifttt.com/docs/connect_api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://ifttt.com/docs/api_reference",
+      "source": "https://ifttt.com/docs/api_reference"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey (IFTTT-Service-Key header for the Connect API; the consumer Webhooks service uses a webhook key in the URL)",
+      "source": "https://ifttt.com/docs/connect_api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://ifttt.com/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No API/Webhooks free tier: Webhooks requires Pro, while IFTTT Platform developer tools require Pro+.",
+      "source": "https://ifttt.com/plans"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Webhooks is unavailable on Free and limited to 240 requests per minute on Pro and Pro+.",
+      "source": "https://help.ifttt.com/hc/en-us/articles/1260803229749-IFTTT-Service-Rate-Limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -sS 'https://connect.ifttt.com/v2/me' -H 'IFTTT-Service-Key: YOUR_SERVICE_KEY'",
+      "source": "https://ifttt.com/docs/connect_api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "IFTTT connects apps, devices, and web services through Applets, Webhooks, the partner Service API, and the Connect API. Developers can create and publish reviewed services, invoke supported connection operations, and receive event webhooks; partner services may need an IFTTT compatibility layer or shim.",
+      "source": "https://ifttt.com/docs"
+    }
+  },
+  "notes": "The entry conflates the consumer Webhooks service, partner-hosted Service API, and IFTTT Connect API. Its documentation URL is dead, its example fetches a documentation page rather than an API endpoint, and published Webhooks limits exist. IFTTT itself is operational, but API access is not free."
+}

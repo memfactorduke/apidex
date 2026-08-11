@@ -1,0 +1,52 @@
+{
+  "id": "checkout-com",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://{prefix}.api.checkout.com (merchant-unique prefix from client_id; sandbox: https://{prefix}.api.sandbox.checkout.com)",
+      "source": "https://www.checkout.com/docs/developer-resources/api/api-endpoints"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checkout.com/docs/developer-resources/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-reference.checkout.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checkout.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checkout.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published defaults: 100 RPS concurrent for read ops and 100 RPS concurrent for write ops (account-wide; adaptive; lower in sandbox; customizable via account manager)",
+      "source": "https://www.checkout.com/docs/developer-resources/api/api-rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Host must use merchant prefix, e.g. curl -X GET \"https://{prefix}.api.checkout.com/payments\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" (GET /payments and Bearer auth are valid; bare api.checkout.com is not)",
+      "source": "https://api-reference.checkout.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-reference.checkout.com/"
+    }
+  },
+  "notes": "API is live. Critical errors: base_url omits required merchant-unique {prefix}; rate_limits are published (100 RPS read/write concurrency), not \"not published\"; example curl inherits wrong host. Auth (Bearer secret key), docs_url, free_tier=false, and description hold."
+}

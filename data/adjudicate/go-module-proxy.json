@@ -1,0 +1,15 @@
+{
+  "id": "go-module-proxy",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Google-operated public Go module mirror used by the go command by default since Go 1.13. It implements the GOPROXY protocol and serves version lists, metadata, go.mod files, and source archives for public modules. It can be disabled or replaced; sum.golang.org is a separate checksum database service.",
+  "status": null,
+  "resolution_notes": "description: INCORRECT. Official documentation says the mirror is used by default, not by every installation, and may be disabled or replaced. It identifies proxy.golang.org as the module mirror and sum.golang.org as a separate checksum database. Evidence: https://proxy.golang.org/ and https://go.dev/ref/mod#goproxy-protocol"
+}

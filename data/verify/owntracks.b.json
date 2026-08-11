@@ -1,0 +1,52 @@
+{
+  "id": "owntracks",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Self-hosted; there is no universal base URL. A Recorder publishing endpoint is http[s]://recorder_host[:port]/pub.",
+      "source": "https://owntracks.org/booklet/tech/http/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://owntracks.org/booklet/tech/json/",
+      "source": "https://owntracks.org/booklet/tech/json/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://owntracks.org/booklet/features/security/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://owntracks.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://owntracks.org/booklet/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://owntracks.org/booklet/tech/http/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use POST /pub with explicit user and device identification, for example: curl -u YOUR_USERNAME:YOUR_PASSWORD -H 'Content-Type: application/json' -d '{\"_type\":\"location\",\"lat\":51.0,\"lon\":-0.1,\"tst\":1710000000,\"tid\":\"me\"}' 'https://your-recorder.example.com/pub?u=YOUR_USERNAME&d=YOUR_DEVICE'. A successful Recorder response is typically HTTP 200 with [].",
+      "source": "https://owntracks.org/booklet/tech/http/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://owntracks.org/booklet/"
+    }
+  },
+  "notes": "The project remains active, but this entry has no callable universal API host. Its JSON documentation moved from /booklet/api/json/ to /booklet/tech/json/. The sample also omits the Recorder's documented device identification and inaccurately describes the normal response as an empty body or broker acknowledgment."
+}

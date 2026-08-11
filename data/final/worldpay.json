@@ -1,0 +1,100 @@
+{
+  "id": "worldpay",
+  "status": "operational",
+  "name": "Worldpay API",
+  "category": "ecommerce-payments",
+  "tagline": "Enterprise card payments and access APIs from a long-standing global acquirer.",
+  "description": "Access Worldpay offers RESTful HTTPS APIs for card payments, tokenization, 3DS, payouts, and related commerce flows. Its enterprise Card Payments APIs use HTTP Basic authentication with credentials supplied by a Worldpay Implementation Manager. Merchants test on try.access.worldpay.com and use access.worldpay.com for live traffic.",
+  "base_url": "https://try.access.worldpay.com",
+  "docs_url": "https://developer.worldpay.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Authentication with username/password (or merchant credentials) issued via Worldpay; typically Authorization: Basic base64(username:password). Test credentials available on try.access.worldpay.com; production uses access.worldpay.com. Exact self-serve vs sales-led signup varies by product."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Enterprise merchant pricing; contact Worldpay sales (not published as self-serve API pricing)"
+  },
+  "rate_limits": "Try environment: 10 requests per second per merchant. Exceeding the limit returns HTTP 429; Worldpay says to wait up to five minutes and remain below the limit. No Live-environment limit is stated.",
+  "example": {
+    "request": "curl -u YOUR_USERNAME:YOUR_PASSWORD https://try.access.worldpay.com/payments/authorizations -H 'Content-Type: application/vnd.worldpay.payments-v6+json' -H 'Accept: application/vnd.worldpay.payments-v6.hal+json' -d '{\"transactionReference\":\"ref-001\",\"merchant\":{\"entity\":\"YOUR_ENTITY\"},\"instruction\":{\"narrative\":{\"line1\":\"Trading name\"},\"value\":{\"currency\":\"GBP\",\"amount\":100},\"paymentInstrument\":{\"type\":\"card/plain\",\"cardNumber\":\"4444333322221111\",\"cardExpiryDate\":{\"month\":12,\"year\":2035},\"cvc\":\"123\"}}}'",
+    "response_snippet": "{\"outcome\":\"authorized\",\"issuer\":{\"authorizationCode\":\"12345A\"},\"paymentInstrument\":{\"type\":\"card/plain+masked\",\"card\":{\"brand\":\"visa\",\"number\":{\"bin\":\"444433\",\"last4Digits\":\"1111\"}}},\"_links\":{\"payments:settle\":{\"href\":\"https://try.access.worldpay.com/payments/settlements/full/...\"}}}"
+  },
+  "use_cases": [
+    "authorize a card payment",
+    "capture a previously authorized payment",
+    "refund a settled transaction",
+    "tokenize a card for recurring charges",
+    "run 3-D Secure authentication for a payment"
+  ],
+  "sources": [
+    "https://developer.worldpay.com/",
+    "https://try.access.worldpay.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type"
+    ],
+    "corrected": [
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "cors"
+    ]
+  }
+}

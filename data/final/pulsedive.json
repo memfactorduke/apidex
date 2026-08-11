@@ -1,0 +1,96 @@
+{
+  "id": "pulsedive",
+  "status": "operational",
+  "name": "Pulsedive",
+  "category": "security-identity",
+  "tagline": "Threat-intel API for IOC enrichment, risk scoring, and community indicators",
+  "description": "Researching Pulsedive API details from official docs and pricing...",
+  "base_url": "https://pulsedive.com/api/",
+  "docs_url": "https://pulsedive.com/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Researching..."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free registered accounts: 1 request/second, 50 requests/day, 500 requests/month, 10 Analyze scans/day, 100 Analyze scans/month, and 50 Explore results.",
+    "paid_plans": null
+  },
+  "rate_limits": "Plan-based. Free accounts: 1 request/second, 50/day, and 500/month. Responses expose remaining second/day/month quotas in X-Requests-Remaining-* headers; exceeded hard limits return HTTP 429.",
+  "example": {
+    "request": "curl \"https://pulsedive.com/api/indicator.php?indicator=pulsedive.com&pretty=1\"",
+    "response_snippet": "{\"qid\":123,\"iid\":123,\"indicator\":\"pulsedive.com\",\"riskfactors\":[],\"threats\":[],\"feeds\":[]}"
+  },
+  "use_cases": [
+    "enrich an IOC",
+    "get risk score for an indicator"
+  ],
+  "sources": [
+    "https://pulsedive.com/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors",
+      "description"
+    ]
+  }
+}

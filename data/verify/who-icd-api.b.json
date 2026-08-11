@@ -1,0 +1,52 @@
+{
+  "id": "who-icd-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://icd.who.int/docs/icd-api/APIDoc-Version2/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://icd.who.int/docs/icd-api/APIDoc-Version2/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://icd.who.int/docs/icd-api/API-Authentication/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Accept: application/json\" -H \"Accept-Language: en\" -H \"API-Version: v2\" \"https://id.who.int/icd/entity/1435254666\"",
+      "source": "https://id.who.int/swagger/v2/swagger.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://id.who.int/swagger/v2/swagger.json"
+    }
+  },
+  "notes": "The service is operational and WHO released backward-compatible API v2.6 in January 2026. The example omits the currently required Accept-Language header and incorrectly labels the OAuth access token as an API key. WHO's public official materials reviewed did not establish pricing, quotas, rate limits, or CORS behavior."
+}

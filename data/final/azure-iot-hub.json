@@ -1,0 +1,98 @@
+{
+  "id": "azure-iot-hub",
+  "status": "operational",
+  "name": "Azure IoT Hub",
+  "category": "iot-devices",
+  "tagline": "Microsoft cloud hub for device management, twins, and bi-directional messaging.",
+  "description": "Azure IoT Hub is Microsoft's managed service for connecting, monitoring, and managing IoT devices at scale. It provides device identity, twin state, direct methods, cloud-to-device and device-to-cloud messaging, plus service APIs for jobs and bulk operations. Developers use REST (and SDKs) against a per-hub hostname under Azure Active Directory or shared access signatures.",
+  "base_url": "https://YOUR_IOT_HUB_NAME.azure-devices.net",
+  "docs_url": "https://learn.microsoft.com/en-us/rest/api/iothub/",
+  "signup_url": "https://portal.azure.com/",
+  "auth": {
+    "type": "other",
+    "details": "Shared Access Signature (SAS) tokens via Authorization header, or Azure AD (Microsoft Entra ID) bearer tokens; connection strings from hub Access Control."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free (F1): 8,000 messages/day, metered in 0.5 KB blocks, and up to 500 registered device identities; limited to one free-tier hub per Azure subscription.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published throttles vary by operation and SKU. Identity-registry operations: 100/min/unit on Free/B1/S1/B2/S2 and 5,000/min/unit on B3/S3. Queries: 20/min/unit on Free/B1/S1/B2/S2 and 1,000/min/unit on B3/S3. Sustained excess can return HTTP 429.",
+  "example": {
+    "request": "curl -sS \"https://your-hub-name.azure-devices.net/devices?api-version=2021-04-12\" -H \"Authorization: SharedAccessSignature sr=your-hub-name.azure-devices.net&sig=URL_ENCODED_SIGNATURE&se=UNIX_EXPIRY&skn=registryRead\" -H \"Content-Type: application/json\"",
+    "response_snippet": "[{\"deviceId\":\"myDevice\",\"generationId\":\"638123456789012345\",\"connectionState\":\"Disconnected\",\"status\":\"enabled\"}]"
+  },
+  "use_cases": [
+    "list registered IoT devices on a hub",
+    "read or update a device twin desired/reported properties",
+    "send a cloud-to-device message to a device",
+    "invoke a direct method on a connected device",
+    "create a job to update many device twins",
+    "query devices by twin properties"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/rest/api/iothub/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

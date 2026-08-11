@@ -1,0 +1,52 @@
+{
+  "id": "steamgriddb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/SteamGridDB/node-steamgriddb/blob/master/src/index.ts"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://github.com/SteamGridDB/node-steamgriddb",
+      "source": "https://www.steamgriddb.com/api/v2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/SteamGridDB/node-steamgriddb/blob/master/src/index.ts"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/SteamGridDB/node-steamgriddb/blob/master/src/index.ts"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/SteamGridDB/node-steamgriddb"
+    }
+  },
+  "notes": "The official v2 documentation URL currently fails because its referenced OpenAPI YAML returns 404; the official wrapper repository is a working alternative. The curl request is structurally valid, but its response snippet is inaccurate: SteamGridDB's current Portal page identifies Portal as game ID 9022, not 620. No official current pricing, quota, rate-limit, or CORS statement was found."
+}

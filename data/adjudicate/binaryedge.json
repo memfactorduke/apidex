@@ -1,0 +1,15 @@
+{
+  "id": "binaryedge",
+  "base_url": null,
+  "docs_url": "https://help.coalitioninc.com/hc/en-us/articles/34383910057371-BinaryEdge-Transition-FAQ",
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No current free tier; all free subscriptions ended March 31, 2025 at 11:59 p.m. GMT.",
+  "rate_limits": "Not applicable; the standalone BinaryEdge API and all customer accounts were shut down March 31, 2025.",
+  "cors": "unknown",
+  "example_request": "curl -i -H \"X-Key: YOUR_API_KEY\" \"https://api.binaryedge.io/v2/query/ip/8.8.8.8\"",
+  "example_response_snippet": "HTTP/2 403\ncontent-type: text/html\n\nAccess denied",
+  "description": "BinaryEdge was an internet-wide scanning and threat-intelligence API for researching exposed ports, services, and vulnerabilities. Its standalone platform shut down on March 31, 2025; BinaryEdge scanning technology is now incorporated into Coalition's products.",
+  "status": "defunct",
+  "resolution_notes": "D=https://docs.dev.binaryedge.io/api-v2/; T=https://www.binaryedge.io/; S=https://docs.binaryedge.io/. base_url: keep historical v2 URL (D). docs_url: replace with T's transition FAQ. auth_type: keep apiKey/X-Key (D). free_tier: false; it ended (T). free_tier_limits: none (T). rate_limits: N/A after shutdown (T). cors: unknown; no current policy (T). example: retirement check; account/data access ended (T). description: past tense; scanner persists only as Coalition technology (S,T)."
+}

@@ -1,0 +1,98 @@
+{
+  "id": "semaphore-ci",
+  "status": "operational",
+  "name": "Semaphore CI API",
+  "category": "dev-tools",
+  "tagline": "CI/CD API for projects, pipelines, promotions, and secrets with monorepo support",
+  "description": "Semaphore provides a REST API for managing CI/CD projects, pipelines, promotions, secrets, and related resources. The API enables automation of builds, deployments, and monorepo workflows. Authentication uses API tokens. Docs and pricing should be verified from official sources for current endpoints, free-tier limits, and rate limits.",
+  "base_url": "https://<organization-url>.semaphoreci.com/api/v1alpha",
+  "docs_url": "https://docs.semaphoreci.com/reference/api-v1alpha",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API token authentication; verify exact header/scheme from current docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "$15 in free credits each month (\u22482,000 Ubuntu x64 2-vCPU minutes); 20 concurrent jobs by default; artifacts free up to 20 GB/month egress and 100 GB/month storage; 9.6 GB cache storage per project.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Token YOUR_API_TOKEN\" -H \"User-Agent: SemaphoreCI v2.0 Client\" -H \"Accept: application/json\" \"https://YOUR_ORG.semaphoreci.com/api/v1alpha/pipelines?project_id=PROJECT_ID\"",
+    "response_snippet": "[{\"yaml_file_name\":\"semaphore.yml\",\"working_directory\":\".semaphore\",\"wf_id\":\"484e263a-424a-4820-bff0-bba436c54042\",\"state\":\"DONE\",\"result\":\"PASSED\",\"name\":\"Pipeline\",\"branch_name\":\"main\",\"created_at\":{\"seconds\":1770000000,\"nanos\":0}}]"
+  },
+  "use_cases": [
+    "list projects and pipelines",
+    "trigger pipeline runs",
+    "manage secrets",
+    "inspect promotions"
+  ],
+  "sources": [
+    "https://docs.semaphoreci.com/reference/api-v1alpha"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

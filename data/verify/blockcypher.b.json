@@ -1,0 +1,52 @@
+{
+  "id": "blockcypher",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/bitcoin/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/bitcoin/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/pricing.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1000 requests/day, 100 requests/hour, 3 requests/second; 100 webhooks; 100 webhooks/websockets per hour; 10 confidence lookups/hour (pricing page also mentions up to 2000 queries/day and 200 webhooks/hour in marketing copy)",
+      "source": "https://www.blockcypher.com/pricing.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier: 3 req/sec, 100 req/hr, 1000 req/day (published on pricing and docs). Paid tiers higher; see pricing page.",
+      "source": "https://www.blockcypher.com/pricing.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/bitcoin/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.blockcypher.com/dev/bitcoin/"
+    }
+  },
+  "notes": "Rate limits are published (not 'unknown'/'not published'). Free: 3/s, 100/hr, 1000/day per pricing. Docs also document free-tier limits. Token via ?token=; GET works without token. API live as of 2026-08."
+}

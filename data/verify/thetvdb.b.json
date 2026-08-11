@@ -1,0 +1,52 @@
+{
+  "id": "thetvdb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/thetvdb/metadata.tvshows.thetvdb.com.v4.python/blob/master/metadata.tvshows.thetvdb.com.v4.python/resources/lib/tvdb.py"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/thetvdb/v4-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/thetvdb/v4-api/main/docs/swagger.yml"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thetvdb.com/api-information"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free licensing is available when company/project revenue is under $50k/year, with attribution required; no request/day quota is stated on the current public pricing page.",
+      "source": "https://thetvdb.com/api-information"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/thetvdb/v4-api/main/docs/swagger.yml"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "TheTVDB provides a v4 REST metadata API. Developers create a project API key through their account dashboard, exchange it at POST /login for a bearer token, and use either licensed or subscriber-supported access; these are not simply free and paid subscriber tiers.",
+      "source": "https://github.com/thetvdb/v4-api"
+    }
+  },
+  "notes": "The material error is pricing: the current public page publishes a free licensing tier below $50k annual revenue and paid $1,000/$10,000 tiers. A separate user subscription is $11.99/year. No authoritative numeric request limit or current CORS policy was located."
+}

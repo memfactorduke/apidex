@@ -1,0 +1,52 @@
+{
+  "id": "openfigi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openfigi.com/insights/notifications/2025/7/1/open-figi-api-v-2-deprecation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openfigi.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.openfigi.com/schema"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openfigi.com/api/overview"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No daily, weekly, or monthly limit. Mapping: 25 requests/minute without a key or 25 requests/6 seconds with a key. Search/filter: 5 requests/minute without a key or 20/minute with a key; up to 15,000 results, 100 per page, and 150 pages.",
+      "source": "https://www.openfigi.com/api/documentation"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published: mapping allows 25 requests/minute without an API key and 25 requests/6 seconds with one; search/filter allows 5 requests/minute without a key and 20 requests/minute with one.",
+      "source": "https://www.openfigi.com/api/documentation"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openfigi.com/api/documentation"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OpenFIGI provides a free, open API for mapping third-party security identifiers to FIGIs and for instrument search/filter queries. Official sources do not document paid API access.",
+      "source": "https://www.openfigi.com/api/overview"
+    }
+  },
+  "notes": "The v3 endpoint is current and operational; v2 was scheduled for retirement in 2026. The entry's largest errors are calling published limits unknown and claiming paid API access. Official documentation is internally inconsistent about the anonymous jobs-per-mapping-request limit, stating both 5 and 10, but its request-rate limits are explicit."
+}

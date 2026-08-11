@@ -1,0 +1,52 @@
+{
+  "id": "iplocate",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://iplocate.io/api/",
+      "source": "https://www.iplocate.io/docs/ip-intelligence-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.iplocate.io/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.iplocate.io/docs/getting-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.iplocate.io/docs/getting-started/plans-api-credits"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 requests per day with a free API key",
+      "source": "https://www.iplocate.io/docs/getting-started/plans-api-credits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 100 requests per second from a single IP address, within plan limits",
+      "source": "https://www.iplocate.io/docs/getting-started/quota-rate-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes; official documentation provides client-side browser fetch examples",
+      "source": "https://www.iplocate.io/docs/guides/country-based-redirects"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.iplocate.io/docs/getting-started/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.iplocate.io/docs/ip-intelligence-api"
+    }
+  },
+  "notes": "The API and documentation are operational. The entry uses a noncanonical www API hostname, omits the published free-tier quota and request-per-second limit, and leaves CORS unknown despite official browser-side examples."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "howlongtobeat",
+  "status": "operational",
+  "name": "HowLongToBeat API (via HLTB unofficial)",
+  "category": "games-comics",
+  "tagline": "Game completion-time estimates via community wrappers for HowLongToBeat",
+  "description": "Community libraries and reverse-engineered endpoints that expose HowLongToBeat completion-time data (main story, extras, completionist) for backlog tools, game databases, and recommendation apps. There is no official public API; most clients scrape or call undocumented site endpoints.",
+  "base_url": "https://howlongtobeat.com",
+  "docs_url": "https://github.com/ckatzorke/howlongtobeat",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No official API key; community libraries scrape howlongtobeat.com or call undocumented site endpoints without public auth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://howlongtobeat.com/api/search' -H 'Content-Type: application/json' -d '{\"searchType\":\"games\",\"searchTerms\":[\"zelda\"],\"size\":5}'",
+    "response_snippet": "{\"data\":[{\"game_id\":10270,\"game_name\":\"The Legend of Zelda: Breath of the Wild\",\"comp_main\":50000,\"comp_plus\":100000,\"comp_100\":150000}]}"
+  },
+  "use_cases": [
+    "look up main-story completion time for a game title",
+    "compare how long games take for backlog planning",
+    "enrich a game library with HLTB time estimates",
+    "search HowLongToBeat for a title and get match candidates"
+  ],
+  "sources": [
+    "https://github.com/ckatzorke/howlongtobeat",
+    "https://howlongtobeat.com"
+  ],
+  "researcher_confidence": "low"
+}

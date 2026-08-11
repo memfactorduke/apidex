@@ -1,0 +1,99 @@
+{
+  "id": "losant",
+  "status": "operational",
+  "name": "Losant",
+  "category": "iot-devices",
+  "tagline": "Industrial IoT platform API for devices, workflows, data tables, and experiences",
+  "description": "Losant is an industrial IoT application platform whose REST API provides access to nearly every platform feature, including applications, devices, workflows, data tables, and experiences. Most endpoints require a scoped API access token sent as a Bearer token. Its resource-based endpoints support device provisioning and state, workflow actions, data management, and experience management.",
+  "base_url": "https://api.losant.com",
+  "docs_url": "https://docs.losant.com/rest-api/overview/",
+  "signup_url": "https://accounts.losant.com/create-account",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token via Authorization: Bearer header (or token query param); create tokens in application or user settings after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Developer Sandbox: no cost and no credit card required; up to 10 connected devices; 30-day data retention. Additional Sandbox resource and payload limits apply, and over-limit payloads are rejected.",
+    "paid_plans": null
+  },
+  "rate_limits": "Endpoint-specific, not global. Device Send State, Send Command, and Set Connection Status allow 30 calls per 15 seconds per device; Workflow Press Virtual Button allows 100 calls per 10 seconds per virtual button. Other endpoint limits apply.",
+  "example": {
+    "request": "curl -s -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_API_ACCESS_TOKEN' -X GET 'https://api.losant.com/applications'",
+    "response_snippet": "{\n  \"items\": [{\n    \"id\": \"575ec8687ae143cd83dc4a97\",\n    \"applicationId\": \"575ec8687ae143cd83dc4a97\",\n    \"name\": \"My Application\",\n    \"description\": \"My application description\"\n  }],\n  \"count\": 1,\n  \"totalCount\": 8,\n  \"perPage\": 1,\n  \"page\": 0,\n  \"sortField\": \"name\",\n  \"sortDirection\": \"asc\"\n}"
+  },
+  "use_cases": [
+    "list applications and devices in a Losant org",
+    "query device state or attributes for IoT assets",
+    "read or write data table rows for industrial data",
+    "trigger or inspect workflows for automation",
+    "manage experience users and endpoints for multi-tenant apps"
+  ],
+  "sources": [
+    "https://docs.losant.com/rest-api/overview/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

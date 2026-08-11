@@ -1,0 +1,52 @@
+{
+  "id": "opencorporates",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.opencorporates.com/documentation/API-Reference",
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://knowledge.opencorporates.com/knowledge-base/api-authentication-authorisation/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "By default, up to 200 requests per month and 50 requests per day; limits depend on account type and plan. Free API access is restricted to qualifying open-data projects under share-alike attribution terms.",
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits are 200 requests per month and 50 requests per day by default, with account- and plan-specific limits.",
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://blog.opencorporates.com/2025/02/13/getting-started-with-the-opencorporates-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.opencorporates.com/documentation/API-Reference"
+    }
+  },
+  "notes": "The API is operational; HTTP 401 at the versioned base is consistent with mandatory API-token authentication. The submitted documentation URL uses an obsolete underscore and returns 404. The official reference publishes quotas, contradicting both unknown free-tier limits and not-published rate limits."
+}

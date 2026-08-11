@@ -1,0 +1,15 @@
+{
+  "id": "opensea",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Instant free-tier keys allow 60 read requests/minute, 5 write requests/minute, and 5 fulfillment requests/minute; keys expire after 30 days.",
+  "rate_limits": "Token-bucket system. Authenticated responses include X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset; HTTP 429 responses include Retry-After. All keys under one account share a rate-limit bucket.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B is substantially correct; current official docs specify 60 reads/min, 5 writes/min, 5 fulfillments/min, and 30-day expiry: https://docs.opensea.io/reference/api-keys. rate_limits: Original is incorrect; OpenSea publishes its token-bucket behavior and response headers on the same official page."
+}

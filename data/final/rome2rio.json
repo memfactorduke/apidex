@@ -1,0 +1,97 @@
+{
+  "id": "rome2rio",
+  "status": "operational",
+  "name": "Rome2Rio API",
+  "category": "transportation",
+  "tagline": "Multi-modal door-to-door routing across planes, trains, buses, and ferries worldwide.",
+  "description": "Rome2Rio provides a multi-modal transportation API for door-to-door journey planning across planes, trains, buses, ferries, and other transport modes worldwide. Developers can search routes, get schedules, and compare travel options between any two locations.",
+  "base_url": "http://free.rome2rio.com/api/1.4",
+  "docs_url": "https://www.rome2rio.com/documentation/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication required. Self-serve signup available."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"http://free.rome2rio.com/api/1.4/json/Search?key=YOUR_API_KEY&oName=London&dName=Paris\"",
+    "response_snippet": "{\"routes\":[{\"name\":\"Train\",\"distance\":455.83,\"duration\":168,\"segments\":[{\"kind\":\"train\",\"sName\":\"London\",\"tName\":\"Paris\"}]}]}"
+  },
+  "use_cases": [
+    "find multi-modal routes between two cities",
+    "compare train vs flight travel options",
+    "get door-to-door journey plans with transfers",
+    "search bus and ferry connections worldwide"
+  ],
+  "sources": [
+    "https://www.rome2rio.com/documentation/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

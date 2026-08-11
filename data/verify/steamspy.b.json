@@ -1,0 +1,52 @@
+{
+  "id": "steamspy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/about"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/about"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/api.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/api.php"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free public access, limited to 1 request per second generally and 1 request per 60 seconds for request=all.",
+      "source": "https://steamspy.com/api.php"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits are 1 request per second generally and 1 request per 60 seconds for request=all; the all endpoint returns 1,000 games per page.",
+      "source": "https://steamspy.com/api.php"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://steamspy.com/api.php"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SteamSpy exposes estimated ownership ranges and engagement metrics, not sales figures; its official explanation explicitly warns that owned does not mean sold.",
+      "source": "https://steamspy.com/about"
+    }
+  },
+  "notes": "The official site remains operational and contains current 2026 game data. No current shutdown or endpoint-migration notice was found. The entry misstates published throttling as historical guidance and incorrectly treats ownership as sales. The illustrative response values are stale, although the requested curl method and parameters remain valid."
+}

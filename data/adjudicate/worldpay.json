@@ -1,0 +1,15 @@
+{
+  "id": "worldpay",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Try environment: 10 requests per second per merchant. Exceeding the limit returns HTTP 429; Worldpay says to wait up to five minutes and remain below the limit. No Live-environment limit is stated.",
+  "cors": null,
+  "example_request": "curl -u YOUR_USERNAME:YOUR_PASSWORD https://try.access.worldpay.com/payments/authorizations -H 'Content-Type: application/vnd.worldpay.payments-v6+json' -H 'Accept: application/vnd.worldpay.payments-v6.hal+json' -d '{\"transactionReference\":\"ref-001\",\"merchant\":{\"entity\":\"YOUR_ENTITY\"},\"instruction\":{\"narrative\":{\"line1\":\"Trading name\"},\"value\":{\"currency\":\"GBP\",\"amount\":100},\"paymentInstrument\":{\"type\":\"card/plain\",\"cardNumber\":\"4444333322221111\",\"cardExpiryDate\":{\"month\":12,\"year\":2035},\"cvc\":\"123\"}}}'",
+  "example_response_snippet": "{\"outcome\":\"authorized\",\"issuer\":{\"authorizationCode\":\"12345A\"},\"paymentInstrument\":{\"type\":\"card/plain+masked\",\"card\":{\"brand\":\"visa\",\"number\":{\"bin\":\"444433\",\"last4Digits\":\"1111\"}}},\"_links\":{\"payments:settle\":{\"href\":\"https://try.access.worldpay.com/payments/settlements/full/...\"}}}",
+  "description": "Access Worldpay offers RESTful HTTPS APIs for card payments, tokenization, 3DS, payouts, and related commerce flows. Its enterprise Card Payments APIs use HTTP Basic authentication with credentials supplied by a Worldpay Implementation Manager. Merchants test on try.access.worldpay.com and use access.worldpay.com for live traffic.",
+  "status": null,
+  "resolution_notes": "rate_limits: Corrected\u2014Try is capped at 10 requests/s per merchant; excess returns 429 and may require waiting up to 5 minutes; no Live cap is stated: https://docs.worldpay.com/access/products/get-started. example: Corrected to the documented v6 headers, payload fields, and authorized response shape: https://docs.worldpay.com/access/products/card-payments/v6/authorize-a-payment. description: Corrected\u2014enterprise Access credentials come from an Implementation Manager, not generally a dashboard: https://docs.worldpay.com/access/products/card-payments/v6/get-started"
+}

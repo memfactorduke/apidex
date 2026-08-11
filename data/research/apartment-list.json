@@ -1,0 +1,40 @@
+{
+  "id": "apartment-list",
+  "status": "operational",
+  "name": "Apartment List API",
+  "category": "real-estate-housing",
+  "tagline": "Rental inventory and lead APIs for multifamily marketing partners",
+  "description": "Apartment List provides partner APIs for multifamily marketing: rental inventory, lead generation, and property data integration. Designed for property managers, marketers, and tech partners who need structured access to listing and lead workflows\u2014not a self-serve public consumer API.",
+  "base_url": "https://api.apartmentlist.com",
+  "docs_url": "https://www.apartmentlist.com/partners",
+  "signup_url": "https://www.apartmentlist.com/partners",
+  "auth": {
+    "type": "apiKey",
+    "details": "Partner API credentials issued after partnership approval; not self-serve. Exact header/scheme not fully published on public partner pages."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Enterprise/partner pricing; contact sales via partners page"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.apartmentlist.com/v1/listings?limit=1\"",
+    "response_snippet": "{\"listings\":[{\"id\":\"...\",\"name\":\"...\",\"address\":{...}}],\"meta\":{\"count\":1}}"
+  },
+  "use_cases": [
+    "sync multifamily rental inventory for marketing partners",
+    "submit or receive rental leads from partner channels",
+    "look up property listing details for partner dashboards",
+    "integrate Apartment List inventory into property management tools"
+  ],
+  "sources": [
+    "https://www.apartmentlist.com/partners"
+  ],
+  "researcher_confidence": "low"
+}

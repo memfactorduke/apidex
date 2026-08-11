@@ -1,0 +1,52 @@
+{
+  "id": "nowpayments",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documenter.getpostman.com/view/7907941/2s93JusNJt"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://documenter.getpostman.com/view/7907941/2s93JusNJt",
+      "source": "https://nowpayments.io/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documenter.getpostman.com/view/7907941/2s93JusNJt"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nowpayments.io/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Integration and sandbox testing are free, but live payments incur a 0.5% service fee without conversion or 1% with autoconversion/fixed-rate features, plus applicable network fees.",
+      "source": "https://nowpayments.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"https://api.nowpayments.io/v1/status\"",
+      "source": "https://documenter.getpostman.com/view/7907941/2s93JusNJt"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documenter.getpostman.com/view/7907941/2s93JusNJt"
+    }
+  },
+  "notes": "NOWPayments still promotes the v1 API. Its official site now links the newer Postman collection; the submitted documentation URL is legacy. Current documentation shows GET /status without authentication, so the example should not send an API key. No authoritative numeric request-rate limit or CORS policy was found."
+}

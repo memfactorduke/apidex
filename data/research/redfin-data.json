@@ -1,0 +1,41 @@
+{
+  "id": "redfin-data",
+  "status": "operational",
+  "name": "Redfin Data Center",
+  "category": "real-estate-housing",
+  "tagline": "Market metrics and downloadable housing data from Redfin; limited programmatic access.",
+  "description": "Redfin Data Center publishes housing market metrics and downloadable datasets (city, ZIP, neighborhood, and metro-level). It is primarily a data download portal rather than a full self-serve developer API; programmatic access is limited and not a documented public REST product for general app use.",
+  "base_url": "https://www.redfin.com/stingray",
+  "docs_url": "https://www.redfin.com/news/data-center/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No public self-serve developer API key; Data Center offers free CSV/Excel downloads. Unofficial/internal endpoints may not require auth but are unsupported and subject to blocking."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "csv",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public downloads of market data files; no documented request quotas for a developer API",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sL 'https://redfin-public-data.s3.us-west-2.amazonaws.com/redfin_market_tracker/city_market_tracker.tsv000.gz' -o city_market_tracker.tsv.gz",
+    "response_snippet": "PERIOD_BEGIN\tPERIOD_END\tREGION_TYPE\tREGION_TYPE_ID\tTABLE_ID\tIS_SEASONALLY_ADJUSTED\tREGION\tCITY\tSTATE\tSTATE_CODE\tPROPERTY_TYPE\t...\n2024-01-01\t2024-01-31\tcity\t6\t...\tfalse\tAustin, TX\tAustin\tTexas\tTX\tAll Residential\t..."
+  },
+  "use_cases": [
+    "download monthly housing market metrics by city or metro",
+    "track median sale prices and inventory trends over time",
+    "compare housing demand metrics across ZIP codes",
+    "pull Redfin housing market CSVs for offline analysis"
+  ],
+  "sources": [
+    "https://www.redfin.com/news/data-center/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,96 @@
+{
+  "id": "passport-index",
+  "status": "operational",
+  "name": "VisaList Passport Index API",
+  "category": "travel-hospitality",
+  "tagline": "Visa-free access and passport ranking data for destination eligibility.",
+  "description": "Passport Index API provides request-based access to real-time visa-policy and visa-free-list data for every country. Its data is sourced from government agencies and updated in real time, with government agencies prioritized for API access.",
+  "base_url": "https://api.passportindex.org/v1",
+  "docs_url": "https://discover.passportindex.org/api-request/",
+  "signup_url": "https://www.passportindex.org/passportAPI.php",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 req/day free",
+    "paid_plans": "Paid plans available"
+  },
+  "rate_limits": "1,000 req/day free, paid plans have higher limits",
+  "example": {
+    "request": "curl -H \"X-Api-Key: YOUR_API_KEY\" https://api.passportindex.org/v1/passport/US",
+    "response_snippet": "{ \"passport\": \"US\", \"visa_free_countries\": [\"CA\", \"MX\", \"UK\"], \"ranking\": 1 }"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "check visa requirements for a passport",
+    "get passport ranking data",
+    "list visa-free countries for a passport"
+  ],
+  "sources": [
+    "https://www.passportindex.org/passportAPI.php"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "docs_url",
+      "description"
+    ],
+    "unverifiable": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example"
+    ]
+  }
+}

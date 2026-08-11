@@ -1,0 +1,40 @@
+{
+  "id": "dice-fm",
+  "status": "operational",
+  "name": "Dice FM API",
+  "category": "events-holidays",
+  "tagline": "Music events and ticketing platform API for club/festival listings",
+  "description": "Dice FM provides a partner-focused API for discovering live music events, venues, and ticketing data across clubs and festivals. Access is primarily partner/self-serve for developers integrating event listings and ticket flows.",
+  "base_url": "https://api.dice.fm",
+  "docs_url": "https://partners.dice.fm/",
+  "signup_url": "https://partners.dice.fm/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; partner/self-serve developer access"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.dice.fm/events\"",
+    "response_snippet": "{ \"events\": [] }"
+  },
+  "use_cases": [
+    "list upcoming club nights in a city",
+    "search festival lineups by date",
+    "get venue details for a music event",
+    "check ticket availability for an event"
+  ],
+  "sources": [
+    "https://partners.dice.fm/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,95 @@
+{
+  "id": "libretranslate",
+  "status": "operational",
+  "name": "LibreTranslate",
+  "category": "education-reference",
+  "tagline": "Open-source, self-hostable translation API for privacy-friendly language apps",
+  "description": "LibreTranslate is an open-source machine translation API you can self-host or use via public instances. It exposes simple HTTP endpoints for text translation, language detection, and supported language lists, making it suitable for privacy-conscious education and reference apps that need offline-capable or self-controlled translation without vendor lock-in.",
+  "base_url": "https://libretranslate.com",
+  "docs_url": "https://libretranslate.com/docs/",
+  "signup_url": "https://portal.libretranslate.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query param or JSON body field on hosted libretranslate.com; self-host typically needs no key. Public free tier may be limited or require key depending on instance."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No hosted free tier or free low-volume API key; self-hosting remains free.",
+    "paid_plans": null
+  },
+  "rate_limits": "Hosted Pro: bursts up to 80 translations/minute; Business: bursts up to 200 translations/minute. Higher custom request/minute or character limits are available from support.",
+  "example": {
+    "request": "curl -X POST \"https://libretranslate.com/translate\" -H \"Content-Type: application/json\" -d '{\"q\":\"Hello\",\"source\":\"en\",\"target\":\"es\",\"format\":\"text\",\"api_key\":\"YOUR_API_KEY\"}'",
+    "response_snippet": "{\"translatedText\": \"Hola\"}"
+  },
+  "use_cases": [
+    "translate user-generated study notes between languages",
+    "detect language of a vocabulary list or article",
+    "build a privacy-friendly classroom translation tool",
+    "list supported languages for a language-learning UI"
+  ],
+  "sources": [
+    "https://libretranslate.com/docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

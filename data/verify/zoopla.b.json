@@ -1,0 +1,52 @@
+{
+  "id": "zoopla",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No current public listings API base URL; the legacy public listings API is no longer available.",
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.zoopla.co.uk",
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "No applicable authentication for the retired public listings API; current documented Zoopla partner APIs use OAuth 2.0 client credentials and bearer tokens.",
+      "source": "https://support.zoopla.co.uk/hc/en-gb/articles/360015656838-Authentication-Tech-Documentation"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The legacy GET /api/v1/property_listings.json request is not a current documented public endpoint; Zoopla states that its listings API is no longer publicly available.",
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Zoopla no longer offers its listings API publicly. Commercial requirements for Zoopla data, potentially including listings access, must be discussed through Hometrack; the current developer portal mainly documents partner services such as Alto, leads, and premium products.",
+      "source": "https://developers.zoopla.co.uk/docs/getting-started"
+    }
+  },
+  "notes": "Zoopla's current official developer guide, updated in 2026, explicitly says the listings API is no longer publicly available and directs commercial data enquiries to Hometrack. The submitted hostname, singular developer URL, API-key authentication, and sample request describe the retired API rather than the current partner API surface."
+}

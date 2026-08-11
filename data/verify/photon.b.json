@@ -1,0 +1,52 @@
+{
+  "id": "photon",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/komoot/photon#demo-server"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/komoot/photon"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://photon.komoot.io/api/?q=berlin"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/komoot/photon#demo-server"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://github.com/komoot/photon/blob/master/docs/usage.md"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/komoot/photon/blob/master/docs/api-v1.md"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Replace Elasticsearch with OpenSearch. Photon 1.x removed the old Elasticsearch code and now uses OpenSearch.",
+      "source": "https://github.com/komoot/photon/releases/tag/1.0.0"
+    }
+  },
+  "notes": "The public endpoint returned current GeoJSON without authentication on 2026-08-11. Official docs publish only a qualitative reasonable-use policy, with throttling or bans for extensive use. They do not explicitly document free pricing, paid-plan absence, or the public demo's current CORS configuration."
+}

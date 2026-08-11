@@ -1,0 +1,99 @@
+{
+  "id": "mailjet",
+  "status": "operational",
+  "name": "Mailjet",
+  "category": "social-communication",
+  "tagline": "European email API for transactional and marketing mail",
+  "description": "Mailjet provides REST APIs for sending transactional and marketing email, managing contacts, lists, and templates, and retrieving statistics and events. Email API v3/v3.1 uses HTTPS Basic Auth with an API key and secret; SMS API v4 uses Bearer-token authentication. Its email infrastructure is GDPR-compliant and EU-hosted.",
+  "base_url": "https://api.mailjet.com/v3",
+  "docs_url": "https://dev.mailjet.com/email/guides/",
+  "signup_url": "https://app.mailjet.com/signup",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with API key as username and secret key as password; keys from account settings. Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "6,000 emails per month, maximum 200 emails per day, and up to 1,000 contacts.",
+    "paid_plans": null
+  },
+  "rate_limits": "API calls are limited per API key per second; universal numeric thresholds are not published. Exceeding a limit returns HTTP 429. Transactional APIs have higher limits than other Email and SMS APIs.",
+  "example": {
+    "request": "curl -s -X GET 'https://api.mailjet.com/v3/REST/contact' -u 'YOUR_API_KEY:YOUR_API_SECRET'",
+    "response_snippet": "{\"Count\":1,\"Data\":[{\"Email\":\"passenger@mailjet.com\",\"ID\":1,\"IsExcludedFromCampaigns\":false,\"Name\":\"Passenger\"}],\"Total\":1}"
+  },
+  "use_cases": [
+    "send a transactional email with HTML and text body",
+    "send a campaign email using a stored template",
+    "list or create contacts and contact lists",
+    "retrieve delivery open and bounce statistics",
+    "manage sender domains and validate sender addresses"
+  ],
+  "sources": [
+    "https://dev.mailjet.com/email/guides/",
+    "https://dev.mailjet.com/email/reference/overview/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

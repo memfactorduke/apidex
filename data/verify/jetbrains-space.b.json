@@ -1,0 +1,52 @@
+{
+  "id": "jetbrains-space",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No hosted Space Cloud base URL remains. Space Cloud organizations were disabled on June 1, 2025; surviving on-premises instances use https://<instance-host>/api/http.",
+      "source": "https://blog.jetbrains.com/space/2024/11/27/discontinuation-of-the-spacecode-private-preview/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jetbrains.com/help/space/api.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jetbrains.com/help/space/authentication-and-authorization.html"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false for the hosted API; Space Cloud subscriptions ended. Previously licensed Space On-Premises customers may continue using their instances for free.",
+      "source": "https://space-support.jetbrains.com/hc/en-us/articles/19158484213138-What-will-happen-to-my-Space-instance-after-May-31-2025"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable to Space Cloud because no active cloud tier remains; legacy on-premises use depends on the previously updated perpetual license.",
+      "source": "https://space-support.jetbrains.com/hc/en-us/articles/19158484213138-What-will-happen-to-my-Space-instance-after-May-31-2025"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The example's jetbrains.space cloud host is no longer usable. Any request must target a surviving self-hosted instance and should be generated or verified through that instance's API Playground.",
+      "source": "https://blog.jetbrains.com/space/2024/11/27/discontinuation-of-the-spacecode-private-preview/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "JetBrains Space Cloud was discontinued and its organizations were disabled on June 1, 2025. Only previously licensed Space On-Premises installations may continue operating indefinitely.",
+      "source": "https://blog.jetbrains.com/space/2024/11/27/discontinuation-of-the-spacecode-private-preview/"
+    }
+  },
+  "notes": "The entry is obsolete as a public hosted API listing. JetBrains retained the old API documentation, but Space Cloud and its organization-specific jetbrains.space endpoints were disabled in 2025. Existing perpetual on-premises installations are the only surviving deployment path."
+}

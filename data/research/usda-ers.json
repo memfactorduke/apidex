@@ -1,0 +1,49 @@
+{
+  "id": "usda-ers",
+  "status": "operational",
+  "name": "USDA ERS Data API",
+  "category": "agriculture",
+  "tagline": "USDA Agricultural Resource Management Survey (ARMS) farm finance data via REST and GraphQL",
+  "description": "USDA Economic Research Service (ERS) Data APIs provide programmatic access to Agricultural Resource Management Survey (ARMS) farm financial and structural data\u2014income statements, balance sheets, government payments, operator household finances, and related variables\u2014by year, state, farm type, and category. Delivered as JSON over REST (and GraphQL) behind api.data.gov API keys. Free self-serve registration; HTTPS required.",
+  "base_url": "https://api.ers.usda.gov/data/",
+  "docs_url": "https://www.ers.usda.gov/developer/data-apis/arms-data-api",
+  "signup_url": "https://api.data.gov/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Free API key via api.data.gov self-serve signup (name + email). Pass as api_key query parameter (as in ERS docs) or X-Api-Key header (api.data.gov standard). DEMO_KEY works for light exploration."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json",
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free api.data.gov key; platform default 1,000 requests/hour for registered keys (limits may vary by service). DEMO_KEY much lower.",
+    "paid_plans": null
+  },
+  "rate_limits": "api.data.gov defaults: 1,000 req/hour per registered key across api.data.gov services; DEMO_KEY lower (observed X-RateLimit-Limit: 10 on this service). ERS does not publish separate limits.",
+  "example": {
+    "request": "curl \"https://api.ers.usda.gov/data/arms/year?api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":\"ok\",\"info\":{\"timing\":{\"executing\":0,\"unit\":\"ms\"},\"resultCoverage\":\"total\",\"total\":{\"recordCount\":29}},\"message\":null,\"data\":[2024,2023,2022,2021,2020,2019,2018,2017,...1996],\"detail\":null,\"errors\":null}"
+  },
+  "use_cases": [
+    "list available ARMS survey years for farm finance data",
+    "get farm income statement estimates by year and farm typology",
+    "retrieve gross cash farm income by operator age or region",
+    "list ARMS report types and variables for balance sheets and debt",
+    "query government payment statistics for commercial vs intermediate farms"
+  ],
+  "sources": [
+    "https://www.ers.usda.gov/developer/",
+    "https://www.ers.usda.gov/developer/data-apis",
+    "https://www.ers.usda.gov/developer/data-apis/arms-data-api",
+    "https://www.ers.usda.gov/developer/data-apis/arms-data-api/updates-and-revisions",
+    "https://www.ers.usda.gov/developer/api-terms-of-service",
+    "https://api.data.gov/docs/developer-manual/",
+    "https://github.com/USDA-ERS/ARMS-Data-API",
+    "https://api.ers.usda.gov/data/arms/year?api_key=DEMO_KEY"
+  ],
+  "researcher_confidence": "high"
+}

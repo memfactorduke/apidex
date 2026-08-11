@@ -1,0 +1,52 @@
+{
+  "id": "numbeo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.numbeo.com/",
+      "source": "https://www.numbeo.com/api/doc.jsp"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.numbeo.com/api/doc.jsp",
+      "source": "https://www.numbeo.com/api/doc.jsp"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/api/doc.jsp"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/api/cost-of-living-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/api/cost-of-living-api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published monthly quotas: Basic 200,000 queries, Professional 1,000,000 queries, and Enterprise 5,000,000 queries.",
+      "source": "https://www.numbeo.com/common/api.jsp"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/api/doc.jsp"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.numbeo.com/api/doc.jsp"
+    }
+  },
+  "notes": "The API is operational, but the official base URL is the site root, the documentation is at /api/doc.jsp, and request quotas are publicly listed. The submitted /common/api.jsp URL is the pricing and product page, not the complete API documentation. Official sources do not document CORS behavior."
+}

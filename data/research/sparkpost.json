@@ -1,0 +1,38 @@
+{
+  "id": "sparkpost",
+  "status": "operational",
+  "name": "SparkPost",
+  "category": "social-communication",
+  "tagline": "Enterprise email delivery API with analytics",
+  "description": "SparkPost is an enterprise-grade email delivery API (MessageBird/Sinch family) providing transactional and bulk email sending, template management, and delivery analytics.",
+  "base_url": "https://api.sparkpost.com/api/v1",
+  "docs_url": "https://developers.sparkpost.com/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://api.sparkpost.com/api/v1/transmissions -H 'Authorization: YOUR_API_KEY'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "send transactional email",
+    "check delivery metrics"
+  ],
+  "sources": [
+    "https://developers.sparkpost.com/api/"
+  ],
+  "researcher_confidence": "low"
+}

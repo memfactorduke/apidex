@@ -1,0 +1,49 @@
+{
+  "id": "seattle-open-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://support.socrata.com/hc/en-us/articles/202949298-Where-do-I-find-the-SODA-API-Endpoint"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://dev.socrata.com/foundry/data.seattle.gov/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "none for anonymous public SODA 2.1 reads; an optional app token provides identification and increased throttling allowances but is not API-key authentication",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://support.socrata.com/hc/en-us/articles/34730618169623-SODA3-API"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free community access is available. Anonymous SODA 2.1 requests share a lower IP-based pool; app-token requests are currently unthrottled unless abusive or malicious. No numeric cap is stated.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published policy: anonymous requests may be throttled through a shared IP-based pool; app-token requests are currently not throttled unless abusive or malicious; throttling returns HTTP 429.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported for read-only access to public datasets",
+      "source": "https://dev.socrata.com/docs/cors-and-jsonp.html"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"X-App-Token: YOUR_API_KEY\" \"https://cos-data.seattle.gov/resource/tazs-3rd5.json?$limit=5\"",
+      "source": "https://dev.socrata.com/foundry/cos-data.seattle.gov/tazs-3rd5"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The API is operational, but the entry conflates an app token with API-key authentication, overlooks published throttling and CORS policies, and uses the former host for tazs-3rd5, which is now documented under cos-data.seattle.gov. The qualitative description is plausible, but the claim of hundreds of datasets was not authoritatively quantified."
+}

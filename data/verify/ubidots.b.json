@@ -1,0 +1,52 @@
+{
+  "id": "ubidots",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ubidots.com/reference/get-all-devices"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ubidots.com/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiToken: use an account authentication token in X-Auth-Token or the token query parameter; the API Key itself only generates tokens and is not accepted for ordinary API calls.",
+      "source": "https://help.ubidots.com/en/articles/570026-api-authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.ubidots.com/en/articles/639806-plans-billing-what-is-the-difference-between-ubidots-and-ubidots-stem"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Ubidots STEM is non-commercial only and includes 3 devices, 1 dashboard with 10 widgets, 10 variables/device, 4,000 ingested dots/day, 500,000 extracted dots/day, 1 request/second, and 1-month retention.",
+      "source": "https://help.ubidots.com/en/articles/639806-plans-billing-what-is-the-difference-between-ubidots-and-ubidots-stem"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits include up to 4 requests/second per token for commercial accounts, fixed at 4 requests/second for device tokens, plus plan-specific account throughput; STEM permits 1 request/second and 4,000 dots/day.",
+      "source": "https://help.ubidots.com/en/articles/2093902-how-many-dots-can-i-send-to-ubidots"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ubidots.com/reference/get-all-devices"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ubidots.com/llms.txt"
+    }
+  },
+  "notes": "The API and v2 device endpoint remain documented and operational. The entry fails because it misclassifies the required account token as an API Key and says published free-tier and rate limits are unknown or unpublished. CORS behavior was not established from authoritative documentation."
+}

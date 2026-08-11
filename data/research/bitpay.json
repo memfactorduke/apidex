@@ -1,0 +1,41 @@
+{
+  "id": "bitpay",
+  "status": "operational",
+  "name": "BitPay API",
+  "category": "ecommerce-payments",
+  "tagline": "Bitcoin and crypto payment processing for invoices and merchant settlements",
+  "description": "BitPay provides a payment processing API for merchants to accept Bitcoin and other cryptocurrencies. Create invoices, track payment status, manage refunds, and settle funds to fiat or crypto. Supports multiple currencies and integrations for e-commerce platforms.",
+  "base_url": "https://bitpay.com/api/v2",
+  "docs_url": "https://developer.bitpay.com/",
+  "signup_url": "https://bitpay.com/dashboard/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication via X-Api-Key header. Self-serve signup available at bitpay.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Transaction fees apply; contact BitPay for merchant pricing"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://bitpay.com/api/v2/invoices/YOUR_INVOICE_ID\" -H \"X-Api-Key: YOUR_API_KEY\"",
+    "response_snippet": "{\"id\": \"...\", \"url\": \"https://bitpay.com/invoice?id=...\", \"status\": \"new\", \"price\": 10.00, \"currency\": \"USD\"}"
+  },
+  "use_cases": [
+    "create a crypto payment invoice for an order",
+    "check invoice payment status",
+    "list merchant invoices",
+    "refund a crypto payment",
+    "get exchange rates for supported currencies"
+  ],
+  "sources": [
+    "https://developer.bitpay.com/"
+  ],
+  "researcher_confidence": "low"
+}

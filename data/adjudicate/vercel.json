@@ -1,0 +1,15 @@
+{
+  "id": "vercel",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": "Hobby: 200 projects; 100 deployments/day; 1 concurrent build; 6,000 build minutes/month; 1M invocations/month; 100 GB Fast Data Transfer/month.",
+  "rate_limits": "Published per action and scope; examples include domain deletion 60/60s and Hobby builds 32/3600s. Responses expose X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset.",
+  "cors": "no",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: other\u2014authentication is a Bearer Vercel Access Token; OAuth can also issue one: https://vercel.com/docs/rest-api. free_tier_limits: replace unknown with published Hobby limits: https://vercel.com/docs/limits. rate_limits: replace not published; action/scope limits and response headers are documented: https://vercel.com/docs/limits. cors: no\u2014Vercel instructs callers to use server-side code to avoid CORS and token exposure: https://vercel.com/docs/integrations/create-integration/vercel-api-integrations"
+}

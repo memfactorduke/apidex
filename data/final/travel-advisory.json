@@ -1,0 +1,96 @@
+{
+  "id": "travel-advisory",
+  "status": "operational",
+  "name": "Travel Advisory API",
+  "category": "travel-hospitality",
+  "tagline": "Country travel risk scores for trip safety checks.",
+  "description": "REST API providing structured country risk profiles for 195 countries, combining U.S. State Department advisory levels 1\u20134 with CDC health, World Bank, safety-index, and climate data.",
+  "base_url": "https://api.traveladvisory.io",
+  "docs_url": "https://www.traveladvisory.io/dev/api/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "No authentication required for public endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "250 total, non-recurring requests; no credit card required; 10 requests per minute.",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: 10 requests/minute; Builder: 60; Pro: 200; Scale: 500. Monthly quotas are 5,000, 25,000, and 100,000 for paid tiers.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.traveladvisory.io/v1/advisory?code=CO\"",
+    "response_snippet": "{\"country\":{\"code\":\"CO\",\"name\":\"Colombia\",\"slug\":\"colombia\",\"flag\":\"\ud83c\udde8\ud83c\uddf4\"},\"advisory\":{\"level\":2,\"label\":\"Exercise Increased Caution\",\"reasons\":[\"crime\",\"terrorism\"],\"headline\":\"Exercise Increased Caution in Colombia\"}}"
+  },
+  "use_cases": [
+    "get travel risk score for a country by ISO code",
+    "list all country travel advisories",
+    "check if a destination is high-risk before booking",
+    "compare risk levels across multiple countries"
+  ],
+  "sources": [
+    "https://www.travel-advisory.info/data-api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "nasa-exoplanet-archive",
+  "status": "operational",
+  "name": "NASA Exoplanet Archive TAP",
+  "category": "science-space",
+  "tagline": "NASA-hosted TAP access to confirmed and candidate exoplanet tables",
+  "description": "The NASA Exoplanet Archive provides Table Access Protocol (TAP) and programmatic interfaces for querying authoritative confirmed and candidate exoplanet catalogs, stellar hosts, and related planetary system tables. It is maintained by IPAC at Caltech under NASA and is widely used for research-grade planet counts, system properties, and catalog joins via ADQL/SQL-style queries.",
+  "base_url": "https://exoplanetarchive.ipac.caltech.edu/TAP",
+  "docs_url": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or login required for public TAP and API queries"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://exoplanetarchive.ipac.caltech.edu/TAP/sync?QUERY=select+pl_name,hostname,disc_year+from+pscomppars+where+disc_year>2020&format=json\"",
+    "response_snippet": "[{\"pl_name\":\"TOI-1234 b\",\"hostname\":\"TOI-1234\",\"disc_year\":2021}]"
+  },
+  "use_cases": [
+    "list confirmed exoplanets discovered after a year",
+    "query host star properties for a planet name",
+    "export candidate planet rows as CSV for analysis",
+    "join planetary system tables via ADQL TAP queries"
+  ],
+  "sources": [
+    "https://exoplanetarchive.ipac.caltech.edu/docs/program_interfaces.html"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "example"
+    ],
+    "corrected": [
+      "docs_url"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

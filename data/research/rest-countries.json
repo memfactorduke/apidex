@@ -1,0 +1,43 @@
+{
+  "id": "rest-countries",
+  "status": "operational",
+  "name": "REST Countries",
+  "category": "travel-hospitality",
+  "tagline": "Free country metadata API for names, capitals, currencies, borders, and flags",
+  "description": "Public REST API that returns structured country data including names, ISO codes, capitals, currencies, languages, borders, regions, population, timezones, and flag assets. Designed for apps that need country pickers, trip/visa context, currency labels, or regional filters without maintaining a local dataset. Version 3.1 is the current public surface; no authentication is required for typical read access.",
+  "base_url": "https://restcountries.com/v3.1",
+  "docs_url": "https://restcountries.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public read endpoints; requests work without API keys or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use; commercial use requires a paid plan (exact free quotas not published as numbered req/day)",
+    "paid_plans": "Commercial license/plan available via the project site; exact tiers and prices not fully public as standard SaaS tiers"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://restcountries.com/v3.1/name/france?fields=name,capital,currencies,borders,cca2\"",
+    "response_snippet": "[{\"name\":{\"common\":\"France\",\"official\":\"French Republic\",\"nativeName\":{\"fra\":{\"official\":\"R\u00e9publique fran\u00e7aise\",\"common\":\"France\"}}},\"cca2\":\"FR\",\"capital\":[\"Paris\"],\"currencies\":{\"EUR\":{\"name\":\"Euro\",\"symbol\":\"\u20ac\"}},\"borders\":[\"AND\",\"BEL\",\"DEU\",\"ITA\",\"LUX\",\"MCO\",\"ESP\",\"CHE\"]}]"
+  },
+  "use_cases": [
+    "get capital and currency for a country by name",
+    "list countries by region for a trip planner filter",
+    "resolve ISO country code to borders and neighboring countries",
+    "fetch flag and demonym metadata for visa or travel UI labels",
+    "search countries by currency code for multi-currency trip apps"
+  ],
+  "sources": [
+    "https://restcountries.com/",
+    "https://gitlab.com/restcountries/restcountries",
+    "https://restcountries.com/#api-endpoints-v3"
+  ],
+  "researcher_confidence": "medium"
+}

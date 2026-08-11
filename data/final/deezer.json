@@ -1,0 +1,96 @@
+{
+  "id": "deezer",
+  "status": "operational",
+  "name": "Deezer API",
+  "category": "entertainment",
+  "tagline": "Full music catalog search, albums, artists, and playlists with a generous free public API.",
+  "description": "The Deezer API provides access to Deezer's full music catalog, including search, albums, artists, tracks, playlists, charts, and radio. It offers a generous free public API for developers to integrate music discovery and metadata into their applications.",
+  "base_url": "https://api.deezer.com",
+  "docs_url": "https://developers.deezer.com/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Many public endpoints require no authentication. OAuth 2.0 is used for user-specific data and actions (e.g., managing playlists, user library)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.deezer.com/search?q=eminem\"",
+    "response_snippet": "{ \"data\": [ { \"id\": 3135556, \"readable\": true, \"title\": \"Lose Yourself\", \"title_short\": \"Lose Yourself\", \"link\": \"https://www.deezer.com/track/3135556\", \"duration\": 326, \"rank\": 956777, \"explicit_lyrics\": true, \"preview\": \"https://cdns-preview-1.dzcdn.net/...\", \"artist\": { \"id\": 13, \"name\": \"Eminem\" }, \"album\": { \"id\": 103248, \"title\": \"8 Mile\" } } ], \"total\": 300, \"next\": \"https://api.deezer.com/search?q=eminem&index=25\" }"
+  },
+  "use_cases": [
+    "search tracks by title or artist name",
+    "fetch album metadata and track list",
+    "get artist discography and related artists",
+    "retrieve playlist contents by ID",
+    "get chart rankings for a country"
+  ],
+  "sources": [
+    "https://developers.deezer.com/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

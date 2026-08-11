@@ -1,0 +1,15 @@
+{
+  "id": "medusa",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": "yes",
+  "example_request": "curl -X GET \"http://localhost:9000/admin/products?limit=50&offset=0\" -H \"Authorization: Basic YOUR_SECRET_API_KEY\"",
+  "example_response_snippet": "{\"products\":[],\"count\":0,\"offset\":0,\"limit\":50}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "cors: yes. Admin routes support CORS for origins allowed by projectConfig.http.adminCors: https://docs.medusajs.com/learn/fundamentals/api-routes/cors . example: corrected. Current Medusa v2 docs require secret API keys in the Authorization: Basic header and warn that Bearer returns 401: https://docs.medusajs.com/resources/commerce-modules/api-key/concepts . The Admin API pagination docs confirm products responses include count, offset, and limit: https://docs.medusajs.com/api/admin"
+}

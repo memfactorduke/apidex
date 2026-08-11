@@ -1,0 +1,52 @@
+{
+  "id": "4r0u",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.sirene.fr/static-resources/documentation/multi_ls_variables_reponse_311.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://portail-api.insee.fr/catalog/api/2ba0e549-5587-3ef1-9082-99cd865de66f"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://static.insee.fr/api-sirene/Insee_API_publique_modalites_connexion.pdf"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.insee.fr/fr/information/3591226"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gouv.fr/dataservices/api-sirene-open-data"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.insee.fr/fr/information/9019311"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes; responses specify Access-Control-Allow-Origin: *",
+      "source": "https://www.sirene.fr/static-resources/documentation/multi_ls_variables_reponse_311.html"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://portail-api.insee.fr/catalog/api/2ba0e549-5587-3ef1-9082-99cd865de66f/doc?page=85c5657d-b1a1-4466-8565-7db1a194667b"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.data.gouv.fr/dataservices/api-sirene-open-data"
+    }
+  },
+  "notes": "The current endpoint, public API-key header, free access, and 30-request/minute quota are supported by official sources. The entry fails because CORS is not unknown: INSEE's service documentation explicitly lists Access-Control-Allow-Origin: *. The API remained active in INSEE's July 2026 update."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "entsoe-transparency",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Official Guide emphasizes fair use; no documented 400 req/min/IP limit. Community guidance may cite ~400/min, but this is not in the official ENTSO-E API Guide.",
+      "source": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html"
+    }
+  },
+  "notes": "docs_url HTTP 400 is likely bot/WAF false positive; official Guide path still documented by ENTSO-E and community. Rate limit 400/min is community-sourced, not official."
+}

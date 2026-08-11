@@ -1,0 +1,52 @@
+{
+  "id": "jetbrains-space",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No operational Space Cloud base URL exists. Existing Space On-Premises installations use https://<your-space-instance>/api/http.",
+      "source": "https://blog.jetbrains.com/space/2024/11/27/discontinuation-of-the-spacecode-private-preview/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jetbrains.com/help/space/api.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.jetbrains.com/help/space/authentication-and-authorization.html"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "There is no current public Space Cloud free tier; cloud organizations were deactivated June 1, 2025. Previously licensed Space On-Premises instances may continue free indefinitely.",
+      "source": "https://space-support.jetbrains.com/hc/en-us/articles/19158484213138-What-will-happen-to-my-Space-instance-after-May-31-2025"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://space-support.jetbrains.com/hc/en-us/articles/19158484213138-What-will-happen-to-my-Space-instance-after-May-31-2025"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "No working Space Cloud example exists. A request must instead target the organization-specific host of a previously licensed Space On-Premises installation.",
+      "source": "https://blog.jetbrains.com/space/2024/11/27/discontinuation-of-the-spacecode-private-preview/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "JetBrains Space Cloud was discontinued and its organizations were disabled June 1, 2025. Only previously licensed Space On-Premises installations may continue operating indefinitely.",
+      "source": "https://blog.jetbrains.com/space/2024/11/27/discontinuation-of-the-spacecode-private-preview/"
+    }
+  },
+  "notes": "Space Cloud was disabled June 1, 2025, so operational status is false and the observed HTTP 503 is consistent with shutdown, not merely bot detection. Official API documentation remains online but was last modified in 2023. Existing eligible Space On-Premises instances may continue on their own hosts. The listed signup URL now redirects to the JetBrains homepage."
+}

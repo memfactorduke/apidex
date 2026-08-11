@@ -1,0 +1,52 @@
+{
+  "id": "ibm-watson-nlu",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/apidocs/natural-language-understanding"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/apidocs/natural-language-understanding"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/apidocs/natural-language-understanding"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/docs/natural-language-understanding?topic=natural-language-understanding-pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "30,000 NLU items per month and 1 free custom model. Lite instances are deleted after 30 days of inactivity.",
+      "source": "https://cloud.ibm.com/catalog/services/natural-language-understanding"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Analyze requests are limited to 5 requests per second on Lite and 150 requests per second on Standard; all other requests are limited to 5 requests per second. IBM can increase the Standard analyze limit through a support ticket.",
+      "source": "https://cloud.ibm.com/docs/natural-language-understanding?topic=natural-language-understanding-usage-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/apidocs/natural-language-understanding"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.ibm.com/products/natural-language-understanding"
+    }
+  },
+  "notes": "The service remains active. IBM confirms the listed analysis capabilities, but its current product material does not specifically substantiate every claimed application, especially content moderation. Although auth_type=basic is supported for API keys, auth.details is wrong: the Basic username is the literal \"apikey\" and the API key is the password, not an empty password. A paid Standard plan also exists, so paid_plans=null is outdated."
+}

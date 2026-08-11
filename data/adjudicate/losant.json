@@ -1,0 +1,15 @@
+{
+  "id": "losant",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": "Developer Sandbox: no cost and no credit card required; up to 10 connected devices; 30-day data retention. Additional Sandbox resource and payload limits apply, and over-limit payloads are rejected.",
+  "rate_limits": "Endpoint-specific, not global. Device Send State, Send Command, and Set Connection Status allow 30 calls per 15 seconds per device; Workflow Press Virtual Button allows 100 calls per 10 seconds per virtual button. Other endpoint limits apply.",
+  "cors": null,
+  "example_request": "curl -s -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_API_ACCESS_TOKEN' -X GET 'https://api.losant.com/applications'",
+  "example_response_snippet": "{\n  \"items\": [{\n    \"id\": \"575ec8687ae143cd83dc4a97\",\n    \"applicationId\": \"575ec8687ae143cd83dc4a97\",\n    \"name\": \"My Application\",\n    \"description\": \"My application description\"\n  }],\n  \"count\": 1,\n  \"totalCount\": 8,\n  \"perPage\": 1,\n  \"page\": 0,\n  \"sortField\": \"name\",\n  \"sortDirection\": \"asc\"\n}",
+  "description": "Losant is an industrial IoT application platform whose REST API provides access to nearly every platform feature, including applications, devices, workflows, data tables, and experiences. Most endpoints require a scoped API access token sent as a Bearer token. Its resource-based endpoints support device provisioning and state, workflow actions, data management, and experience management.",
+  "status": null,
+  "resolution_notes": "auth_type=apiKey: API access token in Bearer header (https://docs.losant.com/rest-api/overview/#authenticating-a-request). free_tier_limits=corrected: free, 10 devices, 30 days (https://www.losant.com/iot-platform/sandbox). rate_limits=corrected: endpoint-specific throttles (https://docs.losant.com/rest-api/overview/#throttles-and-limits). example=corrected to official curl and schema (https://docs.losant.com/rest-api/applications/). description=corrected; unsupported global versioning claim removed (https://docs.losant.com/rest-api/overview/)."
+}

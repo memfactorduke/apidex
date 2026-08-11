@@ -1,0 +1,40 @@
+{
+  "id": "airlabs",
+  "status": "operational",
+  "name": "AirLabs",
+  "category": "travel-hospitality",
+  "tagline": "Flight schedules, real-time tracking, and airport/airline reference data",
+  "description": "AirLabs provides REST APIs for real-time flight tracking, schedules, airport/airline reference data, and related aviation information for travel and logistics applications.",
+  "base_url": "https://airlabs.co/api/v9",
+  "docs_url": "https://airlabs.co/docs/",
+  "signup_url": "https://airlabs.co/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://airlabs.co/api/v9/airports?api_key=YOUR_API_KEY&iata_code=JFK\"",
+    "response_snippet": "{\"response\":[{\"name\":\"John F Kennedy International Airport\",\"iata_code\":\"JFK\",\"icao_code\":\"KJFK\"}]}"
+  },
+  "use_cases": [
+    "look up airport details by IATA code",
+    "get real-time flight status by flight number",
+    "fetch airline schedules for a route",
+    "list nearby airports by coordinates"
+  ],
+  "sources": [
+    "https://airlabs.co/docs/"
+  ],
+  "researcher_confidence": "low"
+}

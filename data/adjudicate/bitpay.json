@@ -1,0 +1,15 @@
+{
+  "id": "bitpay",
+  "base_url": "https://bitpay.com",
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl --request GET --url \"https://bitpay.com/invoices/YOUR_INVOICE_ID?token=YOUR_POS_TOKEN\" --header \"Accept: application/json\" --header \"X-Accept-Version: 2.0.0\"",
+  "example_response_snippet": "{\"facade\":\"pos/invoice\",\"data\":{\"url\":\"https://bitpay.com/invoice?id=G3viJEJgE8Jk2oekSdgT2A\",\"status\":\"new\",\"price\":10,\"currency\":\"USD\",\"id\":\"G3viJEJgE8Jk2oekSdgT2A\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Set to https://bitpay.com; the Environments page identifies it as the production base URL (https://developer.bitpay.com/reference/environments). auth_type: Set to other because BitPay uses facade API tokens and BitAuth rather than X-Api-Key (https://developer.bitpay.com/reference/concepts). example: Replaced /api/v2 and X-Api-Key with /invoices/{invoiceId}, the token query parameter, and X-Accept-Version 2.0.0 (https://developer.bitpay.com/reference/retrieve-an-invoice)."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "reso-web-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reso.org/reso-web-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reso.org/reso-web-api/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://transport.reso.org/proposals/web-api-core/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transport.reso.org/proposals/web-api-core/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" 'https://api.example-mls.com/odata/Property?$top=1'",
+      "source": "https://tools.reso.org/guides/reso-reference-server/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reso.org/reso-web-api/"
+    }
+  },
+  "notes": "RESO defines a standard, not a central MLS-data service, so the base_url curl failure is not evidence of downtime. Current Core rules require OAuth2 bearer tokens or client credentials, not an API-key alternative. The example's double-quoted URL lets the shell expand $top, removing the parameter. Pricing and CORS remain provider-specific and unverified."
+}

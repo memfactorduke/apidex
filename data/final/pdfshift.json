@@ -1,0 +1,99 @@
+{
+  "id": "pdfshift",
+  "status": "operational",
+  "name": "PDFShift",
+  "category": "utilities",
+  "tagline": "HTML-to-PDF conversion API with CSS, headers/footers, and sandbox free usage",
+  "description": "PDFShift converts HTML (or URLs) to PDF via a simple REST API. It supports CSS, headers/footers, sandbox free usage, and various PDF options for generating documents programmatically.",
+  "base_url": "https://api.pdfshift.io/v3",
+  "docs_url": "https://docs.pdfshift.io/",
+  "signup_url": "https://pdfshift.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic Auth or X-API-Key header after self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 50 credits/month; 1 credit per 5 MB of generated output; 15 MB maximum file size; 30-second timeout. Sandbox conversions do not consume credits, include a watermark, and are limited to 10 documents/minute.",
+    "paid_plans": null
+  },
+  "rate_limits": "2 requests/minute when unauthenticated; up to 250 documents/minute when authenticated; 10 documents/minute in sandbox mode.",
+  "example": {
+    "request": "curl -X POST https://api.pdfshift.io/v3/convert/pdf -H \"X-API-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"source\": \"https://example.com\"}' --output document.pdf",
+    "response_snippet": "Binary PDF content (or JSON with base64 when encode is true)"
+  },
+  "use_cases": [
+    "convert HTML string to PDF",
+    "convert a web page URL to PDF",
+    "generate PDF invoices with custom headers/footers",
+    "sandbox-test PDF generation without a paid plan"
+  ],
+  "sources": [
+    "https://docs.pdfshift.io/",
+    "https://pdfshift.io/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

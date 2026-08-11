@@ -1,0 +1,36 @@
+{
+  "id": "rev-ai",
+  "status": "operational",
+  "name": "Rev AI",
+  "category": "ai-ml",
+  "tagline": "Speech-to-text and captioning API from long-running transcription vendor.",
+  "description": "Rev AI is a speech-to-text and captioning API from long-running transcription vendor.",
+  "base_url": "https://api.rev.ai",
+  "docs_url": "https://docs.rev.ai/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET https://api.rev.ai/v1/account -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"email\":\"user@example.com\",\"balance_seconds\":1000}"
+  },
+  "use_cases": [
+    "transcribe audio files to text",
+    "generate captions for videos"
+  ],
+  "sources": [
+    "https://docs.rev.ai/"
+  ],
+  "researcher_confidence": "low"
+}

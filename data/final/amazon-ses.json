@@ -1,0 +1,96 @@
+{
+  "id": "amazon-ses",
+  "status": "operational",
+  "name": "Amazon SES",
+  "category": "social-communication",
+  "tagline": "High-scale transactional and bulk email via AWS",
+  "description": "Amazon Simple Email Service (SES) is a cloud email platform for sending and receiving email at scale. Developers use the SES API and SMTP interface for transactional messages, marketing campaigns, bounce handling, and domain identity verification with AWS Signature Version 4 authentication.",
+  "base_url": "https://email.{region}.amazonaws.com",
+  "docs_url": "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html",
+  "signup_url": "https://console.aws.amazon.com/ses/",
+  "auth": {
+    "type": "other",
+    "details": "AWS Signature Version 4 (SigV4) with IAM access keys or temporary credentials; service name \"ses\"."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "New AWS customers get up to $200 in AWS Free Tier credits for six months. The SES-specific 3,000 message-charges/month offer ended for new customers July 21, 2026; existing participants retain it for the remainder of their 12-month term.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --request POST 'https://email.us-east-1.amazonaws.com/v2/email/outbound-emails' --aws-sigv4 'aws:amz:us-east-1:ses' --user \"${AWS_ACCESS_KEY_ID}:${AWS_SECRET_ACCESS_KEY}\" --header 'Content-Type: application/json' --data '{\"FromEmailAddress\":\"verified-sender@example.com\",\"Destination\":{\"ToAddresses\":[\"recipient@example.com\"]},\"Content\":{\"Simple\":{\"Subject\":{\"Data\":\"Hello\",\"Charset\":\"UTF-8\"},\"Body\":{\"Text\":{\"Data\":\"Test from Amazon SES\",\"Charset\":\"UTF-8\"}}}}}'",
+    "response_snippet": "{\"MessageId\":\"0100018f2a7b3c4d-12345678-abcd-4ef0-9123-abcdef123456-000000\"}"
+  },
+  "use_cases": [
+    "send transactional email",
+    "verify email identity"
+  ],
+  "sources": [
+    "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "mobygames",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.mobygames.com/v1/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mobygames.com/info/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mobygames.com/info/api/#authorization"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "Free API access is available by application for non-commercial research purposes.",
+      "source": "https://www.mobygames.com/api/subscribe/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Non-commercial access is limited to 720 requests per hour, averaging one request every five seconds, with a maximum rate of one request per second; legacy access is limited to 360 requests per hour.",
+      "source": "https://www.mobygames.com/info/api/#limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published and vary by access plan. The documentation lists 720 requests per hour with a maximum of one request per second for non-commercial access, while paid plans advertise rates from 0.2 to 8 requests per second.",
+      "source": "https://www.mobygames.com/api/subscribe/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mobygames.com/info/api/#games"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mobygames.com/api/subscribe/"
+    }
+  },
+  "notes": "The documentation URL is official despite returning 403 to the automated fetch, which appears to be access filtering. Current documentation explicitly describes API-key authentication through the api_key query parameter; it does not explicitly document header-based authentication. Credits are available only on the Gold plan."
+}

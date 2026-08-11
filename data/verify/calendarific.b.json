@@ -1,0 +1,52 @@
+{
+  "id": "calendarific",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://calendarific.com/api-documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://calendarific.com/api-documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://calendarific.com/api-documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://calendarific.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "500 requests/month free (Free plan)",
+      "source": "https://calendarific.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://calendarific.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://calendarific.com/api-documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://calendarific.com/api-documentation"
+    }
+  },
+  "notes": "Free tier is 500 req/mo (Free plan), not 1,000 Hobby; paid plans start higher. base_url, docs, auth (api_key query), and example path match v2 docs. CORS not documented."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "open-meteo-geocoding",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://open-meteo.com/en/docs/geocoding-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://open-meteo.com/en/docs/geocoding-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://open-meteo.com/en/docs/geocoding-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://open-meteo.com/en/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "600 calls/minute, 5,000 calls/hour, 10,000 calls/day, and 300,000 calls/month for Free/Open-Access",
+      "source": "https://open-meteo.com/en/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free/Open-Access limits are published: 600 calls/minute, 5,000/hour, 10,000/day, and 300,000/month",
+      "source": "https://open-meteo.com/en/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://open-meteo.com/en/docs/geocoding-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://open-meteo.com/en/docs/geocoding-api"
+    }
+  },
+  "notes": "The documented HTTPS endpoint, parameters, no-key non-commercial access, JSON response, and listed location metadata are current. The entry fails because official pricing publishes specific free-tier rate limits. Official documentation located during review did not state a CORS policy."
+}

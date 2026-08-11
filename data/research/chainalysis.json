@@ -1,0 +1,38 @@
+{
+  "id": "chainalysis",
+  "status": "operational",
+  "name": "Chainalysis",
+  "category": "crypto",
+  "tagline": "Compliance screening and sanctions APIs for crypto exchanges and fintechs",
+  "description": "Chainalysis provides blockchain analytics and compliance APIs used by exchanges and fintechs for sanctions screening, address risk scoring, and transaction monitoring. Research is based on official developer documentation and public product pages.",
+  "base_url": "https://api.chainalysis.com",
+  "docs_url": "https://developers.chainalysis.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; concrete header name and self-serve availability to be verified from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Token: YOUR_API_KEY\" \"https://api.chainalysis.com/\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "screen a crypto address for sanctions risk",
+    "score transaction counterparty risk for compliance"
+  ],
+  "sources": [
+    "https://developers.chainalysis.com/"
+  ],
+  "researcher_confidence": "low"
+}

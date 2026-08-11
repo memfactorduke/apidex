@@ -1,0 +1,52 @@
+{
+  "id": "threatfox",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://threatfox.abuse.ch/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://threatfox.abuse.ch/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://threatfox.abuse.ch/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://abuse.ch/terms-of-use/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for authenticated not-for-profit use within unpublished query-volume limits. Commercial or for-profit use may require a paid Spamhaus subscription; qualifying high-value contributors may receive discretionary free access.",
+      "source": "https://abuse.ch/terms-of-use/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://threatfox.abuse.ch/api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "ThreatFox is an abuse.ch and Spamhaus platform for sharing malware-related IOCs. Its authenticated API supports recent-IOC retrieval, searches by IOC value, ID, hash, tag, or malware family, and vetted IOC submission. Free use is subject to eligibility and fair-use limits; the documentation does not offer an IOC-type search operation.",
+      "source": "https://threatfox.abuse.ch/api/"
+    }
+  },
+  "notes": "The v1 endpoint remains documented and current 2026 ThreatFox records indicate ongoing operation. Official sources confirm rate limiting and temporary restrictions but do not document HTTP 429 specifically or numeric quotas. CORS is undocumented. The entry materially overstates free access and claims lookup by IOC type, which the documented operations do not provide."
+}

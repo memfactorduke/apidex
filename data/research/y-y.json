@@ -1,0 +1,38 @@
+{
+  "id": "y-y",
+  "status": "defunct",
+  "name": "Y",
+  "category": "weather-environment",
+  "tagline": "Placeholder entry for an unresolvable API identity",
+  "description": "No verified public weather or environment API matching the label \u201cy\u201d at y.com could be confirmed. Official docs, pricing, status, and callable endpoints were not found; treat this as a non-operational placeholder rather than a usable service.",
+  "base_url": "https://y.com",
+  "docs_url": "https://y.com",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Authentication method unknown; no documented public API auth scheme found for y.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "other"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://y.com\"",
+    "response_snippet": "No verified API response documented; y.com did not yield a public weather/environment API contract."
+  },
+  "use_cases": [
+    "resolve whether a purported y.com weather API exists before integration",
+    "flag placeholder or invalid API directory entries for review"
+  ],
+  "sources": [
+    "https://y.com"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ubidots",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": "STEM (non-commercial only): 3 devices; 1 dashboard/10 widgets; 10 variables/device; 1 plugin/10,000 executions/month; 4,000 dots in/day; 500,000 dots out/day; 1 request/s; 1-month retention.",
+  "rate_limits": "Commercial tokens: up to 4 requests/s/token and 10,000 bytes/request; device tokens are fixed at 4 requests/s, with plan-specific account throughput. STEM: 1 request/s/token and 4,000 dots/day.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: other; ordinary calls require a TOKEN, while the API Key only generates tokens: https://help.ubidots.com/en/articles/570026-api-authentication. free_tier_limits: corrected to published STEM limits: https://help.ubidots.com/en/articles/639806-plans-billing-what-is-the-difference-between-ubidots-and-ubidots-stem. rate_limits: corrected to published commercial and STEM limits: https://help.ubidots.com/en/articles/2093902-how-many-dots-can-i-send-to-ubidots; https://help.ubidots.com/en/articles/636666-how-many-dots-can-i-send-with-ubidots-stem"
+}

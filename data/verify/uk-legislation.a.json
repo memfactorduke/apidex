@@ -1,0 +1,52 @@
+{
+  "id": "uk-legislation",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/api/overview.html"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://legislation.github.io/data-documentation/",
+      "source": "https://www.data.gov.uk/dataset/a2416481-271a-42b2-ace8-fc247dd251be/legislation-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/api/overview.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "3,000 requests per 5-minute period, subject to the Fair Use Policy and required User-Agent identification.",
+      "source": "https://legislation.github.io/data-documentation/fair-use.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "3,000 requests per 5-minute period; the service may temporarily reduce the limit or block abusive traffic.",
+      "source": "https://legislation.github.io/data-documentation/fair-use.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is enabled for endpoints ending in /data.[ext], including /data.xml and /data.feed; it is not enabled for /data.htm.",
+      "source": "https://legislation.github.io/data-documentation/api/overview.html"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/api/overview.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://legislation.github.io/data-documentation/formats/overview.html"
+    }
+  },
+  "notes": "Current official documentation confirms unauthenticated GET access, CLML and Akoma Ntoso XML, revised versions, searches, lists, and feeds. The entry is failed because its documentation URL is outdated and it misses the published rate limit and documented CORS behavior."
+}

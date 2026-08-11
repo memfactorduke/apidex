@@ -1,0 +1,52 @@
+{
+  "id": "speechmatics",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Use a current regional Batch SaaS base URL: https://eu1.asr.api.speechmatics.com/v2, https://us1.asr.api.speechmatics.com/v2, or https://au1.asr.api.speechmatics.com/v2. Enterprise customers may also use EU2 or US2.",
+      "source": "https://docs.speechmatics.com/get-started/authentication"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.speechmatics.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.speechmatics.com/get-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.speechmatics.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "New accounts currently receive $100 in credit with no card required. The Free plan permits 2 concurrent real-time sessions, 1 batch job creation per second, and 3 concurrent voice-agent conversations.",
+      "source": "https://www.speechmatics.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Limits are published. Free allows 2 concurrent real-time sessions and 1 batch job/second; Pro allows 50 sessions and 10 jobs/second; Enterprise is listed as unlimited. Batch guidance also specifies at most 10 POSTs/second, 50 status GETs/second, and a 20,000-concurrent-job backstop.",
+      "source": "https://docs.speechmatics.com/speech-to-text/batch/limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Replace the undocumented generic hostname with a current regional endpoint, for example: curl -X POST \"https://eu1.asr.api.speechmatics.com/v2/jobs/\" -H \"Authorization: Bearer YOUR_API_KEY\" -F 'config={\"type\":\"transcription\",\"transcription_config\":{\"language\":\"en\"}}' -F data_file=@audio.wav",
+      "source": "https://docs.speechmatics.com/get-started/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.speechmatics.com/speech-to-text"
+    }
+  },
+  "notes": "The API is active, but the entry uses a legacy generic hostname instead of the regional endpoints in current documentation. Its pricing language is stale: the present signup offer is explicitly $100 credit, and Speechmatics now publishes concrete plan and API limits. No authoritative CORS declaration was located."
+}

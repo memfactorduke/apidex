@@ -1,0 +1,52 @@
+{
+  "id": "urlhaus",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlhaus-api.abuse.ch/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlhaus-api.abuse.ch/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlhaus-api.abuse.ch/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://abuse.ch/terms-of-use/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for authenticated not-for-profit use under fair-use and query-volume limits; commercial use may require a paid subscription.",
+      "source": "https://abuse.ch/terms-of-use/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Endpoint-specific limits are published: database dumps must not be fetched more often than every 5 minutes; no numeric API-wide ceiling is stated.",
+      "source": "https://urlhaus.abuse.ch/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://urlhaus-api.abuse.ch/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "URLhaus collects, tracks, shares, queries, downloads, and accepts submissions of URLs directly distributing malware; phishing sites and phishing kits are explicitly excluded.",
+      "source": "https://urlhaus.abuse.ch/api/"
+    }
+  },
+  "notes": "The official API and current 2026 database records show URLhaus is operational. The v1 URL-query endpoint remains documented, while exports also use v2. The entry incorrectly includes phishing campaigns and overstates the commercial-use restriction. CORS behavior is not documented."
+}

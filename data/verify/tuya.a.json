@@ -1,0 +1,47 @@
+{
+  "id": "tuya",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://developer.tuya.com/en/docs/im-project-services/Cloud-self-development?id=Kb3o4z4ll4v9d"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://developer.tuya.com/en/docs/cloud/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://developer.tuya.com/en/docs/iot/authentication-method?id=Ka49gbaxjygox"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://developer.tuya.com/en/docs/iot/applying-for-api-group-permissions?id=Ka6vf012u6q76"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Trial Edition: about 26,000 API calls and 68,000 messages monthly with adjustable allocation, 1 data center, 50 devices, and 10 controllable devices. It is for individual developers or debugging only, prohibits commercial use, allows no overage, and is suspended until the next monthly refresh when exhausted.",
+      "source": "https://developer.tuya.com/en/docs/iot/membership-service?id=K9m8k45jwvg9j"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per endpoint and per cloud project. Examples include 4 requests/second for sending device actions and 50 requests/second for querying device shadow properties.",
+      "source": "https://developer.tuya.com/en/docs/iot/frequency-control?id=Kcojz2r2dg1f6"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://developer.tuya.com/en/docs/iot/new-singnature?id=Kbw0q34cs2e5g"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://www.tuya.com/platform/clouddev/iot-core?lang=en"
+    }
+  },
+  "notes": "The entry fails because current Tuya documentation classifies cloud authentication under OAuth 2.0, publishes substantial Trial Edition limits, and publishes endpoint-specific request-frequency limits. The listed host is valid specifically for Western America; callers must use the endpoint matching their project's data center. No official browser CORS policy was found."
+}

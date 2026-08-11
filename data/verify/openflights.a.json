@@ -1,0 +1,52 @@
+{
+  "id": "openflights",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openflights.org/data.php"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://openflights.org/data.php",
+      "source": "https://github.com/jpatokal/openflights/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openflights.org/data.php"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openflights.org/data.php"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openflights.org/data.php"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openflights.org/data.php"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openflights.org/data.php"
+    }
+  },
+  "notes": "The bare raw-content base prefix returns 404 because it is not a browsable directory, but the documented files beneath it work and the sample exactly matches airports.dat. The old data.html documentation URL is invalid. OpenFlights warns that GitHub data is a sporadically updated static snapshot and that route data has not been updated since June 2014. No official CORS statement was found."
+}

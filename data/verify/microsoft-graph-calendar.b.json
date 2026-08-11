@@ -1,0 +1,52 @@
+{
+  "id": "microsoft-graph-calendar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/graph/call-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/graph/auth-v2-user"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Standard Calendar API calls have no additional per-call Graph charge within licensed usage limits. A free Microsoft 365 E5 developer sandbox is available only to qualifying Developer Program members, is restricted to development and testing, and can be short-lived or require renewal based on eligibility and activity.",
+      "source": "https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Outlook Calendar requests are limited to 10,000 API requests per 10 minutes and four concurrent requests per app ID and mailbox combination, not per app per tenant. Handle HTTP 429 responses and honor Retry-After.",
+      "source": "https://learn.microsoft.com/en-us/graph/throttling-limits#outlook-service-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Supported for ordinary authenticated calendar API calls from browser-based JavaScript applications, although individual operations such as redirected downloads can have separate restrictions.",
+      "source": "https://learn.microsoft.com/en-us/training/modules/msgraph-access-user-events/"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s 'https://graph.microsoft.com/v1.0/me/calendar/events?$top=5' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'. The original double-quoted URL causes a normal shell to expand $top as a variable, corrupting the query parameter.",
+      "source": "https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The Calendar API capabilities are accurately described, but the final sentence must say that a free Microsoft 365 E5 developer sandbox is available only to qualifying Microsoft 365 Developer Program members, not generally to all developers.",
+      "source": "https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq"
+    }
+  },
+  "notes": "The API and v1.0 endpoint remain operational. Material defects are the unqualified developer-sandbox claim, inaccurate throttling scope, misleading CORS value, and a broken shell example: double quotes expand $top. Microsoft currently limits Outlook requests per app ID and mailbox, and free E5 developer sandboxes are restricted to qualifying members."
+}

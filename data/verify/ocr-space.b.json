@@ -1,0 +1,52 @@
+{
+  "id": "ocr-space",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ocr.space/ocrapi"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OCR.space extracts text from images and PDFs, supports multiple OCR languages and formats, and offers optional table recognition and searchable-PDF creation. Current documentation does not list a search/replace feature.",
+      "source": "https://ocr.space/ocrapi"
+    }
+  },
+  "notes": "Official 2026 documentation identifies API version 5.22.1 and supports the endpoint, API-key authentication, 500 requests/day per IP, and 25,000 monthly Engine 1/2 conversions. Engine 3 has a separate 2,500-conversion free quota. The description appears to confuse searchable-PDF creation with nonexistent search/replace functionality. No explicit official CORS policy was found."
+}

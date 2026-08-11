@@ -1,0 +1,15 @@
+{
+  "id": "aws-iot-core",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Accounts created before July 15, 2025: for 12 months, 2.25M connection minutes, 500k messages, 225k Registry/Device Shadow operations, 250k rules triggered, and 250k actions applied monthly. New customers receive up to $200 in credits; the free plan lasts up to 6 months.",
+  "rate_limits": "Published per-account, per-region quotas vary by API and region. Current defaults include 10 TPS for ListThings and 10 TPS for DescribeEndpoint; some quotas are adjustable.",
+  "cors": null,
+  "example_request": "curl --aws-sigv4 \"aws:amz:us-east-1:execute-api\" --user \"$AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY\" -H \"x-amz-security-token: $AWS_SESSION_TOKEN\" \"https://iot.us-east-1.amazonaws.com/things\"",
+  "example_response_snippet": "{\"things\":[{\"thingName\":\"sensor-001\",\"thingArn\":\"arn:aws:iot:us-east-1:123456789012:thing/sensor-001\",\"attributes\":{},\"version\":1}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: replace; current limits/credit transition: https://aws.amazon.com/iot-core/pricing/ and https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier.html. rate_limits: replace; published TPS quotas: https://docs.aws.amazon.com/general/latest/gr/iot-core.html#limits_iot. example: replace; GET /things and response schema: https://docs.aws.amazon.com/iot/latest/apireference/API_ListThings.html; control-plane SigV4 service is execute-api: https://docs.aws.amazon.com/iot/latest/apireference/Welcome.html."
+}

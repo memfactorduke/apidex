@@ -1,0 +1,101 @@
+{
+  "id": "nowpayments",
+  "status": "operational",
+  "name": "NOWPayments API",
+  "category": "ecommerce-payments",
+  "tagline": "Crypto payment gateway with multi-coin invoices, IPN callbacks, and mass payouts.",
+  "description": "NOWPayments is a cryptocurrency payment gateway API for accepting payments in many coins and tokens, creating invoices/payments, receiving Instant Payment Notifications (IPN), and running mass payouts. Developers authenticate with an API key and typically verify IPN signatures for webhook security. Suitable for ecommerce checkouts, donation flows, and automated crypto disbursements.",
+  "base_url": "https://api.nowpayments.io/v1",
+  "docs_url": "https://documenter.getpostman.com/view/7907941/2s93JusNJt",
+  "signup_url": "https://account.nowpayments.io/create-account",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-api-key header (from dashboard). JWT Bearer for some payout/auth flows after email/password login."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No free live-payment allowance. Integration and sandbox testing are free; live payments incur a 0.5% service fee without exchange or 1% for multi-currency, fixed-rate, or fee-paid-by-user payments, plus network fees.",
+    "paid_plans": null
+  },
+  "rate_limits": "GET /estimate: 7 requests/second; POST /payment (create payment): 3 requests/second.",
+  "example": {
+    "request": "curl -sS \"https://api.nowpayments.io/v1/status\"",
+    "response_snippet": "{\"message\":\"OK\"}"
+  },
+  "use_cases": [
+    "create a crypto payment invoice for an order",
+    "check payment status by payment id",
+    "list available cryptocurrencies for checkout",
+    "estimate crypto amount for a fiat price",
+    "send mass crypto payouts to multiple wallets",
+    "verify and process IPN payment webhooks"
+  ],
+  "sources": [
+    "https://documenter.getpostman.com/view/7907941/S1a32n38",
+    "https://nowpayments.io/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

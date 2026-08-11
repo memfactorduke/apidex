@@ -1,0 +1,15 @@
+{
+  "id": "openholidays-api",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free for commercial use. Public- and school-holiday query date ranges may not exceed three years. No request-volume quota is documented.",
+  "rate_limits": null,
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "OpenHolidays API is a free open-data REST API for public and school holidays in supported countries across Europe, the Americas, and Africa. It provides endpoints for countries, languages, subdivisions, groups, holidays, and localized names without documented authentication. Holiday range queries are limited to three years.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected; the FAQ confirms free commercial use, and the docs cap public/school holiday queries at three years: https://www.openholidaysapi.org/en/faq/ and https://www.openholidaysapi.org/en/. cors: corrected to yes; official code allows any origin for GET with Accept: https://github.com/openpotato/openholidaysapi/blob/develop/src/webservice/Program.cs. description: corrected; the homepage lists countries in Europe, the Americas, and Africa: https://www.openholidaysapi.org/en/."
+}

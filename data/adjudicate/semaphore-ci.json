@@ -1,0 +1,15 @@
+{
+  "id": "semaphore-ci",
+  "base_url": "https://<organization-url>.semaphoreci.com/api/v1alpha",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "$15 in free credits each month (\u22482,000 Ubuntu x64 2-vCPU minutes); 20 concurrent jobs by default; artifacts free up to 20 GB/month egress and 100 GB/month storage; 9.6 GB cache storage per project.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -H \"Authorization: Token YOUR_API_TOKEN\" -H \"User-Agent: SemaphoreCI v2.0 Client\" -H \"Accept: application/json\" \"https://YOUR_ORG.semaphoreci.com/api/v1alpha/pipelines?project_id=PROJECT_ID\"",
+  "example_response_snippet": "[{\"yaml_file_name\":\"semaphore.yml\",\"working_directory\":\".semaphore\",\"wf_id\":\"484e263a-424a-4820-bff0-bba436c54042\",\"state\":\"DONE\",\"result\":\"PASSED\",\"name\":\"Pipeline\",\"branch_name\":\"main\",\"created_at\":{\"seconds\":1770000000,\"nanos\":0}}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Incorrect; the current API root is organization-scoped: https://docs.semaphore.io/reference/api. free_tier_limits: Incorrect; current credits, concurrency, artifact, and cache allowances are listed at https://semaphore.io/pricing and confirmed for cache at https://docs.semaphore.io/using-semaphore/cache. example: Incorrect; the API reference requires Token authentication and the SemaphoreCI v2.0 Client User-Agent and documents the pipelines endpoint and response shape: https://docs.semaphore.io/reference/api."
+}

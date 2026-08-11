@@ -1,0 +1,52 @@
+{
+  "id": "okx",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://openapi.okx.com for global accounts; https://us.okx.com for US/AU registrations and https://eea.okx.com for EU registrations",
+      "source": "https://www.okx.com/docs-v5/en/#overview-production-trading-services"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/docs-v5/en/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/docs-v5/en/#overview-rest-authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/en-gb/okx-api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "API signup and use are free and trading fees apply. Rate limits vary by endpoint and are generally keyed by IP address, User ID, or connection; only certain limits and channels depend on VIP or fill-ratio eligibility.",
+      "source": "https://www.okx.com/docs-v5/en/#overview-rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Limits vary by endpoint. Public REST limits are generally IP-based, private REST and WebSocket order limits are User-ID-based, and WebSocket login/subscription limits are connection-based. Some higher limits or channels have VIP or fill-ratio requirements.",
+      "source": "https://www.okx.com/docs-v5/en/#overview-rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/docs-v5/en/#public-data-rest-api-get-instruments"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/docs-v5/en/"
+    }
+  },
+  "notes": "The documented instruments request remains valid and the public www.okx.com URL currently responds, but OKX now designates openapi.okx.com as the global production REST host and requires regional hosts for some registrations. The pricing text also overstates VIP-level rate limiting as a general rule."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "semaphore-ci",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://<organization-url>.semaphoreci.com/api/v1alpha",
+      "source": "https://docs.semaphore.io/reference/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.semaphoreci.com/reference/api-v1alpha"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.semaphore.io/reference/api#authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://semaphore.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "$15 free credits per month (approximately 2,000 Ubuntu x64 2-vCPU minutes); 20 concurrent jobs by default; free artifact allowance of 20 GB/month egress and 100 GB/month storage; 9.6 GB cache storage per project.",
+      "source": "https://semaphore.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Token YOUR_API_TOKEN\" -H \"User-Agent: SemaphoreCI v2.0 Client\" \"https://YOUR_ORG.semaphoreci.com/api/v1alpha/pipelines?project_id=PROJECT_ID\"",
+      "source": "https://docs.semaphore.io/reference/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.semaphore.io/reference/api"
+    }
+  },
+  "notes": "The API is organization-scoped, not hosted at api.semaphoreci.com. The submitted documentation URL still resolves to Semaphore's current API reference, whose canonical URL is docs.semaphore.io/reference/api. Official documentation does not publish API request-rate or CORS details."
+}

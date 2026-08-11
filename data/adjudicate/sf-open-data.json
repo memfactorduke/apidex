@@ -1,0 +1,15 @@
+{
+  "id": "sf-open-data",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "none",
+  "free_tier": null,
+  "free_tier_limits": "Public SODA 2.1 reads are free. No fixed numeric cap is published; app-token requests are currently unthrottled unless abusive or malicious, while anonymous requests use a lower shared-IP throttling pool.",
+  "rate_limits": "No fixed numeric limit is published. App-token requests are currently unthrottled except for abusive or malicious use; anonymous requests may be throttled by source IP. Throttling returns HTTP 429.",
+  "cors": "yes",
+  "example_request": "curl 'https://data.sfgov.org/resource/wg3w-h783.json?$select=row_id,incident_datetime,incident_category,analysis_neighborhood&$limit=1'",
+  "example_response_snippet": "[{\"row_id\":\"152278216710\",\"incident_datetime\":\"2025-10-31T17:55:00.000\",\"incident_category\":\"Drug Offense\",\"analysis_neighborhood\":\"Mission\"}]",
+  "description": "San Francisco's official open-data portal provides hundreds of city datasets through Socrata SODA, including tabular and geospatial civic data. Public SODA 2.1 resource reads require no authentication; an optional app token identifies the application and provides higher throttling limits. SODA 3 queries require an app token or user authentication.",
+  "status": null,
+  "resolution_notes": "auth_type=none for public SODA 2.1 reads; free_tier_limits=free with no numeric cap; rate_limits=tokened requests currently unthrottled except abuse, anonymous requests use a lower shared-IP pool, and throttling returns 429 (https://dev.socrata.com/docs/app-tokens.html). cors=yes for public read-only requests; ACAO:* (https://dev.socrata.com/docs/response-codes.html). example=corrected tokenless live request/snippet (https://data.sfgov.org/resource/wg3w-h783.json). description=hundreds, not thousands (https://data.sfgov.org/about)."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "philips-hue",
+  "base_url": "https://<bridge-ip>/clip/v2/resource",
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": "No official 1,000-requests/day free-tier allowance is published; the remote API quota is 50,000 calls per day, without a published paid/free tier distinction.",
+  "rate_limits": "Remote API: 50,000 calls/day; overage may cause throttling or revocation. Local guidance: about 10 commands/second for lights and 1 command/second for groups.",
+  "cors": null,
+  "example_request": "curl -k \"https://<bridge-ip>/clip/v2/resource/light\" -H \"hue-application-key: YOUR_APPLICATION_KEY\"",
+  "example_response_snippet": "{\"errors\":[],\"data\":[{\"id\":\"3883f8bf-30a3-445b-ac06-b047d50599df\",\"id_v1\":\"/lights/8\",\"owner\":{\"rid\":\"42edd1f5-9538-4180-9ced-2d9e07f26d0f\",\"rtype\":\"device\"},\"metadata\":{\"name\":\"Living Room\",\"archetype\":\"classic_bulb\"},\"on\":{\"on\":true},\"dimming\":{\"brightness\":75.0},\"type\":\"light\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "D=https://developers.meethue.com/develop/hue-api-v2/; T=https://developers.meethue.com/terms-of-use-and-conditions/; S=https://developers.meethue.com/support/. base_url: incorrect; local root selected, while remote is /route/clip/v2/resource [D]. auth_type: other; local uses hue-application-key and remote adds OAuth2 [D]. free_tier_limits: incorrect; no 1,000/day tier, remote quota 50,000/day [T]. rate_limits: incorrect; remote quota and local guidance are published [T,S]. example: incorrect; v2 uses /light, hue-application-key, and errors/data [D]."
+}

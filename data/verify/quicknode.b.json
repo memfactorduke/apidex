@@ -1,0 +1,52 @@
+{
+  "id": "quicknode",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs/welcome"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs/build-with-ai/quicknode-apis"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 QuickNode currently offers a one-month free trial, not an ongoing free tier",
+      "source": "https://www.quicknode.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "One-month free trial with 10 million API credits, no overage, 15 requests per second, and one endpoint",
+      "source": "https://www.quicknode.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/pricing"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "configurable per endpoint; QuickNode exposes CORS as an endpoint security option that can be enabled or disabled",
+      "source": "https://www.quicknode.com/docs/admin-api/endpoint-security/v0-endpoints-id-security_options-patch"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs/welcome"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs/welcome"
+    }
+  },
+  "notes": "QuickNode is operational, and the documented RPC URL and eth_blockNumber example remain current. The material errors are pricing-related: the no-cost offering is now explicitly a one-month trial with published limits, not a continuing free plan. CORS is configurable rather than unknown. Current paid tiers are Build, Accelerate, Scale, Business, and Enterprise."
+}

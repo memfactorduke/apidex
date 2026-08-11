@@ -1,0 +1,15 @@
+{
+  "id": "nasa-power",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free public access is subject to endpoint constraints: daily point requests allow up to 20 parameters, regional requests allow one parameter, and repeated requests for the same relative location may be blocked.",
+  "rate_limits": "No per-minute quota is published. NASA advises no more than five concurrent requests; excessive synchronous requests may be blocked, and HTTP 429 is documented.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: REPLACE; NASA documents the parameter and redundant-request constraints at https://power.larc.nasa.gov/docs/services/api/temporal/daily/. rate_limits: REPLACE; NASA's current tutorial specifies at most five concurrent requests and possible blocking: https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/. HTTP 429 is documented at https://power.larc.nasa.gov/docs/services/api/; no per-minute quota is stated."
+}

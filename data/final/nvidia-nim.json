@@ -1,0 +1,96 @@
+{
+  "id": "nvidia-nim",
+  "status": "operational",
+  "name": "NVIDIA NIM / NGC API",
+  "category": "ai-ml",
+  "tagline": "Hosted NVIDIA NIM microservices for LLMs and vision models",
+  "description": "NVIDIA NIM provides hosted API access to NVIDIA-optimized inference microservices for large language models, vision, and other generative AI models via integrate.api.nvidia.com.",
+  "base_url": "https://integrate.api.nvidia.com",
+  "docs_url": "https://docs.api.nvidia.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Researching authentication method..."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "Limits vary by model and concurrent usage; check the applicable limits in the signed-in account menu on build.nvidia.com.",
+  "example": {
+    "request": "curl -sS -X POST 'https://integrate.api.nvidia.com/v1/chat/completions' -H \"Authorization: Bearer $NVIDIA_API_KEY\" -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{\"model\":\"meta/llama-3.3-70b-instruct\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}],\"max_tokens\":32,\"stream\":false}'",
+    "response_snippet": "{\"id\":\"chatcmpl-...\",\"object\":\"chat.completion\",\"created\":1780000000,\"model\":\"meta/llama-3.3-70b-instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I assist you today?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":5,\"completion_tokens\":9,\"total_tokens\":14}}"
+  },
+  "use_cases": [
+    "run LLM chat completions via NVIDIA-hosted models",
+    "call vision or multimodal NIM endpoints"
+  ],
+  "sources": [
+    "https://docs.api.nvidia.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "cors"
+    ]
+  }
+}

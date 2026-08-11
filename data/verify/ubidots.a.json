@@ -1,0 +1,52 @@
+{
+  "id": "ubidots",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ubidots.com/reference/get-all-devices"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ubidots.com/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ubidots.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ubidots.com/stem"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Ubidots STEM is limited to non-commercial use and includes 3 devices, 1 dashboard with 10 widgets, 10 variables per device, 1 plugin with 10,000 monthly executions, 4,000 ingested dots/day, 500,000 extracted dots/day, 1 request/second, and 1-month retention.",
+      "source": "https://help.ubidots.com/en/articles/639806-plans-billing-what-is-the-difference-between-ubidots-and-ubidots-stem"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published: standard Ubidots tokens support up to 4 requests/second with a 10,000-byte maximum per request, subject to account throughput limits; STEM permits 1 request/second per token and 4,000 dots/day.",
+      "source": "https://help.ubidots.com/en/articles/2093902-how-many-dots-can-i-send-to-ubidots"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.ubidots.com/reference/get-all-devices"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ubidots.com/docs/api/"
+    }
+  },
+  "notes": "Current official documentation confirms the v2 devices endpoint, token authentication, and API coverage. The entry fails because both STEM limits and API rate limits are officially published, contrary to its unknown/not-published claims. auth_type is treated as the directory's API-key-style category; requests use a Ubidots token, not the account master API Key. No authoritative REST API CORS policy was located."
+}

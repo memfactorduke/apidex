@@ -1,0 +1,52 @@
+{
+  "id": "home-assistant",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.home-assistant.io/docs/api/rest/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.home-assistant.io/docs/api/rest/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.home-assistant.io/docs/auth_api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.home-assistant.io/faq/is-it-free/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nabucasa.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Configurable: cross-origin access can be enabled for specified origins through the HTTP server's CORS allowed origins setting; it is not categorically unsupported.",
+      "source": "https://www.home-assistant.io/integrations/http/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.home-assistant.io/docs/api/rest/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.home-assistant.io/integrations/http/"
+    }
+  },
+  "notes": "HTTP 0 does not establish that the API is dead: the base URL contains the placeholder IP_ADDRESS and represents each user's self-hosted instance. Official docs retain 8123 as the REST example/default, while Home Assistant OS 2026.8 defaults to port 80 and Container remains on 8123. The material defect is the categorical CORS value. No official general REST/WebSocket request quota was located."
+}

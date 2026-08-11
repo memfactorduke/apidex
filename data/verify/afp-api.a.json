@@ -1,0 +1,52 @@
+{
+  "id": "afp-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://afp-apicore-prod.afp.com (or customer-specific host after contract)",
+      "source": "https://developers.afp.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.afp.com/",
+      "source": "https://developers.afp.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.afp.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.afp.com/en/products-services"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.afp.com/en/products-services"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.afp.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Do not invent Bearer + /v1/search; use contract-issued endpoints/auth from AFP developer docs",
+      "source": "https://developers.afp.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.afp.com/en"
+    }
+  },
+  "notes": "Docs URL 404; base_url not public. Confirm via developers.afp.com before reuse."
+}

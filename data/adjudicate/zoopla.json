@@ -1,0 +1,15 @@
+{
+  "id": "zoopla",
+  "base_url": "https://services.zoopla.co.uk",
+  "docs_url": "https://developers.zoopla.co.uk/docs/getting-started",
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": "Not applicable; no public listings API or public free tier exists. Fees and any usage caps for current member APIs are contractual.",
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s 'https://services.zoopla.co.uk/products/premium-listings?listingId=123&isPremium=true' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
+  "example_response_snippet": "[{\"id\":\"5ecba691-84d6-4a60-9587-ca810292f5b0\",\"listingId\":123,\"status\":{\"result\":\"ACTIVATED\"},\"expiryAt\":\"2026-12-31T23:59:59Z\"}]",
+  "description": "Zoopla's former public property-listings API is no longer publicly available. Current documented APIs serve Alto integrations and Zoopla member products such as leads and premium-listing activation. Organizations seeking listings or other Zoopla data must discuss commercial availability with Zoopla's designated contact.",
+  "status": "defunct",
+  "resolution_notes": "base_url/example: current member-product host and GET are documented at https://developers.zoopla.co.uk/docs/premium-listings. docs_url/description/status: the current page says the public listings API is retired: https://developers.zoopla.co.uk/docs/getting-started. auth_type: OAuth2 client credentials/Bearer: https://developers.zoopla.co.uk/docs/authentication-tech-documentation. free_tier_limits: no public tier; fees/caps are contractual: https://developers.zoopla.co.uk/docs/api-terms-of-use."
+}

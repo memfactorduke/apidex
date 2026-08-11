@@ -1,0 +1,44 @@
+{
+  "id": "esa-sky",
+  "status": "operational",
+  "name": "ESA Sky API",
+  "category": "science-space",
+  "tagline": "Multi-mission ESA sky survey imagery and catalog overlays via public web services",
+  "description": "ESASky is ESA's multi-wavelength sky portal providing access to observations, catalogs, and images from ESA space science missions. Developers can query sky positions, retrieve survey imagery (HiPS), load source catalogs, and overlay multi-mission data through documented web services and TAP endpoints rather than a single closed commercial API.",
+  "base_url": "https://sky.esa.int/esasky-tap/tap",
+  "docs_url": "https://www.cosmos.esa.int/web/esdc/esasky-interface",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public anonymous access; no API key or OAuth required for standard TAP and imagery endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public free access; no published paid plans or numeric free-tier caps found",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sG \"https://sky.esa.int/esasky-tap/tap/sync\" --data-urlencode \"REQUEST=doQuery\" --data-urlencode \"LANG=ADQL\" --data-urlencode \"FORMAT=json\" --data-urlencode \"QUERY=SELECT TOP 1 * FROM ivoa.obscore\"",
+    "response_snippet": "{\"metadata\":[{\"name\":\"obs_id\",\"datatype\":\"char\"}],\"data\":[[\"...\"]]}"
+  },
+  "use_cases": [
+    "query multi-mission observations near a sky coordinate",
+    "list available ESA survey datasets for a target",
+    "fetch catalog sources for a field of view",
+    "retrieve HiPS/image survey coverage for a region",
+    "build multi-wavelength sky overlays for research tools"
+  ],
+  "sources": [
+    "https://sky.esa.int/",
+    "https://www.cosmos.esa.int/web/esdc/esasky-interface"
+  ],
+  "researcher_confidence": "low"
+}

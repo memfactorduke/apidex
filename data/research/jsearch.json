@@ -1,0 +1,40 @@
+{
+  "id": "jsearch",
+  "status": "operational",
+  "name": "JSearch",
+  "category": "jobs-careers",
+  "tagline": "Aggregated global job search across LinkedIn, Indeed, Glassdoor and more via RapidAPI.",
+  "description": "JSearch provides a unified job search API that aggregates listings from major platforms including LinkedIn, Indeed, Glassdoor, and others. Accessible via RapidAPI, it enables developers to search jobs by keyword, location, date, and other filters, retrieve job details, and power career-related applications with real-time employment data.",
+  "base_url": "https://jsearch.p.rapidapi.com",
+  "docs_url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch",
+  "signup_url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-RapidAPI-Key header (RapidAPI subscription required), self-serve signup on RapidAPI"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --request GET --url 'https://jsearch.p.rapidapi.com/search?query=developer%20jobs%20in%20chicago&page=1&num_pages=1' --header 'X-RapidAPI-Key: YOUR_API_KEY' --header 'X-RapidAPI-Host: jsearch.p.rapidapi.com'",
+    "response_snippet": "{\"status\":\"OK\",\"request_id\":\"...\",\"parameters\":{\"query\":\"developer jobs in chicago\",\"page\":1,\"num_pages\":1},\"data\":[{\"job_id\":\"...\",\"employer_name\":\"...\",\"job_title\":\"Software Developer\",\"job_city\":\"Chicago\",\"job_country\":\"US\",\"job_apply_link\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "search jobs by keyword and location across LinkedIn/Indeed/Glassdoor",
+    "get detailed job posting by job ID",
+    "filter jobs by employment type, experience, or posting date",
+    "power a job board or career-matching app with aggregated listings"
+  ],
+  "sources": [
+    "https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch"
+  ],
+  "researcher_confidence": "low"
+}

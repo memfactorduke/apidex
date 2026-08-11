@@ -1,0 +1,106 @@
+{
+  "id": "internet-archive",
+  "status": "operational",
+  "name": "Internet Archive API",
+  "category": "education-reference",
+  "tagline": "Search, metadata, and access for Archive.org books, media, and public-domain collections",
+  "description": "The Internet Archive provides free, publicly accessible APIs for searching, retrieving metadata, downloading, and managing items across archive.org\u2019s vast library of books, audio, video, software, and web archives. Core surfaces include the Advanced Search / Search API, Metadata API, and related services (Downloads, Tasks, Waybacks). Most read endpoints require no authentication; write/upload operations use S3-compatible keys or cookies. Ideal for research tools, digital libraries, and media discovery.",
+  "base_url": "https://archive.org",
+  "docs_url": "https://archive.org/developers/",
+  "signup_url": "https://archive.org/account/signup",
+  "auth": {
+    "type": "other",
+    "details": "Most read endpoints (search, metadata, downloads) require no auth. Uploads and privileged operations use S3-compatible access/secret keys (X-Archive-* headers) or logged-in session cookies; keys from archive.org account settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "html",
+    "binary",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access for search, metadata, and downloads; no published paid API plans. Fair-use rate limiting applies.",
+    "paid_plans": null
+  },
+  "rate_limits": "No fixed global numeric quota is published. Automated clients must use a descriptive User-Agent, add delays for bulk work, limit concurrency, and honor 429 responses and Retry-After headers. IAS3 writes can receive 503 SlowDown during overload.",
+  "example": {
+    "request": "curl -sS -H 'User-Agent: ExampleClient/1.0 (contact: you@example.com)' 'https://archive.org/metadata/xfetch'",
+    "response_snippet": "{\"created\":1616004182,\"d1\":\"ia600308.us.archive.org\",\"dir\":\"/21/items/xfetch\",\"files\":[{\"name\":\"xfetch.pdf\",\"source\":\"original\",\"format\":\"Text PDF\",\"size\":\"419170\"}],\"metadata\":{\"mediatype\":\"texts\",\"title\":\"XFETCH: Optimal Probabilistic Cache Stampede Prevention\"},\"server\":\"ia800308.us.archive.org\"}"
+  },
+  "use_cases": [
+    "search public-domain books by title or subject",
+    "fetch full metadata for an archive.org item identifier",
+    "list downloadable files and formats for a digitized book",
+    "find free audio or video items matching a query",
+    "resolve an item identifier to direct download URLs"
+  ],
+  "sources": [
+    "https://archive.org/developers/",
+    "https://archive.org/services/docs/api/metadata.html",
+    "https://archive.org/advancedsearch.php",
+    "https://archive.org/services/docs/api/ias3.html"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "cors"
+    ]
+  }
+}

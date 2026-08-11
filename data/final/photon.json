@@ -1,0 +1,98 @@
+{
+  "id": "photon",
+  "status": "operational",
+  "name": "Photon",
+  "category": "geo-maps",
+  "tagline": "Open-source OSM geocoder with autocomplete from Komoot",
+  "description": "Photon is an open-source geocoder started by Komoot and built for OpenStreetMap data using OpenSearch. It supports forward and reverse geocoding, search-as-you-type, a public demo at photon.komoot.io, and self-hosting.",
+  "base_url": "https://photon.komoot.io",
+  "docs_url": "https://github.com/komoot/photon",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public demo endpoint requires no authentication; self-hosted instances may add their own auth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public demo is free with fair-use expectations; no published paid plans for the demo.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published for public demo; self-host for production load",
+  "example": {
+    "request": "curl \"https://photon.komoot.io/api/?q=berlin&limit=1\"",
+    "response_snippet": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[13.38886,52.517037]},\"properties\":{\"osm_type\":\"N\",\"osm_id\":240109189,\"name\":\"Berlin\",\"country\":\"Germany\",\"type\":\"city\"}}]}"
+  },
+  "use_cases": [
+    "autocomplete place names as a user types",
+    "forward-geocode an address or place name to coordinates",
+    "reverse-geocode lat/lon to a place name",
+    "bias search results to a map viewport or location"
+  ],
+  "sources": [
+    "https://github.com/komoot/photon",
+    "https://photon.komoot.io"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "rate_limits",
+      "example"
+    ],
+    "corrected": [
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "cors"
+    ]
+  }
+}

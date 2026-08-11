@@ -1,0 +1,38 @@
+{
+  "id": "db-ip",
+  "status": "operational",
+  "name": "DB-IP",
+  "category": "geo-maps",
+  "tagline": "IP geolocation API and databases with free lite endpoint",
+  "description": "DB-IP provides IP geolocation lookup via a REST API and downloadable databases. Offers a free lite endpoint for non-commercial use plus paid commercial plans with higher accuracy and volume.",
+  "base_url": "https://api.db-ip.com",
+  "docs_url": "https://db-ip.com/api/doc.php",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via path or query parameter; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.db-ip.com/v2/free/8.8.8.8\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "geolocate an IP address",
+    "detect visitor country from IP"
+  ],
+  "sources": [
+    "https://db-ip.com/api/doc.php"
+  ],
+  "researcher_confidence": "low"
+}

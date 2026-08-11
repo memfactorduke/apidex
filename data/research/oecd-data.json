@@ -1,0 +1,46 @@
+{
+  "id": "oecd-data",
+  "status": "operational",
+  "name": "OECD Data API",
+  "category": "government-open-data",
+  "tagline": "Free SDMX REST access to OECD country statistics and economic indicators",
+  "description": "The OECD Data API exposes OECD statistical datasets through the SDMX REST standard, covering economic, social, environmental, and development indicators for member and partner countries. Developers query data flows, structures, and observations without an API key. Responses are typically SDMX-JSON or other SDMX formats suitable for research, dashboards, and cross-country comparisons.",
+  "base_url": "https://sdmx.oecd.org/public/rest",
+  "docs_url": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or registration required for the public SDMX REST endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no published request quotas on the free tier",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NAMAIN1@DF_QNA,1.0/A.USA.B1GQ.S1.W0.A?startPeriod=2020&endPeriod=2023&dimensionAtObservation=AllDimensions\" -H \"Accept: application/vnd.sdmx.data+json;charset=utf-8;version=1.0\"",
+    "response_snippet": "{\"data\":{\"dataSets\":[{\"action\":\"Information\",\"series\":{\"0:0:0:0:0:0\":{\"observations\":{\"0\":[25000.1],\"1\":[27000.2]}}}}],\"structure\":{\"dimensions\":{\"observation\":[{\"id\":\"TIME_PERIOD\",\"values\":[{\"id\":\"2020\"},{\"id\":\"2021\"}]}]}}}"
+  },
+  "use_cases": [
+    "fetch OECD GDP or national accounts series for a country",
+    "list available OECD dataflows and data structures via SDMX",
+    "compare economic or social indicators across member countries",
+    "pull time-series observations for dashboards or research notebooks",
+    "download structural metadata (codelists, concepts) for an OECD dataset"
+  ],
+  "sources": [
+    "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+    "https://sdmx.oecd.org/public/rest",
+    "https://gitlab.algo.oecd.org/public-documentation/dotstat-migration/-/tree/master"
+  ],
+  "researcher_confidence": "medium"
+}

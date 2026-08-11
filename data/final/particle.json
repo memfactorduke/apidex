@@ -1,0 +1,99 @@
+{
+  "id": "particle",
+  "status": "operational",
+  "name": "Particle",
+  "category": "iot-devices",
+  "tagline": "Cloud platform for fleets of IoT devices with REST, OTA, and remote functions",
+  "description": "Particle provides a mature IoT device cloud with REST APIs for fleet management, OTA firmware updates, device variables and functions, events, and product/device provisioning. Developers use access tokens to call endpoints for listing devices, reading variables, calling remote functions, publishing events, and managing products at scale.",
+  "base_url": "https://api.particle.io",
+  "docs_url": "https://docs.particle.io/reference/cloud-apis/api/",
+  "signup_url": "https://login.particle.io/signup",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth access token (Bearer or access_token query/form param); create tokens in console or via OAuth. Product APIs also use product-scoped tokens."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Up to 100 devices (cellular or Wi-Fi), 100,000 Data Operations per month pooled across all devices, and up to 100 MB of pooled cellular data per month.",
+    "paid_plans": null
+  },
+  "rate_limits": "10,000 requests per 5 minutes per source IP for all API routes; selected token, account, and event routes: 100 per 5 minutes; SSE: 100 simultaneous connections per source IP; serial-number lookup: 50 per hour per access-token user account.",
+  "example": {
+    "request": "curl \"https://api.particle.io/v1/devices\" -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\"",
+    "response_snippet": "[{\"id\":\"53ff6f0650723\",\"name\":\"plumber_laser\",\"last_ip_address\":\"10.0.0.1\",\"last_heard\":\"2020-05-28T14:46:07.586Z\",\"last_handshake_at\":\"2020-05-27T18:13:01.059Z\",\"product_id\":6,\"online\":true,\"platform_id\":6,\"cellular\":false,\"notes\":\"laser!\",\"functions\":[\"fire\"],\"variables\":{\"power\":\"int32\"},\"status\":\"normal\",\"serial_number\":\"PH1234\",\"system_firmware_version\":\"1.5.0\"}]"
+  },
+  "use_cases": [
+    "list devices in a Particle account or product fleet",
+    "read a device cloud variable by name",
+    "call a remote function on a connected device",
+    "publish or subscribe to Particle device events",
+    "trigger or monitor OTA firmware updates for a fleet"
+  ],
+  "sources": [
+    "https://docs.particle.io/reference/cloud-apis/api/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

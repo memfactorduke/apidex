@@ -1,0 +1,52 @@
+{
+  "id": "nuget",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/nuget/api/service-index"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/nuget/api/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/nuget/api/overview#authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/nuget/nuget-org/publish-a-package"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Publishing uses a free account, but uploaded packages are limited to about 250 MB.",
+      "source": "https://learn.microsoft.com/en-us/nuget/nuget-org/publish-a-package#package-size-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "NuGet.org publishes rate limits. V3 search is currently not rate-limited; package push is limited to 350/hour per API key and unlist to 250/hour per API key.",
+      "source": "https://learn.microsoft.com/en-us/nuget/api/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/nuget/api/service-index#sample-request"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/nuget/api/overview"
+    }
+  },
+  "notes": "The service index is live and operational. The curl request is valid, but its response snippet is not current: the live index advertises azuresearch-*.nuget.org/query rather than api.nuget.org/v3/search. The entry fails because published service and rate limits were labeled unknown or unpublished."
+}

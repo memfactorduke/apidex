@@ -1,0 +1,52 @@
+{
+  "id": "tinyurl",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/openapi/v2.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/app/dev"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/openapi/v2.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/blog/can-use-api-shorten-links-tinyurl-free/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "30 links per month",
+      "source": "https://tinyurl.com/app/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/openapi/v2.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/app/dev"
+    }
+  },
+  "notes": "TinyURL's current OpenAPI 2.4.2 confirms the modern API host, POST /create, JSON body, and bearer-token header; it also defines an apiKey query-token scheme. The entry fails because the free limit is published as 30 links per month, not unknown. The deprecated legacy unauthenticated endpoint is separate from this modern API."
+}

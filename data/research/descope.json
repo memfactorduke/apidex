@@ -1,0 +1,40 @@
+{
+  "id": "descope",
+  "status": "operational",
+  "name": "Descope",
+  "category": "security-identity",
+  "tagline": "Passwordless auth and identity platform API for passkeys, SSO, and MFA",
+  "description": "Descope is a modern authentication and identity platform API that provides passwordless login (passkeys, magic links, OTPs), social login, enterprise SSO (SAML/OIDC), MFA, session management, and user management. Positioned as a 2020s alternative to Auth0/Okta for developers building secure auth flows without maintaining identity infrastructure.",
+  "base_url": "https://api.descope.com",
+  "docs_url": "https://docs.descope.com/",
+  "signup_url": "https://app.descope.com/sign-up",
+  "auth": {
+    "type": "apiKey",
+    "details": "Project ID and Management Key (or access key) sent via Authorization header; see docs for exact header format"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://api.descope.com/v1/auth/me -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"userId\":\"...\",\"loginIds\":[\"user@example.com\"]}"
+  },
+  "use_cases": [
+    "authenticate users with passkeys or magic links",
+    "configure enterprise SSO (SAML/OIDC)",
+    "enforce MFA and session management",
+    "manage users and tenants via management API"
+  ],
+  "sources": [
+    "https://docs.descope.com/"
+  ],
+  "researcher_confidence": "low"
+}

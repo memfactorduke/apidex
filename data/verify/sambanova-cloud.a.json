@@ -1,0 +1,52 @@
+{
+  "id": "sambanova-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sambanova.ai/docs/en/get-started/api-keys-urls"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.sambanova.ai/docs/en/get-started/overview",
+      "source": "https://docs.sambanova.ai/docs/en/get-started/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sambanova.ai/docs/en/get-started/quickstart"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 the current Free plan requires adding a payment method and purchasing credits before running requests",
+      "source": "https://cloud.sambanova.ai/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The no-payment Free rate-limit class is published as 20 RPM, 20 RPD, and 200,000 TPD for each listed eligible model, but it does not provide included free API credits",
+      "source": "https://docs.sambanova.ai/docs/en/models/rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published by model and tier. Free-listed models have 20 RPM, 20 RPD, and 200,000 TPD; Developer limits vary by model from 60\u2013240 RPM and 12,000\u201348,000 RPD, with 20 million tokens per day across all models",
+      "source": "https://docs.sambanova.ai/docs/en/models/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The endpoint, Bearer header, JSON body, and implicit POST are consistent with current documentation, but Meta-Llama-3.1-8B-Instruct was removed from SambaCloud on April 14, 2026. Use a current model such as Meta-Llama-3.3-70B-Instruct",
+      "source": "https://docs.sambanova.ai/docs/en/models/deprecations"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SambaCloud is an RDU-powered, high-throughput inference platform for large open-source models. It provides self-service API keys and OpenAI-compatible APIs, including Chat Completions and Responses, with production and preview model tiers",
+      "source": "https://sambanova.ai/products/sambacloud"
+    }
+  },
+  "notes": "Current official pricing no longer includes free API credits. The documentation still uses \u201cFree Tier\u201d for the lower no-payment rate-limit class, which is distinct from free usage. The submitted example also names a model removed in April 2026."
+}

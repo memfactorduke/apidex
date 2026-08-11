@@ -1,0 +1,43 @@
+{
+  "id": "tibber",
+  "status": "operational",
+  "name": "Tibber API",
+  "category": "energy-utilities",
+  "tagline": "Nordic/EU smart energy GraphQL API for live prices, consumption, and home devices",
+  "description": "Tibber provides a GraphQL API for smart energy management across Nordic and EU markets. Developers can query live electricity prices, historical and real-time home consumption, and control connected devices such as EV chargers and smart plugs. Authentication uses personal access tokens obtained from the developer portal. The API is designed for home energy automation, price-aware scheduling, and integration with smart-home systems.",
+  "base_url": "https://api.tibber.com/v1-beta/gql",
+  "docs_url": "https://developer.tibber.com/docs/overview",
+  "signup_url": "https://developer.tibber.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal Access Token (Bearer) from developer portal; send Authorization: Bearer YOUR_API_KEY on GraphQL requests"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "graphql",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.tibber.com/v1-beta/gql -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"{ viewer { name homes { id address { address1 city } } } }\"}'",
+    "response_snippet": "{\"data\":{\"viewer\":{\"name\":\"...\",\"homes\":[{\"id\":\"...\",\"address\":{\"address1\":\"...\",\"city\":\"...\"}}]}}"
+  },
+  "use_cases": [
+    "get current electricity price for a home",
+    "fetch hourly price forecast for smart scheduling",
+    "read real-time power consumption for a home",
+    "list connected homes and devices for a user",
+    "control smart plugs or EV charger based on price",
+    "subscribe to live consumption or price updates via GraphQL"
+  ],
+  "sources": [
+    "https://developer.tibber.com/docs/overview"
+  ],
+  "researcher_confidence": "low"
+}

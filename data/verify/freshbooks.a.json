@@ -1,0 +1,52 @@
+{
+  "id": "freshbooks",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/start"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/start"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/start"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.freshbooks.com/api/start"
+    }
+  },
+  "notes": "Verified against official FreshBooks docs (2026). All claims hold: OAuth2, api.freshbooks.com base, /auth/api/v1/users/me identity endpoint, API tied to account plans with no published per-request pricing or rate limits. CORS remains unknown as expected."
+}

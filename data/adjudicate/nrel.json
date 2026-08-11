@@ -1,0 +1,15 @@
+{
+  "id": "nrel",
+  "base_url": "https://developer.nlr.gov/api",
+  "docs_url": "https://developer.nlr.gov/docs/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Default: 1,000 requests per hour per API key across developer.nlr.gov; service-specific limits may vary. DEMO_KEY: 30 requests per IP per hour and 50 per IP per day.",
+  "rate_limits": "Published default: 1,000 requests per hour per API key across developer.nlr.gov; service-specific limits may vary. DEMO_KEY permits 30 requests per IP per hour and 50 per IP per day.",
+  "cors": null,
+  "example_request": "curl \"https://developer.nlr.gov/api/alt-fuel-stations/v1/446595.json?api_key=DEMO_KEY\"",
+  "example_response_snippet": "{\"alt_fuel_station\":{\"access_code\":\"public\",\"fuel_type_code\":\"ELEC\",\"id\":446595,\"station_name\":\"Kwik Trip #1205\",\"city\":\"Baraboo\",\"state\":\"WI\",\"status_code\":\"E\",\"ev_connector_types\":[\"J1772COMBO\",\"TESLA\"],\"ev_dc_fast_num\":4}}",
+  "description": "The NLR Developer Network provides API-key-authenticated access to National Laboratory of the Rockies web services covering buildings, climate, electricity, energy optimization, solar, transportation, wave, and wind. Services include PVWatts and AFDC station data. The former developer.nrel.gov domain is retired. Utility Rates v3 remains available but returns 2012 data with no planned updates.",
+  "status": null,
+  "resolution_notes": "base_url/docs_url: change to developer.nlr.gov; old domain retired May 29, 2026: https://developer.nlr.gov/docs/nlr-domain-transition/. free_tier_limits/rate_limits: published limits: https://developer.nlr.gov/docs/rate-limits/. example: official request/response: https://developer.nlr.gov/docs/transportation/alt-fuel-stations-v1/get/. description: scope: https://developer.nlr.gov/docs/; Utility Rates caveat: https://developer.nlr.gov/docs/electricity/utility-rates-v3/."
+}

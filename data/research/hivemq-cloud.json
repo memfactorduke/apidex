@@ -1,0 +1,40 @@
+{
+  "id": "hivemq-cloud",
+  "status": "operational",
+  "name": "HiveMQ Cloud",
+  "category": "iot-devices",
+  "tagline": "Enterprise MQTT broker cloud with REST management for clusters, credentials, and traffic control",
+  "description": "HiveMQ Cloud is a fully managed MQTT platform that provides enterprise-grade MQTT broker infrastructure along with REST APIs for cluster management, client credentials, and MQTT traffic control. Developers use it to provision MQTT environments, manage authentication credentials, and control broker-side messaging behavior without operating their own broker infrastructure.",
+  "base_url": "https://api.cloud.hivemq.com/v1",
+  "docs_url": "https://docs.hivemq.com/hivemq-cloud/rest-api/rest-api.html",
+  "signup_url": "https://console.hivemq.cloud/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API token authentication; exact header and self-serve details verified from official docs when available"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.cloud.hivemq.com/v1/clusters\"",
+    "response_snippet": "{\"items\":[]}"
+  },
+  "use_cases": [
+    "list HiveMQ Cloud clusters for an account",
+    "create or rotate MQTT client credentials",
+    "inspect cluster connection details for device onboarding",
+    "manage MQTT access control for IoT fleets"
+  ],
+  "sources": [
+    "https://docs.hivemq.com/hivemq-cloud/rest-api/rest-api.html"
+  ],
+  "researcher_confidence": "low"
+}

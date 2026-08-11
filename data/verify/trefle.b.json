@@ -1,0 +1,52 @@
+{
+  "id": "trefle",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/docs/guides/getting-started/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/docs/guides/getting-started/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://trefle.io/about"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests per minute on the current official About page; the older Getting Started page conflictingly says 120 requests per minute",
+      "source": "https://trefle.io/about"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits are 60 requests per minute for ordinary accounts and 600 requests per minute for sponsors",
+      "source": "https://trefle.io/about"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.trefle.io/docs/advanced/client-side-apps/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/docs/guides/getting-started/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.trefle.io/docs/advanced/plants-fields/"
+    }
+  },
+  "notes": "The official website, documentation, signup page, and status page remain live. Official pages conflict on the ordinary limit: About says 60/minute while Getting Started says 120/minute, but both disprove 'not published.' Query-token authentication is documented; no official Authorization-header example was found. Current CORS headers could not be verified."
+}

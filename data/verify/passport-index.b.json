@@ -1,0 +1,38 @@
+{
+  "id": "passport-index",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "unverifiable"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://discover.passportindex.org/api-request/",
+      "source": "https://discover.passportindex.org/api-request/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable"
+    },
+    "free_tier": {
+      "verdict": "unverifiable"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "unverifiable"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Passport Index API provides real-time visa-policy and visa-free-list data. Access is request-based, with government agencies prioritized; the official source does not identify it as a VisaList product or document ranking endpoints.",
+      "source": "https://discover.passportindex.org/api-request/"
+    }
+  },
+  "notes": "The current official page supports an operational, request-based Passport Index API but publishes no base URL, authentication scheme, endpoint documentation, pricing, quota, rate limit, or CORS policy. Searches of official domains found no support for the claimed host, X-Api-Key header, 1,000-request daily tier, or example endpoint. The 403 responses alone were not treated as proof that the API is dead."
+}

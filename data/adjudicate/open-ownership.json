@@ -1,0 +1,15 @@
+{
+  "id": "open-ownership",
+  "base_url": "https://bods-data-datasette.openownership.org",
+  "docs_url": "https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS 'https://bods-data-datasette.openownership.org/latvia/entity_statement.json?_link__exact=100026&_col=_link&_col=statementid&_col=statementtype&_col=name&_size=1&_shape=array'",
+  "example_response_snippet": "[{\"_link\":100026,\"statementid\":\"879383f5-2880-42b1-8b31-063a6b8fdb8e\",\"statementtype\":\"entityStatement\",\"name\":\"SIA \\\"BG SPECTEHNIKA\\\"\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect; the current official tools page links datasets to https://bods-data-datasette.openownership.org (https://bods-data.openownership.org/). docs_url: incorrect; official API guidance is https://www.openownership.org/en/publications/beneficial-ownership-data-analysis-tools/user-guidance/. example: incorrect; the official row page exposes JSON and confirms the returned values (https://bods-data-datasette.openownership.org/latvia/entity_statement/100026); JSON syntax: https://docs.datasette.io/en/latest/json_api.html."
+}

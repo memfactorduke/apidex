@@ -1,0 +1,44 @@
+{
+  "id": "printify",
+  "status": "operational",
+  "name": "Printify API",
+  "category": "ecommerce-payments",
+  "tagline": "Print-on-demand product and order API for automated catalog sync and fulfillment.",
+  "description": "Printify API enables developers to programmatically manage print-on-demand products, shops, catalogs, and orders. It supports catalog browsing, product creation and publishing, order submission, shipping estimates, webhooks, and fulfillment workflows so apps can sync inventory and automate POD order pipelines without the Printify dashboard.",
+  "base_url": "https://api.printify.com/v1",
+  "docs_url": "https://developers.printify.com/",
+  "signup_url": "https://printify.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal access token (Bearer) via Authorization: Bearer YOUR_API_KEY header. Generate tokens in Printify account Connections / API settings after merchant signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access included with Printify merchant accounts; no separate per-request API fee published. Platform usage subject to Printify product/fulfillment pricing.",
+    "paid_plans": "Printify sells print products and optional Premium; API itself has no published paid request tiers."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" \"https://api.printify.com/v1/shops.json\"",
+    "response_snippet": "[\n  {\n    \"id\": 1234567,\n    \"title\": \"My Store\",\n    \"sales_channel\": \"custom_integration\"\n  }\n]"
+  },
+  "use_cases": [
+    "list connected Printify shops for an account",
+    "browse the print-on-demand catalog of blank products",
+    "create and publish a custom product to a shop",
+    "submit a print-on-demand order for fulfillment",
+    "get shipping cost estimates for an order",
+    "register webhooks for order and product events"
+  ],
+  "sources": [
+    "https://developers.printify.com/",
+    "https://developers.printify.com/#introduction",
+    "https://printify.com/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ashby",
+  "base_url": "https://api.ashbyhq.com/posting-api",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS 'https://api.ashbyhq.com/posting-api/job-board/Ashby?includeCompensation=true'",
+  "example_response_snippet": "{\"apiVersion\":\"1\",\"jobs\":[{\"title\":\"Product Manager\",\"location\":\"Houston, TX\",\"isRemote\":true,\"workplaceType\":\"Remote\",\"jobUrl\":\"https://jobs.ashbyhq.com/example_job\",\"applyUrl\":\"https://jobs.ashbyhq.com/example/apply\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Original was incorrect. Ashby's current official documentation places the public endpoint under /posting-api and specifies GET /posting-api/job-board/{JOB_BOARD_NAME}. example: Original bare-root curl was incorrect; replaced with the documented endpoint and Ashby's documented board name, plus a response-shaped JSON snippet. Evidence for both: https://developers.ashbyhq.com/docs/public-job-posting-api"
+}

@@ -1,0 +1,99 @@
+{
+  "id": "balena",
+  "status": "operational",
+  "name": "Balena",
+  "category": "iot-devices",
+  "tagline": "Container-based edge fleet management for IoT devices",
+  "description": "Balena provides an OpenAPI-based REST API for managing fleets of edge/IoT devices, including applications, device provisioning, releases, environment variables, and remote access. Developers use it to automate fleet operations, deploy containerized software, and monitor device state at scale.",
+  "base_url": "https://api.balena-cloud.com/v7",
+  "docs_url": "https://docs.balena.io/reference/api/overview/",
+  "signup_url": "https://dashboard.balena-cloud.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key (session token or device API key) via Authorization: Bearer header; self-serve signup on balenaCloud"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for up to 10 total devices across all fleets; adding more devices requires upgrading to a paid plan.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.balena-cloud.com/v7/device?%24select=id,uuid,device_name,is_online,os_version\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"d\":[{\"id\":123,\"uuid\":\"7f66ec...\",\"device_name\":\"my-device\",\"is_online\":true,\"os_version\":\"balenaOS 6.6.49+rev1\"}]}"
+  },
+  "use_cases": [
+    "list devices in a fleet",
+    "get device online status and last seen",
+    "deploy a release to a fleet",
+    "set device environment variables",
+    "SSH or tunnel to a remote device"
+  ],
+  "sources": [
+    "https://docs.balena.io/reference/api/overview/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

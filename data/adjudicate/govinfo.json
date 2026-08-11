@@ -1,0 +1,15 @@
+{
+  "id": "govinfo",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Regular GovInfo API keys: 36,000 requests/hour (primary limit), 1,200/minute, and 40/second; hourly usage is tracked on a rolling basis. DEMO_KEY has lower limits.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: ORIGINAL is incorrect. GPO's current GovInfo API documentation specifies GovInfo-specific defaults of 36,000/hour, 1,200/minute, and 40/second, while stating DEMO_KEY is lower: https://github.com/usgpo/api/blob/main/README.md. The generic 1,000/hour data.gov limit may vary by service and therefore does not override GovInfo's published service-specific limits: https://api.data.gov/docs/developer-manual/"
+}

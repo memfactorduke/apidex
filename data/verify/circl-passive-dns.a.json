@@ -1,0 +1,52 @@
+{
+  "id": "circl-passive-dns",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.circl.lu/pdns/query/",
+      "source": "https://www.circl.lu/services/passive-dns/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.circl.lu/services/passive-dns/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "api_key",
+      "source": "https://www.circl.lu/services/passive-dns/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.circl.lu/services/passive-dns/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Access is free for legitimate security research/IR use after request approval; commercial or high-volume use may be restricted or require separate arrangement \u2014 exact numerical quotas not always public",
+      "source": "https://www.circl.lu/services/passive-dns/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits exist and are enforced; exact numbers are not fully published on the public page for all users \u2014 access is moderated",
+      "source": "https://www.circl.lu/services/passive-dns/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Authenticated requests required (e.g. with API credentials); unauthenticated curl to https://www.circl.lu/pdns/query/example.com is not the documented free public pattern",
+      "source": "https://www.circl.lu/services/passive-dns/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.circl.lu/services/passive-dns/"
+    }
+  },
+  "notes": "Placeholder \u2014 need real verification from official docs."
+}

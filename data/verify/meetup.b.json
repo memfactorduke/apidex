@@ -1,0 +1,52 @@
+{
+  "id": "meetup",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.meetup.com/gql-ext",
+      "source": "https://www.meetup.com/graphql/guide/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.meetup.com/api/guide/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.meetup.com/graphql/authentication/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false",
+      "source": "https://help.meetup.com/hc/en-us/articles/41453576628749-How-can-I-get-access-to-Meetup-s-API"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No free tier; API access requires an active Meetup Pro subscription and approval.",
+      "source": "https://help.meetup.com/hc/en-us/articles/41453576628749-How-can-I-get-access-to-Meetup-s-API"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The official GraphQL guide publishes a limit of 500 query points per 60 seconds.",
+      "source": "https://www.meetup.com/graphql/guide/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use POST https://api.meetup.com/gql-ext with Authorization: Bearer {YOUR_TOKEN}, Content-Type: application/json, and a JSON GraphQL query body.",
+      "source": "https://www.meetup.com/graphql/guide/"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://help.meetup.com/hc/en-us/articles/41455194927373-What-can-I-achieve-through-Meetup-s-API-and-what-are-its-limitations"
+    }
+  },
+  "notes": "Operational, but substantially outdated. Meetup required integrations to migrate to GraphQL in February 2025, and API access now requires active Meetup Pro plus approval. The old docs URL redirects to the current GraphQL guide. Official rate-limit pages conflict: the developer guide states 500 points per 60 seconds, while a newer Help Center article says there are no strict automatic caps."
+}

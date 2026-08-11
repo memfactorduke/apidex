@@ -1,0 +1,94 @@
+{
+  "id": "findwork",
+  "status": "operational",
+  "name": "Findwork",
+  "category": "jobs-careers",
+  "tagline": "Developer-focused job search API with remote and tech role filters.",
+  "description": "Findwork is a developer-focused job board and search API for tech roles. It offers remote and on-site filters, tech stack and location queries, and structured job data so agents can search listings, surface remote roles, and power career tooling without scraping job boards.",
+  "base_url": "https://findwork.dev/api/",
+  "docs_url": "https://findwork.dev/developers/",
+  "signup_url": "https://findwork.dev/users/register/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Token YOUR_API_KEY header; self-serve signup at findwork.dev"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Token YOUR_API_KEY\" \"https://findwork.dev/api/jobs/?search=python&remote=true\"",
+    "response_snippet": "{\"count\": 42, \"next\": \"https://findwork.dev/api/jobs/?page=2\", \"previous\": null, \"results\": [{\"id\": 1, \"role\": \"Backend Engineer\", \"company_name\": \"Example\", \"remote\": true, \"url\": \"https://...\", \"text\": \"...\", \"date_posted\": \"2026-01-15\", \"keywords\": [\"python\", \"django\"], \"source\": \"findwork\"}]}"
+  },
+  "use_cases": [
+    "search tech jobs by keyword and remote filter",
+    "list recent developer roles for a stack",
+    "fetch job detail by id for a listing",
+    "power agent job-match recommendations"
+  ],
+  "sources": [
+    "https://findwork.dev/developers/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

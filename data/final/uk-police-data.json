@@ -1,0 +1,99 @@
+{
+  "id": "uk-police-data",
+  "status": "operational",
+  "name": "data.police.uk API",
+  "category": "government-open-data",
+  "tagline": "UK street-level crime, outcomes, and neighbourhood policing data",
+  "description": "Public REST API from UK police forces providing street-level crime and outcome data, neighbourhood boundaries, and local policing team information. Free with no authentication required for standard use. Covers England, Wales, and Northern Ireland crime data.",
+  "base_url": "https://data.police.uk/api",
+  "docs_url": "https://data.police.uk/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints. API is free and open."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Unlimited free access; no key required",
+    "paid_plans": null
+  },
+  "rate_limits": "15 requests per second with a burst of 30; on average, fewer than 15 requests per second. Excess requests receive HTTP 429. Calls over time are unlimited.",
+  "example": {
+    "request": "curl -s 'https://data.police.uk/api/crimes-street/all-crime?lat=51.5074&lng=-0.1278&date=2024-01'",
+    "response_snippet": "[{\"category\":\"anti-social-behaviour\",\"location_type\":\"Force\",\"location\":{\"latitude\":\"51.507\",\"street\":{\"id\":123,\"name\":\"On or near Bridge Street\"},\"longitude\":\"-0.128\"},\"context\":\"\",\"outcome_status\":null,\"persistent_id\":\"...\",\"id\":12345,\"location_subtype\":\"\",\"month\":\"2024-01\"}]"
+  },
+  "use_cases": [
+    "get street-level crimes near a lat/lng",
+    "list crime categories for a date",
+    "get neighbourhood boundaries for a force",
+    "find outcomes for a specific crime",
+    "locate nearest police neighbourhood for coordinates"
+  ],
+  "sources": [
+    "https://data.police.uk/docs/",
+    "https://data.police.uk/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "howlongtobeat",
+  "status": "operational",
+  "name": "HowLongToBeat API (via HLTB unofficial)",
+  "category": "games-comics",
+  "tagline": "Game completion-time estimates via community wrappers for HowLongToBeat",
+  "description": "Community libraries and reverse-engineered endpoints that expose HowLongToBeat completion-time data (main story, extras, completionist) for backlog tools, game databases, and recommendation apps. There is no official public API; most clients scrape or call undocumented site endpoints.",
+  "base_url": "https://howlongtobeat.com",
+  "docs_url": "https://github.com/RedSkiesReaperr/howlongtobeat",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "No official API key; community libraries scrape howlongtobeat.com or call undocumented site endpoints without public auth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "u=Mozilla/5.0;i=$(curl -sA$u -ehttps://howlongtobeat.com/ https://howlongtobeat.com/api/find/init);t=$(jq -r .token<<<$i);k=$(jq -r .hpKey<<<$i);v=$(jq -r .hpVal<<<$i);jq -nc --arg k $k --arg v $v '{searchType:\"games\",searchTerms:[\"celeste\"],searchPage:1,size:1,searchOptions:{games:{},users:{}},useCache:true}+{($k):$v}'|curl -sA$u -ehttps://howlongtobeat.com/ -Hcontent-type:application/json -Horigin:https://howlongtobeat.com -Hx-auth-token:$t -Hx-hp-key:$k -Hx-hp-val:$v -d@- https://howlongtobeat.com/api/find",
+    "response_snippet": "{\"data\":[{\"game_id\":42818,\"game_name\":\"Celeste\",\"game_type\":\"game\",\"comp_main\":29880,\"comp_plus\":52560,\"comp_100\":141120}]}"
+  },
+  "use_cases": [
+    "look up main-story completion time for a game title",
+    "compare how long games take for backlog planning",
+    "enrich a game library with HLTB time estimates",
+    "search HowLongToBeat for a title and get match candidates"
+  ],
+  "sources": [
+    "https://github.com/ckatzorke/howlongtobeat",
+    "https://howlongtobeat.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url"
+    ],
+    "corrected": [
+      "docs_url",
+      "auth_type",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "description"
+    ]
+  }
+}

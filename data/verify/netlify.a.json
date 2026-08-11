@@ -1,0 +1,52 @@
+{
+  "id": "netlify",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.netlify.com/api/get-started/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/#authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.netlify.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "300 credits per month, with a hard limit and no auto-recharge option",
+      "source": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 500 requests per minute for most requests; API deploys are limited to 3 per minute and 100 per day",
+      "source": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/#rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/#make-a-request"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open-api.netlify.com/"
+    }
+  },
+  "notes": "The submitted documentation URL remains functional but redirects to Netlify's newer canonical API guide. Authentication is officially described as OAuth 2, including bearer-token PAT usage. Current pricing and API rate limits are explicitly published, so both corresponding unknown/not-published claims are incorrect. No current authoritative documentation establishing general REST API CORS behavior was located."
+}

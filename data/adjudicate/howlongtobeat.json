@@ -1,0 +1,15 @@
+{
+  "id": "howlongtobeat",
+  "base_url": null,
+  "docs_url": "https://github.com/RedSkiesReaperr/howlongtobeat",
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "u=Mozilla/5.0;i=$(curl -sA$u -ehttps://howlongtobeat.com/ https://howlongtobeat.com/api/find/init);t=$(jq -r .token<<<$i);k=$(jq -r .hpKey<<<$i);v=$(jq -r .hpVal<<<$i);jq -nc --arg k $k --arg v $v '{searchType:\"games\",searchTerms:[\"celeste\"],searchPage:1,size:1,searchOptions:{games:{},users:{}},useCache:true}+{($k):$v}'|curl -sA$u -ehttps://howlongtobeat.com/ -Hcontent-type:application/json -Horigin:https://howlongtobeat.com -Hx-auth-token:$t -Hx-hp-key:$k -Hx-hp-val:$v -d@- https://howlongtobeat.com/api/find",
+  "example_response_snippet": "{\"data\":[{\"game_id\":42818,\"game_name\":\"Celeste\",\"game_type\":\"game\",\"comp_main\":29880,\"comp_plus\":52560,\"comp_100\":141120}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: replace; no official API documentation exists, while this maintained wrapper documents dynamic discovery and has a 2026 release: https://github.com/RedSkiesReaperr/howlongtobeat . auth_type: other; its client fetches a site-issued token and sends x-auth-token: https://raw.githubusercontent.com/RedSkiesReaperr/howlongtobeat/main/client.go . example: replace; current search uses /api/find/init, /api/find, rotating hpKey/hpVal and matching headers: https://www.browser-skills.sh/skills/howlongtobeat"
+}

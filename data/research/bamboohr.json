@@ -1,0 +1,39 @@
+{
+  "id": "bamboohr",
+  "status": "operational",
+  "name": "BambooHR",
+  "category": "jobs-careers",
+  "tagline": "HRIS API for employees, time-off, and applicant tracking",
+  "description": "BambooHR is a widely used HRIS platform. Its REST API covers employee data, time-off, and applicant tracking so developers can integrate HR workflows.",
+  "base_url": "https://api.bamboohr.com",
+  "docs_url": "https://documentation.bamboohr.com/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication (details to verify from official docs)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_API_KEY: https://api.bamboohr.com/api/gateway.php/YOUR_COMPANY/v1/employees/directory",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list employees in directory",
+    "request time-off balances",
+    "sync applicant tracking data"
+  ],
+  "sources": [
+    "https://documentation.bamboohr.com/docs"
+  ],
+  "researcher_confidence": "low"
+}

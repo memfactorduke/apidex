@@ -1,0 +1,52 @@
+{
+  "id": "cloudconvert",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloudconvert.com/docs/getting-started/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloudconvert.com/api/v2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloudconvert.com/docs/getting-started/introduction"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloudconvert.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "10 conversion credits/day (daily reset); free plan also: max file size 1 GB, max processing time 5 minutes, 5 concurrent tasks, low priority",
+      "source": "https://cloudconvert.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Dynamic rate limiting documented for creating jobs and tasks; X-RateLimit-Limit / X-RateLimit-Remaining headers; 429 + Retry-After when exceeded (docs example: limit 1000)",
+      "source": "https://cloudconvert.com/docs/getting-started/introduction"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloudconvert.com/docs/api-reference/tasks"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloudconvert.com/docs/getting-started/introduction"
+    }
+  },
+  "notes": "Fail solely on free_tier_limits (published 10/day + free-plan caps) and rate_limits (docs describe dynamic limits for job/task create). base_url, Bearer API-key auth, OAuth 2.0, jobs/tasks model, GET /v2/tasks example, and free credit-based tier all match official docs/pricing."
+}

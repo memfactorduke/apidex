@@ -1,0 +1,41 @@
+{
+  "id": "photon",
+  "status": "operational",
+  "name": "Photon",
+  "category": "geo-maps",
+  "tagline": "Open-source OSM geocoder with autocomplete from Komoot",
+  "description": "Photon is Komoot's free open-source geocoder built on OpenStreetMap and Elasticsearch. It provides forward/reverse geocoding and typeahead place search via a public demo at photon.komoot.io, plus self-host options.",
+  "base_url": "https://photon.komoot.io",
+  "docs_url": "https://github.com/komoot/photon",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public demo endpoint requires no authentication; self-hosted instances may add their own auth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public demo is free with fair-use expectations; no published paid plans for the demo.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published for public demo; self-host for production load",
+  "example": {
+    "request": "curl \"https://photon.komoot.io/api/?q=berlin&limit=1\"",
+    "response_snippet": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[13.38886,52.517037]},\"properties\":{\"osm_type\":\"N\",\"osm_id\":240109189,\"name\":\"Berlin\",\"country\":\"Germany\",\"type\":\"city\"}}]}"
+  },
+  "use_cases": [
+    "autocomplete place names as a user types",
+    "forward-geocode an address or place name to coordinates",
+    "reverse-geocode lat/lon to a place name",
+    "bias search results to a map viewport or location"
+  ],
+  "sources": [
+    "https://github.com/komoot/photon",
+    "https://photon.komoot.io"
+  ],
+  "researcher_confidence": "medium"
+}

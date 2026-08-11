@@ -1,0 +1,38 @@
+{
+  "id": "opensea",
+  "status": "operational",
+  "name": "OpenSea",
+  "category": "crypto",
+  "tagline": "NFT marketplace API for collections, listings, and events across chains.",
+  "description": "OpenSea API for NFT collections, listings, and events across multiple blockchains.",
+  "base_url": "https://api.opensea.io",
+  "docs_url": "https://docs.opensea.io/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-Api-Key: YOUR_API_KEY\" https://api.opensea.io/api/v2/collections",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "get NFT collection metadata",
+    "list marketplace events"
+  ],
+  "sources": [
+    "https://docs.opensea.io/"
+  ],
+  "researcher_confidence": "low"
+}

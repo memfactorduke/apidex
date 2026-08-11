@@ -1,0 +1,44 @@
+{
+  "id": "thingsboard",
+  "status": "operational",
+  "name": "ThingsBoard",
+  "category": "iot-devices",
+  "tagline": "Open-source IoT platform REST API for devices, telemetry, rules, and dashboards",
+  "description": "ThingsBoard is an open-source IoT platform providing REST APIs to manage devices, assets, customers, telemetry, attributes, alarms, rule chains, and dashboards. Developers can self-host the Community Edition or use ThingsBoard Cloud / Professional Edition. Auth is JWT-based (login for a token, then Bearer auth); tenant/device credentials and optional API keys apply depending on deployment.",
+  "base_url": "https://thingsboard.cloud/api",
+  "docs_url": "https://thingsboard.io/docs/reference/rest-api/",
+  "signup_url": "https://thingsboard.cloud/signup",
+  "auth": {
+    "type": "jwt",
+    "details": "POST /api/auth/login with username/password returns JWT; send as X-Authorization: Bearer $JWT (or Authorization). Device APIs may use access tokens. Self-host and cloud."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Community Edition free self-host; Cloud free trial/limited plan \u2014 verify current cloud limits on pricing page",
+    "paid_plans": "ThingsBoard Cloud and PE paid tiers; self-host PE licenses"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST 'https://thingsboard.cloud/api/auth/login' -H 'Content-Type: application/json' -d '{\"username\":\"YOUR_EMAIL\",\"password\":\"YOUR_PASSWORD\"}'",
+    "response_snippet": "{\"token\":\"eyJhbGciOiJIUzUxMiJ9...\",\"refreshToken\":\"eyJhbGciOiJIUzUxMiJ9...\"}"
+  },
+  "use_cases": [
+    "login and obtain JWT for ThingsBoard REST API",
+    "list tenant devices and their credentials",
+    "post or query device telemetry timeseries",
+    "read or write device/server-side attributes",
+    "create or acknowledge IoT alarms",
+    "manage dashboards and rule chains via REST"
+  ],
+  "sources": [
+    "https://thingsboard.io/docs/reference/rest-api/",
+    "https://thingsboard.io/pricing/",
+    "https://thingsboard.cloud/"
+  ],
+  "researcher_confidence": "medium"
+}

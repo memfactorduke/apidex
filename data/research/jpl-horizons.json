@@ -1,0 +1,44 @@
+{
+  "id": "jpl-horizons",
+  "status": "operational",
+  "name": "JPL Horizons System API",
+  "category": "science-space",
+  "tagline": "NASA/JPL ephemerides API for solar-system body positions and trajectories",
+  "description": "Public REST interface to the JPL Horizons System, providing high-precision ephemerides, osculating elements, and observer-table data for planets, asteroids, comets, and spacecraft. Industry standard for solar-system trajectories used in mission planning, astronomy apps, and research. Supports JSON and plain-text output with extensive query parameters for target bodies, coordinate systems, and time spans.",
+  "base_url": "https://ssd.jpl.nasa.gov/api/horizons.api",
+  "docs_url": "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public unauthenticated GET/POST endpoints"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no paid plans. Usage subject to fair-use rate limits (see rate_limits).",
+    "paid_plans": null
+  },
+  "rate_limits": "not published precisely; docs advise not exceeding ~1200 requests/hour and avoiding concurrent bulk scraping",
+  "example": {
+    "request": "curl -s \"https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND='499'&OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-01-01'&STOP_TIME='2026-01-02'&STEP_SIZE='1%20d'&QUANTITIES='1'\"",
+    "response_snippet": "{\"signature\":{\"source\":\"NASA/JPL Horizons API\",\"version\":\"1.2\"},\"result\":\"*******************************************************************************\\nJPL/HORIZONS\\n...\\n$$SOE\\n2026-Jan-01 00:00 *  m  12  34  56.78 ...\\n$$EOE\\n...\"}"
+  },
+  "use_cases": [
+    "get observer-table RA/Dec for Mars from Earth on a date range",
+    "fetch osculating orbital elements for an asteroid by SPK-ID",
+    "compute spacecraft ephemeris relative to a center body",
+    "look up small-body designation and physical parameters",
+    "export state vectors for a solar-system body in a chosen reference frame"
+  ],
+  "sources": [
+    "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+    "https://ssd.jpl.nasa.gov/horizons/",
+    "https://ssd-api.jpl.nasa.gov/"
+  ],
+  "researcher_confidence": "medium"
+}

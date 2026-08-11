@@ -1,0 +1,44 @@
+{
+  "id": "seattle-open-data",
+  "status": "operational",
+  "name": "Seattle Open Data API",
+  "category": "government-open-data",
+  "tagline": "SODA access to City of Seattle open datasets via data.seattle.gov",
+  "description": "The City of Seattle publishes open government datasets on data.seattle.gov, accessible through Socrata's SODA REST API. Developers can query hundreds of municipal datasets (crime, 911, permits, transportation, budgets, and more) as JSON, CSV, or other formats using SoQL filters, without scraping the portal UI.",
+  "base_url": "https://data.seattle.gov/resource",
+  "docs_url": "https://dev.socrata.com/foundry/data.seattle.gov/",
+  "signup_url": "https://data.seattle.gov/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Optional app token via X-App-Token header (or $$app_token query param); unauthenticated access allowed with stricter throttling. App tokens obtained from Socrata developer portal after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-App-Token: YOUR_API_KEY\" \"https://data.seattle.gov/resource/tazs-3rd5.json?$limit=5\"",
+    "response_snippet": "[{\"$id\":\"row-xxxx\",\"report_number\":\"...\",\"offense\":\"...\",\"offense_start_datetime\":\"...\"}]"
+  },
+  "use_cases": [
+    "query recent Seattle 911 or crime incidents by date and neighborhood",
+    "pull building permit applications for a Seattle address or district",
+    "list Seattle traffic camera or transportation dataset rows with SoQL filters",
+    "export Seattle budget or city department open data as JSON for analysis"
+  ],
+  "sources": [
+    "https://data.seattle.gov/",
+    "https://dev.socrata.com/foundry/data.seattle.gov/",
+    "https://dev.socrata.com/"
+  ],
+  "researcher_confidence": "low"
+}

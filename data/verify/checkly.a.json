@@ -1,0 +1,52 @@
+{
+  "id": "checkly",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.checklyhq.com/reference"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.checklyhq.com/reference",
+      "source": "https://developers.checklyhq.com/reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.checklyhq.com/reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checklyhq.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Hobby: 10k API check runs/mo, 5 browser check runs/mo, 1 user, 5 API & 1 browser check, 5s max response, 2 locations, 10m min frequency, email/Slack alerts",
+      "source": "https://www.checklyhq.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "120 requests per 60 seconds (x-checkly-ratelimit-* headers); burst may return 429",
+      "source": "https://www.checklyhq.com/docs/api-checks/limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_API_KEY\" -H \"X-Checkly-Account: YOUR_ACCOUNT_ID\" https://api.checklyhq.com/v1/checks",
+      "source": "https://developers.checklyhq.com/reference/getv1checks"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.checklyhq.com/docs/api/"
+    }
+  },
+  "notes": "docs_url redirects to developers.checklyhq.com; Bearer alone insufficient without X-Checkly-Account; free tier and rate limits are published. CORS not documented. Pricing/rate-limit pages may change."
+}

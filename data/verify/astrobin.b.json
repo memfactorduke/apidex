@@ -1,0 +1,52 @@
+{
+  "id": "astrobin",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.astrobin.com/api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.astrobin.com/help/api/",
+      "source": "https://www.astrobin.com/help/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.astrobin.com/help/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.astrobin.com/help/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.astrobin.com/help/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.astrobin.com/help/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.astrobin.com/help/api/"
+    }
+  },
+  "notes": "docs_url returns 404; official API docs appear at /help/api/. Automated check confirmed docs_url bad."
+}

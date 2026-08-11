@@ -1,0 +1,104 @@
+{
+  "id": "jupiter",
+  "status": "operational",
+  "name": "Jupiter",
+  "category": "crypto",
+  "tagline": "Solana DEX aggregator APIs for quotes, swaps, prices, and token data",
+  "description": "Jupiter is Solana\u2019s primary liquidity infrastructure API suite: swap routing (Metis and multi-router Swap V2), USD prices, token metadata, limit/DCA orders, lending, and more. Legacy quote-api.jup.ag was retired; current traffic goes to api.jup.ag with optional free or paid API keys. Free tier is rate-limited only; paid tiers add higher RPS and credit allowances.",
+  "base_url": "https://api.jup.ag",
+  "docs_url": "https://dev.jup.ag/docs",
+  "signup_url": "https://developers.jup.ag/portal",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-api-key header from free self-serve Portal (developers.jup.ag/portal). Keyless access allowed at lower limits (0.5 RPS)."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free API key: unlimited credits, 1 req/s (60/min). Keyless: 0.5 req/s (30/min). No payment required.",
+    "paid_plans": "Developer $25/mo (10 RPS, 25M credits); Launch $100/mo (50 RPS, 100M credits); Pro $500/mo (150 RPS, 500M credits); overage $1/M credits"
+  },
+  "rate_limits": "60s sliding window per org: Keyless 0.5 RPS/30 RPM; Free 1 RPS/60 RPM; Developer 10 RPS; Launch 50 RPS; Pro 150 RPS. /swap/v2/execute has a separate bucket (Keyless 20 / Free 50 / Paid 100 RPS).",
+  "example": {
+    "request": "curl --request GET --url 'https://api.jup.ag/swap/v1/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000000&slippageBps=50' --header 'x-api-key: YOUR_API_KEY'",
+    "response_snippet": "{\"inputMint\":\"So11111111111111111111111111111111111111112\",\"inAmount\":\"100000000\",\"outputMint\":\"EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v\",\"outAmount\":\"7610448\",\"otherAmountThreshold\":\"7572396\",\"swapMode\":\"ExactIn\",\"slippageBps\":50,\"priceImpactPct\":\"0\",\"routePlan\":[{\"swapInfo\":{\"ammKey\":\"...\",\"label\":\"ZeroFi\",\"inputMint\":\"So111...\",\"outputMint\":\"EPjF...\",\"inAmount\":\"100000000\",\"outAmount\":\"7610448\"},\"percent\":100}],\"contextSlot\":...,\"timeTaken\":0.01}"
+  },
+  "use_cases": [
+    "get best-route quote for a Solana token pair (e.g. SOL to USDC)",
+    "build and execute a managed swap transaction via Swap V2 order/execute",
+    "fetch USD prices for up to 50 Solana mints in one request",
+    "search Solana tokens by name, symbol, or mint with trading metadata",
+    "create vault-based limit orders or DCA schedules on Solana"
+  ],
+  "sources": [
+    "https://dev.jup.ag/docs",
+    "https://developers.jup.ag/pricing",
+    "https://developers.jup.ag/docs/portal/rate-limits",
+    "https://developers.jup.ag/docs/portal/plans",
+    "https://developers.jup.ag/docs/api-reference/swap/v1/quote",
+    "https://developers.jup.ag/docs/swap/v1/get-quote",
+    "https://developers.jup.ag/docs/swap",
+    "https://developers.jup.ag/changelog"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

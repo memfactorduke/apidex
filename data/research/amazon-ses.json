@@ -1,0 +1,39 @@
+{
+  "id": "amazon-ses",
+  "status": "operational",
+  "name": "Amazon SES",
+  "category": "social-communication",
+  "tagline": "High-scale transactional and bulk email via AWS",
+  "description": "Amazon Simple Email Service (SES) is a cloud email platform for sending and receiving email at scale. Developers use the SES API and SMTP interface for transactional messages, marketing campaigns, bounce handling, and domain identity verification with AWS Signature Version 4 authentication.",
+  "base_url": "https://email.{region}.amazonaws.com",
+  "docs_url": "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html",
+  "signup_url": "https://console.aws.amazon.com/ses/",
+  "auth": {
+    "type": "other",
+    "details": "AWS Signature Version 4 (SigV4) with IAM access keys or temporary credentials; service name \"ses\"."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl placeholder",
+    "response_snippet": "placeholder"
+  },
+  "use_cases": [
+    "send transactional email",
+    "verify email identity"
+  ],
+  "sources": [
+    "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html"
+  ],
+  "researcher_confidence": "low"
+}

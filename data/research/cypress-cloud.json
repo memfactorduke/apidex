@@ -1,0 +1,38 @@
+{
+  "id": "cypress-cloud",
+  "status": "operational",
+  "name": "Cypress Cloud API",
+  "category": "dev-tools",
+  "tagline": "HTTP API for Cypress E2E test runs, specs, and results in Cypress Cloud.",
+  "description": "Cypress Cloud (formerly Cypress Dashboard) exposes an HTTP API for programmatically accessing CI test run metadata, specs, and results from Cypress end-to-end browser test suites. Developers use it to query run history, integrate results into pipelines and dashboards, and automate reporting around recorded Cypress tests.",
+  "base_url": "https://api.cypress.io",
+  "docs_url": "https://docs.cypress.io/api/cloud/introduction",
+  "signup_url": "https://cloud.cypress.io",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and signup flow need official-docs confirmation."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.cypress.io/\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list recent Cypress Cloud test runs for a project",
+    "fetch spec and test results for a specific run"
+  ],
+  "sources": [
+    "https://docs.cypress.io/api/cloud/introduction"
+  ],
+  "researcher_confidence": "low"
+}

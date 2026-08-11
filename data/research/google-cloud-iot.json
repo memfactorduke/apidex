@@ -1,0 +1,43 @@
+{
+  "id": "google-cloud-iot",
+  "status": "defunct",
+  "name": "Google Cloud IoT Core",
+  "category": "iot-devices",
+  "tagline": "Device registry and MQTT/HTTP bridge for connecting IoT devices to Google Cloud (service shut down).",
+  "description": "Google Cloud IoT Core was a fully managed service for securely connecting and managing IoT devices at scale via MQTT and HTTP, with device registries, public-key authentication, and integration into Pub/Sub and other Google Cloud services. Google shut down Cloud IoT Core on August 16, 2023; the REST API and related endpoints are no longer available. Existing Google Cloud customers must use alternative IoT connectivity patterns (for example ClearBlade IoT Core as a migration path, or custom device-to-Pub/Sub architectures).",
+  "base_url": "https://cloudiot.googleapis.com/v1",
+  "docs_url": "https://cloud.google.com/iot/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "oauth2",
+    "details": "Google Cloud OAuth 2.0 / service account credentials with Cloud IoT scopes (historical; service no longer accepts traffic)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "Service discontinued; no active free tier",
+    "paid_plans": "Service discontinued as of August 16, 2023; no paid plans available"
+  },
+  "rate_limits": "not published (service shut down)",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://cloudiot.googleapis.com/v1/projects/YOUR_PROJECT/locations/us-central1/registries\"",
+    "response_snippet": "{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"Cloud IoT Core has been shut down.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}"
+  },
+  "use_cases": [
+    "list device registries in a Google Cloud project (historical)",
+    "register an IoT device with public-key credentials (historical)",
+    "send configuration to a connected device via the device manager API (historical)",
+    "publish telemetry from devices to Cloud Pub/Sub (historical)"
+  ],
+  "sources": [
+    "https://cloud.google.com/iot/docs",
+    "https://cloud.google.com/iot/docs/release-notes",
+    "https://cloud.google.com/blog/products/iot-devices/cloud-iot-core-is-being-discontinued",
+    "https://cloud.google.com/iot/docs/reference/cloudiot/rest"
+  ],
+  "researcher_confidence": "high"
+}

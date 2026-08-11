@@ -1,0 +1,38 @@
+{
+  "id": "humane",
+  "status": "operational",
+  "name": "Humane API",
+  "category": "data-analytics",
+  "tagline": "AI-powered search and knowledge retrieval API for agents and applications",
+  "description": "Humane provides a developer API (api.humane.com) for AI-powered search, knowledge retrieval, and data intelligence tasks. It appears designed for agentic workflows and applications that need structured access to search and contextual information.",
+  "base_url": "https://api.humane.com",
+  "docs_url": "https://api.humane.com",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header/parameter name not fully confirmed from public docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://api.humane.com/",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "perform AI-powered web search for a query",
+    "retrieve structured knowledge for agent workflows"
+  ],
+  "sources": [
+    "https://api.humane.com"
+  ],
+  "researcher_confidence": "low"
+}

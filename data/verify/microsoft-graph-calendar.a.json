@@ -1,0 +1,52 @@
+{
+  "id": "microsoft-graph-calendar",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/graph/use-the-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://learn.microsoft.com/en-us/graph/auth-v2-user"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "There is no generally available free Calendar API tier. Standard Graph API access is included at no additional cost with applicable user subscription licenses. Free Microsoft 365 E5 developer sandboxes are restricted to qualifying Developer Program members.",
+      "source": "https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Standard calendar operations are available within documented thresholds as part of the applicable user license without additional API charges. A Microsoft 365 E5 developer sandbox is available only to qualifying members, is limited to development and testing, includes 25 user licenses, and may need renewal or recreation.",
+      "source": "https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Outlook Calendar resources are limited to 10,000 API requests per 10 minutes for each app ID and mailbox combination, four concurrent requests, and 150 MB of uploads per five minutes. Microsoft Graph also applies global limits. Handle 429 responses using Retry-After.",
+      "source": "https://learn.microsoft.com/en-us/graph/throttling-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s 'https://graph.microsoft.com/v1.0/me/calendar/events?$top=5' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
+      "source": "https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Microsoft Graph Calendar provides REST APIs for managing calendars, events, attendees, and scheduling information. A free Microsoft 365 E5 development tenant is available only to qualifying Microsoft 365 Developer Program members and is restricted to development and testing.",
+      "source": "https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq"
+    }
+  },
+  "notes": "The API and documented v1.0 endpoint are operational. The entry overstates free sandbox availability and misstates the Outlook throttle's scope. Its curl command also uses a double-quoted URL, so a shell expands $top instead of sending the OData parameter."
+}

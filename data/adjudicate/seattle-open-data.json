@@ -1,0 +1,15 @@
+{
+  "id": "seattle-open-data",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "none",
+  "free_tier": null,
+  "free_tier_limits": "Public SODA 2.1 reads are free. Anonymous requests use a lower shared IP-based pool; app-token requests have no fixed cap and are throttled only for abusive or malicious use. No numeric anonymous threshold is published.",
+  "rate_limits": "Anonymous requests may be throttled mainly by source IP. App-token requests are currently unthrottled unless abusive or malicious. Throttling returns HTTP 429; no numeric threshold is published.",
+  "cors": "yes",
+  "example_request": "curl 'https://data.seattle.gov/resource/tazs-3rd5.json?$limit=1'",
+  "example_response_snippet": "[{\"report_number\":\"2014-174521\",\"report_date_time\":\"2014-06-02T21:14:00.000\",\"offense_id\":\"7699897715\",\"offense_date\":\"2014-06-02T17:00:00.000\",\"nibrs_group_a_b\":\"A\",\"nibrs_crime_against_category\":\"PROPERTY\",\"offense_sub_category\":\"MOTOR VEHICLE THEFT\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type=none: anonymous SODA 2.1 reads are allowed; tokens are optional identification (https://dev.socrata.com/docs/app-tokens.html). free_tier_limits: no numeric cap; shared-IP and token policies are documented at https://dev.socrata.com/docs/app-tokens.html. rate_limits: the same source documents 429 and abuse throttling. cors=yes: public read-only CORS is supported (https://dev.socrata.com/docs/cors-and-jsonp.html). example: corrected to current fields from https://data.seattle.gov/resource/tazs-3rd5.json."
+}

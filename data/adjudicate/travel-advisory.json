@@ -1,0 +1,15 @@
+{
+  "id": "travel-advisory",
+  "base_url": "https://api.traveladvisory.io",
+  "docs_url": "https://www.traveladvisory.io/dev/api/docs",
+  "auth_type": "apiKey",
+  "free_tier": null,
+  "free_tier_limits": "250 total, non-recurring requests; no credit card required; 10 requests per minute.",
+  "rate_limits": "Free: 10 requests/minute; Builder: 60; Pro: 200; Scale: 500. Monthly quotas are 5,000, 25,000, and 100,000 for paid tiers.",
+  "cors": null,
+  "example_request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.traveladvisory.io/v1/advisory?code=CO\"",
+  "example_response_snippet": "{\"country\":{\"code\":\"CO\",\"name\":\"Colombia\",\"slug\":\"colombia\",\"flag\":\"\ud83c\udde8\ud83c\uddf4\"},\"advisory\":{\"level\":2,\"label\":\"Exercise Increased Caution\",\"reasons\":[\"crime\",\"terrorism\"],\"headline\":\"Exercise Increased Caution in Colombia\"}}",
+  "description": "REST API providing structured country risk profiles for 195 countries, combining U.S. State Department advisory levels 1\u20134 with CDC health, World Bank, safety-index, and climate data.",
+  "status": null,
+  "resolution_notes": "base_url=corrected; docs_url=corrected; auth_type=corrected; example=corrected\u2014evidence: https://www.traveladvisory.io/dev/api/docs. free_tier_limits=corrected; rate_limits=corrected\u2014evidence: https://www.traveladvisory.io/dev/api/docs and https://www.traveladvisory.io/dev/api/pricing. description=corrected\u2014evidence: https://www.traveladvisory.io/dev/api."
+}

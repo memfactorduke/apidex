@@ -1,0 +1,15 @@
+{
+  "id": "caselaw-access-project",
+  "base_url": "https://api.case.law/v1/",
+  "docs_url": null,
+  "auth_type": "none",
+  "free_tier": null,
+  "free_tier_limits": "Not applicable; the CAP API has been retired.",
+  "rate_limits": "Not applicable; the CAP API has been retired.",
+  "cors": null,
+  "example_request": "curl -i --connect-timeout 10 \"https://api.case.law/v1/cases/?jurisdiction=ill&page_size=1\"",
+  "example_response_snippet": "No API response: the CAP API service has been retired and is unavailable.",
+  "description": null,
+  "status": "defunct",
+  "resolution_notes": "base_url: corrected to the trailing-slash legacy root [1]. auth_type: none; a retired API has no current auth scheme [1]. free_tier_limits: not applicable after retirement [1]. rate_limits: not applicable after retirement [1]. example: replaced the false success payload with the current unavailable outcome [1]. Status: defunct; Harvard announced the API wind-down, and its official server repo was archived Oct. 16, 2024 [1][2]. [1] https://lil.law.harvard.edu/blog/2024/03/26/transitions-for-the-caselaw-access-project/ [2] https://github.com/harvard-lil/capstone"
+}

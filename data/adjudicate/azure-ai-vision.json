@@ -1,0 +1,15 @@
+{
+  "id": "azure-ai-vision",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "F0: 5,000 free Image Analysis transactions per month, capped at 20 transactions per minute.",
+  "rate_limits": "Image Analysis: F0 allows 20 transactions/minute; S1 allows up to 20 transactions/second. Higher TPS may be requested through Azure support.",
+  "cors": null,
+  "example_request": "curl -X POST \"https://YOUR_RESOURCE.cognitiveservices.azure.com/computervision/imageanalysis:analyze?api-version=2024-02-01&features=tags,read\" -H \"Ocp-Apim-Subscription-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"url\":\"https://learn.microsoft.com/azure/ai-services/computer-vision/media/quickstarts/presentation.png\"}'",
+  "example_response_snippet": "{\"modelVersion\":\"2023-10-01\",\"metadata\":{\"width\":1038,\"height\":692},\"tagsResult\":{\"values\":[{\"name\":\"text\",\"confidence\":0.99},{\"name\":\"person\",\"confidence\":0.98}]},\"readResult\":{\"blocks\":[{\"lines\":[{\"text\":\"Microsoft Azure\",\"boundingPolygon\":[{\"x\":10,\"y\":20},{\"x\":190,\"y\":20},{\"x\":190,\"y\":48},{\"x\":10,\"y\":48}]}]}]}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: replace unknown; F0 includes 5,000/month and 20/minute (https://azure.microsoft.com/en-us/pricing/details/computer-vision/). rate_limits: replace not published; current FAQ gives F0 20/minute and S1 up to 20/second (https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/faq). example: replace legacy v3.2 with the documented 4.0 route, API version, features parameter, and response shape (https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/call-analyze-image-40)."
+}

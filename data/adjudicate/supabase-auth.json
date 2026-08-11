@@ -1,0 +1,15 @@
+{
+  "id": "supabase-auth",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Published defaults: built-in email sends 2/hour project-wide; OTPs 30/hour; OTP/magic-link, signup-confirmation, and recovery resend windows 60 seconds/user; verification 360/hour/IP; token refresh 1,800/hour/IP; MFA challenge/verify 15/hour/IP; anonymous sign-ins 30/hour/IP. Some are configurable.",
+  "cors": null,
+  "example_request": "curl -X POST 'https://YOUR_PROJECT_REF.supabase.co/auth/v1/signup' -H 'apikey: YOUR_PUBLISHABLE_KEY' -H 'Content-Type: application/json' -d '{\"email\":\"user@example.com\",\"password\":\"example-password\"}'",
+  "example_response_snippet": "{\"id\":\"6f8b8a1e-6d4f-4a5f-92db-8b44f6a7d910\",\"aud\":\"authenticated\",\"role\":\"authenticated\",\"email\":\"user@example.com\",\"confirmation_sent_at\":\"2026-08-11T14:00:00Z\",\"app_metadata\":{\"provider\":\"email\",\"providers\":[\"email\"]},\"user_metadata\":{\"email\":\"user@example.com\",\"email_verified\":false},\"created_at\":\"2026-08-11T14:00:00Z\",\"updated_at\":\"2026-08-11T14:00:00Z\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Original is incorrect; current endpoint-specific quotas and token-bucket behavior are published at https://supabase.com/docs/guides/auth/rate-limits. example: Original placeholders are invalid; the official OpenAPI defines POST /signup, API-key security, email/password input, and the possible 200 user or token response at https://github.com/supabase/auth/blob/master/openapi.yaml. HTTP 0 for the templated base URL does not show an outage because YOUR_PROJECT_REF is not a real hostname."
+}

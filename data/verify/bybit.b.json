@@ -1,0 +1,52 @@
+{
+  "id": "bybit",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/guide"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/intro"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/guide"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/intro"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/rate-limit"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/rate-limit"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/market/tickers"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/intro"
+    }
+  },
+  "notes": "Verified against official V5 docs (2026). Base URL, auth headers, free API access, and tickers path match. Rate-limit ranges are approximate but consistent with documented IP/UID tables. CORS not stated in docs."
+}

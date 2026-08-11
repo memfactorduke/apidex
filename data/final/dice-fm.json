@@ -1,0 +1,94 @@
+{
+  "id": "dice-fm",
+  "status": "operational",
+  "name": "Dice FM API",
+  "category": "events-holidays",
+  "tagline": "Music events and ticketing platform API for club/festival listings",
+  "description": "Dice FM provides a partner-focused API for discovering live music events, venues, and ticketing data across clubs and festivals. Access is primarily partner/self-serve for developers integrating event listings and ticket flows.",
+  "base_url": "https://partners-endpoint.dice.fm/graphql",
+  "docs_url": "https://partners-endpoint.dice.fm/graphql/docs/index.html",
+  "signup_url": "https://partners.dice.fm/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; partner/self-serve developer access"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST -H \"Content-Type: application/json\" -H \"Authorization: Bearer YOUR_API_TOKEN\" --data '{\"query\":\"query { viewer { events(first: 1) { totalCount edges { node { id name } } } } }\"}' \"https://partners-endpoint.dice.fm/graphql\"",
+    "response_snippet": "{\"data\":{\"viewer\":{\"events\":{\"totalCount\":42,\"edges\":[{\"node\":{\"id\":\"1234\",\"name\":\"Example Event\"}}]}}}}"
+  },
+  "use_cases": [
+    "list upcoming club nights in a city",
+    "search festival lineups by date",
+    "get venue details for a music event",
+    "check ticket availability for an event"
+  ],
+  "sources": [
+    "https://partners.dice.fm/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "cors"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier"
+    ]
+  }
+}

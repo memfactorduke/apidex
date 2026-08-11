@@ -1,0 +1,43 @@
+{
+  "id": "canvas-lms",
+  "status": "operational",
+  "name": "Canvas LMS API",
+  "category": "education-reference",
+  "tagline": "Higher-ed LMS REST API for courses, assignments, grades, and enrollments",
+  "description": "Canvas LMS exposes a comprehensive REST API used by schools and edtech integrations to manage courses, users, enrollments, assignments, submissions, grades, calendars, and more. Each institution hosts Canvas at its own domain; API paths are relative to that instance. Developers typically authenticate with OAuth2 or an access token and call versioned endpoints under /api/v1.",
+  "base_url": "https://{canvas-domain}/api/v1",
+  "docs_url": "https://canvas.instructure.com/doc/api/",
+  "signup_url": "https://www.instructure.com/canvas",
+  "auth": {
+    "type": "other",
+    "details": "OAuth2 (preferred) or manual access tokens via Authorization: Bearer <token>; tokens are created per Canvas account/instance, not a global self-serve API key portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Canvas is commercial LMS software licensed to institutions; API access is typically included with an institutional Canvas instance, not sold as a standalone public SaaS API plan."
+  },
+  "rate_limits": "not published as a single global number; throttling is enforced per Canvas instance (often via X-Request-Cost / X-Rate-Limit-Remaining style headers). Check your institution\u2019s Canvas admin docs.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://canvas.instructure.com/api/v1/courses\"",
+    "response_snippet": "[{\"id\":1,\"name\":\"Example Course\",\"course_code\":\"EX101\",\"workflow_state\":\"available\",\"...\"}]"
+  },
+  "use_cases": [
+    "list courses for the authenticated user",
+    "fetch assignments in a course",
+    "read or update student enrollments",
+    "submit or grade assignment submissions",
+    "sync SIS/user roster data into Canvas"
+  ],
+  "sources": [
+    "https://canvas.instructure.com/doc/api/",
+    "https://canvas.instructure.com/doc/api/file.oauth.html",
+    "https://canvas.instructure.com/doc/api/file.throttling.html"
+  ],
+  "researcher_confidence": "medium"
+}

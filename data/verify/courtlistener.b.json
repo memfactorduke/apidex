@@ -1,0 +1,52 @@
+{
+  "id": "courtlistener",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.courtlistener.com/help/api/rest/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.courtlistener.com/help/api/rest/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.courtlistener.com/help/api/rest/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.courtlistener.com/help/api/rest/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for non-commercial use with rate limits of 5,000 queries/hour authenticated (and lower for anonymous); commercial use requires a paid plan or special agreement with Free Law Project",
+      "source": "https://www.courtlistener.com/help/api/rest/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Authenticated users: 5,000 queries per hour; anonymous users: lower limits (documented as much lower). Some endpoints may have additional restrictions.",
+      "source": "https://www.courtlistener.com/help/api/rest/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.courtlistener.com/help/api/rest/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.courtlistener.com/help/api/rest/"
+    }
+  },
+  "notes": "Verified against official CourtListener REST API docs. Auth Token header, v4 base URL, and free non-commercial tier confirmed. Main issues: free_tier_limits and rate_limits are vague/incomplete vs documented 5,000/hour authenticated limit and commercial licensing terms. CORS not documented."
+}

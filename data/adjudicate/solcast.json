@@ -1,0 +1,15 @@
+{
+  "id": "solcast",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Evaluation: up to 15 Historic Time Series and 10 Live/Forecast requests at user locations; unlimited at unmetered locations. Researchers receive 50 free historical requests. Home hobbyists receive 10 requests/day for one residential site.",
+  "rate_limits": "Enforced per API key and dependent on the subscription plan/product. Current limits are shown in the API Toolkit and response headers; exceeding a rate limit returns HTTP 429 with Retry-After.",
+  "cors": null,
+  "example_request": "curl -X GET \"https://api.solcast.com.au/data/live/radiation_and_weather?latitude=-33.8567&longitude=151.2152&hours=1&period=PT30M&output_parameters=ghi&format=json\" -H \"Authorization: Bearer $API_KEY\" -H \"Accept: application/json\"",
+  "example_response_snippet": "{\"estimated_actuals\":[{\"ghi\":639,\"period_end\":\"2026-08-07T02:30:00.0000000Z\",\"period\":\"PT30M\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected; evaluation limits: https://solcast.com/pricing/energy-data, researcher limit: https://www.solcast.com/data-for-researchers, hobbyist limit: https://www.solcast.com/free-rooftop-solar-forecasting. rate_limits: corrected; plan-dependent per-key limits and HTTP 429 behavior: https://docs.solcast.com.au/docs/errors. example: corrected to the current live endpoint, parameters, Bearer-key authentication, and response shape: https://docs.solcast.com.au/docs/section/irradiance-weather-data"
+}

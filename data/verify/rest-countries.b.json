@@ -1,0 +1,52 @@
+{
+  "id": "rest-countries",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.restcountries.com/countries/v5",
+      "source": "https://restcountries.com/docs/countries"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://restcountries.com/docs/countries",
+      "source": "https://restcountries.com/docs/countries"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "api_key (normally sent as an Authorization bearer token)",
+      "source": "https://restcountries.com/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://restcountries.com/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 500 requests per month, up to 100 objects per request, 24-hour data sync, and 2 API keys; intended for evaluation, prototyping, and non-commercial or personal use.",
+      "source": "https://restcountries.com/plans"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Sustained traffic above 20 requests per 10 seconds is rejected with HTTP 429.",
+      "source": "https://restcountries.com/docs"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Browser requests are blocked by default and allowed only when the request origin hostname is configured on the API key.",
+      "source": "https://restcountries.com/docs"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.restcountries.com/countries/v5/names.common/Canada?pretty=1\" -H \"Authorization: Bearer rc_live_demo\"",
+      "source": "https://restcountries.com/docs/countries"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Read-only JSON country-data API covering names, codes, capitals, currencies, languages, borders, geography, flags, and other fields. The maintained public surface is v5 at api.restcountries.com and requires an API key for normal access; a restricted demo key can be used without an account.",
+      "source": "https://restcountries.com/docs/countries"
+    }
+  },
+  "notes": "The service is operational, but this entry describes its obsolete open v3.1 API. Official 2026 documentation marks v1-v4 deprecated and directs users to authenticated v5. Pricing, quotas, throttling, and CORS behavior are now explicitly published."
+}

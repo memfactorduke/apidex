@@ -1,0 +1,52 @@
+{
+  "id": "huggingface-hub",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://huggingface.co",
+      "source": "https://huggingface.co/docs/huggingface_hub/en/package_reference/hf_api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/hub/api"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Bearer token (Hugging Face User Access Token)",
+      "source": "https://huggingface.co/docs/hub/programmatic-user-access-control"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/hub/enterprise"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free user or organization: best-effort public storage, 100 GB private storage, and 1,000 Hub API requests per 5-minute fixed window.",
+      "source": "https://huggingface.co/docs/hub/enterprise"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published Hub API limits per 5-minute fixed window: 500 anonymous per IP, 1,000 Free, 2,500 PRO, 3,000 Team, 6,000 Enterprise, and 10,000 Enterprise Plus; higher Enterprise Plus limits can apply with organization IP ranges.",
+      "source": "https://huggingface.co/docs/hub/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/api/models/bert-base-uncased"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://huggingface.co/docs/hub/api"
+    }
+  },
+  "notes": "The endpoint is operational and the example URL currently redirects to the canonical google-bert repository and returns JSON. The material errors are the formal Hub endpoint, authentication classification, and the claims that free-tier and rate limits are unknown or unpublished. Official documentation now publishes both. No authoritative Hub API CORS policy was found."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "careerjet",
+  "status": "operational",
+  "name": "Careerjet",
+  "category": "jobs-careers",
+  "tagline": "International job search API with affiliate monetization",
+  "description": "Careerjet provides a long-running international job search API that aggregates listings across many country sites and pairs them with an affiliate program for monetization. Developers can query jobs by keywords, location, and filters, then deep-link users into Careerjet result pages. Suitable for job boards, career tools, and agent workflows that need multi-country job search without building a full scrape pipeline.",
+  "base_url": "https://search.api.careerjet.net/v4/query",
+  "docs_url": "https://www.careerjet.com/partners/api/",
+  "signup_url": "https://www.careerjet.com/partners/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Affiliate ID (affid) required as a query parameter on each request; obtained via Careerjet partners/affiliate signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --user \"YOUR_API_KEY:\" --get \"https://search.api.careerjet.net/v4/query\" --data-urlencode \"locale_code=en_GB\" --data-urlencode \"keywords=python developer\" --data-urlencode \"location=London\" --data-urlencode \"user_ip=1.2.3.4\" --data-urlencode \"user_agent=Mozilla/5.0\" --data-urlencode \"page_size=10\"",
+    "response_snippet": "{\"type\":\"JOBS\",\"hits\":62,\"message\":\"62 matching jobs found\",\"pages\":4,\"response_time\":0.322,\"jobs\":[{\"title\":\"Python Developer\",\"company\":\"NBC\",\"date\":\"Mon, 10 Aug 2026 14:22:31 GMT\",\"description\":\"Job description excerpt\",\"locations\":\"London\",\"url\":\"https://jobviewtrack.com/v2/unique-link\"}]}"
+  },
+  "use_cases": [
+    "search jobs by keyword and city across countries",
+    "paginate international job results for a career tool",
+    "build affiliate job links with country-specific locales",
+    "filter openings by location for relocation or remote roles"
+  ],
+  "sources": [
+    "https://www.careerjet.com/partners/api/",
+    "https://public.api.careerjet.net"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

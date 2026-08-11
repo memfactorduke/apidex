@@ -1,0 +1,15 @@
+{
+  "id": "lepton-ai",
+  "base_url": "https://gateway.dgxc-lepton.nvidia.com/api/v2/workspaces/<WORKSPACE_ID>",
+  "docs_url": "https://docs.nvidia.com/dgx-cloud/lepton/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X POST \"<ENDPOINT_URL>/v1/chat/completions\" -H \"Authorization: Bearer <ENDPOINT_TOKEN>\" -H \"Content-Type: application/json\" -H \"Accept: application/json\" -d '{\"model\":\"<model-id>\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}],\"max_tokens\":100,\"stream\":false}'",
+  "example_response_snippet": "{\"id\":\"chatcmpl-abc123\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help you today?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":10,\"total_tokens\":18}}",
+  "description": "NVIDIA DGX Cloud Lepton is a fully managed platform for developing, training, and deploying AI models. It provides scalable hosted inference endpoints, REST API support, a Python SDK, development pods, batch jobs, and managed GPU infrastructure.",
+  "status": null,
+  "resolution_notes": "base_url=replace: workspace template; inference is endpoint-specific (https://docs.nvidia.com/dgx-cloud/lepton/features/utilities/fine-tuning/sdk-reference/). docs_url=replace: https://docs.nvidia.com/dgx-cloud/lepton/. auth_type=keep apiKey: API Token via Bearer (https://docs.nvidia.com/dgx-cloud/lepton/features/workspace/token/). example=replace: endpoint-specific chat curl (https://docs.nvidia.com/dgx-cloud/lepton/examples/endpoint/deploy-gpt-oss/). description=replace: managed AI development/training/deployment platform (https://docs.nvidia.com/dgx-cloud/lepton/get-started/index.html)."
+}

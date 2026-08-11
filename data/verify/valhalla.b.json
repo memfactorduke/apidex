@@ -1,0 +1,52 @@
+{
+  "id": "valhalla",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/valhalla/valhalla#demo-server"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valhalla.github.io/valhalla/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/valhalla/valhalla#demo-server"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fossgis.de/news/2021-11-12_funding_valhalla/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fossgis.de/arbeitsgruppen/osm-server/nutzungsbedingungen/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Maximum one request per second for the FOSSGIS Valhalla routing server.",
+      "source": "https://fossgis.de/arbeitsgruppen/osm-server/nutzungsbedingungen/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valhalla.github.io/valhalla/api/route/api-reference/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://valhalla.github.io/valhalla/api/"
+    }
+  },
+  "notes": "The current FOSSGIS terms expressly publish a one-request-per-second limit, contradicting the entry. The official repository still identifies the host as the public demo API. CORS could not be established authoritatively. A June 2026 maintainer comment said public-instance elevation was temporarily disabled, but this does not contradict Valhalla's documented elevation capability generally."
+}

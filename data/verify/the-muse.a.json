@@ -1,0 +1,52 @@
+{
+  "id": "the-muse",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.themuse.com/api/public",
+      "source": "https://www.themuse.com/developers/api/v2"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themuse.com/developers/api/v2"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themuse.com/developers/api/v2"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themuse.com/developers/api/v2"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "500 requests per hour without an API key; 3,600 requests per hour with a registered app's API key",
+      "source": "https://www.themuse.com/developers/api/v2"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "500 requests per hour without an API key; 3,600 requests per hour with a registered app's API key",
+      "source": "https://www.themuse.com/developers/api/v2"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themuse.com/developers/api/v2"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.themuse.com/developers/api/v2"
+    }
+  },
+  "notes": "The official documentation is live, and the documented GET /jobs?page=1 endpoint returned current JSON. API keys are optional for testing; registration is required beyond testing. No official CORS policy was located. The entry fails because its base URL and both limit fields are wrong."
+}

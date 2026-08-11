@@ -1,0 +1,52 @@
+{
+  "id": "opensanctions",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.opensanctions.org/openapi.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/api/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/commercial/exemption/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Business-email signups receive a 30-day trial; ongoing free API keys are restricted to qualifying, verified public-interest work.",
+      "source": "https://www.opensanctions.org/docs/api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Trial and paid keys have per-calendar-month quotas; exceeding the assigned quota returns HTTP 429. The key-specific quota appears in the API console and can be raised by support.",
+      "source": "https://www.opensanctions.org/docs/api/faq/#quota"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/api/search/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/api/"
+    }
+  },
+  "notes": "The hosted API and documented search endpoint remain live. The material errors are the claimed unknown free-access limits and unpublished rate limits: eligibility, trial duration, monthly quotas, and HTTP 429 behavior are documented. The search example is mechanically valid, although OpenSanctions recommends /match\u2014not /search\u2014for screening. No authoritative CORS policy was found."
+}

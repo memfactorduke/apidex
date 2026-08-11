@@ -1,0 +1,52 @@
+{
+  "id": "oecd-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free of charge, with a maximum of 60 data downloads per hour; excess requests are temporarily blocked, and VPN or anonymized traffic is not allowed.",
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Maximum 60 data downloads per hour; requests exceeding the limit are temporarily blocked.",
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_CLI/.M.LI...AA...H?startPeriod=2023-02&dimensionAtObservation=AllDimensions&format=jsondata\"",
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gitlab.algobank.oecd.org/public-documentation/dotstat-migration/-/raw/main/OECD_Data_API_documentation.pdf"
+    }
+  },
+  "notes": "The automated 403 and base-root 404 are false alarms: OECD currently publishes both URLs. The entry fails because OECD now documents a 60-downloads-per-hour limit, and the submitted QNA filter does not match the dataset's current dimension order. No authoritative CORS policy was found."
+}

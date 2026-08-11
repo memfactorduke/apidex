@@ -1,0 +1,52 @@
+{
+  "id": "lseg-news",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.lseg.com/en/article-catalog/article/lseg-data-platform-news-alerts-with-python"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news-API",
+      "source": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news-API"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.lseg.com/en/article-catalog/article/getting-started-with-version-2-authentication-for-refinitiv-real"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://api.refinitiv.com/data/news/v1/headlines?query=TOPNEWS&limit=10\"",
+      "source": "https://developers.lseg.com/content/dam/devportal/api-families/refinitiv-data-platform/refinitiv-data-platform-apis/documentation/rdp_news_user_guide.pdf"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.lseg.com/en/product/news/news_service_rdp"
+    }
+  },
+  "notes": "The supplied documentation URL returns 404; the current catalog slug is news-API. The hostname is current, but the sample only calls its root and mislabels an OAuth access token as an API key. Official pages describe licensed subscriptions and trials but do not conclusively establish free-tier status, public quotas, or News API CORS behavior."
+}

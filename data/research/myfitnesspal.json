@@ -1,0 +1,48 @@
+{
+  "id": "myfitnesspal",
+  "status": "operational",
+  "name": "MyFitnessPal API",
+  "category": "health-fitness",
+  "tagline": "Partner-only REST API for user food/exercise diaries\u2014closed to new applicants.",
+  "description": "MyFitnessPal\u2019s partner-facing REST API (v2) lets approved apps read and write a consenting user\u2019s food and exercise diary, water, body measurements, and profile, with OAuth 2.0 user authorization and optional webhook subscriptions. Official docs and api.myfitnesspal.com remain online, but the developer portal states access is private and the portal home page currently says new API access requests are not being accepted. There is no self-serve signup or published public pricing.",
+  "base_url": "https://api.myfitnesspal.com/v2",
+  "docs_url": "https://myfitnesspalapi.com/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "oauth2",
+    "details": "Partner-issued OAuth 2.0 client_id + client_secret (no self-serve). Authorization-code grant; API calls use Authorization: Bearer <access_token> plus mfp-client-id (and typically mfp-user-id). OAuth host noted in FAQ: oauth2-api.myfitnesspal.com with Api-Key header = client ID. New access closed as of 2026."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier; partner-only and new access requests not accepted",
+    "paid_plans": "not published publicly; contact partners@myfitnesspal.com / API@myfitnesspal.com for enterprise/partner terms"
+  },
+  "rate_limits": "Standard partner accounts: 25,000 requests/day and 60 requests/second (official FAQ); higher limits by request",
+  "example": {
+    "request": "curl -s 'https://api.myfitnesspal.com/v2/diary?entry_date=2024-08-25&types=diary_meal,exercise&fields[]=nutritional_contents&fields[]=exercise&fields[]=energy' -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' -H 'mfp-client-id: YOUR_CLIENT_ID' -H 'mfp-user-id: YOUR_USER_ID'",
+    "response_snippet": "{\"items\":[{\"type\":\"diary_meal\",\"date\":\"2014-08-25\",\"diary_meal\":\"Breakfast\",\"nutritional_contents\":{\"protein\":22.35,\"fat\":25.72,\"carbohydrates\":49.72,\"energy\":{\"unit\":\"calories\",\"value\":515}}},{\"id\":\"61a4452be5b1db6813cdc85546f5c49eea7585bc\",\"type\":\"exercise\",\"date\":\"2014-08-25\",\"exercise\":{\"id\":134026223316461},\"duration\":1800,\"energy\":{\"unit\":\"calories\",\"value\":210}}]}"
+  },
+  "use_cases": [
+    "fetch a user's food diary meals and nutrition totals for a date",
+    "log exercise or meal entries into a connected user's diary",
+    "read water intake for a given diary date",
+    "sync body measurements and profile after OAuth consent",
+    "subscribe partners to diary change notifications (webhooks)"
+  ],
+  "sources": [
+    "https://myfitnesspalapi.com/",
+    "https://myfitnesspalapi.com/docs",
+    "https://myfitnesspalapi.com/docs/domains/",
+    "https://myfitnesspalapi.com/docs/versioning/",
+    "https://myfitnesspalapi.com/docs/partner-authentication/",
+    "https://myfitnesspalapi.com/docs/user-authentication/",
+    "https://myfitnesspalapi.com/docs/making-requests/",
+    "https://myfitnesspalapi.com/docs/access-tokens/"
+  ],
+  "researcher_confidence": "medium"
+}

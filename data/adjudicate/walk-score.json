@@ -1,0 +1,15 @@
+{
+  "id": "walk-score",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "5,000 calls per day; limited to free consumer-facing applications.",
+  "rate_limits": "Free plan: 5,000 calls per day. Premium includes high-volume usage, but its quota is not publicly quantified.",
+  "cors": "no",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "The Walk Score API returns Walk Score and optional Transit Score and Bike Score for supported locations in the United States and Canada. Real-estate sites and apps can use these scores to display, search, or rank properties by walkability and transportation access. Related premium APIs provide score details and public-transit data.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected; the Free Version allows 5,000 calls/day for free consumer-facing applications (https://www.walkscore.com/professional/api-sign-up.php). rate_limits: corrected; that page publishes the 5,000/day quota. cors: corrected to no because official docs require server-side API calls (https://www.walkscore.com/professional/api.php). description: corrected; the Score API supports the US and Canada, returns the three scores, and does not document neighborhood details (https://www.walkscore.com/professional/api.php)."
+}

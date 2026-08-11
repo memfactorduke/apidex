@@ -1,0 +1,52 @@
+{
+  "id": "hotelbeds",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/hotels/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Evaluation-environment API keys are limited to 50 requests per day.",
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "A published evaluation quota exists: 50 requests per day, with higher quotas available through progression to the certification environment.",
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/getting-started/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.hotelbeds.com/documentation/hotels/"
+    }
+  },
+  "notes": "The API and documented test endpoint remain operational. The entry fails because official documentation publishes a 50-request-per-day evaluation quota. Current documentation also says mTLS is required for Hotel Booking API operations in addition to API-Key/X-Signature, an important authentication detail omitted from the entry."
+}

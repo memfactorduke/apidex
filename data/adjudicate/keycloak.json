@@ -1,0 +1,15 @@
+{
+  "id": "keycloak",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Keycloak's Admin REST API manages realms, users, groups, clients, roles, sessions, and identity providers on an operator-hosted Keycloak deployment. Calls require a bearer access token with appropriate administrative roles or delegated permissions; the full realm-admin role is not required. Tokens may represent users or service accounts and can be obtained through supported OAuth 2.0/OpenID Connect flows, including direct access grants and client credentials.",
+  "status": null,
+  "resolution_notes": "description: CORRECTED. The current developer guide requires an access token with appropriate permissions and documents both user and service-account authentication; the administration guide documents narrower roles and delegated fine-grained permissions, proving realm-admin is not universally required. https://www.keycloak.org/docs/latest/server_development/index.html https://www.keycloak.org/docs/latest/server_admin/"
+}

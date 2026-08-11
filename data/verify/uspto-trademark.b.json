@@ -1,0 +1,52 @@
+{
+  "id": "uspto-trademark",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tdr.uspto.gov/faqview"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.uspto.gov/sites/default/files/documents/tm-enterprise-api-user-guide-v2.pdf",
+      "source": "https://data.uspto.gov/support/release/summary"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.uspto.gov/sites/default/files/documents/tm-enterprise-api-user-guide-v2.pdf"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests per API key per minute generally; 4 requests per API key per minute for PDF and ZIP downloads, including multi-case downloads.",
+      "source": "https://tdr.uspto.gov/faqview"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"USPTO-API-KEY: YOUR_API_KEY\" \"https://tsdrapi.uspto.gov/ts/cd/casestatus/sn88779999/info.json\"",
+      "source": "https://www.uspto.gov/sites/default/files/documents/tm-enterprise-api-user-guide-v2.pdf"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.uspto.gov/trademarks/apply/check-status-view-documents/trademark-bulk-data"
+    }
+  },
+  "notes": "TSDR remains an official current service, so HTTP 0 is not sufficient evidence that it is dead. However, the listed Developer Hub catalog was decommissioned and now redirects to ODP. The example inserts an invalid slash after \"sn\" and its response shape is unsupported. Assignment and bulk-data access are separate USPTO surfaces, not routes under the TSDR base URL."
+}

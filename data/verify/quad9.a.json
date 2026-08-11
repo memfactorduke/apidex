@@ -1,0 +1,52 @@
+{
+  "id": "quad9",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quad9.net/service/service-addresses-and-features/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quad9.net/support/faq/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quad9.net/service/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quad9.net/support/faq/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use standards-based DoH on port 443 at https://dns.quad9.net/dns-query with DNS wire format rather than application/dns-json. Quad9 retired its JSON lookup service on TCP port 5053 on May 5, 2025.",
+      "source": "https://quad9.net/news/blog/quad9-json-based-dns-service-retires-5-may-2025/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quad9.net/support/faq/"
+    }
+  },
+  "notes": "Quad9 is operational and its standard DoH endpoint remains current. The entry's JSON format, application/dns-json use case, port-5053 curl example, and JSON response are obsolete. Official documentation confirms the service is free but gives no numeric quota or rate-limit policy; it asks large organizations to contact Quad9 before sending large-scale traffic."
+}

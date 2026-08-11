@@ -1,0 +1,52 @@
+{
+  "id": "reed",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reed.co.uk/developers/jobseeker"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reed.co.uk/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reed.co.uk/developers/jobseeker"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.reed.co.uk/developers/jobseeker"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.reed.co.uk/developers/jobseeker"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.reed.co.uk/developers/jobseeker"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.reed.co.uk/developers/jobseeker"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The Jobseeker API searches Reed job listings and retrieves individual job details; results include limited employer identifiers and names. Reed's recruiter and candidate-data APIs are separate services with different endpoints, authentication, and access requirements.",
+      "source": "https://www.reed.co.uk/developers"
+    }
+  },
+  "notes": "Current 2026 official pages still document the v1.0 Jobseeker API and Basic-auth API keys. Reed does not explicitly state that this API is free, quota-free, or browser-CORS enabled. The description improperly combines the public Jobseeker API with Reed's separately documented Recruiter APIs."
+}

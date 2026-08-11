@@ -1,0 +1,15 @@
+{
+  "id": "afp-api",
+  "base_url": "https://afp-apicore-prod.afp.com",
+  "docs_url": "https://www.afp.com/en/our-offer/afp-api",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl --fail --show-error --get \"$AFP_CONTRACT_SEARCH_URL\" -H \"Accept: application/json\" -H \"$AFP_CONTRACT_AUTH_HEADER\" --data-urlencode \"query=climate\"",
+  "example_response_snippet": "{\"count\":1,\"documents\":[{\"uno\":\"<AFP UNO>\",\"title\":\"<AFP headline>\",\"published\":\"<ISO-8601 timestamp>\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: replace; AFP's current official news site serves media from this host (https://us.afpnews.com/). docs_url: replace the 404 legacy path with AFP's maintained API page describing endpoint documentation, a quick-start guide and Swagger access (https://www.afp.com/en/our-offer/afp-api). example: replace the invented Bearer /v1/search call; AFP says credentials are issued after registration, so the curl conservatively uses the contract-issued search URL and authentication header (https://www.afp.com/en/our-offer/afp-api)."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "posthog",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "PostHog uses separate bases: https://us.i.posthog.com for US public ingestion/flag endpoints and https://us.posthog.com for US private endpoints; EU uses the corresponding eu.i.posthog.com and eu.posthog.com hosts.",
+      "source": "https://posthog.com/docs/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://posthog.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://posthog.com/docs/api/personal-api-keys"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://posthog.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Published monthly limits include 1 million analytics events, 5,000 session recordings, and 1 million feature-flag requests; other products have separate limits.",
+      "source": "https://posthog.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published private-API limits include analytics 240/minute and 1,200/hour; events/values 60/minute and 300/hour; query 2,400/hour; local flag evaluation 600/minute; other CRUD endpoints 480/minute and 4,800/hour. Public POST-only endpoints have no request-level limit.",
+      "source": "https://posthog.com/docs/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The shown request uses the public-ingestion host for a private API route and omits authentication. A current projects request is: curl -H \"Authorization: Bearer <PERSONAL_API_KEY>\" https://us.posthog.com/api/organizations/<organization_id>/projects/",
+      "source": "https://us.posthog.com/api/schema/swagger-ui/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://posthog.com/docs/api"
+    }
+  },
+  "notes": "The API is operational, but the entry conflates public and private API hosts. Its example is invalid, and both free-tier limits and endpoint-specific rate limits are currently published. No definitive official general CORS policy was located."
+}

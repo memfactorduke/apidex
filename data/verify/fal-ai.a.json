@@ -1,0 +1,52 @@
+{
+  "id": "fal-ai",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fal.ai/docs/documentation/setting-up/authentication"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fal.ai/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fal.ai/docs/documentation/setting-up/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fal.ai/docs/documentation/model-apis/faq"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fal.ai/docs/documentation/model-apis/faq"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Concurrency limits are published: new accounts start at 2 concurrent IN_PROGRESS requests; self-serve scales up to 40 with credit purchases; excess requests queue (not rejected). Per-endpoint caps may also apply.",
+      "source": "https://fal.ai/docs/documentation/model-apis/concurrency-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (CORS enabled; Access-Control-Allow-Origin reflects request Origin on fal.run)",
+      "source": "https://fal.ai/docs/documentation/model-apis/faq"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fal.ai/docs/documentation/setting-up/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fal.ai/docs"
+    }
+  },
+  "notes": "API live and documented. Main miss: rate_limits are published as concurrency (2\u219240), not unpublished. CORS is enabled on fal.run (live OPTIONS). free_tier true via free credits in FAQ; exact free credit amounts not published. Auth header is Authorization: Key; example path fal-ai/flux/dev still valid."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "onet",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api-v2.onetcenter.org",
+      "source": "https://services.onetcenter.org/reference/start/migration"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://services.onetcenter.org/reference/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "api_key (X-API-Key request header)",
+      "source": "https://services.onetcenter.org/reference/start/overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://services.onetcenter.org/reference/start/accounts"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The service is free with registration and required attribution. No maximum rate is currently imposed, but published guidance is 5 requests per second and 50,000 requests per day; access may be throttled above those levels.",
+      "source": "https://services.onetcenter.org/terms"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No maximum rate is currently imposed, but the published guidance is 5 requests per second and 50,000 requests per day. Requests may receive HTTP 429 during limited availability, with at least 200 milliseconds recommended before retrying.",
+      "source": "https://services.onetcenter.org/reference/start/overview"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api-v2.onetcenter.org/online/occupations/17-2051.00/\" -H \"X-API-Key: YOUR_API_KEY\"",
+      "source": "https://services.onetcenter.org/reference/online/occupation"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "O*NET Web Services is a REST API sponsored by the U.S. Department of Labor's Employment and Training Administration and developed by the National Center for O*NET Development. It provides occupational data and career-exploration services. Current version 2 access uses approved organizational/project registration, X-API-Key authentication, and JSON responses; personal-use registration is not supported.",
+      "source": "https://services.onetcenter.org/about"
+    }
+  },
+  "notes": "The entry describes legacy API version 1.9. That version remains available to organizations registered before November 20, 2025, but new integrations should use version 2.0. Version 2 changed the hostname, replaced Basic authentication with X-API-Key, and removed XML output. The supplied response snippet also includes a legacy green tag absent from the current documented example."
+}

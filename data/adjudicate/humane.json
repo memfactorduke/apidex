@@ -1,0 +1,15 @@
+{
+  "id": "humane",
+  "base_url": "unknown",
+  "docs_url": "unknown",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -LsS \"https://support.humane.com/hc/en-us/articles/34243204841997-Ai-Pin-Consumers-FAQ\"",
+  "example_response_snippet": "<title>Ai Pin Consumers FAQ \u2013 Ground Control</title>",
+  "description": "Defunct. Humane discontinued Ai Pin's server connectivity and cloud services on February 28, 2025. HP acquired Humane's Cosmos platform, intellectual property, and personnel; no current official source identifies a public Humane search or knowledge-retrieval API.",
+  "status": "defunct",
+  "resolution_notes": "Sources: [1] https://support.humane.com/hc/en-us/articles/34243204841997-Ai-Pin-Consumers-FAQ [2] https://www.hp.com/us-en/newsroom/press-releases/2025/hp-accelerates-ai-software-investments-to-transform-the-future-of-work.html. base_url: incorrect\u2014HTTP 0 and [1] confirms server shutdown. docs_url: incorrect\u2014no current developer docs; [1]. example: incorrect\u2014no API request exists; curl now retrieves the official shutdown notice, [1]. description: incorrect\u2014[1] confirms shutdown and [2] confirms HP acquired Cosmos and Humane personnel."
+}

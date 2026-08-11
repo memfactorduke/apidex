@@ -1,0 +1,15 @@
+{
+  "id": "okx",
+  "base_url": "https://openapi.okx.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "API signup and use are free; trading fees apply. No quota-based free-tier allowance is published. Endpoint limits still apply, and some higher sub-account limits require VIP5 and fill-ratio eligibility.",
+  "rate_limits": "Endpoint-specific: public REST by IP; private REST and WebSocket order management by User ID; WebSocket login/subscription by connection. Trading limits may also use instrument ID/family and be shared across REST/WebSocket; some sub-account increases require VIP5 and fill-ratio eligibility.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url\u2014replace: the 2026-05-20 changelog recommends openapi.okx.com for Global REST; www still works and regional domains remain. https://www.okx.com/docs-v5/log_en/ free_tier_limits\u2014replace: the official FAQ says signup and API use are free, with trading fees. https://www.okx.com/en-gb/okx-api rate_limits\u2014replace: official docs specify endpoint-dependent IP, User-ID, connection, instrument/family, sub-account, and VIP5 fill-ratio rules. https://www.okx.com/docs-v5/"
+}

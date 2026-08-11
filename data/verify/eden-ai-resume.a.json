@@ -1,0 +1,52 @@
+{
+  "id": "eden-ai-resume",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.edenai.co/reference/ocr_resume_parser_create"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.edenai.co/reference/ocr_resume_parser_create"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.edenai.co/reference/ocr_resume_parser_create"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.edenai.co/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.edenai.co/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.edenai.co/reference/ocr_resume_parser_create"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.edenai.co/reference/ocr_resume_parser_create"
+    }
+  },
+  "notes": "Verified against official Eden AI docs and pricing. Automated 404s appear bot-detection false positives; base_url and docs_url load correctly. Auth is Bearer API key; free credits on signup; rate limits not published; example curl matches OCR resume_parser endpoint."
+}

@@ -1,0 +1,103 @@
+{
+  "id": "microsoft-graph-calendar",
+  "status": "operational",
+  "name": "Microsoft Graph Calendar",
+  "category": "events-holidays",
+  "tagline": "Outlook and Exchange calendars via Microsoft Graph REST API",
+  "description": "Microsoft Graph Calendar provides REST APIs for managing Outlook and Exchange Online calendars, events, attendees, and scheduling information, including free/busy queries. It uses Microsoft Entra ID authentication. A free Microsoft 365 E5 sandbox is available only to qualifying Developer Program members and is restricted to development and testing.",
+  "base_url": "https://graph.microsoft.com/v1.0",
+  "docs_url": "https://learn.microsoft.com/en-us/graph/api/resources/calendar",
+  "signup_url": "https://developer.microsoft.com/en-us/microsoft-365/dev-program",
+  "auth": {
+    "type": "oauth2",
+    "details": "Microsoft Entra ID OAuth 2.0 / OpenID Connect. Register an app in Entra ID, request calendar permissions (e.g. Calendars.Read, Calendars.ReadWrite), and send Authorization: Bearer YOUR_ACCESS_TOKEN. Delegated or application (client credentials) flows supported."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No generally available free tier. Standard Calendar API access has no added per-call charge with an applicable user license. Qualifying Developer Program members can receive a free 25-user E5 sandbox for development/testing, renewable while eligible and active.",
+    "paid_plans": "Requires appropriate Microsoft 365 / Exchange Online licenses for user mailboxes; Azure AD app registration free. Enterprise Microsoft 365 plans apply for production tenants."
+  },
+  "rate_limits": "Per app ID and mailbox: 10,000 requests per 10 minutes, four concurrent requests, and 150 MB of uploads per five minutes. Global Graph limits also apply. On HTTP 429, wait for the duration specified by Retry-After.",
+  "example": {
+    "request": "curl -s 'https://graph.microsoft.com/v1.0/me/calendar/events?$top=5' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
+    "response_snippet": "{\n  \"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#users('user-id')/calendar/events\",\n  \"value\": [\n    {\n      \"id\": \"AAMkAGI2...\",\n      \"subject\": \"Team standup\",\n      \"start\": {\"dateTime\": \"2026-08-11T16:00:00.0000000\", \"timeZone\": \"UTC\"},\n      \"end\": {\"dateTime\": \"2026-08-11T16:30:00.0000000\", \"timeZone\": \"UTC\"},\n      \"isAllDay\": false,\n      \"showAs\": \"busy\"\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "list upcoming Outlook calendar events for the signed-in user",
+    "create a meeting with attendees on an Exchange Online calendar",
+    "check free/busy availability for scheduling",
+    "update or cancel an existing calendar event",
+    "list a user's calendars and switch default calendar",
+    "find events in a date range via calendarView"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/graph/api/resources/calendar",
+    "https://learn.microsoft.com/en-us/graph/api/user-list-events",
+    "https://learn.microsoft.com/en-us/graph/throttling",
+    "https://learn.microsoft.com/en-us/graph/auth/",
+    "https://developer.microsoft.com/en-us/microsoft-365/dev-program",
+    "https://learn.microsoft.com/en-us/graph/use-the-api"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

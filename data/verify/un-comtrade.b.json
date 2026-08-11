@@ -1,0 +1,52 @@
+{
+  "id": "un-comtrade",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uncomtrade.org/docs/un-comtrade-api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://uncomtrade.org/docs/un-comtrade-api/",
+      "source": "https://uncomtrade.org/docs/un-comtrade-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uncomtrade.org/docs/api-subscription-keys/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uncomtrade.org/docs/subscriptions/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free basic access provides up to 500 API calls/day and 100,000 records per call; the official source does not state a 100,000-record monthly quota.",
+      "source": "https://uncomtrade.org/docs/subscriptions/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://uncomtrade.org/docs/subscriptions/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://uncomtrade.org/docs/un-comtrade-api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The API exposes official trade statistics through unauthenticated, tightly limited preview endpoints and broader free or premium endpoints requiring a UN Comtrade account and subscription key. Premium subscriptions add bulk and asynchronous access and higher quotas.",
+      "source": "https://uncomtrade.org/docs/un-comtrade-api/"
+    }
+  },
+  "notes": "The API host remains current despite its bare root returning 404. The submitted documentation slug is obsolete, and 100,000 records is a per-call limit, not a monthly quota. Official public documentation shows subscription-key in the query string; it did not establish that the example's Ocp-Apim-Subscription-Key header is currently accepted. No authoritative CORS policy was found."
+}

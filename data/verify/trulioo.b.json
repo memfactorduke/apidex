@@ -1,0 +1,52 @@
+{
+  "id": "trulioo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.trulioo.com/reference/multi-region-hosting"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.trulioo.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://developer.trulioo.com/reference/authentication-recipe"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developer.trulioo.com/reference/api-reference-overview"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl --request GET --url 'https://api.trulioo.com/v3/connection/testauthentication' --header 'Accept: application/json' --header 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
+      "source": "https://developer.trulioo.com/reference/get_v3-connection-testauthentication"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Trulioo provides identity, document, business, fraud, and watchlist verification services using global data sources. Current Platform and Normalized API v3 integrations use OAuth 2.0 client credentials obtained through Trulioo support or a Customer Success Manager; Basic authentication is limited to legacy NAPI v1 integrations.",
+      "source": "https://developer.trulioo.com/reference/overview-api-guides"
+    }
+  },
+  "notes": "Current docs identify Platform/NAPI v3 as OAuth 2.0 and NAPI v1 Basic Auth as legacy-only. The example targets that legacy route, mislabels username/password as API key/secret, and gives the wrong response shape; current v3 uses a Bearer token. Official pages provide no numeric public rate limit and do not explicitly establish whether a free tier exists."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "intrinio",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/documentation/web_api/get_company_v2"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/documentation/api_v2/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.intrinio.com/sandbox-vs-production-1"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable to production: production access requires a paid subscription. A limited sandbox is available only to select users, generally through a free trial.",
+      "source": "https://help.intrinio.com/sandbox-vs-production-1"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published but subscription-dependent: daily, per-minute, and per-second limits may apply. Paging requests with page_size over 100 and bulk requests are limited to 1/minute for free users and 1/second for paid users; free-data-only users have a 100 requests/second throttle.",
+      "source": "https://docs.intrinio.com/documentation/api_v2/limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Supported for public browser applications using an X-Authorization-Public-Key header and an allowlist of authorized domains.",
+      "source": "https://docs.intrinio.com/documentation/api_v2/authentication"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/documentation/api_v2/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/documentation/api_v2/getting_started"
+    }
+  },
+  "notes": "The API and example endpoint are current, and Bearer API-key authentication is officially supported. The entry fails because Intrinio publishes detailed, subscription-dependent limits and documents browser-domain public-key access, so rate_limits and cors should not be listed as unknown."
+}

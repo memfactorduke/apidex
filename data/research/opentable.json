@@ -1,0 +1,40 @@
+{
+  "id": "opentable",
+  "status": "operational",
+  "name": "OpenTable API",
+  "category": "food-drink",
+  "tagline": "Partner API for restaurant search, availability, and reservation booking.",
+  "description": "OpenTable's platform APIs let approved partners search restaurants, check table availability, and create or manage reservations. Access is partner-gated rather than fully self-serve; authentication and endpoint roots depend on the integration program (guest center, booking, or marketplace). Docs live on platform.opentable.com for onboarding and product coverage.",
+  "base_url": "https://platform.opentable.com",
+  "docs_url": "https://platform.opentable.com/",
+  "signup_url": "https://platform.opentable.com/",
+  "auth": {
+    "type": "other",
+    "details": "Partner/program credentials; self-serve public API key signup not confirmed from public docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Partner/commercial pricing; public self-serve tiers not published"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://platform.opentable.com/\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"message\":\"Partner documentation portal; authenticated API endpoints require OpenTable partner credentials.\"}"
+  },
+  "use_cases": [
+    "search restaurants by location or cuisine",
+    "check table availability for a party size and time",
+    "create or cancel a restaurant reservation",
+    "retrieve restaurant details and booking policies"
+  ],
+  "sources": [
+    "https://platform.opentable.com/"
+  ],
+  "researcher_confidence": "low"
+}

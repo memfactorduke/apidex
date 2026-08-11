@@ -1,0 +1,15 @@
+{
+  "id": "weatherstack",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "100 API calls per month; real-time weather and HTTPS are included.",
+  "rate_limits": "Monthly quotas: Free 100; Standard 50,000; Professional 300,000; Business 1,000,000 calls. No fixed per-second or per-minute limit is published. Malicious or technically erroneous traffic may be throttled.",
+  "cors": null,
+  "example_request": "curl 'https://api.weatherstack.com/current?access_key=YOUR_ACCESS_KEY&query=New%20York'",
+  "example_response_snippet": "{\"request\":{\"type\":\"City\",\"query\":\"New York, United States of America\",\"language\":\"en\",\"unit\":\"m\"},\"location\":{\"name\":\"New York\",\"country\":\"United States of America\"},\"current\":{\"observation_time\":\"01:36 PM\",\"temperature\":18,\"weather_descriptions\":[\"Sunny\"]}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Replace unknown with 100 calls/month, confirmed by https://weatherstack.com/pricing. rate_limits: Use the published monthly plan quotas and note discretionary abuse/error throttling; evidence: https://weatherstack.com/pricing and https://weatherstack.com/terms. example: Replace placeholders with the documented HTTPS current-weather endpoint and representative JSON structure; evidence: https://weatherstack.com/documentation."
+}

@@ -1,0 +1,102 @@
+{
+  "id": "moodle",
+  "status": "operational",
+  "name": "Moodle Web Services",
+  "category": "education-reference",
+  "tagline": "Open-source LMS REST web services for course, user, and grade integration",
+  "description": "Moodle Web Services expose each Moodle site's enabled LMS functions through site-specific endpoints and protocols such as REST. Each site controls its services, functions, and user tokens. Moodle may be self-hosted, hosted directly by Moodle through MoodleCloud, or hosted by a Moodle Certified Partner or Service Provider; there is no single global API endpoint.",
+  "base_url": "https://{yoursite}/webservice/rest/server.php",
+  "docs_url": "https://moodledev.io/docs/apis/subsystems/external",
+  "signup_url": "https://moodle.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Web service token (wstoken query or form field) issued per user/service in Site administration; optional OAuth 2 for some flows. Self-serve only on your own Moodle instance."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free open-source software; no vendor API quota\u2014limits are per site/hosting",
+    "paid_plans": "MoodleCloud and Moodle partners offer paid hosting; core web services are free with Moodle"
+  },
+  "rate_limits": "not published (site/admin configurable; no global Moodle.org quota)",
+  "example": {
+    "request": "curl -s \"https://YOUR_MOODLE_SITE/webservice/rest/server.php?wstoken=YOUR_API_KEY&wsfunction=core_webservice_get_site_info&moodlewsrestformat=json\"",
+    "response_snippet": "{\"sitename\":\"My Moodle\",\"username\":\"admin\",\"firstname\":\"Admin\",\"lastname\":\"User\",\"fullname\":\"2\",\"userid\":2,\"siteurl\":\"https://example.moodle.cloud\",\"userprivateaccesskey\":\"...\",\"functions\":[{\"name\":\"core_webservice_get_site_info\",\"version\":\"2024100700\"}]}"
+  },
+  "use_cases": [
+    "list courses on a Moodle site",
+    "create or update LMS users from an SIS",
+    "enrol users in a course",
+    "fetch grades or grade items for a course",
+    "get site info and available web service functions"
+  ],
+  "sources": [
+    "https://moodledev.io/docs/apis",
+    "https://moodledev.io/docs/apis/subsystems/external",
+    "https://docs.moodle.org/en/Web_services",
+    "https://docs.moodle.org/en/Using_web_services",
+    "https://moodle.com/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "rate_limits"
+    ]
+  }
+}

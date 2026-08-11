@@ -1,0 +1,52 @@
+{
+  "id": "supabase-auth",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/docs/guides/auth/oauth-server/mcp-authentication"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/docs/reference/auth"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/docs/guides/getting-started/api-keys"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published endpoint-specific limits include: built-in email sends 2/hour project-wide; OTP sends default to 30/hour; OTP, signup-confirmation, and password-reset resend windows default to 60 seconds; verification 360/hour/IP; token refresh 1,800/hour/IP; MFA challenge/verify 15/hour/IP; and anonymous sign-ins 30/hour/IP. Some limits are configurable.",
+      "source": "https://supabase.com/docs/guides/auth/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/docs/guides/self-hosting/self-hosted-envoy"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST 'https://YOUR_PROJECT_REF.supabase.co/auth/v1/signup' -H 'apikey: YOUR_PUBLISHABLE_KEY' -H 'Content-Type: application/json' -d '{\"email\":\"user@example.com\",\"password\":\"example-password\"}'",
+      "source": "https://supabase.com/docs/guides/auth/passwords"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/docs/guides/auth/architecture"
+    }
+  },
+  "notes": "HTTP 0 is expected for the literal placeholder hostname; official docs require replacing the project reference. The docs URL is live but redirects to the Auth Server reference. Current docs recommend sb_publishable and sb_secret keys; legacy anon and service_role keys still work but are scheduled for deprecation by the end of 2026. The entry fails because rate limits are published and the example is only a placeholder."
+}

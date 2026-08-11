@@ -1,0 +1,42 @@
+{
+  "id": "usda-nass-quick-stats",
+  "status": "operational",
+  "name": "USDA NASS Quick Stats",
+  "category": "agriculture",
+  "tagline": "Authoritative US crop, livestock, and farm economics survey and census data.",
+  "description": "USDA National Agricultural Statistics Service (NASS) Quick Stats API provides programmatic access to official U.S. agricultural statistics from surveys and the Census of Agriculture. Query crops, livestock, prices, inventory, acreage, production, and farm economics by commodity, geography, year, and statistic with a free API key.",
+  "base_url": "https://quickstats.nass.usda.gov/api",
+  "docs_url": "https://quickstats.nass.usda.gov/api",
+  "signup_url": "https://quickstats.nass.usda.gov/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter `key`; free self-serve signup on the Quick Stats API page."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free with API key; daily call limit published by NASS (verify on docs)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://quickstats.nass.usda.gov/api/api_GET/?key=YOUR_API_KEY&commodity_desc=CORN&year__GE=2020&state_alpha=IA&format=JSON\"",
+    "response_snippet": "{\"data\":[{\"commodity_desc\":\"CORN\",\"state_name\":\"IOWA\",\"year\":\"2023\",\"Value\":\"...\"}]}"
+  },
+  "use_cases": [
+    "get corn production by state and year",
+    "pull livestock inventory for a county",
+    "compare crop prices across years",
+    "fetch Census of Agriculture farm counts by geography",
+    "export commodity statistics for a custom query"
+  ],
+  "sources": [
+    "https://quickstats.nass.usda.gov/api"
+  ],
+  "researcher_confidence": "low"
+}

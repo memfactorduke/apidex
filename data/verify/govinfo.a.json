@@ -1,0 +1,52 @@
+{
+  "id": "govinfo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/usgpo/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.govinfo.gov/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.govinfo.gov/developers"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.govinfo.gov/features/api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/usgpo/api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Current GovInfo defaults are 36,000 requests per hour, 1,200 requests per minute, and 40 requests per second. DEMO_KEY has lower limits.",
+      "source": "https://github.com/usgpo/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/usgpo/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/usgpo/api"
+    }
+  },
+  "notes": "The API and documented collections endpoint are currently live. The example matches GPO's official quickstart and returns the described collection fields. The entry fails because it substitutes api.data.gov's generic 1,000/hour default for GovInfo's published service-specific limits. Official documentation does not state a CORS policy."
+}

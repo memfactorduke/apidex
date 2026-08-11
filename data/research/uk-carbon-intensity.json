@@ -1,0 +1,43 @@
+{
+  "id": "uk-carbon-intensity",
+  "status": "operational",
+  "name": "UK Carbon Intensity API",
+  "category": "energy-utilities",
+  "tagline": "National Grid ESO free API for GB carbon intensity forecasts by region and generation mix.",
+  "description": "The UK Carbon Intensity API provides real-time and forecast data on the carbon intensity of electricity generation in Great Britain. It includes regional forecasts, generation mix information, and intensity levels (very low to very high). The API is free to use and does not require authentication. Data is provided by National Grid ESO and is updated regularly. Developers can access intensity data for different regions and time periods, making it useful for applications related to energy consumption, sustainability, and smart home automation.",
+  "base_url": "https://api.carbonintensity.org.uk",
+  "docs_url": "https://carbonintensity.org.uk/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. The API is free and open to all developers without the need for an API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Unlimited free access. No rate limits or usage restrictions published.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET 'https://api.carbonintensity.org.uk/intensity' -H 'Accept: application/json'",
+    "response_snippet": "{\n  \"data\": [\n    {\n      \"from\": \"2023-10-01T12:00Z\",\n      \"to\": \"2023-10-01T12:30Z\",\n      \"intensity\": {\n        \"forecast\": 120,\n        \"actual\": 115,\n        \"index\": \"moderate\"\n      }\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "get current carbon intensity for Great Britain",
+    "forecast carbon intensity for a specific region",
+    "retrieve generation mix data for electricity production",
+    "monitor carbon intensity levels over time",
+    "integrate carbon intensity data into smart home systems",
+    "analyze regional variations in carbon intensity"
+  ],
+  "sources": [
+    "https://carbonintensity.org.uk/",
+    "https://api.carbonintensity.org.uk/"
+  ],
+  "researcher_confidence": "high"
+}

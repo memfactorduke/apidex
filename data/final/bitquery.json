@@ -1,0 +1,97 @@
+{
+  "id": "bitquery",
+  "status": "operational",
+  "name": "Bitquery",
+  "category": "crypto",
+  "tagline": "GraphQL and streaming on-chain data across many blockchains",
+  "description": "Bitquery provides GraphQL and streaming APIs for blockchain data across many chains, with strong coverage of DEX trades, transfers, balances, and analytics. Developers query historical and real-time on-chain activity via a unified GraphQL endpoint and related streaming products.",
+  "base_url": "https://graphql.bitquery.io",
+  "docs_url": "https://docs.bitquery.io/",
+  "signup_url": "https://account.bitquery.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer YOUR_API_KEY (or X-API-KEY); self-serve signup at account.bitquery.io"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "7-day no-card trial: 1,000 API points, 100 MCP credits, 2 simultaneous streams, 17 stream-minutes, and 0.2 GB stream bandwidth; trial sandbox includes all chains and complete history.",
+    "paid_plans": null
+  },
+  "rate_limits": "Personal: 30 requests/minute and 3 concurrent requests; Pro: 90/min and 6 concurrent; Scale: 240/min and 12 concurrent; Enterprise: custom.",
+  "example": {
+    "request": "curl -X POST 'https://graphql.bitquery.io' -H 'Content-Type: application/json' -H 'Authorization: Bearer YOUR_API_KEY' -d '{\"query\":\"{ EVM(network: eth) { Blocks(limit: {count: 1}) { Block { Number } } } }\"}'",
+    "response_snippet": "{\"data\":{\"EVM\":{\"Blocks\":[{\"Block\":{\"Number\":12345678}}]}}"
+  },
+  "use_cases": [
+    "query recent DEX trades on Ethereum or Solana",
+    "get token transfer history for a wallet",
+    "stream real-time on-chain events",
+    "fetch token balances and prices across chains",
+    "analyze DEX liquidity and volume"
+  ],
+  "sources": [
+    "https://docs.bitquery.io/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

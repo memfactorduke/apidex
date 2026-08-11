@@ -1,0 +1,15 @@
+{
+  "id": "particle",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": "Up to 100 devices (cellular or Wi-Fi), 100,000 Data Operations per month pooled across all devices, and up to 100 MB of pooled cellular data per month.",
+  "rate_limits": "10,000 requests per 5 minutes per source IP for all API routes; selected token, account, and event routes: 100 per 5 minutes; SSE: 100 simultaneous connections per source IP; serial-number lookup: 50 per hour per access-token user account.",
+  "cors": null,
+  "example_request": "curl \"https://api.particle.io/v1/devices\" -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\"",
+  "example_response_snippet": "[{\"id\":\"53ff6f0650723\",\"name\":\"plumber_laser\",\"last_ip_address\":\"10.0.0.1\",\"last_heard\":\"2020-05-28T14:46:07.586Z\",\"last_handshake_at\":\"2020-05-27T18:13:01.059Z\",\"product_id\":6,\"online\":true,\"platform_id\":6,\"cellular\":false,\"notes\":\"laser!\",\"functions\":[\"fire\"],\"variables\":{\"power\":\"int32\"},\"status\":\"normal\",\"serial_number\":\"PH1234\",\"system_firmware_version\":\"1.5.0\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "auth_type: oauth2; official docs say Cloud API access is managed with OAuth and access tokens: https://docs.particle.io/reference/cloud-apis/authentication/. free_tier_limits: 100 devices, 100K monthly Data Operations, 100 MB monthly pooled cellular: https://docs.particle.io/notes/plans/. rate_limits: published general and route/SSE/serial limits: https://docs.particle.io/reference/cloud-apis/api/. example: use Authorization: Bearer; query tokens are deprecated, and list-device responses use online: https://docs.particle.io/reference/cloud-apis/api/."
+}

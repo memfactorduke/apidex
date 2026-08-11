@@ -1,0 +1,15 @@
+{
+  "id": "meetup",
+  "base_url": "https://api.meetup.com/gql-ext",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": false,
+  "free_tier_limits": "No free tier; API access requires an active Meetup Pro subscription and approval.",
+  "rate_limits": "Official sources conflict: the GraphQL guide states 500 query points per 60 seconds; the Help Center says there is no strict automatic request cap and usage is monitored.",
+  "cors": null,
+  "example_request": "curl -X POST 'https://api.meetup.com/gql-ext' -H 'Authorization: Bearer YOUR_TOKEN' -H 'Content-Type: application/json' --data '{\"query\":\"query { self { id name } }\"}'",
+  "example_response_snippet": "{\"data\":{\"self\":{\"id\":1234,\"name\":\"Cool Developer\"}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: replace with https://api.meetup.com/gql-ext (https://www.meetup.com/graphql/guide/). free_tier=false; free_tier_limits=no free tier, active Pro and approval required (https://help.meetup.com/hc/en-us/articles/41453576628749-How-can-I-get-access-to-Meetup-s-API). rate_limits: guide says 500 points/60s; Help Center says no strict automatic cap and usage is monitored (https://www.meetup.com/graphql/guide/; https://help.meetup.com/hc/en-us/articles/41467300722061-Are-there-rate-limits-when-using-Meetup-s-API). example: use documented GraphQL POST (https://www.meetup.com/graphql/guide/)."
+}

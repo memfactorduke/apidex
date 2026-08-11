@@ -1,0 +1,52 @@
+{
+  "id": "placeholder",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.tvmaze.com/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.tvmaze.com/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.tvmaze.com/threads/4058/api-questions"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.tvmaze.com/api/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for any purpose, including commercial use, under CC BY-SA with attribution and ShareAlike; the free plan allows 20 calls every 10 seconds per IP address.",
+      "source": "https://www.tvmaze.com/api#licensing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The public API is documented to allow at least 20 calls every 10 seconds per IP address, not at most 20. Edge-cached requests may not count, and temporarily stricter limits may be imposed.",
+      "source": "https://www.tvmaze.com/api#rate-limiting"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "All endpoints are CORS-enabled.",
+      "source": "https://www.tvmaze.com/api#cors"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.tvmaze.com/api#show-single-search"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The API is live and the documented curl endpoint returned JSON. The licensing claim is materially wrong: commercial use is allowed under CC BY-SA. The rate limit is a guaranteed minimum, not a hard maximum. The description's functional claims match the docs, but its assertion that the API is 'widely used' was not substantiated by the official sources reviewed."
+}

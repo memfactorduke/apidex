@@ -1,0 +1,15 @@
+{
+  "id": "spamhaus",
+  "base_url": "https://apibl.spamhaus.net/lookup/v1/",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Free DQS is limited to eligible non-commercial small organizations and individuals whose usage does not consistently exceed 100,000 queries per day.",
+  "rate_limits": "Free DQS usage must not consistently exceed 100,000 queries per day. WQS returns HTTP 429 when rate limiting is in effect; no general per-second limit is published.",
+  "cors": null,
+  "example_request": "curl -H \"Authorization: Bearer YOUR_DQS_KEY\" -H \"Accept: application/json\" \"https://apibl.spamhaus.net/lookup/v1/DBL/test\"",
+  "example_response_snippet": "{\"resp\":[2002],\"status\":200}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url corrected\u2014https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/020-api-auth.html; free_tier=true and free_tier_limits corrected\u2014https://www.spamhaus.com/terms-of-use-fair-use-policy-for-free-data-query-service/; rate_limits corrected (policy above; WQS 429)\u2014https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/040-api-queries.html; example corrected\u2014https://docs.spamhaus.com/datasets/docs/source/70-access-methods/web-query-service/080-examples.html"
+}

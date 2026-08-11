@@ -1,0 +1,45 @@
+{
+  "id": "freshbooks",
+  "status": "operational",
+  "name": "FreshBooks API",
+  "category": "ecommerce-payments",
+  "tagline": "Invoicing, time tracking, and accounting API for freelancers and small service businesses.",
+  "description": "REST API for FreshBooks accounting software. Create and send invoices, track time and expenses, manage clients and projects, handle payments, and sync accounting data. OAuth2-based with bearer tokens. Popular with freelancers, agencies, and service businesses automating billing workflows.",
+  "base_url": "https://api.freshbooks.com",
+  "docs_url": "https://www.freshbooks.com/api/start",
+  "signup_url": "https://www.freshbooks.com/api/start",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 authorization code flow. Register an app at my.freshbooks.com/developers, obtain client_id and client_secret. Exchange code for access_token; call API with Authorization: Bearer YOUR_ACCESS_TOKEN. Also supports identity/me for account resolution."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access included with FreshBooks plans; free trial available. No per-request API pricing published; subject to account plan limits.",
+    "paid_plans": "Tied to FreshBooks subscription (Lite, Plus, Premium, Select). See freshbooks.com/pricing."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" \"https://api.freshbooks.com/auth/api/v1/users/me\"",
+    "response_snippet": "{\"response\":{\"id\":123456,\"first_name\":\"Jane\",\"last_name\":\"Doe\",\"email\":\"jane@example.com\",\"business_memberships\":[{\"id\":1,\"role\":\"owner\",\"business\":{\"id\":654321,\"name\":\"Acme Consulting\",\"account_id\":\"ABCDxyz\"}}]}}"
+  },
+  "use_cases": [
+    "create and send an invoice to a client",
+    "list unpaid invoices for a business account",
+    "log billable time entries against a project",
+    "create or update a client contact",
+    "record an expense with category and amount",
+    "fetch account identity and business memberships"
+  ],
+  "sources": [
+    "https://www.freshbooks.com/api/start",
+    "https://www.freshbooks.com/api/authentication",
+    "https://www.freshbooks.com/pricing",
+    "https://www.freshbooks.com/api"
+  ],
+  "researcher_confidence": "medium"
+}

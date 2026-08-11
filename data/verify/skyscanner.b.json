@@ -1,0 +1,52 @@
+{
+  "id": "skyscanner",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.skyscanner.net/docs/flights-live-prices/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.skyscanner.net/docs/flights-live-prices/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.skyscanner.net/docs/getting-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": "No public free tier is documented; API access is restricted to approved commercial partners on a case-by-case basis.",
+      "source": "https://www.partners.skyscanner.net/contact/travel-api"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": "No free-tier limits are published because no public free tier could be verified.",
+      "source": "https://www.partners.skyscanner.net/contact/travel-api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default Flights Live Pricing limits are published: create 100 requests/second and 100/minute; poll 100/second and 500/minute. Limits may be customized per API key or partner agreement.",
+      "source": "https://developers.skyscanner.net/docs/getting-started/rate-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is not supported.",
+      "source": "https://developers.skyscanner.net/docs/faqs"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The request body must include the required adults field, for example \"adults\":1. The documented method, endpoint, API-key header, and remaining shown fields are otherwise consistent.",
+      "source": "https://developers.skyscanner.net/docs/flights-live-prices/overview"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.skyscanner.net/docs/flights-live-prices/overview"
+    }
+  },
+  "notes": "The API and v3 live-search endpoint remain documented and operational. The entry fails because it incorrectly says rate limits are unpublished, leaves CORS unknown despite explicit non-support, and provides an invalid create request that omits required adults. Free-tier claims lack official support."
+}

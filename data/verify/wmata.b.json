@@ -1,0 +1,52 @@
+{
+  "id": "wmata",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wmata.com/about/developers.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.wmata.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.wmata.com/about/developers.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.wmata.com/license"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "10 calls/second and 50,000 calls/day on the free default tier",
+      "source": "https://developer.wmata.com/products"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "10 calls/second and 50,000 calls/day on the free default tier; the public demonstration key is separately described as rate-limited and subject to change",
+      "source": "https://developer.wmata.com/products"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.wmata.com/docs/services/5476364f031f590f38092507/operations/5476364f031f5909e4fe3311"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.wmata.com/apis"
+    }
+  },
+  "notes": "The official portal and WMATA developer page remain live in 2026, with current rail, bus, incident, accessibility, and GTFS APIs listed. No shutdown or base-URL migration notice was found. The material defect is the omitted free-tier quota: current documentation for the default tier reports 10 calls/second and 50,000 calls/day. Official public pages did not establish a CORS policy."
+}

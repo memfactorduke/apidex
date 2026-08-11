@@ -56,6 +56,19 @@ export function score(e: ApiEntry, qTokens: string[]): number {
     if (hit > 0) matched++;
     s += hit;
   }
+  // Coherence bonus: all (or nearly all) query tokens inside ONE use case
+  // means the entry was cataloged for this exact task — rank it above
+  // entries that merely match the same tokens scattered across fields.
+  let coherence = 0;
+  for (const u of e.use_cases) {
+    const ut = new Set(tokenize(u));
+    const inU = qTokens.filter((t) => ut.has(t)).length;
+    if (inU === 0) continue;
+    const cov = inU / qTokens.length;
+    if (cov === 1) coherence = Math.max(coherence, 15);
+    else if (cov >= 0.75) coherence = Math.max(coherence, 8);
+  }
+  s += coherence;
   return s * (1 + matched / qTokens.length);
 }
 

@@ -1,0 +1,52 @@
+{
+  "id": "osrm",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Project-OSRM/osrm-backend/wiki/Api-usage-policy"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://project-osrm.org/docs/",
+      "source": "https://project-osrm.org/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://project-osrm.org/docs/v26.6.1/http"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://fossgis.de/arbeitsgruppen/osm-server/nutzungsbedingungen/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Public demo access is limited to 1 request per second, one connection for scripts, no scraping or heavy usage, proper attribution, an identifying User-Agent, and a valid referrer where possible. Commercial use is allowed only when the service is not a substantial part of the offering. Availability is not guaranteed.",
+      "source": "https://fossgis.de/arbeitsgruppen/osm-server/nutzungsbedingungen/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Maximum 1 request per second; scripts are limited to one connection. No scraping or heavy usage.",
+      "source": "https://routing.openstreetmap.de/about.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://project-osrm.org/docs/v26.6.1/http"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The demo currently provides worldwide car, bike, and foot profiles. Its current policy restricts heavy use and permits limited commercial use, so it is not accurately characterized as car-focused or categorically restricted to development/non-production use.",
+      "source": "https://routing.openstreetmap.de/about.html"
+    }
+  },
+  "notes": "The endpoint returned current JSON without credentials and official documentation contains the same route request. The demo operator reports OSRM v5.27.1, while the submitted documentation URL targets older v5.24.0. No formal pricing or free-tier program was found."
+}

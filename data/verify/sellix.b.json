@@ -1,0 +1,52 @@
+{
+  "id": "sellix",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No operational API base URL. The former Sellix service is offline following the seizure acknowledged by Sellix.",
+      "source": "https://sellix.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "No live documentation URL. The archived official documentation is at https://github.com/Sellix/developers; its former documentation domain was https://developers.sellix.io/.",
+      "source": "https://github.com/Sellix/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Sellix/developers/blob/main/api-reference/authentication.mdx"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 no current service or free tier is available.",
+      "source": "https://sellix.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The request matched the former API specification, but there is no valid current curl example because dev.sellix.io is unavailable.",
+      "source": "https://sellix.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Sellix formerly provided an e-commerce and crypto-payment platform, but it is not currently an operational public API.",
+      "source": "https://sellix.com/"
+    }
+  },
+  "notes": "Sellix's official site now contains only its Operation Talent seizure statement, last updated August 17, 2025. The old API and documentation hosts are unavailable. Sellix.gg must not be substituted: it explicitly states that it is a separate, unaffiliated platform."
+}

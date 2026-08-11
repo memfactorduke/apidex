@@ -1,0 +1,52 @@
+{
+  "id": "maxio-chargify",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.maxio.com/http/getting-started/how-to-get-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.maxio.com/http/advanced-billing-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.maxio.com/http/getting-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true \u2014 Maxio documents free Developer Accounts limited to test sites",
+      "source": "https://docs.maxio.com/hc/en-us/articles/24183916903309-Understand-Merchant-Limits"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free Developer Accounts have test sites only. Accounts may have up to 10 test sites; each test site is limited to 500 products, customers, subscriptions, and coupons. Developer plans allow up to 10 users, and inactive developer accounts are subject to eventual deletion.",
+      "source": "https://docs.maxio.com/hc/en-us/articles/24183916903309-Understand-Merchant-Limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Custom slot-based concurrency limiting permits at most 4 concurrent API requests per subdomain. Excess traffic may be queued or throttled and may receive HTTP 429; limits can vary by endpoint.",
+      "source": "https://developers.maxio.com/http/getting-started/about-the-api/error-handling-rate-limiting"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is not enabled on the Advanced Billing server; direct browser API requests are unsupported.",
+      "source": "https://developers.maxio.com/http/getting-started/about-the-api/tips-and-best-practices"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.maxio.com/http/getting-started/how-to-get-started"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.maxio.com/hc/en-us/articles/24183868545421-Advanced-Billing-General-FAQ"
+    }
+  },
+  "notes": "The API and documentation are operational. The principal errors are the claimed absence of a free tier, the unpublished-rate-limit claim, and unknown CORS status. Maxio's public pricing page lists paid Grow and Scale plans, while its current product documentation separately identifies free Developer Accounts restricted to test sites."
+}

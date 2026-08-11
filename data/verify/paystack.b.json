@@ -1,0 +1,52 @@
+{
+  "id": "paystack",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://paystack.com/docs/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://paystack.com/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://paystack.com/docs/api/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://paystack.com/docs/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://paystack.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published limits: most endpoints allow 600 requests per 60 seconds in live mode and 100 per 60 seconds in test mode, per integration and endpoint. Live-mode extended limits range from 900 to 3,000 requests per 60 seconds for specified endpoints.",
+      "source": "https://paystack.com/docs/api/rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://paystack.com/docs/api/transaction/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://paystack.com/docs/api/"
+    }
+  },
+  "notes": "The entry fails because Paystack now publishes explicit rate limits, added in June 2026. The documentation URL is current and official; the automated 403 is consistent with access filtering rather than a bad URL. Free access means free signup and test mode, while live transactions incur country- and channel-specific fees. No authoritative CORS policy was located."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "gitea",
+  "base_url": null,
+  "docs_url": "https://docs.gitea.com/api/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "No fixed requests-per-minute/hour default is documented for the current Gitea API. Self-hosted operators may impose deployment-level controls; built-in QoS overload protection is separate and disabled by default. gitea.com's service-specific quota is not publicly documented.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: Replace with the official unversioned current API reference, which serves the current stable API; /api/1.22/ is outdated and /api/next/ is developmental. Evidence: https://docs.gitea.com/api/. rate_limits: Replace; neither 20/minute nor 1000/hour is a current documented default. The current configuration reference has no MAX_API_REQUESTS_PER_HOUR setting or fixed quota in [api]; QoS is separate and disabled by default. Evidence: https://docs.gitea.com/administration/config-cheat-sheet/."
+}

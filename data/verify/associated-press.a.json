@@ -1,0 +1,52 @@
+{
+  "id": "associated-press",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.ap.org/media/v/docs/Search.htm"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.ap.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.ap.org/media/v/docs/Getting_Started_API.htm"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.ap.org/media/v/docs/Pricing.htm"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.ap.org/media/v/docs/Pricing.htm"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.ap.org/media/v/docs/Quota_Limits.htm"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.ap.org/media/v/docs/Getting_Started_API.htm"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.ap.org/media/v/docs/Search.htm"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.ap.org/media/v/docs/Getting_Started_API.htm"
+    }
+  },
+  "notes": "Official product name is AP Media API (docs still use \u201cAP Content API\u201d in places). Auth is x-api-key (x-apikey also accepted). No free/self-serve tier\u2014contract plans only. Public quota numbers not published; account-specific via /account/quotas. Example GET /content/search?q=&page_size= matches docs. CORS undocumented; browser clients discouraged."
+}

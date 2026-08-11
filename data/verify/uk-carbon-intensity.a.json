@@ -1,0 +1,52 @@
+{
+  "id": "uk-carbon-intensity",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://carbon-intensity.github.io/api-definitions/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://carbon-intensity.github.io/api-definitions/",
+      "source": "https://carbonintensity.org.uk/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://carbon-intensity.github.io/api-definitions/#get-intensity"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/carbon-intensity/terms#5-fees"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free access is subject to a rate limit; NESO may block applications making large numbers of calls. No numerical threshold is stated in the official terms.",
+      "source": "https://github.com/carbon-intensity/terms#1-licensed-uses-and-restrictions"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/carbon-intensity/terms#1-licensed-uses-and-restrictions"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes",
+      "source": "https://carbon-intensity.github.io/api-definitions/#get-intensity"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://carbon-intensity.github.io/api-definitions/#get-intensity"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The API is provided by National Energy System Operator (NESO), not the former National Grid ESO name. It supplies current estimated and forecast carbon-intensity data for Great Britain, including regional and generation-mix data. Forecasts are updated every 30 minutes. Access is free and unauthenticated but rate-limited.",
+      "source": "https://carbonintensity.org.uk/"
+    }
+  },
+  "notes": "The API and example endpoint were operational on 2026-08-11. The principal error is the claim of unlimited, unrestricted access: official terms explicitly impose a rate limit. The provider name is also outdated, and the submitted docs URL is the project website rather than the dedicated API reference."
+}

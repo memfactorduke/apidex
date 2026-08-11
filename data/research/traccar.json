@@ -1,0 +1,43 @@
+{
+  "id": "traccar",
+  "status": "operational",
+  "name": "Traccar",
+  "category": "iot-devices",
+  "tagline": "Open-source GPS tracking server with REST API for devices, positions, and geofences",
+  "description": "Traccar is an open-source GPS tracking platform that exposes a full REST API for managing devices, real-time positions, geofences, users, groups, and reports. You can self-host the server or use Traccar Cloud. Authentication is typically session-based (cookie after Basic Auth login) or token-based depending on deployment; the API covers CRUD for tracking entities and historical position/report queries.",
+  "base_url": "https://demo.traccar.org/api",
+  "docs_url": "https://www.traccar.org/api-reference/",
+  "signup_url": "https://www.traccar.org/",
+  "auth": {
+    "type": "other",
+    "details": "Session cookie after HTTP Basic Auth login to /api/session, or Authorization: Bearer <token> when tokens are enabled; self-hosted or Traccar Cloud account."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Self-host free (open source); Traccar Cloud has free/demo and paid plans \u2014 exact free quotas not fully verified here",
+    "paid_plans": "Traccar Cloud paid tiers available; self-host is free"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_EMAIL:YOUR_PASSWORD \"https://demo.traccar.org/api/devices\"",
+    "response_snippet": "[{\"id\":1,\"name\":\"Phone\",\"uniqueId\":\"123456\",\"status\":\"online\",\"lastUpdate\":\"2024-01-01T12:00:00.000+00:00\",\"positionId\":42,\"groupId\":0,\"phone\":null,\"model\":null,\"contact\":null,\"category\":null,\"disabled\":false}]"
+  },
+  "use_cases": [
+    "list GPS devices registered on a Traccar server",
+    "get latest position for a tracked device",
+    "create or update a geofence for a device group",
+    "fetch historical positions or trip reports for a device",
+    "register a new tracker by uniqueId"
+  ],
+  "sources": [
+    "https://www.traccar.org/api-reference/",
+    "https://www.traccar.org/",
+    "https://www.traccar.org/documentation/"
+  ],
+  "researcher_confidence": "medium"
+}

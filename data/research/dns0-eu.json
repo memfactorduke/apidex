@@ -1,0 +1,38 @@
+{
+  "id": "dns0-eu",
+  "status": "operational",
+  "name": "DNS0.eu",
+  "category": "security-identity",
+  "tagline": "European privacy-focused DNS resolver with threat-blocking and DoH developer endpoints.",
+  "description": "DNS0.eu is a European privacy-focused DNS and security resolver offering DNS-over-HTTPS endpoints, threat intelligence, and domain reputation checks for developers building safer network applications.",
+  "base_url": "https://api.dns0.eu",
+  "docs_url": "https://www.dns0.eu/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public endpoints appear unauthenticated for basic resolution; verify current docs for any key-gated threat feeds."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://api.dns0.eu/'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "resolve domains via privacy-focused DoH",
+    "check domain threat reputation"
+  ],
+  "sources": [
+    "https://www.dns0.eu/api"
+  ],
+  "researcher_confidence": "low"
+}

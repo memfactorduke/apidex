@@ -1,0 +1,52 @@
+{
+  "id": "housecanary",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.housecanary.com/v2",
+      "source": "https://www.housecanary.com/blog/data-explorer-api-quick-start-guide"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-docs.housecanary.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "httpBasic using the API key as username and API secret as password",
+      "source": "https://www.housecanary.com/blog/data-explorer-api-quick-start-guide"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.housecanary.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "not applicable; current API access requires a paid plan and usage-based charges",
+      "source": "https://www.housecanary.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Contractual, organization-level limits are displayed for the customer in Developer Center; no universal public limit is stated.",
+      "source": "https://www.housecanary.com/blog/data-explorer-api-quick-start-guide"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -G 'https://api.housecanary.com/v2/property/value' -d 'address=43 Valmonte Plaza' -d 'zipcode=90274' -u 'API_KEY:API_SECRET'",
+      "source": "https://www.housecanary.com/resources/developer-tools"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.housecanary.com/blog/real-estate-api"
+    }
+  },
+  "notes": "The API remains active in 2026, with current official material describing 149 production endpoints. The entry's principal errors are its omitted /v2 base path and authentication: HouseCanary requires an API key/secret pair via HTTP Basic auth. Its sample also omits the required zipcode parameter."
+}

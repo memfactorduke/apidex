@@ -1,0 +1,52 @@
+{
+  "id": "ipwhois",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 requests per day per client IP address; CORS traffic is counted per domain.",
+      "source": "https://ipwhois.io/documentation"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The free endpoint is limited to 1,000 requests per day. Exceeding it returns HTTP 429 with Retry-After, and access is restored after 24 hours.",
+      "source": "https://ipwhois.io/documentation"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://ipwhois.io/documentation"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ipwhois.io/documentation"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "IPWhois provides city, region, country, coordinates, ISP, ASN, and timezone data. Its free endpoint requires no signup or API key, allows commercial use, and excludes Security Data. Paid plans provide higher quotas; proxy, VPN, Tor, and other security flags require Business or Unlimited.",
+      "source": "https://ipwhois.io/pricing"
+    }
+  },
+  "notes": "The API is current and operational according to its official 2026 documentation. The submitted curl request is valid, but its response snippet is misleading: an unauthenticated free request does not include the security object. Paid API calls use the separate https://ipwhois.pro endpoint with a key query parameter."
+}

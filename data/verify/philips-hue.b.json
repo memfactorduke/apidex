@@ -1,0 +1,52 @@
+{
+  "id": "philips-hue",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Local resource root: https://<bridge-ip>/clip/v2/resource; remote resource root: https://api.meethue.com/route/clip/v2/resource",
+      "source": "https://developers.meethue.com/develop/hue-api-v2/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.meethue.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Local access uses an application key in the hue-application-key header; remote access uses OAuth 2.0 Bearer authorization plus hue-application-key, not X-Api-Key.",
+      "source": "https://developers.meethue.com/develop/hue-api-v2/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No official 1,000-requests/day free-tier limit was found; the published remote API quota is 50,000 calls per day.",
+      "source": "https://developers.meethue.com/terms-of-use-and-conditions/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Remote API: 50,000 calls/day. Local guidance: roughly 10 commands/second for lights and 1 command/second for groups.",
+      "source": "https://developers.meethue.com/terms-of-use-and-conditions/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -k -X GET \"https://<bridge-ip>/clip/v2/resource/light\" -H \"hue-application-key: YOUR_APPLICATION_KEY\"",
+      "source": "https://developers.meethue.com/develop/hue-api-v2/getting-started/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.meethue.com/new-hue-api/"
+    }
+  },
+  "notes": "Hue remains active, with official API updates published in 2026. The example combines an invalid cloud path and header with a v1-style response. Pricing and CORS could not be established officially. The duplicated weather use cases are unrelated to Hue, and the sources list is largely duplicated."
+}

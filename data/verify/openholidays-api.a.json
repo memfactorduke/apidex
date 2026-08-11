@@ -1,0 +1,52 @@
+{
+  "id": "openholidays-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openholidaysapi.org/en/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openholidaysapi.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openholidaysapi.org/swagger/v1/swagger.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openholidaysapi.org/en/faq/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes; the service permits any origin for GET requests using the Accept header",
+      "source": "https://github.com/openpotato/openholidaysapi/blob/develop/src/webservice/Program.cs"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openholidaysapi.org/swagger/v1/swagger.json"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OpenHolidays API provides free, unauthenticated open-data access to public and school holiday data for supported countries in Europe, the Americas, and Africa. It offers endpoints for holidays, countries, languages, subdivisions, groups, and localized names. Holiday queries are limited to date ranges of no more than three years.",
+      "source": "https://www.openholidaysapi.org/en/"
+    }
+  },
+  "notes": "The current official documentation and OpenAPI definition are live. Free use, including commercial use, is confirmed, but request quotas are not documented. The description's \"unrestricted\" claim conflicts with the documented three-year maximum query range, and the project now covers countries outside Europe."
+}

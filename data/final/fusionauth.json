@@ -1,0 +1,95 @@
+{
+  "id": "fusionauth",
+  "status": "operational",
+  "name": "FusionAuth",
+  "category": "security-identity",
+  "tagline": "Self-hostable authentication and authorization API for users, tenants, and MFA",
+  "description": "FusionAuth is a complete identity platform that provides a REST API for managing users, tenants, applications, roles, MFA, and OAuth/OpenID Connect. Available as self-hosted software or managed cloud. Developers integrate via HTTP APIs with API key authentication for admin operations and OAuth for end-user login flows.",
+  "base_url": "https://YOUR_FUSIONAUTH_HOST",
+  "docs_url": "https://fusionauth.io/docs/apis/",
+  "signup_url": "https://fusionauth.io/pricing",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header or X-FusionAuth-TenantId; exact format verified from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: YOUR_API_KEY\" https://YOUR_FUSIONAUTH_HOST/api/user",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "create a user account",
+    "enable MFA for a user",
+    "list tenants",
+    "manage application roles"
+  ],
+  "sources": [
+    "https://fusionauth.io/docs/apis/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "dehashed",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.dehashed.com"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.dehashed.com/docs",
+      "source": "https://www.dehashed.com"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dehashed.com"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dehashed.com"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dehashed.com"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dehashed.com"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dehashed.com"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://api.dehashed.com/search?query=email:example@example.com\" -H \"Dehashed-Api-Key: YOUR_API_KEY\" -H \"Accept: application/json\"",
+      "source": "https://www.dehashed.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.dehashed.com"
+    }
+  },
+  "notes": "Docs URL returns 403; example request may be outdated. Verify current API auth headers and endpoints against official docs before production use."
+}

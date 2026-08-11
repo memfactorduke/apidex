@@ -1,0 +1,93 @@
+{
+  "id": "fal-ai",
+  "status": "operational",
+  "name": "Fal.ai",
+  "category": "ai-ml",
+  "tagline": "Serverless generative media API for image, video, and audio models.",
+  "description": "Fal.ai provides a serverless API platform for running generative AI models (image, video, audio) with queue-based and real-time endpoints, model gallery, and client SDKs.",
+  "base_url": "https://fal.run",
+  "docs_url": "https://fal.ai/docs",
+  "signup_url": "https://fal.ai",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Key YOUR_API_KEY header (or fal-key)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "New accounts start at 2 concurrent IN_PROGRESS requests globally; paid credit purchases scale the self-serve limit up to 40. Excess requests queue, and endpoint-specific caps may apply.",
+  "example": {
+    "request": "curl -X POST https://fal.run/fal-ai/flux/dev -H \"Authorization: Key YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\":\"a cat\"}'",
+    "response_snippet": "{\"images\":[{\"url\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "generate images from text prompts",
+    "run video generation models",
+    "run audio/speech models serverless"
+  ],
+  "sources": [
+    "https://fal.ai/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

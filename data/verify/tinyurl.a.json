@@ -1,0 +1,52 @@
+{
+  "id": "tinyurl",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/openapi/v2.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/app/dev"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/openapi/v2.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/blog/can-use-api-shorten-links-tinyurl-free/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "30 links per month",
+      "source": "https://tinyurl.com/app/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/openapi/v2.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://tinyurl.com/app/dev"
+    }
+  },
+  "notes": "Official OpenAPI v2.4.2 confirms the server, POST /create, JSON body, and bearer or api_token authentication. TinyURL confirms free-plan API access, while current pricing publishes a 30-links-per-month free limit. No official CORS or request-frequency limit statement was found. The supplied response snippet does not match the current schema, which uses tiny_url and analytics; the example verdict covers only the request as instructed."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "rome2rio",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "http://free.rome2rio.com/api/1.4",
+      "source": "https://www.rome2rio.com/documentation/1-4/search/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rome2rio.com/documentation/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rome2rio.com/documentation/1-4/search/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"http://free.rome2rio.com/api/1.4/json/Search?key=YOUR_API_KEY&oName=London&dName=Paris\"",
+      "source": "https://www.rome2rio.com/documentation/1-4/search/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.rome2rio.com/documentation/1-4/search/"
+    }
+  },
+  "notes": "The docs URL is valid despite the automated 403. Rome2Rio currently says it is not accepting new API applications, contradicting the claimed self-serve signup. Official v1.4 docs publish free.rome2rio.com/api/1.4, not api.rome2rio.com/v1, and show HTTP rather than HTTPS. Current official pages do not disclose pricing, quotas, or CORS."
+}

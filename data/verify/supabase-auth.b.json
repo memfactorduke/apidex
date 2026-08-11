@@ -1,0 +1,52 @@
+{
+  "id": "supabase-auth",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/supabase/auth/blob/master/openapi.yaml"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/docs/reference/auth"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/supabase/auth/blob/master/openapi.yaml"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published and endpoint-specific. Current defaults include 2 built-in-provider emails/hour; 30 OTPs/hour; 60-second per-user signup, OTP, and recovery windows; 360 verification requests/hour/IP; 1,800 token refreshes/hour/IP; 15 MFA challenge or verification requests/hour/IP; and 30 anonymous sign-ins/hour/IP. Some limits are configurable, and IP-limited operations allow token-bucket bursts up to 30.",
+      "source": "https://supabase.com/docs/guides/auth/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/docs/guides/self-hosting/self-hosted-envoy"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST 'https://<project-ref>.supabase.co/auth/v1/signup' -H 'apikey: <SUPABASE_PUBLISHABLE_KEY>' -H 'Content-Type: application/json' -d '{\"email\":\"user@example.com\",\"password\":\"example-password\"}'",
+      "source": "https://github.com/supabase/auth/blob/master/openapi.yaml"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supabase.com/docs/guides/auth/architecture"
+    }
+  },
+  "notes": "HTTP 0 for the literal YOUR_PROJECT_REF placeholder does not indicate an outage; the current OpenAPI declares the same project-scoped URL. The entry fails because its rate-limit claim and placeholder example are wrong. Free currently includes 50,000 MAU and 5 GB egress. Legacy anon/service_role keys still work, but Supabase recommends publishable/secret keys and plans to deprecate legacy keys by the end of 2026."
+}

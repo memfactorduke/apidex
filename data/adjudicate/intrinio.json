@@ -1,0 +1,15 @@
+{
+  "id": "intrinio",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": true,
+  "free_tier_limits": "Free, limited Developer Sandbox for testing; its data may be incomplete or outdated and is not for production. Intrinio also advertises free two-week trials on most datasets; production access generally requires a paid subscription.",
+  "rate_limits": "Feed-dependent daily, per-minute, and per-second limits apply. Large-page and bulk requests: free 1/minute, paid 1/second. Free-data-only accounts: 100 requests/second. Requests time out after 25 seconds.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier: true; Intrinio documents free limited sandbox data: https://docs.intrinio.com/developer-sandbox. free_tier_limits: sandbox is non-production and may be incomplete/outdated; same source. rate_limits: published, feed/subscription-dependent limits: https://docs.intrinio.com/documentation/api_v2/limits. cors: yes; client-side JavaScript is supported with X-Authorization-Public-Key and an authorized-domain allowlist: https://docs.intrinio.com/documentation/api_v2/authentication."
+}

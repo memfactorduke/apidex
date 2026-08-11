@@ -1,0 +1,52 @@
+{
+  "id": "caselaw-access-project",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.case.law/v1/",
+      "source": "https://case.law/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://case.law/docs/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "none (or optional registration token for higher limits)",
+      "source": "https://case.law/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://case.law/docs/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "500 cases/day without auth; higher with free registration",
+      "source": "https://case.law/docs/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "500 cases/day unauthenticated",
+      "source": "https://case.law/docs/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://case.law/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://case.law/"
+    }
+  },
+  "notes": "PLACEHOLDER - will replace after verification"
+}

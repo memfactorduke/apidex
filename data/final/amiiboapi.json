@@ -1,0 +1,98 @@
+{
+  "id": "amiiboapi",
+  "status": "operational",
+  "name": "AmiiboAPI",
+  "category": "games-comics",
+  "tagline": "Open Nintendo Amiibo figure catalog with games, series, and character data",
+  "description": "AmiiboAPI is a free, public REST API that catalogs Nintendo Amiibo figures and related metadata. It exposes searchable data for characters, games, game series, and Amiibo series, including release dates by region and images. No authentication is required for standard usage, making it well suited for hobby projects, collectors tools, and game companion apps that need structured Amiibo lookup data.",
+  "base_url": "https://www.amiiboapi.com/api/",
+  "docs_url": "https://www.amiiboapi.com/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public read endpoints. Requests are made with plain HTTP GET; no API key or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public API; no published request quota",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://www.amiiboapi.com/api/amiibo/?name=mario'",
+    "response_snippet": "{\"amiibo\":[{\"amiiboSeries\":\"Super Smash Bros.\",\"character\":\"Mario\",\"gameSeries\":\"Super Mario\",\"head\":\"00000000\",\"image\":\"https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00000000-00000002.png\",\"name\":\"Mario\",\"release\":{\"au\":\"2014-11-29\",\"eu\":\"2014-11-28\",\"jp\":\"2014-12-06\",\"na\":\"2014-11-21\"},\"tail\":\"00000002\",\"type\":\"Figure\"}]}"
+  },
+  "use_cases": [
+    "look up Amiibo figure details by character or name",
+    "list Amiibo figures for a game series",
+    "get regional release dates for an Amiibo",
+    "fetch Amiibo image URLs for a catalog UI",
+    "search Amiibo by series or type (figure/card/yarn)"
+  ],
+  "sources": [
+    "https://www.amiiboapi.com/",
+    "https://www.amiiboapi.com/docs/",
+    "https://www.amiiboapi.com/api/",
+    "https://github.com/N3evin/AmiiboAPI"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

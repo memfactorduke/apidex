@@ -1,0 +1,52 @@
+{
+  "id": "oecd-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://sdmx.oecd.org/public"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.oecd.org/en/about/terms-conditions.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free of charge, but currently limited to 60 data downloads per hour. Excess requests are temporarily blocked, VPN or anonymized traffic is disallowed, and some parameters are restricted for large datasets.",
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Maximum 60 data downloads per hour; exceeding the limit results in temporary blocking.",
+      "source": "https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The current DF_QNA structure is version 1.1 and requires Q as the frequency with the reference area in the third dimension. Example: curl -s \"https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NAMAIN1@DF_QNA,1.1/Q..USA..........?startPeriod=2020-Q1&endPeriod=2023-Q4&dimensionAtObservation=AllDimensions\" -H \"Accept: application/vnd.sdmx.data+json\"",
+      "source": "https://data-explorer.oecd.org/vis?df%5Bag%5D=OECD.SDD.NAD&df%5Bds%5D=dsDisseminateFinalDMZ&df%5Bid%5D=DSD_NAMAIN1%40DF_QNA&df%5Bvs%5D=1.1"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.oecd.org/en/data/datasets/oecd-DE.html"
+    }
+  },
+  "notes": "The API is operational. OECD's service index and 2026 Data Explorer pages use the stated REST root; a 404 at the bare collection URL does not indicate shutdown. The documentation URL is current despite the automated 403. The decisive errors are the invented absence of quotas and the malformed, outdated quarterly-national-accounts example."
+}

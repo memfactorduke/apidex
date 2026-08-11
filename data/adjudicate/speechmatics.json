@@ -1,0 +1,15 @@
+{
+  "id": "speechmatics",
+  "base_url": "https://eu1.asr.api.speechmatics.com/v2",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "New accounts receive $100 in credit with no card required. Service pauses when the credit reaches zero unless a payment card is added for pay-as-you-go usage.",
+  "rate_limits": "Free: 2 concurrent realtime sessions, 1 batch job/s, 3 voice-agent conversations; Pro: 50, 10/s, 6; Enterprise: unlimited. Batch guidance: at most 10 POSTs/s, 50 status GETs/s, with a 20,000-concurrent-job backstop.",
+  "cors": null,
+  "example_request": "curl -X POST \"https://eu1.asr.api.speechmatics.com/v2/jobs\" -H \"Authorization: Bearer $API_KEY\" -F 'config={\"type\":\"transcription\",\"transcription_config\":{\"language\":\"en\"}}' -F 'data_file=@audio.wav'",
+  "example_response_snippet": "{\"id\":\"6f8c1a2b3d\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Incorrect; Batch SaaS uses regional hosts (EU1 selected): https://docs.speechmatics.com/get-started/authentication. free_tier_limits: Incorrect/vague; $100 credit, no card, then service pauses at zero: https://www.speechmatics.com/pricing. rate_limits: Incorrect; tier caps are on pricing and Batch limits are documented at https://docs.speechmatics.com/speech-to-text/batch/limits. example: Incorrect; use regional /v2/jobs; successful creation returns a job ID: https://docs.speechmatics.com/api-ref/batch/create-a-new-job."
+}

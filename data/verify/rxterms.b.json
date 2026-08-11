@@ -1,0 +1,52 @@
+{
+  "id": "rxterms",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://clinicaltables.nlm.nih.gov/api/rxterms/v3/search",
+      "source": "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/faq.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/faq.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for anyone to use; advised maximum 25 requests/second, and users expecting over 50,000 calls/day should contact NLM.",
+      "source": "https://clinicaltables.nlm.nih.gov/faq.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Advised maximum 25 requests/second; this is a soft limit, with enforcement dependent on system load. Clients should handle X-RateLimit-Limit, Retry-After, and possible HTTP 503 responses.",
+      "source": "https://clinicaltables.nlm.nih.gov/faq.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html"
+    }
+  },
+  "notes": "Current official index lists RxTerms v3 with July 2026 data, so no shutdown or migration was found. The curl request is documented-valid under the specified request-only example criterion. However, its supplied response snippet places extra-field data in the wrong array position; current docs place the ef object third and display values fourth."
+}

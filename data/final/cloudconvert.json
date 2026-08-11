@@ -1,0 +1,97 @@
+{
+  "id": "cloudconvert",
+  "status": "operational",
+  "name": "CloudConvert",
+  "category": "utilities",
+  "tagline": "File conversion API for 200+ formats including PDF, images, audio, and office documents.",
+  "description": "CloudConvert provides a REST API for converting files between 200+ formats. Developers create jobs with one or more tasks (import, convert, export), poll or use webhooks for completion, and download results. Supports PDF, images, audio/video, Office documents, ebooks, and more. Auth uses API keys or OAuth 2.0; free and paid plans are available with credit-based usage.",
+  "base_url": "https://api.cloudconvert.com/v2",
+  "docs_url": "https://cloudconvert.com/api/v2",
+  "signup_url": "https://cloudconvert.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header (or OAuth 2.0). Create keys in the dashboard after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "10 conversion credits/day with daily reset; maximum file size 1 GB; maximum processing time 5 minutes; 5 concurrent tasks; low processing priority.",
+    "paid_plans": null
+  },
+  "rate_limits": "Dynamic rate limits apply when creating jobs and tasks. Responses include X-RateLimit-Limit and X-RateLimit-Remaining; exceeding the limit returns HTTP 429 with Retry-After.",
+  "example": {
+    "request": "curl -X GET \"https://api.cloudconvert.com/v2/tasks\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"data\":[{\"id\":\"...\",\"operation\":\"convert\",\"status\":\"finished\",\"...\"}]}"
+  },
+  "use_cases": [
+    "convert a PDF to DOCX or images",
+    "convert images between formats (PNG, JPG, WebP)",
+    "convert audio or video codecs/containers",
+    "merge or split PDF files via API jobs",
+    "watermark or compress documents programmatically"
+  ],
+  "sources": [
+    "https://cloudconvert.com/api/v2"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "dehashed",
+  "base_url": null,
+  "docs_url": "https://app.dehashed.com/documentation/api",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s \"https://api.dehashed.com/search?query=email:example@example.com\" -H \"Dehashed-Api-Key: YOUR_API_KEY\" -H \"Accept: application/json\"",
+  "example_response_snippet": "{\"balance\":100,\"entries\":[{\"email\":\"example@example.com\",\"username\":\"user\",\"password\":\"***\",\"hashed_password\":null,\"name\":null,\"vin\":null,\"address\":null,\"phone\":null,\"database_name\":\"Example Leak\"}],\"took\":\"12ms\",\"total\":1}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: replace. DeHashed's current official API page links its Knowledge Base to https://app.dehashed.com/documentation/api, while the original /docs URL returned 403; evidence: https://www.dehashed.com/api and https://app.dehashed.com/documentation/api. example: retain the verifier-provided API-key-header request and supply a representative JSON result; evidence: https://app.dehashed.com/documentation/api."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "binaryedge",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.binaryedge.io/v2",
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.binaryedge.io/",
+      "source": null
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "apiKey",
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier available with limited requests; exact limits vary by plan (see pricing page)",
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Varies by plan; free tier has lower limits",
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "unknown",
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"X-Key: YOUR_API_KEY\" \"https://api.binaryedge.io/v2/query/ip/8.8.8.8\"",
+      "source": null
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "BinaryEdge provides an Internet-wide scanning and threat-intelligence API for researching host, CVE, and service exposure. Developers can use it to gather data on open ports, services, and vulnerabilities across the internet, supporting security research and threat analysis.",
+      "source": null
+    }
+  },
+  "notes": "Placeholder - investigating official sources"
+}

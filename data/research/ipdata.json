@@ -1,0 +1,40 @@
+{
+  "id": "ipdata",
+  "status": "operational",
+  "name": "ipdata",
+  "category": "geo-maps",
+  "tagline": "IP geolocation with threat intel, ASN, currency, and timezone",
+  "description": "ipdata is a self-serve IP geolocation API that returns location, ASN, currency, timezone, and threat intelligence for IP addresses. Developers call a single HTTPS endpoint with an API key; free daily allowance is available for low-volume use.",
+  "base_url": "https://api.ipdata.co",
+  "docs_url": "https://docs.ipdata.co/",
+  "signup_url": "https://ipdata.co/sign-up.html",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api-key query parameter or Authorization header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.ipdata.co/8.8.8.8?api-key=YOUR_API_KEY\"",
+    "response_snippet": "{\"ip\":\"8.8.8.8\",\"city\":\"Mountain View\",\"region\":\"California\",\"country_name\":\"United States\"}"
+  },
+  "use_cases": [
+    "geolocate an IP address for personalization",
+    "check if an IP is a known threat or proxy",
+    "get ASN and organization for an IP",
+    "resolve currency and timezone from IP"
+  ],
+  "sources": [
+    "https://docs.ipdata.co/"
+  ],
+  "researcher_confidence": "low"
+}

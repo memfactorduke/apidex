@@ -1,0 +1,97 @@
+{
+  "id": "bart-api",
+  "status": "operational",
+  "name": "BART API",
+  "category": "transportation",
+  "tagline": "Real-time Bay Area Rapid Transit schedules, advisories, and estimates",
+  "description": "Public API for San Francisco Bay Area Rapid Transit (BART) providing schedules, real-time departure estimates, service advisories, station information, and route data. Used by transit apps and developers to access BART system information.",
+  "base_url": "https://api.bart.gov/api",
+  "docs_url": "https://api.bart.gov/docs/overview/index.aspx",
+  "signup_url": "https://api.bart.gov/api/register.aspx",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter (self-serve registration; demo key available for testing)"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.bart.gov/api/etd.aspx?cmd=etd&orig=12th&key=YOUR_API_KEY&json=y\"",
+    "response_snippet": "{\"root\":{\"uri\":{\"#cdata-section\":\"http://api.bart.gov/api/etd.aspx?cmd=etd&orig=12th&json=y\"},\"station\":[{\"name\":\"12th St. Oakland City Center\",\"abbr\":\"12TH\",\"etd\":[{\"destination\":\"Berryessa/North San Jos\u00e9\",\"estimate\":[{\"minutes\":\"5\",\"platform\":\"2\",\"direction\":\"South\",\"length\":\"10\",\"color\":\"GREEN\"}]}]}]}}"
+  },
+  "use_cases": [
+    "get real-time departure estimates for a BART station",
+    "list all BART stations and their abbreviations",
+    "fetch current service advisories and delays",
+    "get route schedules between stations",
+    "look up station information and elevators",
+    "check train arrival times for trip planning"
+  ],
+  "sources": [
+    "https://api.bart.gov/docs/overview/index.aspx"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

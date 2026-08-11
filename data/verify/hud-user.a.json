@@ -1,0 +1,52 @@
+{
+  "id": "hud-user",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Official pricing or free-tier status is not stated; the published usage limit is 60 API queries per minute.",
+      "source": "https://www.huduser.gov/portal/dataset/api-terms-of-service.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Maximum 60 API queries per minute.",
+      "source": "https://www.huduser.gov/portal/dataset/api-terms-of-service.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+    }
+  },
+  "notes": "The request URL and Bearer header are documented, but the supplied response snippet does not match HUD's documented structure for that metro: current documentation shows year outside a basicdata array containing MSA-level and ZIP-level rents. The common /public root is used by the documented FMR and IL endpoints, although HUD labels /public/fmr as the FMR-specific base."
+}

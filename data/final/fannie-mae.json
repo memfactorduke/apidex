@@ -1,0 +1,95 @@
+{
+  "id": "fannie-mae",
+  "status": "operational",
+  "name": "Fannie Mae API",
+  "category": "real-estate-housing",
+  "tagline": "GSE tools and data for single-family lending and underwriting workflows.",
+  "description": "Fannie Mae provides developer APIs and related digital tools that support single-family mortgage originations, underwriting, and servicing workflows\u2014covering areas such as pricing, eligibility, and loan data exchange for lenders and technology partners.",
+  "base_url": "https://api.fanniemae.com",
+  "docs_url": "https://developer.fanniemae.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Partner/lender access; authentication method not fully confirmed from public docs without account."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://api.fanniemae.com/singlefamily/originating/properties/propertydata/api/health\" -H \"Accept: application/json\" -H \"x-fnma-channel: api\" -H \"x-fnma-access-token: YOUR_ACCESS_TOKEN\" -H \"x-fnma-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\"status\":\"UP\"}"
+  },
+  "use_cases": [
+    "check loan product eligibility for a single-family mortgage",
+    "retrieve underwriting or pricing-related data for GSE workflows",
+    "integrate Fannie Mae single-family lending tools into lender software"
+  ],
+  "sources": [
+    "https://www.fanniemae.com/singlefamily/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "docs_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

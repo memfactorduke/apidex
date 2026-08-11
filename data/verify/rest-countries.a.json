@@ -1,0 +1,52 @@
+{
+  "id": "rest-countries",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.restcountries.com/countries/v5",
+      "source": "https://restcountries.com/docs/countries/api-versions"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://restcountries.com/docs",
+      "source": "https://restcountries.com/docs"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "api_key (Authorization: Bearer YOUR_API_KEY recommended; api-key query parameter supported as a fallback)",
+      "source": "https://restcountries.com/docs"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://restcountries.com/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 500 requests per month; intended for evaluation, prototyping, and personal or non-commercial projects.",
+      "source": "https://restcountries.com/docs"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Sustained traffic above 20 requests per 10 seconds is rejected with HTTP 429; monthly quotas also apply by plan.",
+      "source": "https://restcountries.com/docs"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is supported through per-key origin-hostname allowlisting; browser requests are blocked by default unless the origin is configured.",
+      "source": "https://restcountries.com/docs"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.restcountries.com/countries/v5/names.common/France?response_fields=names,capitals,currencies,borders,codes.alpha_2\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+      "source": "https://restcountries.com/docs/countries"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Read-only JSON-over-HTTPS Countries API exposing 90+ normalized fields. The maintained public surface is v5 on api.restcountries.com, and API-key authentication is required.",
+      "source": "https://restcountries.com/docs/countries"
+    }
+  },
+  "notes": "The official status page reported no current issues, so the service appears operational. However, the directory entry is materially stale: v3.1 is deprecated, the hostname and response schema changed, authentication is now required, and both monthly quotas and throughput limits are published."
+}

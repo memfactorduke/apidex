@@ -1,0 +1,52 @@
+{
+  "id": "ofac-sanctions",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/sdn-list-data-formats-data-schemas/ofac-technical-actions-in-reverse-chronological-order/20240516_44"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/faqs/topic/1636"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/faqs/topic/1636"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The free search tool is intended for individual users and must not be used by automated systems for continual searches; OFAC directs automated users to its downloadable data files.",
+      "source": "https://ofac.treasury.gov/faqs/topic/1636"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/sdn-list-data-formats-data-schemas/ofac-technical-actions-in-reverse-chronological-order/20240516_44"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ofac.treasury.gov/sanctions-list-service"
+    }
+  },
+  "notes": "The official endpoint is live and redirected to a current SDN.XML file. Curl supplies a User-Agent by default, satisfying OFAC's documented header requirement. No authoritative numeric rate limit or CORS policy was located. The entry fails because OFAC publishes an explicit usage restriction for the free search tool, so its limits are not wholly unknown."
+}

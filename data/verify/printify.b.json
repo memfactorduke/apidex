@@ -1,0 +1,52 @@
+{
+  "id": "printify",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.printify.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.printify.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.printify.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://printify.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "600 requests per minute globally; Catalog endpoints are additionally limited to 100 requests per minute per integration/account; product publishing is limited to 200 requests per 30 minutes, and product/mockup generation has an additional unspecified daily limit.",
+      "source": "https://developers.printify.com/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "unsupported",
+      "source": "https://developers.printify.com/"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The GET /v1/shops.json path and Bearer token are current, but Printify says all requests must include a User-Agent header. Add -H \"User-Agent: YourApplicationName\".",
+      "source": "https://developers.printify.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.printify.com/"
+    }
+  },
+  "notes": "The API remains operational. V1 continues to be supported, although Printify encourages V2 for new integrations and currently exposes only Catalog shipping endpoints in V2. The entry materially misses documented rate limits and the explicit lack of CORS. Official pages establish a free merchant plan and account-level token creation, but do not explicitly state that API calls carry no separate fee."
+}

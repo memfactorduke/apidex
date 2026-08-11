@@ -1,0 +1,52 @@
+{
+  "id": "corelogic",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No public canonical production base URL is published as https://api-prod.corelogic.com; CoreLogic/Cotality APIs are enterprise-gated and product-specific (e.g. Property API under developer.corelogic.com / Cotality developer portals). Do not treat api-prod.corelogic.com as a documented public endpoint.",
+      "source": "https://developer.corelogic.com"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.corelogic.com"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.corelogic.com"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.corelogic.com"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.corelogic.com"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Placeholder GET of https://api-prod.corelogic.com/ with a Bearer token is not a documented API call; remove or replace with a product-specific path from current Cotality/CoreLogic developer docs after contract access.",
+      "source": "https://developer.corelogic.com"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.corelogic.com"
+    }
+  },
+  "notes": "Adversarial check: base_url and example curl appear invented; developer portal exists but endpoints/auth are enterprise-gated. Cotality rebrand is real. CORS unknown is appropriate. Rate limits/free tier not publicly published."
+}

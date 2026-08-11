@@ -1,0 +1,97 @@
+{
+  "id": "chromatic",
+  "status": "operational",
+  "name": "Chromatic GraphQL API",
+  "category": "dev-tools",
+  "tagline": "GraphQL API for visual regression builds, tests, and review state in Storybook CI.",
+  "description": "Chromatic is a visual testing and review platform for UI components, typically paired with Storybook. Its GraphQL API lets developers and agents query builds, tests, and review status for component CI workflows.",
+  "base_url": "https://index.chromatic.com/graphql",
+  "docs_url": "https://www.chromatic.com/docs/graphql",
+  "signup_url": "https://www.chromatic.com/start",
+  "auth": {
+    "type": "apiKey",
+    "details": "Project token or personal access token (verify exact header/body method from official docs)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "graphql"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 5,000 billed snapshots per month; testing and review pause when the allowance is exhausted. No separate API-call allowance is published.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST 'https://index.chromatic.com/graphql' -H 'Content-Type: application/json' -H 'Authorization: Bearer YOUR_PROJECT_TOKEN' --data '{\"query\":\"{ __typename }\"}'",
+    "response_snippet": "{\"data\":{\"__typename\":\"Query\"}}"
+  },
+  "use_cases": [
+    "list recent Chromatic builds for a project",
+    "get visual test results for a build",
+    "check review/approval state of a component set",
+    "query build status in a CI pipeline"
+  ],
+  "sources": [
+    "https://www.chromatic.com/docs/graphql-api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

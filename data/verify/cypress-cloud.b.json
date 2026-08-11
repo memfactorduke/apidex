@@ -1,0 +1,52 @@
+{
+  "id": "cypress-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://cloud.cypress.io/api (or project-scoped paths under cloud.cypress.io; api.cypress.io returns 404 and is not the documented Cloud REST base)",
+      "source": "https://docs.cypress.io/app/references/cypress-cloud#Cypress-Cloud-API"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.cypress.io/app/references/cypress-cloud#Cypress-Cloud-API (docs.cypress.io/api/cloud/introduction returns 404)",
+      "source": "https://docs.cypress.io/app/references/cypress-cloud"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cypress.io/app/references/cypress-cloud#Cypress-Cloud-API"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cypress.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free Hobby plan includes limited test results (commonly listed as 500 test results/month for open-source/hobby; confirm current number on pricing page)",
+      "source": "https://www.cypress.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Do not use https://api.cypress.io/ with Bearer. Documented Cloud API access is project-scoped under Cypress Cloud (e.g. cloud.cypress.io) with API key auth as documented; the sample path and host are wrong",
+      "source": "https://docs.cypress.io/app/references/cypress-cloud#Cypress-Cloud-API"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.cypress.io/app/references/cypress-cloud"
+    }
+  },
+  "notes": "Automated curls: base_url and docs_url both HTTP 404. Official docs moved off /api/cloud/introduction. api.cypress.io is not a valid public Cloud REST root. Auth is API key (project); free Hobby exists; exact free-tier result count should be re-checked on pricing. CORS and published rate limits not found."
+}

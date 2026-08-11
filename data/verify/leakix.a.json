@@ -1,0 +1,52 @@
+{
+  "id": "leakix",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.leakix.net/docs/api/search/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.leakix.net/docs/api/",
+      "source": "https://docs.leakix.net/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.leakix.net/docs/api/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://leakix.net/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "25 result pages, 3,000 API requests, no support, and a 15-day result delay; API access is also limited to 1 request/second",
+      "source": "https://leakix.net/plans"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Approximately 1 request per second; exceeding the limit returns HTTP 429 with an x-limited-for header indicating how long to wait",
+      "source": "https://docs.leakix.net/docs/api/search/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -G -H \"api-key: YOUR_API_KEY\" -H \"accept: application/json\" --data-urlencode \"q=apache\" --data-urlencode \"scope=service\" --data-urlencode \"page=0\" \"https://leakix.net/search\"",
+      "source": "https://docs.leakix.net/docs/api/search/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://leakix.net/about"
+    }
+  },
+  "notes": "The official site is live. The supplied docs URL returns 404; documentation moved to docs.leakix.net. The example uses an undocumented /api/v1/search path, omits required scope and Accept values, and its object-shaped response does not match the search endpoint's documented array. Pricing and rate limits are published. CORS is not documented."
+}

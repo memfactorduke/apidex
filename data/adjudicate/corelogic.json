@@ -1,0 +1,15 @@
+{
+  "id": "corelogic",
+  "base_url": "https://api.cotality.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS 'https://api.cotality.com/trestle/odata/Property?$top=1' -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'",
+  "example_response_snippet": "{\"@odata.context\":\"https://api.cotality.com/trestle/odata/$metadata#Property/CoreLogic.DataStandard.RESO.DD.Property\",\"value\":[{\"ListingKey\":\"123456\",\"StandardStatus\":\"Active\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Replace. Official 2026 Trestle documentation names https://api.cotality.com as the base URL and identifies api-prod.corelogic.com as a deprecated endpoint: https://trestle-documentation.corelogic.com/webapi.html. example: Replace. The same official guide documents OAuth2 bearer authentication and GET /trestle/odata/Property; the resource reference confirms that path: https://api.cotality.com/trestle/Documentation/MetaData/Resource/Property."
+}

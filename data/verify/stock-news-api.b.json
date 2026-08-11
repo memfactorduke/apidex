@@ -1,0 +1,52 @@
+{
+  "id": "stock-news-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stocknewsapi.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stocknewsapi.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stocknewsapi.com/termsandconditions"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "No perpetual free plan is advertised; only a 5-day free trial is available.",
+      "source": "https://stocknewsapi.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The free trial lasts 5 days and includes 100 calls with access to all features.",
+      "source": "https://stocknewsapi.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published usage limits are 20,000 calls/month for Basic, 50,000 calls/month for Premium, and custom monthly volume for Business; the Tickers DB endpoint is limited to once daily for non-trial accounts.",
+      "source": "https://stocknewsapi.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://stocknewsapi.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Stock News API provides ticker-tagged stock-market news with ticker, topic, sentiment, and date filtering. Its official FAQ directs crypto news users to the separate Crypto News API sister service.",
+      "source": "https://stocknewsapi.com/faq"
+    }
+  },
+  "notes": "The service appears operational: its official status page reports 99.97% uptime for the main endpoints. The entry fails because it mislabels a temporary trial as a free plan, overlooks published call quotas, and inaccurately presents crypto coverage as part of Stock News API rather than its separate sister API. CORS behavior is not documented."
+}

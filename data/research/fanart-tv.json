@@ -1,0 +1,43 @@
+{
+  "id": "fanart-tv",
+  "status": "operational",
+  "name": "Fanart.tv API",
+  "category": "entertainment",
+  "tagline": "High-quality fan-made movie, TV, and music artwork by TMDB/TVDB/MusicBrainz IDs",
+  "description": "Fanart.tv provides a REST API for retrieving high-quality, community-created artwork for movies, TV shows, and music. Images are keyed by external IDs (TMDB for movies, TVDB for series, MusicBrainz for artists/albums/labels) and include posters, logos, backgrounds, banners, clearart, and more. Developers authenticate with a personal API key; the free tier allows limited usage, with Project VIP membership raising rate limits.",
+  "base_url": "https://webservice.fanart.tv/v3",
+  "docs_url": "https://fanart.tv/api-docs/",
+  "signup_url": "https://fanart.tv/register/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal API key via api_key query parameter (or X-API-Key header on some endpoints). Obtain free key after account registration at fanart.tv; Project VIP membership increases limits."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free API key with limited rate; exact free quota not clearly published on current docs",
+    "paid_plans": "Project VIP membership increases API rate limits and adds site benefits; pricing not detailed on API docs"
+  },
+  "rate_limits": "not published precisely; free tier more limited than Project VIP",
+  "example": {
+    "request": "curl \"https://webservice.fanart.tv/v3/movies/550?api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\n  \"name\": \"Fight Club\",\n  \"tmdb_id\": \"550\",\n  \"imdb_id\": \"tt0137523\",\n  \"hdmovielogo\": [{\"id\": \"...\", \"url\": \"https://assets.fanart.tv/...\", \"lang\": \"en\", \"likes\": \"12\"}],\n  \"movieposter\": [{\"id\": \"...\", \"url\": \"https://assets.fanart.tv/...\", \"lang\": \"en\"}]\n}"
+  },
+  "use_cases": [
+    "fetch movie posters and logos by TMDB ID",
+    "get TV show clearart and banners by TVDB ID",
+    "retrieve artist backgrounds and logos by MusicBrainz ID",
+    "pull album covers and CD art for a music library",
+    "enrich media center UIs with fan-made artwork"
+  ],
+  "sources": [
+    "https://fanart.tv/api-docs/",
+    "https://webservice.fanart.tv/v3/",
+    "https://fanart.tv/"
+  ],
+  "researcher_confidence": "medium"
+}

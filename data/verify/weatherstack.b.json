@@ -1,0 +1,52 @@
+{
+  "id": "weatherstack",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.postman.com/apilayer/apilayer/documentation/behlec1/weatherstack"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://weatherstack.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.postman.com/apilayer/apilayer/documentation/behlec1/weatherstack"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://weatherstack.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 API calls per month; real-time weather and HTTPS encryption are included.",
+      "source": "https://weatherstack.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Monthly plan quotas are 100 calls on Free, 50,000 on Standard, 300,000 on Professional, and 1,000,000 on Business; Weatherstack also reserves the right to throttle malicious or erroneous traffic.",
+      "source": "https://weatherstack.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl --location 'https://api.weatherstack.com/current?access_key=YOUR_ACCESS_KEY&query=New%20Delhi'",
+      "source": "https://www.postman.com/apilayer/apilayer/request/2v740qu/current-location"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Weatherstack is operational according to its current official API-status page. The submitted entry fails because its documented free quota and plan-based limits are marked unknown and its example is only a placeholder. The legacy documentation URL remains functional but redirects to APILayer's current documentation. Historical weather requires Standard or higher."
+}

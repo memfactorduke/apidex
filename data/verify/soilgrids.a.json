@@ -1,0 +1,52 @@
+{
+  "id": "soilgrids",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.isric.org/soilgrids/v2.0/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rest.isric.org/"
+    },
+    "auth_type": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The published REST API Fair Use Policy is 5 API calls per 1 minute; the API is currently paused.",
+      "source": "https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_02.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "5 API calls per 1 minute under the Fair Use Policy.",
+      "source": "https://rest.isric.org/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SoilGrids is ISRIC's global 250 m soil-property mapping system, providing predictions at six standard depths with quantified uncertainty. Its beta REST API v2.0 is currently paused, with WMS, WCS, WebDAV, and Google Earth Engine offered as alternatives.",
+      "source": "https://docs.isric.org/globaldata/soilgrids/index.html"
+    }
+  },
+  "notes": "Official pages updated in 2025-2026 state that the REST API is temporarily paused with no restoration estimate, so the entry cannot be operational. The Swagger URL and GET /properties/query operation remain documented, but current parameter, authentication, pricing, and CORS behavior could not be fully verified while the service was unavailable."
+}

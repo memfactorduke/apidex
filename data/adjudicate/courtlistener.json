@@ -1,0 +1,15 @@
+{
+  "id": "courtlistener",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free non-member access: 5 requests/minute, 50/hour, and 125/day. Higher limits require membership; commercial users need an agreement. Complimentary EDU and qualifying LSO memberships are available.",
+  "rate_limits": "Default authenticated limits are 5 requests/minute, 50/hour, and 125/day, applied concurrently on rolling windows. Membership tiers increase limits up to 25/minute, 300/hour, and 1,400/day; grandfathered or commercial limits may differ.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: INCORRECT. Current official pricing lists free non-member access at 5/min, 50/hour, 125/day; commercial use requires an agreement. https://free.law/membership/ https://free.law/membership/allowed-api-usage/ rate_limits: INCORRECT. Current v4.6 docs specify concurrent rolling limits of 5/min, 50/hour, 125/day; the May 2026 changelog says 5,000/hour was the former default retained only for qualifying grandfathered users. https://www.courtlistener.com/help/api/rest/ https://free.law/2026/05/07/api-included-in-memberships/"
+}

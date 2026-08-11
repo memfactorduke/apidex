@@ -1,0 +1,41 @@
+{
+  "id": "complyadvantage",
+  "status": "operational",
+  "name": "ComplyAdvantage",
+  "category": "legal-compliance",
+  "tagline": "AML screening API for sanctions, PEPs, and adverse media with match scoring.",
+  "description": "ComplyAdvantage provides enterprise anti-money-laundering (AML) screening APIs for sanctions lists, politically exposed persons (PEPs), and adverse media. Developers can submit individuals or organizations for screening, receive match scores and risk signals, and integrate ongoing monitoring into onboarding and compliance workflows.",
+  "base_url": "https://api.complyadvantage.com",
+  "docs_url": "https://docs.complyadvantage.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication (exact header/scheme not fully verified in this pass)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Token YOUR_API_KEY\" \"https://api.complyadvantage.com/searches\"",
+    "response_snippet": "{ \"content\": { \"data\": { \"id\": \"...\", \"match_status\": \"potential_match\", \"score\": 0.95 } } }"
+  },
+  "use_cases": [
+    "screen a customer name against sanctions and PEP lists",
+    "check adverse media risk for an individual or company",
+    "score and triage AML match results for onboarding",
+    "monitor ongoing watchlist changes for existing customers"
+  ],
+  "sources": [
+    "https://docs.complyadvantage.com/",
+    "https://api.complyadvantage.com"
+  ],
+  "researcher_confidence": "low"
+}

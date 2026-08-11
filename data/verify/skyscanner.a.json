@@ -1,0 +1,52 @@
+{
+  "id": "skyscanner",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.skyscanner.net/docs/flights-live-prices/overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.skyscanner.net/docs/flights-live-prices/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.skyscanner.net/docs/getting-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://skyscannerpartnersupport.zendesk.com/hc/en-us/articles/4524639452573-How-much-does-it-cost-to-use-the-Skyscanner-Flights-API"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The API is completely free with no per-booking, yearly, or monthly fees, but access requires approval and a commercial revenue-share agreement; usage remains subject to partner-specific API rate limits.",
+      "source": "https://skyscannerpartnersupport.zendesk.com/hc/en-us/articles/4524639452573-How-much-does-it-cost-to-use-the-Skyscanner-Flights-API"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published default limits for Flights Live Pricing are 100 create requests per second and 100 per minute, and 100 poll requests per second and 500 per minute. Limits are customized per API key and may vary by partner agreement.",
+      "source": "https://developers.skyscanner.net/docs/getting-started/rate-limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is not supported.",
+      "source": "https://developers.skyscanner.net/docs/faqs"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Add the required passenger field inside query: \"adults\":1. The documented POST path and x-api-key header are otherwise consistent with the current API.",
+      "source": "https://developers.skyscanner.net/docs/flights-live-prices/overview"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.skyscanner.net/docs/flights-live-prices/overview"
+    }
+  },
+  "notes": "The API and documentation are current, but the directory entry incorrectly says rate limits are unpublished, leaves CORS unknown despite explicit non-support, and supplies an invalid create-search body because the required adults field is missing. Access is free but application-based and governed by a commercial revenue-share agreement."
+}

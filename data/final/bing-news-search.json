@@ -1,0 +1,97 @@
+{
+  "id": "bing-news-search",
+  "status": "operational",
+  "name": "Bing News Search",
+  "category": "news-media",
+  "tagline": "Microsoft Bing News Search API for real-time news articles and headlines worldwide.",
+  "description": "Microsoft Bing News Search API (Azure) returns news articles and headlines by query or category via REST with a subscription key\u2014ranked results, trending topics, and category feeds with provider, date, and thumbnail metadata. Classic Bing Search APIs are retired/being retired on Azure; check Microsoft docs for current availability and migration paths before new integrations.",
+  "base_url": "https://api.bing.microsoft.com/v7.0",
+  "docs_url": "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/",
+  "signup_url": "https://portal.azure.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Subscription key via Ocp-Apim-Subscription-Key header; create a Bing Search resource in Azure portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "F0 free tier: 1,000 transactions/month for Bing Search v7; paid SKUs (e.g. S1) have separate quotas and are not free.",
+    "paid_plans": "Pay-as-you-go via Azure Cognitive Services Bing Search SKUs"
+  },
+  "rate_limits": "Per SKU: F0 3 TPS; S1 250 TPS (and other paid SKUs as published). Transaction quotas also apply monthly.",
+  "example": {
+    "request": "curl -H \"Ocp-Apim-Subscription-Key: YOUR_API_KEY\" \"https://api.bing.microsoft.com/v7.0/news/search?q=Microsoft&mkt=en-US&count=10\"",
+    "response_snippet": "{\"_type\":\"News\",\"value\":[{\"name\":\"...\",\"url\":\"...\",\"description\":\"...\",\"provider\":[{\"name\":\"...\"}],\"datePublished\":\"...\"}]}"
+  },
+  "use_cases": [
+    "search recent news articles by keyword",
+    "get trending news topics",
+    "fetch news by category (business, sports, technology)",
+    "monitor brand or topic mentions in news",
+    "build a news aggregator feed for a region"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/bing/search-apis/bing-news-search/",
+    "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/search-api/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

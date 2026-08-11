@@ -1,0 +1,52 @@
+{
+  "id": "myfitnesspal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://myfitnesspalapi.com/docs/example-urls/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://myfitnesspalapi.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://myfitnesspalapi.com/docs/user-authentication/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://myfitnesspalapi.com/faq/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://myfitnesspalapi.com/docs/appendix-full-request-examples/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Approved clients can read diary meals and write exercise, steps, and water entries; current documentation does not permit creating food/diary_meal entries. User data can be read, but the documented user PATCH operation is limited to goal_preferences.daily_step_goal. OAuth 2.0, measurements, subscriptions, and the closure of new access requests are documented; public pricing and free-tier status are not documented.",
+      "source": "https://myfitnesspalapi.com/docs/diary-post/"
+    }
+  },
+  "notes": "The API Platform is currently operational on MyFitnessPal's official status page. The base root's 404 does not invalidate it: official docs specify api.myfitnesspal.com, the /v2 prefix, and concrete endpoints below it. The entry fails because it overstates write access, particularly food entries and profile data."
+}

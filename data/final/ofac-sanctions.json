@@ -1,0 +1,96 @@
+{
+  "id": "ofac-sanctions",
+  "status": "operational",
+  "name": "OFAC Sanctions List Search",
+  "category": "legal-compliance",
+  "tagline": "US Treasury OFAC SDN and consolidated sanctions data via official download/API services.",
+  "description": "US Treasury OFAC SDN and consolidated sanctions data via official download/API services.",
+  "base_url": "https://sanctionslistservice.ofac.treas.gov",
+  "docs_url": "https://ofac.treasury.gov/faqs/topic/1636",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public sanctions list search/download endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free. The web search is intended for individual users and must not be used by automated systems configured to run continual searches; automated screening should use OFAC's downloadable machine-readable files.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "search SDN list for a name",
+    "download consolidated sanctions data"
+  ],
+  "sources": [
+    "https://ofac.treasury.gov/faqs/topic/1636"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

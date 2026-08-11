@@ -1,0 +1,44 @@
+{
+  "id": "weatherstack",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://blog.weatherstack.com/blog/how-reliable-and-accurate-are-weather-forecasts/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://weatherstack.com/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://blog.weatherstack.com/blog/how-reliable-and-accurate-are-weather-forecasts/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://weatherstack.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "100 API calls per month",
+      "source": "https://weatherstack.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published monthly quotas are 100 calls on Free, 50,000 on Standard, 300,000 on Professional, and 1,000,000 on Business; no separate per-second or per-minute limit was located.",
+      "source": "https://weatherstack.com/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://api.weatherstack.com/current?access_key=YOUR_ACCESS_KEY&query=New%20York'",
+      "source": "https://blog.weatherstack.com/blog/how-reliable-and-accurate-are-weather-forecasts/"
+    },
+    "description": {
+      "verdict": "unverifiable"
+    }
+  },
+  "notes": "The submitted entry is unfinished. The official documentation URL remains valid but redirects to APILayer's Weatherstack documentation. Official pricing confirms a free plan with 100 monthly calls. Historical weather requires Standard or higher. No authoritative CORS statement or request-frequency cap was found."
+}

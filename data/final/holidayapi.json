@@ -1,0 +1,98 @@
+{
+  "id": "holidayapi",
+  "status": "operational",
+  "name": "HolidayAPI",
+  "category": "events-holidays",
+  "tagline": "Public holiday and observance data for countries and subdivisions worldwide",
+  "description": "HolidayAPI provides API-key-authenticated REST access to public holidays and observances for 250 countries. Holiday queries use country and year, with documented filters including month, day, public, subdivisions, search, language, previous, and upcoming; there is no observed-date request filter. Paid plans permit commercial use and years 1\u20132050+, while the States & Provinces plan adds subdivision data. All plans advertise the same monthly request allowance.",
+  "base_url": "https://holidayapi.com/v1",
+  "docs_url": "https://holidayapi.com/docs",
+  "signup_url": "https://holidayapi.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key passed as the key query parameter (self-serve signup at holidayapi.com)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000,000 requests per month with no velocity throttling. Free use is non-commercial and limited to historical holidays; API data may be stored offline for no more than 24 hours.",
+    "paid_plans": null
+  },
+  "rate_limits": "1,000,000 requests per month on every plan, resetting on the first day of each month at 00:00 UTC. No additional velocity limit is imposed; exceeding the monthly allowance returns HTTP 429.",
+  "example": {
+    "request": "curl \"https://holidayapi.com/v1/holidays?pretty&key=YOUR_API_KEY&country=US&year=2026\"",
+    "response_snippet": "{\"status\":200,\"holidays\":[{\"name\":\"New Year's Day\",\"date\":\"2026-01-01\",\"observed\":\"2026-01-01\",\"public\":true,\"country\":\"US\",\"uuid\":\"...\",\"weekday\":{\"date\":{\"name\":\"Thursday\",\"numeric\":4}}}]}"
+  },
+  "use_cases": [
+    "list public holidays for a country and year",
+    "check if a given date is a public holiday",
+    "get observed vs official holiday dates for scheduling",
+    "localize holiday names for multi-country apps"
+  ],
+  "sources": [
+    "https://holidayapi.com/docs",
+    "https://holidayapi.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

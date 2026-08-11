@@ -1,0 +1,52 @@
+{
+  "id": "woodpecker-ci",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/woodpecker-ci/woodpecker/main/server/router/api.go"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://woodpecker-ci.org/api",
+      "source": "https://woodpecker-ci.org/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woodpecker-ci.org/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woodpecker-ci.org/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woodpecker-ci.org/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://woodpecker-ci.org/api"
+    }
+  },
+  "notes": "The base-URL curl failure is expected because YOUR_WOODPECKER_HOST is a placeholder; current routes include GET /api/user. The API docs moved to /api, while /docs/api returns 404. Official sources do not publish API quotas, rate limits, or a CORS policy. The signup URL's API-token anchor is also unsupported; current PAT instructions appear on the API page."
+}

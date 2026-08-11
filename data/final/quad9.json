@@ -1,0 +1,102 @@
+{
+  "id": "quad9",
+  "status": "operational",
+  "name": "Quad9",
+  "category": "security-identity",
+  "tagline": "Threat-blocking recursive DNS with free DoH, DoT, and DNSCrypt endpoints for secure resolution.",
+  "description": "Quad9 is a free recursive DNS service that blocks malware and phishing domains via threat intelligence. Developers and apps use its public DNS-over-HTTPS (DoH), DNS-over-TLS (DoT), and DNSCrypt endpoints for secure name resolution without signup. Multiple endpoint variants offer different privacy and filtering policies; no API key is required for standard recursive use.",
+  "base_url": "https://dns.quad9.net/dns-query",
+  "docs_url": "https://www.quad9.net/support/faq/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public recursive DNS/DoH/DoT endpoints. Optional enterprise/logging variants may differ; standard endpoints are open."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "binary",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public recursive DNS/DoH with no published request quota for standard endpoints",
+    "paid_plans": "Enterprise/custom options via Quad9; standard public service is free"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --http2 -sS -H 'accept: application/dns-message' 'https://dns.quad9.net/dns-query?dns=AAABAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE' | hexdump -C",
+    "response_snippet": "00000000  00 00 81 a0 00 01 00 06  00 00 00 00 07 65 78 61\n00000010  6d 70 6c 65 03 63 6f 6d  00 00 01 00 01 c0 0c 00\n(binary RFC 8484 DNS response; answer addresses and TTLs may vary)"
+  },
+  "use_cases": [
+    "resolve a domain to A/AAAA records over DoH",
+    "check if a hostname is blocked as malware by Quad9",
+    "configure app DNS to use threat-blocking recursive resolvers",
+    "query DNS over HTTPS with application/dns-json",
+    "switch between Quad9 filtered and unfiltered endpoint variants"
+  ],
+  "sources": [
+    "https://www.quad9.net/support/faq/",
+    "https://www.quad9.net/",
+    "https://dns.quad9.net"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

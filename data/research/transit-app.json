@@ -1,0 +1,41 @@
+{
+  "id": "transit-app",
+  "status": "operational",
+  "name": "Transit App API",
+  "category": "transportation",
+  "tagline": "Multi-city public transit directions and realtime arrivals for developers.",
+  "description": "Transit App exposes multi-city public transit directions, schedules, and realtime vehicle/stop data for use in third-party applications. Coverage spans many North American and international cities where the consumer Transit app operates, with endpoints for trip planning and live arrivals. Access is typically partner or API-key based rather than fully self-serve for all features.",
+  "base_url": "https://api.transitapp.com",
+  "docs_url": "https://transitapp.com/apis",
+  "signup_url": "https://transitapp.com/apis",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required; contact Transit for access. Exact header/query scheme not fully public on marketing page."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Partner/commercial pricing; not publicly listed in detail"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.transitapp.com/v3/public/nearby_routes?lat=45.5017&lon=-73.5673\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{\"routes\":[{\"global_route_id\":\"...\",\"route_short_name\":\"1\",\"route_long_name\":\"...\",\"agency_name\":\"...\"}]}"
+  },
+  "use_cases": [
+    "get nearby transit routes for a lat/lon",
+    "plan multi-modal transit trips between two points",
+    "fetch realtime arrivals at a stop",
+    "show live vehicle positions on a map",
+    "list agencies and coverage for a city"
+  ],
+  "sources": [
+    "https://transitapp.com/apis"
+  ],
+  "researcher_confidence": "low"
+}

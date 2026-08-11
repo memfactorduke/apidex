@@ -1,0 +1,41 @@
+{
+  "id": "pricecharting",
+  "status": "operational",
+  "name": "PriceCharting API",
+  "category": "games-comics",
+  "tagline": "Video game, console, and TCG market prices with graded variants.",
+  "description": "Public market-price API for video games, consoles, and trading cards from PriceCharting. Returns ungraded and graded prices, product metadata, and historical trends for inventory, valuation, and collecting tools.",
+  "base_url": "https://www.pricecharting.com/api",
+  "docs_url": "https://www.pricecharting.com/api-documentation",
+  "signup_url": "https://www.pricecharting.com/offers",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via t parameter on query string; obtained with a paid PriceCharting subscription."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Subscription required; exact tiers not fully confirmed from public pages."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://www.pricecharting.com/api/product?t=YOUR_API_KEY&id=3911\"",
+    "response_snippet": "{\"status\":\"success\",\"product\":{\"id\":\"3911\",\"console-name\":\"Super Nintendo\",\"product-name\":\"Super Mario World\",\"loose-price\":2500,\"cib-price\":4500,\"new-price\":12000}}"
+  },
+  "use_cases": [
+    "look up current loose/CIB/new price for a video game",
+    "get graded card or game prices by product id",
+    "search products by name for inventory valuation",
+    "pull console and TCG market prices into a collection tracker"
+  ],
+  "sources": [
+    "https://www.pricecharting.com/api-documentation",
+    "https://www.pricecharting.com/"
+  ],
+  "researcher_confidence": "low"
+}

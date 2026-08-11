@@ -1,0 +1,52 @@
+{
+  "id": "transit-app",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://external.transitapp.com",
+      "source": "https://api-doc.transitapp.com/v4.html"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://api-doc.transitapp.com/v4.html",
+      "source": "https://transitapp.com/partners/apis"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api-doc.transitapp.com/v4.html"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://transitapp.com/partners/apis"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 5 API calls per minute and 1,500 API calls per month",
+      "source": "https://transitapp.com/partners/apis"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The free access key is limited to 5 API calls per minute and 1,500 API calls per month; higher-volume access requires contacting Transit.",
+      "source": "https://transitapp.com/partners/apis"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://external.transitapp.com/v4/public/nearby_routes?lat=45.5017&lon=-73.5673' --header 'apiKey: YOUR_SECRET_TOKEN'",
+      "source": "https://api-doc.transitapp.com/v4.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://transitapp.com/partners/apis"
+    }
+  },
+  "notes": "Transit remains operational, but the entry uses the wrong host and Bearer authentication. Current stable documentation is v4; v3 is explicitly labeled legacy. Transit also advertises free request-form access with published per-minute and monthly limits. Official documentation does not state a CORS policy."
+}

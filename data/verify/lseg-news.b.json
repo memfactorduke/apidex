@@ -1,0 +1,52 @@
+{
+  "id": "lseg-news",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.lseg.com/en/article-catalog/article/lseg-data-library-for-python--news-pagination"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news-API",
+      "source": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news-API"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.lseg.com/en/article-catalog/article/lseg-data-platform-news-alerts-with-python"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news-API"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/news-API"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://community.developers.lseg.com/discussion/132839/performance-concern-when-fetching-news-stories"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://api.refinitiv.com/data/news/v1/headlines?query=LEN%20and%20R:MSFT.O&limit=100\"",
+      "source": "https://developers.lseg.com/en/article-catalog/article/lseg-data-library-for-python--news-pagination"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.lseg.com/en/product/news/overview"
+    }
+  },
+  "notes": "The API remains operational at api.refinitiv.com. The catalog URL failed because the current slug is case-sensitive news-API. The supplied curl reaches only the host root and mislabels an OAuth access token as an API key. Public pages describe entitlement-based subscriptions and a requested free trial, but do not conclusively establish whether a permanent free tier exists. Current public documentation also does not provide definitive News endpoint rate values."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "nasa-power",
+  "status": "operational",
+  "name": "NASA POWER",
+  "category": "agriculture",
+  "tagline": "NASA agroclimatology solar, temperature, and precipitation by lat/lon",
+  "description": "NASA Prediction Of Worldwide Energy Resources (POWER) provides satellite- and model-based agroclimatology parameters (solar irradiance, temperature, precipitation, humidity, wind) at point locations for crop modeling, energy, and climate applications via a public REST API.",
+  "base_url": "https://power.larc.nasa.gov/api",
+  "docs_url": "https://power.larc.nasa.gov/docs/services/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key required; public REST endpoints accept query parameters without authentication."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,PRECTOTCORR&community=AG&longitude=-86.45&latitude=34.72&start=20200101&end=20200107&format=JSON\"",
+    "response_snippet": "{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[-86.45,34.72,0]},\"properties\":{\"parameter\":{\"T2M\":{\"20200101\":5.12},\"PRECTOTCORR\":{\"20200101\":0.0}}}}"
+  },
+  "use_cases": [
+    "get daily solar radiation for a farm lat/lon",
+    "fetch temperature and precipitation time series for crop models",
+    "download agroclimatology CSV for a field location",
+    "query multi-year climate normals for planting decisions"
+  ],
+  "sources": [
+    "https://power.larc.nasa.gov/docs/services/api/"
+  ],
+  "researcher_confidence": "low"
+}

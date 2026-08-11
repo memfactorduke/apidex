@@ -1,0 +1,15 @@
+{
+  "id": "tibber",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "No numeric HTTP request quota is published. Maximum 2 open WebSocket connections; clients must use jittered exponential backoff. Tibber recommends querying today/tomorrow prices only once daily and caching them.",
+  "cors": null,
+  "example_request": "curl -X POST https://api.tibber.com/v1-beta/gql -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -H \"User-Agent: curl/8.7.1 MyTibberClient/1.0.0\" -d '{\"query\":\"{ viewer { name homes { id address { address1 city } } } }\"}'",
+  "example_response_snippet": "{\"data\":{\"viewer\":{\"name\":\"Ada Example\",\"homes\":[{\"id\":\"96a14971-525a-4420-aae9-e5aedaa129ff\",\"address\":{\"address1\":\"Example Street 1\",\"city\":\"Oslo\"}}]}}}",
+  "description": "Tibber provides authenticated GraphQL access to account and home metadata, electricity prices, historical consumption and production, and real-time Pulse/Watty measurements via subscriptions. The published schema does not document operations for controlling EV chargers or smart plugs; connected-device data is offered separately through Tibber's Data API.",
+  "status": null,
+  "resolution_notes": "auth_type: oauth2; Tibber explicitly requires an OAuth access token, using either a personal token or OAuth client: https://developer.tibber.com/docs/guides/calling-api. rate_limits: corrected; the same guide caps WebSockets at 2 and specifies backoff and daily price-query guidance. example: corrected; that guide requires User-Agent, Bearer, JSON, and POST. description: corrected; the current schema lists prices, consumption, production, and Pulse/Watty measurements but no charger/plug control: https://developer.tibber.com/docs/reference."
+}

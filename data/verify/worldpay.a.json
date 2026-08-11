@@ -1,0 +1,52 @@
+{
+  "id": "worldpay",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.worldpay.com/access/products/reference/security"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.worldpay.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.worldpay.com/access/products/reference/api-principles"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The Try environment is limited to 10 requests per second per merchant. Exceeding this produces HTTP 429 responses and may require waiting up to five minutes. No general Live-environment limit was located.",
+      "source": "https://docs.worldpay.com/access/products/get-started"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -u USERNAME:PASSWORD https://try.access.worldpay.com/payments/authorizations -H 'Content-Type: application/vnd.worldpay.payments-v6+json' -H 'Accept: application/vnd.worldpay.payments-v6.hal+json' -d '{\"transactionReference\":\"ref-001\",\"merchant\":{\"entity\":\"YOUR_ENTITY\"},\"instruction\":{\"narrative\":{\"line1\":\"Trading name\"},\"value\":{\"currency\":\"GBP\",\"amount\":100},\"paymentInstrument\":{\"type\":\"card/plain\",\"cardNumber\":\"4444333322221111\",\"cardExpiryDate\":{\"month\":12,\"year\":2035},\"cvc\":\"123\"}}}'",
+      "source": "https://docs.worldpay.com/access/products/card-payments/v6/authorize-a-payment"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Access Worldpay provides RESTful HTTPS APIs for payment and related commerce flows. Integrations use separate Try and Live Basic-auth credentials supplied by a Worldpay Implementation Manager, rather than credentials obtained from a Worldpay dashboard.",
+      "source": "https://docs.worldpay.com/access/products/card-payments/v6/get-started"
+    }
+  },
+  "notes": "The current documentation identifies v7 as latest but still documents v6, so using v6 is valid. The sample instead has an incorrect Accept media type, missing required narrative, and wrong payment-instrument type and expiry field names. Official guidance says credentials come from an Implementation Manager, not the Try endpoint or a dashboard. Official Access pricing and a general REST CORS policy were not found."
+}

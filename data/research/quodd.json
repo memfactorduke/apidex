@@ -1,0 +1,40 @@
+{
+  "id": "quodd",
+  "status": "operational",
+  "name": "Quodd",
+  "category": "finance",
+  "tagline": "Institutional market data APIs for equities, options, and related feeds",
+  "description": "Quodd (QUODD Financial Information Services) provides market data APIs for equities, options, and related financial datasets used by platforms and applications. Access is typically commercial and credentialed; public self-serve developer docs and free tiers are limited or not clearly published. Verify current base URL, auth, and product endpoints with Quodd sales or partner documentation before integration.",
+  "base_url": "https://api.quodd.com",
+  "docs_url": "https://www.quodd.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Commercial/partner credentials; public self-serve auth method not clearly documented on the marketing site"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Enterprise/commercial pricing; contact Quodd sales (not published self-serve)"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://api.quodd.com/\" -H \"Accept: application/json\"",
+    "response_snippet": "Official public request/response examples were not found on the marketing site; obtain sample payloads from Quodd partner docs or account onboarding."
+  },
+  "use_cases": [
+    "look up equity quotes for a ticker",
+    "retrieve options chain or options market data",
+    "integrate delayed or real-time market data into a financial app",
+    "power portfolio or watchlist market data displays"
+  ],
+  "sources": [
+    "https://www.quodd.com/"
+  ],
+  "researcher_confidence": "low"
+}

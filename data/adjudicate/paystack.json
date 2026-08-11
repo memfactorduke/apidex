@@ -1,0 +1,15 @@
+{
+  "id": "paystack",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Most endpoints: 600 requests per 60 seconds in live mode and 100 per 60 seconds in test mode, per integration and endpoint. Specified live-mode endpoints have extended limits of 900\u20133,000 requests per 60 seconds; test mode retains standard limits.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "rate_limits: Original is incorrect. Paystack publishes standard per-integration, per-endpoint limits of 600 requests/60 seconds live and 100/60 seconds test. Listed live-only extended limits range from 900/60 seconds for Initiate Transfer to 3,000/60 seconds for Verify Transaction. Evidence: https://paystack.com/docs/api/rate-limits/"
+}

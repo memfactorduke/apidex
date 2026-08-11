@@ -1,0 +1,43 @@
+{
+  "id": "qr-code-generator",
+  "status": "operational",
+  "name": "QR Code Generator",
+  "category": "utilities",
+  "tagline": "Free HTTP API that generates downloadable QR code images from text or URLs",
+  "description": "Simple free public HTTP API from goqr.me that turns any string into a QR code image. Call create-qr-code/ with data and size; it returns PNG, GIF, JPEG, SVG, EPS, or other formats with no signup. Widely used for quick embeds, email signatures, and print assets when you need a QR without running a local library.",
+  "base_url": "https://api.qrserver.com/v1",
+  "docs_url": "https://goqr.me/api/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public HTTP GET endpoints; no API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "binary",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free unlimited use for reasonable traffic; commercial use allowed. No published hard free quota. Very high volume may require contacting them.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS -o qr.png \"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example\"",
+    "response_snippet": "Binary PNG image bytes (Content-Type: image/png). For SVG: ...&format=svg returns XML SVG markup."
+  },
+  "use_cases": [
+    "generate a PNG QR code image from a URL or plain text",
+    "create SVG QR codes for print or high-resolution embeds",
+    "build a simple endpoint that returns QR codes without a local library",
+    "embed QR codes in emails, invoices, or tickets from a server script"
+  ],
+  "sources": [
+    "https://goqr.me/api/",
+    "https://goqr.me/api/doc/create-qr-code/",
+    "https://api.qrserver.com/v1/create-qr-code/"
+  ],
+  "researcher_confidence": "high"
+}

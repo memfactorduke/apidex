@@ -1,0 +1,52 @@
+{
+  "id": "jsearch",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.rapidapi.com/v2.0.0/docs/configuring-api-security"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openwebninja.com/api/jsearch"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "200 requests per month, hard limit",
+      "source": "https://www.openwebninja.com/api/jsearch"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published plan-specific limits: Free 1,000 requests/hour; Pro 5 requests/second; Ultra 10 requests/second; Mega 20 requests/second; Pay As You Go 5 requests/second",
+      "source": "https://www.openwebninja.com/api/jsearch"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openwebninja.com/api/jsearch"
+    }
+  },
+  "notes": "The API is active: RapidAPI identifies v3 as current and lists both Job Search V2 and legacy Job Search. The provider says the RapidAPI and direct routes have identical endpoints, parameters, and response shapes, and now recommends /search-v2 for pagination. Exact RapidAPI host and the complete legacy /search curl could not be extracted from the public official pages, so those fields were not confirmed."
+}

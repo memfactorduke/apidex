@@ -1,0 +1,99 @@
+{
+  "id": "pvoutput",
+  "status": "operational",
+  "name": "PVOutput",
+  "category": "energy-utilities",
+  "tagline": "Crowdsourced solar PV generation and consumption time series API",
+  "description": "PVOutput provides a free, key-authenticated API for reading and writing solar PV system generation and consumption data from a global crowdsourced network of systems. Developers can query live and historical energy, power, weather, and status data for individual systems or aggregates, plus post measurements from inverters and energy monitors.",
+  "base_url": "https://pvoutput.org/service/r2",
+  "docs_url": "https://pvoutput.org/help/api_specification.html",
+  "signup_url": "https://pvoutput.org/register.jsp",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Pvoutput-Apikey header and system id via X-Pvoutput-SystemId header; obtain both after free account registration and enabling API access in account settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "text",
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Registered non-donation accounts: 60 requests/hour per API key for most request types; Get Statistic: 12/hour. Donation mode raises these to 300/hour and 60/hour respectively.",
+    "paid_plans": "Donation membership increases API request limits; no traditional paid API plan published"
+  },
+  "rate_limits": "Per API key: 60 requests/hour normally or 300/hour in Donation mode. Get Statistic separately allows 12/hour normally or 60/hour in Donation mode.",
+  "example": {
+    "request": "curl -s -H \"X-Pvoutput-Apikey: YOUR_API_KEY\" -H \"X-Pvoutput-SystemId: YOUR_SYSTEM_ID\" \"https://pvoutput.org/service/r2/getstatus.jsp\"",
+    "response_snippet": "20240810,14:30,12340,450,890,120,NaN,20240810,14:25,45"
+  },
+  "use_cases": [
+    "get latest solar generation status for a PV system",
+    "post inverter energy readings to a PVOutput system",
+    "fetch historical daily energy output for a system",
+    "list public PV systems near a location",
+    "get live power generation and consumption time series"
+  ],
+  "sources": [
+    "https://pvoutput.org/help/api_specification.html"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

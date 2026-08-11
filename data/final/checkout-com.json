@@ -1,0 +1,96 @@
+{
+  "id": "checkout-com",
+  "status": "operational",
+  "name": "Checkout.com API",
+  "category": "ecommerce-payments",
+  "tagline": "Global payments API for cards, wallets, and local methods",
+  "description": "Checkout.com provides a unified REST API for accepting and managing payments across cards, digital wallets, and local payment methods. Merchants use it for authorization, capture, refunds, payouts, and risk controls with sandbox and production environments.",
+  "base_url": "https://{prefix}.api.checkout.com",
+  "docs_url": "https://www.checkout.com/docs/developer-resources/api",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Secret API key via Authorization: Bearer header (or channel access key for some flows); sandbox and production keys from Dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "Default: 100 RPS total for GET operations and 100 RPS total for POST, PUT, and DELETE operations, calculated across the entire API. Custom limits may be requested.",
+  "example": {
+    "request": "curl --request GET \"https://YOUR_PREFIX.api.checkout.com/payments/YOUR_PAYMENT_ID\" --header \"Authorization: Bearer YOUR_SECRET_API_KEY\" --header \"Accept: application/json\"",
+    "response_snippet": "{\"id\":\"pay_mbabizu24mvu3mela5njyhpit4\",\"amount\":6540,\"currency\":\"USD\",\"approved\":true,\"status\":\"Authorized\"}"
+  },
+  "use_cases": [
+    "create a card payment",
+    "refund a payment",
+    "list payment methods",
+    "capture an authorized payment"
+  ],
+  "sources": [
+    "https://www.checkout.com/docs/developer-resources/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

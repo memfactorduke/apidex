@@ -1,0 +1,52 @@
+{
+  "id": "okx",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://openapi.okx.com (OKX Global; regional users must use their applicable regional domain)",
+      "source": "https://www.okx.com/docs-v5/log_en/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/docs-v5/en/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/docs-v5/en/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/en-gb/okx-api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "API use is free and trading fees apply. Rate limits vary by endpoint and may be keyed by IP address, user ID, connection, or instrument; only certain limits and API features depend on VIP tier.",
+      "source": "https://www.okx.com/docs-v5/en/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Limits differ by endpoint. Public REST limits generally use IP address, private REST and order-management limits generally use user ID, and WebSocket login/subscription limits use connections. Some sub-account limits and premium data channels are VIP-dependent.",
+      "source": "https://www.okx.com/docs-v5/en/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/docs-v5/en/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.okx.com/docs-v5/en/"
+    }
+  },
+  "notes": "In May 2026 OKX changed the documented Global REST base to openapi.okx.com. The old www.okx.com host remains functional and is not deprecated, but it is no longer the recommended base. Regional domains differ. The entry also incorrectly describes rate limits as generally VIP-based."
+}

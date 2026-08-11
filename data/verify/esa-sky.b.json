@@ -1,0 +1,52 @@
+{
+  "id": "esa-sky",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://sky.esa.int/esasky-tap/",
+      "source": "https://www.cosmos.esa.int/web/esdc/esasky-interface"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cosmos.esa.int/web/esdc/esasky-interface"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cosmos.esa.int/web/esdc/esasky-interface"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cosmos.esa.int/web/esdc/esasky-interface"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cosmos.esa.int/web/esdc/esasky-interface"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cosmos.esa.int/web/esdc/esasky-interface"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use endpoint https://sky.esa.int/esasky-tap/tap/sync with REQUEST=doQuery, LANG=ADQL, FORMAT=json; table name may need discovery via TAP_SCHEMA rather than ivoa.obscore",
+      "source": "https://www.cosmos.esa.int/web/esdc/esasky-interface"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cosmos.esa.int/web/esdc/esasky-interface"
+    }
+  },
+  "notes": "Adversarial check: docs_url and portal live; TAP base is public/no-auth. Exact base_url path form and example table (ivoa.obscore) need validation against live TAP capabilities; CORS not documented."
+}

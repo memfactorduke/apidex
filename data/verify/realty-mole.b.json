@@ -1,0 +1,52 @@
+{
+  "id": "realty-mole",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No operational Realty Mole base URL; replacement: https://api.rentcast.io/v1",
+      "source": "https://developers.rentcast.io/reference/realty-mole-migration-guide"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.rentcast.io/reference/introduction",
+      "source": "https://developers.rentcast.io/reference/realty-mole-migration-guide"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.rentcast.io/reference/realty-mole-migration-guide"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "No current Realty Mole free tier because the API is shut down; replacement RentCast has a free Developer plan.",
+      "source": "https://developers.rentcast.io/reference/realty-mole-migration-guide"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The former Realty Mole Basic plan and replacement RentCast Developer plan provide 50 requests per month.",
+      "source": "https://developers.rentcast.io/reference/realty-mole-migration-guide"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable to the shut-down API; replacement RentCast has a hard limit of 20 requests per second per API key.",
+      "source": "https://developers.rentcast.io/reference/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl --request GET --url 'https://api.rentcast.io/v1/properties?address=5500%20Grand%20Lake%20Dr%2C%20San%20Antonio%2C%20TX%2C%2078244' --header 'Accept: application/json' --header 'X-Api-Key: YOUR_API_KEY'",
+      "source": "https://developers.rentcast.io/reference/search-queries"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Legacy US property-data API formerly hosted on RapidAPI; permanently shut down on March 1, 2025 and replaced by RentCast.",
+      "source": "https://developers.rentcast.io/reference/realty-mole-migration-guide"
+    }
+  },
+  "notes": "Official provider documentation says Realty Mole and its RapidAPI endpoints were discontinued and permanently shut down on March 1, 2025. The entry's operational status and present-tense description are therefore false. RapidAPI keys and URLs must be replaced with RentCast credentials and endpoints."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "sparkpost",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.sparkpost.com/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.sparkpost.com/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.sparkpost.com/api/#authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://bird.com/en-us/docs/knowledge-base/billing/plans-and-pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 emails per month, capped at 50 per day; one sending domain; no overage",
+      "source": "https://bird.com/en-us/docs/knowledge-base/billing/plans-and-pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Dynamic API limits return HTTP 429; wait 1\u20135 seconds before retrying. Transmissions POST requests are exempt from this API rate limiting, while DELETE requests are limited. Separate sending limits may return HTTP 420.",
+      "source": "https://developers.sparkpost.com/api/#rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST https://api.sparkpost.com/api/v1/transmissions -H 'Authorization: YOUR_API_KEY' -H 'Content-Type: application/json' -d '{\"recipients\":[{\"address\":\"recipient@example.com\"}],\"content\":{\"from\":\"sender@verified-domain.example\",\"subject\":\"Hello\",\"text\":\"Hello\"}}'",
+      "source": "https://developers.sparkpost.com/api/transmissions/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SparkPost is now Bird Email, owned by Bird (formerly MessageBird), not Sinch. Existing SparkPost customers retain the service, while new projects use the Bird Email API. It supports transactional and marketing email, templates, and delivery and engagement analytics.",
+      "source": "https://bird.com/en-us/products/email/sparkpost"
+    }
+  },
+  "notes": "The legacy SparkPost API reference and US base URL remain published for existing customers, but SparkPost is now Bird Email and new projects are directed to Bird's newer API. The entry has incorrect ownership, pricing, rate-limit, and curl-example claims. No authoritative CORS statement was located."
+}

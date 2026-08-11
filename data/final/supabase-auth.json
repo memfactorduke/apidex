@@ -1,0 +1,95 @@
+{
+  "id": "supabase-auth",
+  "status": "operational",
+  "name": "Supabase Auth",
+  "category": "security-identity",
+  "tagline": "GoTrue-based HTTP auth for signup, sessions, MFA, and OAuth",
+  "description": "Supabase Auth is a hosted GoTrue authentication API that handles user signup, login, session management, MFA, and OAuth for apps built on Supabase. Developers call project-scoped Auth endpoints with the anon or service role key to manage identities and JWTs.",
+  "base_url": "https://YOUR_PROJECT_REF.supabase.co/auth/v1",
+  "docs_url": "https://supabase.com/docs/reference/auth",
+  "signup_url": "https://supabase.com/dashboard",
+  "auth": {
+    "type": "apiKey",
+    "details": "Project API keys via apikey header and Authorization: Bearer <anon|service_role JWT>; self-serve project signup"
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes Auth with project limits; verify current MAU/bandwidth on pricing page",
+    "paid_plans": "Pro and higher with higher MAU and features"
+  },
+  "rate_limits": "Published defaults: built-in email sends 2/hour project-wide; OTPs 30/hour; OTP/magic-link, signup-confirmation, and recovery resend windows 60 seconds/user; verification 360/hour/IP; token refresh 1,800/hour/IP; MFA challenge/verify 15/hour/IP; anonymous sign-ins 30/hour/IP. Some are configurable.",
+  "example": {
+    "request": "curl -X POST 'https://YOUR_PROJECT_REF.supabase.co/auth/v1/signup' -H 'apikey: YOUR_PUBLISHABLE_KEY' -H 'Content-Type: application/json' -d '{\"email\":\"user@example.com\",\"password\":\"example-password\"}'",
+    "response_snippet": "{\"id\":\"6f8b8a1e-6d4f-4a5f-92db-8b44f6a7d910\",\"aud\":\"authenticated\",\"role\":\"authenticated\",\"email\":\"user@example.com\",\"confirmation_sent_at\":\"2026-08-11T14:00:00Z\",\"app_metadata\":{\"provider\":\"email\",\"providers\":[\"email\"]},\"user_metadata\":{\"email\":\"user@example.com\",\"email_verified\":false},\"created_at\":\"2026-08-11T14:00:00Z\",\"updated_at\":\"2026-08-11T14:00:00Z\"}"
+  },
+  "use_cases": [
+    "sign up a user with email/password",
+    "exchange refresh token for session"
+  ],
+  "sources": [
+    "https://supabase.com/docs/reference/auth"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

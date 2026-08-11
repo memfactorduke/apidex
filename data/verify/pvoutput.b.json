@@ -1,0 +1,52 @@
+{
+  "id": "pvoutput",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/commercial_use.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The official API specification explicitly publishes the quotas: 60 requests/hour normally and 12 requests/hour for Get Statistic; Donation mode raises these to 300 and 60 respectively.",
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The general limits are 60 requests/hour normally and 300/hour in Donation mode. Get Statistic has a separate lower limit of 12/hour normally and 60/hour in Donation mode.",
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/overview.html"
+    }
+  },
+  "notes": "Official documentation revised 15 Jun 2026 still documents r2. The submitted response_snippet does not match the documented nine-field Get Status response, but the requested example verdict covers only the curl method, path, parameters, and headers. Current docs do not document JSON, and they identify a Commercial Use subscription."
+}

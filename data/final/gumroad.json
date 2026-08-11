@@ -1,0 +1,95 @@
+{
+  "id": "gumroad",
+  "status": "operational",
+  "name": "Gumroad API",
+  "category": "ecommerce-payments",
+  "tagline": "Creator commerce API for products, sales, and license keys",
+  "description": "Gumroad's REST API lets indie sellers manage products, retrieve sales data, and validate license keys for digital goods.",
+  "base_url": "https://api.gumroad.com/v2",
+  "docs_url": "https://gumroad.com/api",
+  "signup_url": "https://gumroad.com/signup",
+  "auth": {
+    "type": "oauth2",
+    "details": "Access token via access_token query parameter or Authorization header"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "No monthly charge; 10% + $0.50 per direct/profile sale and 30% per Discover marketplace sale.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.gumroad.com/v2/user?access_token=YOUR_API_KEY\"",
+    "response_snippet": "{\"success\":true,\"user\":{\"name\":\"...\",\"email\":\"...\"}}"
+  },
+  "use_cases": [
+    "list products for a Gumroad store",
+    "validate a digital product license key",
+    "fetch recent sales and payout data",
+    "create or update a product listing"
+  ],
+  "sources": [
+    "https://gumroad.com/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "example"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "moodle",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://supportus.moodle.com/support/solutions/articles/80001016973-using-the-web-services-application-programming-interface-api-in-moodle"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://moodledev.io/docs/apis/subsystems/external"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.moodle.org/501/en/Using_web_services"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://support.moodle.com/support/solutions/articles/80001075420-how-to-get-a-moodle-site"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes; Moodle sets Access-Control-Allow-Origin: * for Web Service requests, although a deployment proxy, firewall, or web server can remove it",
+      "source": "https://docs.moodle.org/502/en/Moodle_app_FAQ"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/moodle/moodle/blob/main/public/webservice/rest/locallib.php"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Moodle Web Services expose site-specific LMS functions through enabled protocols such as REST. Each site controls its services, functions, and user tokens. Moodle can be self-hosted, hosted on MoodleCloud by Moodle, or hosted by a certified partner or service provider; there is no single global API endpoint.",
+      "source": "https://support.moodle.com/support/solutions/articles/80000825155-moodlecloud-and-moodle-hosting-options"
+    }
+  },
+  "notes": "HTTP 0 is expected because the listed base URL contains a placeholder hostname; the documented site-relative endpoint remains current. Core Moodle explicitly enables CORS. Official sources support free self-hosting but do not document the claimed absence or configurability of API quotas. The description incorrectly excludes MoodleCloud hosting operated by Moodle."
+}

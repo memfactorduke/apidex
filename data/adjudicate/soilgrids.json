@@ -1,0 +1,15 @@
+{
+  "id": "soilgrids",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Publicly accessible under CC BY 4.0, but the REST API is currently paused. When available, fair use is limited to 5 API calls per 1-minute period.",
+  "rate_limits": "5 API calls per 1-minute period under the Fair Use Policy; the REST API is currently paused.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "SoilGrids is ISRIC's global digital soil-mapping system, providing modeled soil-property maps at 250 m resolution across six standard depth intervals, with quantified prediction uncertainty. Its beta REST API v2.0 is currently paused with no estimated restoration date; ISRIC recommends WMS, WCS, WebDAV, or Google Earth Engine for current access.",
+  "status": "degraded",
+  "resolution_notes": "free_tier_limits: corrected; ISRIC says the API is paused and otherwise limited to 5 calls per minute: https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_02.html. rate_limits: corrected to the explicit 5-calls-per-minute policy at the same URL. description: corrected to include 250 m resolution, six depths, uncertainty, and the current pause: https://docs.isric.org/globaldata/soilgrids/index.html. The pause is temporary rather than a declared shutdown, so status is degraded."
+}

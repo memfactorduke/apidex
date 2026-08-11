@@ -1,0 +1,95 @@
+{
+  "id": "jooble",
+  "status": "operational",
+  "name": "Jooble API",
+  "category": "jobs-careers",
+  "tagline": "Global job search aggregator API covering many countries and languages",
+  "description": "Jooble is a global job aggregator that provides a search API for retrieving job listings across many countries and languages. Developers authenticate with an API key and POST search criteria (keywords, location, etc.) to receive matching job results. Suitable for building job boards, career apps, and recruitment tools that need broad international job coverage.",
+  "base_url": "https://jooble.org/api",
+  "docs_url": "https://jooble.org/api/about",
+  "signup_url": "https://jooble.org/api/about",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key appended as path segment after /api/ (e.g. POST https://jooble.org/api/{key}). Obtain key via form on docs page."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://jooble.org/api/YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"keywords\":\"developer\",\"location\":\"New York\"}'",
+    "response_snippet": "{\"totalCount\":1234,\"jobs\":[{\"title\":\"Software Developer\",\"location\":\"New York, NY\",\"snippet\":\"...\",\"salary\":\"\",\"source\":\"...\",\"type\":\"\",\"link\":\"https://...\",\"company\":\"...\",\"updated\":\"...\"}]}"
+  },
+  "use_cases": [
+    "search jobs by keyword and location across countries",
+    "build a multi-country job board or aggregator UI",
+    "fetch recent job listings for a career site",
+    "power job recommendations in a hiring app"
+  ],
+  "sources": [
+    "https://jooble.org/api/about"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": [
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

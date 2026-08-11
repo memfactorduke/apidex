@@ -1,0 +1,41 @@
+{
+  "id": "balena",
+  "status": "operational",
+  "name": "Balena",
+  "category": "iot-devices",
+  "tagline": "Container-based edge fleet management for IoT devices",
+  "description": "Balena provides an OpenAPI-based REST API for managing fleets of edge/IoT devices, including applications, device provisioning, releases, environment variables, and remote access. Developers use it to automate fleet operations, deploy containerized software, and monitor device state at scale.",
+  "base_url": "https://api.balena-cloud.com/v6",
+  "docs_url": "https://docs.balena.io/reference/api/overview/",
+  "signup_url": "https://dashboard.balena-cloud.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key (session token or device API key) via Authorization: Bearer header; self-serve signup on balenaCloud"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.balena-cloud.com/v6/device\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"d\":[{\"id\":123,\"uuid\":\"...\",\"device_name\":\"my-device\",\"is_online\":true,\"os_version\":\"...\"}]}"
+  },
+  "use_cases": [
+    "list devices in a fleet",
+    "get device online status and last seen",
+    "deploy a release to a fleet",
+    "set device environment variables",
+    "SSH or tunnel to a remote device"
+  ],
+  "sources": [
+    "https://docs.balena.io/reference/api/overview/"
+  ],
+  "researcher_confidence": "low"
+}

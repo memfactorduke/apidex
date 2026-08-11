@@ -1,0 +1,15 @@
+{
+  "id": "chainalysis",
+  "base_url": "https://api.chainalysis.com/api/kyt",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -X GET 'https://api.chainalysis.com/api/kyt/v1/assets' --header 'Token: YOUR_API_KEY' --header 'Accept: application/json'",
+  "example_response_snippet": "[{\"symbol\":\"AUDX\",\"name\":\"Etoro AUD\"},{\"symbol\":\"BCH\",\"name\":\"Bitcoin Cash\"},{\"symbol\":\"BTC\",\"name\":\"Bitcoin\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: ORIGINAL is too generic. The official KYT reference names https://api.chainalysis.com/api/kyt as the production API endpoint; v1 and v2 are route versions beneath it. Evidence: https://kytdoc.kyt-dev.e.chainalysis.com/ . example: ORIGINAL root request is invalid, but the Token header is documented, not invented. The official reference documents GET /v1/assets with Token and Accept headers and the asset-list response used here. Evidence: https://kytdoc.kyt-dev.e.chainalysis.com/ ."
+}

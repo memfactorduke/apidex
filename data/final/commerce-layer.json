@@ -1,0 +1,99 @@
+{
+  "id": "commerce-layer",
+  "status": "operational",
+  "name": "Commerce Layer API",
+  "category": "ecommerce-payments",
+  "tagline": "Headless commerce API for multi-market catalogs, orders, prices, and tax/shipping rules.",
+  "description": "Commerce Layer is a headless commerce platform API for multi-market catalogs, orders, prices, promotions, tax, and shipping. Developers integrate via REST (JSON:API) with OAuth2 client credentials for backend and sales channel tokens for storefronts.",
+  "base_url": "https://yourdomain.commercelayer.io/api",
+  "docs_url": "https://docs.commercelayer.io/core",
+  "signup_url": "https://dashboard.commercelayer.io/sign_up",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth2 client credentials (application) for backend integrations; sales channel and integration tokens for storefronts. Bearer token in Authorization header. Self-serve signup via dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -g -X GET 'https://yourdomain.commercelayer.io/api/skus' -H 'Accept: application/vnd.api+json' -H 'Authorization: Bearer your-access-token'",
+    "response_snippet": "{\"data\":[{\"id\":\"XAyRWNUzyN\",\"type\":\"skus\",\"links\":{\"self\":\"https://yourdomain.commercelayer.io/api/skus/XAyRWNUzyN\"},\"attributes\":{\"code\":\"TSHIRTMM000000FFFFFFXLXX\",\"name\":\"Men's Black T-shirt with White Logo (XL)\",\"description\":\"Lorem ipsum dolor sit amet.\"}}],\"meta\":{\"record_count\":140,\"page_count\":14}}"
+  },
+  "use_cases": [
+    "list SKUs and products for a multi-market catalog",
+    "create and update customer orders",
+    "fetch market-specific prices and price lists",
+    "apply promotions and coupons to carts",
+    "calculate tax and shipping for an order",
+    "manage inventory stock locations"
+  ],
+  "sources": [
+    "https://docs.commercelayer.io/core"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

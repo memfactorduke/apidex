@@ -1,0 +1,43 @@
+{
+  "id": "nowpayments",
+  "status": "operational",
+  "name": "NOWPayments API",
+  "category": "ecommerce-payments",
+  "tagline": "Crypto payment gateway with multi-coin invoices, IPN callbacks, and mass payouts.",
+  "description": "NOWPayments is a cryptocurrency payment gateway API for accepting payments in many coins and tokens, creating invoices/payments, receiving Instant Payment Notifications (IPN), and running mass payouts. Developers authenticate with an API key and typically verify IPN signatures for webhook security. Suitable for ecommerce checkouts, donation flows, and automated crypto disbursements.",
+  "base_url": "https://api.nowpayments.io/v1",
+  "docs_url": "https://documenter.getpostman.com/view/7907941/S1a32n38",
+  "signup_url": "https://account.nowpayments.io/create-account",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via x-api-key header (from dashboard). JWT Bearer for some payout/auth flows after email/password login."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.nowpayments.io/v1/status\" -H \"x-api-key: YOUR_API_KEY\"",
+    "response_snippet": "{\"message\":\"OK\"}"
+  },
+  "use_cases": [
+    "create a crypto payment invoice for an order",
+    "check payment status by payment id",
+    "list available cryptocurrencies for checkout",
+    "estimate crypto amount for a fiat price",
+    "send mass crypto payouts to multiple wallets",
+    "verify and process IPN payment webhooks"
+  ],
+  "sources": [
+    "https://documenter.getpostman.com/view/7907941/S1a32n38",
+    "https://nowpayments.io/"
+  ],
+  "researcher_confidence": "low"
+}

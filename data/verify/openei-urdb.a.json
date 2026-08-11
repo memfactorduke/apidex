@@ -1,0 +1,52 @@
+{
+  "id": "openei-urdb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openei.org/services/doc/rest/util_rates/?version=7"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openei.org/services/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openei.org/services/doc/rest/util_rates/?version=7"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openei.org/services/doc/rest/util_rates/?version=7"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The associated api.data.gov service publishes a default limit of 1,000 requests per hour per API key, although individual services may override it.",
+      "source": "https://api.data.gov/docs/developer-manual/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "A default rate limit of 1,000 requests per hour is published; service-specific limits may vary.",
+      "source": "https://api.data.gov/docs/developer-manual/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openei.org/services/doc/rest/util_rates/?version=7"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openei.org/services/doc/rest/util_rates/?version=7"
+    }
+  },
+  "notes": "The official URDB documentation supports the endpoint, required API key, free signup, filters, and example request. OpenEI's signup uses api.data.gov, whose official manual publishes a default 1,000-request hourly limit, so the two limit claims are not accurate. CORS behavior is not documented and could not be independently established."
+}

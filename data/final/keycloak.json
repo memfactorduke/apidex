@@ -1,0 +1,104 @@
+{
+  "id": "keycloak",
+  "status": "operational",
+  "name": "Keycloak Admin REST API",
+  "category": "security-identity",
+  "tagline": "Open-source IdP admin API for realms, users, clients, and SSO",
+  "description": "Keycloak's Admin REST API manages realms, users, groups, clients, roles, sessions, and identity providers on an operator-hosted Keycloak deployment. Calls require a bearer access token with appropriate administrative roles or delegated permissions; the full realm-admin role is not required. Tokens may represent users or service accounts and can be obtained through supported OAuth 2.0/OpenID Connect flows, including direct access grants and client credentials.",
+  "base_url": "https://{host}/admin/realms",
+  "docs_url": "https://www.keycloak.org/docs-api/latest/rest-api/index.html",
+  "signup_url": "https://www.keycloak.org/downloads",
+  "auth": {
+    "type": "oauth2",
+    "details": "Bearer access token from the master (or admin) realm token endpoint, typically via password grant for a realm-management admin user or client_credentials for a confidential client with realm-management roles. Send Authorization: Bearer <token> on Admin REST calls."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free and open source (Apache 2.0); no request quotas from the project. Hosting and cloud vendor costs apply separately.",
+    "paid_plans": "No official paid API tiers from the Keycloak project; commercial support available via Red Hat build of Keycloak and third-party hosts."
+  },
+  "rate_limits": "not published (self-hosted; operators configure their own limits)",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \"https://YOUR_KEYCLOAK_HOST/admin/realms/master/users?username=alice&exact=true\"",
+    "response_snippet": "[{\"id\":\"f:uuid-here\",\"username\":\"alice\",\"enabled\":true,\"emailVerified\":false,\"firstName\":\"Alice\",\"lastName\":\"Example\",\"email\":\"alice@example.com\",\"createdTimestamp\":1700000000000}]"
+  },
+  "use_cases": [
+    "list or search users in a realm",
+    "create or update a realm user and set credentials",
+    "register or configure OIDC/SAML clients",
+    "assign realm or client roles to a user",
+    "list active user sessions and revoke them",
+    "export or inspect realm configuration for backup/automation"
+  ],
+  "sources": [
+    "https://www.keycloak.org/docs-api/latest/rest-api/index.html",
+    "https://www.keycloak.org/",
+    "https://www.keycloak.org/documentation",
+    "https://www.keycloak.org/guides",
+    "https://www.keycloak.org/docs/latest/server_admin/",
+    "https://www.keycloak.org/downloads"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

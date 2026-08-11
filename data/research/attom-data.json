@@ -1,0 +1,46 @@
+{
+  "id": "attom-data",
+  "status": "operational",
+  "name": "ATTOM Data API",
+  "category": "real-estate-housing",
+  "tagline": "National property records, valuations, sales history, and neighborhood analytics via REST.",
+  "description": "ATTOM Data Solutions provides a comprehensive real estate data API covering property characteristics, ownership, valuations, sales and mortgage history, tax assessments, and neighborhood/market analytics for the United States. Developers query by address, APN, or geocoordinates and receive structured property intelligence used in proptech, lending, insurance, and investment applications. Access is typically API-key authenticated against ATTOM\u2019s gateway with tiered commercial plans.",
+  "base_url": "https://api.gateway.attomdata.com",
+  "docs_url": "https://api.developer.attomdata.com/docs",
+  "signup_url": "https://api.developer.attomdata.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via apikey header (or query param in some examples); self-serve developer portal signup required."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Trial/evaluation access available via developer portal; concrete free request quotas not fully published without account \u2014 verify current plan details on signup.",
+    "paid_plans": "Commercial subscription packages by data product and volume; contact sales for production pricing."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.gateway.attomdata.com/propertyapi/v1.0.0/property/basicprofile?address1=4529%20Winona%20Court&address2=Denver%2C%20CO\" -H \"apikey: YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"status\":{\"version\":\"1.0.0\",\"code\":0,\"msg\":\"SuccessWithResult\",\"total\":1,\"page\":1,\"pagesize\":10},\"property\":[{\"identifier\":{\"Id\":14542561,\"fips\":\"08031\",\"apn\":\"0227502016000\"},\"address\":{\"line1\":\"4529 WINONA CT\",\"line2\":\"DENVER, CO 80212\",\"locality\":\"DENVER\",\"countrySubd\":\"CO\",\"postal1\":\"80212\"},\"summary\":{\"propclass\":\"Single Family Residence / Townhouse\",\"propsubtype\":\"Residential\",\"proptype\":\"SFR\"}}]"
+  },
+  "use_cases": [
+    "look up property characteristics and ownership by street address",
+    "get estimated property value / AVM for a parcel",
+    "retrieve sales and mortgage history for a property",
+    "fetch tax assessment and building details by APN or coordinates",
+    "pull neighborhood or market analytics for an area",
+    "enrich a lead or loan application with property record data"
+  ],
+  "sources": [
+    "https://api.developer.attomdata.com/docs",
+    "https://api.developer.attomdata.com/",
+    "https://www.attomdata.com/",
+    "https://api.gateway.attomdata.com"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "barcode-lookup",
+  "status": "operational",
+  "name": "Barcode Lookup",
+  "category": "utilities",
+  "tagline": "Product barcode database for UPC, EAN, and ISBN catalog lookups.",
+  "description": "Barcode Lookup provides a product barcode database API for looking up UPC, EAN, ISBN, and related catalog data. Developers can retrieve product titles, brands, images, category, and other attributes for inventory, retail, and catalog applications. Access is typically via an API key after signup; pricing and free-tier limits should be confirmed on the official site.",
+  "base_url": "https://api.barcodelookup.com/v3",
+  "docs_url": "https://www.barcodelookup.com/api",
+  "signup_url": "https://www.barcodelookup.com/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter or header (confirm exact method in current docs); self-serve signup on barcodelookup.com."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.barcodelookup.com/v3/products?barcode=885909950126&key=YOUR_API_KEY\"",
+    "response_snippet": "{\"products\":[{\"barcode_number\":\"885909950126\",\"title\":\"Example Product\",\"brand\":\"Example Brand\",\"category\":\"Electronics\"}]}"
+  },
+  "use_cases": [
+    "look up product details by UPC or EAN barcode",
+    "resolve ISBN to book title and publisher data",
+    "enrich inventory SKUs with catalog attributes and images",
+    "validate scanned barcodes against a product database"
+  ],
+  "sources": [
+    "https://www.barcodelookup.com/api"
+  ],
+  "researcher_confidence": "low"
+}

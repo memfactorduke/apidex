@@ -1,0 +1,52 @@
+{
+  "id": "chromatic",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.chromatic.com/graphql",
+      "source": "https://www.chromatic.com/docs/graphql"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.chromatic.com/docs/graphql",
+      "source": "https://www.chromatic.com/docs/graphql"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.chromatic.com/docs/graphql"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.chromatic.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Hobby free plan includes 5,000 snapshots/month (verify current pricing page for exact limits)",
+      "source": "https://www.chromatic.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Auth is not Bearer; use project token or personal access token per official GraphQL docs (method may differ)",
+      "source": "https://www.chromatic.com/docs/graphql"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.chromatic.com/docs/graphql"
+    }
+  },
+  "notes": "Docs URL 404; correct path is /docs/graphql. Need full verification from official sources."
+}

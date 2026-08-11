@@ -1,0 +1,15 @@
+{
+  "id": "newsapi-ai",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "2,000 free tokens total; equivalent to 2,000 recent article searches at 1 token each, but event, archive, aggregate, and text-analysis operations have different token costs.",
+  "rate_limits": "Maximum 5 simultaneous requests per user; excess concurrent requests are rejected with HTTP 429.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Replace unknown. Official docs grant 2,000 testing tokens and publish operation-dependent costs; pricing describes these as 2,000 searches. https://newsapi.ai/documentation and https://newsapi.ai/plans. rate_limits: Replace not published; docs specify at most 5 simultaneous requests and HTTP 429 for excess. https://newsapi.ai/documentation. cors: Replace unknown with yes; the official plans page states CORS is enabled for all origins. https://newsapi.ai/plans."
+}

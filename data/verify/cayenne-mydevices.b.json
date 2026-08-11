@@ -1,0 +1,52 @@
+{
+  "id": "cayenne-mydevices",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://mqtt.mydevices.com (MQTT primary; REST base not publicly documented as api.mydevices.com)",
+      "source": "https://developers.mydevices.com/cayenne/docs/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.mydevices.com/cayenne/docs/",
+      "source": "https://developers.mydevices.com/cayenne/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Placeholder only; not a real Cayenne API call",
+      "source": null
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Automated checks showed base_url and docs_url HTTP 404. Need live verification of current docs, auth, pricing, and whether the API is still operational."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "checkiday",
+  "status": "operational",
+  "name": "Checkiday API",
+  "category": "events-holidays",
+  "tagline": "National and fun day-of holidays beyond statutory calendars",
+  "description": "API for current and historical national, fun, and observance \"day of\" holidays (e.g. National Pizza Day). Use for calendars, apps, and content that need today\u2019s observances beyond statutory holidays.",
+  "base_url": "https://api.checkiday.com",
+  "docs_url": "https://api.checkiday.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; confirm header and signup flow from current docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.checkiday.com/\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list today\u2019s national and fun holidays",
+    "look up observances for a given date"
+  ],
+  "sources": [
+    "https://api.checkiday.com/"
+  ],
+  "researcher_confidence": "low"
+}

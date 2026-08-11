@@ -1,0 +1,98 @@
+{
+  "id": "human-phenotype-ontology",
+  "status": "operational",
+  "name": "Human Phenotype Ontology (HPO) API",
+  "category": "health-fitness",
+  "tagline": "Search and annotate rare-disease phenotypes with the Human Phenotype Ontology.",
+  "description": "JAX-hosted REST service for searching HPO terms, retrieving term records, and traversing ancestor, parent, child, and descendant relationships. Disease, gene, and medical-action annotations are provided through the separate Ontology Annotation Network API.",
+  "base_url": "https://ontology.jax.org/api/hp",
+  "docs_url": "https://ontology.jax.org/api/hp/docs/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints; open read access without API keys."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://ontology.jax.org/api/hp/search?q=HP:0001250&limit=1'",
+    "response_snippet": "{\"terms\":[{\"id\":\"HP:0001250\",\"name\":\"Seizure\",\"definition\":\"A seizure is an intermittent abnormality of nervous system physiology characterized by a transient occurrence of signs and/or symptoms due to abnormal excessive or synchronous neuronal activity in the brain.\",\"synonyms\":[\"Epilepsy\",\"Epileptic seizure\",\"Seizures\"]}],\"totalCount\":1}"
+  },
+  "use_cases": [
+    "search HPO phenotype terms by keyword",
+    "look up an HPO term by ID with definition and synonyms",
+    "retrieve parent/child hierarchy for a phenotype term",
+    "annotate patient phenotypes with standard HPO IDs",
+    "find diseases associated with a given phenotype"
+  ],
+  "sources": [
+    "https://hpo.jax.org/app/help/doc",
+    "https://ontology.jax.org"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url"
+    ],
+    "corrected": [
+      "docs_url",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits"
+    ]
+  }
+}

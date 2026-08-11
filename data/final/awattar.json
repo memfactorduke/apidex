@@ -1,0 +1,94 @@
+{
+  "id": "awattar",
+  "status": "operational",
+  "name": "aWATTar API",
+  "category": "energy-utilities",
+  "tagline": "German/Austrian day-ahead hourly electricity prices for dynamic-tariff automation",
+  "description": "aWATTar provides day-ahead hourly electricity market prices for Germany and Austria via a public REST API. Developers use it to fetch spot prices for dynamic-tariff automation, home energy management, and EV charging optimization.",
+  "base_url": "https://api.awattar.de/v1",
+  "docs_url": "https://www.awattar.de/services/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public market-data endpoints require no authentication. No API key signup for basic price data."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.awattar.de/v1/marketdata\"",
+    "response_snippet": "{\"object\":\"list\",\"data\":[{\"start_timestamp\":...,\"end_timestamp\":...,\"marketprice\":...,\"unit\":\"Eur/MWh\"}]}"
+  },
+  "use_cases": [
+    "get current day-ahead hourly electricity prices for Germany",
+    "fetch historical aWATTar market prices for a time range",
+    "automate dynamic electricity tariff decisions for home energy systems",
+    "optimize EV charging based on cheapest hours"
+  ],
+  "sources": [
+    "https://www.awattar.de/services/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

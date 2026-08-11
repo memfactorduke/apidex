@@ -1,0 +1,38 @@
+{
+  "id": "ticketweb",
+  "status": "operational",
+  "name": "TicketWeb API",
+  "category": "events-holidays",
+  "tagline": "Live entertainment ticketing inventory for venues and promoters (US-focused).",
+  "description": "TicketWeb provides a live entertainment ticketing platform and developer API for venues, promoters, and partners to access event inventory, listings, and related ticketing data. US-focused inventory for concerts, clubs, and live events; authentication and endpoint details require verification against current official docs.",
+  "base_url": "https://api.ticketweb.com",
+  "docs_url": "https://www.ticketweb.com/developers",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Authentication method not yet verified against current official documentation."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.ticketweb.com/\" -H \"Authorization: Bearer YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "search live events by city or venue",
+    "list upcoming shows for a promoter inventory feed"
+  ],
+  "sources": [
+    "https://www.ticketweb.com/developers"
+  ],
+  "researcher_confidence": "low"
+}

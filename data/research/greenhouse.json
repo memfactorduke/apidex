@@ -1,0 +1,41 @@
+{
+  "id": "greenhouse",
+  "status": "operational",
+  "name": "Greenhouse Job Board",
+  "category": "jobs-careers",
+  "tagline": "Public job board API for careers pages and open roles",
+  "description": "Greenhouse Job Board is a public, read-only REST API that exposes a company's open jobs, job details, departments, offices, and application form fields for careers-page and recruiting integrations. It is widely used by companies that run Greenhouse ATS to power custom job listings without a private Harvest API key. Endpoints are unauthenticated for public boards and return JSON suitable for embedding listings, building job widgets, and submitting applications.",
+  "base_url": "https://boards-api.greenhouse.io/v1",
+  "docs_url": "https://developers.greenhouse.io/job-board.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public Job Board API requires no API key for standard board endpoints; access is by board token in the path (e.g. /v1/boards/{board_token}/jobs). Some write/application flows may differ\u2014verify docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://boards-api.greenhouse.io/v1/boards/example/jobs\"",
+    "response_snippet": "{\"jobs\":[{\"id\":123,\"title\":\"Software Engineer\",\"location\":{\"name\":\"Remote\"},\"absolute_url\":\"https://boards.greenhouse.io/example/jobs/123\"}]}"
+  },
+  "use_cases": [
+    "list open jobs for a company's Greenhouse board",
+    "fetch full job description and location by job id",
+    "get departments and offices for a careers page",
+    "read application form fields for a job",
+    "submit a job application to a Greenhouse board"
+  ],
+  "sources": [
+    "https://developers.greenhouse.io/job-board.html"
+  ],
+  "researcher_confidence": "low"
+}

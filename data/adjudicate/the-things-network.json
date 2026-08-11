@@ -1,0 +1,15 @@
+{
+  "id": "the-things-network",
+  "base_url": null,
+  "docs_url": "https://www.thethingsindustries.com/docs/integrations/webhooks/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -G 'https://eu1.cloud.thethings.network/api/v3/as/applications/YOUR_APP_ID/packages/storage/uplink_message' -H 'Authorization: Bearer YOUR_API_KEY' -H 'Accept: text/event-stream' -d 'limit=1'",
+  "example_response_snippet": "{\"result\":{\"end_device_ids\":{\"device_id\":\"dev1\",\"application_ids\":{\"application_id\":\"app1\"}},\"received_at\":\"2026-08-11T12:00:00Z\",\"uplink_message\":{\"f_port\":1,\"f_cnt\":43,\"frm_payload\":\"AQID\",\"decoded_payload\":{\"temperature\":22.5}}}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: Replace the original 404 with the current official Webhooks overview, which documents HTTP(S) JSON uplinks and downlinks: https://www.thethingsindustries.com/docs/integrations/webhooks/. example: The official Storage guide requires GET query parameters and Accept: text/event-stream; its API reference says responses are newline-delimited JSON: https://www.thethingsindustries.com/docs/integrations/storage/retrieve/ and https://www.thethingsindustries.com/docs/api/reference/grpc/storage_integration/."
+}

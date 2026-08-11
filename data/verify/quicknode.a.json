@@ -1,0 +1,52 @@
+{
+  "id": "quicknode",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs/data/endpoints"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs/build-with-ai/quicknode-apis"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false; QuickNode currently offers a time-limited one-month free trial, not a permanent free tier",
+      "source": "https://www.quicknode.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "One-month free trial: 10 million API credits, no overage, 15 requests per second, and one endpoint",
+      "source": "https://www.quicknode.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/pricing"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS is supported and configurable per endpoint as an enabled or disabled security option",
+      "source": "https://www.quicknode.com/docs/admin-api/endpoint-security/v0-endpoints-id-security_options-patch"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs/ethereum/eth_blockNumber"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.quicknode.com/docs/welcome"
+    }
+  },
+  "notes": "The API and documentation are operational. The RPC URL, API-key authentication, example call, plan-based limits, multi-chain RPC, Streams, and Marketplace capabilities are documented. The entry fails because it describes a permanent free plan; the current $0 offering is explicitly a one-month trial. CORS is also documented as configurable rather than unknown."
+}

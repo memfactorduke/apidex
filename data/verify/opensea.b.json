@@ -1,0 +1,52 @@
+{
+  "id": "opensea",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/api-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/api-keys"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/create_instant_api_key"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free-tier keys permit 60 read requests/minute and 5 write requests/minute and expire after 30 days.",
+      "source": "https://docs.opensea.io/reference/api-keys"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published. OpenSea uses a token-bucket system, returns X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset headers, and returns Retry-After with HTTP 429 responses. Instant free-tier keys allow 60 read requests/minute and 5 write requests/minute.",
+      "source": "https://docs.opensea.io/reference/api-keys"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/list_collections"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.opensea.io/reference/api-overview"
+    }
+  },
+  "notes": "The API is operational and the documented V2 collections request remains valid. The entry fails because current official documentation now states concrete free-tier limits and publishes rate-limit behavior, contradicting both 'unknown' and 'not published'."
+}

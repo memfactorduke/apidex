@@ -1,0 +1,15 @@
+{
+  "id": "amber-electric",
+  "base_url": "https://api.amber.com.au",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -H \"Accept: application/json\" -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.amber.com.au/v1/sites\"",
+  "example_response_snippet": "[{\"id\":\"01F5A5CRKMZ5BCX9P1S4V990AM\",\"nmi\":\"3052282872\",\"channels\":[{\"identifier\":\"E1\",\"type\":\"general\",\"tariff\":\"A100\"}],\"network\":\"Jemena\",\"status\":\"active\",\"activeFrom\":\"2022-01-01\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: verifier A is correct. Amber's official OpenAPI specification declares https://api.amber.com.au/v1 as its server, so the directory base is https://api.amber.com.au: https://raw.githubusercontent.com/amberelectric/public-api/main/swagger.json. example: corrected to that server's authenticated GET /sites endpoint; the same official specification defines Bearer authentication, /sites, and its array-of-Site response schema. Amber's current help page also directs customers to its REST API documentation: https://help.amber.com.au/hc/en-us/articles/360038985552-Do-you-have-an-API"
+}

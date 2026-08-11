@@ -1,0 +1,15 @@
+{
+  "id": "kinde",
+  "base_url": "https://<your_subdomain>.kinde.com",
+  "docs_url": "https://docs.kinde.com/get-started/apis-and-sdks/about-kinde-apis/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "10,500 MAU; 5 MAO; 2,000 M2M tokens; 2 custom roles; 10 permissions; 10 feature flags; 5 custom properties; 1 webhook per environment; 2 environments (1 production, 1 non-production).",
+  "rate_limits": "HTTP 429 may occur; GET page_size is capped at 500; bulk POST/PATCH requests are capped at 100 objects. RateLimit-Reset reports seconds until reset. No universal requests-per-minute limit is published.",
+  "cors": null,
+  "example_request": "curl --request GET --url 'https://<your_subdomain>.kinde.com/api/v1/users' --header 'authorization: Bearer <m2m_access_token>' --header 'content-type: application/json'",
+  "example_response_snippet": "{\"code\":\"OK\",\"message\":\"Success\",\"users\":[{\"id\":\"kp_...\",\"email\":\"user@example.com\",\"last_name\":\"Doe\",\"first_name\":\"Jane\",\"is_suspended\":false}],\"next_token\":null}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: incorrect; tenant host (https://docs.kinde.com/developer-tools/kinde-api/access-token-for-api/). docs_url: incorrect; current overview (https://docs.kinde.com/get-started/apis-and-sdks/about-kinde-apis/). free_tier_limits: incorrect; confirmed by pricing (https://www.kinde.com/pricing/). rate_limits: incorrect; 429/500/100/RateLimit-Reset documented (https://docs.kinde.com/developer-tools/kinde-api/api-rate-limits/). example: incorrect; official users curl uses tenant host and M2M bearer (https://docs.kinde.com/developer-tools/kinde-api/access-token-for-api/)."
+}

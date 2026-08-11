@@ -1,0 +1,98 @@
+{
+  "id": "quodd",
+  "status": "operational",
+  "name": "Quodd",
+  "category": "finance",
+  "tagline": "Institutional market data APIs for equities, options, and related feeds",
+  "description": "QUODD provides credentialed REST and gRPC market-data APIs, with public developer documentation covering equity snapshots, options data, ticker information, and related services. API access requires a trial or firm account, and a time-limited free trial is publicly offered.",
+  "base_url": "https://api.quodd.com",
+  "docs_url": "https://developer.quodd.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "jwt",
+    "details": "Commercial/partner credentials; public self-serve auth method not clearly documented on the marketing site"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "7-day trial; credits vary by service from 5 or 10 up to 250. One request may consume multiple hits depending on the symbols and data returned.",
+    "paid_plans": "Enterprise/commercial pricing; contact Quodd sales (not published self-serve)"
+  },
+  "rate_limits": "All QUODD web services include unlimited usage with no per-call charges; technical concurrency and throughput limits are not publicly specified.",
+  "example": {
+    "request": "curl -sS -X POST \"https://api.quodd.com/universal/jobs\" -H \"Authorization: Bearer $TOKEN\" -H \"Accept: application/json\" -H \"Content-Type: application/json\" --data '{\"Template\":\"pricing\",\"Identifiers\":[\"MSFT\"],\"JobParameters\":{\"startDate\":\"2023-05-05\",\"endDate\":\"2023-06-02\"}}'",
+    "response_snippet": "{\"JobID\":\"1686927711346\",\"JobStatus\":\"Accepted\",\"Message\":\"Job Accepted\"}"
+  },
+  "use_cases": [
+    "look up equity quotes for a ticker",
+    "retrieve options chain or options market data",
+    "integrate delayed or real-time market data into a financial app",
+    "power portfolio or watchlist market data displays"
+  ],
+  "sources": [
+    "https://www.quodd.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url"
+    ],
+    "corrected": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

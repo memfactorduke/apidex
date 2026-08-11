@@ -1,0 +1,15 @@
+{
+  "id": "leakix",
+  "base_url": null,
+  "docs_url": "https://docs.leakix.net/docs/api/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "25 result pages, 3,000 API requests, no support, and a 15-day result delay; API access is limited to 1 request/second.",
+  "rate_limits": "Approximately 1 request/second; excess requests return HTTP 429 with an x-limited-for wait duration. Terms also impose 60 requests per minute per IP.",
+  "cors": null,
+  "example_request": "curl -G -H \"api-key: YOUR_API_KEY\" -H \"accept: application/json\" --data-urlencode \"q=apache\" --data-urlencode \"scope=service\" --data-urlencode \"page=0\" \"https://leakix.net/search\"",
+  "example_response_snippet": "[{\"event_type\":\"service\",\"ip\":\"203.0.113.10\",\"port\":\"443\",\"protocol\":\"https\",\"service\":{\"software\":{\"name\":\"Apache\",\"version\":\"2.4.62\"}}}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: replace the 404 URL with the official API index, https://docs.leakix.net/docs/api/. free_tier_limits: official Free plan lists 25 pages, 3,000 requests, no support, 15-day delay, and 1 request/sec, https://leakix.net/plans. rate_limits: official docs specify ~1/sec, HTTP 429, and x-limited-for; Terms specify 60/min/IP, https://docs.leakix.net/docs/api/search/ and https://leakix.net/terms-and-conditions. example: official search docs require GET /search, api-key/accept headers, q, scope, and page, https://docs.leakix.net/docs/api/search/."
+}

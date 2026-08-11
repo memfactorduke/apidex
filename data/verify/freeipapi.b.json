@@ -1,0 +1,52 @@
+{
+  "id": "freeipapi",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://freeipapi.com/api/json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.freeipapi.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.freeipapi.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://freeipapi.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests per minute (free tier)",
+      "source": "https://docs.freeipapi.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests per minute (free); higher limits on paid plans",
+      "source": "https://docs.freeipapi.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.freeipapi.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.freeipapi.com/"
+    }
+  },
+  "notes": "Rate limits and free_tier_limits are published (60 req/min free), not 'unknown'/'not published'. Entry otherwise matches official docs for base URL, no-auth free use, and example path."
+}

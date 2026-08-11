@@ -1,0 +1,15 @@
+{
+  "id": "ocr-space",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "OCR.space extracts text from images and PDFs through an HTTP API, returning JSON. It supports multiple OCR languages and image formats, table-oriented parsing, and searchable-PDF creation with Engines 1 and 2. The documented API does not provide a search/replace feature.",
+  "status": null,
+  "resolution_notes": "cors: yes. On May 2, 2026, the official OCR API team confirmed that responses include Access-Control-Allow-Origin: *: https://forum.ui.vision/t/copyfish-on-edge-extension-down/29714. description: corrected. Current official documentation lists image/PDF extraction, languages, supported formats, isTable, and searchable-PDF creation, but no search/replace parameter: https://ocr.space/ocrapi."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "openflights",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openflights.org/data"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://openflights.org/data",
+      "source": "https://openflights.org/data"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openflights.org/data"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openflights.org/data"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Downloads are free, but raw.githubusercontent.com applies unspecified rate limits to unauthenticated downloads.",
+      "source": "https://github.blog/changelog/2025-05-08-updated-rate-limits-for-unauthenticated-requests/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "GitHub applies rate limits to unauthenticated raw.githubusercontent.com downloads; its official notice does not state a numeric threshold.",
+      "source": "https://github.blog/changelog/2025-05-08-updated-rate-limits-for-unauthenticated-requests/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OpenFlights publishes CSV data dumps hosted on raw.githubusercontent.com. The GitHub copy is a sporadically updated snapshot, and route data has not been updated since June 2014 and is historical only.",
+      "source": "https://openflights.org/data"
+    }
+  },
+  "notes": "The raw directory prefix itself returns 404 because GitHub Raw does not provide directory listings, but its documented child files are live. The old data.html URL is invalid. The entry also omits GitHub's unauthenticated-download throttling and the route dataset's June 2014 cutoff."
+}

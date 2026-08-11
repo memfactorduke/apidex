@@ -1,0 +1,96 @@
+{
+  "id": "flutterwave",
+  "status": "operational",
+  "name": "Flutterwave API",
+  "category": "ecommerce-payments",
+  "tagline": "Pan-African payments API for cards, bank transfers, USSD, and mobile money.",
+  "description": "Flutterwave provides payment collection and disbursement APIs for African and emerging markets. Developers can accept cards, bank accounts, USSD, and mobile money, create payment links, verify transactions, and manage refunds and transfers via a REST API.",
+  "base_url": "https://api.flutterwave.com/v3",
+  "docs_url": "https://developer.flutterwave.com/docs",
+  "signup_url": "https://dashboard.flutterwave.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Secret API key via Authorization: Bearer <SECRET_KEY> header (or secret key in dashboard). Self-serve signup on Flutterwave dashboard; test and live keys."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.flutterwave.com/v3/transactions/12345/verify\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"status\":\"success\",\"message\":\"Transaction fetched successfully\",\"data\":{\"id\":12345,\"tx_ref\":\"...\",\"status\":\"successful\",\"amount\":100,\"currency\":\"NGN\"}}"
+  },
+  "use_cases": [
+    "accept card and mobile money payments in Africa",
+    "verify a transaction status by ID",
+    "initiate bank or mobile money payouts",
+    "create a payment link for a customer",
+    "refund a successful charge"
+  ],
+  "sources": [
+    "https://developer.flutterwave.com/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

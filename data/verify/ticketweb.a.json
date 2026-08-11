@@ -1,0 +1,52 @@
+{
+  "id": "ticketweb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://app.ticketmaster.com/discovery/v2/",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/",
+      "source": "https://info.ticketweb.com/client-website-services/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "api_key",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default quota: 5,000 API calls per day and 5 requests per second.",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/getting-started/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/getting-started/"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl --include 'https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=YOUR_API_KEY'",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "TicketWeb is a Ticketmaster ticketing platform for venues and promoters. Its official integration page directs developers to Ticketmaster APIs. TicketWeb inventory status is available through an authorized-client API supporting numerous regions, not just the US.",
+      "source": "https://developer.ticketmaster.com/products-and-docs/apis/inventory-status/"
+    }
+  },
+  "notes": "TicketWeb's current integration page links to Ticketmaster's Developer Portal, not the submitted /developers page. The HTTP 200 response from api.ticketweb.com does not establish it as the documented API base. Official sources do not publish monetary pricing, so free-tier fields remain unverifiable."
+}

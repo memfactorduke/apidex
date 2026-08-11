@@ -1,0 +1,15 @@
+{
+  "id": "urlhaus",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free for authenticated not-for-profit use under fair-use and query-volume limits. High-value contributors may receive discretionary free access beyond those limits. Commercial or for-profit use may require a paid Spamhaus subscription.",
+  "rate_limits": "No API-wide requests-per-minute quota is published. Database dumps should not be fetched more than once every 5 minutes; recent-URL and recent-payload queries return at most 1,000 entries.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "URLhaus is a malware-URL intelligence platform operated by abuse.ch and Spamhaus. Its APIs support querying and downloading intelligence and submitting URLs directly used to distribute malware. Phishing sites and phishing-kit hosts are explicitly outside its submission scope.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: original overstated commercial restrictions; current terms say commercial use may require payment and define fair-use/query limits. https://abuse.ch/terms-of-use/ rate_limits: endpoint-specific limits exist, so \"not published\" is incorrect. https://urlhaus.abuse.ch/api/ and https://urlhaus-api.abuse.ch/ description: phishing is explicitly excluded; URLhaus is operated by abuse.ch and Spamhaus. https://urlhaus.abuse.ch/api/ and https://urlhaus.abuse.ch/about/"
+}

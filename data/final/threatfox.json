@@ -1,0 +1,100 @@
+{
+  "id": "threatfox",
+  "status": "operational",
+  "name": "ThreatFox",
+  "category": "security-identity",
+  "tagline": "IOC-sharing API for malware C2, IPs, domains, and URLs",
+  "description": "ThreatFox is a community platform operated by abuse.ch in collaboration with Spamhaus for sharing and querying malware-related IOCs. Its Auth-Key API supports recent-IOC retrieval, lookup by IOC ID or value, searches by file hash, tag, or malware family, and submission of confirmed, vetted IOCs. Free use is limited to authenticated not-for-profit use under fair-use query limits; commercial use may require a paid Spamhaus subscription.",
+  "base_url": "https://threatfox-api.abuse.ch/api/v1/",
+  "docs_url": "https://threatfox.abuse.ch/api/",
+  "signup_url": "https://auth.abuse.ch/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Auth-Key header (or optional api-key form field); free key from auth.abuse.ch after account signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for authenticated not-for-profit use, subject to unpublished fair-use query-volume limits. Excessive use may be restricted or require a paid Spamhaus subscription; high-value contributors may receive discretionary access beyond the limits.",
+    "paid_plans": null
+  },
+  "rate_limits": "not fully published as numeric quotas; abuse.ch enforces rate limiting (HTTP 429); check docs/status for current guidance",
+  "example": {
+    "request": "curl -X POST https://threatfox-api.abuse.ch/api/v1/ -H 'Auth-Key: YOUR_API_KEY' -d '{\"query\": \"get_iocs\", \"days\": 1}'",
+    "response_snippet": "{\"query_status\": \"ok\", \"data\": [{\"id\": \"123456\", \"ioc\": \"evil.example\", \"ioc_type\": \"domain\", \"threat_type\": \"botnet_cc\", \"malware\": \"win.emotet\", \"confidence_level\": 75, \"first_seen\": \"2024-01-15 12:00:00 UTC\"}]}"
+  },
+  "use_cases": [
+    "fetch recent malware C2 IOCs from the last N days",
+    "look up whether a domain, IP, or URL is a known threat IOC",
+    "search ThreatFox by malware family name",
+    "submit a new C2 or phishing IOC to the community feed",
+    "export IOCs in a format for SIEM or blocklist tooling"
+  ],
+  "sources": [
+    "https://threatfox.abuse.ch/api/",
+    "https://threatfox.abuse.ch/",
+    "https://auth.abuse.ch/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

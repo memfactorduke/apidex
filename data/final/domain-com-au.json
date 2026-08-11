@@ -1,0 +1,96 @@
+{
+  "id": "domain-com-au",
+  "status": "operational",
+  "name": "Domain.com.au API",
+  "category": "real-estate-housing",
+  "tagline": "Australian property listings, suburb metrics, and address suggestion APIs.",
+  "description": "Domain.com.au provides REST APIs for Australian real estate: residential and commercial listings, property details, suburb performance statistics, address and location suggestion, and related market data used by agencies, proptechs, and developers.",
+  "base_url": "https://api.domain.com.au",
+  "docs_url": "https://developer.domain.com.au",
+  "signup_url": "https://developer.domain.com.au",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 client credentials: obtain access token from Domain identity, then Bearer token on API calls. Project credentials issued via developer portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.domain.com.au/v1/listings/residential/_search\" -H \"Content-Type: application/json\" -d '{\"listingType\":\"Sale\",\"locations\":[{\"state\":\"NSW\",\"suburb\":\"Sydney\"}],\"pageSize\":1}'",
+    "response_snippet": "[{\"type\":\"PropertyListing\",\"listing\":{\"listingType\":\"Sale\",\"id\":2012345678,\"headline\":\"...\",\"priceDetails\":{\"displayPrice\":\"Contact Agent\"},\"propertyDetails\":{\"bedrooms\":3,\"bathrooms\":2,\"state\":\"NSW\",\"suburb\":\"Sydney\"}}}]"
+  },
+  "use_cases": [
+    "search Australian residential property listings for sale or rent",
+    "look up detailed listing and property information by ID",
+    "get suburb performance and market statistics",
+    "suggest addresses or locations for autocomplete",
+    "retrieve agency or agent profile data"
+  ],
+  "sources": [
+    "https://developer.domain.com.au"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

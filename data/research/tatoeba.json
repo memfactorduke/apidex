@@ -1,0 +1,38 @@
+{
+  "id": "tatoeba",
+  "status": "operational",
+  "name": "Tatoeba API",
+  "category": "education-reference",
+  "tagline": "Multilingual sentence corpus with translations for language learning",
+  "description": "Public multilingual sentence corpus with community translations. Gold-standard open dataset and API access for language-learning apps, parallel text, and linguistic research.",
+  "base_url": "https://tatoeba.org",
+  "docs_url": "https://en.wiki.tatoeba.org/articles/show/api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Researching authentication requirements from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl 'https://tatoeba.org/en/api_v0/search?from=eng&to=jpn&query=hello'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "search sentences by language pair",
+    "fetch sentence translations"
+  ],
+  "sources": [
+    "https://en.wiki.tatoeba.org/articles/show/api"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "duffel",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api/overview/getting-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api/overview/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api/overview/rate-limits"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api/airports/get-airports"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://duffel.com/docs/api"
+    }
+  },
+  "notes": "Entry verified against official Duffel docs 2026. Base URL, auth (Bearer test_/live_), docs URL, airports example, and sandbox/self-serve flow all match. Free tier exists; free_tier_limits and rate_limits correctly marked unknown/not published. CORS unknown is appropriate."
+}

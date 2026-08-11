@@ -1,0 +1,52 @@
+{
+  "id": "1inch",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.1inch.com",
+      "source": "https://business.1inch.com/llms.txt"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://business.1inch.com/portal/documentation",
+      "source": "https://business.1inch.com/portal/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://business.1inch.com/portal/documentation/apis/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://business.1inch.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Dev (free): 100,000 API calls/month, 60 req/min",
+      "source": "https://business.1inch.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published by plan on pricing (Free: 60 req/min, 100k calls/mo; Startup: 10 req/s, 1M/mo; Pro: 20 req/s, 3M/mo; Business: 40 req/s, 7M/mo; over-limit returns 429)",
+      "source": "https://business.1inch.com/pricing"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes (Access-Control-Allow-Origin: *)",
+      "source": "https://api.1inch.com"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use https://api.1inch.com/swap/v6.1/1/quote?src=...&dst=...&amount=... with Authorization: Bearer YOUR_API_KEY (host api.1inch.dev and path v6.0 are outdated; current Classic Swap is Pathfinder v6.1)",
+      "source": "https://business.1inch.com/products/swap"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://business.1inch.com/portal/documentation/overview/welcome"
+    }
+  },
+  "notes": "API is operational under 1inch Business. Canonical base is api.1inch.com (llms.txt/docs); api.1inch.dev still 401s but is not documented. portal.1inch.dev/documentation 301s to business.1inch.com. Free tier and rate limits are on pricing. Classic Swap is v6.1. Live ACAO:* on api.1inch.com (CORS FAQ may be stale)."
+}

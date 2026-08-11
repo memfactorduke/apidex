@@ -1,0 +1,100 @@
+{
+  "id": "steamspy",
+  "status": "operational",
+  "name": "SteamSpy API",
+  "category": "games-comics",
+  "tagline": "Steam ownership and sales estimates by app ID for market research",
+  "description": "SteamSpy provides public API access to estimated Steam game ownership ranges, player counts, playtime, concurrent users, prices, tags, genres, and related metrics without authentication. Its figures are estimates based on sampled Steam profiles. \u201cOwned\u201d does not mean \u201csold\u201d: ownership can include retail activations, bundles, gifts, promotions, and free weekends.",
+  "base_url": "https://steamspy.com/api.php",
+  "docs_url": "https://steamspy.com/api.php",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or authentication required. Public GET endpoints accept query parameters only."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; limited to 1 request per second generally and 1 request per 60 seconds for request=all.",
+    "paid_plans": null
+  },
+  "rate_limits": "1 request per second generally; request=all is limited to 1 request per 60 seconds and returns 1,000 games per page.",
+  "example": {
+    "request": "curl \"https://steamspy.com/api.php?request=appdetails&appid=730\"",
+    "response_snippet": "{\"appid\":730,\"name\":\"Counter-Strike: Global Offensive\",\"developer\":\"Valve\",\"publisher\":\"Valve\",\"score_rank\":\"\",\"owners\":\"50,000,000 .. 100,000,000\",\"average_forever\":15000,\"average_2weeks\":200,\"median_forever\":3000,\"median_2weeks\":50,\"ccu\":500000,\"price\":\"0\",\"initialprice\":\"0\",\"discount\":\"0\",\"tags\":{...}}"
+  },
+  "use_cases": [
+    "get ownership and sales estimate ranges for a Steam app by ID",
+    "list all tracked Steam games with player and owner metrics",
+    "filter Steam games by genre or tag for market research",
+    "fetch top games by concurrent players or owners",
+    "compare estimated player engagement (playtime, CCU) across titles"
+  ],
+  "sources": [
+    "https://steamspy.com/api.php",
+    "https://steamspy.com/",
+    "https://github.com/SteamDatabase/SteamTracking"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

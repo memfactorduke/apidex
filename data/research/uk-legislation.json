@@ -1,0 +1,43 @@
+{
+  "id": "uk-legislation",
+  "status": "operational",
+  "name": "legislation.gov.uk API",
+  "category": "government-open-data",
+  "tagline": "UK primary and secondary legislation as structured XML and data",
+  "description": "Official API for UK legislation from legislation.gov.uk, providing access to primary and secondary legislation as structured data (including Akoma Ntoso/XML). Supports retrieval of acts, statutory instruments, and related legislative content for legal research and applications.",
+  "base_url": "https://www.legislation.gov.uk",
+  "docs_url": "https://www.legislation.gov.uk/developer",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public access."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "xml",
+    "html",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://www.legislation.gov.uk/ukpga/2023/1/data.xml\"",
+    "response_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Legislation>...</Legislation>"
+  },
+  "use_cases": [
+    "fetch full text of a UK Act by year and chapter",
+    "retrieve statutory instrument as structured XML",
+    "list legislation by type and year",
+    "get table of contents for an Act",
+    "access revised legislation versions"
+  ],
+  "sources": [
+    "https://www.legislation.gov.uk/developer"
+  ],
+  "researcher_confidence": "low"
+}

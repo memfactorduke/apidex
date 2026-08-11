@@ -1,0 +1,52 @@
+{
+  "id": "amazon-ses",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/general/latest/gr/ses.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://aws.amazon.com/ses/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "12 months Free Tier: 3,000 message charges free/month; EC2-originated outbound free tier ended Aug 1 2023. See pricing page for current details.",
+      "source": "https://aws.amazon.com/ses/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/ses/latest/dg/manage-sending-quotas.html"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Placeholder only; not a valid SES request. Real example: POST https://email.us-east-1.amazonaws.com/ with SigV4 and Action=SendEmail (query API) or SES v2 REST paths.",
+      "source": "https://docs.aws.amazon.com/ses/latest/APIReference/API_SendEmail.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.aws.amazon.com/ses/latest/dg/Welcome.html"
+    }
+  },
+  "notes": "Base URL pattern is correct (region-specific). Free tier is real but limits are documented, not unknown. Example is placeholder. Rate limits exist as account quotas but are not a single public fixed number. Overall fail due to free_tier_limits and example."
+}

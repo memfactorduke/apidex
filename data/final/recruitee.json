@@ -1,0 +1,96 @@
+{
+  "id": "recruitee",
+  "status": "operational",
+  "name": "Recruitee",
+  "category": "jobs-careers",
+  "tagline": "Collaborative hiring ATS with public API for offers and candidates.",
+  "description": "Collaborative hiring ATS with public API for offers and candidates.",
+  "base_url": "https://api.recruitee.com",
+  "docs_url": "https://docs.recruitee.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No permanent free tier. The 18-day free trial permits up to 5 published jobs and 50 emails and excludes promotion on free job boards.",
+    "paid_plans": null
+  },
+  "rate_limits": "1000 requests per minute per API token.",
+  "example": {
+    "request": "curl -X GET \"https://api.recruitee.com/c/YOUR_COMPANY_ID/admin\" -H \"Authorization: Bearer YOUR_API_TOKEN\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"admin\":{\"id\":1804,\"company_id\":863,\"email\":\"john2785@recruitee.com\",\"first_name\":\"John\",\"last_name\":\"Doe\"}}"
+  },
+  "use_cases": [
+    "list open job offers",
+    "fetch candidate applications"
+  ],
+  "sources": [
+    "https://docs.recruitee.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

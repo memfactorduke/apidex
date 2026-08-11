@@ -1,0 +1,52 @@
+{
+  "id": "thunderforest",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.thunderforest.com",
+      "source": "https://www.thunderforest.com/docs/map-tiles-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thunderforest.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thunderforest.com/docs/apikeys/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thunderforest.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thunderforest.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -o tile.png \"https://api.thunderforest.com/outdoors/10/511/340.png?apikey=YOUR_API_KEY\"",
+      "source": "https://www.thunderforest.com/docs/map-tiles-api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.thunderforest.com/docs/map-tiles-api/"
+    }
+  },
+  "notes": "Current official docs use api.thunderforest.com, not tile.thunderforest.com. The free Hobby Project plan allows 150,000 tile requests monthly and requires Thunderforest/OpenStreetMap attribution. No official CORS declaration or separate numeric request-rate limit was found."
+}

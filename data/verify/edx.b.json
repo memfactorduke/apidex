@@ -1,0 +1,52 @@
+{
+  "id": "edx",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://courses.edx.org"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.openedx.org/en/latest/developers/references/apis.html",
+      "source": "https://docs.openedx.org/en/latest/developers/references/apis.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.openedx.org/en/latest/developers/references/apis.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://courses.edx.org/api/courses/v1/courses/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://courses.edx.org/api/courses/v1/courses/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "docs_url 404s (docs.edx.org \u2192 use docs.openedx.org); public course catalog endpoint works without auth; free tier/rate limits/CORS remain unpublished."
+}

@@ -1,0 +1,45 @@
+{
+  "id": "tenderly",
+  "status": "operational",
+  "name": "Tenderly",
+  "category": "crypto",
+  "tagline": "EVM simulation, debugging, and node RPC for apps and wallets",
+  "description": "Tenderly provides simulation, transaction debugging, Web3 Gateway/node RPC, Virtual TestNets, and monitoring APIs for Ethereum and other EVM chains. Developers use it to dry-run transactions, inspect traces, fork networks, and query on-chain state without running their own infrastructure. Access is typically via project-scoped API keys against api.tenderly.co and related gateway endpoints.",
+  "base_url": "https://api.tenderly.co",
+  "docs_url": "https://docs.tenderly.co/",
+  "signup_url": "https://dashboard.tenderly.co/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "Access Token (API key) via X-Access-Key header; create in Dashboard \u2192 Account Settings \u2192 Authorization. Project slug and account username required in many path-based REST endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan includes limited monthly units for simulations, Node RPC, and other products; exact unit quotas change by plan\u2014verify on pricing page (Developer free tier available).",
+    "paid_plans": "Pro and custom Enterprise plans with higher unit allowances for Node, Simulations, Alerts, and Virtual TestNets."
+  },
+  "rate_limits": "Product-specific unit/quota limits by plan; published per-product rate limits vary\u2014check dashboard quotas and docs for Node RPC and Simulation API.",
+  "example": {
+    "request": "curl -s \"https://api.tenderly.co/api/v1/account/YOUR_USERNAME/project/YOUR_PROJECT/simulate\" -H \"X-Access-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"network_id\":\"1\",\"from\":\"0x0000000000000000000000000000000000000000\",\"to\":\"0x0000000000000000000000000000000000000000\",\"input\":\"0x\",\"value\":\"0\",\"save\":false,\"save_if_fails\":false,\"simulation_type\":\"quick\"}'",
+    "response_snippet": "{\"transaction\":{\"hash\":\"0x...\",\"status\":true,\"gas_used\":21000,\"block_number\":...},\"simulation\":{\"id\":\"...\",\"status\":true,\"gas_used\":21000}}"
+  },
+  "use_cases": [
+    "simulate an EVM transaction before sending it",
+    "debug a failed transaction with full call traces",
+    "get Node RPC / Web3 Gateway access for an EVM chain",
+    "fork a mainnet state into a Virtual TestNet for testing",
+    "monitor contracts and set transaction alerts"
+  ],
+  "sources": [
+    "https://docs.tenderly.co/",
+    "https://docs.tenderly.co/account/projects/how-to-generate-api-access-token",
+    "https://docs.tenderly.co/simulations-and-forks/simulation-api",
+    "https://tenderly.co/pricing",
+    "https://api.tenderly.co"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "pricecharting",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.pricecharting.com",
+      "source": "https://www.pricecharting.com/api-documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pricecharting.com/api-documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pricecharting.com/api-documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pricecharting.com/pricecharting-pro?f=api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pricecharting.com/pricecharting-pro?f=api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "API calls are limited to 1 call per second; CSV calls are limited to 1 every 10 minutes.",
+      "source": "https://www.pricecharting.com/api-documentation"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Supported: responses include liberal CORS headers to facilitate cross-site requests.",
+      "source": "https://www.pricecharting.com/api-documentation"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pricecharting.com/api-documentation"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The API supplies current item values in various grades and conditions plus product metadata. Historic prices, historic sales, and historical trends are not supported by the API.",
+      "source": "https://www.pricecharting.com/api-documentation"
+    }
+  },
+  "notes": "The official documentation and subscription pages are live. API access requires the paid Legendary plan. The entry fails because its base URL, rate-limit claim, CORS value, and historical-trends claim conflict with current official documentation."
+}

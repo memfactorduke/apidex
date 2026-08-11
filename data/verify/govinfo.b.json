@@ -1,0 +1,52 @@
+{
+  "id": "govinfo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.govinfo.gov/docs/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.govinfo.gov/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.govinfo.gov/docs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.data.gov/signup/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.govinfo.gov/docs/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "data.gov keys: 1,000 requests/hour by default; GPO may apply additional limits \u2014 check current docs",
+      "source": "https://api.data.gov/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.govinfo.gov/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.govinfo.gov/docs/"
+    }
+  },
+  "notes": "Rate limits wording is hedgey but not false; entry mostly accurate per 2026 docs."
+}

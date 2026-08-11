@@ -1,0 +1,15 @@
+{
+  "id": "tenderly",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free indefinitely includes browser-based Explorer, full Debugger, and single-transaction UI simulation. The Free plan has no API access, and Node RPC is paid-only.",
+  "rate_limits": "No universal or plan-specific request-rate schedule is published. Node RPC is metered by per-method Tenderly Unit costs; account capacity and limits are arranged with sales.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Tenderly provides simulation, transaction debugging, Node RPC, Virtual Environments, and monitoring tools across supported blockchain networks. Developers use it to dry-run transactions, inspect traces, create stateful forks, query on-chain state, and monitor activity. REST API access uses personal-account or organization access tokens via X-Access-Key; many endpoints also identify account and project slugs.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected; Free is browser-only with no API access: https://tenderly.co/pricing. rate_limits: corrected; Node RPC docs publish per-method TU costs and refer capacity/limits to sales: https://docs.tenderly.co/node-rpc/pricing. description: corrected; current docs use Virtual Environments, and API tokens belong to personal accounts or organizations: https://docs.tenderly.co/introduction and https://docs.tenderly.co/platform/account/projects/api-tokens."
+}

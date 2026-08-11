@@ -1,0 +1,52 @@
+{
+  "id": "pulumi-cloud",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/reference/cloud-rest-api/api-basics/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/administration/access-identity/access-tokens/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/reference/cloud-rest-api/api-basics/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/reference/cloud-rest-api/"
+    }
+  },
+  "notes": "The supplied docs URL redirects to the current canonical reference. Official docs confirm the endpoint, token authentication, headers, GET /api/user example, and described API capabilities. No official general throttling or CORS policy was found. The docs mandate the 'token' authorization scheme; the separate claim that Bearer is also accepted was not verified."
+}

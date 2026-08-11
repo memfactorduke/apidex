@@ -1,0 +1,46 @@
+{
+  "id": "nasa-power",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://power.larc.nasa.gov/docs/services/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://power.larc.nasa.gov/docs/tutorials/api-getting-started/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Official guidance says not to exceed five concurrent requests; excessive synchronous or redundant requests may be blocked, and the API documents HTTP 429 responses.",
+      "source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://power.larc.nasa.gov/docs/methodology/data/sources/"
+    }
+  },
+  "notes": "NASA's current Data v10 notice says the API migration has no endpoint impact. Official examples retain /api/temporal/... and require no credentials. The material error is the claimed absence of published rate guidance: NASA specifies no more than five concurrent requests and warns that abusive request patterns may be blocked. No official pricing-tier quota or CORS policy was found."
+}

@@ -1,0 +1,93 @@
+{
+  "id": "edx",
+  "status": "operational",
+  "name": "edX API",
+  "category": "education-reference",
+  "tagline": "Open edX / edX course catalog and learner platform APIs for MOOC integration",
+  "description": "Researching official endpoints, auth, pricing, and current docs for edX/Open edX public APIs used for course catalog and learner integration.",
+  "base_url": "https://courses.edx.org",
+  "docs_url": "https://docs.openedx.org/projects/edx-platform/en/latest/references/lms_apis.html",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Researching authentication methods from official documentation"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://courses.edx.org/api/courses/v1/courses/",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list edX courses",
+    "get course details"
+  ],
+  "sources": [
+    "https://docs.edx.org/en/latest/developers/references/apis.html"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url"
+    ],
+    "unverifiable": []
+  }
+}

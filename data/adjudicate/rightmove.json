@@ -1,0 +1,15 @@
+{
+  "id": "rightmove",
+  "base_url": "https://api-services.adftest.rightmove.com",
+  "docs_url": "https://api-docs.rightmove.co.uk/",
+  "auth_type": "oauth2",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Requests are rate-limited. Exceeding the quota returns HTTP 429; quotas reset every 60 seconds, and the allowed request count varies by environment and endpoint.",
+  "cors": null,
+  "example_request": "curl -X POST \"https://api-services.adftest.rightmove.com/oauth/token\" -H \"Authorization: Basic <base64_encoded_client_id_and_secret>\" -H \"Content-Type: application/x-www-form-urlencoded\" -d \"grant_type=client_credentials\"",
+  "example_response_snippet": "{\"access_token\":\"<access_token>\"}",
+  "description": "Rightmove publicly documents a Commercial Listings API for commercial agents and feed providers to upload, update, retrieve, and remove UK commercial listings. It uses OAuth2 credentials issued by Rightmove's Data Feed Team, with separate test and production credentials. Residential listings use the separate Real Time Data Feed API.",
+  "status": null,
+  "resolution_notes": "base_url\u2014official documented test host: https://api-docs.rightmove.co.uk/docs/property-feed-api-product/1/overview. docs_url\u2014official portal: https://api-docs.rightmove.co.uk/. auth_type/example\u2014OAuth2 Client Credentials and token POST: https://api-docs.rightmove.co.uk/authentication. rate_limits\u2014429, 60-second reset, variable quota: overview URL above. description\u2014commercial operations, separate residential feed and credentials: overview URL above."
+}

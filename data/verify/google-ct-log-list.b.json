@@ -1,0 +1,52 @@
+{
+  "id": "google-ct-log-list",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.gstatic.com/ct/log_list/v3/",
+      "source": "https://www.gstatic.com/ct/log_list/v3/log_list.json"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://googlechrome.github.io/CertificateTransparency/",
+      "source": "https://googlechrome.github.io/CertificateTransparency/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gstatic.com/ct/log_list/v3/log_list.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gstatic.com/ct/log_list/v3/log_list.json"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gstatic.com/ct/log_list/v3/log_list.json"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gstatic.com/ct/log_list/v3/log_list.json"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gstatic.com/ct/log_list/v3/log_list.json"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gstatic.com/ct/log_list/v3/log_list.json"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gstatic.com/ct/log_list/v3/log_list.json"
+    }
+  },
+  "notes": "Automated checks returned 404 for base_url and docs_url; need to verify actual current endpoints and docs locations against official Google CT sources."
+}

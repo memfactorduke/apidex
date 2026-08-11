@@ -1,0 +1,98 @@
+{
+  "id": "uk-carbon-intensity",
+  "status": "operational",
+  "name": "UK Carbon Intensity API",
+  "category": "energy-utilities",
+  "tagline": "National Grid ESO free API for GB carbon intensity forecasts by region and generation mix.",
+  "description": "The National Energy System Operator (NESO) Carbon Intensity API provides current estimated and forecast carbon-intensity data for Great Britain, including national and regional data, generation mix, and intensity bands. Forecasts are updated every 30 minutes. Access is free and unauthenticated, but subject to an unspecified rate limit.",
+  "base_url": "https://api.carbonintensity.org.uk",
+  "docs_url": "https://carbon-intensity.github.io/api-definitions/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. The API is free and open to all developers without the need for an API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Currently free, but subject to the terms of use and an unspecified rate limit; NESO may block applications making a large number of calls.",
+    "paid_plans": null
+  },
+  "rate_limits": "NESO applies a rate limit and may block applications making a large number of calls. No numerical threshold is published.",
+  "example": {
+    "request": "curl -X GET 'https://api.carbonintensity.org.uk/intensity' -H 'Accept: application/json'",
+    "response_snippet": "{\n  \"data\": [\n    {\n      \"from\": \"2023-10-01T12:00Z\",\n      \"to\": \"2023-10-01T12:30Z\",\n      \"intensity\": {\n        \"forecast\": 120,\n        \"actual\": 115,\n        \"index\": \"moderate\"\n      }\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "get current carbon intensity for Great Britain",
+    "forecast carbon intensity for a specific region",
+    "retrieve generation mix data for electricity production",
+    "monitor carbon intensity levels over time",
+    "integrate carbon intensity data into smart home systems",
+    "analyze regional variations in carbon intensity"
+  ],
+  "sources": [
+    "https://carbonintensity.org.uk/",
+    "https://api.carbonintensity.org.uk/"
+  ],
+  "researcher_confidence": "high",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

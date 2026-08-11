@@ -1,0 +1,99 @@
+{
+  "id": "rightmove",
+  "status": "operational",
+  "name": "Rightmove API",
+  "category": "real-estate-housing",
+  "tagline": "UK property portal partner APIs for listings, branches, and property data.",
+  "description": "Rightmove publicly documents a Commercial Listings API for commercial agents and feed providers to upload, update, retrieve, and remove UK commercial listings. It uses OAuth2 credentials issued by Rightmove's Data Feed Team, with separate test and production credentials. Residential listings use the separate Real Time Data Feed API.",
+  "base_url": "https://api-services.adftest.rightmove.com",
+  "docs_url": "https://api-docs.rightmove.co.uk/",
+  "signup_url": null,
+  "auth": {
+    "type": "oauth2",
+    "details": "Partner/commercial access only; not self-serve. Exact auth mechanism (API key, certificates, or other) is provided under partner agreement and is not fully documented on public pages."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Commercial/partner pricing; not published publicly"
+  },
+  "rate_limits": "Requests are rate-limited. Exceeding the quota returns HTTP 429; quotas reset every 60 seconds, and the allowed request count varies by environment and endpoint.",
+  "example": {
+    "request": "curl -X POST \"https://api-services.adftest.rightmove.com/oauth/token\" -H \"Authorization: Basic <base64_encoded_client_id_and_secret>\" -H \"Content-Type: application/x-www-form-urlencoded\" -d \"grant_type=client_credentials\"",
+    "response_snippet": "{\"access_token\":\"<access_token>\"}"
+  },
+  "use_cases": [
+    "export UK property listing data as a Rightmove partner",
+    "sync estate agent branch details with Rightmove",
+    "ingest Rightmove property feed for internal CRM or analytics",
+    "integrate agent property stock with Rightmove portal listings"
+  ],
+  "sources": [
+    "https://www.rightmove.co.uk/api.html",
+    "https://api.rightmove.co.uk"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "cors"
+    ]
+  }
+}

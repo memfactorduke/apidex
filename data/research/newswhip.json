@@ -1,0 +1,41 @@
+{
+  "id": "newswhip",
+  "status": "operational",
+  "name": "NewsWhip API",
+  "category": "news-media",
+  "tagline": "Social velocity ranking and prediction for breaking news stories across publishers.",
+  "description": "NewsWhip provides APIs and data products that track and rank news and content by social engagement velocity across major platforms and publishers. Developers use it to surface breaking stories, monitor brand or topic coverage, and analyze how content spreads on social media in near real time.",
+  "base_url": "https://api.newswhip.com",
+  "docs_url": "https://docs.newswhip.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header/query parameter name not fully verified from public self-serve docs \u2014 confirm in account dashboard or enterprise onboarding."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Enterprise / sales-led pricing; contact NewsWhip for plans (not publicly listed as self-serve free API)."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.newswhip.com/v1/articles?key=YOUR_API_KEY&q=climate&from=1d\"",
+    "response_snippet": "{\"articles\":[{\"headline\":\"...\",\"url\":\"https://...\",\"fb_likes\":12345,\"tw_shares\":678}],\"total\":1}"
+  },
+  "use_cases": [
+    "rank breaking news stories by social velocity",
+    "monitor brand or topic coverage across publishers",
+    "find high-engagement articles for a keyword in a time window",
+    "analyze how a story is spreading on social platforms"
+  ],
+  "sources": [
+    "https://docs.newswhip.com/",
+    "https://www.newswhip.com/"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "flightradar24",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Accept: application/json\" -H \"Accept-Version: v1\" \"https://fr24api.flightradar24.com/api/live/flight-positions/full?airports=LHR\"",
+  "example_response_snippet": "{\"data\":[{\"fr24_id\":\"391fdd79\",\"lat\":51.47,\"lon\":-0.46,\"alt\":1200,\"callsign\":\"BAW123\",\"orig_iata\":\"LHR\",\"dest_iata\":\"JFK\"}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "example: INCORRECT. The original request omitted the required Accept-Version header. Current official documentation requires Accept-Version: v1 on every request, and its authentication example also includes Accept: application/json. The response schema uses orig_iata rather than origin. Evidence: https://fr24api.flightradar24.com/docs/endpoints/overview and https://fr24api.flightradar24.com/docs/authentication"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "sellix",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No operational base URL; the original Sellix service remains offline.",
+      "source": "https://sellix.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://github.com/Sellix/developers",
+      "source": "https://github.com/Sellix/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/Sellix/developers/blob/main/api-reference/authentication.mdx"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false \u2014 no service or pricing tier is currently available.",
+      "source": "https://sellix.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable because the service is offline.",
+      "source": "https://sellix.com/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/Sellix/developers/main/api-reference/openapi.json"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Sellix formerly provided APIs for storefront, product, order, inventory, and payment operations, but its service is currently offline.",
+      "source": "https://sellix.com/"
+    }
+  },
+  "notes": "Sellix's official site says services await possible reinstatement and merchants should use alternatives. The similarly named Sellix.gg explicitly states that it is an independent platform unrelated to the original Sellix, so it is not a valid replacement."
+}

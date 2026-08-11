@@ -1,0 +1,52 @@
+{
+  "id": "mempool-space",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mempool.space/docs/api/rest"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mempool.space/docs/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mempool.space/docs/api/rest"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://mempool.space/docs/api/rest"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Official docs confirm the REST paths, unauthenticated public endpoints, data categories, and enforced rate limiting with HTTP 429; Enterprise advertises higher limits and an unmetered REST API. The official status monitor shows the example endpoint operational. No official source located calls access a free tier, uses \u201cfair use,\u201d publishes the hosted public quota, or documents CORS. Example response values are dynamic."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "intrinio",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/documentation/web_api/get_company_v2"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/documentation/api_v2/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "A free, limited Developer Sandbox exists, although production data requires a paid subscription and sandbox access may be restricted to selected users.",
+      "source": "https://docs.intrinio.com/developer-sandbox"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The free sandbox is limited, non-production, and may contain incomplete or outdated data; official documentation enumerates its included sample datasets.",
+      "source": "https://docs.intrinio.com/developer-sandbox"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Limits are published and vary by feed. Published rules include 1 large-page or bulk request per minute for free users, 1 per second for paid users, a 100-requests-per-second throttle for free-only subscriptions, and a 25-second request timeout.",
+      "source": "https://docs.intrinio.com/documentation/api_v2/limits"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Browser/client-side JavaScript access is supported through a public API key sent in X-Authorization-Public-Key, subject to an allowed-domain list.",
+      "source": "https://docs.intrinio.com/documentation/api_v2/authentication"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/documentation/web_api/get_company_v2"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.intrinio.com/documentation/api_v2/getting_started"
+    }
+  },
+  "notes": "Intrinio APIv2 is currently operational. The endpoint and Bearer-header example are valid. The entry fails because it overlooks the free developer sandbox, labels documented rate limits as unpublished, and leaves browser access unknown despite official client-side authentication guidance."
+}

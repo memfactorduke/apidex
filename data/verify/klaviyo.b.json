@@ -1,0 +1,52 @@
+{
+  "id": "klaviyo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/reference/get_accounts"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/reference/api-overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/reference/api_overview"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.klaviyo.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 250 active profiles, 500 email sends per month, and 150 mobile messaging credits per month; mobile-credit usage varies by region and carrier.",
+      "source": "https://www.klaviyo.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published per endpoint, generally using burst/steady tiers: XS 1/s and 15/m; S 3/s and 60/m; M 10/s and 150/m; L 75/s and 700/m; XL 350/s and 3500/m.",
+      "source": "https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/v2024-10-15/reference/get_accounts"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.klaviyo.com/en/v2026-01-15/docs/authenticate_"
+    }
+  },
+  "notes": "The API is active, but the entry incorrectly says rate limits are unpublished and omits known free-plan limits. The example's 2024-10-15 revision remains supported through 2026-10-15, although it is deprecated; new integrations should use the latest stable revision, currently 2026-07-15."
+}

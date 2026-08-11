@@ -1,0 +1,52 @@
+{
+  "id": "ashby",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.ashbyhq.com/posting-api (posting API paths are under /posting-api; docs use https://api.ashbyhq.com/posting-api/job-board/{boardName})",
+      "source": "https://developers.ashbyhq.com/docs/public-job-posting-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.ashbyhq.com/docs/public-job-posting-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.ashbyhq.com/docs/public-job-posting-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.ashbyhq.com/docs/public-job-posting-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://api.ashbyhq.com/posting-api/job-board/{boardName}' (or /job-board/{boardName}/job/{jobPostingId}); bare GET https://api.ashbyhq.com/ is not a documented public posting endpoint",
+      "source": "https://developers.ashbyhq.com/docs/public-job-posting-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.ashbyhq.com/docs/public-job-posting-api"
+    }
+  },
+  "notes": "Docs confirm a public unauthenticated Job Posting API for listing jobs and job details. Entry base_url omits /posting-api path prefix; example curl hits root with empty response shape, not documented job-board paths. Rate limits and free-tier caps not published in docs checked."
+}

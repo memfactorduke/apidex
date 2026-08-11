@@ -1,0 +1,52 @@
+{
+  "id": "jpl-horizons",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ssd-api.jpl.nasa.gov/doc/horizons.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ssd-api.jpl.nasa.gov/doc/horizons.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ssd-api.jpl.nasa.gov/doc/horizons.html"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No hourly request quota is published. The official fair-use policy requires submitting only one API request at a time, with no simultaneous requests.",
+      "source": "https://ssd-api.jpl.nasa.gov/doc/index.php"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Website embedding is not permitted under NASA's CORS policy.",
+      "source": "https://ssd-api.jpl.nasa.gov/doc/index.php"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ssd-api.jpl.nasa.gov/doc/horizons.html"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Official documentation is version 1.3 (June 2025) and supports the shown GET endpoint, parameters, JSON/text output, observer tables, elements, vectors, and spacecraft targets. The request is valid, although its illustrative response reports stale version 1.2. No official pricing statement or support for the broad 'industry standard' characterization was found."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "gridstatus",
+  "status": "operational",
+  "name": "GridStatus.io",
+  "category": "energy-utilities",
+  "tagline": "US ISO/RTO electricity market data unified HTTP API.",
+  "description": "Unified HTTP API for US ISO/RTO electricity market data including prices, load, and generation. Accuracy matters more than completeness \u2014 a wrong fact is far worse than \"unknown\".",
+  "base_url": "https://api.gridstatus.io/v1",
+  "docs_url": "https://www.gridstatus.io/docs",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-Api-Key: YOUR_API_KEY\" \"https://api.gridstatus.io/v1/datasets\"",
+    "response_snippet": "{\"data\": []}"
+  },
+  "use_cases": [
+    "get current electricity prices for an ISO",
+    "fetch historical load data for a region"
+  ],
+  "sources": [
+    "https://www.gridstatus.io/docs"
+  ],
+  "researcher_confidence": "low"
+}

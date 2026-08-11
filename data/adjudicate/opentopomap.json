@@ -1,0 +1,15 @@
+{
+  "id": "opentopomap",
+  "base_url": "https://a.tile.opentopomap.org",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sSL \"https://a.tile.opentopomap.org/10/512/340.png\" -o tile.png",
+  "example_response_snippet": "HTTP 200 OK; Content-Type: image/png; binary PNG raster tile saved as tile.png.",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Corrected. The current official usage instructions specify https://{a|b|c}.tile.opentopomap.org/{z}/{x}/{y}.png, so the documented concrete base is https://a.tile.opentopomap.org, not the unlisted bare tile host. example: Corrected to the documented a-subdomain XYZ endpoint; a successful request returns a binary PNG tile. Evidence for both: https://opentopomap.org/about#verwendung"
+}

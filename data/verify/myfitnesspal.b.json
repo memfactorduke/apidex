@@ -1,0 +1,52 @@
+{
+  "id": "myfitnesspal",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://myfitnesspalapi.com/docs/domains/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://myfitnesspalapi.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://myfitnesspalapi.com/docs/user-authentication/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://myfitnesspalapi.com/faq/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Percent-encode the array brackets in the curl URL: fields%5B%5D=nutritional_contents&fields%5B%5D=exercise&fields%5B%5D=energy. The official documentation says unencoded brackets are only for readability and must be encoded in real requests.",
+      "source": "https://myfitnesspalapi.com/docs/get-request-query-param/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Approved clients can read food diary meals, but the documented write operations create exercise, steps, and water entries\u2014not food/meal entries. The remaining capabilities, OAuth requirement, subscription notifications, operational status, and closure to new access requests are supported; public pricing could not be verified.",
+      "source": "https://myfitnesspalapi.com/docs/diary-post/"
+    }
+  },
+  "notes": "The API platform is currently operational, and a 404 at the bare /v2 base does not invalidate the documented host/version. The entry fails because it overstates food-diary write support and provides a curl URL with unencoded square brackets. Official sources do not establish whether partner access has a free tier or paid terms."
+}

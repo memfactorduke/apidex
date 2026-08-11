@@ -1,0 +1,52 @@
+{
+  "id": "jpl-horizons",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ssd-api.jpl.nasa.gov/doc/horizons.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ssd-api.jpl.nasa.gov/doc/horizons.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ssd-api.jpl.nasa.gov/doc/horizons.html"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No numeric hourly limit is published; the fair-use policy requires submitting only one API request at a time.",
+      "source": "https://ssd-api.jpl.nasa.gov/doc/index.php"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Browser embedding is not supported; the official fair-use policy says these APIs may not be embedded in websites under NASA's CORS policy.",
+      "source": "https://ssd-api.jpl.nasa.gov/doc/index.php"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://ssd-api.jpl.nasa.gov/doc/horizons.html"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://ssd.jpl.nasa.gov/horizons/manual.html"
+    }
+  },
+  "notes": "Official docs list API v1.3, and a March 2026 notice says the API remains operational. The claimed ~1200/hour limit is invented; 1200 in the docs is a TLE input-line limit. CORS policy forbids website embedding. Pricing and no-paid-plan claims are undocumented. The request is valid, but its illustrative signature version 1.2 is stale. The description's \"industry standard\" claim could not be officially verified."
+}

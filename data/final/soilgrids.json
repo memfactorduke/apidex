@@ -1,0 +1,99 @@
+{
+  "id": "soilgrids",
+  "status": "degraded",
+  "name": "SoilGrids",
+  "category": "agriculture",
+  "tagline": "Global soil property maps via REST for precision-ag planning",
+  "description": "SoilGrids is ISRIC's global digital soil-mapping system, providing modeled soil-property maps at 250 m resolution across six standard depth intervals, with quantified prediction uncertainty. Its beta REST API v2.0 is currently paused with no estimated restoration date; ISRIC recommends WMS, WCS, WebDAV, or Google Earth Engine for current access.",
+  "base_url": "https://rest.isric.org/soilgrids/v2.0",
+  "docs_url": "https://rest.isric.org/soilgrids/v2.0/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public REST endpoints; requests are made directly without API keys or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Publicly accessible under CC BY 4.0, but the REST API is currently paused. When available, fair use is limited to 5 API calls per 1-minute period.",
+    "paid_plans": null
+  },
+  "rate_limits": "5 API calls per 1-minute period under the Fair Use Policy; the REST API is currently paused.",
+  "example": {
+    "request": "curl -s \"https://rest.isric.org/soilgrids/v2.0/properties/query?lon=5.0&lat=52.0&property=phh2o&depth=0-5cm&value=mean\"",
+    "response_snippet": "{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[5.0,52.0]},\"properties\":{\"layers\":[{\"name\":\"phh2o\",\"unit_measure\":{\"d_factor\":10,\"mapped_units\":\"pH*10\",\"target_units\":\"pH\",\"uncertainty_unit\":\"\"},\"depths\":[{\"label\":\"0-5cm\",\"range\":{\"top_depth\":0,\"bottom_depth\":5,\"unit_depth\":\"cm\"},\"values\":{\"mean\":55}}]}]}}"
+  },
+  "use_cases": [
+    "get soil pH at a farm field lat/lon",
+    "fetch clay/silt/sand texture fractions for a plot",
+    "retrieve soil organic carbon stock for a depth interval",
+    "sample bulk density and related properties for site suitability",
+    "batch-query soil layers for precision-ag planning polygons (via multiple point queries)"
+  ],
+  "sources": [
+    "https://rest.isric.org/soilgrids/v2.0/docs",
+    "https://www.isric.org/explore/soilgrids",
+    "https://www.isric.org/explore/soilgrids/faq-soilgrids"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "description",
+      "status"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "cors"
+    ]
+  }
+}

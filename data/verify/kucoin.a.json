@@ -1,0 +1,52 @@
+{
+  "id": "kucoin",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/docs-new"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/docs/beginners/introduction"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/docs-new/authentication"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Resource-pool and VIP-tier based, with each endpoint deducting its documented weight. Public REST requests are limited by IP and currently use a 2000/30s pool at every VIP tier; private pools are generally limited by UID and vary by product and VIP tier. Public limits are not generally higher than private trading limits.",
+      "source": "https://www.kucoin.com/docs-new/rate-limit"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/docs-new/rest/spot-trading/market-data/get-ticker"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.kucoin.com/api"
+    }
+  },
+  "notes": "The submitted documentation URL remains functional but redirects to the current /docs-new portal. KuCoin documents API quotas for VIP0 accounts, but its official materials located during this review do not explicitly describe a free API tier or state that no separate paid API offering exists. The rate-limit summary is materially misleading."
+}

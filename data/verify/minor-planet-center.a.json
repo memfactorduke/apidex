@@ -1,0 +1,49 @@
+{
+  "id": "minor-planet-center",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://data.minorplanetcenter.net/api",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/get-obs/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/faqs/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Public API queries must not exceed 5 requests per second.",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/faqs/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Not more than 5 requests per second; exceeding this may produce HTTP 429 and may cause the requesting IP address to be blocked.",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/faqs/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET -H \"Content-Type: application/json\" -d '{\"desigs\":[\"13270\"]}' https://data.minorplanetcenter.net/api/get-obs",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/get-obs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/"
+    }
+  },
+  "notes": "The listed /web_service/ location is not the current official documentation or API base. MPC now documents REST endpoints under data.minorplanetcenter.net/api. Public data is free, requests require no auth header in official examples, and the published limit is 5 requests/second. CORS was not documented."
+}

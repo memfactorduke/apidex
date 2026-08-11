@@ -1,0 +1,15 @@
+{
+  "id": "data-gov-sg",
+  "base_url": "https://api-open.data.gov.sg/v2/real-time/api",
+  "docs_url": "https://guide.data.gov.sg/developer-guide/api-overview",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s 'https://api-open.data.gov.sg/v2/real-time/api/two-hr-forecast'",
+  "example_response_snippet": "{\"code\":0,\"data\":{\"area_metadata\":[{\"name\":\"Ang Mo Kio\",\"label_location\":{\"longitude\":103.839,\"latitude\":1.375}}],\"items\":[{\"update_timestamp\":\"2026-08-11T23:36:00+08:00\",\"forecasts\":[{\"area\":\"Ang Mo Kio\",\"forecast\":\"Fair (Night)\"}]}]},\"errorMsg\":\"\"}",
+  "description": "Public APIs from Singapore's national open-data platform cover real-time weather and traffic plus collection and dataset discovery and retrieval. They are accessible without an API key for testing; keys provide higher production limits. Current real-time APIs use api-open.data.gov.sg, while collection and dataset APIs use documented api-production.data.gov.sg and api-open.data.gov.sg routes.",
+  "status": null,
+  "resolution_notes": "base_url: replace with the current v2 real-time API prefix; https://guide.data.gov.sg/developer-guide/real-time-apis. docs_url: replace the retired /developer page with the official API overview; https://guide.data.gov.sg/developer-guide/api-overview. example: replace the retired v1 route; the v2 curl returned live JSON; https://api-open.data.gov.sg/v2/real-time/api/two-hr-forecast. description: replace obsolete host/CKAN wording with the current split API architecture; https://guide.data.gov.sg/developer-guide/api-overview."
+}

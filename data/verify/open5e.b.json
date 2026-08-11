@@ -1,0 +1,52 @@
+{
+  "id": "open5e",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open5e.com/api-docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open5e.com/api-docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/open5e/open5e-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/open5e"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://api.open5e.com/v2/spells/?name__iexact=fireball\"",
+      "source": "https://open5e.com/api-docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://open5e.com/api-docs"
+    }
+  },
+  "notes": "The API and documentation are live. Open5e identifies v2 as current and actively maintained, while v1 is officially deprecated and receives deprecation warnings. The submitted curl therefore uses an outdated API version. No authoritative published request quota or current CORS policy was found."
+}

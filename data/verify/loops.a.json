@@ -1,0 +1,52 @@
+{
+  "id": "loops",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://app.loops.so/api",
+      "source": "https://loops.so/docs/api-reference/intro"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/docs/api-reference/intro"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/docs/api-reference/intro"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 1,000 stored subscribed contacts and 4,000 email sends per month; Loops branding is included.",
+      "source": "https://loops.so/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Baseline: 10 requests per second per team. Content API endpoints: 60 requests per 60 seconds per team.",
+      "source": "https://loops.so/docs/api-reference/intro"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Cross-origin requests from client-side JavaScript are not supported; requests must be made server-side.",
+      "source": "https://loops.so/docs/api-reference/intro"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/docs/api-reference/find-contact"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/docs/api-reference/intro"
+    }
+  },
+  "notes": "The API and documentation are current and operational, but the directory entry uses the versioned endpoint prefix as its base URL and incorrectly reports known pricing limits, published rate limits, and documented CORS behavior as unknown."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "honeycomb",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/introduction"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/dataset-definitions/authorization"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.honeycomb.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 20M events and 100M metrics data points per month; includes 2 triggers and no SLOs.",
+      "source": "https://www.honeycomb.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published through RateLimit and RateLimit-Policy response headers. Create Query Result is limited to 10 requests per minute, or 1 request per minute with relational fields.",
+      "source": "https://docs.honeycomb.io/api/rate-limit"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/auth/list-authorizations"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.honeycomb.io/api/introduction"
+    }
+  },
+  "notes": "The listed base URL is the documented US endpoint; EU accounts use https://api.eu1.honeycomb.io. X-Honeycomb-Team is correct for ingest and configuration keys, while management keys use an Authorization Bearer token. Official documentation did not establish a general CORS policy."
+}

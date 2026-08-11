@@ -1,0 +1,15 @@
+{
+  "id": "rev-ai",
+  "base_url": "https://api.rev.ai/speechtotext/v1",
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": true,
+  "free_tier_limits": "Free credits equivalent to 5 hours of Reverb ASR; credits can be used for all products.",
+  "rate_limits": "Default per user and endpoint: 10,000 async submissions/10 min; 500 transcriptions processed/10 min; multipart upload concurrency 5. Streaming concurrency 10, with a 3-hour limit per stream. Support can adjust limits.",
+  "cors": null,
+  "example_request": "curl -X POST \"https://api.rev.ai/speechtotext/v1/jobs\" -H \"Authorization: Bearer <REVAI_ACCESS_TOKEN>\" -H \"Content-Type: application/json\" -d '{\"source_config\":{\"url\":\"https://www.rev.ai/FTC_Sample_1.mp3\"},\"metadata\":\"directory example\"}'",
+  "example_response_snippet": "{\"id\":\"Umx5c6F7pH7rQ2nB\",\"created_on\":\"2026-08-11T14:25:00.000Z\",\"name\":\"FTC_Sample_1.mp3\",\"metadata\":\"directory example\",\"status\":\"in_progress\",\"type\":\"async\",\"language\":\"en\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url corrected to the official async server: https://docs.rev.ai/api/asynchronous/reference. auth_type=other because Rev AI uses a generated bearer access token, not X-Api-Key: https://docs.rev.ai/get-started. free_tier=true and free_tier_limits=5 Reverb ASR hours usable across products: https://www.rev.ai/pricing. rate_limits corrected to published defaults: https://docs.rev.ai/faq. example corrected using the official async job pattern: https://docs.rev.ai/get-started."
+}

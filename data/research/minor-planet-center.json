@@ -1,0 +1,40 @@
+{
+  "id": "minor-planet-center",
+  "status": "operational",
+  "name": "Minor Planet Center API",
+  "category": "science-space",
+  "tagline": "Official IAU orbits, observations, and designations for minor planets",
+  "description": "The International Astronomical Union\u2019s Minor Planet Center (MPC) provides web services and data endpoints for near-Earth objects, minor planets, and related designations. Developers can query orbital elements, observations, and identification data used by the professional astronomy community. Coverage includes NEOs and other small-body catalogs maintained under IAU authority.",
+  "base_url": "https://minorplanetcenter.net",
+  "docs_url": "https://minorplanetcenter.net/web_service/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public web service endpoints (confirm against current docs)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://minorplanetcenter.net/web_service/'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "look up orbital elements for a minor planet by designation",
+    "query near-Earth object observation data",
+    "resolve official IAU minor-planet designations",
+    "fetch ephemeris-related small-body catalog fields"
+  ],
+  "sources": [
+    "https://minorplanetcenter.net/web_service/"
+  ],
+  "researcher_confidence": "low"
+}

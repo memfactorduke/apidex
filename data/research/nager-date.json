@@ -1,0 +1,43 @@
+{
+  "id": "nager-date",
+  "status": "operational",
+  "name": "Nager.Date",
+  "category": "events-holidays",
+  "tagline": "Free public holiday API for 100+ countries with no API key required",
+  "description": "Nager.Date is a free public REST API that provides public holiday data for 100+ countries. Developers call it without authentication for country lists, public holidays by year, and long weekend detection\u2014making it a common no-key staple for calendars, payroll, and scheduling apps.",
+  "base_url": "https://date.nager.at/api/v3",
+  "docs_url": "https://date.nager.at/Api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public API; endpoints are open over HTTPS with no API key or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://date.nager.at/api/v3/PublicHolidays/2026/US\"",
+    "response_snippet": "[{\"date\":\"2026-01-01\",\"localName\":\"New Year's Day\",\"name\":\"New Year's Day\",\"countryCode\":\"US\",\"fixed\":false,\"global\":true,\"counties\":null,\"launchYear\":null,\"types\":[\"Public\"]}]"
+  },
+  "use_cases": [
+    "list public holidays for a country and year",
+    "check if a date is a public holiday in a country",
+    "get available country codes for holiday data",
+    "find long weekends for a country and year",
+    "build a multi-country holiday calendar feed"
+  ],
+  "sources": [
+    "https://date.nager.at/Api",
+    "https://date.nager.at/",
+    "https://github.com/nager/Nager.Date"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "semaphore-ci",
+  "status": "operational",
+  "name": "Semaphore CI API",
+  "category": "dev-tools",
+  "tagline": "CI/CD API for projects, pipelines, promotions, and secrets with monorepo support",
+  "description": "Semaphore provides a REST API for managing CI/CD projects, pipelines, promotions, secrets, and related resources. The API enables automation of builds, deployments, and monorepo workflows. Authentication uses API tokens. Docs and pricing should be verified from official sources for current endpoints, free-tier limits, and rate limits.",
+  "base_url": "https://api.semaphoreci.com",
+  "docs_url": "https://docs.semaphoreci.com/reference/api-v1alpha",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API token authentication; verify exact header/scheme from current docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Token YOUR_API_KEY\" https://api.semaphoreci.com/...",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "list projects and pipelines",
+    "trigger pipeline runs",
+    "manage secrets",
+    "inspect promotions"
+  ],
+  "sources": [
+    "https://docs.semaphoreci.com/reference/api-v1alpha"
+  ],
+  "researcher_confidence": "low"
+}

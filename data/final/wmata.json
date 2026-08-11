@@ -1,0 +1,98 @@
+{
+  "id": "wmata",
+  "status": "operational",
+  "name": "WMATA API",
+  "category": "transportation",
+  "tagline": "Real-time DC Metro rail, bus, and incident data for transit apps",
+  "description": "Official Washington Metropolitan Area Transit Authority (WMATA) developer API providing real-time rail and bus predictions, station and route information, service incidents, elevator/escalator status, and GTFS-compatible transit data for the Washington, D.C. metropolitan area.",
+  "base_url": "https://api.wmata.com",
+  "docs_url": "https://developer.wmata.com/",
+  "signup_url": "https://developer.wmata.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter or api_key header; self-serve signup at developer.wmata.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "10 calls/second and 50,000 calls/day on the free Default tier",
+    "paid_plans": null
+  },
+  "rate_limits": "Free Default tier: 10 calls/second and 50,000 calls/day. The public demonstration key has a separate unspecified rate limit and may change at any time.",
+  "example": {
+    "request": "curl -H \"api_key: YOUR_API_KEY\" \"https://api.wmata.com/Rail.svc/json/jStations\"",
+    "response_snippet": "{\"Stations\":[{\"Code\":\"A01\",\"Name\":\"Metro Center\",\"StationTogether1\":\"C01\",\"Lat\":38.898303,\"Lon\":-77.028099,\"LineCode1\":\"RD\",\"LineCode2\":\"BL\",\"LineCode3\":\"OR\",\"LineCode4\":\"SV\"}]}"
+  },
+  "use_cases": [
+    "get next train arrivals for a Metro station",
+    "list all Metro rail stations and lines",
+    "get bus predictions for a stop",
+    "check elevator and escalator outages",
+    "fetch current service incidents and alerts"
+  ],
+  "sources": [
+    "https://developer.wmata.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "unverifiable",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

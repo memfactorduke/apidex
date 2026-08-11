@@ -1,0 +1,52 @@
+{
+  "id": "amber-electric",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.amber.com.au",
+      "source": "https://app.amber.com.au/developers/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://app.amber.com.au/developers/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://app.amber.com.au/developers/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://app.amber.com.au/developers/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://app.amber.com.au/developers/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://app.amber.com.au/developers/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.amber.com.au/v1/sites\"",
+      "source": "https://app.amber.com.au/developers/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://app.amber.com.au/developers/"
+    }
+  },
+  "notes": "Base URL wrong (api.amberelectric.com.au vs api.amber.com.au). Docs live. Auth is API key/Bearer. Example path otherwise matches."
+}

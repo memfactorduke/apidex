@@ -1,0 +1,52 @@
+{
+  "id": "philips-hue",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No single /v2 base URL. Local CLIP v2 uses https://<bridge-ip>/clip/v2/resource; remote access uses https://api.meethue.com/route/clip/v2/resource.",
+      "source": "https://developers.meethue.com/develop/hue-api-v2/getting-started/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.meethue.com/develop/hue-api-v2/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Local access uses a Hue application key in the hue-application-key header; remote access additionally uses OAuth2 bearer authorization. X-Api-Key is not the documented header.",
+      "source": "https://developers.meethue.com/new-hue-api/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The official remote-API quota is 50,000 calls per day, not 1,000 requests per day.",
+      "source": "https://developers.meethue.com/terms-of-use-and-conditions/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Philips Hue publishes a remote-API limit of 50,000 calls per day; exceeding it may cause throttling or access revocation.",
+      "source": "https://developers.meethue.com/terms-of-use-and-conditions/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "A local v2 request is: curl -k \"https://<bridge-ip>/clip/v2/resource/light\" -H \"hue-application-key: YOUR_APPLICATION_KEY\". The submitted URL, plural /lights path, X-Api-Key header, and V1-shaped response are inconsistent with CLIP v2.",
+      "source": "https://developers.meethue.com/develop/hue-api-v2/getting-started/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.meethue.com/develop/hue-api-v2/"
+    }
+  },
+  "notes": "The API and documentation remain operational, but the entry conflates local and remote access. Its base URL, authentication, quota, curl example, and response format are wrong. Official terms currently publish a 50,000-call/day remote quota. No official pricing or CORS statement was located. The six duplicated weather use cases are unrelated to Hue."
+}

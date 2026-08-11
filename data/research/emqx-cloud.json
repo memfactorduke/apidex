@@ -1,0 +1,38 @@
+{
+  "id": "emqx-cloud",
+  "status": "operational",
+  "name": "EMQX Cloud",
+  "category": "iot-devices",
+  "tagline": "MQTT messaging cloud with HTTP REST APIs for authentication, metrics, and publish/subscribe management.",
+  "description": "EMQX Cloud provides MQTT messaging as a managed service, with HTTP REST APIs for authentication, metrics, and publish/subscribe management.",
+  "base_url": "https://api.emqx.com/v2",
+  "docs_url": "https://docs.emqx.com/en/cloud/latest/api/api_overview.html",
+  "signup_url": "https://www.emqx.com/en/cloud",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 req/day free",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET https://api.emqx.com/v2/auth -H \"X-Api-Key: YOUR_API_KEY\"",
+    "response_snippet": "{ \"status\": \"ok\", \"data\": { \"auth\": \"true\" } }"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "get current weather for a city"
+  ],
+  "sources": [
+    "https://docs.emqx.com/en/cloud/latest/api/api_overview.html"
+  ],
+  "researcher_confidence": "high"
+}

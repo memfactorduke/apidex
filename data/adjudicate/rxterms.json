@@ -1,0 +1,15 @@
+{
+  "id": "rxterms",
+  "base_url": "https://clinicaltables.nlm.nih.gov/api/rxterms/v3/search",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free of charge for anyone; contact NLM if expected usage exceeds 50,000 calls/day.",
+  "rate_limits": "Advised maximum 25 requests/second (soft; the enforced limit may be higher depending on system load). Handle X-RateLimit-Limit, Retry-After, and HTTP 503; notify NLM if regularly exceeding 50 requests/second.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Corrected; official RxTerms docs identify the /search URL as the API Base URL: https://clinicaltables.nlm.nih.gov/apidoc/rxterms/v3/doc.html. free_tier_limits: Corrected; the FAQ says CTSS is free for anyone and requests contact above 50,000 calls/day: https://clinicaltables.nlm.nih.gov/faq.html. rate_limits: Corrected; the FAQ specifies a soft 25 requests/second advisory limit, relevant headers, possible HTTP 503, and notice above 50 requests/second: https://clinicaltables.nlm.nih.gov/faq.html."
+}

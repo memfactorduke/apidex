@@ -1,0 +1,41 @@
+{
+  "id": "open-charge-map",
+  "status": "operational",
+  "name": "Open Charge Map",
+  "category": "energy-utilities",
+  "tagline": "Crowdsourced global EV charging location database with free API access.",
+  "description": "Open Charge Map provides a free, open API to query a global database of electric vehicle charging stations. Developers can search by location, filter by connector type and network, and retrieve detailed site data including equipment, access, and status. Access requires a free API key with documented rate limits for fair use.",
+  "base_url": "https://api.openchargemap.io/v3",
+  "docs_url": "https://openchargemap.org/site/develop/api",
+  "signup_url": "https://openchargemap.org/site/profile/applications",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-API-Key header or key query parameter; free self-serve registration required"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.openchargemap.io/v3/poi/?output=json&countrycode=US&maxresults=5&key=YOUR_API_KEY\" -H \"X-API-Key: YOUR_API_KEY\"",
+    "response_snippet": "[{\"ID\": 12345, \"UUID\": \"...\", \"AddressInfo\": {\"Title\": \"Example Charger\", \"Town\": \"Austin\", \"Country\": {\"ISOCode\": \"US\"}}, \"Connections\": [{\"ConnectionType\": {\"Title\": \"CCS (Type 1)\"}, \"PowerKW\": 50}]}]"
+  },
+  "use_cases": [
+    "find EV chargers near a lat/lng",
+    "list charging stations by country or region",
+    "filter chargers by connector type or power",
+    "check operator/network for a charging site",
+    "get detailed POI data for a known station ID"
+  ],
+  "sources": [
+    "https://openchargemap.org/site/develop/api"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "checkout-com",
+  "status": "operational",
+  "name": "Checkout.com API",
+  "category": "ecommerce-payments",
+  "tagline": "Global payments API for cards, wallets, and local methods",
+  "description": "Checkout.com provides a unified REST API for accepting and managing payments across cards, digital wallets, and local payment methods. Merchants use it for authorization, capture, refunds, payouts, and risk controls with sandbox and production environments.",
+  "base_url": "https://api.checkout.com",
+  "docs_url": "https://www.checkout.com/docs/developer-resources/api",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Secret API key via Authorization: Bearer header (or channel access key for some flows); sandbox and production keys from Dashboard."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://api.checkout.com/payments\" -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\"",
+    "response_snippet": "{\"id\": \"pay_...\", \"status\": \"Authorized\"}"
+  },
+  "use_cases": [
+    "create a card payment",
+    "refund a payment",
+    "list payment methods",
+    "capture an authorized payment"
+  ],
+  "sources": [
+    "https://www.checkout.com/docs/developer-resources/api"
+  ],
+  "researcher_confidence": "low"
+}

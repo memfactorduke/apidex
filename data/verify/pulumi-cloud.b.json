@@ -1,0 +1,52 @@
+{
+  "id": "pulumi-cloud",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/reference/cloud-rest-api/api-basics/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/reference/cloud-rest-api/api-basics/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.pulumi.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/reference/cloud-rest-api/api-basics/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pulumi.com/docs/reference/cloud-rest-api/"
+    }
+  },
+  "notes": "The supplied docs URL currently redirects to /docs/reference/cloud-rest-api/. Pricing confirms a free Individual plan with 1 user, unlimited projects/stacks/environments and updates/history, plus 500 deployment minutes, but does not substantiate plan-varying REST API rate limits. Official authentication docs require the \"token\" scheme; they do not document the entry's additional Bearer claim."
+}

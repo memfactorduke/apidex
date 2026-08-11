@@ -1,0 +1,45 @@
+{
+  "id": "onet",
+  "status": "operational",
+  "name": "O*NET Web Services",
+  "category": "jobs-careers",
+  "tagline": "U.S. occupation, skills, and career taxonomy from the Department of Labor",
+  "description": "O*NET Web Services is the official REST API for the O*NET database, maintained by the U.S. Department of Labor. It provides structured data on occupations, skills, abilities, knowledge, work activities, tools/technology, career pathways, and related career exploration content used by job boards, workforce tools, and labor-market applications. Access requires free registration; responses are typically XML or JSON.",
+  "base_url": "https://services.onetcenter.org/ws",
+  "docs_url": "https://services.onetcenter.org/reference/",
+  "signup_url": "https://services.onetcenter.org/developer/",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with registered username and password (or API key credentials from free developer signup). Credentials are issued after account registration at services.onetcenter.org."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free registration; usage limits not clearly published as a numeric free tier on the public site",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_USERNAME:YOUR_PASSWORD \"https://services.onetcenter.org/ws/online/occupations/17-2051.00\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"code\":\"17-2051.00\",\"title\":\"Civil Engineers\",\"tags\":{\"bright_outlook\":true,\"green\":false},\"description\":\"Perform engineering duties in planning, designing, and overseeing construction and maintenance of building structures and facilities...\"}"
+  },
+  "use_cases": [
+    "look up occupation details by O*NET-SOC code",
+    "search occupations by keyword or title",
+    "get skills, abilities, and knowledge required for a job",
+    "list related occupations and career pathways",
+    "retrieve tools and technology used in an occupation"
+  ],
+  "sources": [
+    "https://services.onetcenter.org/reference/",
+    "https://services.onetcenter.org/developer/",
+    "https://www.onetcenter.org/web_services.html",
+    "https://services.onetcenter.org/"
+  ],
+  "researcher_confidence": "medium"
+}

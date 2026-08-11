@@ -1,0 +1,48 @@
+{
+  "id": "internet-archive",
+  "status": "operational",
+  "name": "Internet Archive API",
+  "category": "education-reference",
+  "tagline": "Search, metadata, and access for Archive.org books, media, and public-domain collections",
+  "description": "The Internet Archive provides free, publicly accessible APIs for searching, retrieving metadata, downloading, and managing items across archive.org\u2019s vast library of books, audio, video, software, and web archives. Core surfaces include the Advanced Search / Search API, Metadata API, and related services (Downloads, Tasks, Waybacks). Most read endpoints require no authentication; write/upload operations use S3-compatible keys or cookies. Ideal for research tools, digital libraries, and media discovery.",
+  "base_url": "https://archive.org",
+  "docs_url": "https://archive.org/developers/",
+  "signup_url": "https://archive.org/account/signup",
+  "auth": {
+    "type": "none",
+    "details": "Most read endpoints (search, metadata, downloads) require no auth. Uploads and privileged operations use S3-compatible access/secret keys (X-Archive-* headers) or logged-in session cookies; keys from archive.org account settings."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "html",
+    "binary",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access for search, metadata, and downloads; no published paid API plans. Fair-use rate limiting applies.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (soft/fair-use limits; heavy automated use discouraged)",
+  "example": {
+    "request": "curl -s 'https://archive.org/metadata/goodytwoshoes00newyiala'",
+    "response_snippet": "{\"created\":1234567890,\"d1\":\"ia801600.us.archive.org\",\"dir\":\"/7/items/goodytwoshoes00newyiala\",\"files\":[{\"name\":\"goodytwoshoes00newyiala_jp2.zip\",\"source\":\"original\",\"format\":\"JPEG 2000\",\"size\":\"12345678\"}],\"metadata\":{\"identifier\":\"goodytwoshoes00newyiala\",\"title\":\"Goody Two-Shoes\",\"mediatype\":\"texts\",\"publicdate\":\"2008-01-01 00:00:00\"},\"server\":\"ia801600.us.archive.org\"}"
+  },
+  "use_cases": [
+    "search public-domain books by title or subject",
+    "fetch full metadata for an archive.org item identifier",
+    "list downloadable files and formats for a digitized book",
+    "find free audio or video items matching a query",
+    "resolve an item identifier to direct download URLs"
+  ],
+  "sources": [
+    "https://archive.org/developers/",
+    "https://archive.org/services/docs/api/metadata.html",
+    "https://archive.org/advancedsearch.php",
+    "https://archive.org/services/docs/api/ias3.html"
+  ],
+  "researcher_confidence": "medium"
+}

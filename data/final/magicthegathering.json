@@ -1,0 +1,100 @@
+{
+  "id": "magicthegathering",
+  "status": "operational",
+  "name": "Magic: The Gathering API",
+  "category": "games-comics",
+  "tagline": "Community MTG card catalog with sets, types, and multiverse IDs",
+  "description": "Scrydex's current Magic: The Gathering API is a paid, API-key service for card metadata and Lucene-like search, including types, subtypes, supertypes, mana costs, rules, images, expansion data, and opt-in pricing. MTG price-history and webhook endpoints are also documented.",
+  "base_url": "https://api.scrydex.com/magicthegathering/v1",
+  "docs_url": "https://scrydex.com/docs/magicthegathering/cards",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "No authentication required; public endpoints accept unauthenticated HTTP requests."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No published free plan. Starter is $29/month with 5,000 API credits; overage is $0.006 per credit. Unauthenticated requests may proceed only at heavily reduced limits.",
+    "paid_plans": null
+  },
+  "rate_limits": "100 requests/second for all plans, plus plan-based API-credit allowances. Most standard requests cost 1 credit; usage beyond included credits incurs plan-specific overage charges.",
+  "example": {
+    "request": "curl --request GET --url 'https://api.scrydex.com/magicthegathering/v1/cards/KTK-214' --header 'X-Api-Key: YOUR_API_KEY' --header 'X-Team-ID: YOUR_TEAM_ID'",
+    "response_snippet": "{\"id\":\"KTK-214\",\"name\":\"Zurgo Helmsmasher\",\"supertypes\":[\"Legendary\"],\"subtypes\":[\"Orc\",\"Warrior\"],\"types\":[\"Creature\"],\"mana_cost\":\"{2}{R}{W}{B}\",\"mana_value\":5,\"rarity\":\"Mythic\"}"
+  },
+  "use_cases": [
+    "look up MTG card details by name or multiverse ID",
+    "list cards in a specific set by set code",
+    "fetch legal card types, subtypes, and supertypes",
+    "search cards by color, rarity, or mana cost filters",
+    "get MTG set metadata and release information"
+  ],
+  "sources": [
+    "https://docs.magicthegathering.io/",
+    "https://api.magicthegathering.io/v1/cards?pageSize=1",
+    "https://github.com/MagicTheGathering/mtg-api"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

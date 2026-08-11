@@ -1,0 +1,52 @@
+{
+  "id": "lepton-ai",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No single global API base URL; use the workspace URL for management operations and the endpoint-specific URL displayed by DGX Cloud Lepton for inference.",
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/get-started/endpoint/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.nvidia.com/dgx-cloud/lepton/",
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/features/workspace/token/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST \"<ENDPOINT_URL>/v1/chat/completions\" -H \"Content-Type: application/json\" -d '{\"model\":\"<model-id>\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello\"}]}'",
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/examples/endpoint/deploy-gpt-oss/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.nvidia.com/dgx-cloud/lepton/reference/api/"
+    }
+  },
+  "notes": "Lepton's current official identity is NVIDIA DGX Cloud Lepton. The former lepton.ai documentation URL is obsolete, while current documentation uses NVIDIA's site and endpoint-specific inference URLs. Official sources did not establish a public free tier, request-rate policy, or CORS policy."
+}

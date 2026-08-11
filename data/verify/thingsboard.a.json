@@ -1,0 +1,52 @@
+{
+  "id": "thingsboard",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/paas/reference/subscriptions/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Community Edition is free and self-hosted. Cloud has a permanent $0/month Free plan, not merely an unspecified trial. It includes 5 devices, 5 assets, 2 customers, 5 users, 5 dashboards, 3 rule chains, 1 integration, 3 converters, 5 scheduler events, 0.5M monthly transport messages, 1M transport data points, 3M Rule Engine executions, 100K JavaScript executions, and 30-day default storage TTL.",
+      "source": "https://thingsboard.io/docs/paas/reference/subscriptions/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published. Cloud REST tenant limits are 100 requests/second and 1,000/minute on Free, or 100/second and 2,000/minute on paid plans. Customer limits are 50/second and 500/minute on Free, or 50/second and 1,000/minute on paid plans.",
+      "source": "https://thingsboard.io/docs/paas/reference/subscriptions/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "ThingsBoard provides REST APIs for managing IoT entities, telemetry, attributes, alarms, rule chains, and dashboards across self-hosted and Cloud deployments. Current ThingsBoard recommends API-key authentication; username/password JWT login remains supported but is deprecated.",
+      "source": "https://thingsboard.io/docs/reference/rest-api/"
+    }
+  },
+  "notes": "The API and documentation are operational. Current Cloud plans began January 20, 2026. The main factual defect is that Cloud REST rate limits are published. JWT login still works but is deprecated, with API keys now recommended. Official documentation reviewed did not establish the hosted Cloud service's CORS policy."
+}

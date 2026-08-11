@@ -1,0 +1,15 @@
+{
+  "id": "bnb-api",
+  "base_url": "https://bl.natbib-lod.org",
+  "docs_url": "https://www.bl.uk/services/collection-metadata-services",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sL 'https://www.bl.uk/services/collection-metadata-services'",
+  "example_response_snippet": "<!doctype html><html><head><title>Collection metadata services - British Library</title></head><body>...<h2>The British National Bibliography (BNB)</h2>...The BNB is currently available on the Share Family beta portal...</body></html>",
+  "description": "British National Bibliography records are currently available through the Share Family beta linked-data discovery portal for searching publications, works and people. The former anonymous bnb.data.bl.uk SPARQL/RDF service is no longer reachable; no public production replacement API endpoint is currently documented, and Share Family's current API environment requires OAuth login.",
+  "status": "defunct",
+  "resolution_notes": "base_url: replace dead legacy host with current BNB portal: https://www.bl.uk/services/collection-metadata-services. docs_url: replace 403 IRO page with the current page: https://www.bl.uk/services/collection-metadata-services. example: no anonymous replacement API curl exists; production API is not yet available and UAT requires login, so curl the landing page: https://wiki.share-vde.org/wiki/ShareDoc%3AAPI_documentation. description: legacy SPARQL API is no longer current; BL lists BNB on the Share Family beta portal: https://www.bl.uk/services/collection-metadata-services."
+}

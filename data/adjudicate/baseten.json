@@ -1,0 +1,15 @@
+{
+  "id": "baseten",
+  "base_url": "https://model-{MODEL_ID}.api.baseten.co",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Basic is $0/month and pay-as-you-go. New accounts receive experimentation credits, but the current pricing page states neither a credit amount nor a fixed free-request quota.",
+  "rate_limits": "Model APIs: Basic unverified 15 RPM/100k TPM; Basic verified 120 RPM/500k TPM; Pro 120 RPM/1M TPM; Enterprise custom. Dedicated async: 12,000 submissions/minute; status and cancel endpoints 100/second. No general synchronous dedicated-deployment RPM is published.",
+  "cors": "no",
+  "example_request": "curl -X POST \"https://model-YOUR_MODEL_ID.api.baseten.co/environments/production/predict\" -H \"Authorization: Bearer $BASETEN_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\":\"Hello, world!\"}'",
+  "example_response_snippet": "{\"output\":\"Hello, world!\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url=incorrect: per-model host; https://docs.baseten.co/inference/calling-your-model | free_tier_limits=incorrect: signup credits, sum unstated; Basic pay-go; https://www.baseten.co/pricing/ | rate_limits=incorrect: Model API and async caps; https://docs.baseten.co/inference/model-apis/rate-limits-and-budgets, https://docs.baseten.co/inference/async | cors=incorrect: dedicated endpoints omit CORS; https://docs.baseten.co/inference/calling-your-model | example=incorrect: use Bearer, model host, production path; https://docs.baseten.co/inference/calling-your-model"
+}

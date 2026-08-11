@@ -1,0 +1,15 @@
+{
+  "id": "owntracks",
+  "base_url": "http[s]://recorder_host[:port]",
+  "docs_url": "https://owntracks.org/booklet/tech/json/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": "yes",
+  "example_request": "curl -u YOUR_USERNAME:YOUR_PASSWORD -H 'Content-Type: application/json' -d '{\"_type\":\"location\",\"lat\":51.0,\"lon\":-0.1,\"tst\":1710000000,\"tid\":\"me\"}' 'https://RECORDER_HOST/pub?u=YOUR_USERNAME&d=YOUR_DEVICE'",
+  "example_response_snippet": "HTTP/1.1 200 OK\nContent-Type: application/json; charset=utf-8\n\n[]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: replace; OwnTracks is self-hosted and documents http[s]://recorder_host[:port]/pub, so no universal live base exists (https://owntracks.org/booklet/tech/http/). docs_url: replace with current JSON docs (https://owntracks.org/booklet/tech/json/). cors: yes; Recorder JSON responses send Access-Control-Allow-Origin: * (https://raw.githubusercontent.com/owntracks/recorder/master/http.c). example: replace; official /pub testing uses u and d, and HTTP 200 typically returns [] (https://owntracks.org/booklet/tech/http/)."
+}

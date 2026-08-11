@@ -1,0 +1,94 @@
+{
+  "id": "airlabs",
+  "status": "operational",
+  "name": "AirLabs",
+  "category": "travel-hospitality",
+  "tagline": "Flight schedules, real-time tracking, and airport/airline reference data",
+  "description": "AirLabs provides REST APIs for real-time flight tracking, schedules, airport/airline reference data, and related aviation information for travel and logistics applications.",
+  "base_url": "https://airlabs.co/api/v9",
+  "docs_url": "https://airlabs.co/docs/",
+  "signup_url": "https://airlabs.co/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 API queries per month immediately after registration",
+    "paid_plans": null
+  },
+  "rate_limits": "Numeric per-minute and per-hour limits are not publicly specified; documentation only identifies minute-, hour-, and month-limit-exceeded errors.",
+  "example": {
+    "request": "curl \"https://airlabs.co/api/v9/airports?api_key=YOUR_API_KEY&iata_code=JFK\"",
+    "response_snippet": "{\"response\":[{\"name\":\"John F Kennedy International Airport\",\"iata_code\":\"JFK\",\"icao_code\":\"KJFK\"}]}"
+  },
+  "use_cases": [
+    "look up airport details by IATA code",
+    "get real-time flight status by flight number",
+    "fetch airline schedules for a route",
+    "list nearby airports by coordinates"
+  ],
+  "sources": [
+    "https://airlabs.co/docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

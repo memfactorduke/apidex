@@ -1,0 +1,52 @@
+{
+  "id": "bnb-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "Service appears shut down or no longer publicly reachable at https://bnb.data.bl.uk (HTTP failures; British Library Linked Data/BNB endpoints widely reported offline/migrated). Prefer current BL open-data landing pages or archived dataset records rather than treating bnb.data.bl.uk as a live API base.",
+      "source": "https://bnb.data.bl.uk"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.bl.uk/collection-metadata/metadata-services (or current British Library open data / BNB dataset page if still published); the IRO dataset URL returned HTTP 403 and may not be a usable public docs endpoint.",
+      "source": "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bnb.data.bl.uk"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bnb.data.bl.uk"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Example targets https://bnb.data.bl.uk/sparql which is not currently responding as a live public endpoint (HTTP 0 / connection failure in automated checks). Do not present as a working curl example until a live SPARQL endpoint is confirmed.",
+      "source": "https://bnb.data.bl.uk/sparql"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Historically accurate as a public Linked Data/SPARQL interface to BNB, but as of verification the service at bnb.data.bl.uk does not appear operational; description should not present it as a current public interface without a shutdown/migration caveat.",
+      "source": "https://bnb.data.bl.uk"
+    }
+  },
+  "notes": "Automated curls: base_url HTTP 0 (dead), docs_url HTTP 403. Researcher confidence was low. Entry fails primarily on dead/unreachable base URL and non-working example; treat as decommissioned or relocated until BL publishes a confirmed live endpoint."
+}

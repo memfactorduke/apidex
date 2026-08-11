@@ -1,0 +1,205 @@
+{
+  "category": "games-comics",
+  "apis": [
+    {
+      "name": "RAWG Video Games Database",
+      "slug": "rawg",
+      "base_domain": "api.rawg.io",
+      "docs_url": "https://rawg.io/apidocs",
+      "why_notable": "Largest video game metadata API with 500k+ games, screenshots, stores, and discovery endpoints.",
+      "free_tier": true
+    },
+    {
+      "name": "IGDB API",
+      "slug": "igdb",
+      "base_domain": "api.igdb.com",
+      "docs_url": "https://api-docs.igdb.com/",
+      "why_notable": "Twitch-backed industry-standard game database with rich metadata, covers, and GraphQL/Apicalypse queries.",
+      "free_tier": true
+    },
+    {
+      "name": "Giant Bomb API",
+      "slug": "giant-bomb",
+      "base_domain": "www.giantbomb.com",
+      "docs_url": "https://www.giantbomb.com/api/",
+      "why_notable": "Long-running game/wiki API with characters, companies, reviews, and franchise data from CBS Interactive.",
+      "free_tier": true
+    },
+    {
+      "name": "SteamSpy API",
+      "slug": "steamspy",
+      "base_domain": "steamspy.com",
+      "docs_url": "https://steamspy.com/api.php",
+      "why_notable": "Steam ownership and sales estimates by app ID; widely used for market research despite limited docs.",
+      "free_tier": true
+    },
+    {
+      "name": "IsThereAnyDeal API",
+      "slug": "isthereanydeal",
+      "base_domain": "api.isthereanydeal.com",
+      "docs_url": "https://docs.isthereanydeal.com/",
+      "why_notable": "Cross-store game price history, deals, and waitlists across dozens of PC digital storefronts.",
+      "free_tier": true
+    },
+    {
+      "name": "PriceCharting API",
+      "slug": "pricecharting",
+      "base_domain": "www.pricecharting.com",
+      "docs_url": "https://www.pricecharting.com/api-documentation",
+      "why_notable": "Video game, console, and trading-card market prices with graded/ungraded variants.",
+      "free_tier": false
+    },
+    {
+      "name": "Pok\u00e9API",
+      "slug": "pokeapi",
+      "base_domain": "pokeapi.co",
+      "docs_url": "https://pokeapi.co/docs/v2",
+      "why_notable": "Canonical free RESTful Pok\u00e9mon species, moves, types, and sprite data\u2014no key required.",
+      "free_tier": true
+    },
+    {
+      "name": "Magic: The Gathering API",
+      "slug": "magicthegathering",
+      "base_domain": "api.magicthegathering.io",
+      "docs_url": "https://docs.magicthegathering.io/",
+      "why_notable": "Community MTG card catalog with sets, types, and multiverse IDs (complement to Scryfall).",
+      "free_tier": true
+    },
+    {
+      "name": "TCGplayer API",
+      "slug": "tcgplayer",
+      "base_domain": "api.tcgplayer.com",
+      "docs_url": "https://docs.tcgplayer.com/",
+      "why_notable": "Major TCG marketplace product catalog and market pricing for Magic, Pok\u00e9mon, Yu-Gi-Oh, and more.",
+      "free_tier": true
+    },
+    {
+      "name": "Marvel Comics API",
+      "slug": "marvel-comics",
+      "base_domain": "gateway.marvel.com",
+      "docs_url": "https://developer.marvel.com/docs",
+      "why_notable": "Official Marvel comics, characters, creators, events, and series catalog with image assets.",
+      "free_tier": true
+    },
+    {
+      "name": "Anilist GraphQL API",
+      "slug": "anilist",
+      "base_domain": "graphql.anilist.co",
+      "docs_url": "https://docs.anilist.co/",
+      "why_notable": "Anime/manga tracking GraphQL API with media, characters, studios, and user lists\u2014key for comics-adjacent media.",
+      "free_tier": true
+    },
+    {
+      "name": "Jikan API",
+      "slug": "jikan",
+      "base_domain": "api.jikan.moe",
+      "docs_url": "https://docs.api.jikan.moe/",
+      "why_notable": "Unofficial MyAnimeList REST wrapper for anime, manga, characters, and seasonal schedules.",
+      "free_tier": true
+    },
+    {
+      "name": "OpenTDB",
+      "slug": "opentdb",
+      "base_domain": "opentdb.com",
+      "docs_url": "https://opentdb.com/api_config.php",
+      "why_notable": "Open Trivia Database with video-game and entertainment quiz categories; no auth for basic use.",
+      "free_tier": true
+    },
+    {
+      "name": "RAWG-alternative: Games Database via MobyGames API",
+      "slug": "mobygames",
+      "base_domain": "api.mobygames.com",
+      "docs_url": "https://www.mobygames.com/info/api/",
+      "why_notable": "Deep historical game catalog with platforms, covers, credits, and company relationships.",
+      "free_tier": true
+    },
+    {
+      "name": "Board Game Atlas API",
+      "slug": "board-game-atlas",
+      "base_domain": "api.boardgameatlas.com",
+      "docs_url": "https://www.boardgameatlas.com/api/docs",
+      "why_notable": "Board game search, prices, and Kickstarter data as a modern complement to BoardGameGeek.",
+      "free_tier": true
+    },
+    {
+      "name": "Steam Grid DB API",
+      "slug": "steamgriddb",
+      "base_domain": "www.steamgriddb.com",
+      "docs_url": "https://www.steamgriddb.com/api/v2",
+      "why_notable": "Community artwork API for game grids, heroes, logos, and icons used by launchers and skins.",
+      "free_tier": true
+    },
+    {
+      "name": "HowLongToBeat API (via HLTB unofficial)",
+      "slug": "howlongtobeat",
+      "base_domain": "howlongtobeat.com",
+      "docs_url": "https://github.com/ckatzorke/howlongtobeat",
+      "why_notable": "Game completion-time estimates scraped/wrapped by community libraries for backlog tooling.",
+      "free_tier": true
+    },
+    {
+      "name": "Xbox Live / OpenXBL",
+      "slug": "openxbl",
+      "base_domain": "xbl.io",
+      "docs_url": "https://xbl.io/docs",
+      "why_notable": "Self-serve Xbox Live profile, presence, achievements, and friends API for third-party apps.",
+      "free_tier": true
+    },
+    {
+      "name": "PlayerDB",
+      "slug": "playerdb",
+      "base_domain": "playerdb.co",
+      "docs_url": "https://playerdb.co/",
+      "why_notable": "Cross-game player ID lookup for Minecraft, Steam, Xbox, and other platforms in one API.",
+      "free_tier": true
+    },
+    {
+      "name": "Fortnite-API",
+      "slug": "fortnite-api",
+      "base_domain": "fortnite-api.com",
+      "docs_url": "https://dash.fortnite-api.com/endpoints",
+      "why_notable": "Unofficial Fortnite cosmetics, shop, stats, and news endpoints popular with bot/discord tools.",
+      "free_tier": true
+    },
+    {
+      "name": "Valorant-API",
+      "slug": "valorant-api",
+      "base_domain": "valorant-api.com",
+      "docs_url": "https://dash.valorant-api.com/",
+      "why_notable": "Community Valorant agents, weapons, maps, and content bundles without Riot key for static data.",
+      "free_tier": true
+    },
+    {
+      "name": "PokeAPI (duplicate check skip) - instead AmiiboAPI",
+      "slug": "amiiboapi",
+      "base_domain": "www.amiiboapi.com",
+      "docs_url": "https://www.amiiboapi.com/docs/",
+      "why_notable": "Nintendo Amiibo figure catalog with games, series, and character cross-references.",
+      "free_tier": true
+    },
+    {
+      "name": "D&D 5e API",
+      "slug": "dnd5e-api",
+      "base_domain": "www.dnd5eapi.co",
+      "docs_url": "https://www.dnd5eapi.co/docs/",
+      "why_notable": "Open SRD REST API for D&D 5e monsters, spells, classes, and equipment for tabletop apps.",
+      "free_tier": true
+    },
+    {
+      "name": "Open5e",
+      "slug": "open5e",
+      "base_domain": "api.open5e.com",
+      "docs_url": "https://open5e.com/api-docs",
+      "why_notable": "Expanded 5e open-content API including monsters, spells, and third-party SRD material.",
+      "free_tier": true
+    },
+    {
+      "name": "GeekDo / BoardGameGeek already excluded - use Ludopedia",
+      "slug": "ludopedia",
+      "base_domain": "ludopedia.com.br",
+      "docs_url": "https://ludopedia.com.br/api",
+      "why_notable": "Brazilian board-game community API with ratings, collections, and regional catalog data.",
+      "free_tier": true
+    }
+  ]
+}

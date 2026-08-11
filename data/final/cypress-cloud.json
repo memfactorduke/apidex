@@ -1,0 +1,93 @@
+{
+  "id": "cypress-cloud",
+  "status": "operational",
+  "name": "Cypress Cloud API",
+  "category": "dev-tools",
+  "tagline": "HTTP API for Cypress E2E test runs, specs, and results in Cypress Cloud.",
+  "description": "Enterprise-only HTTP Data Extract API for exporting Cypress Cloud Enterprise Reporting data, including projects, runs, test results, failures, replay links, UI coverage, and accessibility metrics, in JSON, CSV, or XLSX. It is not a general REST API at api.cypress.io; read-oriented run debugging on other plans is provided through the cy-cloud CLI.",
+  "base_url": "https://cloud.cypress.io/enterprise-reporting/report",
+  "docs_url": "https://docs.cypress.io/cloud/integrations/data-extract-api",
+  "signup_url": "https://cloud.cypress.io",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and signup flow need official-docs confirmation."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Starter: 500 test results/month, 50 users, and 30-day retention. The Data Extract API itself requires an Enterprise plan.",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS -G \"https://cloud.cypress.io/enterprise-reporting/report\" --data-urlencode \"token=YOUR_API_KEY\" --data-urlencode \"report_id=project-list\" --data-urlencode \"export_format=json\" --data-urlencode \"start_date=2026-08-01\"",
+    "response_snippet": "[{\"project_name\":\"My Cypress Project\",\"id\":\"a7bq2k\"}]"
+  },
+  "use_cases": [
+    "list recent Cypress Cloud test runs for a project",
+    "fetch spec and test results for a specific run"
+  ],
+  "sources": [
+    "https://docs.cypress.io/api/cloud/introduction"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "free_tier"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "opensanctions",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Business-email signups receive a 30-day trial. Ongoing free API keys are grants limited to verified public-interest journalism, civil-society advocacy, qualifying academic research, and specified public institutions.",
+  "rate_limits": "Keys have account-specific monthly quotas shown in the API console. Exceeding quota returns HTTP 429 until the next calendar month; support can change it. Contact OpenSanctions before exceeding 200,000 requests/hour or 2 million queries/month.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: ORIGINAL is incorrect; the official API page confirms a 30-day trial, while the exemption page restricts ongoing free API keys to verified public-interest work. Sources: https://www.opensanctions.org/api/ and https://www.opensanctions.org/docs/commercial/exemption/. rate_limits: ORIGINAL is incorrect; monthly quotas, HTTP 429 behavior, console visibility, support changes, and high-volume contact thresholds are published at https://www.opensanctions.org/docs/api/faq/#quota."
+}

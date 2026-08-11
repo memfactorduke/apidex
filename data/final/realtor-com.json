@@ -1,0 +1,92 @@
+{
+  "id": "realtor-com",
+  "status": "operational",
+  "name": "Realtor.com API",
+  "category": "real-estate-housing",
+  "tagline": "Listing and market data from Realtor.com",
+  "description": "ListHub's Syndication API is a RESO-certified Web API for approved publishers to download MLS-sourced listing data into their own systems. It is intended for data-import workflows, not live end-user property searches.",
+  "base_url": "https://api.listhub.com/",
+  "docs_url": "https://www.listhub.com/mls-api-documentation/",
+  "auth": {
+    "type": "oauth2",
+    "details": "unknown"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown"
+  },
+  "rate_limits": "3,000 requests per minute for /odata/Property; 3 requests per hour for /odata/Sync.",
+  "example": {
+    "request": "curl 'https://api.listhub.com/odata/Property?$top=5' -H 'Authorization: Bearer <ACCESS_TOKEN>' -H 'Accept-Encoding: gzip'",
+    "response_snippet": "{\"@odata.context\":\"http://api.listhub.com/odata/$metadata#Property\",\"value\":[{\"ListingKey\":\"3yd-FAKE1-0\",\"ListingId\":\"1\",\"PropertyType\":\"Residential\",\"ListPrice\":499000},{\"ListingKey\":\"3yd-FAKE1-1\",\"ListingId\":\"2\",\"PropertyType\":\"Residential\",\"ListPrice\":525000}]}"
+  },
+  "use_cases": [
+    "search property listings",
+    "get market data"
+  ],
+  "sources": [
+    "https://www.realtor.com/api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits"
+    ]
+  }
+}

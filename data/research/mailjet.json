@@ -1,0 +1,42 @@
+{
+  "id": "mailjet",
+  "status": "operational",
+  "name": "Mailjet",
+  "category": "social-communication",
+  "tagline": "European email API for transactional and marketing mail",
+  "description": "Mailjet provides a REST API for sending transactional and marketing emails, managing contacts and lists, using templates, tracking events, and handling SMS in some plans. Developers authenticate with API key pairs over HTTPS. The service is GDPR-oriented and widely used for app notifications, drip campaigns, and contact sync.",
+  "base_url": "https://api.mailjet.com/v3",
+  "docs_url": "https://dev.mailjet.com/email/guides/",
+  "signup_url": "https://app.mailjet.com/signup",
+  "auth": {
+    "type": "basic",
+    "details": "HTTP Basic Auth with API key as username and secret key as password; keys from account settings. Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -X GET 'https://api.mailjet.com/v3/REST/contact' -u 'YOUR_API_KEY:YOUR_API_SECRET'",
+    "response_snippet": "{\"Count\":1,\"Data\":[{\"Email\":\"passenger@mailjet.com\",\"ID\":1,\"IsExcludedFromCampaigns\":false,\"Name\":\"Passenger\"}],\"Total\":1}"
+  },
+  "use_cases": [
+    "send a transactional email with HTML and text body",
+    "send a campaign email using a stored template",
+    "list or create contacts and contact lists",
+    "retrieve delivery open and bounce statistics",
+    "manage sender domains and validate sender addresses"
+  ],
+  "sources": [
+    "https://dev.mailjet.com/email/guides/",
+    "https://dev.mailjet.com/email/reference/overview/"
+  ],
+  "researcher_confidence": "low"
+}

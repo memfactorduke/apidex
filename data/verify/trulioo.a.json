@@ -1,0 +1,52 @@
+{
+  "id": "trulioo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.trulioo.com/reference/multi-region-hosting"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.trulioo.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "OAuth 2.0 client credentials for the Trulioo Platform API and current NAPI v3; Basic Authentication for legacy NAPI v1.",
+      "source": "https://developer.trulioo.com/reference/authentication-recipe"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.trulioo.com/reference/api-reference-overview"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.trulioo.com/v1.0/reference/testauthentication"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Replace the final sentence with: \"The Platform API and current NAPI v3 use OAuth 2.0 client credentials; legacy NAPI v1 uses Basic Authentication.\"",
+      "source": "https://developer.trulioo.com/reference/authentication-recipe"
+    }
+  },
+  "notes": "Official docs are live. api.trulioo.com is the global endpoint, with regional and product-specific hosts also documented. The curl matches the legacy v1 request, although its response snippet is not the documented response. No public pricing or live-use free-tier terms were found. Trulioo documents non-chargeable, account-gated sandbox transactions limited to static test entities."
+}

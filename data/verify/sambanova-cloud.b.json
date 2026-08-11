@@ -1,0 +1,52 @@
+{
+  "id": "sambanova-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sambanova.ai/docs/en/get-started/api-keys-urls"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.sambanova.ai/docs/en/get-started/overview",
+      "source": "https://docs.sambanova.ai/docs/en/get-started/overview"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sambanova.ai/docs/en/get-started/quickstart"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.sambanova.ai/docs/en/models/rate-limits"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "For eligible models, the Free Tier currently allows 20 RPM, 20 RPD, and 200,000 tokens per day per model.",
+      "source": "https://docs.sambanova.ai/docs/en/models/rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published by tier and model in RPM, RPD, and, for the Free Tier, TPD. Developer accounts also have a 20-million-token daily limit across all models.",
+      "source": "https://docs.sambanova.ai/docs/en/models/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "The endpoint, POST semantics, bearer header, and JSON structure remain valid, but Meta-Llama-3.1-8B-Instruct was removed from SambaCloud on April 14, 2026. Use Meta-Llama-3.3-70B-Instruct.",
+      "source": "https://docs.sambanova.ai/docs/en/models/deprecations"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "SambaCloud is an RDU-powered, high-throughput AI inference platform serving supported open-source models through OpenAI-compatible and other documented APIs. Developers can create API keys in SambaCloud and use models designated for production or preview workloads.",
+      "source": "https://sambanova.ai/products/sambacloud"
+    }
+  },
+  "notes": "The API remains operational, but the entry is stale. Its documentation URL has moved, detailed free and paid rate limits are published, and its example model was removed from SambaCloud in April 2026. Current first-party materials describe the hosted catalog as open-source models, not proprietary LLMs. No authoritative SambaCloud CORS policy was found."
+}

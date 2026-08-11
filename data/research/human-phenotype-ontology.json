@@ -1,0 +1,42 @@
+{
+  "id": "human-phenotype-ontology",
+  "status": "operational",
+  "name": "Human Phenotype Ontology (HPO) API",
+  "category": "health-fitness",
+  "tagline": "Search and annotate rare-disease phenotypes with the Human Phenotype Ontology.",
+  "description": "REST API from Jackson Laboratory for searching the Human Phenotype Ontology (HPO), retrieving term details, and supporting phenotype annotation for rare disease research. Used to look up phenotype terms, hierarchies, and annotations programmatically.",
+  "base_url": "https://ontology.jax.org/api/hp",
+  "docs_url": "https://hpo.jax.org/app/help/doc",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints; open read access without API keys."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://ontology.jax.org/api/hp/search?q=seizure&max=-1'",
+    "response_snippet": "{\n  \"terms\": [\n    {\n      \"id\": \"HP:0001250\",\n      \"name\": \"Seizure\",\n      \"definition\": \"...\",\n      \"synonyms\": [...]\n    }\n  ]\n}"
+  },
+  "use_cases": [
+    "search HPO phenotype terms by keyword",
+    "look up an HPO term by ID with definition and synonyms",
+    "retrieve parent/child hierarchy for a phenotype term",
+    "annotate patient phenotypes with standard HPO IDs",
+    "find diseases associated with a given phenotype"
+  ],
+  "sources": [
+    "https://hpo.jax.org/app/help/doc",
+    "https://ontology.jax.org"
+  ],
+  "researcher_confidence": "low"
+}

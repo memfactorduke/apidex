@@ -1,0 +1,15 @@
+{
+  "id": "pulsedive",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free registered accounts: 1 request/second, 50 requests/day, 500 requests/month, 10 Analyze scans/day, 100 Analyze scans/month, and 50 Explore results.",
+  "rate_limits": "Plan-based. Free accounts: 1 request/second, 50/day, and 500/month. Responses expose remaining second/day/month quotas in X-Requests-Remaining-* headers; exceeded hard limits return HTTP 429.",
+  "cors": null,
+  "example_request": "curl \"https://pulsedive.com/api/indicator.php?indicator=pulsedive.com&pretty=1\"",
+  "example_response_snippet": "{\"qid\":123,\"iid\":123,\"indicator\":\"pulsedive.com\",\"riskfactors\":[],\"threats\":[],\"feeds\":[]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: replace unknown; current official plan lists all quoted Free Account quotas (https://pulsedive.com/about/api). rate_limits: replace not published; official docs describe plan-based limits, remaining-request headers, and HTTP 429 (https://docs.pulsedive.com/api/limits). example: replace placeholder; official endpoint reference supplies this curl and the documented response schema used for the realistic snippet (https://docs.pulsedive.com/api/indicator/get-by-value)."
+}

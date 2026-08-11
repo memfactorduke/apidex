@@ -1,0 +1,52 @@
+{
+  "id": "maxio-chargify",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.maxio.com/http/getting-started/how-to-get-started"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.maxio.com/http/advanced-billing-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.maxio.com/http/getting-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.maxio.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.maxio.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Custom slot-based limit of 4 concurrent API requests per subdomain; excess concurrency may be queued or produce HTTP 429 responses. Requests also have a 120-second timeout.",
+      "source": "https://developers.maxio.com/http/getting-started/about-the-api/error-handling-rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.maxio.com/http/advanced-billing-api/api-endpoints/subscriptions/list-subscriptions"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.maxio.com/product/maxio-platform"
+    }
+  },
+  "notes": "The API is active and currently documented. The entry fails because Maxio publishes a concrete concurrency limit, contrary to 'not published.' The listed base URL is the default US endpoint; EU-hosted sites instead use https://{site}.ebilling.maxio.com. No authoritative general CORS policy was located."
+}

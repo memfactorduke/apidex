@@ -1,0 +1,52 @@
+{
+  "id": "usda-nass-quick-stats",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quickstats.nass.usda.gov/api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quickstats.nass.usda.gov/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quickstats.nass.usda.gov/api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.nass.usda.gov/Publications/2026_Products_and_Services_Guide.pdf"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free with an API key; NASS publishes a rate limit of 100 calls within five minutes. API responses are separately capped at 50,000 records.",
+      "source": "https://data.nass.usda.gov/Education_and_Outreach/Meeting/2025/2025%20Spring%20Data%20Users%20Meeting%20Question%20and%20Answer%20Summary%20with%20Slides.pdf"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "100 calls within five minutes.",
+      "source": "https://data.nass.usda.gov/Education_and_Outreach/Meeting/2025/2025%20Spring%20Data%20Users%20Meeting%20Question%20and%20Answer%20Summary%20with%20Slides.pdf"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quickstats.nass.usda.gov/api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.nass.usda.gov/developer/index.php"
+    }
+  },
+  "notes": "The API and documentation remain live and officially listed in 2026. The material error is the rate-limit information: USDA publishes 100 calls per five minutes, not an unspecified daily limit. The separate 50,000-record ceiling applies per response. No authoritative CORS policy was found."
+}

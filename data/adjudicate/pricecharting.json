@@ -1,0 +1,15 @@
+{
+  "id": "pricecharting",
+  "base_url": "https://www.pricecharting.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "1 API call per second; CSV downloads: 1 call every 10 minutes. Marketplace /api/offers requests to the same URL must be limited to 1 every 5 minutes.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Paid API for current collectible values across video games, consoles, trading cards, comics, and other supported categories. Returns product metadata and current prices for available grades and conditions; historical prices, sales, and trends are not available through the API.",
+  "status": null,
+  "resolution_notes": "base_url: CORRECTED; docs define https://www.pricecharting.com as the base URL. rate_limits: CORRECTED; docs specify 1 API call/second, 1 CSV call/10 minutes, and a special /api/offers throttle. cors: CORRECTED to yes; responses include liberal CORS headers. description: CORRECTED; only current values by grade/condition are supported, while historic prices and sales are excluded. Evidence for all: https://www.pricecharting.com/api-documentation"
+}

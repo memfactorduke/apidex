@@ -1,0 +1,42 @@
+{
+  "id": "ons-uk",
+  "status": "operational",
+  "name": "ONS API",
+  "category": "government-open-data",
+  "tagline": "UK official statistics API for population, economy, labour market, and census datasets.",
+  "description": "REST API from the UK Office for National Statistics providing access to published statistical datasets, including economy, population, labour market, prices, and census data. Developers can browse datasets, filter observations by dimensions (time, geography, age, etc.), and retrieve metadata and timeseries for research, dashboards, and data products without needing a commercial data vendor.",
+  "base_url": "https://api.ons.gov.uk",
+  "docs_url": "https://developer.ons.gov.uk/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public endpoints; open access with no API key or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free public API; no paid tier required for standard access",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.ons.gov.uk/v1/datasets\"",
+    "response_snippet": "{\"count\":100,\"items\":[{\"id\":\"cpih01\",\"title\":\"Consumer Prices Index including owner occupiers' housing costs (CPIH)\",\"description\":\"...\",\"links\":{\"self\":{\"href\":\"...\"}}}],\"limit\":20,\"offset\":0}"
+  },
+  "use_cases": [
+    "list available ONS statistical datasets",
+    "fetch latest CPI/inflation observations for a time series",
+    "get population estimates by geography and year",
+    "retrieve labour market unemployment rates over time",
+    "download census dataset metadata and dimension filters"
+  ],
+  "sources": [
+    "https://developer.ons.gov.uk/",
+    "https://api.ons.gov.uk"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "cloudconvert",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "10 conversion credits/day with daily reset; maximum file size 1 GB; maximum processing time 5 minutes; 5 concurrent tasks; low processing priority.",
+  "rate_limits": "Dynamic rate limits apply when creating jobs and tasks. Responses include X-RateLimit-Limit and X-RateLimit-Remaining; exceeding the limit returns HTTP 429 with Retry-After.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Replace \"unknown\"; the current official pricing table specifies 10 credits/day, daily reset, 1 GB files, 5-minute processing, 5 concurrent tasks, and low priority: https://cloudconvert.com/pricing. rate_limits: Replace \"not published\"; official docs specify dynamic limits for creating jobs/tasks, rate-limit headers, and 429 with Retry-After: https://cloudconvert.com/docs/getting-started/introduction."
+}

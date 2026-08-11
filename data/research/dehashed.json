@@ -1,0 +1,42 @@
+{
+  "id": "dehashed",
+  "status": "operational",
+  "name": "DeHashed",
+  "category": "security-identity",
+  "tagline": "Search breached credentials and identity exposure across historical leak databases",
+  "description": "DeHashed provides a breach-data search API for looking up emails, usernames, IPs, passwords, and other identity attributes in aggregated leak datasets. Developers use it for account-takeover risk checks, credential exposure monitoring, and security investigations. Authentication is typically API-key based; confirm current base URL, free-tier limits, and rate limits from official docs before production use.",
+  "base_url": "https://api.dehashed.com",
+  "docs_url": "https://www.dehashed.com/docs",
+  "signup_url": "https://www.dehashed.com",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication (header or query per current docs); self-serve account required"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.dehashed.com/search?query=email:example@example.com\" -H \"Dehashed-Api-Key: YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"balance\":100,\"entries\":[{\"email\":\"example@example.com\",\"username\":\"user\",\"password\":\"***\",\"hashed_password\":null,\"name\":null,\"vin\":null,\"address\":null,\"phone\":null,\"database_name\":\"Example Leak\"}],\"took\":\"12ms\",\"total\":1}"
+  },
+  "use_cases": [
+    "check if an email appears in known data breaches",
+    "look up username exposure across leak databases",
+    "assess credential reuse risk for a password hash or value",
+    "investigate IP or domain-related breach records for identity risk workflows"
+  ],
+  "sources": [
+    "https://www.dehashed.com/docs",
+    "https://api.dehashed.com",
+    "https://www.dehashed.com"
+  ],
+  "researcher_confidence": "low"
+}

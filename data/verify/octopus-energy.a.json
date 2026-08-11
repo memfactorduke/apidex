@@ -1,0 +1,52 @@
+{
+  "id": "octopus-energy",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.octopus.energy/rest/guides/api-basics/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.octopus.energy/rest/",
+      "source": "https://docs.octopus.energy/rest/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.octopus.energy/rest/guides/api-basics/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.octopus.energy/rest/guides/api-basics/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.octopus.energy/rest/guides/endpoints/"
+    }
+  },
+  "notes": "The API is operational: the official base prefix is /v1/, and /v1/products/ returned current JSON; a 404 at the bare prefix does not invalidate it. The submitted docs URL is obsolete. No official REST pricing, quota, or CORS policy was located. The example request is valid, although its illustrative count/pagination is stale. Official Basic Auth examples use the API key as username with a blank password; the reverse arrangement in auth.details was not documented."
+}

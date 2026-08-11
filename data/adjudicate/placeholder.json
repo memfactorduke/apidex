@@ -1,0 +1,15 @@
+{
+  "id": "placeholder",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free public endpoints with best-effort service. CC BY-SA permits any purpose, including commercial use, provided TVmaze is credited and ShareAlike is followed. Allows at least 20 calls per 10 seconds per IP.",
+  "rate_limits": "At least 20 calls every 10 seconds per IP address. Edge-cached requests may not count; temporary stricter limits may apply. Clients should back off and retry after HTTP 429.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: ORIGINAL incorrect; commercial use is allowed under CC BY-SA with attribution and ShareAlike, and the free plan is best-effort: https://www.tvmaze.com/api#licensing and https://www.tvmaze.com/api/plans. rate_limits: ORIGINAL incorrect; docs say at least 20 calls/10 seconds/IP, with cache and temporary-limit caveats: https://www.tvmaze.com/api#rate-limiting. cors: ORIGINAL incorrect; all endpoints are CORS-enabled: https://www.tvmaze.com/api#cors."
+}

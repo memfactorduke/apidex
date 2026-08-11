@@ -1,0 +1,38 @@
+{
+  "id": "forvo",
+  "status": "operational",
+  "name": "Forvo Pronunciation API",
+  "category": "education-reference",
+  "tagline": "Crowdsourced word pronunciations in many languages for language-learning apps.",
+  "description": "Forvo Pronunciation API provides access to crowdsourced audio pronunciations of words and phrases in many languages. It is designed for language-learning apps and other educational tools.",
+  "base_url": "https://apifree.forvo.com",
+  "docs_url": "https://api.forvo.com/documentation/word-pronunciations/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 req/day free",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET 'https://apifree.forvo.com/key/YOUR_API_KEY/format/json/action/word-pronunciations/word/hello/language/en'",
+    "response_snippet": "{\"items\":[{\"id\":1,\"word\":\"hello\",\"language\":\"en\",\"pathmp3\":\"https://...\",\"pathogg\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "get current weather for a city"
+  ],
+  "sources": [
+    "https://api.forvo.com/documentation/word-pronunciations/"
+  ],
+  "researcher_confidence": "high"
+}

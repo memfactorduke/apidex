@@ -1,0 +1,52 @@
+{
+  "id": "magicthegathering",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.scrydex.com/magicthegathering/v1",
+      "source": "https://scrydex.com/docs/magicthegathering/cards"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://scrydex.com/docs/magicthegathering/cards",
+      "source": "https://magicthegathering.io/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "api_key (X-Api-Key and X-Team-ID for normal access; unauthenticated requests receive heavily reduced limits)",
+      "source": "https://scrydex.com/docs/getting-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false; Scrydex lists no free plan",
+      "source": "https://scrydex.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No published free plan. Starter costs $29/month, includes 5,000 API credits, and charges $0.006 per overage credit.",
+      "source": "https://scrydex.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "100 requests per second, plus plan-based API-credit limits and paid overages",
+      "source": "https://scrydex.com/docs/getting-started/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl --request GET --url 'https://api.scrydex.com/magicthegathering/v1/cards?q=%21name%3A%22Lightning%20Bolt%22&pageSize=1' --header 'X-Api-Key: YOUR_API_KEY' --header 'X-Team-ID: YOUR_TEAM_ID'",
+      "source": "https://scrydex.com/docs/magicthegathering/cards"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The current official successor is Scrydex's paid, credentialed MTG API for card metadata, search, pricing, and related features. Its current documentation does not list the legacy standalone types, subtypes, supertypes, or formats endpoints, nor a multiverseid field.",
+      "source": "https://scrydex.com/docs/magicthegathering/cards"
+    }
+  },
+  "notes": "The official magicthegathering.io homepage says the API is now part of Scrydex. The legacy documentation remains online, but it describes the obsolete free v1 service. Current Scrydex documentation and pricing contradict the listed base URL, authentication, pricing, limits, example, and description."
+}

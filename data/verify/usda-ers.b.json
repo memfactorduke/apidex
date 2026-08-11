@@ -1,0 +1,52 @@
+{
+  "id": "usda-ers",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.data.gov/docs/developer-manual/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "api.data.gov documents a default registered-key limit of 1,000 requests per hour. Its current published DEMO_KEY limits are 30 requests per IP address per hour and 50 per IP address per day; no official ERS-specific limit of 10 was located.",
+      "source": "https://api.data.gov/docs/developer-manual/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.ers.usda.gov/developer/data-apis/arms-data-api"
+    }
+  },
+  "notes": "Current official ERS pages still advertise the ARMS API, its REST base URL, GraphQL endpoint, JSON data, and API-key registration; no shutdown or migration notice was found. The stated DEMO_KEY limit of 10 conflicts with current api.data.gov documentation. ERS-specific CORS behavior is not officially documented."
+}

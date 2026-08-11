@@ -1,0 +1,52 @@
+{
+  "id": "opensanctions",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/api/quickstart/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/api/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Business-email signups receive a 30-day API trial. Free API keys are also issued for qualifying public-interest work, including journalism, civil-society advocacy, and academic research. Each key has an account-specific monthly quota.",
+      "source": "https://www.opensanctions.org/docs/api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Trial and paid keys have monthly request quotas; exceeding a quota returns HTTP 429 until the next calendar month. The exact quota is shown in the API console and can be changed through support. OpenSanctions requests advance contact above 200,000 requests per hour or 2 million queries per month.",
+      "source": "https://www.opensanctions.org/docs/api/faq/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/api/search/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.opensanctions.org/docs/"
+    }
+  },
+  "notes": "The hosted API and documentation are live. Official sources confirm search, matching, entity retrieval, sanctions and PEP coverage, and separate bulk downloads. The entry understates published trial and quota information. No authoritative CORS policy was located."
+}

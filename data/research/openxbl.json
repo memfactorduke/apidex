@@ -1,0 +1,41 @@
+{
+  "id": "openxbl",
+  "status": "operational",
+  "name": "OpenXBL",
+  "category": "games-comics",
+  "tagline": "Self-serve Xbox Live profiles, presence, achievements, and friends API",
+  "description": "OpenXBL provides third-party developers with REST access to Xbox Live profile, presence, achievements, friends, and related social data via the xbl.io platform. It is a community/self-serve wrapper around Xbox Live services rather than Microsoft's official Xbox API, aimed at apps that need player identity and gaming activity without building full Xbox partner integrations.",
+  "base_url": "https://xbl.io/api/v2",
+  "docs_url": "https://xbl.io/docs",
+  "signup_url": "https://xbl.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Authorization header (self-serve signup at xbl.io); some endpoints may also accept Authorization"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://xbl.io/api/v2/account\" -H \"X-Authorization: YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"profileUsers\":[{\"id\":\"...\",\"settings\":[{\"id\":\"Gamertag\",\"value\":\"Example\"}]}]}"
+  },
+  "use_cases": [
+    "look up Xbox profile by gamertag or XUID",
+    "check a player's current presence or online status",
+    "list achievements for a title or player",
+    "fetch friends list and social graph",
+    "get recent games or activity for a player"
+  ],
+  "sources": [
+    "https://xbl.io/docs"
+  ],
+  "researcher_confidence": "low"
+}

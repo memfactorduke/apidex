@@ -1,0 +1,99 @@
+{
+  "id": "bybit",
+  "status": "operational",
+  "name": "Bybit API",
+  "category": "crypto",
+  "tagline": "Unified V5 REST and WebSocket API for Bybit spot, derivatives, and account data",
+  "description": "Bybit is a major crypto derivatives exchange offering a Unified Trading Account API (V5) for spot, linear/inverse perpetuals and futures, options, and account management. Developers use REST for market data, trading, and portfolio operations, plus WebSockets for real-time streams. Authentication uses HMAC or RSA API keys with signed requests. Public market endpoints are available without keys; private endpoints require self-serve API keys from the Bybit account.",
+  "base_url": "https://api.bybit.com",
+  "docs_url": "https://bybit-exchange.github.io/docs/v5/intro",
+  "signup_url": "https://www.bybit.com/app/user/api-management",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key + secret via X-BAPI-API-KEY, X-BAPI-SIGN (HMAC-SHA256 or RSA), X-BAPI-TIMESTAMP, X-BAPI-RECV-WINDOW headers; self-serve from account API management"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "API access included with account; no per-request fee; subject to rate limits by endpoint/IP/UID",
+    "paid_plans": "Trading fees apply to orders (maker/taker); no separate API subscription plans published"
+  },
+  "rate_limits": "Per-endpoint IP and UID limits (e.g. market data often 120\u2013600 req/5s; private endpoints lower); see docs rate-limit tables",
+  "example": {
+    "request": "curl -s 'https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT'",
+    "response_snippet": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"category\":\"spot\",\"list\":[{\"symbol\":\"BTCUSDT\",\"lastPrice\":\"64000.00\",\"bid1Price\":\"63999.50\",\"ask1Price\":\"64000.50\",\"volume24h\":\"12345.67\"}]},\"time\":1710000000000}"
+  },
+  "use_cases": [
+    "get real-time ticker and order book for a Bybit spot or perpetual symbol",
+    "place and cancel spot or linear perpetual orders via unified V5 API",
+    "fetch wallet balances and positions under Unified Trading Account",
+    "stream live trades and klines over Bybit WebSocket",
+    "query funding rates and open interest for perpetual contracts"
+  ],
+  "sources": [
+    "https://bybit-exchange.github.io/docs/v5/intro",
+    "https://bybit-exchange.github.io/docs/v5/guide",
+    "https://bybit-exchange.github.io/docs/v5/rate-limit",
+    "https://bybit-exchange.github.io/docs/v5/market/tickers",
+    "https://www.bybit.com"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

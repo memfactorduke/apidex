@@ -1,0 +1,47 @@
+{
+  "id": "iplocate",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://iplocate.io/api/",
+      "source": "https://www.iplocate.io/docs/ip-intelligence-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://www.iplocate.io/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://www.iplocate.io/docs/getting-started/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.iplocate.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "1,000 requests per day with a free API key; 50 requests per day per IP address without an API key",
+      "source": "https://www.iplocate.io/docs/getting-started/quota-rate-limits"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 100 requests per second from a single IP address, within plan quota",
+      "source": "https://www.iplocate.io/docs/getting-started/quota-rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "source": "https://www.iplocate.io/docs/getting-started/authentication"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://www.iplocate.io/docs/ip-intelligence-api"
+    }
+  },
+  "notes": "The API appears active, but the entry uses a noncanonical www base URL and omits currently published free-tier and per-second limits. Official docs confirm apikey query authentication, X-API-Key header authentication, and the lookup endpoint. No authoritative CORS policy was located."
+}

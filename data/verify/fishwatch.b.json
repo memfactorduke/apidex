@@ -1,0 +1,52 @@
+{
+  "id": "fishwatch",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.fishwatch.gov/api/species",
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.fishwatch.gov/developers"
+    }
+  },
+  "notes": "Base URL is wrong: docs and live API use https://www.fishwatch.gov/api/species (full species list path), not a bare /api root. Developers page still documents that public, unauthenticated JSON endpoint; no published rate limits or free-tier caps found."
+}

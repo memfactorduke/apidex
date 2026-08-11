@@ -1,0 +1,52 @@
+{
+  "id": "deps-dev",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.deps.dev/v3alpha",
+      "source": "https://docs.deps.dev/api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Quota: 100 queries per second (QPS) for the API",
+      "source": "https://docs.deps.dev/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.deps.dev/v3alpha/systems/npm/packages/react\"",
+      "source": "https://docs.deps.dev/api/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.deps.dev/api/"
+    }
+  },
+  "notes": "Base URL path is wrong: API uses /v3alpha not bare https://api.deps.dev or /v3. Rate limits are published (100 QPS). Example path version is incorrect. Docs and no-auth claims hold."
+}

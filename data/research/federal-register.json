@@ -1,0 +1,43 @@
+{
+  "id": "federal-register",
+  "status": "operational",
+  "name": "Federal Register API",
+  "category": "government-open-data",
+  "tagline": "Structured JSON access to official US Federal Register documents, rules, and notices.",
+  "description": "Official REST API for the US Federal Register (federalregister.gov). Search and retrieve rules, proposed rules, notices, presidential documents, and public inspection items as structured JSON, including metadata, full text, and agency information. No authentication required for public read access; designed for government transparency and regulatory monitoring.",
+  "base_url": "https://www.federalregister.gov/api/v1",
+  "docs_url": "https://www.federalregister.gov/developers/documentation/api/v1",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or authentication required for public read endpoints. Requests are made over HTTPS without credentials."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; no paid plans. Fair-use rate limiting may apply (limits not formally published as a free-tier quota).",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://www.federalregister.gov/api/v1/documents.json?per_page=1&order=newest\"",
+    "response_snippet": "{\"count\":10000,\"description\":\"Documents published in the Federal Register\",\"total_pages\":10000,\"next_page_url\":\"https://www.federalregister.gov/api/v1/documents.json?page=2&per_page=1&order=newest\",\"results\":[{\"title\":\"...\",\"type\":\"Rule\",\"abstract\":\"...\",\"document_number\":\"2024-00001\",\"html_url\":\"https://www.federalregister.gov/d/...\",\"pdf_url\":\"https://www.govinfo.gov/...\",\"publication_date\":\"2024-01-02\",\"agencies\":[{\"name\":\"...\",\"id\":...}],\"excerpts\":\"...\"}]}"
+  },
+  "use_cases": [
+    "search Federal Register documents by keyword, agency, or date",
+    "fetch full text and metadata for a specific FR document number",
+    "list recent rules and proposed rules for regulatory monitoring",
+    "retrieve public inspection documents before official publication",
+    "get agency-specific notices and presidential documents"
+  ],
+  "sources": [
+    "https://www.federalregister.gov/developers/documentation/api/v1",
+    "https://www.federalregister.gov/developers",
+    "https://www.federalregister.gov/api/v1/documents.json?per_page=1&order=newest"
+  ],
+  "researcher_confidence": "medium"
+}

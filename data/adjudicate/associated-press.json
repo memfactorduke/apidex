@@ -1,0 +1,15 @@
+{
+  "id": "associated-press",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sG \"https://api.ap.org/media/v/content/search\" -H \"x-api-key: YOUR_API_KEY\" --data-urlencode \"q=elections\" --data-urlencode \"page_size=5\"",
+  "example_response_snippet": "{\n  \"api_version\": \"2.2\",\n  \"api_mode\": \"live\",\n  \"method\": \"/content/search.GET\",\n  \"params\": { \"q\": \"elections\", \"page_size\": 5 },\n  \"data\": {\n    \"query\": \"elections\",\n    \"current_page\": 1,\n    \"page_size\": 5,\n    \"items\": [\n      {\n        \"meta\": { \"score\": 42.1 },\n        \"item\": {\n          \"altids\": { \"itemid\": \"...\", \"etag\": \"...\" },\n          \"type\": \"text\",\n          \"versioncreated\": \"2026-08-11T12:00:00Z\",\n          \"headline\": \"...\"\n        }\n      }\n    ]\n  }\n}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: KEEP ORIGINAL. AP's current Swagger declares host api.ap.org and basePath /media/v; Search documents https://api.ap.org/media/v[{version}]/content/search and says version is optional. https://api.ap.org/media/v/swagger/ ; https://api.ap.org/media/v/docs/Search.htm example: CORRECTED RESPONSE SHAPE. The official Search page confirms /media/v/content/search, q, page_size, and x-api-key, while its sample places type and other content metadata inside item, not beside item. https://api.ap.org/media/v/docs/Search.htm"
+}

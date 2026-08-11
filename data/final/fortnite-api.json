@@ -1,0 +1,96 @@
+{
+  "id": "fortnite-api",
+  "status": "operational",
+  "name": "Fortnite-API",
+  "category": "games-comics",
+  "tagline": "Unofficial Fortnite cosmetics, shop, stats, and news endpoints for bots and tools",
+  "description": "Community-run Fortnite data API providing cosmetics, item shop, player stats, news, and map data commonly used by Discord bots and third-party trackers. Not affiliated with Epic Games.",
+  "base_url": "https://fortnite-api.com",
+  "docs_url": "https://dash.fortnite-api.com/",
+  "signup_url": "https://dash.fortnite-api.com/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header (Bearer) or query param; free keys via dashboard signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://fortnite-api.com/v2/cosmetics/br/new'",
+    "response_snippet": "{\"status\":200,\"data\":{\"build\":\"...\",\"date\":\"...\",\"items\":[...]}}"
+  },
+  "use_cases": [
+    "get current Fortnite item shop",
+    "look up cosmetic by name or ID",
+    "fetch player stats by username",
+    "get Fortnite news feed",
+    "list new cosmetics for a season"
+  ],
+  "sources": [
+    "https://fortnite-api.com",
+    "https://dash.fortnite-api.com/endpoints"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url"
+    ],
+    "unverifiable": []
+  }
+}

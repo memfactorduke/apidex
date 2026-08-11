@@ -1,0 +1,42 @@
+{
+  "id": "rightmove",
+  "status": "operational",
+  "name": "Rightmove API",
+  "category": "real-estate-housing",
+  "tagline": "UK property portal partner APIs for listings, branches, and property data.",
+  "description": "Rightmove is the UK's largest property portal. It offers partner-facing APIs (including property data export and branch/listing integrations) for approved estate agents, developers, and data partners rather than open self-serve public access. Access, endpoints, and commercial terms are typically arranged through Rightmove partnerships; public marketing pages do not document a fully open developer API.",
+  "base_url": "https://api.rightmove.co.uk",
+  "docs_url": "https://www.rightmove.co.uk/api.html",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Partner/commercial access only; not self-serve. Exact auth mechanism (API key, certificates, or other) is provided under partner agreement and is not fully documented on public pages."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Commercial/partner pricing; not published publicly"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://api.rightmove.co.uk/\" -H \"Accept: application/json\"",
+    "response_snippet": "Partner-only API; public sample responses not available on marketing pages."
+  },
+  "use_cases": [
+    "export UK property listing data as a Rightmove partner",
+    "sync estate agent branch details with Rightmove",
+    "ingest Rightmove property feed for internal CRM or analytics",
+    "integrate agent property stock with Rightmove portal listings"
+  ],
+  "sources": [
+    "https://www.rightmove.co.uk/api.html",
+    "https://api.rightmove.co.uk"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "ofac-sanctions",
+  "status": "operational",
+  "name": "OFAC Sanctions List Search",
+  "category": "legal-compliance",
+  "tagline": "US Treasury OFAC SDN and consolidated sanctions data via official download/API services.",
+  "description": "US Treasury OFAC SDN and consolidated sanctions data via official download/API services.",
+  "base_url": "https://sanctionslistservice.ofac.treas.gov",
+  "docs_url": "https://ofac.treasury.gov/faqs/topic/1636",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public sanctions list search/download endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "search SDN list for a name",
+    "download consolidated sanctions data"
+  ],
+  "sources": [
+    "https://ofac.treasury.gov/faqs/topic/1636"
+  ],
+  "researcher_confidence": "low"
+}

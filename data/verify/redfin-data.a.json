@@ -1,0 +1,52 @@
+{
+  "id": "redfin-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No documented public API base URL; use the download hub at https://www.redfin.com/news/data-center/downloads/",
+      "source": "https://www.redfin.com/news/data-center/downloads/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.redfin.com/news/data-center/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.redfin.com/news/data-center/downloads/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Current official documentation provides an interactive flow that downloads filtered CSV data; it does not document the old city_market_tracker.tsv000.gz curl endpoint.",
+      "source": "https://www.redfin.com/news/data-center/downloads/"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The official 2026 hub confirms downloadable housing metrics across national, metro, state, county, city, ZIP-code, and neighborhood geographies. It documents filtered CSV downloads, not a REST API or JSON. No official pricing, quota, or CORS statements were found."
+}

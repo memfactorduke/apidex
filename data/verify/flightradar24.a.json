@@ -1,0 +1,52 @@
+{
+  "id": "flightradar24",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fr24api.flightradar24.com/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fr24api.flightradar24.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fr24api.flightradar24.com/docs/overview/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fr24api.flightradar24.com/docs/overview/subscription-plans"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fr24api.flightradar24.com/docs/overview/subscription-plans"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fr24api.flightradar24.com/docs/overview/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fr24api.flightradar24.com/docs/endpoints/live-flight-positions"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fr24api.flightradar24.com/docs"
+    }
+  },
+  "notes": "Verified against official FR24 API docs. Commercial API, apiKey auth, no free tier, rate limits documented as plan-based, example path matches live positions endpoint."
+}

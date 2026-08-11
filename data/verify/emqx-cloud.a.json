@@ -1,0 +1,52 @@
+{
+  "id": "emqx-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.emqx.com (or deployment-specific Host/App ID URLs; no public evidence of fixed /v2 root)",
+      "source": "https://docs.emqx.com/en/cloud/latest/api/api_overview.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.emqx.com/en/cloud/latest/api/api_overview.html"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "appIdAppSecret (Basic Auth: App ID as username, App Secret as password) \u2014 not X-Api-Key",
+      "source": "https://docs.emqx.com/en/cloud/latest/api/api_overview.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.emqx.com/en/cloud"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free trial / free tier is deployment-based (e.g. Serverless free trial or limited connections/sessions), not \"1,000 req/day free\" for HTTP API",
+      "source": "https://www.emqx.com/en/cloud"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use Basic Auth with App ID/Secret against documented Cloud API hosts/paths (e.g. deployment APIs), not GET https://api.emqx.com/v2/auth with X-Api-Key",
+      "source": "https://docs.emqx.com/en/cloud/latest/api/api_overview.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.emqx.com/en/cloud/latest/api/api_overview.html"
+    }
+  },
+  "notes": "Docs URL is live. Auth is App ID + Secret via Basic Auth, not X-Api-Key. base_url /v2 and example /auth + free \"1,000 req/day\" appear hallucinated. Use cases are weather (wrong product). overall fail."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "dice-fm",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://partners-api.dice.fm",
+      "source": "https://partners.dice.fm/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://partners.dice.fm/docs",
+      "source": "https://partners.dice.fm/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://partners.dice.fm/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://partners-api.dice.fm/events\"",
+      "source": "https://partners.dice.fm/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://partners.dice.fm/"
+    }
+  },
+  "notes": "Automated checks already flagged base_url (404) and docs_url (HTTP 0). Base URL and docs path need correction; example inherits wrong host."
+}

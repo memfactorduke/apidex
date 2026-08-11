@@ -1,0 +1,52 @@
+{
+  "id": "bnb-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931 (dataset page; live SPARQL host may be offline)",
+      "source": "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Do not use live SPARQL curl against bnb.data.bl.uk; endpoint appears unreachable (HTTP 0). Prefer dataset/download guidance on IRO page.",
+      "source": "https://bnb.data.bl.uk"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931"
+    }
+  },
+  "notes": "Automated checks: base_url dead (HTTP 0), docs_url 403 from bots. Description/auth/free tier match open BNB Linked Data heritage product; live SPARQL host not confirmed operational in 2026."
+}

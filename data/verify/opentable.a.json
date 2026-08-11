@@ -1,0 +1,51 @@
+{
+  "id": "opentable",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://docs.opentable.com/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.opentable.com/",
+      "source": "https://www.opentable.com/restaurant-solutions/api-partners/terms-and-conditions/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "oauth2",
+      "source": "https://docs.opentable.com/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": "Pricing and availability are disclosed during approval and contracting; no public free-tier determination was found.",
+      "source": "https://docs.opentable.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.opentable.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Online Booking APIs allow 1,000 requests per rolling 30-second window; other APIs may have different limits.",
+      "source": "https://docs.opentable.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -sS \"https://platform.opentable.com/sync/v2/reservations?rid={rid}\" -H \"Authorization: Bearer {access_token}\" -H \"Accept: application/json\"",
+      "source": "https://docs.opentable.com/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OpenTable provides approved partners with APIs for restaurant directory data, availability, booking, and reservation and guest integrations. Production access requires approval and a formal agreement, and OAuth 2.0 is the primary authorization mechanism. Current public documentation is at https://docs.opentable.com/.",
+      "source": "https://docs.opentable.com/"
+    }
+  },
+  "notes": "The API is active and the production resource host is documented, but the entry mistakes that host for the documentation portal. Pricing is contract-disclosed, so the absence of a free tier cannot be verified publicly. The fabricated root-path example is not a documented authenticated API call."
+}

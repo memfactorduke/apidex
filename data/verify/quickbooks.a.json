@@ -1,0 +1,52 @@
+{
+  "id": "quickbooks",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.intuit.com/app/developer/qbo/docs/develop/sdks-and-samples-collections/net/configuration"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/invoice"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://static.developer.intuit.com/resources/Intuit_App_Partner_Program_Guide.pdf"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Builder tier has no monthly program fee, uncapped Core API calls, and up to 500,000 CorePlus API calls per workspace per month; additional CorePlus calls are blocked.",
+      "source": "https://static.developer.intuit.com/resources/Intuit_App_Partner_Program_Guide.pdf"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published REST limits include 500 requests per minute per realm ID and 10 requests per second per realm ID and app. Batch requests are limited to 40 per minute per realm ID and app and 120 per minute per realm ID.",
+      "source": "https://developer.intuit.com/app/developer/qbo/docs/learn/limits-and-throttles"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.intuit.com/app/developer/qbo/docs/learn/rest-api-features"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "The API, production host, OAuth flow, invoice read route, and JSON request conventions are documented and current. The entry fails because Intuit now publishes both pricing-tier allowances and throttling limits. CORS was not documented. The functional description is supported, but the claim that this is the dominant US SMB accounting platform API was not established by authoritative API documentation."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "solcast",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://docs.solcast.com.au/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://docs.solcast.com.au/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://docs.solcast.com.au/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://docs.solcast.com.au/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free access is segmented: commercial evaluation currently includes up to 15 Historic Time Series and 10 Live and Forecast requests at the user's locations, plus unlimited requests at unmetered locations. Separate home-hobbyist and researcher programs have different limits.",
+      "source": "https://solcast.com/pricing/energy-data"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are plan- and product-specific, are displayed in the Solcast API Toolkit, and return HTTP 429 when exceeded.",
+      "source": "https://docs.solcast.com.au/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.solcast.com.au/data/live/radiation_and_weather?latitude=-33.856784&longitude=151.215297&hours=1&format=json&api_key=YOUR_API_KEY\"",
+      "source": "https://docs.solcast.com.au/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://docs.solcast.com.au/"
+    }
+  },
+  "notes": "The API and legacy World API are operational, but the example uses the legacy /world_radiation/estimated_actuals path rather than the endpoint in the current reference. It also requests no JSON format while showing a JSON response. Current free allowances are published and vary by program."
+}

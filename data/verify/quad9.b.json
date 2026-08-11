@@ -1,0 +1,52 @@
+{
+  "id": "quad9",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.quad9.net/services/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quad9.net/support/faq/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quad9.net/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://quad9.net/support/faq/"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.quad9.net/Quad9_For_Organizations/DNS_Forwarder_Best_Practices/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://docs.quad9.net/Quad9_For_Organizations/DNS_Forwarder_Best_Practices/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use standards-based RFC 8484 DoH on port 443 with HTTP/2 or HTTP/3 and application/dns-message wire format. The application/dns-json service on port 5053 was retired on May 5, 2025.",
+      "source": "https://quad9.net/news/blog/quad9-json-based-dns-service-retires-5-may-2025/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.quad9.net/"
+    }
+  },
+  "notes": "Quad9 remains operational, but the example and advertised JSON format are obsolete: the port-5053 JSON service retired in 2025. Current DoH uses port 443 and requires HTTP/2 or newer. Quad9 publishes contact guidance above 500 queries/second or 5,000 users, but no explicit enforced quota was located. CORS behavior was not documented."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "eppo-global-database",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://gd.eppo.int/api",
+      "source": "https://gd.eppo.int/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://gd.eppo.int/documentation",
+      "source": "https://gd.eppo.int/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gd.eppo.int/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gd.eppo.int/documentation"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gd.eppo.int/documentation"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gd.eppo.int/documentation"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gd.eppo.int/documentation"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://gd.eppo.int/api/rest/1.0/taxon/search?keyword=Xylella\"",
+      "source": "https://gd.eppo.int/documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gd.eppo.int/documentation"
+    }
+  },
+  "notes": "Automated checks returned 404s for data.eppo.int; official host is gd.eppo.int. Auth is API key (Bearer). Free tier exists; limits and rate limits not clearly published. Example path/params wrong for current API."
+}

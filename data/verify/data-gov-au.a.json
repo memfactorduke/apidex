@@ -1,0 +1,52 @@
+{
+  "id": "data-gov-au",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.au/data/api/3"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.au/data/api/3"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.au/data/api/3"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.au/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.au/data/api/3"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.au/data/api/3"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.au/data/api/3/action/package_search"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://data.gov.au/data/api/3"
+    }
+  },
+  "notes": "Verified against live CKAN Action API docs and package_search endpoint (2026). Base/docs URLs work; public reads need no auth; free open data with unpublished free-tier and rate limits; CORS unknown; example curl matches package_search."
+}

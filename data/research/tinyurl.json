@@ -1,0 +1,40 @@
+{
+  "id": "tinyurl",
+  "status": "operational",
+  "name": "TinyURL",
+  "category": "utilities",
+  "tagline": "Classic URL shortener with a modern developer API for create/update/analytics.",
+  "description": "TinyURL provides a developer API for creating, updating, and analyzing shortened URLs. It offers a free tier with limits and paid plans for higher usage. The API supports JSON responses and is designed for integration into applications requiring URL shortening services.",
+  "base_url": "https://api.tinyurl.com",
+  "docs_url": "https://tinyurl.com/app/dev",
+  "signup_url": "https://tinyurl.com/app/dev",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": "unknown"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://api.tinyurl.com/create -H \"Authorization: Bearer YOUR_API_KEY\" -H \"Content-Type: application/json\" -d '{\"url\": \"https://example.com\", \"domain\": \"tinyurl.com\"}'",
+    "response_snippet": "{\"data\": {\"url\": \"https://tinyurl.com/abc123\", \"domain\": \"tinyurl.com\", \"alias\": \"abc123\", \"tags\": [], \"stats\": {\"clicks\": 0}}}"
+  },
+  "use_cases": [
+    "shorten a long URL",
+    "update an existing short URL",
+    "get analytics for a short URL",
+    "bulk create short URLs"
+  ],
+  "sources": [
+    "https://tinyurl.com/app/dev"
+  ],
+  "researcher_confidence": "low"
+}

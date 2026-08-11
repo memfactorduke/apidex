@@ -1,0 +1,96 @@
+{
+  "id": "ai21-labs",
+  "status": "operational",
+  "name": "AI21 Labs",
+  "category": "ai-ml",
+  "tagline": "Jamba and Jurassic foundation models for chat, completion, and RAG",
+  "description": "AI21 Labs provides API access to large language models including the Jamba family for chat and completion, plus document and RAG-oriented helpers. Developers authenticate with an API key and call HTTPS endpoints under api.ai21.com for text generation, chat, and related AI workloads.",
+  "base_url": "https://api.ai21.com",
+  "docs_url": "https://docs.ai21.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and signup flow to be verified from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "New accounts receive $10 in trial credit valid for three months, usable for the AI21 APIs, SDK, and playground.",
+    "paid_plans": null
+  },
+  "rate_limits": "Jamba Large: 10 RPS and 200 RPM. Jamba Mini: 10 RPS and 200 RPM.",
+  "example": {
+    "request": "curl https://api.ai21.com/studio/v1/chat/completions --header \"Authorization: Bearer $AI21_API_KEY\" --header \"Content-Type: application/json\" --data '{\"model\":\"jamba-large\",\"max_tokens\":1024,\"messages\":[{\"role\":\"user\",\"content\":\"Hello, how are you?\"}]}'",
+    "response_snippet": "{\"id\":\"chatcmpl_example\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello! I'm doing well. How can I help you today?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":9,\"completion_tokens\":13,\"total_tokens\":22}}"
+  },
+  "use_cases": [
+    "generate chat completions with Jamba models",
+    "run text completion and summarization",
+    "build RAG helpers with document understanding"
+  ],
+  "sources": [
+    "https://docs.ai21.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "cors",
+      "description"
+    ],
+    "corrected": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

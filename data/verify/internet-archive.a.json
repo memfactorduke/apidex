@@ -1,0 +1,52 @@
+{
+  "id": "internet-archive",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://archive.org/developers/md-read.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://archive.org/developers/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "mixed: most public reads require no authentication, while protected reads and all metadata writes require IA-S3 keys or archive.org login cookies; uploads use IA-S3 keys",
+      "source": "https://archive.org/developers/metadata.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://archive.org/developers/tutorial-get-ia-credentials.html"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No general numeric quota is stated. Automated clients must add delays for bulk operations and honor 429 responses and Retry-After headers.",
+      "source": "https://archive.org/developers/bots.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s -H 'User-Agent: MyTool/1.0' 'https://archive.org/metadata/goodytwoshoes00newyiala'",
+      "source": "https://archive.org/developers/bots.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://archive.org/developers/index-apis.html"
+    }
+  },
+  "notes": "The first-party APIs and documentation are live. Authentication is mixed rather than simply none. The metadata path is valid, but current guidance requires a descriptive User-Agent on every automated request. Official documentation provides qualitative throttling rules but no general numeric quota. No authoritative API pricing-plan or CORS statement was found."
+}

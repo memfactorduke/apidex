@@ -1,0 +1,99 @@
+{
+  "id": "google-ct-log-list",
+  "status": "operational",
+  "name": "Google CT Log List",
+  "category": "security-identity",
+  "tagline": "Google-maintained list of trusted Certificate Transparency logs for TLS tooling.",
+  "description": "JSON distribution of Google's Certificate Transparency log list, used by browsers and TLS tooling to discover, trust, and monitor CT logs. Served as a static public file from gstatic with no authentication.",
+  "base_url": "https://www.gstatic.com/ct/log_list/v3/log_list.json",
+  "docs_url": "https://googlechrome.github.io/CertificateTransparency/log_lists.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public static JSON over HTTPS."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unlimited public static file (no signup)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sS \"https://www.gstatic.com/ct/log_list/v3/log_list.json\"",
+    "response_snippet": "{\n  \"version\": \"34.0\",\n  \"log_list_timestamp\": \"2025-01-15T12:00:00Z\",\n  \"operators\": [{\n    \"name\": \"Google\",\n    \"email\": [\"google-ct-logs@googlegroups.com\"],\n    \"logs\": [{\n      \"description\": \"Google 'Argon2025h1' log\",\n      \"log_id\": \"...\",\n      \"key\": \"...\",\n      \"url\": \"https://ct.googleapis.com/logs/us1/argon2025h1/\",\n      \"mmd\": 86400,\n      \"state\": { \"usable\": { \"timestamp\": \"...\" } },\n      \"temporal_interval\": { \"start_inclusive\": \"2025-01-01T00:00:00Z\", \"end_exclusive\": \"2025-07-01T00:00:00Z\" }\n    }]\n  }]\n}"
+  },
+  "use_cases": [
+    "fetch the current list of trusted Certificate Transparency logs",
+    "discover CT log endpoints and public keys for a TLS monitor",
+    "check which logs are usable, qualified, or retired",
+    "validate log list schema version for CT client configuration",
+    "monitor log list updates for certificate transparency tooling"
+  ],
+  "sources": [
+    "https://googlechrome.github.io/CertificateTransparency/log_list.html",
+    "https://www.gstatic.com/ct/log_list/v3/log_list.json",
+    "https://github.com/google/certificate-transparency-community-site"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url"
+    ],
+    "unverifiable": []
+  }
+}

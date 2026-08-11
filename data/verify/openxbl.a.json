@@ -1,0 +1,52 @@
+{
+  "id": "openxbl",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.xbl.io/api/v2",
+      "source": "https://xbl.io/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://xbl.io/console",
+      "source": "https://xbl.io/console"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://raw.githubusercontent.com/OpenXBL/Docs/main/openapi.yaml"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://xbl.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "150 requests per hour",
+      "source": "https://xbl.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published hourly limits: Free 150, Small 500, Medium 2,500, Large 5,000, and custom Enterprise. Limits reset hourly and excess requests return HTTP 429; separate Microsoft throttling also applies.",
+      "source": "https://xbl.io/pricing"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported",
+      "source": "https://xbl.io/getting-started"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://api.xbl.io/api/v2/account\" -H \"X-Authorization: YOUR_API_KEY\" -H \"Accept: application/json\"",
+      "source": "https://xbl.io/blog/getting-started-xbox-live-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://xbl.io/about"
+    }
+  },
+  "notes": "The API remains documented and marketed as active, but the entry uses the obsolete API host and a failing docs URL. Current official pages use api.xbl.io, publish plan-specific limits, and state that CORS is supported. The official OpenAPI schema identifies x-authorization as an API-key header."
+}

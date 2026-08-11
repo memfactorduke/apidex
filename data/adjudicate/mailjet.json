@@ -1,0 +1,15 @@
+{
+  "id": "mailjet",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "6,000 emails per month, maximum 200 emails per day, and up to 1,000 contacts.",
+  "rate_limits": "API calls are limited per API key per second; universal numeric thresholds are not published. Exceeding a limit returns HTTP 429. Transactional APIs have higher limits than other Email and SMS APIs.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Mailjet provides REST APIs for sending transactional and marketing email, managing contacts, lists, and templates, and retrieving statistics and events. Email API v3/v3.1 uses HTTPS Basic Auth with an API key and secret; SMS API v4 uses Bearer-token authentication. Its email infrastructure is GDPR-compliant and EU-hosted.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: corrected; current Free plan states 6,000/month, 200/day, 1,000 contacts: https://www.mailjet.com/pricing/. rate_limits: corrected; limits apply per API key per second and return 429, without universal numeric thresholds: https://dev.mailjet.com/email/reference/overview/rate-limits/. description: corrected to distinguish Email Basic Auth from SMS Bearer auth: https://dev.mailjet.com/sms/reference/overview/authentication/. Status remains operational: https://status.mailjet.com/."
+}

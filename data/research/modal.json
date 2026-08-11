@@ -1,0 +1,43 @@
+{
+  "id": "modal",
+  "status": "operational",
+  "name": "Modal",
+  "category": "ai-ml",
+  "tagline": "Serverless GPUs and containerized compute with HTTP web endpoints for model inference and jobs.",
+  "description": "Modal is a serverless cloud platform for running Python/containerized workloads on CPUs and GPUs. Developers define functions and web endpoints in code; Modal deploys them and exposes HTTPS endpoints for inference, batch jobs, and scheduled work. Auth is via tokens for the control plane and optional custom auth for user web endpoints. Pricing is usage-based with free credits for new accounts.",
+  "base_url": "https://api.modal.com",
+  "docs_url": "https://modal.com/docs",
+  "signup_url": "https://modal.com/signup",
+  "auth": {
+    "type": "other",
+    "details": "Control plane: Modal token ID/secret (modal token new / MODAL_TOKEN_ID + MODAL_TOKEN_SECRET). Deployed web endpoints: public by default unless @modal.web_endpoint(requires_proxy_auth=True) or custom auth; proxy auth uses Modal-Key and Modal-Secret headers."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "$30/month free compute credits for new users (confirm on pricing page); usage billed after credits",
+    "paid_plans": "Pay-as-you-go GPU/CPU/memory/storage; enterprise available"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://YOUR_WORKSPACE--my-app-web.modal.run -H 'Content-Type: application/json' -d '{\"prompt\":\"hello\"}'",
+    "response_snippet": "{\"result\": \"...\"}"
+  },
+  "use_cases": [
+    "deploy a FastAPI/Flask inference endpoint on GPU",
+    "run serverless batch jobs on A100/H100",
+    "schedule recurring Python data/ML pipelines",
+    "serve a private model via HTTPS with proxy auth",
+    "scale image generation or LLM inference without managing clusters"
+  ],
+  "sources": [
+    "https://modal.com/docs",
+    "https://modal.com/pricing"
+  ],
+  "researcher_confidence": "low"
+}

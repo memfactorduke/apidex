@@ -1,0 +1,15 @@
+{
+  "id": "steamspy",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Free public access; limited to 1 request per second generally and 1 request per 60 seconds for request=all.",
+  "rate_limits": "1 request per second generally; request=all is limited to 1 request per 60 seconds and returns 1,000 games per page.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "SteamSpy provides public API access to estimated Steam game ownership ranges, player counts, playtime, concurrent users, prices, tags, genres, and related metrics without authentication. Its figures are estimates based on sampled Steam profiles. \u201cOwned\u201d does not mean \u201csold\u201d: ownership can include retail activations, bundles, gifts, promotions, and free weekends.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: CORRECTED; the official API page publishes 1 request/second generally and 1 request/60 seconds for request=all: https://steamspy.com/api.php. rate_limits: CORRECTED; the same page states those limits and that request=all returns 1,000 games per page. description: CORRECTED; SteamSpy says owned does not mean sold and includes retail activations, bundles, gifts, promotions, and free weekends: https://steamspy.com/about."
+}

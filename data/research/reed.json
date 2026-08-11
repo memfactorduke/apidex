@@ -1,0 +1,42 @@
+{
+  "id": "reed",
+  "status": "operational",
+  "name": "Reed.co.uk Jobs API",
+  "category": "jobs-careers",
+  "tagline": "Free public UK job search API from Reed's major job board.",
+  "description": "Reed.co.uk provides a free public REST API for searching UK job listings, retrieving job details, and accessing employer/recruiter data. Developers can query by keywords, location, salary, and other filters using HTTP Basic authentication with an API key. Ideal for job aggregators, career tools, and UK employment market analysis.",
+  "base_url": "https://www.reed.co.uk/api/1.0",
+  "docs_url": "https://www.reed.co.uk/developers",
+  "signup_url": "https://www.reed.co.uk/developers",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic Auth (key as username, empty password). Self-serve signup at developers page."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free API key with no published request quota on the developers page",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u \"YOUR_API_KEY:\" \"https://www.reed.co.uk/api/1.0/search?keywords=software%20engineer&locationName=London&resultsToTake=5\"",
+    "response_snippet": "{\"totalResults\":1234,\"results\":[{\"jobId\":123456,\"employerId\":789,\"employerName\":\"Example Ltd\",\"jobTitle\":\"Software Engineer\",\"locationName\":\"London\",\"minimumSalary\":45000,\"maximumSalary\":65000,\"currency\":\"GBP\",\"expirationDate\":\"31/12/2026\",\"date\":\"01/08/2026\",\"jobDescription\":\"...\",\"applications\":12,\"jobUrl\":\"https://www.reed.co.uk/jobs/...\"}]}"
+  },
+  "use_cases": [
+    "search UK job listings by keyword and location",
+    "get details for a specific job posting by ID",
+    "filter jobs by salary range and permanent/contract type",
+    "build a UK job aggregator or career board integration",
+    "analyze hiring trends from public Reed job data"
+  ],
+  "sources": [
+    "https://www.reed.co.uk/developers",
+    "https://www.reed.co.uk/api"
+  ],
+  "researcher_confidence": "medium"
+}

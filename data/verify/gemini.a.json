@@ -1,0 +1,52 @@
+{
+  "id": "gemini",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gemini.com/rest-api/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gemini.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gemini.com/rest-api/#private-api-invocation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gemini.com/fees/api-fee-schedule"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gemini.com/fees/api-fee-schedule"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Public market data: 120 requests/minute; private endpoints vary by type (e.g. orders 600/min, other private 60\u2013120/min depending on endpoint); documented per-endpoint in rate limits section",
+      "source": "https://docs.gemini.com/rest-api/#rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gemini.com/rest-api/#ticker"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gemini.com/rest-api/"
+    }
+  },
+  "notes": "Verified against official Gemini docs. Base URL, auth (HMAC-SHA384 headers), ticker path, and fee model hold. Rate-limit claim is directionally right but imprecise vs docs. CORS not documented."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "google-cloud-video-intelligence",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/video-intelligence/docs/reference/rest"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/video-intelligence/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/video-intelligence/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/video-intelligence/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/video-intelligence/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/video-intelligence/quotas"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use OAuth2 Bearer access token (not YOUR_API_KEY); endpoint path videos:annotate is correct",
+      "source": "https://cloud.google.com/video-intelligence/docs/analyze-labels"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.google.com/video-intelligence/docs"
+    }
+  },
+  "notes": "Auth example mislabels Bearer token as API key; free tier and base URL match official docs as of verification."
+}

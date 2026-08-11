@@ -1,0 +1,97 @@
+{
+  "id": "greenhouse",
+  "status": "operational",
+  "name": "Greenhouse Job Board",
+  "category": "jobs-careers",
+  "tagline": "Public job board API for careers pages and open roles",
+  "description": "Greenhouse Job Board provides public, unauthenticated GET endpoints for job-board data, including jobs, offices, departments, and application fields. It also provides a POST endpoint for submitting applications, which requires HTTP Basic Authentication using a Job Board API key.",
+  "base_url": "https://boards-api.greenhouse.io/v1",
+  "docs_url": "https://developers.greenhouse.io/job-board.html",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Public Job Board API requires no API key for standard board endpoints; access is by board token in the path (e.g. /v1/boards/{board_token}/jobs). Some write/application flows may differ\u2014verify docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://boards-api.greenhouse.io/v1/boards/example/jobs\"",
+    "response_snippet": "{\"jobs\":[{\"id\":123,\"title\":\"Software Engineer\",\"location\":{\"name\":\"Remote\"},\"absolute_url\":\"https://boards.greenhouse.io/example/jobs/123\"}]}"
+  },
+  "use_cases": [
+    "list open jobs for a company's Greenhouse board",
+    "fetch full job description and location by job id",
+    "get departments and offices for a careers page",
+    "read application form fields for a job",
+    "submit a job application to a Greenhouse board"
+  ],
+  "sources": [
+    "https://developers.greenhouse.io/job-board.html"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "example"
+    ],
+    "corrected": [
+      "auth_type",
+      "description"
+    ],
+    "unverifiable": [
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

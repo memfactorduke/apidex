@@ -1,0 +1,52 @@
+{
+  "id": "gitea",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://gitea.com/api/swagger"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.gitea.com/api/next/ (current docs; versioned 1.22 path may 404 or be stale\u2014docs use /api/next/ and version-specific paths that change with releases)",
+      "source": "https://docs.gitea.com/api/next/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitea.com/development/api-usage"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/go-gitea/gitea"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/go-gitea/gitea"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default API rate limit is typically controlled by MAX_API_REQUESTS_PER_HOUR (default 1000 requests per hour in app.ini, not 20/minute). Older docs or different settings may vary; confirm in instance config / official config cheat sheet.",
+      "source": "https://docs.gitea.com/administration/config-cheat-sheet"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitea.com/api/next/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gitea.com/"
+    }
+  },
+  "notes": "docs_url points at frozen 1.22 docs; rate limit claim of 20/min does not match documented MAX_API_REQUESTS_PER_HOUR default (1000/hour)."
+}

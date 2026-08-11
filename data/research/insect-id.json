@@ -1,0 +1,40 @@
+{
+  "id": "insect-id",
+  "status": "operational",
+  "name": "Kindwise Insect.id",
+  "category": "agriculture",
+  "tagline": "Image-based insect and pest identification for IPM and farm apps.",
+  "description": "Kindwise Insect.id is a computer-vision API that identifies insects and pests from photos. It is used for integrated pest management (IPM), agricultural scouting, and livestock-adjacent pest monitoring apps that need species-level suggestions, confidence scores, and related metadata from uploaded images.",
+  "base_url": "https://insect.kindwise.com/api/v1",
+  "docs_url": "https://insect.id/docs",
+  "signup_url": "https://insect.id/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Api-Key header; self-serve signup on Kindwise / Insect.id portal."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST \"https://insect.kindwise.com/api/v1/identification\" -H \"Api-Key: YOUR_API_KEY\" -H \"Content-Type: multipart/form-data\" -F \"images=@insect.jpg\"",
+    "response_snippet": "{\"access_token\":\"...\",\"result\":{\"classification\":{\"suggestions\":[{\"name\":\"...\",\"probability\":0.9}]}}}"
+  },
+  "use_cases": [
+    "identify an insect species from a photo",
+    "score pest ID confidence for IPM scouting",
+    "batch-check farm pest images for species labels",
+    "power livestock pest monitoring from phone photos"
+  ],
+  "sources": [
+    "https://insect.id/docs"
+  ],
+  "researcher_confidence": "low"
+}

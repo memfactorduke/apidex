@@ -1,0 +1,41 @@
+{
+  "id": "arbeitnow",
+  "status": "operational",
+  "name": "Arbeitnow",
+  "category": "jobs-careers",
+  "tagline": "Free no-auth job board API with remote and visa-sponsorship filters",
+  "description": "Arbeitnow provides a free, no-authentication public API for job board listings, supporting filters for remote work and visa sponsorship. Ideal for developers building job search tools, aggregators, or career platforms.",
+  "base_url": "https://www.arbeitnow.com/api",
+  "docs_url": "https://www.arbeitnow.com/api/job-board-api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required. Public endpoints accessible without API keys or signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Unlimited free access; no rate limits published",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X GET \"https://www.arbeitnow.com/api/job-board-api\"",
+    "response_snippet": "{\"data\":[{\"slug\":\"software-engineer-remote\",\"company_name\":\"Example Corp\",\"title\":\"Software Engineer\",\"description\":\"...\",\"remote\":true,\"url\":\"https://...\",\"tags\":[\"javascript\"],\"job_types\":[\"full-time\"],\"location\":\"Remote\",\"created_at\":1234567890}],\"links\":{\"first\":\"...\",\"last\":\"...\",\"prev\":null,\"next\":\"...\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":10,\"path\":\"...\",\"per_page\":10,\"to\":10,\"total\":100}}"
+  },
+  "use_cases": [
+    "fetch remote job listings",
+    "filter jobs by visa sponsorship",
+    "search jobs by location or tags",
+    "paginate through job board results",
+    "aggregate tech job postings"
+  ],
+  "sources": [
+    "https://www.arbeitnow.com/api/job-board-api"
+  ],
+  "researcher_confidence": "medium"
+}

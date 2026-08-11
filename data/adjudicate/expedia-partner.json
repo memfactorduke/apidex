@@ -1,0 +1,15 @@
+{
+  "id": "expedia-partner",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "ts=$(date +%s); sig=$(printf '%s' \"${API_KEY}${SHARED_SECRET}${ts}\" | openssl dgst -sha512 -hex | awk '{print $2}'); curl -sS --compressed \"https://api.ean.com/v3/properties/content?language=en-US&supply_source=expedia&property_id=1337&include=name\" -H \"Accept: application/json\" -H \"Authorization: EAN APIKey=${API_KEY},Signature=${sig},timestamp=${ts}\"",
+  "example_response_snippet": "{\"1337\":{\"property_id\":\"1337\",\"name\":\"Hyatt Regency Paris Etoile\"}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url\u2014KEEP ORIGINAL: Expedia's current pagination documentation uses https://api.ean.com/v3/properties/content, confirming the original v3 base without requiring a trailing slash. Evidence: https://developers.expediagroup.com/rapid/lodging/content/content-pagination. example\u2014REPLACE: Current content docs show the query and keyed response shape; authentication docs require EAN APIKey, Signature, and timestamp. Evidence: https://developers.expediagroup.com/rapid/lodging/content/content-filtering and https://developers.expediagroup.com/rapid/lodging/reference/signature-authentication"
+}

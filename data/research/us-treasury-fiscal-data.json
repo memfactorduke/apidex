@@ -1,0 +1,49 @@
+{
+  "id": "us-treasury-fiscal-data",
+  "status": "operational",
+  "name": "Treasury.gov Fiscal Data",
+  "category": "finance",
+  "tagline": "Free open REST API for U.S. Treasury debt, rates, statements, and fiscal datasets",
+  "description": "Official Bureau of the Fiscal Service API serving standardized U.S. federal fiscal datasets\u2014public debt (Debt to the Penny), average interest rates, Daily/Monthly Treasury Statements, exchange rates, savings bonds, auctions, and related tables. Open RESTful GET API returning JSON (default), XML, or CSV with field selection, filters, sorting, and pagination. No registration or API key required; data is free for commercial and non-commercial use.",
+  "base_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service",
+  "docs_url": "https://fiscaldata.treasury.gov/api-documentation/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Open public API: no user account, registration, token, or API key required. Documented as accessible via plain GET in a browser or script. Response table lists 403 'API Key is not valid' but docs do not describe obtaining or sending a key."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json",
+    "xml",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Fully free open data; no registration, usage quotas, or paid plans published",
+    "paid_plans": null
+  },
+  "rate_limits": "not published (default page size 100; pagination via page[number] and page[size]; no published req/min or req/day limits)",
+  "example": {
+    "request": "curl -s 'https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange?fields=country_currency_desc,exchange_rate,record_date&filter=country_currency_desc:in:(Canada-Dollar),record_date:gte:2024-01-01&page[size]=2'",
+    "response_snippet": "{\"data\":[{\"country_currency_desc\":\"Canada-Dollar\",\"exchange_rate\":\"1.355\",\"record_date\":\"2024-03-31\"},{\"country_currency_desc\":\"Canada-Dollar\",\"exchange_rate\":\"1.37\",\"record_date\":\"2024-06-30\"}],\"meta\":{\"count\":2,\"total-count\":10,\"total-pages\":5,\"labels\":{\"country_currency_desc\":\"Country - Currency Description\",\"exchange_rate\":\"Exchange Rate\",\"record_date\":\"Record Date\"},\"dataTypes\":{\"country_currency_desc\":\"STRING\",\"exchange_rate\":\"NUMBER\",\"record_date\":\"DATE\"}},\"links\":{\"self\":\"&page%5Bnumber%5D=1&page%5Bsize%5D=2\",\"next\":\"&page%5Bnumber%5D=2&page%5Bsize%5D=2\"}}"
+  },
+  "use_cases": [
+    "get current total U.S. public debt outstanding (Debt to the Penny)",
+    "fetch historical average interest rates on Treasury securities",
+    "pull Daily Treasury Statement operating cash balance by date",
+    "query Treasury reporting exchange rates for a currency and date range",
+    "download Monthly Treasury Statement federal receipts or outlays series",
+    "list recent Treasury securities auction results and yields"
+  ],
+  "sources": [
+    "https://fiscaldata.treasury.gov/api-documentation/",
+    "https://fiscaldata.treasury.gov/",
+    "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+    "https://fiscaldata.treasury.gov/datasets/treasury-reporting-rates-exchange/",
+    "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange?fields=country_currency_desc,exchange_rate,record_date&filter=country_currency_desc:in:(Canada-Dollar),record_date:gte:2024-01-01&page[size]=2",
+    "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?sort=-record_date&page[size]=1"
+  ],
+  "researcher_confidence": "high"
+}

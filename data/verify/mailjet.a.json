@@ -1,0 +1,52 @@
+{
+  "id": "mailjet",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.mailjet.com/email/reference/overview/versioning/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.mailjet.com/email/guides/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.mailjet.com/email/reference/overview/authentication/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mailjet.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "6,000 emails per month, maximum 200 emails per day, and up to 1,000 contacts",
+      "source": "https://www.mailjet.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.mailjet.com/email/reference/overview/rate-limits/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.mailjet.com/email/reference/contacts/contact/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.mailjet.com/products/email-api/"
+    }
+  },
+  "notes": "The API is operational. Mailjet's official versioning page defines https://api.mailjet.com/v3/ as the Email API root, with resources under /v3/REST and sending under /v3/send, so a 500 from the bare root is not evidence that the API is dead. Exact numeric per-second API-call limits are not published; the official page only describes relative limits and HTTP 429 behavior. CORS policy was not documented."
+}

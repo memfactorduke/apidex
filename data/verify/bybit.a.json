@@ -1,0 +1,52 @@
+{
+  "id": "bybit",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/guide"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/intro"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/guide"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/guide"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/rate-limit"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/rate-limit"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/market/tickers"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://bybit-exchange.github.io/docs/v5/intro"
+    }
+  },
+  "notes": "Verified against Bybit V5 docs (intro, guide, rate-limit, tickers). Base URL, HMAC/RSA auth headers, free API access with endpoint rate limits, and GET /v5/market/tickers example all match. CORS left as unknown is appropriate."
+}

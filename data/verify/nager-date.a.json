@@ -1,0 +1,52 @@
+{
+  "id": "nager-date",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://nagerholidays.com/api/v4",
+      "source": "https://nagerholidays.com/api"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://nagerholidays.com/scalar/",
+      "source": "https://nagerholidays.com/scalar/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://nagerholidays.com/api"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://nagerholidays.com/legal/termsofservice"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Web API use is permitted for private or non-profit projects; commercial use requires active sponsorship.",
+      "source": "https://nagerholidays.com/legal/termsofservice"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "No rate limits; unlimited queries.",
+      "source": "https://nagerholidays.com/api"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "enabled",
+      "source": "https://nagerholidays.com/api"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://nagerholidays.com/api/v4/Holidays/US/2026\"",
+      "source": "https://nagerholidays.com/api"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Replace \"free public REST API\" with \"public REST API; private and non-profit use is permitted, while commercial use requires active sponsorship.\"",
+      "source": "https://nagerholidays.com/legal/termsofservice"
+    }
+  },
+  "notes": "The API is operational, but the entry is outdated. The official site moved to nagerholidays.com and now documents v4. The old domain and v3-style example are not the current canonical interface. Official sources state that CORS is enabled and queries have no rate limit. The API uses bare unauthenticated GET requests, but the official terms do not define a formal free pricing tier."
+}

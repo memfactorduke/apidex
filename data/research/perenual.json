@@ -1,0 +1,40 @@
+{
+  "id": "perenual",
+  "status": "operational",
+  "name": "Perenual Plant API",
+  "category": "agriculture",
+  "tagline": "Plant species, care, and hardiness data for gardening apps",
+  "description": "REST API providing plant species catalogs, detailed care guides, hardiness zone maps, disease identification, and gardening guidance. Designed for plant-care and gardening applications with a free tier for development.",
+  "base_url": "https://perenual.com/api",
+  "docs_url": "https://perenual.com/docs/api",
+  "signup_url": "https://perenual.com/subscriber/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via key query parameter (self-serve signup at perenual.com). Example: ?key=YOUR_API_KEY"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://perenual.com/api/species-list?key=YOUR_API_KEY&page=1\"",
+    "response_snippet": "{\"data\":[{\"id\":1,\"common_name\":\"European Silver Fir\",\"scientific_name\":[\"Abies alba\"],\"other_name\":[\"Common Silver Fir\"],\"cycle\":\"Perennial\",\"watering\":\"Frequent\",\"sunlight\":[\"full sun\"],\"default_image\":{...}}],\"to\":30,\"per_page\":30,\"current_page\":1,\"from\":1,\"last_page\":338,\"total\":10123}"
+  },
+  "use_cases": [
+    "list plant species with filters for watering and sunlight",
+    "get detailed care guide for a plant species by ID",
+    "look up hardiness zone suitability for a plant",
+    "search plants by common or scientific name"
+  ],
+  "sources": [
+    "https://perenual.com/docs/api"
+  ],
+  "researcher_confidence": "low"
+}

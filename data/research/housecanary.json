@@ -1,0 +1,38 @@
+{
+  "id": "housecanary",
+  "status": "operational",
+  "name": "HouseCanary API",
+  "category": "real-estate-housing",
+  "tagline": "Institutional-grade property valuations, analytics, and market risk scores.",
+  "description": "HouseCanary provides institutional-grade automated valuation models (AVMs), property analytics, market risk scores, and real estate data via a REST API used by lenders, investors, and proptech platforms for valuations, underwriting, and portfolio analysis.",
+  "base_url": "https://api.housecanary.com",
+  "docs_url": "https://api-docs.housecanary.com",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header/query method to be confirmed from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: YOUR_API_KEY\" \"https://api.housecanary.com/v2/property/value?address=...\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "get AVM valuation for a property address",
+    "retrieve market risk scores for a zip code"
+  ],
+  "sources": [
+    "https://api-docs.housecanary.com"
+  ],
+  "researcher_confidence": "low"
+}

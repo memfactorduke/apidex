@@ -1,0 +1,52 @@
+{
+  "id": "smartrecruiters",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/docs/customer-overview"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/docs/authentication-api-key"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.smartrecruiters.com/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "not applicable; SmartRecruiters lists no free plan",
+      "source": "https://www.smartrecruiters.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Customer API: 10 requests/second and 8 concurrent requests per API user; publication endpoints are limited to 2 requests/second, and some endpoints have stricter concurrency limits.",
+      "source": "https://developers.smartrecruiters.com/docs/throttling-policies"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/reference/jobsall-1"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.smartrecruiters.com/docs/customer-overview"
+    }
+  },
+  "notes": "The API and documentation are current and operational, but the rate-limit claim is false because official limits are published. API-key authentication is supported via X-SmartToken, although OAuth 2.0 is also supported and recommended for many production integrations. CORS policy was not documented in the official sources located."
+}

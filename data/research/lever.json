@@ -1,0 +1,43 @@
+{
+  "id": "lever",
+  "status": "operational",
+  "name": "Lever Postings",
+  "category": "jobs-careers",
+  "tagline": "Public job postings API for company career pages and widgets",
+  "description": "Lever Postings is a public, unauthenticated REST API that exposes a company's published job openings for career pages, job widgets, and third-party job boards. Developers fetch listings by company site slug, with optional filters for team, location, commitment, and department; responses include job metadata, apply URLs, and rich description content.",
+  "base_url": "https://api.lever.co/v0/postings",
+  "docs_url": "https://github.com/lever/postings-api",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public postings. Company site slug in the URL path identifies the employer. API key only needed for Lever's private/authenticated APIs, not this public postings endpoint."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public postings API is free with no published usage caps; rate limits not publicly documented",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.lever.co/v0/postings/leverdemo?mode=json\"",
+    "response_snippet": "{\n  \"id\": \"...\",\n  \"text\": \"Software Engineer\",\n  \"categories\": {\"team\": \"Engineering\", \"location\": \"San Francisco\", \"commitment\": \"Full-time\"},\n  \"hostedUrl\": \"https://jobs.lever.co/leverdemo/...\",\n  \"applyUrl\": \"https://jobs.lever.co/leverdemo/.../apply\",\n  \"createdAt\": 1234567890000\n}"
+  },
+  "use_cases": [
+    "list open jobs for a company career page",
+    "filter postings by team location or department",
+    "embed a job widget with live Lever openings",
+    "sync published roles into an external job board",
+    "fetch a single job posting by ID for a detail page"
+  ],
+  "sources": [
+    "https://github.com/lever/postings-api",
+    "https://developer.lever.co/",
+    "https://hire.lever.co/"
+  ],
+  "researcher_confidence": "medium"
+}

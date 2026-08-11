@@ -1,0 +1,52 @@
+{
+  "id": "open-menu",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.openmenu.com/api/v2/",
+      "source": "https://www.openmenu.com/api/docs/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www.openmenu.com/api/docs/",
+      "source": "https://www.openmenu.com/api/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openmenu.com/api/docs/authentication.php"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true",
+      "source": "https://www.openmenu.com/signup.php?at=developer"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Plan-based daily and monthly API-credit quotas are documented; exact numeric quotas could not be verified.",
+      "source": "https://www.openmenu.com/api/docs/rate-limiting.php"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://www.openmenu.com/api/v2/search.php?key=YOUR_API_KEY&s=pizza&city=New%20York&state=NY&country=US\"",
+      "source": "https://www.openmenu.com/api/docs/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openmenu.com/api/docs/"
+    }
+  },
+  "notes": "The official developer pages were located but returned HTTP 403 to automated retrieval. Current indexed documentation identifies /api/v2/ endpoints and query-parameter API-key authentication, not a Bearer header. The entry also confuses the API landing page with both the base URL and documentation URL. Exact free-plan quotas and CORS behavior remain unverifiable."
+}

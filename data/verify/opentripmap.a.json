@@ -1,0 +1,52 @@
+{
+  "id": "opentripmap",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.opentripmap.org/examples"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://dev.opentripmap.org/docs",
+      "source": "https://dev.opentripmap.org/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.opentripmap.org/examples"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.opentripmap.org/price"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Non-commercial use; 5,000 requests per day; 10 requests per second",
+      "source": "https://dev.opentripmap.org/price"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "10 requests per second on the free plan",
+      "source": "https://dev.opentripmap.org/price"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.opentripmap.org/examples"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://dev.opentripmap.org/product"
+    }
+  },
+  "notes": "The API and api.opentripmap.com/0.1 base remain documented on OpenTripMap's live developer portal. The listed opentripmap.io documentation and signup domain is parked; current documentation and registration are under dev.opentripmap.org. The official free plan is restricted to non-commercial use."
+}

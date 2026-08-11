@@ -1,0 +1,52 @@
+{
+  "id": "jooble",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.jooble.org/en/support/solutions/articles/60001448238-rest-api-documentation"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.jooble.org/en/support/solutions/articles/60000922689-how-to-connect-to-the-jooble-rest-api-after-receiving-the-key"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.jooble.org/en/support/solutions/articles/60001448238-rest-api-documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://jooble.org/partner/for-publishers"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://help.jooble.org/en/support/solutions/articles/60001448238-rest-api-documentation"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://jooble.org/info/about"
+    }
+  },
+  "notes": "Current official pages still document POST https://jooble.org/api/{api_Key} with JSON keyword/location criteria. Jooble also identifies its publisher tools, including the REST API, as free. No authoritative quota, rate-limit, or CORS policy was found. The observed 403s appear consistent with access or bot filtering, not a dead API."
+}

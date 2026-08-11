@@ -1,0 +1,43 @@
+{
+  "id": "metro-transit-nextrip",
+  "status": "operational",
+  "name": "Metro Transit NexTrip",
+  "category": "transportation",
+  "tagline": "Real-time departures and route data for Minneapolis\u2013St. Paul transit",
+  "description": "Public NexTrip API from Metro Transit serving Minneapolis\u2013St. Paul. Provides real-time bus and train departure predictions, routes, directions, stops, and vehicle locations for the Twin Cities metropolitan area. Designed for transit apps, digital signage, and trip-planning tools.",
+  "base_url": "https://svc.metrotransit.org/nextripv2",
+  "docs_url": "https://svc.metrotransit.org/swagger/index.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public free access; specific request quotas not published",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://svc.metrotransit.org/nextripv2/routes\"",
+    "response_snippet": "[{\"route_id\":\"901\",\"agency_id\":\"0\",\"route_label\":\"Blue Line\",\"route_type\":1},{\"route_id\":\"902\",\"agency_id\":\"0\",\"route_label\":\"Green Line\",\"route_type\":1}]"
+  },
+  "use_cases": [
+    "list Metro Transit routes for the Twin Cities",
+    "get real-time departures for a stop by stop ID",
+    "look up stops along a route and direction",
+    "get vehicle locations for a route",
+    "find nearby stops from lat/lon coordinates"
+  ],
+  "sources": [
+    "https://svc.metrotransit.org/swagger/index.html",
+    "https://svc.metrotransit.org/nextripv2",
+    "https://www.metrotransit.org/nextrip-help"
+  ],
+  "researcher_confidence": "medium"
+}

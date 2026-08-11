@@ -1,0 +1,97 @@
+{
+  "id": "minor-planet-center",
+  "status": "operational",
+  "name": "Minor Planet Center API",
+  "category": "science-space",
+  "tagline": "Official IAU orbits, observations, and designations for minor planets",
+  "description": "The International Astronomical Union\u2019s Minor Planet Center (MPC) provides web services and data endpoints for near-Earth objects, minor planets, and related designations. Developers can query orbital elements, observations, and identification data used by the professional astronomy community. Coverage includes NEOs and other small-body catalogs maintained under IAU authority.",
+  "base_url": "https://data.minorplanetcenter.net/api",
+  "docs_url": "https://docs.minorplanetcenter.net/mpc-ops-docs/apis/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public web service endpoints (confirm against current docs)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access, subject to a maximum of 5 requests per second.",
+    "paid_plans": null
+  },
+  "rate_limits": "Maximum 5 requests per second; excess requests may return HTTP 429, and the requesting IP address may be blocked.",
+  "example": {
+    "request": "curl -sS -X GET -H 'Content-Type: application/json' -d '{\"desigs\":[\"Bennu\"],\"output_format\":[\"OBS80\"]}' 'https://data.minorplanetcenter.net/api/get-obs'",
+    "response_snippet": "[{\"OBS80\":\"A1955J99R36Q* C1999 09 11.40624 01 37 54.90 -27 04 27.5          15.1  aa6197704\\nA1955J99R36Q  C1999 09 11.42149 01 38 00.18 -27 03 59.6          15.1  aa6197704\\n...\"}]"
+  },
+  "use_cases": [
+    "look up orbital elements for a minor planet by designation",
+    "query near-Earth object observation data",
+    "resolve official IAU minor-planet designations",
+    "fetch ephemeris-related small-body catalog fields"
+  ],
+  "sources": [
+    "https://minorplanetcenter.net/web_service/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

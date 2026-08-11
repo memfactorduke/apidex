@@ -1,0 +1,52 @@
+{
+  "id": "remotive",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/remotive-com/remote-jobs-api#url-endpoint-for-http-request"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://remotive.com/api-documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/remotive-com/remote-jobs-api#documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://remotive.com/remote-jobs/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Public API jobs are delayed by 24 hours. Remotive advises at most 4 requests per day and blocks more than 2 requests per minute.",
+      "source": "https://github.com/remotive-com/remote-jobs-api#request-rate-limiting"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Remotive advises a maximum of 4 requests per day; more than 2 requests per minute will be blocked.",
+      "source": "https://github.com/remotive-com/remote-jobs-api#request-rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/remotive-com/remote-jobs-api#optional-querystring-parameters"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/remotive-com/remote-jobs-api#documentation"
+    }
+  },
+  "notes": "The official documentation and JSON endpoint are live. The endpoint is public and its documented GET parameters include category, company_name, search, and limit. The entry fails because it says limits are unknown or unpublished even though Remotive publishes request guidance and a blocking threshold. Official documentation does not state a CORS policy."
+}

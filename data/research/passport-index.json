@@ -1,0 +1,40 @@
+{
+  "id": "passport-index",
+  "status": "operational",
+  "name": "VisaList Passport Index API",
+  "category": "travel-hospitality",
+  "tagline": "Visa-free access and passport ranking data for destination eligibility.",
+  "description": "VisaList/Passport Index API provides visa-free access and passport ranking data for destination eligibility. It offers comprehensive data on passport rankings, visa-free countries, and destination eligibility for various passports. The API is designed for developers and travel applications to integrate accurate and up-to-date visa information.",
+  "base_url": "https://api.passportindex.org/v1",
+  "docs_url": "https://www.passportindex.org/passportAPI.php",
+  "signup_url": "https://www.passportindex.org/passportAPI.php",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header, self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "1,000 req/day free",
+    "paid_plans": "Paid plans available"
+  },
+  "rate_limits": "1,000 req/day free, paid plans have higher limits",
+  "example": {
+    "request": "curl -H \"X-Api-Key: YOUR_API_KEY\" https://api.passportindex.org/v1/passport/US",
+    "response_snippet": "{ \"passport\": \"US\", \"visa_free_countries\": [\"CA\", \"MX\", \"UK\"], \"ranking\": 1 }"
+  },
+  "use_cases": [
+    "get current weather for a city",
+    "check visa requirements for a passport",
+    "get passport ranking data",
+    "list visa-free countries for a passport"
+  ],
+  "sources": [
+    "https://www.passportindex.org/passportAPI.php"
+  ],
+  "researcher_confidence": "high"
+}

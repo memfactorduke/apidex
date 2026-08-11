@@ -1,0 +1,15 @@
+{
+  "id": "zerion",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Developer plan: 2,000 requests per day and 3 requests per second. DeFi Positions, Wallet Portfolio Chart, and Wallet P&L endpoints are capped at 25% of the plan quota and are not covered by overages.",
+  "rate_limits": "Plan-based: Developer 3 RPS, Builder 10 RPS, Startup 25 RPS, and Enterprise 1,000+ RPS. Their quotas are 2,000/day, 250,000/month, 1,000,000/month, and 2,500,000+/month, respectively. Responses include limit, remaining-quota, and reset headers.",
+  "cors": null,
+  "example_request": "curl --request GET --user \"YOUR_API_KEY:\" --header \"accept: application/json\" \"https://api.zerion.io/v1/wallets/0x42b9df65b219b3dd36ff330a4dd8f327a6ada990/positions/\"",
+  "example_response_snippet": "{\"links\":{\"self\":\"https://api.zerion.io/v1/wallets/0x42b9df65b219b3dd36ff330a4dd8f327a6ada990/positions/\"},\"data\":[{\"type\":\"positions\",\"id\":\"0x111c47865ade3b172a928df8f990bc7f2a3b9aaa-polygon-asset-none-\",\"attributes\":{\"name\":\"Asset\",\"quantity\":{\"int\":\"12345678\",\"decimals\":5,\"float\":123.45678,\"numeric\":\"123.45678\"},\"value\":5.384656557642683,\"price\":0.043615722}}]}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: incorrect; current pricing confirms 2K/day, 3 RPS, and the 25% endpoint cap: https://zerion.io/api. rate_limits: incorrect; pricing publishes plan quotas/RPS, while docs confirm plan dependence, response headers, and HTTP 429: https://zerion.io/api and https://developers.zerion.io/rate-limits. example: incorrect; the official endpoint uses HTTP Basic authentication with the API key as username and an empty password and documents the 200 response schema: https://developers.zerion.io/api-reference/wallets/get-wallet-fungible-positions."
+}

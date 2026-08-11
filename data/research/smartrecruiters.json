@@ -1,0 +1,42 @@
+{
+  "id": "smartrecruiters",
+  "status": "operational",
+  "name": "SmartRecruiters",
+  "category": "jobs-careers",
+  "tagline": "Enterprise talent acquisition REST API for jobs, candidates, and hiring workflows",
+  "description": "SmartRecruiters provides a mature public REST API for its enterprise talent acquisition platform. Developers can programmatically manage jobs, candidates, applications, and related hiring data. Authentication uses API keys; docs and endpoint details should be verified against current official sources before production use.",
+  "base_url": "https://api.smartrecruiters.com",
+  "docs_url": "https://developers.smartrecruiters.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and signup flow to be confirmed from official docs"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-SmartToken: YOUR_API_KEY\" \"https://api.smartrecruiters.com/jobs\"",
+    "response_snippet": "{\"content\":[{\"id\":\"...\",\"title\":\"...\",\"status\":\"...\"}],\"totalFound\":0}"
+  },
+  "use_cases": [
+    "list open jobs from a SmartRecruiters company account",
+    "fetch candidate application details by ID",
+    "create or update job postings programmatically",
+    "sync hiring pipeline data into an ATS or HRIS",
+    "search candidates matching role criteria"
+  ],
+  "sources": [
+    "https://developers.smartrecruiters.com/",
+    "https://api.smartrecruiters.com"
+  ],
+  "researcher_confidence": "low"
+}

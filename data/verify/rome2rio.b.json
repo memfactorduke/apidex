@@ -1,0 +1,40 @@
+{
+  "id": "rome2rio",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "http://free.rome2rio.com/api/1.4",
+      "source": "https://www.rome2rio.com/documentation/1-4/search/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://www.rome2rio.com/documentation/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://www.rome2rio.com/documentation/1-4/search/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable"
+    },
+    "cors": {
+      "verdict": "unverifiable"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"http://free.rome2rio.com/api/1.4/json/Search?key=YOUR_API_KEY&oName=London&dName=Paris\"",
+      "source": "https://www.rome2rio.com/documentation/1-4/search/"
+    },
+    "description": {
+      "verdict": "unverifiable"
+    }
+  },
+  "notes": "The official landing page is live, so the automated 403 appears bot-related, but Rome2Rio says it is not accepting new API applications. The published v1.4 example uses free.rome2rio.com/api/1.4, not api.rome2rio.com/v1. Self-serve signup is therefore also contradicted. Current pricing, limits, CORS behavior, and schedule-access details are not publicly documented."
+}

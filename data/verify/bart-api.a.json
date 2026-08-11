@@ -1,0 +1,52 @@
+{
+  "id": "bart-api",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.bart.gov/docs/overview/index.aspx"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.bart.gov/docs/overview/index.aspx"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.bart.gov/docs/overview/index.aspx"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.bart.gov/docs/overview/index.aspx"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.bart.gov/docs/overview/index.aspx"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.bart.gov/docs/overview/index.aspx"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.bart.gov/docs/etd/etd.aspx"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.bart.gov/docs/overview/index.aspx"
+    }
+  },
+  "notes": "Verified against official BART API docs. Base URL, docs, auth via key query param, free registration with demo key, unpublished free-tier/rate limits, and etd example all match. CORS not documented. API appears operational."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ipwhois",
+  "status": "operational",
+  "name": "IPWhois",
+  "category": "geo-maps",
+  "tagline": "Free IP geolocation API with city, ISP, ASN, and security flags",
+  "description": "IPWhois (ipwho.is) provides IP geolocation data including city, region, country, coordinates, ISP, ASN, timezone, and security flags. Free tier available without mandatory signup for basic lookups; paid plans add higher limits and commercial use. Simple REST JSON API suitable for fraud checks, localization, and analytics.",
+  "base_url": "https://ipwho.is",
+  "docs_url": "https://ipwhois.io/documentation",
+  "signup_url": "https://ipwhois.io",
+  "auth": {
+    "type": "none",
+    "details": "No API key required for free unauthenticated requests. Paid plans use API key authentication (details on pricing/docs)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://ipwho.is/8.8.8.8\"",
+    "response_snippet": "{\"ip\":\"8.8.8.8\",\"success\":true,\"type\":\"IPv4\",\"continent\":\"North America\",\"country\":\"United States\",\"city\":\"...\",\"connection\":{\"isp\":\"...\",\"asn\":...},\"security\":{...}}"
+  },
+  "use_cases": [
+    "geolocate a client IP to city/country",
+    "look up ISP and ASN for an IP",
+    "check security flags for proxy/VPN risk",
+    "resolve timezone from IP for localization"
+  ],
+  "sources": [
+    "https://ipwhois.io/documentation",
+    "https://ipwho.is"
+  ],
+  "researcher_confidence": "low"
+}

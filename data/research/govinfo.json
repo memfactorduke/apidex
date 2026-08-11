@@ -1,0 +1,46 @@
+{
+  "id": "govinfo",
+  "status": "operational",
+  "name": "GovInfo API",
+  "category": "government-open-data",
+  "tagline": "GPO API for US federal bills, statutes, CFR, and official publications",
+  "description": "The U.S. Government Publishing Office (GPO) GovInfo API provides programmatic access to official federal publications including bills, statutes, the Code of Federal Regulations, the Congressional Record, Federal Register, and other government documents. Developers can search, retrieve metadata, and download content for legislative research, compliance, and civic applications.",
+  "base_url": "https://api.govinfo.gov",
+  "docs_url": "https://api.govinfo.gov/docs/",
+  "signup_url": "https://api.data.gov/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via api_key query parameter (data.gov key); free self-serve signup at api.data.gov"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "html",
+    "binary"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free with data.gov API key; rate limits apply (see rate_limits)",
+    "paid_plans": null
+  },
+  "rate_limits": "Typical data.gov default: 1,000 requests/hour (confirm current limits in docs)",
+  "example": {
+    "request": "curl \"https://api.govinfo.gov/collections?api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"collections\":[{\"collectionCode\":\"BILLS\",\"collectionName\":\"Congressional Bills\",\"packageCount\":...}]}"
+  },
+  "use_cases": [
+    "list available GovInfo document collections",
+    "search federal bills and statutes by keyword",
+    "retrieve CFR or Federal Register package metadata",
+    "download official bill text or PDF for a package id",
+    "monitor new Congressional Record or Federal Register issues"
+  ],
+  "sources": [
+    "https://api.govinfo.gov/docs/",
+    "https://www.govinfo.gov/",
+    "https://api.data.gov/"
+  ],
+  "researcher_confidence": "low"
+}

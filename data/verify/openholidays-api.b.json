@@ -1,0 +1,52 @@
+{
+  "id": "openholidays-api",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openholidaysapi.org/en/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openholidaysapi.org/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openholidaysapi.org/swagger/v1/swagger.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.openholidaysapi.org/en/faq/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free for commercial use; public- and school-holiday queries are limited to date ranges of at most 1095 days (three years). No request-volume quota is published.",
+      "source": "https://www.openholidaysapi.org/en/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes; the official service code allows any origin for GET requests using the Accept request header",
+      "source": "https://github.com/openpotato/openholidaysapi/blob/develop/src/webservice/Program.cs"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://openholidaysapi.org/swagger/v1/swagger.json"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "OpenHolidays API is a free open-data REST API for public and school holidays in supported countries, with subdivisions and localized names and no documented authentication requirement. Holiday queries are limited to date ranges of at most three years.",
+      "source": "https://www.openholidaysapi.org/en/"
+    }
+  },
+  "notes": "The API and Swagger documentation are live, and the documented GET endpoint and parameters remain current. The entry's main errors are calling access unrestricted despite the three-year query-range limit and leaving CORS unknown even though the official service code enables cross-origin GET requests."
+}

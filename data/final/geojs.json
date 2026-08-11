@@ -1,0 +1,96 @@
+{
+  "id": "geojs",
+  "status": "operational",
+  "name": "GeoJS",
+  "category": "geo-maps",
+  "tagline": "Free IP geolocation and country lookup for browsers and CDNs",
+  "description": "GeoJS is a lightweight, free IP geolocation service that returns country and location data as JSON or JSONP. Designed for browser and CDN use without API keys, it is popular for simple client-side geo lookups and content localization.",
+  "base_url": "https://get.geojs.io",
+  "docs_url": "https://www.geojs.io/docs/v1/endpoints/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; public endpoints accept unauthenticated GET requests."
+  },
+  "https": true,
+  "cors": "yes",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://get.geojs.io/v1/ip/geo.json'",
+    "response_snippet": "{\"ip\":\"1.2.3.4\",\"country\":\"United States\",\"country_code\":\"US\",\"city\":\"...\",\"latitude\":\"...\",\"longitude\":\"...\"}"
+  },
+  "use_cases": [
+    "look up country and city for a visitor IP",
+    "detect client country in the browser without an API key",
+    "localize content or currency by IP geolocation",
+    "enrich server logs with geo metadata for an IP"
+  ],
+  "sources": [
+    "https://www.geojs.io/docs/v1/endpoints/",
+    "https://get.geojs.io"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

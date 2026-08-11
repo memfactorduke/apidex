@@ -1,0 +1,15 @@
+{
+  "id": "magicthegathering",
+  "base_url": "https://api.scrydex.com/magicthegathering/v1",
+  "docs_url": "https://scrydex.com/docs/magicthegathering/cards",
+  "auth_type": "apiKey",
+  "free_tier": false,
+  "free_tier_limits": "No published free plan. Starter is $29/month with 5,000 API credits; overage is $0.006 per credit. Unauthenticated requests may proceed only at heavily reduced limits.",
+  "rate_limits": "100 requests/second for all plans, plus plan-based API-credit allowances. Most standard requests cost 1 credit; usage beyond included credits incurs plan-specific overage charges.",
+  "cors": null,
+  "example_request": "curl --request GET --url 'https://api.scrydex.com/magicthegathering/v1/cards/KTK-214' --header 'X-Api-Key: YOUR_API_KEY' --header 'X-Team-ID: YOUR_TEAM_ID'",
+  "example_response_snippet": "{\"id\":\"KTK-214\",\"name\":\"Zurgo Helmsmasher\",\"supertypes\":[\"Legendary\"],\"subtypes\":[\"Orc\",\"Warrior\"],\"types\":[\"Creature\"],\"mana_cost\":\"{2}{R}{W}{B}\",\"mana_value\":5,\"rarity\":\"Mythic\"}",
+  "description": "Scrydex's current Magic: The Gathering API is a paid, API-key service for card metadata and Lucene-like search, including types, subtypes, supertypes, mana costs, rules, images, expansion data, and opt-in pricing. MTG price-history and webhook endpoints are also documented.",
+  "status": null,
+  "resolution_notes": "base_url corrected: https://scrydex.com/docs/magicthegathering/cards; docs_url corrected: https://magicthegathering.io/; auth_type corrected: https://scrydex.com/docs/getting-started/authentication; free_tier=false: https://scrydex.com/pricing; free_tier_limits corrected: https://scrydex.com/pricing; rate_limits corrected: https://scrydex.com/docs/getting-started/rate-limits; example corrected: https://scrydex.com/docs/magicthegathering/cards; description corrected: https://scrydex.com/docs/magicthegathering/cards"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "metrolinx-opendata",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.openmetrolinx.com",
+      "source": "https://www.metrolinx.com/en/about-us/open-data"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gotransit.com/en/information-resources/software-developers"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s \"https://api.openmetrolinx.com/OpenDataAPI/api/V1/Stop/NextService/UN?key=YOUR_ACCESS_KEY\"",
+      "source": "https://api.openmetrolinx.com/OpenDataAPI/Help/Api/en/GET-api-V1-Stop-NextService-StopCode"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.metrolinx.com/en/about-us/open-data"
+    }
+  },
+  "notes": "The official API is live on api.openmetrolinx.com, not api.open.metrolinx.com. Registration is required and access is free. Metrolinx publishes no numeric quota, but warns that keys may be disabled for extensive calls; its catalogue also defines HTTP 429. The supplied developer URL redirects to the current official page. No authoritative CORS policy was found."
+}

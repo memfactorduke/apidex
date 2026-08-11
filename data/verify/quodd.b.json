@@ -1,0 +1,51 @@
+{
+  "id": "quodd",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://www.quodd.com/qx-query-developer-guide"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developer.quodd.com/",
+      "source": "https://developer.quodd.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "Token-based authentication; documented services use API tokens or Bearer JWTs",
+      "source": "https://www.quodd.com/qx-query-developer-guide"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "true (time-limited free trial, not a permanent free plan)",
+      "source": "https://www.quodd.com/faqs/does-quodd-offer-a-free-market-data-api-trial"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Official FAQ advertises a 7-day license and 250 API calls; allowances may vary by service",
+      "source": "https://www.quodd.com/faqs/does-quodd-offer-a-free-market-data-api-trial"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "QUODD states there is no production call-count limit and recommends about 200 symbols maximum per call",
+      "source": "https://www.quodd.com/faqs/what-is-the-maximum-number-of-symbols-or-identifiers-supported-in-quodd-apis"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use a documented product endpoint with authentication, such as POST https://api.quodd.com/universal/jobs with Authorization: Bearer TOKEN, Accept: application/json, Content-Type: application/json, and the documented job body",
+      "source": "https://www.quodd.com/qx-query-developer-guide"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "QUODD provides publicly accessible REST and gRPC developer documentation. API access is credentialed through trial or firm accounts, and a free trial is publicly advertised.",
+      "source": "https://developer.quodd.com/docs/rest-api/"
+    }
+  },
+  "notes": "QUODD remains operational, but this entry understates its public documentation and misses its advertised free trial. Official sources conflict on trial duration: the FAQ says 7 days/250 calls, while developer terms mention 30 days. The unauthenticated root curl is not a documented API example."
+}

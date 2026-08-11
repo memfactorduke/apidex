@@ -1,0 +1,43 @@
+{
+  "id": "steamspy",
+  "status": "operational",
+  "name": "SteamSpy API",
+  "category": "games-comics",
+  "tagline": "Steam ownership and sales estimates by app ID for market research",
+  "description": "SteamSpy provides free public API access to estimated Steam game ownership, sales, player counts, and related market metrics by Steam app ID. Developers query endpoints for all games, individual app details, genre and tag filters, and top charts without authentication. Widely used for indie market research despite unofficial estimates and limited formal documentation.",
+  "base_url": "https://steamspy.com/api.php",
+  "docs_url": "https://steamspy.com/api.php",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No API key or authentication required. Public GET endpoints accept query parameters only."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free public access; historically ~1 request per second encouraged (not a hard paywall)",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as hard limits; community and site guidance historically suggest ~1 request/second to avoid blocking",
+  "example": {
+    "request": "curl \"https://steamspy.com/api.php?request=appdetails&appid=730\"",
+    "response_snippet": "{\"appid\":730,\"name\":\"Counter-Strike: Global Offensive\",\"developer\":\"Valve\",\"publisher\":\"Valve\",\"score_rank\":\"\",\"owners\":\"50,000,000 .. 100,000,000\",\"average_forever\":15000,\"average_2weeks\":200,\"median_forever\":3000,\"median_2weeks\":50,\"ccu\":500000,\"price\":\"0\",\"initialprice\":\"0\",\"discount\":\"0\",\"tags\":{...}}"
+  },
+  "use_cases": [
+    "get ownership and sales estimate ranges for a Steam app by ID",
+    "list all tracked Steam games with player and owner metrics",
+    "filter Steam games by genre or tag for market research",
+    "fetch top games by concurrent players or owners",
+    "compare estimated player engagement (playtime, CCU) across titles"
+  ],
+  "sources": [
+    "https://steamspy.com/api.php",
+    "https://steamspy.com/",
+    "https://github.com/SteamDatabase/SteamTracking"
+  ],
+  "researcher_confidence": "medium"
+}

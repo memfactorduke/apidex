@@ -1,0 +1,52 @@
+{
+  "id": "greenhouse",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.greenhouse.io/job-board.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.greenhouse.io/job-board.html"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "mixed: no authentication for GET endpoints; HTTP Basic Auth with a Job Board API key for application-submission POST requests",
+      "source": "https://developers.greenhouse.io/job-board.html"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.greenhouse.io/job-board.html"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "The API is not entirely read-only: it provides public, unauthenticated GET endpoints for job-board data and an authenticated POST endpoint for submitting applications.",
+      "source": "https://support.greenhouse.io/hc/en-us/articles/10568627186203-Greenhouse-API-overview"
+    }
+  },
+  "notes": "Current 2026 official materials still document the v1 boards-api hostname and Job Board API. The announced August 31, 2026 deprecation applies to Harvest API v1/v2, not Job Board API. Greenhouse publishes paid Core, Plus, and Pro subscriptions, but does not clearly define standalone Job Board API free-tier pricing or limits. The example is structurally documented; the literal board token \"example\" is not established as a live board."
+}

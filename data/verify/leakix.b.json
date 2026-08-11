@@ -1,0 +1,52 @@
+{
+  "id": "leakix",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.leakix.net/docs/api/search/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.leakix.net/docs/api/",
+      "source": "https://docs.leakix.net/docs/api/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.leakix.net/docs/api/authentication/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Approximately 1 request per second; exceeding it returns HTTP 429 with an x-limited-for header. The Terms also state 60 requests per minute per IP.",
+      "source": "https://docs.leakix.net/docs/api/search/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -G -H \"api-key: YOUR_API_KEY\" -H \"accept: application/json\" --data-urlencode \"q=apache\" --data-urlencode \"scope=service\" --data-urlencode \"page=0\" \"https://leakix.net/search\"",
+      "source": "https://docs.leakix.net/docs/api/search/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.leakix.net/docs/api/search/"
+    }
+  },
+  "notes": "LeakIX is operational, but the directory entry uses a dead documentation URL and an obsolete /api/v1/search example. Current official documentation uses /search, requires scope and accept parameters/headers, and publishes a rate limit. Official public pages did not clearly establish a current free tier or its limits."
+}

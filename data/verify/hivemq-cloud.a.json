@@ -1,0 +1,52 @@
+{
+  "id": "hivemq-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No universal base URL. Use the cluster-specific REST API base URL shown under API Access, following https://{regional-api-host}/api/v2/orgs/{orgId}/clusters/{clusterId}.",
+      "source": "https://docs.hivemq.com/hivemq-cloud/metrics.html"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.hivemq.com/hivemq-cloud/rest-api.html",
+      "source": "https://docs.hivemq.com/hivemq-cloud/rest-api.html"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "bearerToken (JWT supplied through the Authorization: Bearer header)",
+      "source": "https://docs.hivemq.com/hivemq-cloud/rest-api.html"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false for REST API access. The permanently free Serverless plan excludes the REST API; REST API access requires Starter, which offers only a 15-day trial.",
+      "source": "https://www.hivemq.com/products/mqtt-cloud-broker/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No ongoing free REST API tier. Starter has a 15-day trial without a credit card; the free Serverless broker allows 100 connections and 10 GB monthly traffic but does not include REST API access.",
+      "source": "https://www.hivemq.com/products/mqtt-cloud-broker/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "A documented listing request is: curl -sS -H \"Authorization: Bearer YOUR_JWT_TOKEN\" \"https://{regional-api-host}/api/v2/orgs/{orgId}/clusters/{clusterId}/mqtt/credentials\". The documented API has no GET /v1/clusters endpoint.",
+      "source": "https://docs.hivemq.com/hivemq-cloud/rest-api/specification/"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "HiveMQ Cloud is a managed MQTT platform whose REST API manages cluster-scoped MQTT credentials, permissions, roles, clients, and metrics. Current documentation does not support claims that this API provisions MQTT environments or lists and manages account clusters.",
+      "source": "https://docs.hivemq.com/hivemq-cloud/rest-api.html"
+    }
+  },
+  "notes": "The submitted entry appears to combine an invented global management API with HiveMQ's real cluster-scoped REST API. Current endpoints use /api/v2/orgs/{orgId}/clusters/{clusterId}, require a JWT bearer token, and are available on Starter rather than the permanently free Serverless plan."
+}

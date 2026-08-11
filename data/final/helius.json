@@ -1,0 +1,100 @@
+{
+  "id": "helius",
+  "status": "operational",
+  "name": "Helius",
+  "category": "crypto",
+  "tagline": "Solana RPC, DAS NFT/token APIs, and webhooks for Solana apps",
+  "description": "Helius provides Solana-first infrastructure including high-performance RPC, Digital Asset Standard (DAS) APIs for NFTs and tokens, enhanced transactions, and webhooks. Developers use it to power wallets, marketplaces, indexers, and on-chain apps without running their own Solana nodes.",
+  "base_url": "https://api.helius.xyz",
+  "docs_url": "https://docs.helius.dev/",
+  "signup_url": "https://dashboard.helius.dev/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via query parameter ?api-key=YOUR_API_KEY or Authorization header; self-serve signup at dashboard.helius.dev"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free tier with limited credits (confirm on pricing page)",
+    "paid_plans": "Developer, Business, Professional, and Enterprise plans with higher credit allowances"
+  },
+  "rate_limits": "Free/Developer/Business/Professional: RPC 10/50/200/500 requests/s; DAS & Enhanced APIs 2/10/50/100 requests/s. Enterprise limits are custom; special endpoint limits apply.",
+  "example": {
+    "request": "curl \"https://api.helius.xyz/v1/wallet/86xCnPeV69n6t3DnyGvkKobf9FdN2H9oiVDdaMpo2MMY/balances?api-key=YOUR_API_KEY\"",
+    "response_snippet": "{\"balances\":[{\"mint\":\"So11111111111111111111111111111111111111112\",\"balance\":1.5,\"decimals\":9,\"tokenProgram\":\"spl-token\",\"symbol\":\"SOL\",\"name\":\"Solana\",\"pricePerToken\":145.32,\"usdValue\":217.98}],\"totalUsdValue\":217.98,\"pagination\":{\"page\":1,\"limit\":100,\"hasMore\":true}}"
+  },
+  "use_cases": [
+    "fetch Solana wallet token balances",
+    "query NFT metadata via DAS API",
+    "subscribe to on-chain webhooks for transactions",
+    "get enhanced transaction history for a wallet",
+    "call Solana JSON-RPC methods with API key"
+  ],
+  "sources": [
+    "https://docs.helius.dev/",
+    "https://www.helius.dev/pricing"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

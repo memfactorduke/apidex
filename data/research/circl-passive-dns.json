@@ -1,0 +1,40 @@
+{
+  "id": "circl-passive-dns",
+  "status": "operational",
+  "name": "CIRCL Passive DNS",
+  "category": "security-identity",
+  "tagline": "Free historical DNS lookup for domain and IP investigations",
+  "description": "CIRCL Passive DNS is a free passive DNS service from the Computer Incident Response Center Luxembourg that stores historical DNS resolution records. Investigators can query domains, reverse-query IPs, and retrieve associated resource records for threat hunting, malware analysis, and incident response. Access typically requires authentication; response formats and rate limits are documented on the official service pages.",
+  "base_url": "https://www.circl.lu/pdns/query",
+  "docs_url": "https://www.circl.lu/services/passive-dns/",
+  "signup_url": "https://www.circl.lu/services/passive-dns/",
+  "auth": {
+    "type": "other",
+    "details": "Authentication method not fully verified from public docs in this pass \u2014 confirm on official page"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s 'https://www.circl.lu/pdns/query/example.com'",
+    "response_snippet": "{\"rrname\":\"example.com.\",\"rrtype\":\"A\",\"rdata\":\"93.184.216.34\",\"time_first\":1234567890,\"time_last\":1234567890,\"count\":1}"
+  },
+  "use_cases": [
+    "look up historical A/AAAA records for a domain",
+    "find domains that resolved to a given IP",
+    "enrich IOC investigations with passive DNS history",
+    "map related infrastructure from DNS co-occurrence"
+  ],
+  "sources": [
+    "https://www.circl.lu/services/passive-dns/"
+  ],
+  "researcher_confidence": "low"
+}

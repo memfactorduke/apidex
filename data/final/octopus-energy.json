@@ -1,0 +1,100 @@
+{
+  "id": "octopus-energy",
+  "status": "operational",
+  "name": "Octopus Energy API",
+  "category": "energy-utilities",
+  "tagline": "UK retail electricity and gas products, tariffs, and Agile half-hourly prices",
+  "description": "Public REST API for Octopus Energy's UK retail energy products and tariffs. Exposes product catalogues, unit rates (including Agile half-hourly prices), electricity and gas meter point details, consumption history for account holders, and related account data. Public product and tariff endpoints need no auth; account, meter, and consumption endpoints use HTTP Basic Auth with an API key.",
+  "base_url": "https://api.octopus.energy/v1",
+  "docs_url": "https://docs.octopus.energy/rest/",
+  "signup_url": "https://octopus.energy",
+  "auth": {
+    "type": "apiKey",
+    "details": "Public product/tariff endpoints: no auth. Account, meter points, and consumption: HTTP Basic Auth with API key as username and empty password (or API key as password with empty username). API key from Octopus Energy account dashboard (Developer settings)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://api.octopus.energy/v1/products/\"",
+    "response_snippet": "{\"count\": 100, \"next\": \"https://api.octopus.energy/v1/products/?page=2\", \"previous\": null, \"results\": [{\"code\": \"AGILE-24-10-01\", \"full_name\": \"Agile Octopus October 2024 v1\", \"display_name\": \"Agile Octopus\", \"description\": \"...\", \"is_variable\": true, \"is_green\": true, \"is_tracker\": false, \"is_prepay\": false, \"is_business\": false, \"is_restricted\": false, \"term\": 12, \"available_from\": \"2024-10-01T00:00:00Z\", \"available_to\": null, \"brand\": \"OCTOPUS_ENERGY\"}]}"
+  },
+  "use_cases": [
+    "list available UK electricity and gas products and tariffs",
+    "fetch Agile Octopus half-hourly unit rates for a region",
+    "get electricity or gas unit rates for a product and GSP group",
+    "look up meter point details by MPAN or MPRN",
+    "retrieve historical consumption for an authenticated account",
+    "compare fixed vs variable tariff product codes and availability"
+  ],
+  "sources": [
+    "https://developer.octopus.energy/docs/api/",
+    "https://api.octopus.energy/v1/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "auth_type",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "docs_url"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors"
+    ]
+  }
+}

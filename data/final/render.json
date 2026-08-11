@@ -1,0 +1,98 @@
+{
+  "id": "render",
+  "status": "operational",
+  "name": "Render API",
+  "category": "dev-tools",
+  "tagline": "REST API for Render PaaS \u2014 services, deploys, jobs, and databases",
+  "description": "Render provides a REST API for managing cloud services, deploys, one-off jobs, databases, and infrastructure on the Render platform. Developers use it for Git-to-prod automation, CI/CD hooks, and programmatic control of web services, workers, and Postgres.",
+  "base_url": "https://api.render.com/v1",
+  "docs_url": "https://api-docs.render.com/reference/introduction",
+  "signup_url": "https://dashboard.render.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via Authorization: Bearer header; create keys in Render Dashboard (Account Settings \u2192 API Keys)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "750 free instance hours per workspace monthly; web services spin down after 15 idle minutes. One free Postgres database per workspace (1 GB, expires after 30 days) and one nonpersistent free Key Value instance per workspace; bandwidth and build-pipeline limits also apply.",
+    "paid_plans": null
+  },
+  "rate_limits": "Endpoint-specific: 20/hour for service create/update/deploy/resume/suspend; 10/minute/service for deploy hooks; 50/hour for custom domains; 100/minute for jobs; 30/minute for logs and other writes; 400/minute for other GETs.",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.render.com/v1/services\"",
+    "response_snippet": "{ \"cursor\": \"...\", \"services\": [ { \"id\": \"srv-...\", \"name\": \"my-app\", \"type\": \"web_service\", \"serviceDetails\": { \"url\": \"https://...\" } } ] }"
+  },
+  "use_cases": [
+    "list all Render services in an account",
+    "trigger a deploy for a web service",
+    "check deploy status for a service",
+    "create or list one-off jobs",
+    "manage Postgres databases programmatically"
+  ],
+  "sources": [
+    "https://api-docs.render.com/reference/introduction"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

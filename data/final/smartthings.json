@@ -1,0 +1,97 @@
+{
+  "id": "smartthings",
+  "status": "operational",
+  "name": "SmartThings",
+  "category": "iot-devices",
+  "tagline": "Samsung smart-home cloud REST API for devices, locations, scenes, and rules",
+  "description": "SmartThings is Samsung's smart-home platform API for managing devices, locations, rooms, scenes, and automation rules. Resource requests use OAuth 2.0 bearer access tokens. Short-lived personal access tokens are intended for testing and personal use; long-term production integrations use the OAuth 2.0 authorization flow to obtain access and refresh tokens. App client credentials participate in that flow but do not directly authenticate resource requests.",
+  "base_url": "https://api.smartthings.com",
+  "docs_url": "https://developer.smartthings.com/docs/api/public",
+  "signup_url": "https://developer.smartthings.com",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 Bearer token (Personal Access Token or installed-app token) in Authorization header; create PATs at developer.smartthings.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "Published and endpoint-specific. Limits vary by operation; responses include X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset headers, and exceeding a limit returns HTTP 429.",
+  "example": {
+    "request": "curl -s -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.smartthings.com/v1/devices\"",
+    "response_snippet": "{\"items\":[{\"deviceId\":\"...\",\"name\":\"Living Room Light\",\"label\":\"Living Room Light\",\"manufacturerName\":\"Samsung Electronics\",\"presentationId\":\"...\",\"locationId\":\"...\",\"components\":[{\"id\":\"main\",\"capabilities\":[{\"id\":\"switch\",\"version\":1}]}]}],\"_links\":{}}"
+  },
+  "use_cases": [
+    "list devices in a SmartThings location",
+    "read device capability status (switch, temperature, lock)",
+    "execute a device command (turn on/off, set level)",
+    "run a scene by scene ID",
+    "list locations and rooms for an account"
+  ],
+  "sources": [
+    "https://developer.smartthings.com/docs/api/public"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

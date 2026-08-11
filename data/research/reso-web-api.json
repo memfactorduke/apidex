@@ -1,0 +1,40 @@
+{
+  "id": "reso-web-api",
+  "status": "operational",
+  "name": "RESO Web API",
+  "category": "real-estate-housing",
+  "tagline": "OData standard for MLS property data interchange",
+  "description": "Industry-standard OData-based Web API for MLS and real estate data interchange, defined by the Real Estate Standards Organization (RESO). Individual MLSs and data providers expose their own RESO-compliant endpoints rather than a single central API.",
+  "base_url": "provider-specific (no single global root)",
+  "docs_url": "https://www.reso.org/reso-web-api/",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Provider-specific OAuth2 or API key; each MLS/vendor issues credentials for their endpoint"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": "Provider-specific; no central RESO pricing"
+  },
+  "rate_limits": "not published (provider-specific)",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.example-mls.com/odata/Property?$top=1\"",
+    "response_snippet": "{\n  \"@odata.context\": \"$metadata#Property\",\n  \"value\": [{\n    \"ListingKey\": \"...\",\n    \"ListPrice\": 450000,\n    \"StandardStatus\": \"Active\"\n  }]\n}"
+  },
+  "use_cases": [
+    "query active MLS listings by city or price",
+    "fetch property details by listing key",
+    "sync listing status changes from an MLS",
+    "export property media/photo URLs for a listing"
+  ],
+  "sources": [
+    "https://www.reso.org/reso-web-api/"
+  ],
+  "researcher_confidence": "low"
+}

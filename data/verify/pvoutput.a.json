@@ -1,0 +1,52 @@
+{
+  "id": "pvoutput",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.pvoutput.org/about.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Registered non-donation accounts receive 60 requests per hour per API key for most request types, but Get Statistic is limited to 12 requests per hour. Donation mode raises these limits to 300 and 60 requests per hour respectively.",
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "60 requests/hour per API key for most request types and 12 requests/hour for Get Statistic; Donation mode allows 300 requests/hour and 60 Get Statistic requests/hour.",
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/api_specification.html"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pvoutput.org/help/api_specification.html"
+    }
+  },
+  "notes": "The API and documentation are operational. The base path, GET getstatus.jsp request, and authentication headers are current. The entry's general 60/hour limit omits the documented 12/hour Get Statistic exception. Official documentation does not state a CORS policy."
+}

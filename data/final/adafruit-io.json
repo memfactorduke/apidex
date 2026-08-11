@@ -1,0 +1,96 @@
+{
+  "id": "adafruit-io",
+  "status": "operational",
+  "name": "Adafruit IO",
+  "category": "iot-devices",
+  "tagline": "Hobbyist IoT platform for sensor feeds, dashboards, and device data via REST and MQTT.",
+  "description": "Adafruit IO is a cloud platform for connecting sensors, devices, and dashboards. Developers create feeds (time-series data streams), groups, and dashboards, then publish or subscribe over REST and MQTT. It is popular for hobbyist and educational IoT projects with Arduino, CircuitPython, and Raspberry Pi, offering API keys, rate-limited free and paid tiers, and webhooks for automation.",
+  "base_url": "https://io.adafruit.com/api/v2",
+  "docs_url": "https://io.adafruit.com/api/docs/",
+  "signup_url": "https://accounts.adafruit.com/users/sign_up",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-AIO-Key header (or ?X-AIO-Key= query param). Self-serve account signup; key from Adafruit IO profile."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free: limited data rate and retention; exact 2026 limits from pricing page if confirmed",
+    "paid_plans": "IO+ paid plans for higher rate limits, more feeds, longer retention"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-AIO-Key: YOUR_API_KEY\" \"https://io.adafruit.com/api/v2/YOUR_USERNAME/feeds\"",
+    "response_snippet": "[{\"id\": 1, \"name\": \"temperature\", \"key\": "
+  },
+  "use_cases": [
+    "publish a sensor reading to a named feed",
+    "list all feeds for an Adafruit IO account",
+    "get the latest value from a temperature feed",
+    "create a new data feed for a device",
+    "subscribe to MQTT updates for a feed"
+  ],
+  "sources": [
+    "https://io.adafruit.com/api/docs/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "double-confirmed",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "rate_limits",
+      "cors",
+      "example",
+      "description"
+    ],
+    "corrected": [],
+    "unverifiable": []
+  }
+}

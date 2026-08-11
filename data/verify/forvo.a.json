@@ -1,0 +1,52 @@
+{
+  "id": "forvo",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/documentation/word-pronunciations/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "key in URL path (/key/YOUR_API_KEY/...), not X-Api-Key header",
+      "source": "https://api.forvo.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "500 req/day free (not 1,000)",
+      "source": "https://api.forvo.com/"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/documentation/word-pronunciations/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.forvo.com/"
+    }
+  },
+  "notes": "use_cases wrongly list weather; auth details invent X-Api-Key; free tier limit is 500/day not 1,000"
+}

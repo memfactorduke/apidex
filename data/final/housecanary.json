@@ -1,0 +1,96 @@
+{
+  "id": "housecanary",
+  "status": "operational",
+  "name": "HouseCanary API",
+  "category": "real-estate-housing",
+  "tagline": "Institutional-grade property valuations, analytics, and market risk scores.",
+  "description": "HouseCanary provides institutional-grade automated valuation models (AVMs), property analytics, market risk scores, and real estate data via a REST API used by lenders, investors, and proptech platforms for valuations, underwriting, and portfolio analysis.",
+  "base_url": "https://api.housecanary.com/v2",
+  "docs_url": "https://api-docs.housecanary.com",
+  "signup_url": null,
+  "auth": {
+    "type": "basic",
+    "details": "API key authentication; exact header/query method to be confirmed from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "Not applicable; HouseCanary does not offer a free API tier. Core API access begins on paid plans and incurs usage-based charges.",
+    "paid_plans": null
+  },
+  "rate_limits": "Contractual organization-level limits are shown in each customer's Developer Center; no universal public request limit is stated.",
+  "example": {
+    "request": "curl -G 'https://api.housecanary.com/v2/property/value' --data-urlencode 'address=43 Valmonte Plaza' --data-urlencode 'zipcode=90274' --user 'API_KEY:API_SECRET'",
+    "response_snippet": "[{\"property/value\":{\"api_code\":0,\"api_code_description\":\"ok\",\"result\":{\"value\":{\"price_mean\":1450632.0,\"price_lwr\":1326125.0,\"price_upr\":1575138.0,\"fsd\":0.086}}}}]"
+  },
+  "use_cases": [
+    "get AVM valuation for a property address",
+    "retrieve market risk scores for a zip code"
+  ],
+  "sources": [
+    "https://api-docs.housecanary.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

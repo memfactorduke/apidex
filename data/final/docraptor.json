@@ -1,0 +1,100 @@
+{
+  "id": "docraptor",
+  "status": "operational",
+  "name": "DocRaptor",
+  "category": "utilities",
+  "tagline": "HTML-to-PDF and Excel API powered by PrinceXML for print-quality layouts",
+  "description": "DocRaptor converts HTML/CSS to PDF (via PrinceXML) and Excel. It targets high-fidelity print layouts: headers/footers, page breaks, CSS paged media, and multi-column designs. Developers POST HTML or a URL, choose PDF or XLS, and receive the document as binary or a hosted download. Common in invoices, reports, certificates, and automated document pipelines.",
+  "base_url": "https://api.docraptor.com",
+  "docs_url": "https://docraptor.com/documentation",
+  "signup_url": "https://docraptor.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "HTTP Basic Auth with API key as username and empty password, or api_key query/form field. Key from self-serve dashboard after signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "binary",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan: 5 production documents/month, with no overage. Unlimited test documents; test PDFs are watermarked, test Excel is limited to 20 rows, and test hosted documents to 5 downloads and 1 day.",
+    "paid_plans": "Usage-based tiers by document count/month; check docraptor.com/pricing for current plans"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -u YOUR_API_KEY: https://api.docraptor.com/docs -H 'Content-Type: application/json' -d '{\"type\":\"pdf\",\"document_content\":\"<html><body><h1>Hello</h1></body></html>\"}' --output hello.pdf",
+    "response_snippet": "Binary PDF bytes on success (200). JSON error example: {\"errors\":[\"Document failed to render\"]}"
+  },
+  "use_cases": [
+    "convert HTML invoice template to print-ready PDF",
+    "generate multi-page report PDF with headers and page numbers",
+    "create Excel spreadsheet from HTML table data",
+    "render certificate or letterhead PDF from HTML/CSS",
+    "batch convert web page URLs to PDF for archiving"
+  ],
+  "sources": [
+    "https://docraptor.com/documentation",
+    "https://docraptor.com/pricing",
+    "https://docraptor.com"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "rate_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits"
+    ],
+    "unverifiable": []
+  }
+}

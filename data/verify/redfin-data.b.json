@@ -1,0 +1,52 @@
+{
+  "id": "redfin-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No documented public API base URL; current public access is through https://www.redfin.com/news/data-center/downloads/",
+      "source": "https://www.redfin.com/news/data-center/downloads/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.redfin.com/news/data-center/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.redfin.com/news/data-center/downloads/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use the Data Center Download Hub to select filters and download CSV data; Redfin does not currently document the submitted fixed S3 TSV curl endpoint.",
+      "source": "https://www.redfin.com/news/data-center/downloads/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.redfin.com/news/data-center/methodology/"
+    }
+  },
+  "notes": "Redfin relaunched the Data Center on May 12, 2026 with a unified data pipeline and a filtered-CSV download hub. The submitted /stingray base and legacy S3 TSV example are not part of the current official interface. Redfin publishes no API pricing, quotas, or CORS documentation, so those claims cannot be confirmed."
+}

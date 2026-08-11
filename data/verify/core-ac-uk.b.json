@@ -1,0 +1,52 @@
+{
+  "id": "core-ac-uk",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.core.ac.uk/v3",
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://core.ac.uk/services/api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free: 10 requests/minute, 1,000 requests/day (per CORE docs/FAQ as of verification)",
+      "source": "https://core.ac.uk/services/api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Free tier: 10 req/min, 1,000 req/day; higher tiers have higher limits (published on CORE services/API pages)",
+      "source": "https://core.ac.uk/services/api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.core.ac.uk/docs/v3"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://core.ac.uk/services/api"
+    }
+  },
+  "notes": "Adversarial check against official CORE sources. Free tier rate limits are published (not \"unknown\"/\"not published\"). Verify signup URL path and current auth header wording against live docs."
+}

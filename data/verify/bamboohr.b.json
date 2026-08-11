@@ -1,0 +1,52 @@
+{
+  "id": "bamboohr",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.bamboohr.com/api/gateway.php/{companyDomain}/v1",
+      "source": "https://documentation.bamboohr.com/docs"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.bamboohr.com/docs"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.bamboohr.com/docs/getting-started"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.bamboohr.com/docs"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.bamboohr.com/docs"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.bamboohr.com/docs"
+    }
+  },
+  "notes": "Base URL is incomplete; full path is /api/gateway.php/{companyDomain}/v1. Auth is HTTP Basic with API key as username and 'x' as password. No free public API tier. Rate limits not published. Entry otherwise operational."
+}

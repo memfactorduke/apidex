@@ -1,0 +1,44 @@
+{
+  "id": "azure-devops",
+  "status": "operational",
+  "name": "Azure DevOps REST API",
+  "category": "dev-tools",
+  "tagline": "Microsoft DevOps platform API for repos, pipelines, boards, artifacts, and work items",
+  "description": "Microsoft\u2019s Azure DevOps REST API provides programmatic access to Azure DevOps Services (cloud) and Azure DevOps Server (on-prem). Developers can manage Git repositories, CI/CD pipelines, work items, boards, test plans, artifacts, and organization settings. Authentication typically uses personal access tokens (PATs), OAuth 2.0, or Microsoft Entra ID. API versioning is query-parameter based (api-version).",
+  "base_url": "https://dev.azure.com",
+  "docs_url": "https://learn.microsoft.com/en-us/rest/api/azure/devops/",
+  "signup_url": "https://azure.microsoft.com/en-us/products/devops/",
+  "auth": {
+    "type": "other",
+    "details": "Personal Access Token (PAT) via HTTP Basic (username empty or arbitrary, password=PAT) or Bearer token; also OAuth 2.0 and Microsoft Entra ID. Header: Authorization: Basic BASE64(:PAT) or Authorization: Bearer TOKEN"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Azure DevOps Services free tier: first 5 users free; free Basic plan includes unlimited private Git repos, work item tracking, and 1,800 minutes of Microsoft-hosted CI/CD per month for open source / limited for private; API usage is not separately metered by request count in public docs \u2014 tied to Azure DevOps service plan",
+    "paid_plans": "Basic plan ~$6/user/month after free users; Basic + Test Plans and other add-ons available; enterprise via Microsoft"
+  },
+  "rate_limits": "not published as a simple global RPS; Azure DevOps enforces per-organization/resource throttling (HTTP 429) with Retry-After; exact numeric limits vary and are not fully published for all resources",
+  "example": {
+    "request": "curl -u :YOUR_API_KEY \"https://dev.azure.com/{organization}/_apis/projects?api-version=7.1\"",
+    "response_snippet": "{\"count\":1,\"value\":[{\"id\":\"...\",\"name\":\"MyProject\",\"description\":\"...\",\"url\":\"https://dev.azure.com/{org}/_apis/projects/...\",\"state\":\"wellFormed\",\"visibility\":\"private\"}]}"
+  },
+  "use_cases": [
+    "list Azure DevOps projects in an organization",
+    "create or update work items and query boards",
+    "trigger or inspect CI/CD pipeline runs",
+    "clone/list Git repositories and pull requests",
+    "download build artifacts or package feeds",
+    "manage team members and permissions"
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/rest/api/azure/devops/",
+    "https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate",
+    "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/"
+  ],
+  "researcher_confidence": "medium"
+}

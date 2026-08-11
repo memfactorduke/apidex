@@ -1,0 +1,43 @@
+{
+  "id": "bnb-api",
+  "status": "operational",
+  "name": "British National Bibliography API",
+  "category": "education-reference",
+  "tagline": "British Library Linked Data API for UK published works via SPARQL and RDF.",
+  "description": "Public Linked Data interface to the British National Bibliography (BNB), exposing UK national bibliography records as RDF over HTTP and SPARQL. Used for bibliographic lookup of books and other UK-published works; heritage open-data style access rather than a modern REST product API.",
+  "base_url": "https://bnb.data.bl.uk",
+  "docs_url": "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public SPARQL and Linked Data endpoints; open access bibliographic data."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml",
+    "other"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s -H 'Accept: application/sparql-results+json' --get 'https://bnb.data.bl.uk/sparql' --data-urlencode 'query=SELECT ?s WHERE { ?s a <http://purl.org/ontology/bibo/Book> } LIMIT 1'",
+    "response_snippet": "{\"head\":{\"vars\":[\"s\"]},\"results\":{\"bindings\":[{\"s\":{\"type\":\"uri\",\"value\":\"http://bnb.data.bl.uk/id/resource/...\"}}]}}"
+  },
+  "use_cases": [
+    "look up UK published books by title or ISBN in BNB",
+    "run SPARQL queries over British National Bibliography RDF",
+    "resolve bibliographic Linked Data URIs for UK works",
+    "build library catalog enrichment from open BNB data"
+  ],
+  "sources": [
+    "https://bl.iro.bl.uk/concern/datasets/9cd0b8ab-9870-4ba7-8a68-d0bf81e0a931",
+    "https://bnb.data.bl.uk"
+  ],
+  "researcher_confidence": "low"
+}

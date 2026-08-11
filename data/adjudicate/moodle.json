@@ -1,0 +1,15 @@
+{
+  "id": "moodle",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Moodle Web Services expose each Moodle site's enabled LMS functions through site-specific endpoints and protocols such as REST. Each site controls its services, functions, and user tokens. Moodle may be self-hosted, hosted directly by Moodle through MoodleCloud, or hosted by a Moodle Certified Partner or Service Provider; there is no single global API endpoint.",
+  "status": null,
+  "resolution_notes": "cors: Set to yes. Moodle 5.2 says Moodle sets Access-Control-Allow-Origin: * for Web Service requests, though infrastructure may remove it: https://docs.moodle.org/502/en/Moodle_app_FAQ. description: Corrected. Moodle lists three deployment paths\u2014MoodleCloud hosted by Moodle, Certified Partners/Service Providers, and self-hosting: https://support.moodle.com/support/solutions/articles/80000825155-moodlecloud-and-moodle-hosting-options"
+}

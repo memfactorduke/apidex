@@ -1,0 +1,40 @@
+{
+  "id": "uspto-patentsview",
+  "status": "operational",
+  "name": "USPTO PatentsView",
+  "category": "legal-compliance",
+  "tagline": "Official USPTO patent search and bulk analytics API for US patents and inventors",
+  "description": "PatentsView provides programmatic access to USPTO patent data including patents, inventors, assignees, and citations. It supports structured search queries for US patent documents and related entities, enabling bulk analytics, prior-art research, and inventor/assignee lookups. The API is the developer-facing interface for PatentsView\u2019s open patent data platform.",
+  "base_url": "https://search.patentsview.org/api/v1",
+  "docs_url": "https://search.patentsview.org/docs/",
+  "signup_url": "https://patentsview.org/apis/keyrequest",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required via X-Api-Key header; self-serve key request on PatentsView site"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"X-Api-Key: YOUR_API_KEY\" \"https://search.patentsview.org/api/v1/patent/?q={\\\"patent_id\\\":\\\"10000000\\\"}&f=[\\\"patent_id\\\",\\\"patent_title\\\"]\"",
+    "response_snippet": "{\"error\":false,\"count\":1,\"total_hits\":1,\"patents\":[{\"patent_id\":\"10000000\",\"patent_title\":\"...\"}]}"
+  },
+  "use_cases": [
+    "search US patents by keyword or patent number",
+    "look up inventors and assignees for a patent",
+    "retrieve citation networks for prior-art analysis",
+    "bulk-export patent metadata for analytics"
+  ],
+  "sources": [
+    "https://search.patentsview.org/docs/"
+  ],
+  "researcher_confidence": "low"
+}

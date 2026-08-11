@@ -1,0 +1,96 @@
+{
+  "id": "tcgplayer",
+  "status": "operational",
+  "name": "TCGplayer API",
+  "category": "games-comics",
+  "tagline": "Marketplace product catalog and market pricing for Magic, Pok\u00e9mon, Yu-Gi-Oh, and more",
+  "description": "TCGplayer API provides access to product catalog data and market pricing for trading card games including Magic: The Gathering, Pok\u00e9mon, Yu-Gi-Oh!, and other TCGs. Developers can query products, categories, pricing, and marketplace information for building collection tools, price trackers, and inventory apps.",
+  "base_url": "https://api.tcgplayer.com",
+  "docs_url": "https://docs.tcgplayer.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "oauth2",
+    "details": "unknown"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl --request GET --header \"Accept: application/json\" --header \"Authorization: bearer BEARER_TOKEN\" \"https://api.tcgplayer.com/v1.39.0/catalog/categories\"",
+    "response_snippet": "{\"success\":true,\"errors\":[],\"results\":[{\"categoryId\":1,\"name\":\"Magic\"},{\"categoryId\":3,\"name\":\"Pokemon\"},{\"categoryId\":2,\"name\":\"YuGiOh\"}]}"
+  },
+  "use_cases": [
+    "get current market price for a Magic card",
+    "search Pok\u00e9mon product catalog by name"
+  ],
+  "sources": [
+    "https://docs.tcgplayer.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "free_tier_limits": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "rate_limits",
+      "description"
+    ],
+    "corrected": [
+      "auth_type",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "free_tier",
+      "free_tier_limits",
+      "cors"
+    ]
+  }
+}

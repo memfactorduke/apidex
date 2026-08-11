@@ -1,0 +1,43 @@
+{
+  "id": "soilgrids",
+  "status": "operational",
+  "name": "SoilGrids",
+  "category": "agriculture",
+  "tagline": "Global soil property maps via REST for precision-ag planning",
+  "description": "SoilGrids is an ISRIC REST API that provides globally consistent soil property predictions (texture fractions, pH, organic carbon, bulk density, and related layers) on a regular grid. Developers query by coordinates and depth intervals to retrieve modeled values and uncertainty for site assessment, agronomic planning, and environmental modeling without hosting the full soil map stacks.",
+  "base_url": "https://rest.isric.org/soilgrids/v2.0",
+  "docs_url": "https://rest.isric.org/soilgrids/v2.0/docs",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for the public REST endpoints; requests are made directly without API keys or OAuth."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public free access; no paid plans documented. Fair-use rate limiting applies (exact free quota not published as a numeric allowance).",
+    "paid_plans": null
+  },
+  "rate_limits": "not published as fixed numeric quotas; fair-use / anti-abuse throttling may apply (see ISRIC SoilGrids REST notes)",
+  "example": {
+    "request": "curl -s \"https://rest.isric.org/soilgrids/v2.0/properties/query?lon=5.0&lat=52.0&property=phh2o&depth=0-5cm&value=mean\"",
+    "response_snippet": "{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[5.0,52.0]},\"properties\":{\"layers\":[{\"name\":\"phh2o\",\"unit_measure\":{\"d_factor\":10,\"mapped_units\":\"pH*10\",\"target_units\":\"pH\",\"uncertainty_unit\":\"\"},\"depths\":[{\"label\":\"0-5cm\",\"range\":{\"top_depth\":0,\"bottom_depth\":5,\"unit_depth\":\"cm\"},\"values\":{\"mean\":55}}]}]}}"
+  },
+  "use_cases": [
+    "get soil pH at a farm field lat/lon",
+    "fetch clay/silt/sand texture fractions for a plot",
+    "retrieve soil organic carbon stock for a depth interval",
+    "sample bulk density and related properties for site suitability",
+    "batch-query soil layers for precision-ag planning polygons (via multiple point queries)"
+  ],
+  "sources": [
+    "https://rest.isric.org/soilgrids/v2.0/docs",
+    "https://www.isric.org/explore/soilgrids",
+    "https://www.isric.org/explore/soilgrids/faq-soilgrids"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "payu",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/api/"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://developers.payu.com/europe/docs/payment-flows/",
+      "source": "https://developers.payu.com/europe/docs/payment-flows/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/docs/payment-flows/auth-and-order/"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://poland.payu.com/wp-content/uploads/sites/14/2025/10/table_of_costs_and_commissions_en.pdf"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://poland.payu.com/wp-content/uploads/sites/14/2025/10/table_of_costs_and_commissions_en.pdf"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/api/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/api/"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/docs/payment-flows/auth-and-order/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.payu.com/europe/docs/"
+    }
+  },
+  "notes": "The API is operational and the production base URL, OAuth flow, token example, order operations, payment-method retrieval, capture, and refunds are current. The submitted docs path is obsolete; the canonical payment-flows page omits /overview/. Pricing is market-specific, so universal free-tier claims cannot be verified. No numerical rate quota or CORS policy was found."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "cypress-cloud",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "No public REST base URL is documented as https://api.cypress.io; Cypress Cloud uses project recording keys and GraphQL/cloud endpoints documented under docs.cypress.io (verify current cloud API host from official docs).",
+      "source": "https://docs.cypress.io"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.cypress.io/cloud/get-started/introduction (or current Cloud section root \u2014 the path /api/cloud/introduction returns 404)",
+      "source": "https://docs.cypress.io"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "recordKey / project API key for test recording; cloud dashboard access is account-based \u2014 not a documented generic Bearer API key for a public HTTP REST API at api.cypress.io",
+      "source": "https://docs.cypress.io"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.cypress.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Documented usage is cypress run --record --key <record-key>, not curl Authorization: Bearer against https://api.cypress.io/",
+      "source": "https://docs.cypress.io"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Cypress Cloud is real and records runs, but it does not document a public general-purpose HTTP REST API for querying runs/specs/results at https://api.cypress.io as claimed.",
+      "source": "https://docs.cypress.io"
+    }
+  },
+  "notes": "Placeholder \u2014 verifying against live official docs before finalizing."
+}

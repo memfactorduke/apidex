@@ -1,0 +1,52 @@
+{
+  "id": "solcast",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.solcast.com.au/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.solcast.com/sdk"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.solcast.com.au/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.solcast.com.au/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Current API evaluation includes up to 15 Historic Time Series requests and 10 Live/Forecast requests at the user's locations, plus unlimited requests at designated unmetered locations. Separate hobbyist and researcher offers have their own eligibility and limits.",
+      "source": "https://solcast.com/pricing/energy-data"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.solcast.com.au/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.solcast.com.au/data/live/radiation_and_weather?latitude=-33.856784&longitude=151.215297&hours=1&period=PT30M&output_parameters=ghi&format=json&api_key=YOUR_API_KEY\"",
+      "source": "https://docs.solcast.com.au/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.solcast.com/"
+    }
+  },
+  "notes": "Official sources were checked on 2026-08-11, and Solcast's status page reported the API operational. The example uses an undocumented legacy World API path; current documentation uses /data/live/radiation_and_weather. Rate limits are plan- and product-specific and visible in the Toolkit, with no universal public number. No official CORS policy was found."
+}

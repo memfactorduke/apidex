@@ -1,0 +1,96 @@
+{
+  "id": "complyadvantage",
+  "status": "operational",
+  "name": "ComplyAdvantage",
+  "category": "legal-compliance",
+  "tagline": "AML screening API for sanctions, PEPs, and adverse media with match scoring.",
+  "description": "ComplyAdvantage provides enterprise anti-money-laundering (AML) screening APIs for sanctions lists, politically exposed persons (PEPs), and adverse media. Developers can submit individuals or organizations for screening, receive match scores and risk signals, and integrate ongoing monitoring into onboarding and compliance workflows.",
+  "base_url": "https://api.complyadvantage.com",
+  "docs_url": "https://docs.complyadvantage.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication (exact header/scheme not fully verified in this pass)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "600 API calls per minute by default for standard contracts; 300 API calls per minute for sandbox accounts. Higher limits may be configured for client volume.",
+  "example": {
+    "request": "curl -s -H \"Authorization: Token YOUR_API_KEY\" \"https://api.complyadvantage.com/searches\"",
+    "response_snippet": "{ \"content\": { \"data\": { \"id\": \"...\", \"match_status\": \"potential_match\", \"score\": 0.95 } } }"
+  },
+  "use_cases": [
+    "screen a customer name against sanctions and PEP lists",
+    "check adverse media risk for an individual or company",
+    "score and triage AML match results for onboarding",
+    "monitor ongoing watchlist changes for existing customers"
+  ],
+  "sources": [
+    "https://docs.complyadvantage.com/",
+    "https://api.complyadvantage.com"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "free_tier_limits",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "jsearch",
+  "status": "operational",
+  "name": "JSearch",
+  "category": "jobs-careers",
+  "tagline": "Aggregated global job search across LinkedIn, Indeed, Glassdoor and more via RapidAPI.",
+  "description": "JSearch provides a unified job search API that aggregates listings from major platforms including LinkedIn, Indeed, Glassdoor, and others. Accessible via RapidAPI, it enables developers to search jobs by keyword, location, date, and other filters, retrieve job details, and power career-related applications with real-time employment data.",
+  "base_url": "https://jsearch.p.rapidapi.com",
+  "docs_url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch",
+  "signup_url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-RapidAPI-Key header (RapidAPI subscription required), self-serve signup on RapidAPI"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "200 requests per month, hard limit",
+    "paid_plans": null
+  },
+  "rate_limits": "Free: 1,000 requests/hour; Pro: 5 requests/second; Ultra: 10 requests/second; Mega: 20 requests/second; Pay As You Go: 5 requests/second.",
+  "example": {
+    "request": "curl --request GET --url 'https://jsearch.p.rapidapi.com/search?query=developer%20jobs%20in%20chicago&page=1&num_pages=1' --header 'X-RapidAPI-Key: YOUR_API_KEY' --header 'X-RapidAPI-Host: jsearch.p.rapidapi.com'",
+    "response_snippet": "{\"status\":\"OK\",\"request_id\":\"...\",\"parameters\":{\"query\":\"developer jobs in chicago\",\"page\":1,\"num_pages\":1},\"data\":[{\"job_id\":\"...\",\"employer_name\":\"...\",\"job_title\":\"Software Developer\",\"job_city\":\"Chicago\",\"job_country\":\"US\",\"job_apply_link\":\"https://...\"}]}"
+  },
+  "use_cases": [
+    "search jobs by keyword and location across LinkedIn/Indeed/Glassdoor",
+    "get detailed job posting by job ID",
+    "filter jobs by employment type, experience, or posting date",
+    "power a job board or career-matching app with aggregated listings"
+  ],
+  "sources": [
+    "https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

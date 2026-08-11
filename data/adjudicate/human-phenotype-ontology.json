@@ -1,0 +1,15 @@
+{
+  "id": "human-phenotype-ontology",
+  "base_url": null,
+  "docs_url": "https://ontology.jax.org/api/hp/docs/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": "yes",
+  "example_request": "curl -s 'https://ontology.jax.org/api/hp/search?q=HP:0001250&limit=1'",
+  "example_response_snippet": "{\"terms\":[{\"id\":\"HP:0001250\",\"name\":\"Seizure\",\"definition\":\"A seizure is an intermittent abnormality of nervous system physiology characterized by a transient occurrence of signs and/or symptoms due to abnormal excessive or synchronous neuronal activity in the brain.\",\"synonyms\":[\"Epilepsy\",\"Epileptic seizure\",\"Seizures\"]}],\"totalCount\":1}",
+  "description": "JAX-hosted REST service for searching HPO terms, retrieving term records, and traversing ancestor, parent, child, and descendant relationships. Disease, gene, and medical-action annotations are provided through the separate Ontology Annotation Network API.",
+  "status": null,
+  "resolution_notes": "docs_url: replace with https://ontology.jax.org/api/hp/docs/; official Swagger lists HPO search, term, and hierarchy routes. cors: yes; https://github.com/TheJacksonLaboratory/ontology-service/blob/main/src/main/resources/application.yml sets server CORS enabled. example: use limit, not max; https://github.com/TheJacksonLaboratory/ontology-service/blob/main/src/main/java/org/jacksonlaboratory/controller/SearchController.java defines q/page/limit and -1 means all. description: remove annotation claims; https://ontology.jax.org/Annotations/ identifies annotations as a separate API."
+}

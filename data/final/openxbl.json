@@ -1,0 +1,97 @@
+{
+  "id": "openxbl",
+  "status": "operational",
+  "name": "OpenXBL",
+  "category": "games-comics",
+  "tagline": "Self-serve Xbox Live profiles, presence, achievements, and friends API",
+  "description": "OpenXBL provides third-party developers with REST access to Xbox Live profile, presence, achievements, friends, and related social data via the xbl.io platform. It is a community/self-serve wrapper around Xbox Live services rather than Microsoft's official Xbox API, aimed at apps that need player identity and gaming activity without building full Xbox partner integrations.",
+  "base_url": "https://api.xbl.io/api/v2",
+  "docs_url": "https://xbl.io/console",
+  "signup_url": "https://xbl.io/",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Authorization header (self-serve signup at xbl.io); some endpoints may also accept Authorization"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "150 requests per hour indefinitely; no credit card required.",
+    "paid_plans": null
+  },
+  "rate_limits": "Free 150/hour; Small 500/hour; Medium 2,500/hour; Large 5,000/hour; Enterprise custom. Limits reset hourly; excess returns HTTP 429. Microsoft per-user/per-title FGRL also applies.",
+  "example": {
+    "request": "curl -s \"https://api.xbl.io/api/v2/account\" -H \"X-Authorization: YOUR_API_KEY\" -H \"Accept: application/json\"",
+    "response_snippet": "{\"profileUsers\":[{\"id\":\"2533274798129181\",\"settings\":[{\"id\":\"Gamertag\",\"value\":\"xTACTICSx\"},{\"id\":\"Gamerscore\",\"value\":\"19165\"}]}]}"
+  },
+  "use_cases": [
+    "look up Xbox profile by gamertag or XUID",
+    "check a player's current presence or online status",
+    "list achievements for a title or player",
+    "fetch friends list and social graph",
+    "get recent games or activity for a player"
+  ],
+  "sources": [
+    "https://xbl.io/docs"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "docs_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": []
+  }
+}

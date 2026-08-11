@@ -1,0 +1,45 @@
+{
+  "id": "urlhaus",
+  "status": "operational",
+  "name": "URLHaus",
+  "category": "security-identity",
+  "tagline": "Malware URL threat intelligence sharing API from abuse.ch",
+  "description": "URLHaus is a free malware URL sharing platform by abuse.ch that provides an API for querying, downloading, and submitting URLs associated with malware payloads and phishing campaigns. Widely used by security tools and blocklists for real-time threat intelligence on malicious URLs.",
+  "base_url": "https://urlhaus-api.abuse.ch/v1",
+  "docs_url": "https://urlhaus-api.abuse.ch/",
+  "signup_url": "https://auth.abuse.ch/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Auth-Key header required (abuse.ch Auth Key from auth.abuse.ch); free self-serve registration"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "text"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free for non-commercial use; commercial use requires paid plan or permission",
+    "paid_plans": "Commercial licensing available via abuse.ch"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -X POST https://urlhaus-api.abuse.ch/v1/url/ -H \"Auth-Key: YOUR_API_KEY\" -d \"url=http://example.com/malware.exe\"",
+    "response_snippet": "{\"query_status\":\"ok\",\"id\":\"123456\",\"urlhaus_reference\":\"https://urlhaus.abuse.ch/url/123456/\",\"url\":\"http://example.com/malware.exe\",\"url_status\":\"online\",\"host\":\"example.com\",\"date_added\":\"2024-01-15 12:00:00 UTC\",\"threat\":\"malware_download\",\"blacklists\":{},\"payloads\":[]}"
+  },
+  "use_cases": [
+    "check if a URL is known malware or phishing",
+    "download recent malicious URL blocklists",
+    "look up payload hashes linked to a malware URL",
+    "submit a newly discovered malware URL",
+    "get host-based malware URL history"
+  ],
+  "sources": [
+    "https://urlhaus-api.abuse.ch/",
+    "https://urlhaus.abuse.ch/",
+    "https://auth.abuse.ch/"
+  ],
+  "researcher_confidence": "medium"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "meetup",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.meetup.com/gql-ext",
+      "source": "https://www.meetup.com/graphql/guide/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.meetup.com/api/guide/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.meetup.com/graphql/authentication/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false",
+      "source": "https://help.meetup.com/hc/en-us/articles/41467209211917-What-happens-to-my-API-access-when-my-Meetup-Pro-subscription-expires"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable: API access requires an active Meetup Pro subscription and is revoked when it expires.",
+      "source": "https://help.meetup.com/hc/en-us/articles/41467209211917-What-happens-to-my-API-access-when-my-Meetup-Pro-subscription-expires"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The GraphQL guide states 500 query points per 60 seconds; a current Help Center article separately says there is no strict automatic request cap and that usage is monitored.",
+      "source": "https://www.meetup.com/graphql/guide/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use POST https://api.meetup.com/gql-ext with Authorization: Bearer {YOUR_TOKEN}, Content-Type: application/json, and a JSON GraphQL query body. The legacy GET /find/upcoming_events request is obsolete.",
+      "source": "https://www.meetup.com/graphql/guide/"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://help.meetup.com/hc/en-us/articles/41455194927373-What-can-I-achieve-through-Meetup-s-API-and-what-are-its-limitations"
+    }
+  },
+  "notes": "Meetup replaced legacy REST access with a Pro-only GraphQL API in February 2025. The old docs URL currently redirects to the GraphQL guide. OAuth 2 is supported, with JWT also available. Official rate-limit pages conflict: the GraphQL guide states 500 points per 60 seconds, while the Help Center says no strict automatic cap. Official sources did not establish CORS or every claimed description capability."
+}

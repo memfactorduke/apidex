@@ -1,0 +1,52 @@
+{
+  "id": "loops",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://app.loops.so/api",
+      "source": "https://loops.so/docs/api-reference/intro"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/docs/api-reference"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/docs/api-reference/intro"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Fewer than 1,000 contacts and up to 4,000 marketing and transactional emails combined every 30 days; Loops branding is included.",
+      "source": "https://loops.so/docs/account/billing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Baseline API limit: 10 requests per second per team. Content API limit: 60 requests per 60 seconds per team.",
+      "source": "https://loops.so/docs/api-reference/intro"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "Cross-origin requests from client-side JavaScript are not supported; requests must be made server-side.",
+      "source": "https://loops.so/docs/api-reference/intro"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/docs/api-reference/find-contact"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://loops.so/changelog/content-api-goals"
+    }
+  },
+  "notes": "Current official docs and 2026 product updates show the API is active and campaign APIs are available to all users. The entry fails because its API root is not the documented base URL, and its free-tier limits, API rate limits, and CORS behavior are all currently published rather than unknown."
+}

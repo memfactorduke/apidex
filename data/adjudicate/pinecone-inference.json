@@ -1,0 +1,15 @@
+{
+  "id": "pinecone-inference",
+  "base_url": null,
+  "docs_url": "https://docs.pinecone.io/reference/api/introduction",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Starter includes 5,000,000 embedding tokens per month per model and 500 rerank requests per month for each of bge-reranker-v2-m3 and pinecone-rerank-v0.",
+  "rate_limits": "100 inference requests per second and 2,000 per minute per project; embedding-token and rerank-request limits also vary by model and plan.",
+  "cors": "no",
+  "example_request": "curl -X POST \"https://api.pinecone.io/embed\" -H \"Api-Key: YOUR_API_KEY\" -H \"Content-Type: application/json\" -H \"X-Pinecone-Api-Version: 2026-04\" -d '{\"model\":\"multilingual-e5-large\",\"parameters\":{\"input_type\":\"query\"},\"inputs\":[{\"text\":\"What is the capital of France?\"}]}'",
+  "example_response_snippet": "{\"model\":\"multilingual-e5-large\",\"vector_type\":\"dense\",\"data\":[{\"values\":[0.0123,-0.0456,0.0789]}],\"usage\":{\"total_tokens\":9}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "docs_url: replace; current overview: https://docs.pinecone.io/reference/api/introduction. free_tier_limits: replace; official quotas: https://docs.pinecone.io/reference/api/database-limits. rate_limits: replace; same URL publishes 100/s and 2,000/min. cors: set no; official warning: https://docs.pinecone.io/troubleshooting/cors-issues. example: replace; current schema/version: https://docs.pinecone.io/reference/api/2026-04/inference/generate-embeddings."
+}

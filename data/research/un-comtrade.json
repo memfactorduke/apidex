@@ -1,0 +1,44 @@
+{
+  "id": "un-comtrade",
+  "status": "operational",
+  "name": "UN Comtrade API",
+  "category": "government-open-data",
+  "tagline": "UN official API for global merchandise trade statistics by country, product, and partner",
+  "description": "The UN Comtrade API provides programmatic access to the United Nations International Trade Statistics Database (UN Comtrade), covering merchandise trade flows reported by countries worldwide. Developers can query imports, exports, re-exports, and related trade indicators by reporter, partner, commodity classification (HS, SITC, BEC), year, and flow type. Access requires free registration for a subscription key; higher-volume paid tiers are available for bulk or commercial use.",
+  "base_url": "https://comtradeapi.un.org",
+  "docs_url": "https://uncomtrade.org/docs/api-access/",
+  "signup_url": "https://comtradedeveloper.un.org/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Primary key (subscription key) via Ocp-Apim-Subscription-Key header after free self-serve registration at comtradedeveloper.un.org; also accepted as subscription-key query parameter"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free subscription: 500 calls/day, 100,000 records/month (verify current developer portal product limits)",
+    "paid_plans": "Premium/enterprise products via UN Comtrade developer portal; contact UN for bulk/commercial licensing"
+  },
+  "rate_limits": "Free: ~500 requests/day; premium tiers higher \u2014 confirm exact product quotas on comtradedeveloper.un.org",
+  "example": {
+    "request": "curl -s \"https://comtradeapi.un.org/data/v1/get/C/A/HS?reporterCode=842&period=2022&partnerCode=0&cmdCode=TOTAL&flowCode=M&maxRecords=5\" -H \"Ocp-Apim-Subscription-Key: YOUR_API_KEY\"",
+    "response_snippet": "{\"elapsedTime\":\"0.12s\",\"count\":1,\"data\":[{\"typeCode\":\"C\",\"freqCode\":\"A\",\"refPeriodId\":2022,\"reporterCode\":842,\"partnerCode\":0,\"cmdCode\":\"TOTAL\",\"flowCode\":\"M\",\"primaryValue\":...}]}"
+  },
+  "use_cases": [
+    "get annual HS trade totals for a reporter country and partner",
+    "list merchandise import/export values by commodity code and year",
+    "pull multi-year trade series for economic research or dashboards",
+    "compare bilateral trade flows between two countries",
+    "export Comtrade query results as CSV for offline analysis"
+  ],
+  "sources": [
+    "https://uncomtrade.org/docs/api-access/",
+    "https://comtradeapi.un.org/",
+    "https://comtradedeveloper.un.org/"
+  ],
+  "researcher_confidence": "medium"
+}

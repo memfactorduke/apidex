@@ -1,0 +1,47 @@
+{
+  "id": "opentopomap",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://a.tile.opentopomap.org (or the documented b/c subdomains)",
+      "source": "https://opentopomap.org/about#verwendung"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://opentopomap.org/about"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "source": "https://opentopomap.org/about#verwendung"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://opentopomap.org/about#verwendung"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "source": "https://opentopomap.org/about#haeufig-gestellte-fragen"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://opentopomap.org/about#haeufig-gestellte-fragen"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -sL \"https://a.tile.opentopomap.org/10/512/340.png\" -o tile.png",
+      "source": "https://opentopomap.org/about#verwendung"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://opentopomap.org/about"
+    }
+  },
+  "notes": "Official documentation requires an a, b, or c tile subdomain and documents PNG XYZ tiles, free attributed use, and avoidance of server-heavy mass downloads. It publishes no numeric request limit. The listed offline-prefetch use case is risky because mass downloads are explicitly discouraged."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "buildkite",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/rest-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/rest-api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/managing-api-tokens"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Default REST API rate limit is 200 requests per minute (not 100). Responses include RateLimit-Limit, RateLimit-Remaining, RateLimit-Reset headers; 429 when exceeded. Some endpoints have different limits \u2014 check docs and response headers.",
+      "source": "https://buildkite.com/docs/apis/rest-api"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/rest-api/user"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://buildkite.com/docs/apis/rest-api"
+    }
+  },
+  "notes": "Main error: rate limit is 200/min not 100/min per official REST API docs. Base URL, Bearer token auth, free plan, and GET /v2/user example check out. CORS not documented."
+}

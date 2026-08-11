@@ -1,0 +1,15 @@
+{
+  "id": "holidayapi",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "1,000,000 requests per month with no velocity throttling. Free use is non-commercial and limited to historical holidays; API data may be stored offline for no more than 24 hours.",
+  "rate_limits": "1,000,000 requests per month on every plan, resetting on the first day of each month at 00:00 UTC. No additional velocity limit is imposed; exceeding the monthly allowance returns HTTP 429.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "HolidayAPI provides API-key-authenticated REST access to public holidays and observances for 250 countries. Holiday queries use country and year, with documented filters including month, day, public, subdivisions, search, language, previous, and upcoming; there is no observed-date request filter. Paid plans permit commercial use and years 1\u20132050+, while the States & Provinces plan adds subdivision data. All plans advertise the same monthly request allowance.",
+  "status": null,
+  "resolution_notes": "free_tier_limits: replace unknown. Free use is historical-only and non-commercial; all plans allow 1,000,000 requests/month without velocity throttling, and free storage is capped at 24 hours (https://holidayapi.com/pricing; https://holidayapi.com/terms). rate_limits: replace not published. Docs specify monthly limits and HTTP 429; pricing gives the quota/reset (https://holidayapi.com/docs; https://holidayapi.com/pricing). description: replace. Docs list filters but not observed-date; pricing makes subdivisions paid and shows the same request allowance for every plan (same URLs)."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "remotive",
+  "status": "operational",
+  "name": "Remotive",
+  "category": "jobs-careers",
+  "tagline": "Free public JSON API for remote-only job listings from Remotive.",
+  "description": "Remotive provides a public unauthenticated JSON GET API for active remote job listings, with category, company_name, search, and limit filters. Results are delayed by 24 hours. Reuse requires Remotive attribution and backlinks, and submitting listings to third-party job sites is prohibited.",
+  "base_url": "https://remotive.com/api",
+  "docs_url": "https://remotive.com/api-documentation",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "Public job-list endpoints require no authentication. No API key signup for basic listing access."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Public API listings are delayed by 24 hours. Remotive advises no more than 4 requests per day and blocks clients exceeding 2 requests per minute.",
+    "paid_plans": null
+  },
+  "rate_limits": "Maximum 4 requests per day is advised; more than 2 requests per minute will be blocked.",
+  "example": {
+    "request": "curl -s 'https://remotive.com/api/remote-jobs?category=software-dev&limit=5'",
+    "response_snippet": "{\"0-legal-notice\":\"...\",\"job-count\":5,\"jobs\":[{\"id\":123,\"url\":\"https://remotive.com/remote-jobs/...\",\"title\":\"Senior Engineer\",\"company_name\":\"Example\",\"category\":\"Software Development\",\"job_type\":\"full_time\",\"candidate_required_location\":\"Worldwide\",\"salary\":\"\",\"publication_date\":\"2024-01-01T00:00:00\"}]}"
+  },
+  "use_cases": [
+    "list current remote software jobs",
+    "filter remote openings by category or search term",
+    "build a remote-job aggregator or alert bot",
+    "enrich a careers page with live Remotive listings"
+  ],
+  "sources": [
+    "https://remotive.com/api-documentation"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits",
+      "description"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

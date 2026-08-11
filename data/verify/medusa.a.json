@@ -1,0 +1,52 @@
+{
+  "id": "medusa",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.medusajs.com/api/admin"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.medusajs.com/api/admin"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.medusajs.com/api/admin"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/medusajs/medusa/blob/develop/LICENSE"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://medusajs.com/pricing/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes, with allowed origins configurable per deployment through projectConfig.http.adminCors",
+      "source": "https://docs.medusajs.com/learn/configurations/medusa-config"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X GET \"http://localhost:9000/admin/products\" -H \"Authorization: Basic YOUR_SECRET_API_KEY\"",
+      "source": "https://docs.medusajs.com/resources/commerce-modules/api-key/concepts"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.medusajs.com/api/admin"
+    }
+  },
+  "notes": "The localhost base is Medusa's official development URL, so HTTP 0 from an external checker does not establish that the API is dead; production uses each deployment's URL. The separate https=true value is misleading for this HTTP development URL but was not among the requested verdict fields. Cloud currently starts at $29/month, while the self-hosted software is MIT-licensed. Secret API keys require Basic, not Bearer, authentication."
+}

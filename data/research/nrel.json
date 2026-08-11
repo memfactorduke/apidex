@@ -1,0 +1,45 @@
+{
+  "id": "nrel",
+  "status": "operational",
+  "name": "NREL Developer Network",
+  "category": "energy-utilities",
+  "tagline": "US DOE open energy APIs for solar, wind, EV charging, and utility rates",
+  "description": "The NREL Developer Network provides free, API-key-authenticated access to U.S. Department of Energy data services including solar resource (NSRDB), PVWatts PV production estimates, Alternative Fuels Data Center (AFDC) station locators, utility rate databases, and wind resource tools. Developers self-register for an API key and call HTTPS REST endpoints that return JSON (and sometimes CSV/XML depending on the service). Designed for energy modeling, clean-transport apps, and research integrations.",
+  "base_url": "https://developer.nrel.gov/api",
+  "docs_url": "https://developer.nrel.gov/docs/",
+  "signup_url": "https://developer.nrel.gov/signup/",
+  "auth": {
+    "type": "apiKey",
+    "details": "Free API key from self-serve signup; pass as query param api_key=YOUR_API_KEY (primary). Some docs also accept X-Api-Key header."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "csv",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://developer.nrel.gov/api/alt-fuel-stations/v1.json?fuel_type=ELEC&state=CO&limit=1&api_key=YOUR_API_KEY\"",
+    "response_snippet": "{\"station_locator_url\":\"http://www.afdc.energy.gov/afdc/locator/stations/\",\"total_results\":1,\"station_counts\":{\"total\":1,\"fuels\":{\"ELEC\":{\"total\":1}}},\"fuel_stations\":[{\"id\":...,\"station_name\":\"...\",\"fuel_type_code\":\"ELEC\",\"city\":\"...\",\"state\":\"CO\"}]}"
+  },
+  "use_cases": [
+    "find EV charging stations near a US zip code or lat/lon",
+    "estimate PV system energy production with PVWatts for a site",
+    "get solar resource / irradiance data for a location (NSRDB)",
+    "look up utility electricity rates for a US address or utility",
+    "query wind resource or related renewable datasets for modeling"
+  ],
+  "sources": [
+    "https://developer.nrel.gov/docs/",
+    "https://developer.nrel.gov/",
+    "https://developer.nrel.gov/signup/"
+  ],
+  "researcher_confidence": "low"
+}

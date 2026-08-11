@@ -1,0 +1,52 @@
+{
+  "id": "tatoeba",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.tatoeba.org",
+      "source": "https://api.tatoeba.org/openapi.json"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://en.wiki.tatoeba.org/articles/show/api"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.tatoeba.org/openapi.json"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://api.tatoeba.org/openapi.json"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl 'https://api.tatoeba.org/v1/sentences?lang=eng&trans%3Alang=jpn&q=hello'",
+      "source": "https://en.wiki.tatoeba.org/articles/show/api-migration-v1"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Collaborative, open multilingual dataset of sentences and translations, available through a public read-only API.",
+      "source": "https://api.tatoeba.org/openapi.json"
+    }
+  },
+  "notes": "The current production API is v1 at api.tatoeba.org. The example uses the deprecated v0 host, path, and parameter names. Official documentation warns that results can include unapproved or orphaned, likely unproofread sentences, so calling the corpus gold-standard is misleading. No explicit quota or CORS policy was found."
+}

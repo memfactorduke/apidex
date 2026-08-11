@@ -1,0 +1,15 @@
+{
+  "id": "metrolinx-opendata",
+  "base_url": "https://api.openmetrolinx.com/OpenDataAPI",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -sS \"https://api.openmetrolinx.com/OpenDataAPI/api/V1/Stop/NextService/UN?key=YOUR_ACCESS_KEY\" -H \"Accept: application/json\"",
+  "example_response_snippet": "{\"Metadata\":{\"TimeStamp\":\"2026-08-11T14:29:30\",\"ErrorCode\":\"200\",\"ErrorMessage\":\"OK\"},\"NextService\":{\"Lines\":[{\"StopCode\":\"UN\",\"LineCode\":\"LW\",\"LineName\":\"Lakeshore West\",\"ServiceType\":\"T\",\"DirectionCode\":\"LW\",\"DirectionName\":\"LW - Aldershot GO\",\"ScheduledDepartureTime\":\"2026-08-11T14:30:00\",\"ComputedDepartureTime\":\"2026-08-11T14:32:00\"}]}}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: Corrected. Metrolinx\u2019s current official Open Data page links the GO API under https://api.openmetrolinx.com/OpenDataAPI, and the live API Help documents routes relative to that application: https://www.metrolinx.com/en/about-us/open-data and https://api.openmetrolinx.com/OpenDataAPI/Help. example: Corrected the hostname, application path, key placement, and response field names. The official Help requires an Access Key for every call and documents this endpoint and JSON schema: https://api.openmetrolinx.com/OpenDataAPI/Help/Api/en/GET-api-V1-Stop-NextService-StopCode"
+}

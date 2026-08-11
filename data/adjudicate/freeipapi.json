@@ -1,0 +1,15 @@
+{
+  "id": "freeipapi",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "60 requests per minute",
+  "rate_limits": "Free plan: 60 requests per minute per frontend domain or backend public IP. Unlimited paid plan: unlimited backend requests; each frontend user remains limited to 60 requests per minute.",
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": null,
+  "status": null,
+  "resolution_notes": "free_tier_limits: Verifier B is correct; the official pricing page lists 60 requests per minute for the free plan: https://freeipapi.com/. rate_limits: Verifier B is directionally correct but incomplete; the official rate-limit page confirms 60 requests per minute for free frontend and backend use and explains the paid Unlimited plan's frontend/backend distinctions: https://freeipapi.com/rate-limit."
+}

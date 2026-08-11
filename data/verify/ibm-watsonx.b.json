@@ -1,0 +1,52 @@
+{
+  "id": "ibm-watsonx",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/apidocs/watsonx-ai"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/apidocs/watsonx-ai"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "bearer: IBM Cloud IAM access token supplied in the Authorization header",
+      "source": "https://cloud.ibm.com/apidocs/watsonx-ai"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://cloud.ibm.com/catalog/services/watsonxai-runtime"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The Lite plan currently includes 300,000 tokens/data points, 20 capacity unit-hours, and 100 pages per month. Lite instances are deleted after 30 days of inactivity.",
+      "source": "https://cloud.ibm.com/catalog/services/watsonxai-runtime"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are published by plan: at least 2 inference requests per second for Lite and 8 requests per second for Essentials and Standard; actual limits can be higher.",
+      "source": "https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/wml-plans.html?context=wx"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Authorization must contain an IAM access token, not the API key itself. The example model ibm/granite-13b-chat-v2 was withdrawn in January 2025; current documentation directs chat inference to POST /ml/v1/text/chat with a supported model.",
+      "source": "https://cloud.ibm.com/apidocs/watsonx-ai"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "watsonx.ai is IBM's AI development studio and runtime for foundation models, tuning, RAG, deployment, and APIs. Governance and compliance capabilities belong to the separately offered watsonx.governance product within the wider watsonx platform.",
+      "source": "https://dataplatform.cloud.ibm.com/docs/content/?context=wx"
+    }
+  },
+  "notes": "The API remains operational, but the entry materially conflates watsonx.ai with watsonx.governance. Its example is unusable as written because it sends an API key where an IAM access token is required and selects a model withdrawn in 2025. The Lite allowance and published request limits are also stale or omitted."
+}

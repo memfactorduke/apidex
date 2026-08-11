@@ -1,0 +1,52 @@
+{
+  "id": "newsapi-ai",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/documentation?tab=searchArticles"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/documentation"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/documentation"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/plans"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "2,000 searches on the free plan; no credit card required.",
+      "source": "https://newsapi.ai/plans"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Maximum 5 simultaneous requests per user; excess requests receive HTTP 429.",
+      "source": "https://newsapi.ai/documentation"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "CORS enabled for all origins.",
+      "source": "https://newsapi.ai/plans"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/documentation?tab=searchArticles"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://newsapi.ai/media-monitoring"
+    }
+  },
+  "notes": "The API and documented v1 route remain current. The entry fails because three known facts were marked unknown or unpublished: the free plan includes 2,000 searches, the concurrency limit is five simultaneous requests, and CORS is enabled for all origins."
+}

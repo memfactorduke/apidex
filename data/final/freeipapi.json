@@ -1,0 +1,96 @@
+{
+  "id": "freeipapi",
+  "status": "operational",
+  "name": "FreeIPAPI",
+  "category": "geo-maps",
+  "tagline": "No-key free IP geolocation for location, timezone, currency, and ISP",
+  "description": "FreeIPAPI is a free IP geolocation API that returns location, timezone, currency, and ISP details for a client IP or a queried address without requiring an API key for basic use.",
+  "base_url": "https://freeipapi.com/api/json",
+  "docs_url": "https://docs.freeipapi.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for free endpoints; optional paid plans may use keys if offered."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "60 requests per minute",
+    "paid_plans": null
+  },
+  "rate_limits": "Free plan: 60 requests per minute per frontend domain or backend public IP. Unlimited paid plan: unlimited backend requests; each frontend user remains limited to 60 requests per minute.",
+  "example": {
+    "request": "curl -s https://freeipapi.com/api/json",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "geolocate a visitor IP",
+    "resolve timezone from IP",
+    "look up ISP for an IP",
+    "get currency for an IP location"
+  ],
+  "sources": [
+    "https://docs.freeipapi.com/",
+    "https://freeipapi.com/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

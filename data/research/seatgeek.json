@@ -1,0 +1,40 @@
+{
+  "id": "seatgeek",
+  "status": "operational",
+  "name": "SeatGeek Platform API",
+  "category": "events-holidays",
+  "tagline": "Ticket marketplace API for events, venues, performers, and listings",
+  "description": "SeatGeek Platform API provides access to events, venues, performers, and ticket listings data from the SeatGeek ticket marketplace. Developers can search events by location, performer, or date; retrieve venue details; and access ticket listing information with free developer access.",
+  "base_url": "https://api.seatgeek.com/2",
+  "docs_url": "https://platform.seatgeek.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "Client ID via query parameter or header; self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.seatgeek.com/2/events?client_id=YOUR_API_KEY\"",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "search events by location",
+    "get venue details",
+    "list performers",
+    "get ticket listings for an event"
+  ],
+  "sources": [
+    "https://platform.seatgeek.com/"
+  ],
+  "researcher_confidence": "low"
+}

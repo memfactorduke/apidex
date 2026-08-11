@@ -1,0 +1,15 @@
+{
+  "id": "posthog",
+  "base_url": "US public: https://us.i.posthog.com; US private: https://us.posthog.com; EU public: https://eu.i.posthog.com; EU private: https://eu.posthog.com",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Monthly: 1M analytics events, 5K session recordings, 1M feature-flag requests, 100K exceptions, 1,500 survey responses, 1M warehouse rows, 100K AI-observability events, 500 AI credits, and 10 GB of logs, plus other product-specific allowances.",
+  "rate_limits": "Private API: analytics 240/min and 1,200/hour; events/values 60/min and 300/hour; query 2,400/hour; local flag evaluation 600/min; other CRUD 480/min and 4,800/hour. Public POST capture and flag endpoints have no request-level limit.",
+  "cors": null,
+  "example_request": "curl -sS -L -H \"Content-Type: application/json\" -d '{\"api_key\":\"<ph_project_token>\",\"event\":\"event name\",\"distinct_id\":\"user distinct id\"}' https://us.i.posthog.com/i/v0/e/",
+  "example_response_snippet": "{\"status\":\"Ok\"}",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: corrected; distinct US/EU public and private hosts are documented at https://posthog.com/docs/api. free_tier_limits: corrected from current allowances at https://posthog.com/pricing. rate_limits: corrected from the official private/public limits at https://posthog.com/docs/api. example: corrected to the documented capture request and successful response at https://posthog.com/docs/api/capture and https://posthog.com/docs/api."
+}

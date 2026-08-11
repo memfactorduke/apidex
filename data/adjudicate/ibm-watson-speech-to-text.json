@@ -1,0 +1,15 @@
+{
+  "id": "ibm-watson-speech-to-text",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": "Plus plan: maximum 100 concurrent transcription requests across HTTP and WebSocket interfaces combined.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "IBM Watson Speech to Text converts audio to written text. It provides real-time WebSocket streaming and synchronous or asynchronous HTTP transcription, plus speaker labels and custom language models. Current large speech and next-generation models do not support acoustic-model customization. Common uses include transcription, live captions, voice interfaces, and speech analytics. Access is through IBM Cloud IAM credentials and region-specific endpoints.",
+  "status": null,
+  "resolution_notes": "rate_limits: Corrected; IBM publishes the Plus limit: https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-faq-pricing. cors: Corrected to yes; IBM explicitly confirms CORS: https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-data-security. description: Corrected; IBM states acoustic customization is limited to previous-generation models and unavailable for large and next-generation models: https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-customization."
+}

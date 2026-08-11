@@ -1,0 +1,197 @@
+{
+  "category": "finance",
+  "apis": [
+    {
+      "name": "IEX Cloud",
+      "slug": "iex-cloud",
+      "base_domain": "cloud.iexapis.com",
+      "docs_url": "https://iexcloud.io/docs/",
+      "why_notable": "US equities, funds, and crypto market data with a large free developer tier historically popular for stock apps.",
+      "free_tier": true
+    },
+    {
+      "name": "CoinGecko",
+      "slug": "coingecko",
+      "base_domain": "api.coingecko.com",
+      "docs_url": "https://docs.coingecko.com/",
+      "why_notable": "Widely used crypto market-data API covering prices, market caps, and historical charts for thousands of coins.",
+      "free_tier": true
+    },
+    {
+      "name": "CoinMarketCap",
+      "slug": "coinmarketcap",
+      "base_domain": "pro-api.coinmarketcap.com",
+      "docs_url": "https://coinmarketcap.com/api/documentation/v1/",
+      "why_notable": "Industry-standard cryptocurrency rankings and market metrics with a free Basic plan for developers.",
+      "free_tier": true
+    },
+    {
+      "name": "Open Exchange Rates",
+      "slug": "open-exchange-rates",
+      "base_domain": "openexchangerates.org",
+      "docs_url": "https://docs.openexchangerates.org/",
+      "why_notable": "Reliable FX rates API with historical data and a free forever plan for USD-base rates.",
+      "free_tier": true
+    },
+    {
+      "name": "Frankfurter",
+      "slug": "frankfurter",
+      "base_domain": "api.frankfurter.app",
+      "docs_url": "https://www.frankfurter.app/docs/",
+      "why_notable": "Free open forex rates API backed by ECB reference rates; no API key required.",
+      "free_tier": true
+    },
+    {
+      "name": "FRED",
+      "slug": "fred",
+      "base_domain": "api.stlouisfed.org",
+      "docs_url": "https://fred.stlouisfed.org/docs/api/fred/",
+      "why_notable": "St. Louis Fed economic data API \u2014 the go-to source for US macro indicators and time series.",
+      "free_tier": true
+    },
+    {
+      "name": "World Bank Open Data",
+      "slug": "world-bank",
+      "base_domain": "api.worldbank.org",
+      "docs_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation",
+      "why_notable": "Global development and economic indicators API used for country-level research and dashboards.",
+      "free_tier": true
+    },
+    {
+      "name": "SEC EDGAR",
+      "slug": "sec-edgar",
+      "base_domain": "data.sec.gov",
+      "docs_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "why_notable": "Official US SEC filings and company facts APIs for 10-K/10-Q, XBRL, and insider data.",
+      "free_tier": true
+    },
+    {
+      "name": "Plaid",
+      "slug": "plaid",
+      "base_domain": "production.plaid.com",
+      "docs_url": "https://plaid.com/docs/",
+      "why_notable": "Dominant banking and account-linking API for balances, transactions, auth, and identity in fintech apps.",
+      "free_tier": true
+    },
+    {
+      "name": "Stripe",
+      "slug": "stripe",
+      "base_domain": "api.stripe.com",
+      "docs_url": "https://docs.stripe.com/api",
+      "why_notable": "Payments, billing, and financial accounts platform API; free to develop and test with live-volume pricing.",
+      "free_tier": true
+    },
+    {
+      "name": "Binance",
+      "slug": "binance",
+      "base_domain": "api.binance.com",
+      "docs_url": "https://binance-docs.github.io/apidocs/spot/en/",
+      "why_notable": "Major crypto exchange public market-data and trading REST/WebSocket APIs with free market endpoints.",
+      "free_tier": true
+    },
+    {
+      "name": "Kraken",
+      "slug": "kraken",
+      "base_domain": "api.kraken.com",
+      "docs_url": "https://docs.kraken.com/api/",
+      "why_notable": "Established crypto exchange REST API for spot market data, OHLC, and order management.",
+      "free_tier": true
+    },
+    {
+      "name": "Stockdata.org",
+      "slug": "stockdata-org",
+      "base_domain": "api.stockdata.org",
+      "docs_url": "https://www.stockdata.org/documentation",
+      "why_notable": "Simple equities and news market-data API with a free developer plan.",
+      "free_tier": true
+    },
+    {
+      "name": "Intrinio",
+      "slug": "intrinio",
+      "base_domain": "api-v2.intrinio.com",
+      "docs_url": "https://docs.intrinio.com/",
+      "why_notable": "Institutional-grade fundamentals, options, and real-time market data with self-serve API access.",
+      "free_tier": true
+    },
+    {
+      "name": "Quodd",
+      "slug": "quodd",
+      "base_domain": "api.quodd.com",
+      "docs_url": "https://www.quodd.com/",
+      "why_notable": "Market data vendor APIs for equities and options used by financial platforms.",
+      "free_tier": false
+    },
+    {
+      "name": "Barchart OnDemand",
+      "slug": "barchart-ondemand",
+      "base_domain": "ondemand.websol.barchart.com",
+      "docs_url": "https://www.barchart.com/ondemand/api",
+      "why_notable": "Futures, options, and equities market data API popular with trading tools and research apps.",
+      "free_tier": true
+    },
+    {
+      "name": "CBOE LiveVol",
+      "slug": "cboe-livevol",
+      "base_domain": "cdn.cboe.com",
+      "docs_url": "https://www.cboe.com/delayed_quotes/api/",
+      "why_notable": "CBOE options and volatility data endpoints used for VIX and options market research.",
+      "free_tier": true
+    },
+    {
+      "name": "Treasury.gov Fiscal Data",
+      "slug": "us-treasury-fiscal-data",
+      "base_domain": "api.fiscaldata.treasury.gov",
+      "docs_url": "https://fiscaldata.treasury.gov/api-documentation/",
+      "why_notable": "US Treasury official fiscal, debt, and interest-rate datasets via a free open API.",
+      "free_tier": true
+    },
+    {
+      "name": "ECB Data Portal",
+      "slug": "ecb-data-portal",
+      "base_domain": "data-api.ecb.europa.eu",
+      "docs_url": "https://data.ecb.europa.eu/help/api/overview",
+      "why_notable": "European Central Bank SDMX REST API for euro-area rates, FX, and macro series.",
+      "free_tier": true
+    },
+    {
+      "name": "Coinbase Advanced Trade",
+      "slug": "coinbase",
+      "base_domain": "api.coinbase.com",
+      "docs_url": "https://docs.cdp.coinbase.com/advanced-trade/docs/welcome",
+      "why_notable": "Coinbase public market data and Advanced Trade APIs for crypto prices and orders.",
+      "free_tier": true
+    },
+    {
+      "name": "MetalpriceAPI",
+      "slug": "metalpriceapi",
+      "base_domain": "api.metalpriceapi.com",
+      "docs_url": "https://metalpriceapi.com/documentation",
+      "why_notable": "Precious metals and commodity FX-style rates API with a free tier for gold/silver apps.",
+      "free_tier": true
+    },
+    {
+      "name": "Abstract API Exchange Rates",
+      "slug": "abstract-exchange-rates",
+      "base_domain": "exchange-rates.abstractapi.com",
+      "docs_url": "https://docs.abstractapi.com/exchange-rates",
+      "why_notable": "Simple live and historical currency conversion API from Abstract with free monthly calls.",
+      "free_tier": true
+    },
+    {
+      "name": "API Ninjas",
+      "slug": "api-ninjas",
+      "base_domain": "api.api-ninjas.com",
+      "docs_url": "https://api-ninjas.com/api/cryptoprice",
+      "why_notable": "Multi-purpose developer API suite including stock price, crypto, inflation, and commodity endpoints.",
+      "free_tier": true
+    },
+    {
+      "name": "EOD Historical Data alternatives check",
+      "slug": "stock-news-api",
+      "base_domain": "stocknewsapi.com",
+      "docs_url": "https://stocknewsapi.com/documentation",
+      "why_notable": "Financial news API focused on ticker-tagged stock and crypto headlines for sentiment apps.",
+      "free_tier": true
+    }
+  ]
+}

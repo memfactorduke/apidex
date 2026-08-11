@@ -1,0 +1,52 @@
+{
+  "id": "descope",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://api.descope.com/v1",
+      "source": "https://docs.descope.com/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.descope.com/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "projectId+managementKey (Bearer projectId:managementKey)",
+      "source": "https://docs.descope.com/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.descope.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Free plan: 7,500 MAUs, community support",
+      "source": "https://www.descope.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -s https://api.descope.com/v1/auth/me -H \"Authorization: Bearer <projectId>:<sessionJwt>\"",
+      "source": "https://docs.descope.com/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.descope.com/"
+    }
+  },
+  "notes": "Placeholder response \u2014 replacing with verified research."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "rentcast",
+  "status": "operational",
+  "name": "RentCast API",
+  "category": "real-estate-housing",
+  "tagline": "US property records, rent/value AVMs, listings, and market stats via REST",
+  "description": "RentCast provides a REST API for nationwide US real estate data: 150M+ property records (attributes, owners, tax and sale history), AVM home value and long-term rent estimates with comparables, active sale/rental listings, and zip-code market statistics. Auth is an API key in the X-Api-Key header; billing is monthly request quotas with per-request overages. A free Developer plan includes 50 requests per month for testing.",
+  "base_url": "https://api.rentcast.io/v1",
+  "docs_url": "https://developers.rentcast.io/reference",
+  "signup_url": "https://app.rentcast.io/app/api",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via X-Api-Key header; self-serve signup at app.rentcast.io, create key and activate a plan on the API dashboard. Keys must stay server-side (not in public client code)."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Developer plan: 50 API requests/month free; overage $0.20 per additional request",
+    "paid_plans": "Foundation $74/mo (1,000 req, $0.06 overage); Growth $199/mo (5,000, $0.03); Scale $449/mo (25,000, $0.015); enterprise on request"
+  },
+  "rate_limits": "20 requests per second per API key (hard limit; 429 when exceeded), all plans",
+  "example": {
+    "request": "curl --request GET --url 'https://api.rentcast.io/v1/avm/rent/long-term?address=5500%20Grand%20Lake%20Dr%2C%20San%20Antonio%2C%20TX%2C%2078244' --header 'Accept: application/json' --header 'X-Api-Key: YOUR_API_KEY'",
+    "response_snippet": "{\"rent\":1620,\"rentRangeLow\":1550,\"rentRangeHigh\":1690,\"subjectProperty\":{\"formattedAddress\":\"5500 Grand Lake Dr, San Antonio, TX 78244\",\"propertyType\":\"Single Family\",\"bedrooms\":3,\"bathrooms\":2,\"squareFootage\":1878},\"comparables\":[{\"formattedAddress\":\"7306 Kingsland Dr, San Antonio, TX 78244\",\"price\":1627,\"correlation\":0.9873}]}"
+  },
+  "use_cases": [
+    "get long-term rent estimate and rental comps for a US address",
+    "get home value AVM estimate for a property",
+    "look up property record attributes, owner, tax, and sale history by address",
+    "search active sale or rental listings in a city or area",
+    "fetch zip-code market statistics and historical rent/price trends"
+  ],
+  "sources": [
+    "https://developers.rentcast.io/reference",
+    "https://developers.rentcast.io/reference/getting-started-guide",
+    "https://developers.rentcast.io/reference/billing-and-pricing",
+    "https://developers.rentcast.io/reference/rate-limits",
+    "https://developers.rentcast.io/reference/rent-estimate-long-term",
+    "https://developers.rentcast.io/reference/response-codes",
+    "https://developers.rentcast.io/llms.txt",
+    "https://www.rentcast.io/api"
+  ],
+  "researcher_confidence": "high"
+}

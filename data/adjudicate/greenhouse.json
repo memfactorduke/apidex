@@ -1,0 +1,15 @@
+{
+  "id": "greenhouse",
+  "base_url": null,
+  "docs_url": null,
+  "auth_type": "other",
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "Greenhouse Job Board provides public, unauthenticated GET endpoints for job-board data, including jobs, offices, departments, and application fields. It also provides a POST endpoint for submitting applications, which requires HTTP Basic Authentication using a Job Board API key.",
+  "status": null,
+  "resolution_notes": "auth_type: Set to other because authentication is mixed: GET endpoints require none, while application-submission POST requests require HTTP Basic Auth with a Job Board API key. Evidence: https://developers.greenhouse.io/job-board.html. description: Corrected because the API is not wholly read-only or unauthenticated; Greenhouse confirms that it exports public job data and imports applications through an authenticated POST endpoint. Evidence: https://support.greenhouse.io/hc/en-us/articles/10568627186203-Greenhouse-API-overview"
+}

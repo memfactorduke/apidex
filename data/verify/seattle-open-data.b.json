@@ -1,0 +1,48 @@
+{
+  "id": "seattle-open-data",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "source": "https://dev.socrata.com/docs/endpoints.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "source": "https://dev.socrata.com/foundry/data.seattle.gov/"
+    },
+    "auth_type": {
+      "verdict": "incorrect",
+      "correction": "none for public read-only datasets; an optional Socrata app token identifies the application and increases throttling limits but is not necessarily authentication",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "source": "https://www.seattle.gov/documents/Departments/Tech/OpenData/COS_OpenDataPolicy.pdf"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "App-token requests currently have no fixed numeric limit unless abusive or malicious; tokenless requests use a lower shared IP-based pool whose numeric threshold is unpublished.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Tokenless requests may be throttled based mainly on source IP; app-token requests are currently not throttled unless abusive or malicious, with HTTP 429 returned when throttled.",
+      "source": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "supported for read-only access to public datasets; Socrata drops authentication and authorization from CORS requests",
+      "source": "https://dev.socrata.com/docs/cors-and-jsonp.html"
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -X POST -H \"Content-Type: application/json\" -H \"X-App-Token: YOUR_API_KEY\" --data '{\"query\":\"SELECT *\",\"page\":{\"pageNumber\":1,\"pageSize\":5},\"includeSynthetic\":false}' \"https://cos-data.seattle.gov/api/v3/views/tazs-3rd5/query.json\"",
+      "source": "https://dev.socrata.com/foundry/cos-data.seattle.gov/tazs-3rd5"
+    },
+    "description": {
+      "verdict": "confirm",
+      "source": "https://www.seattle.gov/tech/reports-and-data/open-data/about-the-open-data-program"
+    }
+  },
+  "notes": "The service remains operational, but several metadata claims are stale or misclassified. Most importantly, tazs-3rd5 now documents cos-data.seattle.gov and SODA3, not the example's data.seattle.gov/resource URL. Current Socrata documentation also publishes throttling behavior and confirms CORS support."
+}

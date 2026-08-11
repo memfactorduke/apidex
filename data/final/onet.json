@@ -1,0 +1,101 @@
+{
+  "id": "onet",
+  "status": "operational",
+  "name": "O*NET Web Services",
+  "category": "jobs-careers",
+  "tagline": "U.S. occupation, skills, and career taxonomy from the Department of Labor",
+  "description": "O*NET Web Services is a REST API sponsored by the U.S. Department of Labor's Employment and Training Administration and developed by the National Center for O*NET Development. It provides occupational data and career-exploration services for more than 900 occupations, including access to the O*NET Database. Current v2 access requires approved organization/project registration, uses X-API-Key authentication, and returns JSON.",
+  "base_url": "https://api-v2.onetcenter.org",
+  "docs_url": "https://services.onetcenter.org/reference/",
+  "signup_url": "https://services.onetcenter.org/developer/",
+  "auth": {
+    "type": "apiKey",
+    "details": "HTTP Basic Auth with registered username and password (or API key credentials from free developer signup). Credentials are issued after account registration at services.onetcenter.org."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json",
+    "xml"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free after approved organization/project registration; attribution required. Personal use is unsupported. Access may be throttled or suspended above 5 requests/second or 50,000 requests/day.",
+    "paid_plans": null
+  },
+  "rate_limits": "No maximum rate is currently imposed. Published guidance is 5 requests/second and 50,000 requests/day. During limited availability, HTTP 429 may occur; wait at least 200 milliseconds before retrying.",
+  "example": {
+    "request": "curl \"https://api-v2.onetcenter.org/online/occupations/17-2051.00/\" -H \"X-API-Key: YOUR_API_KEY\"",
+    "response_snippet": "{\"code\":\"17-2051.00\",\"title\":\"Civil Engineers\",\"tags\":{\"bright_outlook\":true},\"description\":\"Perform engineering duties in planning, designing, and overseeing construction and maintenance of building structures and facilities, such as roads, railroads, airports, bridges, harbors, channels, dams, irrigation projects, pipelines, power plants, and water and sewage systems.\"}"
+  },
+  "use_cases": [
+    "look up occupation details by O*NET-SOC code",
+    "search occupations by keyword or title",
+    "get skills, abilities, and knowledge required for a job",
+    "list related occupations and career pathways",
+    "retrieve tools and technology used in an occupation"
+  ],
+  "sources": [
+    "https://services.onetcenter.org/reference/",
+    "https://services.onetcenter.org/developer/",
+    "https://www.onetcenter.org/web_services.html",
+    "https://services.onetcenter.org/"
+  ],
+  "researcher_confidence": "medium",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "incorrect"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "incorrect",
+        "b": "incorrect"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "free_tier"
+    ],
+    "corrected": [
+      "base_url",
+      "auth_type",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet",
+      "description"
+    ],
+    "unverifiable": []
+  }
+}

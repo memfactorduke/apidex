@@ -1,0 +1,52 @@
+{
+  "id": "pdfshift",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pdfshift.io/api-reference/convert-to-pdf"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pdfshift.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pdfshift.io/docs/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://pdfshift.io/pricing/"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pdfshift.io/docs/sandbox"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "2 requests per minute when unauthenticated; 250 documents per minute when authenticated; 10 documents per minute in sandbox mode",
+      "source": "https://docs.pdfshift.io/docs/rate-limit"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pdfshift.io/api-reference/convert-to-pdf"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.pdfshift.io/api-reference/convert-to-pdf"
+    }
+  },
+  "notes": "Rate limits are explicitly published. The separate auth details are also partly outdated: PDFShift moved API authentication from Basic Auth to the X-API-Key header on 2025-05-06. The current authenticated free plan provides 50 credits per month; sandbox conversions are watermarked and do not consume credits."
+}

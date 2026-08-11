@@ -1,0 +1,15 @@
+{
+  "id": "metro-transit-nextrip",
+  "base_url": "https://svc.metrotransit.org/nextrip",
+  "docs_url": null,
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": null,
+  "rate_limits": null,
+  "cors": null,
+  "example_request": "curl -s \"https://svc.metrotransit.org/nextrip/routes\"",
+  "example_response_snippet": "[{\"route_id\":\"991\",\"agency_id\":0,\"route_label\":\"Blue Line Bus\"},{\"route_id\":\"902\",\"agency_id\":0,\"route_label\":\"METRO Green Line\"}]",
+  "description": null,
+  "status": null,
+  "resolution_notes": "base_url: verifier correction adopted. Metro Transit's current OpenAPI lists all routes under /nextrip, including /nextrip/routes: https://svc.metrotransit.org/swagger/docs/v2/nextrip. example: verifier correction adopted. The official reference specifies GET https://svc.metrotransit.org/nextrip/routes: https://metrotransit.readme.io/reference/get_nextrip-routes; Metro Transit's 2026 production log records that request returning 200 and the shown JSON fields: https://rts.metrotransit.org/log."
+}

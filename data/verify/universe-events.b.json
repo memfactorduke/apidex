@@ -1,0 +1,52 @@
+{
+  "id": "universe-events",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.universe.com/docs/frequently-asked-questions"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.universe.com/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developers.universe.com/docs/authorizing-with-oauth"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.universe.com/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "The GraphQL API is included in Starter. Account and event-page creation have no upfront charge, but paid ticket sales incur service and processing fees; free events have no service fees. No API-call allowance is published.",
+      "source": "https://www.universe.com/pricing"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "Use the documented REST listings resource, for example: curl -H \"Authorization: Bearer ACCESS_TOKEN\" \"https://www.universe.com/api/v2/listings?user_id=<host_id>\". The submitted /events path and {\"events\":[]} response are not supported by the current REST documentation.",
+      "source": "https://developers.universe.com/docs/frequently-asked-questions"
+    },
+    "description": {
+      "verdict": "incorrect",
+      "correction": "Current documentation supports retrieving event, attendee, and sales data and mutations such as creating discount codes or access keys and checking in tickets. It does not substantiate API-based event creation or general ticket-inventory updating.",
+      "source": "https://developers.universe.com/docs/what-data-is-available"
+    }
+  },
+  "notes": "The API and documentation remain live in 2026. The decisive error is the example: Universe's REST collection is /api/v2/listings, while current event-oriented examples primarily use POST https://universe.com/graphql. The entry also overstates documented write capabilities."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "valorant-api",
+  "status": "operational",
+  "name": "Valorant-API",
+  "category": "games-comics",
+  "tagline": "Community REST API for Valorant agents, weapons, maps, and content without a Riot key.",
+  "description": "Valorant-API is a community-maintained public API that serves static Valorant game content\u2014agents, weapons, maps, skins, bundles, and related assets\u2014so developers can build tools and apps without a Riot Games API key. Responses are JSON over HTTPS, typically unauthenticated, and are aimed at catalogs, overlays, and content browsers rather than live match or account data.",
+  "base_url": "https://valorant-api.com/v1",
+  "docs_url": "https://dash.valorant-api.com/",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required for public static content endpoints."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s \"https://valorant-api.com/v1/agents\"",
+    "response_snippet": "{\"status\":200,\"data\":[{\"uuid\":\"...\",\"displayName\":\"Jett\",\"description\":\"...\"}]}"
+  },
+  "use_cases": [
+    "list all Valorant agents with roles and abilities",
+    "get weapon skins and levels for a catalog",
+    "fetch map metadata and splash images",
+    "look up content bundles and store offers metadata"
+  ],
+  "sources": [
+    "https://dash.valorant-api.com/",
+    "https://valorant-api.com/"
+  ],
+  "researcher_confidence": "low"
+}

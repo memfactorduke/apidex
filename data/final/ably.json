@@ -1,0 +1,95 @@
+{
+  "id": "ably",
+  "status": "operational",
+  "name": "Ably",
+  "category": "iot-devices",
+  "tagline": "Realtime messaging platform for pub/sub, presence, and IoT event fan-out",
+  "description": "Ably provides a realtime messaging platform with REST and realtime APIs for pub/sub messaging, presence, history, and push notifications. It supports protocols including MQTT and WebSockets and is commonly used for IoT event fan-out, live updates, and multiplayer-style synchronization. Developers authenticate with API keys and can use official SDKs or the REST API directly.",
+  "base_url": "https://rest.ably.io",
+  "docs_url": "https://ably.com/docs/api/rest-api",
+  "signup_url": "https://ably.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via HTTP Basic Auth (key name as username, key secret as password) or Authorization: Bearer; self-serve signup at ably.com"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "6,000,000 messages/month, 500 messages/second, 200 concurrent channels, and 200 concurrent connections.",
+    "paid_plans": null
+  },
+  "rate_limits": "Published and plan-specific. Free: 25,000 HTTP API requests/hour and 50 requests/second; 500 messages/second account-wide; 50 publishes/second per channel; 50 inbound and outbound messages/second per connection.",
+  "example": {
+    "request": "curl -u YOUR_API_KEY: 'https://rest.ably.io/channels/example/messages'",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "publish a message to a realtime channel",
+    "retrieve message history for a channel",
+    "check channel presence occupancy",
+    "send MQTT-compatible IoT device events via REST"
+  ],
+  "sources": [
+    "https://ably.com/docs/api/rest-api"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "confirm",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "confirm",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "base_url",
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "example",
+      "description"
+    ],
+    "corrected": [
+      "free_tier_limits",
+      "rate_limits"
+    ],
+    "unverifiable": []
+  }
+}

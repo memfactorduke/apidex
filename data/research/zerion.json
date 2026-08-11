@@ -1,0 +1,39 @@
+{
+  "id": "zerion",
+  "status": "operational",
+  "name": "Zerion",
+  "category": "crypto",
+  "tagline": "Wallet portfolio, DeFi positions, and transaction history API across many chains.",
+  "description": "Zerion API provides multi-chain wallet portfolio data, DeFi positions, transaction history, and related crypto data for developers building wallet and DeFi applications.",
+  "base_url": "https://api.zerion.io",
+  "docs_url": "https://developers.zerion.io/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication required; details to be verified from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" https://api.zerion.io/v1/wallets/0x.../positions/",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "get wallet portfolio balances across chains",
+    "list DeFi positions for an address",
+    "fetch transaction history for a wallet"
+  ],
+  "sources": [
+    "https://developers.zerion.io/"
+  ],
+  "researcher_confidence": "low"
+}

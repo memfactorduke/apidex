@@ -1,0 +1,38 @@
+{
+  "id": "skip",
+  "status": "defunct",
+  "name": "Alchemy Mempool (excluded)",
+  "category": "crypto",
+  "tagline": "Placeholder skip entry for excluded Alchemy Mempool API.",
+  "description": "This directory entry is intentionally skipped. Alchemy Mempool/wait was listed as a research target but Alchemy is excluded from the directory, so no product details are published for this slot.",
+  "base_url": "https://example.invalid",
+  "docs_url": "https://example.invalid",
+  "signup_url": null,
+  "auth": {
+    "type": "other",
+    "details": "Not researched; Alchemy is excluded from this directory."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -s https://example.invalid",
+    "response_snippet": "{\"status\":\"skip\",\"reason\":\"Alchemy excluded\"}"
+  },
+  "use_cases": [
+    "skip excluded Alchemy Mempool research target",
+    "placeholder for directory pipeline skip slot"
+  ],
+  "sources": [
+    "user instruction: Alchemy excluded; id must be skip"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "posthog",
+  "status": "operational",
+  "name": "PostHog",
+  "category": "social-communication",
+  "tagline": "Product analytics API with events, feature flags, and session data",
+  "description": "PostHog is a product analytics platform offering REST APIs for querying events, managing feature flags, persons, insights, and project data. Hosted Cloud (US/EU) and self-hosted deployments are supported; capture and query endpoints enable analytics automation and integrations.",
+  "base_url": "https://us.i.posthog.com",
+  "docs_url": "https://posthog.com/docs/api",
+  "signup_url": "https://app.posthog.com/signup",
+  "auth": {
+    "type": "apiKey",
+    "details": "Personal API key via Authorization: Bearer header for private endpoints; project API key for public capture endpoints. Self-serve signup."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl https://us.i.posthog.com/api/projects/",
+    "response_snippet": "{}"
+  },
+  "use_cases": [
+    "query product analytics events",
+    "manage feature flags programmatically"
+  ],
+  "sources": [
+    "https://posthog.com/docs/api"
+  ],
+  "researcher_confidence": "low"
+}

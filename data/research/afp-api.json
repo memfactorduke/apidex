@@ -1,0 +1,40 @@
+{
+  "id": "afp-api",
+  "status": "operational",
+  "name": "AFP API",
+  "category": "news-media",
+  "tagline": "International wire news and multimedia from Agence France-Presse.",
+  "description": "Content API from Agence France-Presse delivering international wire news, photos, video, and multimedia. Access is typically commercial and contract-based for publishers, media platforms, and enterprise products.",
+  "base_url": "https://api.afp.com",
+  "docs_url": "https://www.afp.com/en/products-services/afp-services/afp-api",
+  "signup_url": "https://www.afp.com/en/products-services/afp-services/afp-api",
+  "auth": {
+    "type": "other",
+    "details": "Commercial contract access; authentication method not fully public in marketing materials\u2014likely credentials issued after sales onboarding."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "no free tier",
+    "paid_plans": "Enterprise/contract pricing; contact AFP sales."
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.afp.com/v1/search?q=climate\"",
+    "response_snippet": "{\"status\":\"ok\",\"docs\":[{\"uno\":\"news:doc-id\",\"title\":\"Example headline\",\"published\":\"2026-01-01T12:00:00Z\"}]}"
+  },
+  "use_cases": [
+    "search international wire news by topic or keyword",
+    "fetch latest AFP stories for a news aggregator",
+    "retrieve multimedia assets linked to a story",
+    "monitor breaking international news feeds"
+  ],
+  "sources": [
+    "https://www.afp.com/en/products-services/afp-services/afp-api"
+  ],
+  "researcher_confidence": "low"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "openflights",
+  "status": "operational",
+  "name": "OpenFlights",
+  "category": "transportation",
+  "tagline": "Open airline, airport, and route datasets for aviation apps",
+  "description": "OpenFlights publishes downloadable reference datasets for airports, airlines, routes, planes, and countries. Widely used as a static aviation data source rather than a live query API; data is typically consumed via CSV downloads from openflights.org.",
+  "base_url": "https://raw.githubusercontent.com/jpatokal/openflights/master/data",
+  "docs_url": "https://openflights.org/data.html",
+  "signup_url": null,
+  "auth": {
+    "type": "none",
+    "details": "No authentication required; data files are publicly downloadable"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "csv"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free open data downloads; no API request limits published",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -sL 'https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat'",
+    "response_snippet": "1,\"Goroka Airport\",\"Goroka\",\"Papua New Guinea\",\"GKA\",\"AYGA\",-6.081689834590001,145.391998291,5282,10,\"U\",\"Pacific/Port_Moresby\",\"airport\",\"OurAirports\""
+  },
+  "use_cases": [
+    "look up airport coordinates by IATA code from airports.dat",
+    "build airline route graphs from routes.dat",
+    "resolve airline names and ICAO codes from airlines.dat",
+    "seed local aviation reference DBs for flight apps",
+    "map airport timezones for schedule UIs"
+  ],
+  "sources": [
+    "https://openflights.org/data.html",
+    "https://openflights.org/",
+    "https://github.com/jpatokal/openflights"
+  ],
+  "researcher_confidence": "medium"
+}

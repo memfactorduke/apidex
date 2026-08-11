@@ -1,0 +1,52 @@
+{
+  "id": "usajobs",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.usajobs.gov/api-reference/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.usajobs.gov/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.usajobs.gov/guides/authentication"
+    },
+    "free_tier": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "The official Rate Limiting guide publishes a maximum of 10,000 rows per Search Jobs query and 500 rows per page; it says the Code List API and Dynamic Search have no limits.",
+      "source": "https://developer.usajobs.gov/guides/rate-limiting"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://developer.usajobs.gov/tutorials/search-jobs"
+    },
+    "description": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    }
+  },
+  "notes": "Current official documentation, registration, and API-reference pages remain active. The entry fails because limits are published. Official sources support the REST search capabilities, JSON data, and required headers, but do not clearly state pricing or CORS behavior; therefore the free-tier claims and the description's claim that the API is free cannot be confirmed."
+}

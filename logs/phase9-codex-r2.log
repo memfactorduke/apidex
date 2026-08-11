@@ -1,0 +1,922 @@
+[codex-chain] phase 1: verify remainder (validate-and-rerun loop)
+wrote 380 codex jobs to pipeline/jobs-verify-codex.jsonl
+[codex-chain] verify round 1: 380 jobs
+[23:31:19] codex fleet start: 380 jobs, concurrency 6
+[23:32:58] verify-keycloak-b: OK in 100s (0 tok) [done 1, failed 0]
+[23:33:14] verify-keycloak-a: OK in 115s (0 tok) [done 2, failed 0]
+[23:33:20] verify-klaviyo-a: OK in 121s (0 tok) [done 3, failed 0]
+[23:33:47] verify-jupiter-b: OK in 148s (0 tok) [done 4, failed 0]
+[23:33:51] verify-klaviyo-b: OK in 153s (0 tok) [done 5, failed 0]
+[23:34:20] verify-kucoin-a: OK in 81s (0 tok) [done 6, failed 0]
+[23:34:54] verify-jsearch-b: OK in 215s (0 tok) [done 7, failed 0]
+[23:35:29] verify-kucoin-b: OK in 136s (0 tok) [done 8, failed 0]
+[23:35:59] verify-lambdatest-b: OK in 100s (0 tok) [done 9, failed 0]
+[23:36:14] verify-lambdatest-a: OK in 143s (0 tok) [done 10, failed 0]
+[23:36:23] verify-la-open-data-b: OK in 156s (0 tok) [done 11, failed 0]
+[23:36:36] verify-la-open-data-a: OK in 197s (0 tok) [done 12, failed 0]
+[23:36:57] verify-leakix-a: OK in 123s (0 tok) [done 13, failed 0]
+[23:37:30] verify-leakix-b: OK in 121s (0 tok) [done 14, failed 0]
+[23:37:41] verify-lepton-ai-a: OK in 101s (0 tok) [done 15, failed 0]
+[23:37:44] verify-levels-fyi-b: OK in 67s (0 tok) [done 16, failed 0]
+[23:37:54] verify-levels-fyi-a: OK in 91s (0 tok) [done 17, failed 0]
+[23:38:38] verify-lever-b: OK in 68s (0 tok) [done 18, failed 0]
+[23:38:48] verify-lepton-ai-b: OK in 154s (0 tok) [done 19, failed 0]
+[23:38:54] verify-loops-a: OK in 60s (0 tok) [done 20, failed 0]
+[23:38:54] verify-lever-a: OK in 117s (0 tok) [done 21, failed 0]
+[23:39:41] verify-libretranslate-b: OK in 117s (0 tok) [done 22, failed 0]
+[23:39:45] verify-libretranslate-a: OK in 125s (0 tok) [done 23, failed 0]
+[23:39:51] verify-loops-b: OK in 73s (0 tok) [done 24, failed 0]
+[23:40:03] verify-lseg-news-a: OK in 69s (0 tok) [done 25, failed 0]
+[23:40:16] verify-losant-a: OK in 88s (0 tok) [done 26, failed 0]
+[23:40:46] verify-losant-b: OK in 112s (0 tok) [done 27, failed 0]
+[23:54:16] verify-luma-b: OK in 840s (0 tok) [done 28, failed 0]
+[23:55:26] verify-magicthegathering-a: OK in 880s (0 tok) [done 29, failed 0]
+[23:57:15] verify-mailjet-a: OK in 109s (0 tok) [done 30, failed 0]
+[23:57:33] verify-magicthegathering-b: OK in 197s (0 tok) [done 31, failed 0]
+[23:58:03] verify-lseg-news-b: OK in 1103s (0 tok) [done 32, failed 0]
+[23:58:25] verify-ludopedia-b: OK in 1114s (0 tok) [done 33, failed 0]
+[23:58:25] verify-luma-a: OK in 1102s (0 tok) [done 34, failed 0]
+[23:58:44] verify-malwarebazaar-a: OK in 71s (0 tok) [done 35, failed 0]
+[23:59:04] verify-mailjet-b: OK in 109s (0 tok) [done 36, failed 0]
+[23:59:25] verify-malwarebazaar-b: OK in 82s (0 tok) [done 37, failed 0]
+[23:59:50] verify-ludopedia-a: OK in 1204s (0 tok) [done 38, failed 0]
+[00:00:16] verify-maxio-chargify-b: OK in 111s (0 tok) [done 39, failed 0]
+[00:00:18] verify-maxio-chargify-a: OK in 113s (0 tok) [done 40, failed 0]
+[00:00:38] verify-medusa-a: OK in 113s (0 tok) [done 41, failed 0]
+[00:00:54] verify-medusa-b: OK in 110s (0 tok) [done 42, failed 0]
+[00:01:17] verify-memfault-a: OK in 61s (0 tok) [done 43, failed 0]
+[00:01:40] verify-memfault-b: OK in 82s (0 tok) [done 44, failed 0]
+[00:01:45] verify-meetup-a: OK in 140s (0 tok) [done 45, failed 0]
+[00:01:55] verify-meetup-b: OK in 126s (0 tok) [done 46, failed 0]
+[00:02:30] verify-metalpriceapi-a: OK in 73s (0 tok) [done 47, failed 0]
+[00:02:45] verify-metro-transit-nextrip-a: OK in 60s (0 tok) [done 48, failed 0]
+[00:03:08] verify-mempool-space-a: OK in 150s (0 tok) [done 49, failed 0]
+[00:03:18] verify-metalpriceapi-b: OK in 98s (0 tok) [done 50, failed 0]
+[00:03:20] verify-mempool-space-b: OK in 146s (0 tok) [done 51, failed 0]
+[00:04:03] verify-metro-transit-nextrip-b: OK in 128s (0 tok) [done 52, failed 0]
+[00:04:38] verify-metrolinx-opendata-a: OK in 128s (0 tok) [done 53, failed 0]
+[00:04:59] verify-microlink-b: OK in 101s (0 tok) [done 54, failed 0]
+[00:05:09] verify-metrolinx-opendata-b: OK in 144s (0 tok) [done 55, failed 0]
+[00:05:09] verify-microsoft-graph-calendar-a: OK in 109s (0 tok) [done 56, failed 0]
+[00:05:31] verify-microlink-a: OK in 143s (0 tok) [done 57, failed 0]
+[00:06:05] verify-mobygames-a: OK in 56s (0 tok) [done 58, failed 0]
+[00:06:17] verify-minor-planet-center-a: OK in 99s (0 tok) [done 59, failed 0]
+[00:06:33] verify-mobygames-b: OK in 84s (0 tok) [done 60, failed 0]
+[00:06:48] verify-microsoft-graph-calendar-b: OK in 164s (0 tok) [done 61, failed 0]
+[00:06:58] verify-minor-planet-center-b: OK in 119s (0 tok) [done 62, failed 0]
+[00:07:54] verify-modal-b: OK in 110s (0 tok) [done 63, failed 0]
+[00:08:06] verify-modal-a: OK in 156s (0 tok) [done 64, failed 0]
+[00:08:27] verify-myfitnesspal-a: OK in 99s (0 tok) [done 65, failed 0]
+[00:08:51] verify-moodle-a: OK in 154s (0 tok) [done 66, failed 0]
+[00:08:56] verify-myfitnesspal-b: OK in 118s (0 tok) [done 67, failed 0]
+[00:09:10] verify-moodle-b: OK in 158s (0 tok) [done 68, failed 0]
+[00:10:30] verify-nager-date-b: OK in 143s (0 tok) [done 69, failed 0]
+[00:10:40] verify-nasa-exoplanet-archive-a: OK in 133s (0 tok) [done 70, failed 0]
+[00:11:29] verify-nasa-power-b: OK in 138s (0 tok) [done 71, failed 0]
+[00:11:32] verify-nasa-power-a: OK in 157s (0 tok) [done 72, failed 0]
+[00:11:35] verify-nager-date-a: OK in 221s (0 tok) [done 73, failed 0]
+[00:11:44] verify-netlify-a: OK in 74s (0 tok) [done 74, failed 0]
+[00:27:53] verify-newswhip-b: OK in 968s (0 tok) [done 75, failed 0]
+[02:03:08] verify-nasa-exoplanet-archive-b: OK in 6857s (0 tok) [done 76, failed 0]
+[02:03:21] verify-newsapi-ai-b: OK in 6709s (0 tok) [done 77, failed 0]
+[02:05:42] verify-nowpayments-a: OK in 5869s (0 tok) [done 78, failed 0]
+[02:44:57] verify-netlify-b: OK in 9257s (0 tok) [done 79, failed 0]
+[02:45:05] verify-newsapi-ai-a: OK in 9216s (0 tok) [done 80, failed 0]
+[02:45:32] verify-newswhip-a: OK in 9237s (0 tok) [done 81, failed 0]
+[03:55:01] verify-nrel-a: OK in 6700s (0 tok) [done 82, failed 0]
+[03:55:10] verify-numbeo-a: OK in 4178s (0 tok) [done 83, failed 0]
+[03:55:20] verify-nowpayments-b: OK in 6732s (0 tok) [done 84, failed 0]
+[03:55:20] verify-nuget-a: OK in 4223s (0 tok) [done 85, failed 0]
+[03:55:52] verify-nuget-b: OK in 4248s (0 tok) [done 86, failed 0]
+[03:56:13] verify-nrel-b: OK in 6632s (0 tok) [done 87, failed 0]
+[04:11:39] verify-numbeo-b: OK in 998s (0 tok) [done 88, failed 0]
+[04:43:56] verify-ocr-space-a: OK in 2917s (0 tok) [done 89, failed 0]
+[04:44:15] verify-nvidia-nim-b: OK in 2936s (0 tok) [done 90, failed 0]
+[05:03:40] verify-nvidia-nim-a: OK in 4110s (0 tok) [done 91, failed 0]
+[05:04:04] verify-octopus-energy-b: OK in 3145s (0 tok) [done 92, failed 0]
+[05:35:44] verify-octopus-energy-a: OK in 5970s (0 tok) [done 93, failed 0]
+[05:36:18] verify-ocr-space-b: OK in 6026s (0 tok) [done 94, failed 0]
+[05:37:06] verify-oecd-data-a: OK in 3190s (0 tok) [done 95, failed 0]
+[07:11:12] verify-onet-a: OK in 5646s (0 tok) [done 96, failed 0]
+[07:11:29] verify-okx-a: OK in 5745s (0 tok) [done 97, failed 0]
+[07:11:41] verify-okx-b: OK in 5723s (0 tok) [done 98, failed 0]
+[07:12:26] verify-ofac-sanctions-a: OK in 7726s (0 tok) [done 99, failed 0]
+[07:12:39] verify-ofac-sanctions-b: OK in 7714s (0 tok) [done 100, failed 0]
+[07:13:24] verify-oecd-data-b: OK in 8949s (0 tok) [done 101, failed 0]
+[07:34:02] verify-ons-uk-a: OK in 1296s (0 tok) [done 102, failed 0]
+[07:34:54] verify-open-charge-map-a: OK in 1291s (0 tok) [done 103, failed 0]
+[07:35:04] verify-onfido-a: OK in 1415s (0 tok) [done 104, failed 0]
+[07:36:00] verify-open-charge-map-b: OK in 118s (0 tok) [done 105, failed 0]
+[07:36:55] verify-onet-b: OK in 1542s (0 tok) [done 106, failed 0]
+[07:38:06] verify-onfido-b: OK in 1585s (0 tok) [done 107, failed 0]
+[07:38:07] verify-open-meteo-geocoding-a: OK in 127s (0 tok) [done 108, failed 0]
+[08:04:29] verify-ons-uk-b: OK in 3110s (0 tok) [done 109, failed 0]
+[09:03:49] verify-open5e-a: OK in 3561s (0 tok) [done 110, failed 0]
+[09:04:50] verify-open-ownership-a: OK in 5205s (0 tok) [done 111, failed 0]
+[09:16:00] verify-open5e-b: OK in 731s (0 tok) [done 112, failed 0]
+[09:17:34] verify-opencorporates-b: OK in 94s (0 tok) [done 113, failed 0]
+[09:26:42] verify-open-meteo-geocoding-b: OK in 6587s (0 tok) [done 114, failed 0]
+[09:46:53] verify-opencorporates-a: OK in 2523s (0 tok) [done 115, failed 0]
+[11:20:07] verify-open-menu-b: OK in 13503s (0 tok) [done 116, failed 0]
+[11:48:56] verify-openei-urdb-b: OK in 8534s (0 tok) [done 117, failed 0]
+[12:06:53] verify-open-menu-a: timeout (attempt 1)
+[13:29:31] verify-open-ownership-b: timeout (attempt 1)
+[14:07:42] verify-openfigi-a: OK in 15649s (0 tok) [done 118, failed 0]
+[14:08:56] verify-open-ownership-b: OK in 2365s (0 tok) [done 119, failed 0]
+[14:32:15] verify-open-menu-a: OK in 8722s (0 tok) [done 120, failed 0]
+[14:32:23] verify-openflights-b: OK in 1480s (0 tok) [done 121, failed 0]
+[14:32:52] verify-openflights-a: OK in 9836s (0 tok) [done 122, failed 0]
+[15:25:00] verify-openholidays-api-a: OK in 4564s (0 tok) [done 123, failed 0]
+[15:25:08] verify-openei-urdb-a: timeout (attempt 1)
+[15:25:10] verify-openfigi-b: OK in 14703s (0 tok) [done 124, failed 0]
+[15:26:04] verify-opensea-a: OK in 64s (0 tok) [done 125, failed 0]
+[15:26:12] verify-opensea-b: OK in 61s (0 tok) [done 126, failed 0]
+[15:26:20] verify-opensanctions-a: OK in 3238s (0 tok) [done 127, failed 0]
+[15:26:24] verify-opensanctions-b: OK in 3212s (0 tok) [done 128, failed 0]
+[15:26:36] verify-openholidays-api-b: OK in 3261s (0 tok) [done 129, failed 0]
+[15:27:00] verify-openei-urdb-a: OK in 111s (0 tok) [done 130, failed 0]
+[15:27:43] verify-opentable-b: OK in 79s (0 tok) [done 131, failed 0]
+[15:27:45] verify-opentable-a: OK in 85s (0 tok) [done 132, failed 0]
+[15:27:52] verify-opentopomap-a: OK in 76s (0 tok) [done 133, failed 0]
+[15:28:27] verify-opensecrets-a: OK in 143s (0 tok) [done 134, failed 0]
+[15:28:42] verify-opensecrets-b: OK in 150s (0 tok) [done 135, failed 0]
+[15:29:09] verify-openxbl-a: OK in 77s (0 tok) [done 136, failed 0]
+[15:29:24] verify-opentopomap-b: OK in 144s (0 tok) [done 137, failed 0]
+[15:29:31] verify-openxbl-b: OK in 64s (0 tok) [done 138, failed 0]
+[15:29:53] verify-opentripmap-a: OK in 130s (0 tok) [done 139, failed 0]
+[15:30:03] verify-opentripmap-b: OK in 138s (0 tok) [done 140, failed 0]
+[15:30:49] verify-particle-b: OK in 45s (0 tok) [done 141, failed 0]
+[15:30:51] verify-particle-a: OK in 58s (0 tok) [done 142, failed 0]
+[15:31:08] verify-osrm-a: OK in 146s (0 tok) [done 143, failed 0]
+[15:31:12] verify-osrm-b: OK in 124s (0 tok) [done 144, failed 0]
+[15:31:31] verify-owntracks-a: OK in 127s (0 tok) [done 145, failed 0]
+[15:32:17] verify-owntracks-b: OK in 166s (0 tok) [done 146, failed 0]
+[15:32:18] verify-paystack-a: OK in 69s (0 tok) [done 147, failed 0]
+[15:32:21] verify-passport-index-b: OK in 91s (0 tok) [done 148, failed 0]
+[15:32:22] verify-passport-index-a: OK in 93s (0 tok) [done 149, failed 0]
+[15:32:24] verify-paystack-b: OK in 72s (0 tok) [done 150, failed 0]
+[15:33:14] verify-payu-a: OK in 103s (0 tok) [done 151, failed 0]
+[15:33:20] verify-pdfshift-a: OK in 58s (0 tok) [done 152, failed 0]
+[15:33:29] verify-pdfshift-b: OK in 66s (0 tok) [done 153, failed 0]
+[15:33:50] verify-pdf-co-b: OK in 88s (0 tok) [done 154, failed 0]
+[15:34:08] verify-payu-b: OK in 111s (0 tok) [done 155, failed 0]
+[15:34:20] verify-pdf-co-a: OK in 122s (0 tok) [done 156, failed 0]
+[15:34:28] verify-perenual-a: OK in 75s (0 tok) [done 157, failed 0]
+[15:34:45] verify-perenual-b: OK in 85s (0 tok) [done 158, failed 0]
+[15:35:05] verify-persona-a: OK in 96s (0 tok) [done 159, failed 0]
+[15:35:39] verify-personio-a: OK in 90s (0 tok) [done 160, failed 0]
+[15:35:41] verify-persona-b: OK in 112s (0 tok) [done 161, failed 0]
+[15:35:56] verify-personio-b: OK in 96s (0 tok) [done 162, failed 0]
+[15:36:29] verify-photon-a: OK in 84s (0 tok) [done 163, failed 0]
+[15:36:41] verify-philips-hue-b: OK in 116s (0 tok) [done 164, failed 0]
+[15:36:44] verify-philips-hue-a: OK in 136s (0 tok) [done 165, failed 0]
+[15:37:00] verify-pinecone-inference-a: OK in 79s (0 tok) [done 166, failed 0]
+[15:37:21] verify-photon-b: OK in 103s (0 tok) [done 167, failed 0]
+[15:37:24] verify-pinecone-inference-b: OK in 88s (0 tok) [done 168, failed 0]
+[15:37:29] verify-placeholder-a: OK in 59s (0 tok) [done 169, failed 0]
+[15:38:00] verify-placeholder-b: OK in 79s (0 tok) [done 170, failed 0]
+[15:39:11] verify-playerdb-a: OK in 109s (0 tok) [done 171, failed 0]
+[15:39:13] verify-posthog-a: OK in 104s (0 tok) [done 172, failed 0]
+[15:40:15] verify-predicthq-a: OK in 64s (0 tok) [done 173, failed 0]
+[15:40:17] verify-posthog-b: OK in 137s (0 tok) [done 174, failed 0]
+[15:40:22] verify-playerdb-b: OK in 178s (0 tok) [done 175, failed 0]
+[15:40:25] verify-plant-id-b: OK in 205s (0 tok) [done 176, failed 0]
+[15:40:38] verify-plant-id-a: OK in 234s (0 tok) [done 177, failed 0]
+[15:40:55] verify-predicthq-b: OK in 103s (0 tok) [done 178, failed 0]
+[15:41:10] verify-pricecharting-a: OK in 55s (0 tok) [done 179, failed 0]
+[15:41:46] verify-printify-a: OK in 84s (0 tok) [done 180, failed 0]
+[15:41:50] verify-pricecharting-b: OK in 93s (0 tok) [done 181, failed 0]
+[15:41:55] verify-propertyshark-a: OK in 77s (0 tok) [done 182, failed 0]
+[15:42:06] verify-propertyshark-b: OK in 70s (0 tok) [done 183, failed 0]
+[15:42:18] verify-printify-b: OK in 113s (0 tok) [done 184, failed 0]
+[15:42:44] verify-propublica-congress-b: OK in 58s (0 tok) [done 185, failed 0]
+[15:42:45] verify-propublica-congress-a: OK in 95s (0 tok) [done 186, failed 0]
+[15:42:58] verify-pulsedive-a: OK in 68s (0 tok) [done 187, failed 0]
+[15:43:06] verify-pulsedive-b: OK in 72s (0 tok) [done 188, failed 0]
+[15:43:23] verify-pulumi-cloud-a: OK in 78s (0 tok) [done 189, failed 0]
+[15:43:37] verify-pulumi-cloud-b: OK in 80s (0 tok) [done 190, failed 0]
+[15:44:01] verify-pvoutput-a: OK in 77s (0 tok) [done 191, failed 0]
+[15:44:18] verify-pvoutput-b: OK in 93s (0 tok) [done 192, failed 0]
+[15:44:56] verify-qr-code-generator-a: OK in 118s (0 tok) [done 193, failed 0]
+[15:45:20] verify-quad9-a: OK in 117s (0 tok) [done 194, failed 0]
+[15:45:24] verify-qr-code-generator-b: OK in 138s (0 tok) [done 195, failed 0]
+[15:45:31] verify-quad9-b: OK in 113s (0 tok) [done 196, failed 0]
+[15:45:40] verify-quickbooks-a: OK in 100s (0 tok) [done 197, failed 0]
+[15:45:44] verify-quickbooks-b: OK in 86s (0 tok) [done 198, failed 0]
+[15:46:35] verify-quicknode-b: OK in 75s (0 tok) [done 199, failed 0]
+[15:46:42] verify-quodd-a: OK in 79s (0 tok) [done 200, failed 0]
+[15:46:53] verify-quicknode-a: OK in 117s (0 tok) [done 201, failed 0]
+[15:47:09] verify-realtor-com-a: OK in 89s (0 tok) [done 202, failed 0]
+[15:47:20] verify-realtor-com-b: OK in 96s (0 tok) [done 203, failed 0]
+[15:47:31] verify-quodd-b: OK in 120s (0 tok) [done 204, failed 0]
+[15:47:52] verify-realty-mole-b: OK in 70s (0 tok) [done 205, failed 0]
+[15:48:07] verify-realty-mole-a: OK in 92s (0 tok) [done 206, failed 0]
+[15:48:54] verify-recruitee-b: OK in 105s (0 tok) [done 207, failed 0]
+[15:49:00] verify-recruitee-a: OK in 127s (0 tok) [done 208, failed 0]
+[15:49:18] verify-redfin-data-a: OK in 117s (0 tok) [done 209, failed 0]
+[15:49:24] verify-reed-b: OK in 77s (0 tok) [done 210, failed 0]
+[15:49:28] verify-reed-a: OK in 96s (0 tok) [done 211, failed 0]
+[15:49:40] verify-redfin-data-b: OK in 128s (0 tok) [done 212, failed 0]
+[15:50:30] verify-rentcast-a: OK in 62s (0 tok) [done 213, failed 0]
+[15:50:42] verify-rentcast-b: OK in 62s (0 tok) [done 214, failed 0]
+[15:50:43] verify-render-a: OK in 86s (0 tok) [done 215, failed 0]
+[15:50:44] verify-render-b: OK in 80s (0 tok) [done 216, failed 0]
+[15:50:53] verify-remotive-a: OK in 119s (0 tok) [done 217, failed 0]
+[15:51:13] verify-remotive-b: OK in 133s (0 tok) [done 218, failed 0]
+[15:51:52] verify-rest-countries-b: OK in 68s (0 tok) [done 219, failed 0]
+[15:52:03] verify-rev-ai-a: OK in 70s (0 tok) [done 220, failed 0]
+[15:52:17] verify-reso-web-api-a: OK in 107s (0 tok) [done 221, failed 0]
+[15:52:21] verify-rest-countries-a: OK in 98s (0 tok) [done 222, failed 0]
+[15:52:23] verify-reso-web-api-b: OK in 101s (0 tok) [done 223, failed 0]
+[15:52:28] verify-rev-ai-b: OK in 75s (0 tok) [done 224, failed 0]
+[15:53:08] verify-rightmove-a: OK in 76s (0 tok) [done 225, failed 0]
+[15:53:23] verify-rxterms-a: OK in 60s (0 tok) [done 226, failed 0]
+[15:53:27] verify-rxterms-b: OK in 59s (0 tok) [done 227, failed 0]
+[15:53:27] verify-rightmove-b: OK in 84s (0 tok) [done 228, failed 0]
+[15:54:26] verify-rome2rio-a: OK in 129s (0 tok) [done 229, failed 0]
+[15:54:30] verify-rome2rio-b: OK in 129s (0 tok) [done 230, failed 0]
+[15:54:37] verify-sambanova-cloud-b: OK in 74s (0 tok) [done 231, failed 0]
+[15:54:39] verify-sambanova-cloud-a: OK in 91s (0 tok) [done 232, failed 0]
+[15:54:53] verify-screenshotapi-net-b: OK in 86s (0 tok) [done 233, failed 0]
+[15:55:15] verify-screenshotapi-net-a: OK in 108s (0 tok) [done 234, failed 0]
+[15:55:22] verify-screenshotone-a: OK in 56s (0 tok) [done 235, failed 0]
+[15:55:31] verify-screenshotone-b: OK in 61s (0 tok) [done 236, failed 0]
+[15:56:19] verify-seatgeek-b: OK in 100s (0 tok) [done 237, failed 0]
+[15:56:30] verify-sec-edgar-a: OK in 67s (0 tok) [done 238, failed 0]
+[15:56:41] verify-sec-edgar-b: OK in 70s (0 tok) [done 239, failed 0]
+[15:56:41] verify-seatgeek-a: OK in 124s (0 tok) [done 240, failed 0]
+[15:57:07] verify-seattle-open-data-b: OK in 112s (0 tok) [done 241, failed 0]
+[15:57:58] verify-seattle-open-data-a: OK in 185s (0 tok) [done 242, failed 0]
+[15:58:31] verify-semaphore-ci-a: OK in 110s (0 tok) [done 243, failed 0]
+[15:58:48] verify-sellix-b: OK in 138s (0 tok) [done 244, failed 0]
+[15:58:57] verify-sellix-a: OK in 158s (0 tok) [done 245, failed 0]
+[15:59:03] verify-semaphore-ci-b: OK in 141s (0 tok) [done 246, failed 0]
+[15:59:36] verify-septa-api-a: OK in 149s (0 tok) [done 247, failed 0]
+[16:00:30] verify-skyscanner-b: OK in 87s (0 tok) [done 248, failed 0]
+[16:00:33] verify-septa-api-b: OK in 155s (0 tok) [done 249, failed 0]
+[16:00:56] verify-skyscanner-a: OK in 119s (0 tok) [done 250, failed 0]
+[16:01:04] verify-smartrecruiters-a: OK in 88s (0 tok) [done 251, failed 0]
+[16:01:12] verify-sf-open-data-b: OK in 144s (0 tok) [done 252, failed 0]
+[16:02:12] verify-smartthings-a: OK in 99s (0 tok) [done 253, failed 0]
+[16:02:27] verify-smartthings-b: OK in 91s (0 tok) [done 254, failed 0]
+[16:03:08] verify-soilgrids-b: OK in 116s (0 tok) [done 255, failed 0]
+[16:03:46] verify-soilgrids-a: OK in 163s (0 tok) [done 256, failed 0]
+[16:04:07] verify-smartrecruiters-b: OK in 217s (0 tok) [done 257, failed 0]
+[16:04:35] verify-solcast-a: OK in 144s (0 tok) [done 258, failed 0]
+[16:05:07] verify-spamhaus-a: OK in 119s (0 tok) [done 259, failed 0]
+[16:05:19] verify-sparkpost-a: OK in 73s (0 tok) [done 260, failed 0]
+[16:05:29] verify-spamhaus-b: OK in 103s (0 tok) [done 261, failed 0]
+[16:06:03] verify-sf-open-data-a: OK in 452s (0 tok) [done 262, failed 0]
+[16:06:12] verify-sparkpost-b: OK in 97s (0 tok) [done 263, failed 0]
+[16:06:53] verify-speechmatics-b: OK in 94s (0 tok) [done 264, failed 0]
+[16:06:56] verify-speechmatics-a: OK in 109s (0 tok) [done 265, failed 0]
+[16:07:09] verify-state-dept-advisories-a: OK in 100s (0 tok) [done 266, failed 0]
+[16:07:48] verify-state-dept-advisories-b: OK in 106s (0 tok) [done 267, failed 0]
+[16:07:58] verify-steamgriddb-a: OK in 106s (0 tok) [done 268, failed 0]
+[16:08:22] verify-steamgriddb-b: OK in 89s (0 tok) [done 269, failed 0]
+[16:09:05] verify-stock-news-api-a: OK in 77s (0 tok) [done 270, failed 0]
+[16:09:07] verify-steamspy-a: OK in 131s (0 tok) [done 271, failed 0]
+[16:09:17] verify-solcast-b: OK in 410s (0 tok) [done 272, failed 0]
+[16:09:27] verify-stock-news-api-b: OK in 89s (0 tok) [done 273, failed 0]
+[16:09:39] verify-stockdata-org-a: OK in 77s (0 tok) [done 274, failed 0]
+[16:09:56] verify-steamspy-b: OK in 167s (0 tok) [done 275, failed 0]
+[16:10:13] verify-stockdata-org-b: OK in 68s (0 tok) [done 276, failed 0]
+[16:10:31] verify-sumsub-b: OK in 74s (0 tok) [done 277, failed 0]
+[16:11:14] verify-sumsub-a: OK in 127s (0 tok) [done 278, failed 0]
+[16:11:33] verify-supabase-auth-b: OK in 114s (0 tok) [done 279, failed 0]
+[16:11:36] verify-tatoeba-a: OK in 100s (0 tok) [done 280, failed 0]
+[16:11:43] verify-tcgplayer-a: OK in 72s (0 tok) [done 281, failed 0]
+[16:11:48] verify-supabase-auth-a: OK in 141s (0 tok) [done 282, failed 0]
+[16:12:01] verify-tatoeba-b: OK in 109s (0 tok) [done 283, failed 0]
+[16:13:03] verify-tcgplayer-b: OK in 109s (0 tok) [done 284, failed 0]
+[16:13:10] verify-tenderly-b: OK in 93s (0 tok) [done 285, failed 0]
+[16:13:18] verify-tenderly-a: OK in 106s (0 tok) [done 286, failed 0]
+[16:13:27] verify-the-muse-b: OK in 100s (0 tok) [done 287, failed 0]
+[16:13:32] verify-the-things-network-a: OK in 91s (0 tok) [done 288, failed 0]
+[16:13:34] verify-the-muse-a: OK in 112s (0 tok) [done 289, failed 0]
+[16:14:40] verify-the-things-network-b: OK in 97s (0 tok) [done 290, failed 0]
+[16:14:59] verify-thingsboard-a: OK in 92s (0 tok) [done 291, failed 0]
+[16:15:00] verify-thingsboard-b: OK in 88s (0 tok) [done 292, failed 0]
+[16:15:02] verify-threatfox-a: OK in 87s (0 tok) [done 293, failed 0]
+[16:15:54] verify-thunderforest-a: OK in 55s (0 tok) [done 294, failed 0]
+[16:16:00] verify-thetvdb-a: OK in 170s (0 tok) [done 295, failed 0]
+[16:16:14] verify-threatfox-b: OK in 93s (0 tok) [done 296, failed 0]
+[16:16:16] verify-thetvdb-b: OK in 178s (0 tok) [done 297, failed 0]
+[16:16:37] verify-thunderforest-b: OK in 97s (0 tok) [done 298, failed 0]
+[16:16:38] verify-tibber-a: OK in 96s (0 tok) [done 299, failed 0]
+[16:17:03] verify-ticketmaster-discovery-a: OK in 63s (0 tok) [done 300, failed 0]
+[16:17:32] verify-ticketmaster-discovery-b: OK in 78s (0 tok) [done 301, failed 0]
+[16:17:58] verify-tibber-b: OK in 124s (0 tok) [done 302, failed 0]
+[16:18:06] verify-ticketweb-a: OK in 110s (0 tok) [done 303, failed 0]
+[16:18:09] verify-ticketweb-b: OK in 92s (0 tok) [done 304, failed 0]
+[16:19:05] verify-tinyurl-b: OK in 66s (0 tok) [done 305, failed 0]
+[16:19:15] verify-tinyurl-a: OK in 103s (0 tok) [done 306, failed 0]
+[16:19:25] verify-timeapi-a: OK in 167s (0 tok) [done 307, failed 0]
+[16:19:55] verify-timeapi-b: OK in 173s (0 tok) [done 308, failed 0]
+[16:20:06] verify-traccar-a: OK in 120s (0 tok) [done 309, failed 0]
+[16:20:32] verify-transit-app-b: OK in 78s (0 tok) [done 310, failed 0]
+[16:20:48] verify-transit-app-a: OK in 103s (0 tok) [done 311, failed 0]
+[16:20:52] verify-traccar-b: OK in 164s (0 tok) [done 312, failed 0]
+[16:21:17] verify-traveltime-a: OK in 70s (0 tok) [done 313, failed 0]
+[16:21:17] verify-travel-advisory-a: OK in 112s (0 tok) [done 314, failed 0]
+[16:21:24] verify-travel-advisory-b: OK in 89s (0 tok) [done 315, failed 0]
+[16:21:55] verify-traveltime-b: OK in 83s (0 tok) [done 316, failed 0]
+[16:22:24] verify-trefle-a: OK in 97s (0 tok) [done 317, failed 0]
+[16:22:29] verify-trefle-b: OK in 96s (0 tok) [done 318, failed 0]
+[16:22:54] verify-trulioo-b: OK in 96s (0 tok) [done 319, failed 0]
+[16:23:10] verify-trulioo-a: OK in 114s (0 tok) [done 320, failed 0]
+[16:23:53] verify-tuya-b: OK in 118s (0 tok) [done 321, failed 0]
+[16:24:06] verify-tuya-a: OK in 162s (0 tok) [done 322, failed 0]
+[16:24:09] verify-ubidots-a: OK in 105s (0 tok) [done 323, failed 0]
+[16:24:22] verify-ubidots-b: OK in 113s (0 tok) [done 324, failed 0]
+[16:24:49] verify-uk-carbon-intensity-a: OK in 115s (0 tok) [done 325, failed 0]
+[16:25:03] verify-uk-carbon-intensity-b: OK in 113s (0 tok) [done 326, failed 0]
+[16:25:28] verify-uk-police-data-a: OK in 79s (0 tok) [done 327, failed 0]
+[16:25:47] verify-umls-uts-a: OK in 59s (0 tok) [done 328, failed 0]
+[16:25:53] verify-uk-legislation-a: OK in 120s (0 tok) [done 329, failed 0]
+[16:26:04] verify-umls-uts-b: OK in 61s (0 tok) [done 330, failed 0]
+[16:26:04] verify-uk-legislation-b: OK in 118s (0 tok) [done 331, failed 0]
+[16:26:26] verify-uk-police-data-b: OK in 124s (0 tok) [done 332, failed 0]
+[16:27:16] verify-universe-events-a: OK in 84s (0 tok) [done 333, failed 0]
+[16:27:19] verify-urlhaus-a: OK in 74s (0 tok) [done 334, failed 0]
+[16:27:42] verify-universe-events-b: OK in 98s (0 tok) [done 335, failed 0]
+[16:27:48] verify-un-comtrade-a: OK in 140s (0 tok) [done 336, failed 0]
+[16:28:05] verify-urlhaus-b: OK in 99s (0 tok) [done 337, failed 0]
+[16:28:59] verify-usajobs-a: OK in 77s (0 tok) [done 338, failed 0]
+[16:29:09] verify-usajobs-b: OK in 81s (0 tok) [done 339, failed 0]
+[16:30:12] verify-usda-ers-a: OK in 127s (0 tok) [done 340, failed 0]
+[16:30:14] verify-usda-nass-quick-stats-a: OK in 65s (0 tok) [done 341, failed 0]
+[16:30:32] verify-us-treasury-fiscal-data-a: OK in 196s (0 tok) [done 342, failed 0]
+[16:30:55] verify-usda-ers-b: OK in 116s (0 tok) [done 343, failed 0]
+[16:31:40] verify-usda-nass-quick-stats-b: OK in 88s (0 tok) [done 344, failed 0]
+[16:31:52] verify-uspto-patentsview-a: OK in 97s (0 tok) [done 345, failed 0]
+[16:32:01] verify-us-treasury-fiscal-data-b: OK in 283s (0 tok) [done 346, failed 0]
+[16:32:22] verify-uspto-patentsview-b: OK in 110s (0 tok) [done 347, failed 0]
+[16:33:04] verify-un-comtrade-b: OK in 436s (0 tok) [done 348, failed 0]
+[16:33:08] verify-uspto-trademark-b: OK in 88s (0 tok) [done 349, failed 0]
+[16:33:14] verify-uspto-trademark-a: OK in 138s (0 tok) [done 350, failed 0]
+[16:33:32] verify-valorant-api-a: OK in 71s (0 tok) [done 351, failed 0]
+[codex-chain] phase 1: verify remainder (validate-and-rerun loop)
+wrote 29 codex jobs to pipeline/jobs-verify-codex.jsonl
+[codex-chain] verify round 1: 29 jobs
+[16:33:57] codex fleet start: 29 jobs, concurrency 6
+[16:34:58] verify-walk-score-a: OK in 61s (0 tok) [done 1, failed 0]
+[16:35:52] verify-valorant-api-b: OK in 115s (0 tok) [done 2, failed 0]
+[16:35:57] verify-vercel-a: OK in 119s (0 tok) [done 3, failed 0]
+[16:36:01] verify-valhalla-a: OK in 124s (0 tok) [done 4, failed 0]
+[16:36:04] verify-valhalla-b: OK in 127s (0 tok) [done 5, failed 0]
+[16:36:04] verify-vercel-b: OK in 127s (0 tok) [done 6, failed 0]
+[16:36:13] verify-walk-score-b: OK in 75s (0 tok) [done 7, failed 0]
+[16:37:20] verify-who-icd-api-b: OK in 67s (0 tok) [done 8, failed 0]
+[16:37:24] verify-weatherstack-a: OK in 83s (0 tok) [done 9, failed 0]
+[16:37:33] verify-weatherstack-b: OK in 89s (0 tok) [done 10, failed 0]
+[16:37:48] verify-who-icd-api-a: OK in 103s (0 tok) [done 11, failed 0]
+[16:38:16] verify-watttime-b: OK in 139s (0 tok) [done 12, failed 0]
+[16:39:23] verify-woodpecker-ci-a: OK in 109s (0 tok) [done 13, failed 0]
+[16:39:44] verify-woodpecker-ci-b: OK in 116s (0 tok) [done 14, failed 0]
+[16:39:49] verify-wmata-b: OK in 145s (0 tok) [done 15, failed 0]
+[16:39:55] verify-wmata-a: OK in 155s (0 tok) [done 16, failed 0]
+[16:39:59] verify-workable-a: OK in 103s (0 tok) [done 17, failed 0]
+[16:40:56] verify-workable-b: OK in 93s (0 tok) [done 18, failed 0]
+[16:41:01] verify-xero-b: OK in 63s (0 tok) [done 19, failed 0]
+[16:41:25] verify-worldpay-a: OK in 102s (0 tok) [done 20, failed 0]
+[16:41:29] verify-xero-a: OK in 95s (0 tok) [done 21, failed 0]
+[16:41:51] verify-zerion-a: OK in 55s (0 tok) [done 22, failed 0]
+[16:41:55] verify-worldpay-b: OK in 126s (0 tok) [done 23, failed 0]
+[16:42:26] verify-zerion-b: OK in 85s (0 tok) [done 24, failed 0]
+[16:43:07] verify-zoopla-b: OK in 72s (0 tok) [done 25, failed 0]
+[16:43:08] verify-zoopla-a: OK in 78s (0 tok) [done 26, failed 0]
+[16:43:08] verify-zillow-bridge-b: OK in 99s (0 tok) [done 27, failed 0]
+[16:43:31] verify-zillow-bridge-a: OK in 126s (0 tok) [done 28, failed 0]
+[16:43:41] verify-watttime-a: OK in 469s (0 tok) [done 29, failed 0]
+[16:43:41] codex fleet done: ok=29 failed=0 skipped=0 tokens=0
+0
+wrote 0 codex jobs to pipeline/jobs-verify-codex.jsonl
+[codex-chain] verify round 2: 0 jobs
+[codex-chain] phase 2: adjudication loop
+finalized=65 conflicts=316 waiting=0 dropped=13 preserved=462
+  dropped aylien-news: adjudicator: defunct
+  dropped board-game-atlas: researcher: defunct
+  dropped flashscore: researcher: defunct
+  dropped google-cloud-iot: researcher: defunct
+  dropped iex-cloud: adjudicator: defunct
+  dropped khan-academy: adjudicator: defunct
+  dropped placekitten: adjudicator: defunct
+  dropped punk-api: adjudicator: defunct
+  dropped skip: researcher: defunct
+  dropped sofascore: researcher: defunct
+  dropped swapi: researcher: defunct
+  dropped y-y: researcher: defunct
+  dropped zomato: adjudicator: defunct
+Traceback (most recent call last):
+  File "/Users/memfactor/Desktop/misc_repos/grokproj/pipeline/gen_adjudicate_jobs.py", line 68, in <module>
+    main()
+    ~~~~^^
+  File "/Users/memfactor/Desktop/misc_repos/grokproj/pipeline/gen_adjudicate_jobs.py", line 57, in main
+    va=json.dumps(c["va"]["verdicts"], indent=1),
+                  ~~~~~~~^^^^^^^^^^^^
+KeyError: 'verdicts'
+[codex-chain] phase 1: verify remainder (validate-and-rerun loop)
+wrote 6 codex jobs to pipeline/jobs-verify-codex.jsonl
+[codex-chain] verify round 1: 6 jobs
+[16:44:32] codex fleet start: 6 jobs, concurrency 6
+[16:45:50] verify-urlhaus-b: OK in 78s (0 tok) [done 1, failed 0]
+[16:46:09] verify-modal-a: OK in 97s (0 tok) [done 2, failed 0]
+[16:46:15] verify-printify-a: OK in 104s (0 tok) [done 3, failed 0]
+[16:46:16] verify-semaphore-ci-b: OK in 104s (0 tok) [done 4, failed 0]
+[16:46:41] verify-openholidays-api-b: OK in 129s (0 tok) [done 5, failed 0]
+[16:48:34] verify-timeapi-a: OK in 242s (0 tok) [done 6, failed 0]
+[16:48:34] codex fleet done: ok=6 failed=0 skipped=0 tokens=0
+0
+wrote 0 codex jobs to pipeline/jobs-verify-codex.jsonl
+[codex-chain] verify round 2: 0 jobs
+[codex-chain] phase 2: adjudication loop
+finalized=0 conflicts=316 waiting=0 dropped=13 preserved=527
+  dropped aylien-news: adjudicator: defunct
+  dropped board-game-atlas: researcher: defunct
+  dropped flashscore: researcher: defunct
+  dropped google-cloud-iot: researcher: defunct
+  dropped iex-cloud: adjudicator: defunct
+  dropped khan-academy: adjudicator: defunct
+  dropped placekitten: adjudicator: defunct
+  dropped punk-api: adjudicator: defunct
+  dropped skip: researcher: defunct
+  dropped sofascore: researcher: defunct
+  dropped swapi: researcher: defunct
+  dropped y-y: researcher: defunct
+  dropped zomato: adjudicator: defunct
+wrote 316 adjudicator jobs to /Users/memfactor/Desktop/misc_repos/grokproj/pipeline/jobs-adjudicate.jsonl
+wrote 316 codex jobs to pipeline/jobs-adjudicate-codex.jsonl
+[codex-chain] adjudicate round 1: 316 jobs
+[16:48:34] codex fleet start: 316 jobs, concurrency 6
+[16:48:59] adjudicate-agromonitoring: OK in 24s (0 tok) [done 1, failed 0]
+[16:49:02] adjudicate-ably: OK in 28s (0 tok) [done 2, failed 0]
+[16:49:05] adjudicate-abstract-exchange-rates: OK in 30s (0 tok) [done 3, failed 0]
+[16:49:37] adjudicate-ai21-labs: OK in 38s (0 tok) [done 4, failed 0]
+[16:49:39] adjudicate-1inch: OK in 65s (0 tok) [done 5, failed 0]
+[16:50:08] adjudicate-amadeus: OK in 31s (0 tok) [done 6, failed 0]
+[16:50:24] adjudicate-airlabs: OK in 82s (0 tok) [done 7, failed 0]
+[16:50:34] adjudicate-amazon-ses: OK in 54s (0 tok) [done 8, failed 0]
+[16:50:38] adjudicate-aleph-alpha: OK in 94s (0 tok) [done 9, failed 0]
+[16:50:48] adjudicate-2checkout: OK in 134s (0 tok) [done 10, failed 0]
+[16:51:00] adjudicate-ankr: OK in 36s (0 tok) [done 11, failed 0]
+[16:51:14] adjudicate-amber-electric: OK in 66s (0 tok) [done 12, failed 0]
+[16:51:24] adjudicate-arbeitnow: OK in 36s (0 tok) [done 13, failed 0]
+[16:51:37] adjudicate-anyscale-endpoints: OK in 64s (0 tok) [done 14, failed 0]
+[16:51:43] adjudicate-apartment-list: OK in 65s (0 tok) [done 15, failed 0]
+[16:51:51] adjudicate-associated-press: OK in 37s (0 tok) [done 16, failed 0]
+[16:51:51] adjudicate-ashby: OK in 51s (0 tok) [done 17, failed 0]
+[16:51:53] adjudicate-astrobin: OK in 29s (0 tok) [done 18, failed 0]
+[16:52:27] adjudicate-bamboohr: OK in 34s (0 tok) [done 19, failed 0]
+[16:52:38] adjudicate-balena: OK in 46s (0 tok) [done 20, failed 0]
+[16:52:41] adjudicate-azure-ai-vision: OK in 57s (0 tok) [done 21, failed 0]
+[16:53:08] adjudicate-aws-iot-core: OK in 91s (0 tok) [done 22, failed 0]
+[16:53:09] adjudicate-azure-iot-hub: OK in 78s (0 tok) [done 23, failed 0]
+[16:53:39] adjudicate-bitpay: OK in 30s (0 tok) [done 24, failed 0]
+[16:53:40] adjudicate-batchdata: OK in 62s (0 tok) [done 25, failed 0]
+[16:53:48] adjudicate-bitquery: OK in 39s (0 tok) [done 26, failed 0]
+[16:54:10] adjudicate-blockcypher: OK in 31s (0 tok) [done 27, failed 0]
+[16:54:23] adjudicate-blynk: OK in 43s (0 tok) [done 28, failed 0]
+[16:54:32] adjudicate-buildkite: OK in 22s (0 tok) [done 29, failed 0]
+[16:54:35] adjudicate-baseten: OK in 128s (0 tok) [done 30, failed 0]
+[16:54:40] adjudicate-calendarific: OK in 17s (0 tok) [done 31, failed 0]
+[16:55:33] adjudicate-careerjet: OK in 61s (0 tok) [done 32, failed 0]
+[16:55:56] adjudicate-bnb-api: OK in 128s (0 tok) [done 33, failed 0]
+[16:56:01] adjudicate-cerebras-inference: OK in 28s (0 tok) [done 34, failed 0]
+[16:56:20] adjudicate-cayenne-mydevices: OK in 100s (0 tok) [done 35, failed 0]
+[16:56:35] adjudicate-checkly: OK in 34s (0 tok) [done 36, failed 0]
+[16:56:50] adjudicate-caselaw-access-project: OK in 135s (0 tok) [done 37, failed 0]
+[16:56:59] adjudicate-afp-api: OK in 505s (0 tok) [done 38, failed 0]
+[16:57:04] adjudicate-checkout-com: OK in 44s (0 tok) [done 39, failed 0]
+[16:57:05] adjudicate-chainalysis: OK in 69s (0 tok) [done 40, failed 0]
+[16:57:24] adjudicate-circl-vulnerability-lookup: OK in 25s (0 tok) [done 41, failed 0]
+[16:57:25] adjudicate-cloudconvert: OK in 21s (0 tok) [done 42, failed 0]
+[16:57:47] adjudicate-circl-passive-dns: OK in 57s (0 tok) [done 43, failed 0]
+[16:57:51] adjudicate-complyadvantage: OK in 26s (0 tok) [done 44, failed 0]
+[16:57:57] adjudicate-commerce-layer: OK in 33s (0 tok) [done 45, failed 0]
+[16:58:18] adjudicate-chromatic: OK in 102s (0 tok) [done 46, failed 0]
+[16:58:41] adjudicate-co2signal: OK in 96s (0 tok) [done 47, failed 0]
+[16:58:41] adjudicate-core-ac-uk: OK in 54s (0 tok) [done 48, failed 0]
+[16:58:46] RATE-LIMIT wave 1: paused 120s
+[16:58:58] adjudicate-binaryedge: OK in 377s (0 tok) [done 49, failed 0]
+[17:00:12] adjudicate-cypress-cloud: OK in 91s (0 tok) [done 50, failed 0]
+[17:00:51] RATE-LIMIT wave 1: paused 120s
+[17:02:56] RATE-LIMIT wave 2: paused 300s
+[17:08:02] RATE-LIMIT wave 3: paused 600s
+[17:12:41] adjudicate-data-gov-sg: OK in 285s (0 tok) [done 51, failed 0]
+[17:18:38] adjudicate-coveralls: OK in 36s (0 tok) [done 52, failed 0]
+[17:18:42] adjudicate-db-ip: OK in 40s (0 tok) [done 53, failed 0]
+[17:18:46] RATE-LIMIT wave 1: paused 120s
+[17:18:50] adjudicate-courtlistener: OK in 48s (0 tok) [done 54, failed 0]
+[17:19:07] adjudicate-corelogic: OK in 65s (0 tok) [done 55, failed 0]
+[17:19:26] adjudicate-cta-api: OK in 84s (0 tok) [done 56, failed 0]
+[17:19:53] adjudicate-dehashed: OK in 111s (0 tok) [done 57, failed 0]
+[17:20:52] RATE-LIMIT wave 1: paused 120s
+[17:22:57] RATE-LIMIT wave 2: paused 300s
+[17:23:11] adjudicate-dice-fm: OK in 145s (0 tok) [done 58, failed 0]
+[17:28:03] RATE-LIMIT wave 1: paused 120s
+[17:30:08] RATE-LIMIT wave 2: paused 300s
+[17:35:40] adjudicate-docraptor: OK in 31s (0 tok) [done 59, failed 0]
+[17:35:40] adjudicate-destatis-genesis: OK in 31s (0 tok) [done 60, failed 0]
+[17:35:47] adjudicate-ecb-data-portal: OK in 38s (0 tok) [done 61, failed 0]
+[17:36:12] adjudicate-dns0-eu: OK in 63s (0 tok) [done 62, failed 0]
+[17:36:21] adjudicate-deps-dev: OK in 72s (0 tok) [done 63, failed 0]
+[17:36:24] adjudicate-descope: OK in 76s (0 tok) [done 64, failed 0]
+[17:36:33] adjudicate-eden-ai-resume: OK in 54s (0 tok) [done 65, failed 0]
+[17:36:51] adjudicate-esa-gaia-tap: OK in 27s (0 tok) [done 66, failed 0]
+[17:36:55] adjudicate-entsoe-transparency: OK in 43s (0 tok) [done 67, failed 0]
+[17:37:17] adjudicate-eur-lex-cellar: OK in 26s (0 tok) [done 68, failed 0]
+[17:37:48] adjudicate-emqx-cloud: OK in 122s (0 tok) [done 69, failed 0]
+[17:37:51] adjudicate-expedia-partner: OK in 56s (0 tok) [done 70, failed 0]
+[17:38:05] adjudicate-fal-ai: OK in 48s (0 tok) [done 71, failed 0]
+[17:38:16] adjudicate-esa-sky: OK in 103s (0 tok) [done 72, failed 0]
+[17:38:19] adjudicate-edx: OK in 159s (0 tok) [done 73, failed 0]
+[17:38:30] adjudicate-fanart-tv: OK in 41s (0 tok) [done 74, failed 0]
+[17:39:10] adjudicate-fannie-mae: OK in 79s (0 tok) [done 75, failed 0]
+[17:39:14] adjudicate-flightradar24: OK in 44s (0 tok) [done 76, failed 0]
+[17:39:45] adjudicate-fever-up: OK in 88s (0 tok) [done 77, failed 0]
+[17:39:45] adjudicate-fortnite-api: OK in 35s (0 tok) [done 78, failed 0]
+[17:39:47] adjudicate-forvo: OK in 33s (0 tok) [done 79, failed 0]
+[17:40:01] adjudicate-fishwatch: OK in 102s (0 tok) [done 80, failed 0]
+[17:40:04] adjudicate-freeipapi: OK in 19s (0 tok) [done 81, failed 0]
+[17:40:19] adjudicate-gemini: OK in 32s (0 tok) [done 82, failed 0]
+[17:40:41] adjudicate-gladia: OK in 38s (0 tok) [done 83, failed 0]
+[17:40:42] adjudicate-eppo-global-database: OK in 261s (0 tok) [done 84, failed 0]
+[17:40:45] adjudicate-freshbooks: OK in 61s (0 tok) [done 85, failed 0]
+[17:40:47] adjudicate-go-module-proxy: OK in 27s (0 tok) [done 86, failed 0]
+[17:40:58] adjudicate-gitea: OK in 56s (0 tok) [done 87, failed 0]
+[17:41:07] adjudicate-google-cloud-natural-language: OK in 26s (0 tok) [done 88, failed 0]
+[17:41:10] adjudicate-google-cloud-text-to-speech: OK in 25s (0 tok) [done 89, failed 0]
+[17:41:22] adjudicate-google-cloud-video-intelligence: OK in 35s (0 tok) [done 90, failed 0]
+[17:41:27] adjudicate-google-cloud-speech: OK in 45s (0 tok) [done 91, failed 0]
+[17:41:33] adjudicate-gotenberg: OK in 26s (0 tok) [done 92, failed 0]
+[17:41:37] adjudicate-google-ct-log-list: OK in 40s (0 tok) [done 93, failed 0]
+[17:41:40] adjudicate-govinfo: OK in 29s (0 tok) [done 94, failed 0]
+[17:41:49] adjudicate-fbi-crime-data: OK in 224s (0 tok) [done 95, failed 0]
+[17:41:58] adjudicate-greenhouse: OK in 31s (0 tok) [done 96, failed 0]
+[17:42:05] adjudicate-gumroad: OK in 28s (0 tok) [done 97, failed 0]
+[17:42:17] adjudicate-gridstatus: OK in 44s (0 tok) [done 98, failed 0]
+[17:42:24] adjudicate-helius: OK in 44s (0 tok) [done 99, failed 0]
+[17:42:46] adjudicate-home-assistant: OK in 22s (0 tok) [done 100, failed 0]
+[17:42:48] adjudicate-hologram: OK in 31s (0 tok) [done 101, failed 0]
+[17:42:50] adjudicate-hiringcafe: OK in 62s (0 tok) [done 102, failed 0]
+[17:43:05] adjudicate-hivemq-cloud: OK in 67s (0 tok) [done 103, failed 0]
+[17:43:08] adjudicate-honeycomb: OK in 21s (0 tok) [done 104, failed 0]
+[17:43:12] adjudicate-hotelbeds: OK in 24s (0 tok) [done 105, failed 0]
+[17:43:32] adjudicate-hud-user: OK in 24s (0 tok) [done 106, failed 0]
+[17:43:57] adjudicate-govuk-fuel-prices: OK in 155s (0 tok) [done 107, failed 0]
+[17:44:07] adjudicate-huggingface-hub: OK in 55s (0 tok) [done 108, failed 0]
+[17:44:23] adjudicate-holidayapi: OK in 137s (0 tok) [done 109, failed 0]
+[17:44:26] adjudicate-ibm-watson-nlu: OK in 19s (0 tok) [done 110, failed 0]
+[17:44:27] adjudicate-housecanary: OK in 96s (0 tok) [done 111, failed 0]
+[17:45:02] adjudicate-humane: OK in 65s (0 tok) [done 112, failed 0]
+[17:45:26] adjudicate-ibm-watson-speech-to-text: OK in 64s (0 tok) [done 113, failed 0]
+[17:45:38] adjudicate-howlongtobeat: OK in 153s (0 tok) [done 114, failed 0]
+[17:45:50] adjudicate-ifttt: OK in 84s (0 tok) [done 115, failed 0]
+[17:45:54] adjudicate-4r0u: OK in 16s (0 tok) [done 116, failed 0]
+[17:46:10] adjudicate-ibm-watsonx: OK in 104s (0 tok) [done 117, failed 0]
+[17:46:16] adjudicate-insect-id: OK in 50s (0 tok) [done 118, failed 0]
+[17:46:20] adjudicate-human-phenotype-ontology: OK in 168s (0 tok) [done 119, failed 0]
+[17:46:24] adjudicate-intrinio: OK in 30s (0 tok) [done 120, failed 0]
+[17:46:34] adjudicate-ipapi-is: OK in 24s (0 tok) [done 121, failed 0]
+[17:46:39] adjudicate-ipdata: OK in 23s (0 tok) [done 122, failed 0]
+[17:46:40] adjudicate-internet-archive: OK in 49s (0 tok) [done 123, failed 0]
+[17:46:46] adjudicate-iplocate: OK in 26s (0 tok) [done 124, failed 0]
+[17:46:57] adjudicate-ipwhois: OK in 34s (0 tok) [done 125, failed 0]
+[17:47:04] adjudicate-jawg-maps: OK in 24s (0 tok) [done 126, failed 0]
+[17:47:05] adjudicate-itunes-search: OK in 26s (0 tok) [done 127, failed 0]
+[17:47:20] adjudicate-jpl-horizons: OK in 23s (0 tok) [done 128, failed 0]
+[17:47:22] adjudicate-isthereanydeal: OK in 49s (0 tok) [done 129, failed 0]
+[17:47:27] adjudicate-imf-data: OK in 145s (0 tok) [done 130, failed 0]
+[17:47:28] adjudicate-keycloak: OK in 23s (0 tok) [done 131, failed 0]
+[17:47:38] adjudicate-jsearch: OK in 35s (0 tok) [done 132, failed 0]
+[17:47:44] adjudicate-kucoin: OK in 17s (0 tok) [done 133, failed 0]
+[17:47:57] adjudicate-klaviyo: OK in 35s (0 tok) [done 134, failed 0]
+[17:48:14] adjudicate-lambdatest: OK in 36s (0 tok) [done 135, failed 0]
+[17:48:23] adjudicate-kinde: OK in 63s (0 tok) [done 136, failed 0]
+[17:48:27] RATE-LIMIT wave 1: paused 120s
+[17:48:29] adjudicate-la-open-data: OK in 61s (0 tok) [done 137, failed 0]
+[17:48:30] adjudicate-leakix: OK in 46s (0 tok) [done 138, failed 0]
+[17:48:46] adjudicate-levels-fyi: OK in 32s (0 tok) [done 139, failed 0]
+[17:49:14] adjudicate-lepton-ai: OK in 77s (0 tok) [done 140, failed 0]
+[17:50:33] RATE-LIMIT wave 1: paused 120s
+[17:52:38] RATE-LIMIT wave 2: paused 300s
+[17:57:44] RATE-LIMIT wave 3: paused 600s
+[18:07:49] RATE-LIMIT wave 4: paused 900s
+[18:09:10] adjudicate-libretranslate: OK in 86s (0 tok) [done 141, failed 0]
+[18:10:31] adjudicate-loops: OK in 167s (0 tok) [done 142, failed 0]
+[18:23:08] RATE-LIMIT wave 1: paused 120s
+[18:23:51] adjudicate-ludopedia: OK in 62s (0 tok) [done 143, failed 0]
+[18:23:59] adjudicate-lseg-news: OK in 69s (0 tok) [done 144, failed 0]
+[18:24:29] adjudicate-losant: OK in 100s (0 tok) [done 145, failed 0]
+[18:24:44] adjudicate-luma: OK in 115s (0 tok) [done 146, failed 0]
+[18:24:46] adjudicate-jetbrains-space: OK in 117s (0 tok) [done 147, failed 0]
+[18:25:13] RATE-LIMIT wave 1: paused 120s
+[18:25:43] adjudicate-lever: OK in 35s (0 tok) [done 148, failed 0]
+[18:25:46] adjudicate-maxio-chargify: OK in 39s (0 tok) [done 149, failed 0]
+[18:25:59] adjudicate-mailjet: OK in 51s (0 tok) [done 150, failed 0]
+[18:26:35] adjudicate-meetup: OK in 87s (0 tok) [done 151, failed 0]
+[18:27:34] adjudicate-metalpriceapi: OK in 21s (0 tok) [done 152, failed 0]
+[18:27:53] adjudicate-medusa: OK in 41s (0 tok) [done 153, failed 0]
+[18:27:55] adjudicate-metro-transit-nextrip: OK in 43s (0 tok) [done 154, failed 0]
+[18:28:04] adjudicate-memfault: OK in 51s (0 tok) [done 155, failed 0]
+[18:28:43] adjudicate-mobygames: OK in 39s (0 tok) [done 156, failed 0]
+[18:28:50] adjudicate-microlink: OK in 76s (0 tok) [done 157, failed 0]
+[18:29:25] adjudicate-modal: OK in 43s (0 tok) [done 158, failed 0]
+[18:29:27] adjudicate-metrolinx-opendata: OK in 134s (0 tok) [done 159, failed 0]
+[18:29:38] adjudicate-minor-planet-center: OK in 103s (0 tok) [done 160, failed 0]
+[18:29:54] adjudicate-moodle: OK in 64s (0 tok) [done 161, failed 0]
+[18:30:02] adjudicate-nasa-exoplanet-archive: OK in 24s (0 tok) [done 162, failed 0]
+[18:30:05] adjudicate-myfitnesspal: OK in 39s (0 tok) [done 163, failed 0]
+[18:30:06] adjudicate-microsoft-graph-calendar: OK in 133s (0 tok) [done 164, failed 0]
+[18:30:25] adjudicate-nasa-power: OK in 31s (0 tok) [done 165, failed 0]
+[18:30:27] adjudicate-netlify: OK in 25s (0 tok) [done 166, failed 0]
+[18:30:40] adjudicate-newswhip: OK in 34s (0 tok) [done 167, failed 0]
+[18:30:44] adjudicate-newsapi-ai: OK in 39s (0 tok) [done 168, failed 0]
+[18:31:01] adjudicate-nager-date: OK in 95s (0 tok) [done 169, failed 0]
+[18:31:03] adjudicate-nuget: OK in 23s (0 tok) [done 170, failed 0]
+[18:31:30] adjudicate-numbeo: OK in 46s (0 tok) [done 171, failed 0]
+[18:31:43] adjudicate-magicthegathering: OK in 396s (0 tok) [done 172, failed 0]
+[18:31:58] adjudicate-nvidia-nim: OK in 57s (0 tok) [done 173, failed 0]
+[18:31:59] adjudicate-octopus-energy: OK in 28s (0 tok) [done 174, failed 0]
+[18:32:09] adjudicate-nrel: OK in 102s (0 tok) [done 175, failed 0]
+[18:32:21] adjudicate-ofac-sanctions: OK in 23s (0 tok) [done 176, failed 0]
+[18:32:49] adjudicate-nowpayments: OK in 143s (0 tok) [done 177, failed 0]
+[18:33:20] adjudicate-okx: OK in 82s (0 tok) [done 178, failed 0]
+[18:33:33] adjudicate-onfido: OK in 72s (0 tok) [done 179, failed 0]
+[18:33:56] adjudicate-ons-uk: OK in 68s (0 tok) [done 180, failed 0]
+[18:34:21] adjudicate-onet: OK in 132s (0 tok) [done 181, failed 0]
+[18:34:29] adjudicate-open-meteo-geocoding: OK in 33s (0 tok) [done 182, failed 0]
+[18:34:29] adjudicate-oecd-data: OK in 166s (0 tok) [done 183, failed 0]
+[18:34:42] adjudicate-open-charge-map: OK in 82s (0 tok) [done 184, failed 0]
+[18:35:06] adjudicate-opencorporates: OK in 37s (0 tok) [done 185, failed 0]
+[18:35:21] adjudicate-openei-urdb: OK in 38s (0 tok) [done 186, failed 0]
+[18:36:02] adjudicate-openfigi: OK in 56s (0 tok) [done 187, failed 0]
+[18:36:20] adjudicate-open5e: OK in 111s (0 tok) [done 188, failed 0]
+[18:36:21] adjudicate-open-ownership: OK in 120s (0 tok) [done 189, failed 0]
+[18:36:32] adjudicate-openflights: OK in 72s (0 tok) [done 190, failed 0]
+[18:36:54] adjudicate-opensanctions: OK in 35s (0 tok) [done 191, failed 0]
+[18:37:07] adjudicate-ocr-space: OK in 364s (0 tok) [done 192, failed 0]
+[18:37:18] adjudicate-openholidays-api: OK in 76s (0 tok) [done 193, failed 0]
+[18:37:34] adjudicate-open-menu: OK in 241s (0 tok) [done 194, failed 0]
+[18:37:40] adjudicate-opentopomap: OK in 33s (0 tok) [done 195, failed 0]
+[18:37:56] adjudicate-opentripmap: OK in 38s (0 tok) [done 196, failed 0]
+[18:38:05] adjudicate-opentable: OK in 71s (0 tok) [done 197, failed 0]
+[18:38:37] adjudicate-opensecrets: OK in 125s (0 tok) [done 198, failed 0]
+[18:38:59] adjudicate-osrm: OK in 78s (0 tok) [done 199, failed 0]
+[18:39:03] adjudicate-passport-index: OK in 25s (0 tok) [done 200, failed 0]
+[18:39:10] adjudicate-openxbl: OK in 96s (0 tok) [done 201, failed 0]
+[18:39:10] adjudicate-owntracks: OK in 74s (0 tok) [done 202, failed 0]
+[18:39:21] adjudicate-paystack: OK in 22s (0 tok) [done 203, failed 0]
+[18:39:23] adjudicate-payu: OK in 20s (0 tok) [done 204, failed 0]
+[18:39:43] adjudicate-pdfshift: OK in 33s (0 tok) [done 205, failed 0]
+[18:39:44] adjudicate-pdf-co: OK in 35s (0 tok) [done 206, failed 0]
+[18:39:50] adjudicate-particle: OK in 105s (0 tok) [done 207, failed 0]
+[18:40:05] adjudicate-persona: OK in 42s (0 tok) [done 208, failed 0]
+[18:40:11] adjudicate-photon: OK in 21s (0 tok) [done 209, failed 0]
+[18:40:42] adjudicate-placeholder: OK in 30s (0 tok) [done 210, failed 0]
+[18:40:52] adjudicate-perenual: OK in 91s (0 tok) [done 211, failed 0]
+[18:40:54] adjudicate-pinecone-inference: OK in 49s (0 tok) [done 212, failed 0]
+[18:41:14] adjudicate-playerdb: OK in 22s (0 tok) [done 213, failed 0]
+[18:41:29] adjudicate-philips-hue: OK in 105s (0 tok) [done 214, failed 0]
+[18:41:35] adjudicate-plant-id: OK in 53s (0 tok) [done 215, failed 0]
+[18:41:39] adjudicate-posthog: OK in 45s (0 tok) [done 216, failed 0]
+[18:41:44] adjudicate-personio: OK in 121s (0 tok) [done 217, failed 0]
+[18:41:47] adjudicate-opensea: OK in 326s (0 tok) [done 218, failed 0]
+[18:42:16] adjudicate-printify: OK in 41s (0 tok) [done 219, failed 0]
+[18:42:26] adjudicate-pricecharting: OK in 57s (0 tok) [done 220, failed 0]
+[18:42:30] adjudicate-pulsedive: OK in 42s (0 tok) [done 221, failed 0]
+[18:42:52] adjudicate-propertyshark: OK in 73s (0 tok) [done 222, failed 0]
+[18:42:52] adjudicate-qr-code-generator: OK in 27s (0 tok) [done 223, failed 0]
+[18:43:00] adjudicate-propublica-congress: OK in 77s (0 tok) [done 224, failed 0]
+[18:43:16] adjudicate-quickbooks: OK in 23s (0 tok) [done 225, failed 0]
+[18:43:22] adjudicate-quicknode: OK in 30s (0 tok) [done 226, failed 0]
+[18:43:38] adjudicate-quad9: OK in 68s (0 tok) [done 227, failed 0]
+[18:44:17] adjudicate-realty-mole: OK in 55s (0 tok) [done 228, failed 0]
+[18:44:21] adjudicate-quodd: OK in 81s (0 tok) [done 229, failed 0]
+[18:44:22] adjudicate-recruitee: OK in 44s (0 tok) [done 230, failed 0]
+[18:44:35] adjudicate-realtor-com: OK in 79s (0 tok) [done 231, failed 0]
+[18:44:46] adjudicate-reed: OK in 25s (0 tok) [done 232, failed 0]
+[18:44:53] adjudicate-remotive: OK in 31s (0 tok) [done 233, failed 0]
+[18:45:06] adjudicate-render: OK in 31s (0 tok) [done 234, failed 0]
+[18:45:21] adjudicate-reso-web-api: OK in 35s (0 tok) [done 235, failed 0]
+[18:45:39] adjudicate-redfin-data: OK in 82s (0 tok) [done 236, failed 0]
+[18:46:00] adjudicate-rest-countries: OK in 68s (0 tok) [done 237, failed 0]
+[18:46:39] adjudicate-rev-ai: OK in 93s (0 tok) [done 238, failed 0]
+[18:46:56] adjudicate-rome2rio: OK in 77s (0 tok) [done 239, failed 0]
+[18:46:58] adjudicate-rightmove: OK in 96s (0 tok) [done 240, failed 0]
+[18:46:58] adjudicate-rxterms: OK in 57s (0 tok) [done 241, failed 0]
+[18:47:14] adjudicate-screenshotone: OK in 17s (0 tok) [done 242, failed 0]
+[18:47:14] adjudicate-predicthq: OK in 360s (0 tok) [done 243, failed 0]
+[18:47:26] adjudicate-screenshotapi-net: OK in 29s (0 tok) [done 244, failed 0]
+[18:47:34] adjudicate-sec-edgar: OK in 19s (0 tok) [done 245, failed 0]
+[18:47:35] adjudicate-sambanova-cloud: OK in 56s (0 tok) [done 246, failed 0]
+[18:47:45] adjudicate-pvoutput: OK in 328s (0 tok) [done 247, failed 0]
+[18:47:52] adjudicate-seatgeek: OK in 55s (0 tok) [done 248, failed 0]
+[18:48:21] adjudicate-sellix: OK in 56s (0 tok) [done 249, failed 0]
+[18:48:22] adjudicate-semaphore-ci: OK in 48s (0 tok) [done 250, failed 0]
+[18:48:47] adjudicate-smartthings: OK in 25s (0 tok) [done 251, failed 0]
+[18:48:50] adjudicate-smartrecruiters: OK in 28s (0 tok) [done 252, failed 0]
+[18:49:17] adjudicate-skyscanner: OK in 84s (0 tok) [done 253, failed 0]
+[18:49:18] adjudicate-septa-api: OK in 103s (0 tok) [done 254, failed 0]
+[18:49:24] adjudicate-soilgrids: OK in 37s (0 tok) [done 255, failed 0]
+[18:49:25] adjudicate-sf-open-data: OK in 100s (0 tok) [done 256, failed 0]
+[18:49:40] adjudicate-solcast: OK in 51s (0 tok) [done 257, failed 0]
+[18:50:00] adjudicate-state-dept-advisories: OK in 35s (0 tok) [done 258, failed 0]
+[18:50:10] adjudicate-sparkpost: OK in 52s (0 tok) [done 259, failed 0]
+[18:50:11] adjudicate-seattle-open-data: OK in 177s (0 tok) [done 260, failed 0]
+[18:50:15] adjudicate-steamgriddb: OK in 35s (0 tok) [done 261, failed 0]
+[18:50:27] adjudicate-spamhaus: OK in 70s (0 tok) [done 262, failed 0]
+[18:50:31] adjudicate-speechmatics: OK in 67s (0 tok) [done 263, failed 0]
+[18:50:38] adjudicate-stockdata-org: OK in 27s (0 tok) [done 264, failed 0]
+[18:50:48] adjudicate-stock-news-api: OK in 38s (0 tok) [done 265, failed 0]
+[18:51:03] adjudicate-steamspy: OK in 64s (0 tok) [done 266, failed 0]
+[18:51:04] adjudicate-sumsub: OK in 49s (0 tok) [done 267, failed 0]
+[18:51:04] adjudicate-tcgplayer: OK in 26s (0 tok) [done 268, failed 0]
+[18:51:18] adjudicate-supabase-auth: OK in 51s (0 tok) [done 269, failed 0]
+[18:51:33] adjudicate-the-things-network: OK in 29s (0 tok) [done 270, failed 0]
+[18:51:43] adjudicate-the-muse: OK in 40s (0 tok) [done 271, failed 0]
+[18:51:43] adjudicate-tenderly: OK in 55s (0 tok) [done 272, failed 0]
+[18:51:54] adjudicate-thingsboard: OK in 36s (0 tok) [done 273, failed 0]
+[18:51:58] adjudicate-thetvdb: OK in 54s (0 tok) [done 274, failed 0]
+[18:52:09] adjudicate-tatoeba: OK in 98s (0 tok) [done 275, failed 0]
+[18:52:12] adjudicate-threatfox: OK in 39s (0 tok) [done 276, failed 0]
+[18:52:14] adjudicate-thunderforest: OK in 31s (0 tok) [done 277, failed 0]
+[18:52:24] adjudicate-tibber: OK in 41s (0 tok) [done 278, failed 0]
+[18:52:30] adjudicate-tinyurl: OK in 18s (0 tok) [done 279, failed 0]
+[18:52:36] adjudicate-timeapi: OK in 27s (0 tok) [done 280, failed 0]
+[18:52:52] adjudicate-traccar: OK in 38s (0 tok) [done 281, failed 0]
+[18:52:53] adjudicate-transit-app: OK in 28s (0 tok) [done 282, failed 0]
+[18:52:54] adjudicate-ticketmaster-discovery: OK in 60s (0 tok) [done 283, failed 0]
+[18:53:03] adjudicate-traveltime: OK in 26s (0 tok) [done 284, failed 0]
+[18:53:12] adjudicate-trefle: OK in 20s (0 tok) [done 285, failed 0]
+[18:53:32] adjudicate-trulioo: OK in 39s (0 tok) [done 286, failed 0]
+[18:53:40] adjudicate-tuya: OK in 46s (0 tok) [done 287, failed 0]
+[18:53:49] adjudicate-travel-advisory: OK in 79s (0 tok) [done 288, failed 0]
+[18:53:56] adjudicate-uk-police-data: OK in 16s (0 tok) [done 289, failed 0]
+[18:53:59] adjudicate-ubidots: OK in 56s (0 tok) [done 290, failed 0]
+[18:54:07] adjudicate-uk-carbon-intensity: OK in 54s (0 tok) [done 291, failed 0]
+[18:54:07] adjudicate-uk-legislation: OK in 35s (0 tok) [done 292, failed 0]
+[18:54:12] adjudicate-umls-uts: OK in 23s (0 tok) [done 293, failed 0]
+[18:54:18] adjudicate-un-comtrade: OK in 22s (0 tok) [done 294, failed 0]
+[18:54:34] adjudicate-usda-ers: OK in 22s (0 tok) [done 295, failed 0]
+[18:54:37] adjudicate-usajobs: OK in 30s (0 tok) [done 296, failed 0]
+[18:54:51] adjudicate-urlhaus: OK in 45s (0 tok) [done 297, failed 0]
+[18:54:57] adjudicate-universe-events: OK in 58s (0 tok) [done 298, failed 0]
+[18:55:12] adjudicate-valhalla: OK in 21s (0 tok) [done 299, failed 0]
+[18:55:19] adjudicate-usda-nass-quick-stats: OK in 61s (0 tok) [done 300, failed 0]
+[18:55:44] adjudicate-walk-score: OK in 31s (0 tok) [done 301, failed 0]
+[18:55:46] adjudicate-vercel: OK in 49s (0 tok) [done 302, failed 0]
+[18:55:51] adjudicate-uspto-trademark: OK in 74s (0 tok) [done 303, failed 0]
+[18:56:25] adjudicate-weatherstack: OK in 41s (0 tok) [done 304, failed 0]
+[18:56:26] adjudicate-uspto-patentsview: OK in 112s (0 tok) [done 305, failed 0]
+[18:56:31] adjudicate-who-icd-api: OK in 45s (0 tok) [done 306, failed 0]
+[18:56:43] adjudicate-watttime: OK in 84s (0 tok) [done 307, failed 0]
+[18:56:44] adjudicate-wmata: OK in 54s (0 tok) [done 308, failed 0]
+[18:56:44] adjudicate-woodpecker-ci: OK in 19s (0 tok) [done 309, failed 0]
+[18:57:13] adjudicate-xero: OK in 30s (0 tok) [done 310, failed 0]
+[18:57:50] adjudicate-zerion: OK in 66s (0 tok) [done 311, failed 0]
+[18:57:51] adjudicate-zillow-bridge: OK in 67s (0 tok) [done 312, failed 0]
+[18:58:00] adjudicate-workable: OK in 94s (0 tok) [done 313, failed 0]
+[18:58:04] adjudicate-worldpay: OK in 93s (0 tok) [done 314, failed 0]
+[18:58:18] adjudicate-ticketweb: OK in 380s (0 tok) [done 315, failed 0]
+[18:58:24] adjudicate-zoopla: OK in 72s (0 tok) [done 316, failed 0]
+[18:58:24] codex fleet done: ok=316 failed=0 skipped=0 tokens=0
+5
+0
+finalized=297 conflicts=5 waiting=0 dropped=27 preserved=527
+  dropped anyscale-endpoints: adjudicator: defunct
+  dropped aylien-news: adjudicator: defunct
+  dropped binaryedge: adjudicator: defunct
+  dropped bnb-api: adjudicator: defunct
+  dropped board-game-atlas: researcher: defunct
+  dropped caselaw-access-project: adjudicator: defunct
+  dropped cayenne-mydevices: adjudicator: defunct
+  dropped dns0-eu: adjudicator: defunct
+  dropped flashscore: researcher: defunct
+  dropped google-cloud-iot: researcher: defunct
+  dropped humane: adjudicator: defunct
+  dropped iex-cloud: adjudicator: defunct
+  dropped jetbrains-space: adjudicator: defunct
+  dropped khan-academy: adjudicator: defunct
+  dropped opensecrets: adjudicator: defunct
+  dropped placekitten: adjudicator: defunct
+  dropped propertyshark: adjudicator: defunct
+  dropped propublica-congress: adjudicator: defunct
+  dropped punk-api: adjudicator: defunct
+  dropped realty-mole: adjudicator: defunct
+  dropped sellix: adjudicator: defunct
+  dropped skip: researcher: defunct
+  dropped sofascore: researcher: defunct
+  dropped swapi: researcher: defunct
+  dropped y-y: researcher: defunct
+  dropped zomato: adjudicator: defunct
+  dropped zoopla: adjudicator: defunct
+wrote 5 adjudicator jobs to /Users/memfactor/Desktop/misc_repos/grokproj/pipeline/jobs-adjudicate.jsonl
+wrote 5 codex jobs to pipeline/jobs-adjudicate-codex.jsonl
+[codex-chain] adjudicate round 2: 5 jobs
+[18:58:25] codex fleet start: 5 jobs, concurrency 6
+[18:58:59] adjudicate-transit-app: OK in 34s (0 tok) [done 1, failed 0]
+[18:59:16] adjudicate-tenderly: OK in 51s (0 tok) [done 2, failed 0]
+[18:59:23] adjudicate-1inch: OK in 58s (0 tok) [done 3, failed 0]
+[18:59:25] adjudicate-bitpay: OK in 60s (0 tok) [done 4, failed 0]
+[19:00:07] adjudicate-onfido: OK in 102s (0 tok) [done 5, failed 0]
+[19:00:07] codex fleet done: ok=5 failed=0 skipped=0 tokens=0
+0
+0
+finalized=5 conflicts=0 waiting=0 dropped=27 preserved=824
+  dropped anyscale-endpoints: adjudicator: defunct
+  dropped aylien-news: adjudicator: defunct
+  dropped binaryedge: adjudicator: defunct
+  dropped bnb-api: adjudicator: defunct
+  dropped board-game-atlas: researcher: defunct
+  dropped caselaw-access-project: adjudicator: defunct
+  dropped cayenne-mydevices: adjudicator: defunct
+  dropped dns0-eu: adjudicator: defunct
+  dropped flashscore: researcher: defunct
+  dropped google-cloud-iot: researcher: defunct
+  dropped humane: adjudicator: defunct
+  dropped iex-cloud: adjudicator: defunct
+  dropped jetbrains-space: adjudicator: defunct
+  dropped khan-academy: adjudicator: defunct
+  dropped opensecrets: adjudicator: defunct
+  dropped placekitten: adjudicator: defunct
+  dropped propertyshark: adjudicator: defunct
+  dropped propublica-congress: adjudicator: defunct
+  dropped punk-api: adjudicator: defunct
+  dropped realty-mole: adjudicator: defunct
+  dropped sellix: adjudicator: defunct
+  dropped skip: researcher: defunct
+  dropped sofascore: researcher: defunct
+  dropped swapi: researcher: defunct
+  dropped y-y: researcher: defunct
+  dropped zomato: adjudicator: defunct
+  dropped zoopla: adjudicator: defunct
+wrote 0 adjudicator jobs to /Users/memfactor/Desktop/misc_repos/grokproj/pipeline/jobs-adjudicate.jsonl
+wrote 0 codex jobs to pipeline/jobs-adjudicate-codex.jsonl
+[codex-chain] adjudicate round 3: 0 jobs
+[codex-chain] final reconcile (new entries only)
+finalized=0 conflicts=0 waiting=0 dropped=27 preserved=829
+  dropped anyscale-endpoints: adjudicator: defunct
+  dropped aylien-news: adjudicator: defunct
+  dropped binaryedge: adjudicator: defunct
+  dropped bnb-api: adjudicator: defunct
+  dropped board-game-atlas: researcher: defunct
+  dropped caselaw-access-project: adjudicator: defunct
+  dropped cayenne-mydevices: adjudicator: defunct
+  dropped dns0-eu: adjudicator: defunct
+  dropped flashscore: researcher: defunct
+  dropped google-cloud-iot: researcher: defunct
+  dropped humane: adjudicator: defunct
+  dropped iex-cloud: adjudicator: defunct
+  dropped jetbrains-space: adjudicator: defunct
+  dropped khan-academy: adjudicator: defunct
+  dropped opensecrets: adjudicator: defunct
+  dropped placekitten: adjudicator: defunct
+  dropped propertyshark: adjudicator: defunct
+  dropped propublica-congress: adjudicator: defunct
+  dropped punk-api: adjudicator: defunct
+  dropped realty-mole: adjudicator: defunct
+  dropped sellix: adjudicator: defunct
+  dropped skip: researcher: defunct
+  dropped sofascore: researcher: defunct
+  dropped swapi: researcher: defunct
+  dropped y-y: researcher: defunct
+  dropped zomato: adjudicator: defunct
+  dropped zoopla: adjudicator: defunct
+[codex-chain] rebuild dataset + tests
+bundled 829 APIs into /Users/memfactor/Desktop/misc_repos/grokproj/mcp-server/data/apis.json
+  ai-ml: 51
+  dev-tools: 49
+  ecommerce-payments: 46
+  security-identity: 44
+  geo-maps: 43
+  government-open-data: 37
+  games-comics: 37
+  crypto: 36
+  education-reference: 36
+  transportation: 35
+  social-communication: 34
+  news-media: 29
+  data-analytics: 29
+  finance: 28
+  fun-novelty: 25
+  science-space: 25
+  jobs-careers: 23
+  iot-devices: 22
+  entertainment: 22
+  sports: 20
+  weather-environment: 19
+  real-estate-housing: 18
+  food-drink: 18
+  events-holidays: 17
+  energy-utilities: 16
+  health-fitness: 16
+  legal-compliance: 15
+  utilities: 14
+  travel-hospitality: 13
+  agriculture: 12
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

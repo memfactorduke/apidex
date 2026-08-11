@@ -1,0 +1,40 @@
+{
+  "id": "openei-urdb",
+  "status": "operational",
+  "name": "OpenEI Utility Rate Database",
+  "category": "energy-utilities",
+  "tagline": "US utility electricity rate structures and tariffs via free OpenEI web services",
+  "description": "OpenEI Utility Rate Database provides free web services for US utility electricity rate structures and tariffs, enabling developers to query rates by utility, location, or sector for energy analysis, solar modeling, and bill estimation.",
+  "base_url": "https://api.openei.org/utility_rates",
+  "docs_url": "https://openei.org/services/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key required via api_key query parameter; obtain free key from OpenEI"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://api.openei.org/utility_rates?version=latest&format=json&api_key=YOUR_API_KEY&limit=1\"",
+    "response_snippet": "{\"items\":[...],\"metadata\":{...}}"
+  },
+  "use_cases": [
+    "get electricity rates for a US utility",
+    "look up rate structures by zip code",
+    "compare residential vs commercial tariffs",
+    "fetch time-of-use rate schedules"
+  ],
+  "sources": [
+    "https://openei.org/services/"
+  ],
+  "researcher_confidence": "low"
+}

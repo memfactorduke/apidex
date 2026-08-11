@@ -1,0 +1,52 @@
+{
+  "id": "helius",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/docs/api-reference/wallet-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.helius.dev/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/docs/api-reference/authentication"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Rate limits are requests-per-second limits, distinct from credits. Free, Developer, Business, and Professional plans respectively allow 10, 50, 200, and 500 RPC requests/s and 2, 10, 50, and 100 DAS/Enhanced API requests/s; Enterprise limits are custom, and some endpoints have special limits.",
+      "source": "https://www.helius.dev/docs/billing/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl \"https://api.helius.xyz/v1/wallet/YOUR_WALLET/balances?api-key=YOUR_API_KEY\"",
+      "source": "https://www.helius.dev/docs/api-reference/wallet-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.helius.dev/docs"
+    }
+  },
+  "notes": "The docs URL redirects to www.helius.dev/docs. api.helius.xyz is the Wallet REST base; RPC and DAS use helius-rpc.com endpoints. The balance path is obsolete. Rate limits are RPS-based, separate from credits. The free plan currently includes 1M monthly credits. Wallet header authentication uses X-Api-Key, not Authorization. Enhanced Transactions remains available but is legacy/deprecated. No general CORS policy was found."
+}

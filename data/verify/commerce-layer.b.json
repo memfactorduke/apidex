@@ -1,0 +1,52 @@
+{
+  "id": "commerce-layer",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://YOUR_ORGANIZATION.commercelayer.io/api",
+      "source": "https://docs.commercelayer.io/core"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.commercelayer.io/core"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.commercelayer.io/core"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://commercelayer.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl must use organization-specific host (e.g. https://your-org.commercelayer.io/api/skus) and Accept: application/vnd.api+json; generic api.commercelayer.io is not the org API base",
+      "source": "https://docs.commercelayer.io/core"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.commercelayer.io/core"
+    }
+  },
+  "notes": "Adversarial check: base_url and example use non-org host api.commercelayer.io; official docs use org subdomain. Free tier/rate limits/CORS left as unknown/not published \u2014 conservative and not contradicted."
+}

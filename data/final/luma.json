@@ -1,0 +1,98 @@
+{
+  "id": "luma",
+  "status": "operational",
+  "name": "Luma API",
+  "category": "events-holidays",
+  "tagline": "Programmatic access to Luma events, calendars, and guest management.",
+  "description": "Luma (lu.ma) provides a REST API for modern event platforms used by tech communities. Developers can list and manage events, calendars, and guests for automated workflows and integrations.",
+  "base_url": "https://public-api.luma.com",
+  "docs_url": "https://docs.lu.ma/",
+  "signup_url": null,
+  "auth": {
+    "type": "apiKey",
+    "details": "API key authentication; exact header and self-serve signup path to be verified from official docs."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": false,
+    "free_tier_limits": "No free API tier; API access requires an active Luma Plus subscription for the calendar.",
+    "paid_plans": null
+  },
+  "rate_limits": "200 requests per minute per calendar for calendar API keys and OAuth tokens; 500 requests per minute per organization for organization API keys.",
+  "example": {
+    "request": "curl -H \"x-luma-api-key: YOUR_API_KEY\" https://public-api.luma.com/v1/users/get-self",
+    "response_snippet": "{\"user\":{\"api_id\":\"usr-example\",\"name\":\"Example User\"}}"
+  },
+  "use_cases": [
+    "list upcoming events for a calendar",
+    "get guest list for an event",
+    "create or update event details",
+    "check RSVP status for attendees"
+  ],
+  "sources": [
+    "https://docs.lu.ma/"
+  ],
+  "researcher_confidence": "low",
+  "verification": {
+    "mode": "adjudicated",
+    "last_checked": "2026-08-11",
+    "fields": {
+      "base_url": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "docs_url": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "auth_type": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier": {
+        "a": "confirm",
+        "b": "confirm"
+      },
+      "free_tier_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "rate_limits": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "cors": {
+        "a": "unverifiable",
+        "b": "unverifiable"
+      },
+      "example": {
+        "a": "incorrect",
+        "b": "incorrect"
+      },
+      "description": {
+        "a": "confirm",
+        "b": "confirm"
+      }
+    },
+    "confirmed_by_both": [
+      "docs_url",
+      "auth_type",
+      "free_tier",
+      "description"
+    ],
+    "corrected": [
+      "base_url",
+      "free_tier_limits",
+      "rate_limits",
+      "example_request",
+      "example_response_snippet"
+    ],
+    "unverifiable": [
+      "cors"
+    ]
+  }
+}

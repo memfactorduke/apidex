@@ -1,0 +1,41 @@
+{
+  "id": "stock-news-api",
+  "status": "operational",
+  "name": "Stock News API",
+  "category": "finance",
+  "tagline": "Ticker-tagged stock and crypto news headlines for sentiment analysis and market apps",
+  "description": "Stock News API delivers financial news articles and headlines tagged with stock and crypto tickers, with filters for tickers, topics, sentiment, and date ranges. Designed for developers building market dashboards, sentiment pipelines, and trading research tools that need structured news rather than general web content.",
+  "base_url": "https://stocknewsapi.com/api/v1",
+  "docs_url": "https://stocknewsapi.com/documentation",
+  "signup_url": "https://stocknewsapi.com/register",
+  "auth": {
+    "type": "apiKey",
+    "details": "API key via token query parameter (e.g. token=YOUR_API_KEY); self-serve signup"
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "Free plan available; exact request quotas vary by plan \u2014 check pricing page for current limits",
+    "paid_plans": "Paid tiers for higher volume and advanced filters"
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl \"https://stocknewsapi.com/api/v1?tickers=AAPL&items=3&token=YOUR_API_KEY\"",
+    "response_snippet": "{\"data\":[{\"news_url\":\"https://...\",\"image_url\":\"https://...\",\"title\":\"...\",\"text\":\"...\",\"source_name\":\"...\",\"date\":\"...\",\"topics\":[],\"sentiment\":\"Positive\",\"type\":\"Article\",\"tickers\":[\"AAPL\"]}]}"
+  },
+  "use_cases": [
+    "fetch latest news headlines for a stock ticker",
+    "filter crypto or equity news by sentiment",
+    "pull ticker-tagged articles for a date range",
+    "power a market sentiment dashboard from structured news"
+  ],
+  "sources": [
+    "https://stocknewsapi.com/documentation",
+    "https://stocknewsapi.com/"
+  ],
+  "researcher_confidence": "low"
+}

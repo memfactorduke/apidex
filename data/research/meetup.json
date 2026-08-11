@@ -1,0 +1,42 @@
+{
+  "id": "meetup",
+  "status": "operational",
+  "name": "Meetup API",
+  "category": "events-holidays",
+  "tagline": "Community groups and local events API for discovery, RSVPs, and meetups",
+  "description": "The Meetup API provides programmatic access to community groups, local events, memberships, and RSVPs on Meetup. Developers can search for events and groups by location or topic, retrieve event details, manage attendance, and integrate Meetup data into apps for discovery and community engagement.",
+  "base_url": "https://api.meetup.com",
+  "docs_url": "https://www.meetup.com/api/guide/",
+  "signup_url": "https://www.meetup.com/api/oauth/list/",
+  "auth": {
+    "type": "oauth2",
+    "details": "OAuth 2.0 Bearer token via Authorization header; app registration required. Legacy API keys deprecated."
+  },
+  "https": true,
+  "cors": "unknown",
+  "formats": [
+    "json"
+  ],
+  "pricing": {
+    "free_tier": true,
+    "free_tier_limits": "unknown",
+    "paid_plans": null
+  },
+  "rate_limits": "not published",
+  "example": {
+    "request": "curl -H \"Authorization: Bearer YOUR_API_KEY\" \"https://api.meetup.com/find/upcoming_events?lat=40.71&lon=-74.01\"",
+    "response_snippet": "{\"events\":[{\"id\":\"...\",\"name\":\"...\",\"status\":\"upcoming\",\"local_date\":\"2026-08-15\",\"local_time\":\"18:30\",\"yes_rsvp_count\":42,\"group\":{\"name\":\"...\",\"urlname\":\"...\"}}],\"city\":{\"city\":\"New York\",\"lat\":40.71,\"lon\":-74.01}}"
+  },
+  "use_cases": [
+    "find upcoming local meetups near a lat/lon",
+    "get details for a Meetup event by ID",
+    "list groups matching a topic or keyword",
+    "check RSVP count and attendance for an event",
+    "search communities by city and category"
+  ],
+  "sources": [
+    "https://www.meetup.com/api/guide/",
+    "https://www.meetup.com/"
+  ],
+  "researcher_confidence": "low"
+}

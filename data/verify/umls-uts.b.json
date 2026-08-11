@@ -1,0 +1,52 @@
+{
+  "id": "umls-uts",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.uts.nlm.nih.gov/rest/home.html"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.uts.nlm.nih.gov/rest/home.html"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.uts.nlm.nih.gov/rest/authentication.html"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.nlm.nih.gov/databases/umls.html"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "20 requests per second per IP address",
+      "source": "https://documentation.uts.nlm.nih.gov/terms-of-service.html"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "20 requests per second per IP address",
+      "source": "https://documentation.uts.nlm.nih.gov/terms-of-service.html"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.uts.nlm.nih.gov/rest/concept/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://documentation.uts.nlm.nih.gov/rest/home.html"
+    }
+  },
+  "notes": "NLM's 2026 documentation shows the API is active, with the stated base URL and example endpoint. The published 20-requests-per-second-per-IP limit makes both rate-limit fields wrong. Current authentication uses an apiKey query parameter; ticket-granting/service tickets are deprecated, and the entry's Authorization-header wording is unsupported by current docs. CORS is not documented."
+}

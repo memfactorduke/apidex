@@ -1,0 +1,15 @@
+{
+  "id": "uk-carbon-intensity",
+  "base_url": null,
+  "docs_url": "https://carbon-intensity.github.io/api-definitions/",
+  "auth_type": null,
+  "free_tier": null,
+  "free_tier_limits": "Currently free, but subject to the terms of use and an unspecified rate limit; NESO may block applications making a large number of calls.",
+  "rate_limits": "NESO applies a rate limit and may block applications making a large number of calls. No numerical threshold is published.",
+  "cors": "yes",
+  "example_request": null,
+  "example_response_snippet": null,
+  "description": "The National Energy System Operator (NESO) Carbon Intensity API provides current estimated and forecast carbon-intensity data for Great Britain, including national and regional data, generation mix, and intensity bands. Forecasts are updated every 30 minutes. Access is free and unauthenticated, but subject to an unspecified rate limit.",
+  "status": null,
+  "resolution_notes": "docs_url: corrected; official terms link the API docs: https://github.com/carbon-intensity/terms. free_tier_limits: free but rate-limited: https://github.com/carbon-intensity/terms. rate_limits: a limit exists and high-call apps may be blocked; no numeric cap is stated: https://github.com/carbon-intensity/terms. cors: yes; GET /intensity documents Access-Control-Allow-Origin: https://carbon-intensity.github.io/api-definitions/#get-intensity. description: corrected to NESO and 30-minute updates: https://carbonintensity.org.uk/."
+}

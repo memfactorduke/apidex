@@ -1,0 +1,52 @@
+{
+  "id": "libretranslate",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.libretranslate.com/guides/api_usage/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://libretranslate.com/docs/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.libretranslate.com/guides/api_usage/"
+    },
+    "free_tier": {
+      "verdict": "incorrect",
+      "correction": "false",
+      "source": "https://portal.libretranslate.com/"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Not applicable: libretranslate.com offers no free trial or free low-volume API key; self-hosting remains free.",
+      "source": "https://portal.libretranslate.com/"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Pro permits bursts up to 80 translations per minute; Business permits up to 200 translations per minute. Higher custom limits are available.",
+      "source": "https://portal.libretranslate.com/"
+    },
+    "cors": {
+      "verdict": "incorrect",
+      "correction": "yes; the API implementation adds Access-Control-Allow-Origin: * and permits GET and POST.",
+      "source": "https://github.com/LibreTranslate/LibreTranslate/blob/main/libretranslate/app.py"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.libretranslate.com/guides/api_usage/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://github.com/LibreTranslate/LibreTranslate"
+    }
+  },
+  "notes": "The official hosted endpoint is operational and its request example is current. The material errors concern service terms: libretranslate.com has no free API tier, publishes paid-plan burst limits, and the current implementation explicitly emits CORS headers. Free use refers to self-hosting or separate community instances, not the official hosted API."
+}

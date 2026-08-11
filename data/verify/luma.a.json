@@ -1,0 +1,52 @@
+{
+  "id": "luma",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "incorrect",
+      "correction": "https://public-api.luma.com",
+      "source": "https://docs.luma.com/reference/getting-started-with-your-api"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.lu.ma/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.luma.com/reference/getting-started-with-your-api"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.luma.com/reference/getting-started-with-your-api"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "No free API tier; a Luma Plus subscription is required for API access.",
+      "source": "https://docs.luma.com/reference/getting-started-with-your-api"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "200 requests per minute per calendar for calendar API keys and OAuth tokens; 500 requests per minute per organization for organization API keys.",
+      "source": "https://docs.luma.com/reference/rate-limits"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "incorrect",
+      "correction": "curl -H \"x-luma-api-key: YOUR_API_KEY\" https://public-api.luma.com/v1/users/get-self",
+      "source": "https://docs.luma.com/reference/getting-started-with-your-api"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.luma.com/reference/getting-started-with-your-api"
+    }
+  },
+  "notes": "The legacy docs URL redirects to the current official documentation. The submitted example uses the obsolete api.lu.ma host, an unsupported Bearer header, and a noncurrent route. Current authentication uses x-luma-api-key. Official documentation publishes explicit rate limits and requires Luma Plus for API access. No authoritative CORS policy was located."
+}

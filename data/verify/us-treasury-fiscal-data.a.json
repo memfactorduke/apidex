@@ -1,0 +1,52 @@
+{
+  "id": "us-treasury-fiscal-data",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "docs_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/data/about-us/901-1%20Open%20Data%20Policy.pdf"
+    },
+    "free_tier_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.treasurydirect.gov/legal-information/developers/web-api-terms/"
+    },
+    "rate_limits": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": "https://www.treasurydirect.gov/legal-information/developers/web-api-terms/"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://fiscaldata.treasury.gov/api-documentation/"
+    }
+  },
+  "notes": "The API is operational: the official Debt to the Penny endpoint returned data dated 2026-08-10. Official docs support the base URL, keyless GET access, formats, parameters, pagination, and example structure. Treasury's terms warn that unspecified access limits may apply, so the absence of quotas or paid plans cannot be conclusively confirmed. CORS was not documented in the official sources inspected."
+}

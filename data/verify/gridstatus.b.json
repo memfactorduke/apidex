@@ -1,0 +1,52 @@
+{
+  "id": "gridstatus",
+  "overall": "fail",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gridstatus.io/developers"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://docs.gridstatus.io/",
+      "source": "https://docs.gridstatus.io/"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gridstatus.io/developers"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gridstatus.io/pricing"
+    },
+    "free_tier_limits": {
+      "verdict": "incorrect",
+      "correction": "Up to 250 API requests/month and 500,000 rows/month, with access to the 50 most popular datasets.",
+      "source": "https://www.gridstatus.io/pricing"
+    },
+    "rate_limits": {
+      "verdict": "incorrect",
+      "correction": "Published monthly limits: Free allows 250 requests and 500,000 rows; Starter allows 1,000 requests and 1,000,000 rows; Enterprise limits are custom.",
+      "source": "https://www.gridstatus.io/pricing"
+    },
+    "cors": {
+      "verdict": "unverifiable",
+      "correction": null,
+      "source": null
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://docs.gridstatus.io/developers"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www.gridstatus.io/pricing"
+    }
+  },
+  "notes": "The API is operational and the documented v1 endpoint and x-api-key header remain current. The entry fails because its documentation URL is not the current canonical docs site and it incorrectly claims that free-tier and rate limits are unknown or unpublished."
+}

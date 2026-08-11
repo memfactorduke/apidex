@@ -1,0 +1,52 @@
+{
+  "id": "destatis-genesis",
+  "overall": "pass",
+  "verdicts": {
+    "base_url": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    },
+    "docs_url": {
+      "verdict": "incorrect",
+      "correction": "https://www-genesis.destatis.de/genesis/online?operation=previous&levelindex=0&levelid=&levelid=0&levelid=0",
+      "source": "https://www-genesis.destatis.de/genesis/online?operation=previous&levelindex=0&levelid=&levelid=0&levelid=0"
+    },
+    "auth_type": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    },
+    "free_tier": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    },
+    "free_tier_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    },
+    "rate_limits": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    },
+    "cors": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    },
+    "example": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    },
+    "description": {
+      "verdict": "confirm",
+      "correction": null,
+      "source": "https://www-genesis.destatis.de/genesisWS/rest/2020"
+    }
+  },
+  "notes": "The entry is correct. The docs_url is incorrect, but the other fields are correct."
+}
