@@ -74,7 +74,8 @@ def run_job(job):
         attempts += 1
         t0 = time.time()
         try:
-            r = subprocess.run(["codex", "exec", "-s", "read-only", job["prompt"]],
+            r = subprocess.run(["codex", "exec", "-s", "read-only",
+                                "-c", 'service_tier="standard"', job["prompt"]],
                                capture_output=True, text=True, timeout=CALL_TIMEOUT,
                                cwd=ROOT / "pipeline" / "agent-cwd")
         except subprocess.TimeoutExpired:
