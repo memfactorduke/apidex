@@ -12,10 +12,18 @@ FIELDS = ["base_url", "docs_url", "auth_type", "free_tier", "free_tier_limits",
           "rate_limits", "cors", "example_request", "example_response_snippet",
           "description", "status"]
 
+# --only <file>: restrict to these slugs (one per line) so a purge pass can
+# never touch round-1 adjudications/finals.
+only = None
+if "--only" in sys.argv:
+    only = set(open(sys.argv[sys.argv.index("--only") + 1]).read().split())
+
 n = 0
 for f in sorted(glob.glob("data/adjudicate/*.json")):
     a = json.load(open(f))
-    if all(a.get(k) is None for k in FIELDS) and "http" not in a["resolution_notes"]:
+    if only is not None and a.get("id") not in only:
+        continue
+    if all(a.get(k) is None for k in FIELDS) and "http" not in a.get("resolution_notes", ""):
         os.remove(f)
         fin = f"data/final/{a['id']}.json"
         if os.path.exists(fin):
