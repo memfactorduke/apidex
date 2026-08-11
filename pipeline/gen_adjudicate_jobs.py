@@ -54,8 +54,8 @@ def main():
             "prompt": PROMPT.format(
                 fields=", ".join(c["fields"]), slug=slug,
                 entry=json.dumps(c["entry"], indent=1),
-                va=json.dumps(c["va"]["verdicts"], indent=1),
-                vb=json.dumps(c["vb"]["verdicts"], indent=1)) + prompt_extra,
+                va=json.dumps(c["va"].get("verdicts", {}), indent=1),
+                vb=json.dumps(c["vb"].get("verdicts", {}), indent=1)) + prompt_extra,
             "schema": str(ROOT / "schema" / "adjudicate.schema.json"),
             "out": str(ROOT / "data" / "adjudicate" / f"{slug}.json"),
         })
